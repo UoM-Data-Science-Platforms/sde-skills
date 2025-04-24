@@ -1,0 +1,28 @@
+# Python related
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.env/
+.venv/
+
+# Dependency management
+*.lock
+
+# MkDocs
+site/
+
+# Miscellaneous
+.DS_Store
+*.log
+*.bak
+*.swp
+*.tmp
+*.old
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
+
+/local
