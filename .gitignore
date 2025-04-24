@@ -7,9 +7,6 @@ __pycache__/
 .env/
 .venv/
 
-# Dependency management
-*.lock
-
 # MkDocs
 site/
 
