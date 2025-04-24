@@ -1,0 +1,19 @@
+[project]
+name = "sde-skills"
+version = "0.1.0"
+description = "Competency Framework for Research Technical Professionals working with Secure Data Environments"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+authors=[
+    { name="EPSRC SkillsHub Team"},
+]
+dependencies = [
+    "mkdocs-material>=9.6.12",
+    "pre-commit>=4.2.0",
+]
+
+[tool.ruff]
+select = ["E", "F", "W", "C"]
+ignore = []
+line-length = 88
