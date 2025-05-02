@@ -1,4 +1,4 @@
-# Contributing
+# Contribute
 
 Thank you for your interest in contributing to our competency framework! This guide is designed to help both technical and non-technical users make contributions to improve the framework.
 

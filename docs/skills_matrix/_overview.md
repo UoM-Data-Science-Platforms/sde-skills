@@ -1,5 +1,8 @@
 # Skills Matrix
 
+The Competency Framework is designed in the form of a skills matrix of skill levels across multiple competency domains.
+
+
 ## Competency Domains
 
 - Software Development & Testing
@@ -15,6 +18,5 @@
 ## Skill levels
 
 - Entry-level
-- Junior-level
 - Mid-level
 - Senior-level
