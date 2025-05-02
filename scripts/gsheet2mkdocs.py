@@ -65,7 +65,6 @@ nonalphanum = re.compile("[^a-zA-Z]+")
 
 # Modify this to change the output format
 item_template = """
-
 ### {item}
 
 === ":material-battery-10: Entry Level"
@@ -79,7 +78,6 @@ item_template = """
 === ":material-battery-90: Senior Level"
 
     - {senior_level}
-
 """
 
 for cd in df.competency_domain.unique():
