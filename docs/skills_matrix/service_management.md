@@ -3,7 +3,6 @@
 ## User provision
 
 
-
 ### Attendance at industry seminars - keeping up-to-date with trends and innovations and building networks
 
 === ":material-battery-10: Entry Level"
@@ -18,8 +17,6 @@
 
     - Can present/host
 
-
-
 ### service desk provision
 
 === ":material-battery-10: Entry Level"
@@ -33,9 +30,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can lead service desk operations ensuring high-quality user support
-
 ## TRE development/management
-
 
 
 ### Data Lineage & Provenance
@@ -52,8 +47,6 @@
 
     - Can design enterprise-wide data governance frameworks that maintain provenance of sensitive data
 
-
-
 ### Designing new TRE services
 
 === ":material-battery-10: Entry Level"
@@ -67,8 +60,6 @@
 === ":material-battery-90: Senior Level"
 
     - Can detail business case or similar documentation to justify investment in new service offerings
-
-
 
 ### Researching future TRE platform replacements
 
@@ -84,8 +75,6 @@
 
     - Horizon scan for future technologies and platforms for secure data environments
 
-
-
 ### defining requirements for TREs (tools for researchers)
 
 === ":material-battery-10: Entry Level"
@@ -100,8 +89,6 @@
 
     - Can make recomendations on products, that may be suitable for projects. Can provide training or training resources for tools
 
-
-
 ### service management
 
 === ":material-battery-10: Entry Level"
@@ -115,9 +102,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can lead continuous improvement initiatives to enhance service management
-
 ## Standards Adherence
-
 
 
 ### Documentation as Code
@@ -133,8 +118,6 @@
 === ":material-battery-90: Senior Level"
 
     - Can establish organizational standards for documentation as code and automation
-
-
 
 ### Maintain awareness of relevant standards
 
@@ -155,9 +138,7 @@
     - Can lead initiatives to ensure adherence to industry standards across the organization
     - Can oversee the selection and use of tools for comprehensive standards adherence
     - Can lead continuous improvement initiatives to enhance standards adherence
-
 ## Mentorship
-
 
 
 ### Lead and mentor junior team members and data stewards
@@ -174,8 +155,6 @@
 
     - Can support development by providing regular performance reviews and aligning personal and organisational aspirations. Can identify formal training opportunities for all staff
 
-
-
 ### Security accreditation
 
 === ":material-battery-10: Entry Level"
@@ -189,9 +168,7 @@
 === ":material-battery-90: Senior Level"
 
     - Has achieved accreditaitons/certified status and continues to refresh knowldge and maintain accredited status by retaking exams that expire
-
 ## Service Management
-
 
 
 ### addressing access / questions from analysts about SDE

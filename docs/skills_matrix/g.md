@@ -3,7 +3,6 @@
 ## Code review & improvement
 
 
-
 ### Statistical Disclosure Control Outputs
 
 === ":material-battery-10: Entry Level"

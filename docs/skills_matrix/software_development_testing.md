@@ -3,7 +3,6 @@
 ## Code Development
 
 
-
 ### Bug fixes
 
 === ":material-battery-10: Entry Level"
@@ -21,8 +20,6 @@
     -
     -
 
-
-
 ### Build code sets for scalable and reproducable solutions
 
 === ":material-battery-10: Entry Level"
@@ -37,8 +34,6 @@
 
     - Leads the design and implementation of scalable solutions
 
-
-
 ### Common task-general code fixing
 
 === ":material-battery-10: Entry Level"
@@ -52,8 +47,6 @@
 === ":material-battery-90: Senior Level"
 
     - Has an ability to resolve highly complex issues. Guide others through fixing code using best practices.
-
-
 
 ### Dry, Solid patterns and anti-patterns - basic software development
 
@@ -72,8 +65,6 @@
     - Can propose appropriate use of design patterns for solutions
     -
 
-
-
 ### Make RSE Developed Solutions Enterprise-Grade/Production Ready
 
 === ":material-battery-10: Entry Level"
@@ -88,8 +79,6 @@
 
     - Can design enterprise grade solutions that trade off QoS according to organisational priorities, capacity, capability and finances.
 
-
-
 ### Microservices Design Patterns
 
 === ":material-battery-10: Entry Level"
@@ -103,8 +92,6 @@
 === ":material-battery-90: Senior Level"
 
     - Can propose and implement microservices design patterns and advise when microservices are not the best solution
-
-
 
 ### Scripting languages
 
@@ -123,8 +110,6 @@
     - Expert in multiple scripting languages
     - Can develop script libraries to achieve complex activities such as automated build and deployment
 
-
-
 ### Write SQL scripts to extract data
 
 === ":material-battery-10: Entry Level"
@@ -138,9 +123,7 @@
 === ":material-battery-90: Senior Level"
 
     - Design and implement complex SQL scripts for data extraction
-
 ## Data Preparation
-
 
 
 ### Building a patient cohort for a set of requirements
@@ -156,8 +139,6 @@
 === ":material-battery-90: Senior Level"
 
     - understands the application of research data and can anticipate implicit requirements in terms of data points and regulatory considerations
-
-
 
 ### Creating research-ready datasets
 
@@ -176,8 +157,6 @@
     - Can write complex queries that generate research datasets from multiple data sources (indepentent)
     - Is aware of governance frameworks and other constraints that may apply to research data
 
-
-
 ### Work with a quality manager to continusly review the QMS documents
 
 === ":material-battery-10: Entry Level"
@@ -192,8 +171,6 @@
 
     - Can lead reviews/discussions and propose improvments
 
-
-
 ### data model Design/data modelling
 
 === ":material-battery-10: Entry Level"
@@ -207,9 +184,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can review and critique data models
-
 ## Code review & improvement
-
 
 
 ### Clearly commenting on scripts to improve reusability - acceptability of code
@@ -225,8 +200,6 @@
 === ":material-battery-90: Senior Level"
 
     - Has clear, well written, self documenting code with minimal use of inline comments
-
-
 
 ### Reviewing Team members code and suggesing improvements: quality and best practices
 
@@ -251,8 +224,6 @@
     -
     - Can identify complex issues such as known hardware exploits, security issues, hardware performace, resource utilisation
 
-
-
 ### Statistical Disclosure Control Outputs
 
 === ":material-battery-10: Entry Level"
@@ -269,9 +240,7 @@
 
     - An understanding of more advanced methods that enables the development of more complex use of SDC for larger and sensitive datasets
     - Advises team members on how to apply SDC techniques
-
 ## Validation
-
 
 
 ### Compare final data files against source data
@@ -290,8 +259,6 @@
 
     - Expertise in developing automated processes for data comparison and validation
     - Ensure data integrity across the organization
-
-
 
 ### Data access and management platforms
 
@@ -313,8 +280,6 @@
     - Lead the development of data access policies
     - suggested these should come under data mgmt and engineering
 
-
-
 ### Data validation (data ingestion, data egress)
 
 === ":material-battery-10: Entry Level"
@@ -335,8 +300,6 @@
     - Lead data validation initiatives
     - Ensure data quality across the organization
 
-
-
 ### SQL skills - querying and managing data effectively
 
 === ":material-battery-10: Entry Level"
@@ -356,9 +319,7 @@
     - Advanced SQL skills for optimizing queries and managing enterprise-level data
     - Lead database management initiatives
     - Ensure data integrity and security
-
 ## Application Testing
-
 
 
 ### Design and maintain a 'safe user' test
@@ -381,8 +342,6 @@
     - Leads the end-to-end testing for complex systems and coaches others to use best practices for user testing
     - Establish policies and procedures for safe user testing across a programme of activity
 
-
-
 ### QA: software Testing
 
 === ":material-battery-10: Entry Level"
@@ -400,8 +359,6 @@
     - Strong understanding of industry standards and governance requirements
     - Optimises test automation strategies for reliability and scability
 
-
-
 ### QA: software testing
 
 === ":material-battery-10: Entry Level"
@@ -415,8 +372,6 @@
 === ":material-battery-90: Senior Level"
 
     - Enables team members to develop and share best practices through meetings, documentation and workshops
-
-
 
 ### Testing of applications
 
@@ -434,9 +389,7 @@
 
     - Has experiencing testing across full infrastructure e.g. integration testing
     - Can implement organisationsal testing strategy
-
 ## Performance Optimisation
-
 
 
 ### Designing output for a checking system
@@ -452,9 +405,7 @@
 === ":material-battery-90: Senior Level"
 
     -
-
 ## Automation
-
 
 
 ### Developing automation software
@@ -470,8 +421,6 @@
 === ":material-battery-90: Senior Level"
 
     - Can implement automation of complex business process using automation and workflow platforms
-
-
 
 ### Standard full stack development
 
@@ -490,8 +439,6 @@
     -
     - Can produce designs that span multiple layers of the stack (independent)
 
-
-
 ### Writeup Infrastructure Architecture
 
 === ":material-battery-10: Entry Level"
@@ -505,9 +452,7 @@
 === ":material-battery-90: Senior Level"
 
     -
-
 ## Quality Systems
-
 
 
 ### Publishing code and code sets online to improve findability and resuability
@@ -523,9 +468,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can publish code openly into ensuring best practice metadata is included, can review other published code to advise on improvements for findability/reusability.
-
 ## Database Deployment
-
 
 
 ### SQL database deployment and design: creating and deploying database systems for efficient data management
@@ -544,9 +487,7 @@
 
     - Can optimise database designs
     -
-
 ## Database Design
-
 
 
 ### data flow diagramming

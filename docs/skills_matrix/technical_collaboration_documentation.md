@@ -3,7 +3,6 @@
 ## Collaboration
 
 
-
 ### Attend regular tech development (SDE) meetings
 
 === ":material-battery-10: Entry Level"
@@ -17,8 +16,6 @@
 === ":material-battery-90: Senior Level"
 
     - Establish long-term relationships with data providers and be able to write data sharing protocols
-
-
 
 ### Create Stories on JIRA Board: organising tasks and tracking process in agile workflows
 
@@ -34,8 +31,6 @@
 
     - Leads SDE meetings, inputting technical expertise to ensure the SDE is operational and teams are aligned
 
-
-
 ### Plan sprints and groom the backlog: defining priorities and managing iterative development tasks
 
 === ":material-battery-10: Entry Level"
@@ -49,8 +44,6 @@
 === ":material-battery-90: Senior Level"
 
     - Can collaborate with software engineers to design and implement SDEs
-
-
 
 ### Stakeholder/collaboration/discussion
 
@@ -66,8 +59,6 @@
 
     - Leads documentation works for audits, reviews and reporting [what does this look like?] ensuring any industry standards required are followed
 
-
-
 ### Work closely with software engineers on technical implementation
 
 === ":material-battery-10: Entry Level"
@@ -81,9 +72,7 @@
 === ":material-battery-90: Senior Level"
 
     - Advocates for stakeholdersin leadership meetings and ensures they align with overall objectives
-
 ## Documentation
-
 
 
 ### Interaction with data providers
@@ -99,9 +88,7 @@
 === ":material-battery-90: Senior Level"
 
     -
-
 ## Agile Development Practices
-
 
 
 ### Run SCRUM: Facilitating daily stand-ups to streamline team colaboration
