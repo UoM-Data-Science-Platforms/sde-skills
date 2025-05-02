@@ -21,7 +21,6 @@ Thank you for considering contributing to the SDE Skills project! Here are some 
 
 ## Making Changes
 
-- Ensure your code is formatted using `black` and `isort`.
 - Lint your code using `ruff`.
 - Write clear and concise commit messages.
 
