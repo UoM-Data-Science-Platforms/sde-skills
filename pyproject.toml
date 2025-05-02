@@ -5,15 +5,13 @@ description = "Competency Framework for Research Technical Professionals working
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
-authors=[
-    { name="EPSRC SkillsHub Team"},
-]
-dependencies = [
-    "mkdocs-material>=9.6.12",
-    "pre-commit>=4.2.0",
-]
+authors = [{ name = "EPSRC SkillsHub Team" }]
+dependencies = ["mkdocs-material>=9.6.12", "pandas>=2.2.3"]
 
 [tool.ruff]
 select = ["E", "F", "W", "C"]
 ignore = []
 line-length = 88
+
+[dependency-groups]
+dev = ["jupyterlab>=4.4.1", "python-dotenv>=1.1.0", "pre-commit>=4.2.0"]
