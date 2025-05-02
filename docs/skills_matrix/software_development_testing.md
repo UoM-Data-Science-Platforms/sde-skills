@@ -12,10 +12,10 @@
 
     Has an awareness of software testing terminology (e.g, error reporting, test cases)
 
-
 === "Mid Level"
 
     Can apply the specification (expected behavior) to the defect to propose a remediation
+
     Can speculate on other functianality that might me affected by the defect and/or remedy
 
 === "Senior Level"
@@ -32,7 +32,6 @@
 
     Understands the basics of scalable solution design
 
-
 === "Mid Level"
 
     Can build code sets for scalable solutions with some oversight
@@ -43,13 +42,11 @@
 
 
 
-
 ### Common task-general code fixing
 
 === "Entry Level"
 
     Is able to apply coding, debugging tools and version control systems to identify and fix code syntax or errors made in code and make it readable
-
 
 === "Mid Level"
 
@@ -61,7 +58,6 @@
 
 
 
-
 ### Dry, Solid patterns and anti-patterns - basic software development
 
 === "Entry Level"
@@ -70,10 +66,10 @@
 
     Can independently identify and reuse patterns already in use in code base
 
-
 === "Mid Level"
 
     Can apply and reognise software software design patterns
+
     Can review source code and identfy inconsistent application of best practice
 
 === "Senior Level"
@@ -90,7 +86,6 @@
 
     Understands quality of service criteria for business critical services e.g. availability, resiliance, integrity.
 
-
 === "Mid Level"
 
     Can make recommendations regarding QoS in enterprise services, understands QoS priorities and trade offs.
@@ -101,13 +96,11 @@
 
 
 
-
 ### Microservices Design Patterns
 
 === "Entry Level"
 
     Can independently identify and reuse patterns already in use in the codebase
-
 
 === "Mid Level"
 
@@ -119,7 +112,6 @@
 
 
 
-
 ### Scripting languages
 
 === "Entry Level"
@@ -128,17 +120,17 @@
 
     Can perform basic tasks with scripts
 
-
 === "Mid Level"
 
     Proficient in at least one scripting language
+
     Can automate repeatable tasks with scripts
 
 === "Senior Level"
 
     Expert in multiple scripting languages
-    Can develop script libraries to achieve complex activities such as automated build and deployment
 
+    Can develop script libraries to achieve complex activities such as automated build and deployment
 
 
 
@@ -148,7 +140,6 @@
 
     Write basic SQL queries to extract data
 
-
 === "Mid Level"
 
     Optimize SQL queries for performance
@@ -156,7 +147,6 @@
 === "Senior Level"
 
     Design and implement complex SQL scripts for data extraction
-
 
 ## Data Preparation
 
@@ -168,7 +158,6 @@
 
     Familiarity with basic concepts of patient cohort building, including data collection, data privacy, and ethical considerations
 
-
 === "Mid Level"
 
     Ability to independently collect and integrate data from multiple sources, ensuring data quality and consistency
@@ -176,7 +165,6 @@
 === "Senior Level"
 
     understands the application of research data and can anticipate implicit requirements in terms of data points and regulatory considerations
-
 
 
 
@@ -188,17 +176,17 @@
 
     Understands that there are governance issues that may influence what data can be extracted
 
-
 === "Mid Level"
 
     Can write complex queries that generate research datasets from multiple data sources (supervised)
+
     Understands governance that applies to datasets they are typically exposed to
 
 === "Senior Level"
 
     Can write complex queries that generate research datasets from multiple data sources (indepentent)
-    Is aware of governance frameworks and other constraints that may apply to research data
 
+    Is aware of governance frameworks and other constraints that may apply to research data
 
 
 
@@ -207,7 +195,6 @@
 === "Entry Level"
 
     Is aware of issues that impact quality
-
 
 === "Mid Level"
 
@@ -219,13 +206,11 @@
 
 
 
-
 ### data model Design/data modelling
 
 === "Entry Level"
 
     Can understand structure and features of datasets by viewing pictoral and meta-data descriptions
-
 
 === "Mid Level"
 
@@ -234,7 +219,6 @@
 === "Senior Level"
 
     Can review and critique data models
-
 
 ## Code review & improvement
 
@@ -246,7 +230,6 @@
 
     Appropriate use of commenting in scripts
 
-
 === "Mid Level"
 
     Appropriate use of commenting where domain eccentricities provent full compliance with best practice
@@ -254,7 +237,6 @@
 === "Senior Level"
 
     Has clear, well written, self documenting code with minimal use of inline comments
-
 
 
 
@@ -270,21 +252,25 @@
 
     Can identify simple defects in source code e.g. out by one errors in for loops
 
-
 === "Mid Level"
 
     Can confidently assert conformance with best practice
+
     Can make recomendations to refactor code inorder to achive better interal code quality e.g. proposing a new class to ensure better adhearance to single responsibility principle
+
+
 
     Can identify more complex issues such as side effects, concurrency, race conditions
 
 === "Senior Level"
 
     Can confidently assert conformance with best practice and make recommendations
+
     Can anticipate future problems that may arrise from a given implementaion
 
-    Can identify complex issues such as known hardware exploits, security issues, hardware performace, resource utilisation
 
+
+    Can identify complex issues such as known hardware exploits, security issues, hardware performace, resource utilisation
 
 
 
@@ -296,17 +282,17 @@
 
 
 
-
 === "Mid Level"
 
     Be able to use a wide range of statistical disclosure techniques and tools/software to be able to design and automate control strategies for complex datasets.
+
     Evaluate the risk of disclosure for a wide variety of outputs
 
 === "Senior Level"
 
     An understanding of more advanced methods that enables the development of more complex use of SDC for larger and sensitive datasets
-    Advises team members on how to apply SDC techniques
 
+    Advises team members on how to apply SDC techniques
 
 ## Validation
 
@@ -320,17 +306,17 @@
 
     Basic understanding of data integrity principles
 
-
 === "Mid Level"
 
     Proficiency in independently comparing and validating data files
+
     Conduct data integrity assessments
 
 === "Senior Level"
 
     Expertise in developing automated processes for data comparison and validation
-    Ensure data integrity across the organization
 
+    Ensure data integrity across the organization
 
 
 
@@ -344,19 +330,21 @@
 
     Familiarity with data security and privacy regulations
 
-
 === "Mid Level"
 
     Proficiency in configuring and managing data access platforms
+
     Independently manage user access and permissions
+
     Implement data security measures
 
 === "Senior Level"
 
     Strategic oversight of data access and management strategies
-    Lead the development of data access policies
-    suggested these should come under data mgmt and engineering
 
+    Lead the development of data access policies
+
+    suggested these should come under data mgmt and engineering
 
 
 
@@ -370,19 +358,21 @@
 
     Basic understanding of data quality principles
 
-
 === "Mid Level"
 
     Ability to independently validate data
+
     Implement data validation procedures
+
     Conduct data quality assessments
 
 === "Senior Level"
 
     Expertise in developing and implementing comprehensive data validation frameworks
-    Lead data validation initiatives
-    Ensure data quality across the organization
 
+    Lead data validation initiatives
+
+    Ensure data quality across the organization
 
 
 
@@ -396,19 +386,21 @@
 
     Familiarity with database management systems
 
-
 === "Mid Level"
 
     Proficiency in writing complex SQL queries and managing large datasets
+
     Optimize SQL queries for performance
+
     Implement database management best practices
 
 === "Senior Level"
 
     Advanced SQL skills for optimizing queries and managing enterprise-level data
-    Lead database management initiatives
-    Ensure data integrity and security
 
+    Lead database management initiatives
+
+    Ensure data integrity and security
 
 ## Application Testing
 
@@ -424,19 +416,21 @@
 
     Understand the principles of testing and user safety (e.g., GDPR)
 
-
 === "Mid Level"
 
     Detailed understanding of user testing methodologies and frameworks
+
     Writes and customises test cases based on requirements
+
     Implements standards for monitoring and logging within a test environment so as to monitor system interactions
 
 === "Senior Level"
 
     Shows how user testing strategy can be detailed and include more advanced techniques (e.g., automation, predictive modelling)
-    Leads the end-to-end testing for complex systems and coaches others to use best practices for user testing
-    Establish policies and procedures for safe user testing across a programme of activity
 
+    Leads the end-to-end testing for complex systems and coaches others to use best practices for user testing
+
+    Establish policies and procedures for safe user testing across a programme of activity
 
 
 
@@ -448,17 +442,17 @@
 
     Is able to use basic testing tools to execute test plans as defined in a plan and document results
 
-
 === "Mid Level"
 
     Knows and is able to use different types of testing looking at performance, API etc.
+
     Understands continuous integration and continous deployment pipelines and impact on quality of the processes
 
 === "Senior Level"
 
     Strong understanding of industry standards and governance requirements
-    Optimises test automation strategies for reliability and scability
 
+    Optimises test automation strategies for reliability and scability
 
 
 
@@ -467,7 +461,6 @@
 === "Entry Level"
 
     Be familar with fundamental QA concepts (e.g., user acceptance testing)
-
 
 === "Mid Level"
 
@@ -479,7 +472,6 @@
 
 
 
-
 ### Testing of applications
 
 === "Entry Level"
@@ -488,17 +480,17 @@
 
     Can execute testing plans
 
-
 === "Mid Level"
 
     Has experience testing at different levels of detail e.g. software units, user interfaces
+
     Can create testing plans with oversight form senior tester
 
 === "Senior Level"
 
     Has experiencing testing across full infrastructure e.g. integration testing
-    Can implement organisationsal testing strategy
 
+    Can implement organisationsal testing strategy
 
 ## Performance Optimisation
 
@@ -510,13 +502,11 @@
 
 
 
-
 === "Mid Level"
 
 
 
 === "Senior Level"
-
 
 
 
@@ -530,7 +520,6 @@
 
     Can write new or change existing scripts to automate simple tasks
 
-
 === "Mid Level"
 
     Can write new or change existing scripts to automate complex activities
@@ -538,7 +527,6 @@
 === "Senior Level"
 
     Can implement automation of complex business process using automation and workflow platforms
-
 
 
 
@@ -550,17 +538,17 @@
 
     Experience working in at least one area of the web stack
 
-
 === "Mid Level"
 
     Can develop functionality across all layers of software codebase
+
     Can produce designs that span multiple layers of the stack (supervised)
 
 === "Senior Level"
 
 
-    Can produce designs that span multiple layers of the stack (independent)
 
+    Can produce designs that span multiple layers of the stack (independent)
 
 
 
@@ -570,13 +558,11 @@
 
 
 
-
 === "Mid Level"
 
 
 
 === "Senior Level"
-
 
 
 
@@ -590,7 +576,6 @@
 
     Is aware of the basic principles behind publishing code openly (how F.A.I.R. applies to code)
 
-
 === "Mid Level"
 
     Can publish code openly following defined workflows, is aware of potential security concerns when working in a secure data environment that may impact whether/how code can be openly published?
@@ -598,7 +583,6 @@
 === "Senior Level"
 
     Can publish code openly into ensuring best practice metadata is included, can review other published code to advise on improvements for findability/reusability.
-
 
 ## Database Deployment
 
@@ -612,10 +596,10 @@
 
     can write SQL scripts that realise simple logical database designs
 
-
 === "Mid Level"
 
     Can design well normalised database schemas
+
     Can write SQL scripts that realise logical database designs
 
 === "Senior Level"
@@ -633,7 +617,6 @@
 === "Entry Level"
 
     Can understand data processing pipelines by studying visual representations
-
 
 === "Mid Level"
 

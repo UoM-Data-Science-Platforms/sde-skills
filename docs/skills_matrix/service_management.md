@@ -10,7 +10,6 @@
 
     Can identify relevent events and attend as an audience member
 
-
 === "Mid Level"
 
     Can represent the organisation and develop networks/promote activities
@@ -21,13 +20,11 @@
 
 
 
-
 ### service desk provision
 
 === "Entry Level"
 
     Has basic understanding of service desk operations
-
 
 === "Mid Level"
 
@@ -36,7 +33,6 @@
 === "Senior Level"
 
     Can lead service desk operations ensuring high-quality user support
-
 
 ## TRE development/management
 
@@ -48,7 +44,6 @@
 
     Understands basic concepts of data tracking through systems
 
-
 === "Mid Level"
 
     Can implement data lineage tools and interpret their outputs
@@ -59,11 +54,9 @@
 
 
 
-
 ### Designing new TRE services
 
 === "Entry Level"
-
 
 
 
@@ -77,11 +70,9 @@
 
 
 
-
 ### Researching future TRE platform replacements
 
 === "Entry Level"
-
 
 
 
@@ -95,13 +86,11 @@
 
 
 
-
 ### defining requirements for TREs (tools for researchers)
 
 === "Entry Level"
 
     Can understand user requirements/use cases and can identify applications, tools and services which fit these needs
-
 
 === "Mid Level"
 
@@ -113,13 +102,11 @@
 
 
 
-
 ### service management
 
 === "Entry Level"
 
     Understands the importance of continuous improvement in service management
-
 
 === "Mid Level"
 
@@ -128,7 +115,6 @@
 === "Senior Level"
 
     Can lead continuous improvement initiatives to enhance service management
-
 
 ## Standards Adherence
 
@@ -140,7 +126,6 @@
 
     Can maintain documentation in version control systems
 
-
 === "Mid Level"
 
     Can implement documentation pipelines alongside code
@@ -148,7 +133,6 @@
 === "Senior Level"
 
     Can establish organizational standards for documentation as code and automation
-
 
 
 
@@ -162,19 +146,21 @@
 
     Understands the importance of continuous improvement in standards adherence
 
-
 === "Mid Level"
 
     Can maintain awareness of and adhere to relevant standards
+
     Can utilize tools to ensure compliance with relevant standards
+
     Can identify areas for improvement in standards compliance
 
 === "Senior Level"
 
     Can lead initiatives to ensure adherence to industry standards across the organization
-    Can oversee the selection and use of tools for comprehensive standards adherence
-    Can lead continuous improvement initiatives to enhance standards adherence
 
+    Can oversee the selection and use of tools for comprehensive standards adherence
+
+    Can lead continuous improvement initiatives to enhance standards adherence
 
 ## Mentorship
 
@@ -183,7 +169,6 @@
 ### Lead and mentor junior team members and data stewards
 
 === "Entry Level"
-
 
 
 
@@ -197,11 +182,9 @@
 
 
 
-
 ### Security accreditation
 
 === "Entry Level"
-
 
 
 
@@ -213,7 +196,6 @@
 
     Has achieved accreditaitons/certified status and continues to refresh knowldge and maintain accredited status by retaking exams that expire
 
-
 ## Service Management
 
 
@@ -223,7 +205,6 @@
 === "Entry Level"
 
     Familiar with service desk tools and techniques
-
 
 === "Mid Level"
 

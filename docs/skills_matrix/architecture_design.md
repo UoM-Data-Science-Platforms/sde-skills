@@ -12,17 +12,17 @@
 
     Familiar with API documentation tools and techniques
 
-
 === "Mid Level"
 
     Can design and implement APIs following best practices
+
     Can create comprehensive API documentation for developers
 
 === "Senior Level"
 
     Can architect complex API solutions and ensure scalability and security
-    Can oversee the creation and maintenance of API documentation standards
 
+    Can oversee the creation and maintenance of API documentation standards
 
 
 
@@ -36,19 +36,21 @@
 
     Understands the importance of component testing and quality assurance
 
-
 === "Mid Level"
 
     Can design and implement reusable components
+
     Can utilize component libraries to enhance development efficiency
+
     Can develop and execute component tests
 
 === "Senior Level"
 
     Can architect complex component-based systems ensuring modularity and scalability
-    Can evaluate and select appropriate component libraries for projects
-    Can lead the development of comprehensive component testing strategies
 
+    Can evaluate and select appropriate component libraries for projects
+
+    Can lead the development of comprehensive component testing strategies
 
 ## System Design
 
@@ -60,7 +62,6 @@
 
     Describes the components of the architecture and basic security concepts. Is able to follow established guidance to ensure compliance with security and design standards
 
-
 === "Mid Level"
 
 
@@ -71,13 +72,11 @@
 
 
 
-
 ### Create enterprise Architecture including business application, data technology, Security, and service Architecture
 
 === "Entry Level"
 
     Can collaborate with other team members to do modular design tasks for specific components (e.g, storage)
-
 
 === "Mid Level"
 
@@ -89,13 +88,11 @@
 
 
 
-
 ### Define Architecture and Design principles, standards, and guardrails
 
 === "Entry Level"
 
     Is aware of API design concepts (e.g, endpoints, authentification, and data serialisation) . Can support the development of small scale APIs under supervision
-
 
 === "Mid Level"
 
@@ -107,13 +104,11 @@
 
 
 
-
 ### Privacy by Design
 
 === "Entry Level"
 
     Understands core privacy by design principles
-
 
 === "Mid Level"
 
@@ -125,13 +120,11 @@
 
 
 
-
 ### Zero Trust Architecture
 
 === "Entry Level"
 
     Understands zero trust principles and concepts (never trust
-
 
 === "Mid Level"
 
@@ -140,7 +133,6 @@
 === "Senior Level"
 
     Can implement zero trust access controls in specific system components
-
 
 ## Solution Architecture
 
@@ -152,7 +144,6 @@
 
     Ability to assist in preparing documentation for governance and design reviews
 
-
 === "Mid Level"
 
     Independently conduct governance and design reviews
@@ -160,7 +151,6 @@
 === "Senior Level"
 
     Lead the development of governance and design review policies and best practices
-
 
 
 
@@ -172,17 +162,17 @@
 
     Familiarity with risk management tools and techniques
 
-
 === "Mid Level"
 
     Independently conduct risk assessments and develop mitigation plans
+
     Implement risk management tools and techniques
 
 === "Senior Level"
 
     Strategic oversight of risk management strategies and policies
-    Ensure compliance with risk management standards and regulations
 
+    Ensure compliance with risk management standards and regulations
 
 
 
@@ -192,7 +182,6 @@
 
     Basic understanding of solution development principles and methodologies
 
-
 === "Mid Level"
 
     Independently design and develop solutions architectures
@@ -200,7 +189,6 @@
 === "Senior Level"
 
     Ensure compliance with solution development standards and regulations
-
 
 ## System Security
 
@@ -211,7 +199,6 @@
 === "Entry Level"
 
     Basic understanding of architecture and design principles enables supporting with the documentation of the SDE architecture
-
 
 === "Mid Level"
 

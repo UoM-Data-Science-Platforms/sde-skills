@@ -10,13 +10,11 @@
 
     Understand about cloud platforms and virtualisation concepts
 
-
 === "Mid Level"
 
     Is able to monitor and address issues through knowledge of cloud storage and resource limits of cloud providers
 
 === "Senior Level"
-
 
 
 
@@ -28,13 +26,11 @@
 
     Apply CI/CD concepts and lightwieght deployment for small scale applications
 
-
 === "Mid Level"
 
     Design CI/CD pipelines to automate testing and deployment through the set up of scripts to test, deploy and monitor workflows.
 
 === "Senior Level"
-
 
 
 
@@ -46,13 +42,11 @@
 
     Have an awareness of containerisation technologies (e.g., Docker, Kubenetes) as well as some primary use cases in order to use basic functionality of these tools
 
-
 === "Mid Level"
 
     Is able to apply more in-depth knowledge of optimising and managing containerised workloads using tools (e.g., Kubernetes) to build and deploy containerised microservices
 
 === "Senior Level"
-
 
 
 
@@ -64,7 +58,6 @@
 
     Familiarity with IaC tools like Terraform and orchestrtion tools such as Ansible and be able to execute basic scripts under supervision to deploy infrastructure
 
-
 === "Mid Level"
 
     Using an comprehensive understanding of the tools (e.g., Terraform, Ansible, Pulumi and Bicep) be able to create infrastructure pipelines
@@ -75,13 +68,11 @@
 
 
 
-
 ### Storage Processing Power Capacity Limits
 
 === "Entry Level"
 
     ?
-
 
 === "Mid Level"
 
@@ -90,7 +81,6 @@
 === "Senior Level"
 
     ?
-
 
 ## Administration
 
@@ -104,10 +94,10 @@
 
     Knows about standard network ports for applictaions
 
-
 === "Mid Level"
 
     Understands typical firewall configurations for given operations e.g. a standard set of allowed ports when only HTTP/S access is required.
+
 
 
 === "Senior Level"
@@ -126,17 +116,17 @@
 
     Ability to assist in basic Linux system administration tasks
 
-
 === "Mid Level"
 
     Is aware of standard linux progarms/"core utils", knows how to use them and can pipe commands to combine functionality
+
     Familiarity with Linux file systems, user management, and security
 
 === "Senior Level"
 
     Can optimise Linux systems e.g. for security, for performace etc
-    Lead the development of Linux administration policies and best practices
 
+    Lead the development of Linux administration policies and best practices
 
 
 
@@ -150,26 +140,27 @@
 
     Familiarity with network security protocols and typical firewall rules
 
-
 === "Mid Level"
 
     Proficiency in configuring and managing network devices and firewalls
+
     Independently manage and configure network devices and firewalls
+
     Implement network security measures and firewall rules
 
 === "Senior Level"
 
     Strategic oversight of network and firewall management strategies
-    Lead the development of network and firewall policies and best practices
-    Ensure compliance with network security standards and regulations
 
+    Lead the development of network and firewall policies and best practices
+
+    Ensure compliance with network security standards and regulations
 
 
 
 ### Setup K8s clusters, deploy microservices, and manage them
 
 === "Entry Level"
-
 
 
 
@@ -181,7 +172,6 @@
 
     Leads architecture reviews and supports teams, defines standards for IaC and other practices
 
-
 ## Cloud Engineering
 
 
@@ -192,7 +182,6 @@
 
     Has a basic knowledge of DR/BCP concepts/tools and is able to perform in executing predefined tasks with supervision
 
-
 === "Mid Level"
 
     Is able to apply advanced knowledge of frameworks, industry standards (e.g., ISOXXXXX) and testing methodologies to design and execute test plans (e.g., failover and failback).
@@ -200,7 +189,6 @@
 === "Senior Level"
 
     Leads the DR/BCP testing initiatives, including designing test scenarios and ensuring compliance with regulations. Horizon scans for evolving risks and emerging technologies in DR/BCP.
-
 
 ## Cloud deployment
 
@@ -214,17 +202,17 @@
 
     Understand how the platforms/environment (cloud technology/Azure) is set up and link to analysis requirements
 
-
 === "Mid Level"
 
     Uses knowledge of data processing and analytics workflows to design usable platforms to support research workflows
 
 
+
 === "Senior Level"
 
     Is able to use an expert level understanding of enterprise-level platforms to be able to do secure and scalable research and analysis
-    Leads cross-functional teams to ensure a reliable platform/environment is designed to meet all security, governance standards.
 
+    Leads cross-functional teams to ensure a reliable platform/environment is designed to meet all security, governance standards.
 
 
 
@@ -240,16 +228,20 @@
 
 
 
-
 === "Mid Level"
 
     Explain and understand cloud architecture frameworks and design patterns and cloud security best practices (e.g, identity and access management)
+
     Be familiar with advanced cloud services (e.g., Kubernetes) [what does Kubenetes do?]
+
     To contribute to the development of architecture that supports containerised workflows using tools (e.g., Kubernetes, Docker)
+
     Design and deploy micro-services using latest technologies (e.g., Docker/Kubernetes)
 
 === "Senior Level"
 
     Understand of multi-cloud and hybrid cloud strategies and real-world architectural challenges to be able to design or provide recommendations for enterprise-level cloud architectures for secure data environments
+
     Have knowledge of the integration of new technologies into the environment (e.g., AI)
+
     Pro-actively identifies risks and mitigates deployment challenges to deploy architectures supporting largescale applications with high availability and fault tolerance
