@@ -3,7 +3,6 @@
 ## Development
 
 
-
 ### API Design and implementation
 
 === ":material-battery-10: Entry Level"
@@ -20,8 +19,6 @@
 
     - Can architect complex API solutions and ensure scalability and security
     - Can oversee the creation and maintenance of API documentation standards
-
-
 
 ### Component Architecture
 
@@ -42,9 +39,7 @@
     - Can architect complex component-based systems ensuring modularity and scalability
     - Can evaluate and select appropriate component libraries for projects
     - Can lead the development of comprehensive component testing strategies
-
 ## System Design
-
 
 
 ### Access controls and user rights management
@@ -61,8 +56,6 @@
 
     - Is a principle architect fo enterprise solutions that enable all components to be integrated
 
-
-
 ### Create enterprise Architecture including business application, data technology, Security, and service Architecture
 
 === ":material-battery-10: Entry Level"
@@ -76,8 +69,6 @@
 === ":material-battery-90: Senior Level"
 
     - Drives the creation of modular, resuable components that enhance reliability
-
-
 
 ### Define Architecture and Design principles, standards, and guardrails
 
@@ -93,8 +84,6 @@
 
     - Oversees API design and implementation across SDE, ensuring best practices are adhered to
 
-
-
 ### Privacy by Design
 
 === ":material-battery-10: Entry Level"
@@ -109,8 +98,6 @@
 
     - Can lead privacy impact assessments and ensure privacy requirements are embedded in system architecture
 
-
-
 ### Zero Trust Architecture
 
 === ":material-battery-10: Entry Level"
@@ -124,9 +111,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can implement zero trust access controls in specific system components
-
 ## Solution Architecture
-
 
 
 ### Governance and Design reviews
@@ -142,8 +127,6 @@
 === ":material-battery-90: Senior Level"
 
     - Lead the development of governance and design review policies and best practices
-
-
 
 ### Risk identification and management
 
@@ -162,8 +145,6 @@
     - Strategic oversight of risk management strategies and policies
     - Ensure compliance with risk management standards and regulations
 
-
-
 ### Solutions development
 
 === ":material-battery-10: Entry Level"
@@ -177,9 +158,7 @@
 === ":material-battery-90: Senior Level"
 
     - Ensure compliance with solution development standards and regulations
-
 ## System Security
-
 
 
 ### Monitoring Logs and CVEs

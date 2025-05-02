@@ -3,7 +3,6 @@
 ## Tools
 
 
-
 ### Azure, AWS, Virtualisation
 
 === ":material-battery-10: Entry Level"
@@ -17,8 +16,6 @@
 === ":material-battery-90: Senior Level"
 
     -
-
-
 
 ### CI/CD and LAC scripts
 
@@ -34,8 +31,6 @@
 
     -
 
-
-
 ### Docker/Kubernetes/Helm
 
 === ":material-battery-10: Entry Level"
@@ -49,8 +44,6 @@
 === ":material-battery-90: Senior Level"
 
     -
-
-
 
 ### Infraastructure as Code = Terraform, Infrastrictire Orchestration = Ansible, Pulumi, Bicep
 
@@ -66,8 +59,6 @@
 
     - Designs enterprise-wide secure data environments using IaC tools and frameworks
 
-
-
 ### Storage Processing Power Capacity Limits
 
 === ":material-battery-10: Entry Level"
@@ -81,9 +72,7 @@
 === ":material-battery-90: Senior Level"
 
     - ?
-
 ## Administration
-
 
 
 ### Configure networks/firewalls routing
@@ -103,8 +92,6 @@
     - Can configure a firewall in a complex setup where there are mulitple client devices, subnets, networks, access restrictions based on geo-location
     -
 
-
-
 ### Linux administration
 
 === ":material-battery-10: Entry Level"
@@ -121,8 +108,6 @@
 
     - Can optimise Linux systems e.g. for security, for performace etc
     - Lead the development of Linux administration policies and best practices
-
-
 
 ### Networks and firewalls
 
@@ -144,8 +129,6 @@
     - Lead the development of network and firewall policies and best practices
     - Ensure compliance with network security standards and regulations
 
-
-
 ### Setup K8s clusters, deploy microservices, and manage them
 
 === ":material-battery-10: Entry Level"
@@ -159,9 +142,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads architecture reviews and supports teams, defines standards for IaC and other practices
-
 ## Cloud Engineering
-
 
 
 ### DR/BCP Testing
@@ -177,9 +158,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads the DR/BCP testing initiatives, including designing test scenarios and ensuring compliance with regulations. Horizon scans for evolving risks and emerging technologies in DR/BCP.
-
 ## Cloud deployment
-
 
 
 ### Data Analysis and building platforms to support analytics and research
@@ -198,8 +177,6 @@
 
     - Is able to use an expert level understanding of enterprise-level platforms to be able to do secure and scalable research and analysis
     - Leads cross-functional teams to ensure a reliable platform/environment is designed to meet all security, governance standards.
-
-
 
 ### Design and deployment of cloud Architecture based on real-world problems
 
