@@ -39,7 +39,6 @@ theme:
     - search.suggest.indexes
   nav:
     - Home: index.md
-    - About: about.md
     - Skills Matrix:
         - Overview: skills_matrix/overview.md
         - Software Development & Testing: skills_matrix/software_development_testing.md
@@ -52,6 +51,7 @@ theme:
         - Project & Process Management: skills_matrix/project_process_management.md
         - Costing & Financial Oversight: skills_matrix/costing_financial_oversight.md
     - Contributing: contributing.md
+    - About: about.md
 markdown_extensions:
   - admonition
   - attr_list
