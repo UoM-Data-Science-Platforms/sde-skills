@@ -17,6 +17,7 @@ theme:
         name: Switch to light mode
   features:
     - content.code.copy
+    - content.tabs.link
     - navigation.expand
     - navigation.instant
     - navigation.search.highlight
@@ -35,7 +36,23 @@ theme:
     - search.suggest.indexes
   nav:
     - Home: index.md
+    - About: about.md
+    - Overview: overview.md
+    - Skills Matrix:
+        - Overview: skills_matrix/overview.md
+        - Architecture & Design: skills_matrix/architecture_design.md
+        - Cloud Infrastructure: skills_matrix/cloud_infrastructure.md
+        - Costing & Financial Oversight: skills_matrix/costing_financial_oversight.md
+        - Data Management & Engineering: skills_matrix/data_management_engineering.md
+        - Project & Process Management: skills_matrix/project_process_management.md
+        - Security & Compliance: skills_matrix/security_compliance.md
+        - Service Management: skills_matrix/service_management.md
+        - Software Development & Testing: skills_matrix/software_development_testing.md
+        - Technical Collaboration & Documentation: skills_matrix/technical_collaboration_documentation.md
+    - Contributing: contributing.md
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
