@@ -28,7 +28,7 @@ Ruth has a 20+ year track record delivering change in both commercial settings a
 
 ![Vishnu V Chandrabalan](./assets/img/vc.png){ align=left width=200}
 
-Vishnu is a Consultant Surgeon and the Chief Clinical Information Officer of the Lancashire and South Cumbria Secure Data Environment where he leads a large inter-disciplinary team responsible for building and operating a region-scale cloud analytics platform. He also oversees the design and development of their Kubernetes-native Trusted Research Environment and the regional OMOP data engineering efforts. The latter has won his team a HDRUK national award and a nomination for the global OHDSI Titan award. He collaborates with a wide network of academic and commercial partners on digital research infrastructure and real world evidence programs.
+Vishnu is a Consultant Surgeon and the Chief Clinical Information Officer of the Lancashire and South Cumbria SDE where he leads an inter-disciplinary team building and operating a region-scale cloud analytics platform. He also oversees the development of their Kubernetes-native Trusted Research Environment and the regional OMOP data engineering efforts. The latter has won his team a HDRUK national award and a nomination for the global OHDSI Titan award. He collaborates with a wide network of academic and commercial partners on digital research infrastructure and real world evidence programs. He is a Honorary Professor at Lancaster University.
 
 ## Gary Leeming
 
