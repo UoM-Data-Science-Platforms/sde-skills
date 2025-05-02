@@ -1,9 +1,12 @@
 site_name: RTP Competency Framework
 site_description: Competency Framework for Research Technical Professionals working with Secure Data Environments
 site_author: EPSRC SkillsHub Team
+repo_url: https://github.com/UoM-Data-Science-Platforms/sde-skills
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
   palette:
     - scheme: default
       primary: deep purple
@@ -52,11 +55,13 @@ theme:
     - Contributing: contributing.md
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
