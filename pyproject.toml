@@ -6,7 +6,11 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 authors = [{ name = "EPSRC SkillsHub Team" }]
-dependencies = ["mkdocs-material>=9.6.12", "pandas>=2.2.3"]
+dependencies = [
+    "mkdocs-awesome-nav>=3.1.1",
+    "mkdocs-material>=9.6.12",
+ "pandas>=2.2.3",
+]
 
 [tool.ruff]
 select = ["E", "F", "W", "C"]
