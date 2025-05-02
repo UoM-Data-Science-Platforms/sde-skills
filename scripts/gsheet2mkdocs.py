@@ -14,6 +14,13 @@ print(__file__)
 
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 
+# load from local cache if available
+local_cache = Path(__file__).joinpath("..", "local", "data.csv")
+
+if local_cache.exists():
+    print(f"Loading from local cache: {local_cache}")
+    url = local_cache.absolute()
+
 
 df = pd.read_csv(
     url,
@@ -26,6 +33,7 @@ df = pd.read_csv(
         "Senior-level",
     ],
 )
+
 
 df = df.rename(
     columns={
@@ -45,9 +53,9 @@ df = (
     df.groupby(["item", "key_area", "competency_domain"])
     .agg(
         func={
-            "entry_level": "\n\n    ".join,
-            "mid_level": "\n\n    ".join,
-            "senior_level": "\n\n    ".join,
+            "entry_level": "\n\t- ".join,
+            "mid_level": "\n\t- ".join,
+            "senior_level": "\n\t- ".join,
         }
     )
     .reset_index()
@@ -60,17 +68,17 @@ item_template = """
 
 ### {item}
 
-=== "Entry Level"
+=== ":material-battery-10: Entry Level"
 
-    {entry_level}
+    - {entry_level}
 
-=== "Mid Level"
+=== ":material-battery-50: Mid Level"
 
-    {mid_level}
+    - {mid_level}
 
-=== "Senior Level"
+=== ":material-battery-90: Senior Level"
 
-    {senior_level}
+    - {senior_level}
 
 """
 
@@ -89,7 +97,7 @@ for cd in df.competency_domain.unique():
                         entry_level=row.entry_level,
                         mid_level=row.mid_level,
                         senior_level=row.senior_level,
-                    )
+                    ).replace("\t", "    ")
                     f.write(item)
 
     except Exception as e:
