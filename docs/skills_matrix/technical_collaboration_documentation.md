@@ -10,7 +10,6 @@
 
     Assists in data collectiong from providers that eases communications between groups
 
-
 === "Mid Level"
 
     Ensure that datasets are compatable for SDEs through understanding how they are pre-processed if required.
@@ -21,13 +20,11 @@
 
 
 
-
 ### Create Stories on JIRA Board: organising tasks and tracking process in agile workflows
 
 === "Entry Level"
 
     Attends SDE meetings to understand progress and contribute when appropriate
-
 
 === "Mid Level"
 
@@ -39,13 +36,11 @@
 
 
 
-
 ### Plan sprints and groom the backlog: defining priorities and managing iterative development tasks
 
 === "Entry Level"
 
     Can co-ordinate and work closely with software engineers on straight forward tasks (see other rows) under supervision
-
 
 === "Mid Level"
 
@@ -57,13 +52,11 @@
 
 
 
-
 ### Stakeholder/collaboration/discussion
 
 === "Entry Level"
 
     With an understanding of the importance of documentation and tools, is able to write simple documentation following templates and established guidelines
-
 
 === "Mid Level"
 
@@ -75,13 +68,11 @@
 
 
 
-
 ### Work closely with software engineers on technical implementation
 
 === "Entry Level"
 
     Runs stakeholder discussions documenting feedback and requirements
-
 
 === "Mid Level"
 
@@ -90,7 +81,6 @@
 === "Senior Level"
 
     Advocates for stakeholdersin leadership meetings and ensures they align with overall objectives
-
 
 ## Documentation
 
@@ -102,13 +92,11 @@
 
     Updates existing documentation, version control records or system manuals?
 
-
 === "Mid Level"
 
     Is familiar with regulatory requirements for technical documentation
 
 === "Senior Level"
-
 
 
 
@@ -121,7 +109,6 @@
 === "Entry Level"
 
     Organises tasks on JIRA boards [are there other software] with supervision
-
 
 === "Mid Level"
 

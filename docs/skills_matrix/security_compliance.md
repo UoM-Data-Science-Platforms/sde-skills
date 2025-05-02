@@ -10,7 +10,6 @@
 
     Can use preconfigured compliance dashboards to monitor system status
 
-
 === "Mid Level"
 
     Can implement automated compliance checks and develop metrics
@@ -21,13 +20,11 @@
 
 
 
-
 ### Cyber essentials compliance
 
 === "Entry Level"
 
     Familiar with security controls and measures required for Cyber Essentials
-
 
 === "Mid Level"
 
@@ -39,11 +36,9 @@
 
 
 
-
 ### DevOPs - Azure, GitOps
 
 === "Entry Level"
-
 
 
 
@@ -52,7 +47,6 @@
 
 
 === "Senior Level"
-
 
 
 
@@ -68,19 +62,21 @@
 
     Familiar with basic security controls and measures
 
-
 === "Mid Level"
 
     Has experience conducting compliance reviews and identifying non-conformities
+
     Can develop and maintain compliance documentation and reports; compliance testing
+
     Can implement and monitor security controls to ensure compliance
 
 === "Senior Level"
 
     Has extensive experience leading compliance audits and implementing corrective actions
-    Can oversee the development and maintenance of comprehensive compliance documentation
-    Can design and evaluate security controls for compliance
 
+    Can oversee the development and maintenance of comprehensive compliance documentation
+
+    Can design and evaluate security controls for compliance
 
 ## System Security
 
@@ -92,7 +88,6 @@
 
     Familiar with cloud security tools (e.g.
 
-
 === "Mid Level"
 
     AWS Security Hub
@@ -103,13 +98,11 @@
 
 
 
-
 ### Container Security
 
 === "Entry Level"
 
     Familiar with container concepts and basic security considerations
-
 
 === "Mid Level"
 
@@ -118,7 +111,6 @@
 === "Senior Level"
 
     Can develop comprehensive container security strategies and governance frameworks
-
 
 
 
@@ -132,19 +124,21 @@
 
     Ability to assist in monitoring security systems and generating reports on security incidents.
 
-
 === "Mid Level"
 
     Ability to independently analyze and respond to cybersecurity threats, including conducting vulnerability assessments and penetration testing.
+
     Proficiency in developing and implementing incident response plans, including identifying, containing, and mitigating security incidents.
+
     Ability to develop and enforce security policies and procedures to protect organizational assets.
 
 === "Senior Level"
 
     Leading the development and implementation of comprehensive cybersecurity strategies and policies.
-    Expertise in advanced threat intelligence, including analyzing complex security data and providing actionable insights for threat prevention
-    Ensuring the organization meets all cybersecurity standards and regulatory requirements, and establishing long-term frameworks for maintaining a secure environment.
 
+    Expertise in advanced threat intelligence, including analyzing complex security data and providing actionable insights for threat prevention
+
+    Ensuring the organization meets all cybersecurity standards and regulatory requirements, and establishing long-term frameworks for maintaining a secure environment.
 
 
 
@@ -154,7 +148,6 @@
 
     Understands principles of federated identity systems
 
-
 === "Mid Level"
 
     Can configure and manage federation with specific identity providers
@@ -162,7 +155,6 @@
 === "Senior Level"
 
     Can architect complex federated identity solutions across organizational boundaries
-
 
 
 
@@ -176,16 +168,18 @@
 
     Basic skills in monitoring firewall logs and generating reports on firewall activity
 
-
 === "Mid Level"
 
     Ability to independently configure and manage firewall rules, including creating and modifying access control lists (ACLs)
+
     Proficiency in troubleshooting firewall-related issues and ensuring optimal performance.
+
 
 
 === "Senior Level"
 
     Leading the development and implementation of firewall management strategies and policies.
+
     Expertise in analyzing complex firewall logs and providing actionable insights for security improvements.
 
 
@@ -202,26 +196,27 @@
 
     Ability to assist in preparing documentation related to IT security reviews.
 
-
 === "Mid Level"
 
     Ability to independently conduct code reviews to identify security vulnerabilities and ensure compliance with security standards.
+
     Proficiency in assessing risks related to software and code security, including identifying potential threats and weaknesses.
+
     Ability to develop and implement security policies and procedures for software development and code management.
 
 === "Senior Level"
 
     Leading the development and implementation of comprehensive IT security review strategies and policies.
-    Leading IT security review teams and managing large-scale security projects, including coordinating with other departments and stakeholders.
-    Ensuring the organization meets all IT security standards and regulatory requirements, and establishing long-term frameworks for maintaining secure software and code.
 
+    Leading IT security review teams and managing large-scale security projects, including coordinating with other departments and stakeholders.
+
+    Ensuring the organization meets all IT security standards and regulatory requirements, and establishing long-term frameworks for maintaining secure software and code.
 
 
 
 ### Identity management
 
 === "Entry Level"
-
 
 
 
@@ -235,13 +230,11 @@
 
 
 
-
 ### Incident Response
 
 === "Entry Level"
 
     Understands incident classification and can follow established response procedures
-
 
 === "Mid Level"
 
@@ -253,13 +246,11 @@
 
 
 
-
 ### Security accreditation
 
 === "Entry Level"
 
     Familiarity with security accreditation processes and standards.
-
 
 === "Mid Level"
 
@@ -271,13 +262,11 @@
 
 
 
-
 ### Testing of the system and software
 
 === "Entry Level"
 
     Assists in implemeting access controls and user permissions for data access
-
 
 === "Mid Level"
 
@@ -289,13 +278,11 @@
 
 
 
-
 ### Work closely with the external team on penetration
 
 === "Entry Level"
 
     With the awareness of IT security practices (e.g., monitoring logs and reviewing code) is able to review security logs for activity and reports findings to senior team members
-
 
 === "Mid Level"
 
@@ -307,13 +294,11 @@
 
 
 
-
 ### access controls
 
 === "Entry Level"
 
     Is familiar with penetration testing concepts, tools and vulnerabilities and is able to work with external teams to discover vulnerabilities [link to a row 80]
-
 
 === "Mid Level"
 
@@ -322,7 +307,6 @@
 === "Senior Level"
 
     Leads on the development of advanced pen testing strategies and can collaborate with external teams to ensure they are ready
-
 
 ## Regulatory Compliance & Standards
 
@@ -334,13 +318,11 @@
 
     Awareness of the DSPT and NHSDTAC
 
-
 === "Mid Level"
 
     Can ensure that systems meet criteria through regular checks
 
 === "Senior Level"
-
 
 
 
@@ -352,7 +334,6 @@
 
     Awareness of ethical principles in research and data access
 
-
 === "Mid Level"
 
     Is familiar with IRAS (Integrated Research Application System)
@@ -363,13 +344,11 @@
 
 
 
-
 ### IG (Information Governance) Awareness
 
 === "Entry Level"
 
     Awareness of IG principles and their role in managing data securely
-
 
 === "Mid Level"
 
@@ -378,7 +357,6 @@
 === "Senior Level"
 
     Leads (in conjunction with others ) IG policies are being followed by team s and users
-
 
 
 
@@ -392,19 +370,21 @@
 
     Basic knowledge of compliance requirements and regulations
 
-
 === "Mid Level"
 
     Ability to independently conduct ISO audits, including planning, execution, and reporting.
+
     Proficiency in identifying and assessing risks related to compliance.
+
     Ability to recommend improvements based on audit findings.
 
 === "Senior Level"
 
     Leading the development and implementation of audit strategies and policies
-    Expertise in analyzing complex audit data and providing actionable insights.
-    Leading audit teams and managing audit projects from start to finish.
 
+    Expertise in analyzing complex audit data and providing actionable insights.
+
+    Leading audit teams and managing audit projects from start to finish.
 
 
 
@@ -413,7 +393,6 @@
 === "Entry Level"
 
     Awareness of basic backup methods and tools to create backups
-
 
 === "Mid Level"
 
@@ -425,13 +404,11 @@
 
 
 
-
 ### Pen Testing
 
 === "Entry Level"
 
     Applies knowledge of penetration testing concepts, common tools (e.g., Metasploit, Nessus, Burp Suite) and awareness of security vulnerabilities to run basic scans under supervision and identify/report vulnerabilities
-
 
 === "Mid Level"
 
@@ -443,13 +420,11 @@
 
 
 
-
 ### Regulatory Change Management
 
 === "Entry Level"
 
     Aware of processes to monitor regulatory changes
-
 
 === "Mid Level"
 
