@@ -1,36 +1,38 @@
 # Service Management
 
-## User provision
+## Community
 
 
-### Attendance at industry seminars - keeping up-to-date with trends and innovations and building networks
-
-=== ":material-battery-10: Entry Level"
-
-    - Can identify relevent events and attend as an audience member
-
-=== ":material-battery-50: Mid Level"
-
-    - Can represent the organisation and develop networks/promote activities
-
-=== ":material-battery-90: Senior Level"
-
-    - Can present/host
-
-### service desk provision
+### Community engagement and networking
 
 === ":material-battery-10: Entry Level"
 
-    - Has basic understanding of service desk operations
+    - Can identify relevent events and attend as an audience member.
 
 === ":material-battery-50: Mid Level"
 
-    - Can provide user support and manage service desk tasks effectively
+    - Can represent the organisation and develop networks/promote activities.
 
 === ":material-battery-90: Senior Level"
 
-    - Can lead service desk operations ensuring high-quality user support
+    - Can organise community events.
+
 ## TRE development/management
+
+
+### Continuous improvement.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the importance of continuous improvement in service management
+
+=== ":material-battery-50: Mid Level"
+
+    - Can identify areas for improvement in service delivery and act appropriately on them
+
+=== ":material-battery-90: Senior Level"
+
+    - Can lead continuous improvement initiatives to enhance service management
 
 
 ### Data Lineage & Provenance
@@ -47,6 +49,22 @@
 
     - Can design enterprise-wide data governance frameworks that maintain provenance of sensitive data
 
+
+### Defining requirements for TREs (tools for researchers)
+
+=== ":material-battery-10: Entry Level"
+
+    - Can understand user requirements/use cases and can identify applications, tools and services which fit these needs
+
+=== ":material-battery-50: Mid Level"
+
+    - understands licencing models, service models etc that may affect a tools suitablity for a usecase
+
+=== ":material-battery-90: Senior Level"
+
+    - Can make recomendations on products, that may be suitable for projects. Can provide training or training resources for tools
+
+
 ### Designing new TRE services
 
 === ":material-battery-10: Entry Level"
@@ -59,7 +77,8 @@
 
 === ":material-battery-90: Senior Level"
 
-    - Can detail business case or similar documentation to justify investment in new service offerings
+    - Can develop business cases and documentation required for investment in new service offerings.
+
 
 ### Researching future TRE platform replacements
 
@@ -75,33 +94,6 @@
 
     - Horizon scan for future technologies and platforms for secure data environments
 
-### defining requirements for TREs (tools for researchers)
-
-=== ":material-battery-10: Entry Level"
-
-    - Can understand user requirements/use cases and can identify applications, tools and services which fit these needs
-
-=== ":material-battery-50: Mid Level"
-
-    - understands licencing models, service models etc that may affect a tools suitablity for a usecase
-
-=== ":material-battery-90: Senior Level"
-
-    - Can make recomendations on products, that may be suitable for projects. Can provide training or training resources for tools
-
-### service management
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the importance of continuous improvement in service management
-
-=== ":material-battery-50: Mid Level"
-
-    - Can identify areas for improvement in service delivery and act appropriately on them
-
-=== ":material-battery-90: Senior Level"
-
-    - Can lead continuous improvement initiatives to enhance service management
 ## Standards Adherence
 
 
@@ -119,6 +111,7 @@
 
     - Can establish organizational standards for documentation as code and automation
 
+
 ### Maintain awareness of relevant standards
 
 === ":material-battery-10: Entry Level"
@@ -135,17 +128,18 @@
 
 === ":material-battery-90: Senior Level"
 
-    - Can lead initiatives to ensure adherence to industry standards across the organization
-    - Can oversee the selection and use of tools for comprehensive standards adherence
-    - Can lead continuous improvement initiatives to enhance standards adherence
+    - Can lead initiatives to ensure adherence to industry standards across the organization.
+    - Can oversee the selection and use of tools for comprehensive standards adherence.
+    - Can lead continuous improvement initiatives to enhance standards adherence.
+
 ## Mentorship
 
 
-### Lead and mentor junior team members and data stewards
+### Lead and mentor junior team members
 
 === ":material-battery-10: Entry Level"
 
-    -
+    - Actively engages with mentors.
 
 === ":material-battery-50: Mid Level"
 
@@ -153,34 +147,51 @@
 
 === ":material-battery-90: Senior Level"
 
-    - Can support development by providing regular performance reviews and aligning personal and organisational aspirations. Can identify formal training opportunities for all staff
+    - Can support development by providing regular performance reviews and aligning personal and organisational aspirations. Can identify formal training opportunities for all staff.
+
 
 ### Security accreditation
 
 === ":material-battery-10: Entry Level"
 
-    -
+    - Seeks advice from certified individuals.
 
 === ":material-battery-50: Mid Level"
 
-    - Is studying for exams in formal security certifications/standards
+    - Works towards formal security certifications/standards.
 
 === ":material-battery-90: Senior Level"
 
-    - Has achieved accreditaitons/certified status and continues to refresh knowldge and maintain accredited status by retaking exams that expire
-## Service Management
+    - Has achieved accreditaitons/certified status and continues to refresh knowldge to ensure this status can be maintained.
+
+## User provision
 
 
-### addressing access / questions from analysts about SDE
+### Managing user support requests.
 
 === ":material-battery-10: Entry Level"
 
-    - Familiar with service desk tools and techniques
+    - Uses established proceedures and tooling to provide user support.
 
 === ":material-battery-50: Mid Level"
 
-    - Can utilize service desk tools to enhance user support
+    - Responsible for managing staff that provide user support. Ensures there are adequate resources to manage requests in a timely mannor. Develops SLAs, policies and processes for user management.
 
 === ":material-battery-90: Senior Level"
 
-    - Can oversee the selection and use of service desk tools for comprehensive user provision
+    - Approves SLAs, policies and processes around user support.
+
+
+### Provide tooling for user support.
+
+=== ":material-battery-10: Entry Level"
+
+    - Has experience and understanding of tooling used for the management of user queries.
+
+=== ":material-battery-50: Mid Level"
+
+    - Can deploy and manage user support tools.
+
+=== ":material-battery-90: Senior Level"
+
+    - Makes decisions on appropriate approaches and technologies for the management of user queries. Is responsible for commisioning tools.

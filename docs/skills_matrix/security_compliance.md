@@ -17,6 +17,7 @@
 
     - Can design comprehensive compliance automation frameworks integrating multiple standards
 
+
 ### Cyber essentials compliance
 
 === ":material-battery-10: Entry Level"
@@ -31,6 +32,7 @@
 
     - Can design and evaluate security controls for Cyber Essentials compliance
 
+
 ### DevOPs - Azure, GitOps
 
 === ":material-battery-10: Entry Level"
@@ -44,6 +46,7 @@
 === ":material-battery-90: Senior Level"
 
     -
+
 
 ### Security compliance reviews for ISO27001
 
@@ -64,6 +67,7 @@
     - Has extensive experience leading compliance audits and implementing corrective actions
     - Can oversee the development and maintenance of comprehensive compliance documentation
     - Can design and evaluate security controls for compliance
+
 ## System Security
 
 
@@ -81,6 +85,7 @@
 
     - Azure Security Center) and can interpret basic findings
 
+
 ### Container Security
 
 === ":material-battery-10: Entry Level"
@@ -94,6 +99,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can develop comprehensive container security strategies and governance frameworks
+
 
 ### Cybersecurity
 
@@ -115,6 +121,7 @@
     - Expertise in advanced threat intelligence, including analyzing complex security data and providing actionable insights for threat prevention
     - Ensuring the organization meets all cybersecurity standards and regulatory requirements, and establishing long-term frameworks for maintaining a secure environment.
 
+
 ### Federated Identity Management
 
 === ":material-battery-10: Entry Level"
@@ -129,6 +136,7 @@
 
     - Can architect complex federated identity solutions across organizational boundaries
 
+
 ### Firewalls Management
 
 === ":material-battery-10: Entry Level"
@@ -141,13 +149,12 @@
 
     - Ability to independently configure and manage firewall rules, including creating and modifying access control lists (ACLs)
     - Proficiency in troubleshooting firewall-related issues and ensuring optimal performance.
-    -
 
 === ":material-battery-90: Senior Level"
 
     - Leading the development and implementation of firewall management strategies and policies.
     - Expertise in analyzing complex firewall logs and providing actionable insights for security improvements.
-    -
+
 
 ### IT Security reviews (software and code)
 
@@ -169,6 +176,7 @@
     - Leading IT security review teams and managing large-scale security projects, including coordinating with other departments and stakeholders.
     - Ensuring the organization meets all IT security standards and regulatory requirements, and establishing long-term frameworks for maintaining secure software and code.
 
+
 ### Identity management
 
 === ":material-battery-10: Entry Level"
@@ -182,6 +190,7 @@
 === ":material-battery-90: Senior Level"
 
     - Is able to create policies and workflows for security accreditation (e.g., ISO audits)
+
 
 ### Incident Response
 
@@ -197,6 +206,7 @@
 
     - Can develop and test incident response plans and coordinate cross-organizational responses
 
+
 ### Security accreditation
 
 === ":material-battery-10: Entry Level"
@@ -210,6 +220,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leading the development and implementation of security accreditation strategies and policies.
+
 
 ### Testing of the system and software
 
@@ -225,6 +236,7 @@
 
     - Architects firewall and monitoring system policies for SDE data
 
+
 ### Work closely with the external team on penetration
 
 === ":material-battery-10: Entry Level"
@@ -239,6 +251,7 @@
 
     - Leads the design and implementation of SDEs, addressing technical and human/organisational requirements
 
+
 ### access controls
 
 === ":material-battery-10: Entry Level"
@@ -252,6 +265,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads on the development of advanced pen testing strategies and can collaborate with external teams to ensure they are ready
+
 ## Regulatory Compliance & Standards
 
 
@@ -269,6 +283,7 @@
 
     -
 
+
 ### Ethics and IRAS, implications of sensitive data and access and research
 
 === ":material-battery-10: Entry Level"
@@ -283,6 +298,7 @@
 
     - Can apply ethical principles and has experience of the IRAS to research projects
 
+
 ### IG (Information Governance) Awareness
 
 === ":material-battery-10: Entry Level"
@@ -296,6 +312,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads (in conjunction with others ) IG policies are being followed by team s and users
+
 
 ### ISO audits
 
@@ -317,6 +334,7 @@
     - Expertise in analyzing complex audit data and providing actionable insights.
     - Leading audit teams and managing audit projects from start to finish.
 
+
 ### Making secure and GDPR-compliant backups of user data
 
 === ":material-battery-10: Entry Level"
@@ -331,6 +349,7 @@
 
     - Ensures that regulations are implemented for the SDE
 
+
 ### Pen Testing
 
 === ":material-battery-10: Entry Level"
@@ -344,6 +363,7 @@
 === ":material-battery-90: Senior Level"
 
     - Has extensive experience leading penetration testing projects, utilizing a wide range of tools and techniques to identify and mitigate vulnerabilities across complex systems
+
 
 ### Regulatory Change Management
 
