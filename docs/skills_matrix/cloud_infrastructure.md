@@ -17,6 +17,7 @@
 
     -
 
+
 ### CI/CD and LAC scripts
 
 === ":material-battery-10: Entry Level"
@@ -30,6 +31,7 @@
 === ":material-battery-90: Senior Level"
 
     -
+
 
 ### Docker/Kubernetes/Helm
 
@@ -45,6 +47,7 @@
 
     -
 
+
 ### Infraastructure as Code = Terraform, Infrastrictire Orchestration = Ansible, Pulumi, Bicep
 
 === ":material-battery-10: Entry Level"
@@ -59,6 +62,7 @@
 
     - Designs enterprise-wide secure data environments using IaC tools and frameworks
 
+
 ### Storage Processing Power Capacity Limits
 
 === ":material-battery-10: Entry Level"
@@ -72,6 +76,7 @@
 === ":material-battery-90: Senior Level"
 
     - ?
+
 ## Administration
 
 
@@ -85,12 +90,11 @@
 === ":material-battery-50: Mid Level"
 
     - Understands typical firewall configurations for given operations e.g. a standard set of allowed ports when only HTTP/S access is required.
-    -
 
 === ":material-battery-90: Senior Level"
 
     - Can configure a firewall in a complex setup where there are mulitple client devices, subnets, networks, access restrictions based on geo-location
-    -
+
 
 ### Linux administration
 
@@ -108,6 +112,7 @@
 
     - Can optimise Linux systems e.g. for security, for performace etc
     - Lead the development of Linux administration policies and best practices
+
 
 ### Networks and firewalls
 
@@ -129,6 +134,7 @@
     - Lead the development of network and firewall policies and best practices
     - Ensure compliance with network security standards and regulations
 
+
 ### Setup K8s clusters, deploy microservices, and manage them
 
 === ":material-battery-10: Entry Level"
@@ -142,6 +148,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads architecture reviews and supports teams, defines standards for IaC and other practices
+
 ## Cloud Engineering
 
 
@@ -158,6 +165,7 @@
 === ":material-battery-90: Senior Level"
 
     - Leads the DR/BCP testing initiatives, including designing test scenarios and ensuring compliance with regulations. Horizon scans for evolving risks and emerging technologies in DR/BCP.
+
 ## Cloud deployment
 
 
@@ -171,12 +179,12 @@
 === ":material-battery-50: Mid Level"
 
     - Uses knowledge of data processing and analytics workflows to design usable platforms to support research workflows
-    -
 
 === ":material-battery-90: Senior Level"
 
     - Is able to use an expert level understanding of enterprise-level platforms to be able to do secure and scalable research and analysis
     - Leads cross-functional teams to ensure a reliable platform/environment is designed to meet all security, governance standards.
+
 
 ### Design and deployment of cloud Architecture based on real-world problems
 
@@ -185,7 +193,6 @@
     - Good basic understanding of cloud computing concepts and be familiar with cloud providers (e.g., AWS, Azure) and their key services
     - Have an awareness of cloud architecture principles (e.g., security, reliability, scability)
     - Deployment of virtual machines and set up storage for applications
-    -
 
 === ":material-battery-50: Mid Level"
 
@@ -199,4 +206,3 @@
     - Understand of multi-cloud and hybrid cloud strategies and real-world architectural challenges to be able to design or provide recommendations for enterprise-level cloud architectures for secure data environments
     - Have knowledge of the integration of new technologies into the environment (e.g., AI)
     - Pro-actively identifies risks and mitigates deployment challenges to deploy architectures supporting largescale applications with high availability and fault tolerance
-    -

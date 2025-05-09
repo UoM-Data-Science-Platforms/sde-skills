@@ -53,9 +53,9 @@ df = (
     df.groupby(["item", "key_area", "competency_domain"])
     .agg(
         func={
-            "entry_level": "\n\t- ".join,
-            "mid_level": "\n\t- ".join,
-            "senior_level": "\n\t- ".join,
+            "entry_level": lambda x: "\n\t- ".join(i for i in x if i.strip()),
+            "mid_level": lambda x: "\n\t- ".join(i for i in x if i.strip()),
+            "senior_level": lambda x: "\n\t- ".join(i for i in x if i.strip()),
         }
     )
     .reset_index()
@@ -78,6 +78,7 @@ item_template = """
 === ":material-battery-90: Senior Level"
 
     - {senior_level}
+
 """
 
 for cd in df.competency_domain.unique():

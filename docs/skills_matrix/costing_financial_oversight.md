@@ -17,6 +17,7 @@
 
     - Can lead strategic planning for computer resource allocation and cost management
 
+
 ### License and cost management
 
 === ":material-battery-10: Entry Level"
@@ -31,6 +32,7 @@
 
     - Establishes a structure to report and monitor resources
 
+
 ### cost monitoring and Creating costing models
 
 === ":material-battery-10: Entry Level"
@@ -44,6 +46,7 @@
 === ":material-battery-90: Senior Level"
 
     - Develop dynamic costing models to adapt to changing workloads and usage patterns
+
 ## Documentation
 
 
@@ -63,6 +66,7 @@
 
     - Can lead the development and maintenance of comprehensive technical documentation and compliance reports
     - Can lead initiatives to improve documentation clarity and accuracy across the organization
+
 ## Cost Analysis
 
 
@@ -70,7 +74,6 @@
 
 === ":material-battery-10: Entry Level"
 
-    -
     - Familiar with cost analysis techniques and tools
     - Understands the importance of cost analysis in financial oversight
 
@@ -85,6 +88,7 @@
     - Can lead comprehensive reviews of technical literature to ensure relevance and accuracy
     - Can oversee the use of cost analysis techniques and tools for comprehensive financial oversight
     - Can lead initiatives to improve cost analysis processes and ensure financial oversight accuracy
+
 
 ### review and advise on cost management of cloud resources
 

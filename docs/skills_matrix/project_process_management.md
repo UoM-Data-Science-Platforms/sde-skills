@@ -17,6 +17,7 @@
 
     - Can develop internal processes and proceedures to standarise procurement and purchasing that comply with legal and regulatory requirements
 
+
 ### Enterprise Architect
 
 === ":material-battery-10: Entry Level"
@@ -36,6 +37,7 @@
     - Strategic oversight of enterprise architecture strategies and frameworks
     - Lead the development of enterprise architecture policies and best practices
     - Ensure compliance with enterprise architecture standards and regulations
+
 ## Agile Development Practices
 
 
@@ -52,6 +54,7 @@
 === ":material-battery-90: Senior Level"
 
     -
+
 ## Implementation/Operations
 
 
@@ -75,6 +78,7 @@
     - Can oversee the development and maintenance of comprehensive regulatory documentation
     - Can lead compliance initiatives to meet regulatory standards
 
+
 ### Developing and following policies and operating procedures
 
 === ":material-battery-10: Entry Level"
@@ -89,6 +93,7 @@
 
     - Leads SCRUM processes across multiple teams, ensuring effective co-ordination across team(s) using agile tools and methodologies to optimise collaboration and effieciency
 
+
 ### Ensure tech staff are using appropriate methodologies
 
 === ":material-battery-10: Entry Level"
@@ -99,7 +104,6 @@
 
 === ":material-battery-50: Mid Level"
 
-    -
     - Can implement best practices to ensure methodology adherence
     - Can provide training to tech staff on methodologies
 
@@ -108,6 +112,7 @@
     - Can lead initiatives to adopt and optimize methodologies across teams
     - Can oversee the adoption of best practices across tech teams
     - Can lead training and development programs to ensure methodology adherence
+
 
 ### Implementation management
 
@@ -129,6 +134,7 @@
     - Can oversee the selection and use of implementation tools for comprehensive project management
     - Can lead stakeholder engagement for comprehensive implementation management
 
+
 ### Recruitment (of what?)
 
 === ":material-battery-10: Entry Level"
@@ -142,6 +148,7 @@
 === ":material-battery-90: Senior Level"
 
     -
+
 ## Process Oversight
 
 
@@ -165,6 +172,7 @@
     - Can oversee the development and submission of comprehensive funding proposals
     - Can lead financial planning and resource allocation for projects
 
+
 ### Process Design and development
 
 === ":material-battery-10: Entry Level"
@@ -184,6 +192,7 @@
     - Can lead the design and development of complex processes ensuring efficiency and effectiveness
     - Can oversee the selection and use of process modeling tools for comprehensive process design
     - Can lead stakeholder engagement for comprehensive process design and development
+
 
 ### Process review and auditing against KPIs and defined objectives
 
@@ -205,6 +214,7 @@
     - Can oversee the use of auditing tools for comprehensive process reviews
     - Can lead continuous improvement initiatives based on audit results
 
+
 ### Requirements gathering, specification, evaluation of ROI and Bug Fixes
 
 === ":material-battery-10: Entry Level"
@@ -224,6 +234,7 @@
     - Can lead comprehensive requirements gathering and specification processes
     - Can oversee the evaluation of ROI for complex projects
     - Can lead bug tracking and resolution processes for complex projects
+
 ## Process Management
 
 
@@ -247,12 +258,11 @@
     - Can oversee the selection and use of prototyping tools and technologies
     - Can lead iterative development and refinement of prototypes
 
+
 ### Scoping projects and defining Work packages
 
 === ":material-battery-10: Entry Level"
 
-    -
-    -
     -
 
 === ":material-battery-50: Mid Level"
@@ -266,6 +276,7 @@
     - Can lead complex project scoping and work package definition
     - Can oversee the use of project management tools for comprehensive work package definition
     - Can lead stakeholder engagement for project scoping and work package definition
+
 ## Solution Architecture
 
 
@@ -282,6 +293,7 @@
 === ":material-battery-90: Senior Level"
 
     -
+
 ## Project management
 
 
@@ -301,6 +313,4 @@
 
 === ":material-battery-90: Senior Level"
 
-    -
     - Develops organisational proceedures for using SC/VC systems including branching strategies, merging strategies, Continuous Integration & Continuous doplayment hooks
-    -

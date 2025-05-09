@@ -23,6 +23,7 @@
     - Lead the development of containerization policies and best practices
     - Ensure compliance with containerization standards and regulations
 
+
 ### Build event-driven workloads for NLP
 
 === ":material-battery-10: Entry Level"
@@ -39,6 +40,7 @@
 
     - Strategic oversight of event-driven architecture and NLP workload management
     - Ensure compliance with event-driven architecture standards and regulations
+
 
 ### Building and writing viable clinical code sets
 
@@ -57,11 +59,11 @@
     - Strategic oversight of clinical code set development and management
     - Ensure compliance with clinical data standards and regulations
 
+
 ### Data engineering for OMOP using dbt/SQLMesh
 
 === ":material-battery-10: Entry Level"
 
-    -
     - Ability to assist in data engineering tasks using dbt/SQLMesh
     - Familiarity with OMOP data models and standards
 
@@ -77,6 +79,7 @@
     - Lead the development of data engineering strategies and best practices
     - Ensure compliance with OMOP data standards and regulations
 
+
 ### Developing Architecture based on requirements
 
 === ":material-battery-10: Entry Level"
@@ -90,6 +93,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can specify a comprehensive architecture that addresses the clients expressed and implied requirements, and understands additional elements such as networking, security, regulatory, compliance, backup and restore
+
 ## Data Governance
 
 
@@ -109,6 +113,7 @@
 
     - Strategic oversight of column storage database management strategies
     - Ensure compliance with data governance standards and regulations
+
 ## Data Orientated Infrastructure
 
 
@@ -132,6 +137,7 @@
     - Lead the development of data catalogue policies and best practices
     - Ensure compliance with metadata standards and regulations
 
+
 ### Data visualisation
 
 === ":material-battery-10: Entry Level"
@@ -145,6 +151,7 @@
 === ":material-battery-90: Senior Level"
 
     - Can use data visualisation platforms such as power bi to create dashboards to show related visualisations on single applications
+
 
 ### Pipelines and permissions
 
@@ -163,6 +170,7 @@
     - Strategic oversight of data pipeline and permission management strategies
     - Ensure compliance with data security and privacy regulations
 
+
 ### Understanding the data types
 
 === ":material-battery-10: Entry Level"
@@ -179,6 +187,7 @@
 
     - Strategic oversight of data type management and processing strategies
     - Lead the development of data type management policies and best practices
+
 ## Data Analysis & Infrastructure
 
 
