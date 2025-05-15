@@ -64,6 +64,26 @@ This domain covers the technical implementation and maintenance of secure system
     - Implements advanced testing strategies for complex systems
     - Drives quality metrics and continuous improvement initiatives
 
+### Code Documentation & Reusability
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the importance of code documentation and comments
+    - Follows established documentation patterns for the codebase
+    - Can write basic comments explaining code functionality
+
+=== ":material-battery-50: Mid Level"
+
+    - Creates comprehensive documentation that explains both how and why
+    - Designs code for reusability with appropriate abstraction
+    - Implements self-documenting code principles and clear naming conventions
+
+=== ":material-battery-90: Senior Level"
+
+    - Establishes documentation standards and best practices for the organization
+    - Develops strategies for code reuse across projects and teams
+    - Creates knowledge sharing frameworks and mentors others in documentation
+
 ## Infrastructure & Deployment
 
 ### Cloud Infrastructure Management
@@ -187,3 +207,43 @@ This domain covers the technical implementation and maintenance of secure system
     - Architects high-performance systems for enterprise workloads
     - Develops capacity planning and scaling strategies
     - Leads performance optimization initiatives across systems
+
+### Enterprise Solution Development
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands quality of service criteria for business-critical services
+    - Familiar with enterprise architecture concepts and patterns
+    - Can explain the trade-offs between different quality attributes (availability, reliability, etc.)
+
+=== ":material-battery-50: Mid Level"
+
+    - Designs solutions that meet enterprise quality of service requirements
+    - Implements patterns for reliability, resilience, and scalability
+    - Makes informed recommendations regarding QoS priorities and trade-offs
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise-grade solutions balancing QoS attributes with organizational constraints
+    - Develops frameworks and reference architectures for enterprise solutions
+    - Leads initiatives to enhance the quality and reliability of enterprise systems
+
+### Component-Based Architecture
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands component-based design principles and benefits
+    - Familiar with component libraries and frameworks
+    - Can develop simple components following established patterns
+
+=== ":material-battery-50: Mid Level"
+
+    - Designs modular, reusable components with well-defined interfaces
+    - Implements component composition strategies for complex systems
+    - Optimizes components for maintainability and testability
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops enterprise component strategies and governance models
+    - Establishes component design standards and best practices
+    - Leads initiatives to enhance component reuse and maintainability

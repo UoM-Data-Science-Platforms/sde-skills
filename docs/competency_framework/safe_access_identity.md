@@ -62,7 +62,7 @@ This domain covers all aspects of user authentication, authorization, and access
 
     - Architects complex federated identity solutions across organizational boundaries
     - Develops federation governance and security frameworks
-    - Leads initiatives to enhance identity federation capabilities
+    - Leads initiatives to enhance identity federation capabilities across healthcare organizations and research institutions
 
 ## Access Control
 

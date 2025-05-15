@@ -126,6 +126,46 @@ This domain covers all aspects of data handling, processing, governance, and eng
     - Establishes processes for maintaining and evolving data models
     - Leads initiatives to harmonize data models across systems
 
+### Healthcare Data Models
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic healthcare data model concepts (OMOP, FHIR, etc.)
+    - Familiar with clinical terminology systems and code sets
+    - Can work with structured healthcare data following established patterns
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements healthcare data models for specific use cases
+    - Develops and maintains clinical code sets and mappings
+    - Creates data transformation processes for healthcare data standards
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise healthcare data modeling strategies
+    - Leads initiatives to harmonize clinical data across systems
+    - Develops advanced methodologies for clinical data standardization
+
+### Event-Driven Data Processing
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands event-driven architecture concepts for data processing
+    - Familiar with event streaming platforms (Kafka, etc.)
+    - Can implement simple event producers and consumers
+
+=== ":material-battery-50: Mid Level"
+
+    - Designs event-driven data pipelines for specific domains
+    - Implements event schemas and data quality controls
+    - Develops specialized processing for domains like NLP or analytics
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise event-driven data strategies
+    - Designs high-throughput, reliable event processing systems
+    - Leads innovation in event-based analytical systems
+
 ## Research Data Preparation
 
 ### Research Dataset Creation

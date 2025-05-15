@@ -64,6 +64,46 @@ This domain covers the management of secure data environment projects, operation
     - Develops agile governance models that maintain compliance
     - Leads agile transformation initiatives
 
+### Procurement & Vendor Management
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic procurement processes and requirements
+    - Familiar with vendor management concepts and documentation
+    - Can assist with procurement activities following established procedures
+
+=== ":material-battery-50: Mid Level"
+
+    - Manages procurement processes for SDE resources and services
+    - Negotiates with vendors and evaluates service offerings
+    - Ensures compliance with procurement policies and regulations
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops procurement strategies and vendor management frameworks
+    - Establishes procurement governance and oversight mechanisms
+    - Leads strategic vendor relationships and partnership initiatives
+
+### Resource & Cost Management
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands resource allocation and cost management principles
+    - Familiar with cloud cost monitoring tools and techniques
+    - Can generate basic resource usage reports and cost analyses
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements comprehensive resource management processes
+    - Develops cost monitoring and optimization strategies
+    - Creates and maintains costing models for SDE operations
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops enterprise resource management and cost optimization strategies
+    - Establishes financial governance frameworks for SDE operations
+    - Leads initiatives to enhance resource efficiency and cost-effectiveness
+
 ## Service Management
 
 ### Service Level Management
@@ -249,3 +289,23 @@ This domain covers the management of secure data environment projects, operation
     - Establishes innovation frameworks and governance
     - Leads horizon scanning for future TRE technologies
     - Develops strategic partnerships for TRE advancement
+
+### Community Engagement & Networking
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the importance of community engagement for SDEs
+    - Familiar with relevant SDE communities and networks
+    - Can participate in community events and discussions
+
+=== ":material-battery-50: Mid Level"
+
+    - Actively contributes to SDE communities and knowledge sharing
+    - Represents the organization at community events and forums
+    - Builds and maintains professional networks in the SDE ecosystem
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads community engagement strategies and initiatives
+    - Organizes community events and knowledge sharing forums
+    - Develops strategic partnerships across the SDE community

@@ -60,3 +60,17 @@ This competency framework serves multiple purposes:
 3. Identifying skill gaps in teams and organizations
 4. Creating job descriptions and role specifications
 5. Supporting recruitment and retention strategies
+
+## Enhanced Competency Areas
+
+The framework has been enhanced to incorporate specialized areas critical to Secure Data Environments:
+
+1. **Healthcare Data Models & Standards** - Working with specialized healthcare data structures like OMOP, FHIR
+2. **Enterprise Solution Development** - Building production-ready, scalable solutions
+3. **Component-Based Architecture** - Designing modular and reusable system components
+4. **Healthcare Regulatory Frameworks** - Implementing NHS-specific standards (DSPT, DTAC)
+5. **Code Publication & Reusability** - Sharing code securely while promoting reuse
+6. **Resource & Cost Management** - Optimizing cloud resources and managing costs
+7. **Community Engagement** - Building networks and sharing knowledge across SDEs
+
+This comprehensive framework represents a complete mapping of competencies from both theoretical frameworks and real-world skills needed by Research Technical Professionals working with Secure Data Environments.
