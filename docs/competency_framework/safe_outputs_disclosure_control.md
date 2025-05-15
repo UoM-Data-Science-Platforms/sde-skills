@@ -187,3 +187,23 @@ This domain covers the processes, techniques, and tools used to ensure that rese
     - Establishes data publication frameworks and governance
     - Develops organizational standards aligned with best practices
     - Leads initiatives to enhance data sharing capabilities
+
+### Code Publication & Reusability
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the principles of open code publication (FAIR principles)
+    - Familiar with code repositories and sharing platforms
+    - Can prepare code for publication following established templates
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements code publication workflows and processes
+    - Ensures code is well-documented and follows best practices
+    - Addresses security concerns specific to SDEs when publishing code
+
+=== ":material-battery-90: Senior Level"
+
+    - Establishes code publication frameworks and governance
+    - Develops best practices for code metadata and documentation
+    - Leads initiatives to enhance code sharing while maintaining security

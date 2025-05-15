@@ -64,6 +64,46 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Establishes healthcare compliance governance programs
     - Leads healthcare standards compliance initiatives
 
+### Healthcare Data Security Frameworks
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
+    - Familiar with healthcare-specific compliance requirements
+    - Can follow established healthcare compliance procedures
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements healthcare compliance controls and processes
+    - Conducts healthcare compliance assessments
+    - Ensures systems meet healthcare regulatory requirements
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops healthcare compliance strategies and frameworks
+    - Establishes healthcare compliance governance and oversight
+    - Leads healthcare standards compliance initiatives
+
+### Ethics & Research Approval Systems
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands ethical review requirements and research approval processes
+    - Familiar with ethics and IRAS documentation requirements
+    - Can assist with preparing submissions for ethical approval
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements systems for tracking ethical approvals and requirements
+    - Ensures research activities comply with ethical approvals
+    - Conducts ethics compliance reviews and assessments
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops ethical compliance strategies and frameworks
+    - Establishes ethics governance and oversight processes
+    - Leads initiatives to enhance ethical compliance
+
 ## Security Management
 
 ### Security Controls Implementation
