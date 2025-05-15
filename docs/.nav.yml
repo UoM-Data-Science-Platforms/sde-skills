@@ -11,5 +11,14 @@ nav:
       - skills_matrix/technical_collaboration_documentation.md
       - skills_matrix/project_process_management.md
       - skills_matrix/costing_financial_oversight.md
+  - Competency Framework:
+      - competency_framework/framework_mapping.md
+      - competency_framework/overview.md
+      - competency_framework/safe_access_identity.md
+      - competency_framework/safe_data_management.md
+      - competency_framework/safe_governance_compliance.md
+      - competency_framework/safe_outputs_disclosure_control.md
+      - competency_framework/safe_projects_operations.md
+      - competency_framework/safe_technology_engineering.md
   - about.md
   - contributing.md
