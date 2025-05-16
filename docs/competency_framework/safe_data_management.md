@@ -4,6 +4,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ## Data Governance
 
+Data Governance establishes frameworks and processes for ensuring data quality, security, and proper management throughout its lifecycle. This subdomain encompasses classification of sensitive data, tracking data lineage and provenance, and implementing quality management practices that maintain data integrity, accuracy, and compliance with organizational policies while providing visibility into data origins and transformations.
+
 ### Data Classification & Sensitivity
 
 Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing automated classification systems and leading risk assessment initiatives across the organization.
@@ -71,6 +73,8 @@ Ensures the accuracy, completeness, and reliability of data within secure enviro
     - Develops advanced data quality measurement and remediation approaches
 
 ## Data Engineering & Processing
+
+Data Engineering & Processing focuses on building and maintaining secure systems that extract, transform, store, and process sensitive research data. This subdomain covers the development of secure data pipelines, management of database systems, implementation of structured data models and healthcare standards, and event-driven processing methodologies that ensure data is securely handled throughout automated workflows while maintaining appropriate levels of performance and reliability.
 
 ### Data Pipeline Development
 
@@ -183,6 +187,8 @@ Implements systems that process data in real-time based on events and triggers. 
     - Leads innovation in event-based analytical systems
 
 ## Research Data Preparation
+
+Research Data Preparation involves transforming raw healthcare data into structured, anonymized datasets ready for scientific analysis. This subdomain encompasses creating research-ready datasets, building subject cohorts based on specific criteria, and implementing data cataloging systems that enable researchers to discover and understand available data while ensuring all preparation activities maintain appropriate security, privacy controls, and data quality standards.
 
 ### Research Dataset Creation
 
