@@ -23,3 +23,5 @@ site/
 *.sublime-project
 
 /local
+
+.ipynb_checkpoints

@@ -20,5 +20,5 @@ nav:
       - competency_framework/safe_outputs_disclosure_control.md
       - competency_framework/safe_projects_operations.md
       - competency_framework/safe_technology_engineering.md
-  - about.md
-  - contributing.md
+  - The Team: about.md
+  - Contribute: contributing.md
