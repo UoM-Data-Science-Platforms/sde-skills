@@ -4,6 +4,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ## Regulatory Compliance
 
+Regulatory Compliance ensures that secure data environments meet legal requirements and standards for handling sensitive healthcare information. This subdomain encompasses information governance frameworks, data protection compliance with laws like GDPR, adherence to healthcare-specific standards such as DSPT and NHS DTAC, implementation of specialized security frameworks, and management of ethics and research approval systems that collectively maintain legal and regulatory adherence across all aspects of data handling.
+
 ### Information Governance
 
 Establishes and maintains frameworks for managing information assets securely and compliantly. Involves implementing governance controls, conducting assessments, ensuring system compliance, developing enterprise strategies, establishing oversight mechanisms, and leading maturity initiatives that align with organizational requirements and industry standards.
@@ -116,6 +118,8 @@ Manages systems and processes for ensuring research meets ethical standards and 
 
 ## Security Management
 
+Security Management establishes and maintains protections for data assets and systems within secure research environments. This subdomain focuses on implementing comprehensive technical, administrative, and physical security controls, conducting regular assessments and testing to verify effectiveness, and managing incident response processes that collectively ensure research data remains protected from unauthorized access or breaches while enabling appropriate recovery and improvement from security events.
+
 ### Security Controls Implementation
 
 Deploys technical, administrative, and physical safeguards to protect data and systems. Involves understanding control concepts, implementing basic and comprehensive security frameworks, evaluating effectiveness, mapping to compliance requirements, developing enterprise strategies, and leading maturity initiatives across the organization.
@@ -184,6 +188,8 @@ Prepares for and manages security incidents effectively to minimize impact. Invo
 
 ## Ethics & Research Governance
 
+Ethics & Research Governance maintains the ethical integrity of research activities involving sensitive healthcare data. This subdomain encompasses ensuring adherence to ethical principles and requirements, managing data subject consent throughout the research lifecycle, and facilitating thorough ethical review processes that collectively ensure research is conducted responsibly while respecting patient rights, maintaining public trust, and supporting scientific integrity.
+
 ### Research Ethics Compliance
 
 Ensures research activities adhere to ethical principles and requirements. Involves understanding ethics principles, following approval processes, implementing frameworks, conducting assessments, ensuring compliance, developing enterprise strategies, and establishing governance to enhance ethical research practices across the organization.
@@ -251,6 +257,8 @@ Facilitates the assessment of research proposals against ethical standards. Invo
     - Leads initiatives to enhance ethical review processes
 
 ## Audit & Compliance Monitoring
+
+Audit & Compliance Monitoring ensures continuous verification of regulatory adherence through systematic tracking and reporting. This subdomain encompasses implementing comprehensive audit trail systems that record system and user activities, conducting regular compliance monitoring with structured reporting processes, and managing certification and accreditation programs that collectively provide assurance that secure data environments maintain required standards while enabling effective oversight and continuous improvement.
 
 ### Audit Trail Implementation
 

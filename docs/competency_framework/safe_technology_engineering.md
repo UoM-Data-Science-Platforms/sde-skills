@@ -4,6 +4,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ## Software Engineering
 
+Software Engineering applies structured approaches to developing and maintaining secure, high-quality code for research environments. This subdomain encompasses implementing appropriate software development lifecycle methodologies, incorporating secure coding practices that protect against common vulnerabilities, implementing comprehensive testing and quality assurance processes, and creating well-documented, reusable code that enhances maintainability while enabling knowledge sharing across development teams.
+
 ### Software Development Lifecycle
 
 Applies structured approaches to developing and maintaining software throughout its lifecycle. Involves following established processes, using version control systems, implementing bug fixes, applying methodologies appropriate to context, managing code repositories, designing secure features, establishing best practices, leading architectural decisions, and mentoring team members in engineering excellence.
@@ -94,6 +96,8 @@ Creates understandable, maintainable, and reusable code. Involves writing clear 
 
 ## Infrastructure & Deployment
 
+Infrastructure & Deployment establishes the foundation for secure, scalable research environments. This subdomain focuses on designing and managing cloud resources with appropriate security controls, implementing containerization and orchestration technologies that enable portable, isolated application environments, and creating secure network architectures with proper segmentation and access controls that collectively provide the technical infrastructure needed for protected data processing and analysis.
+
 ### Cloud Infrastructure Management
 
 Designs, deploys, and manages cloud resources for secure data environments. Involves working with major providers like AWS, Azure, and GCP, provisioning resources following patterns, implementing infrastructure as code, designing secure architectures, implementing monitoring and scaling, architecting enterprise solutions, developing governance strategies, and leading cloud transformation initiatives.
@@ -161,6 +165,8 @@ Designs and implements secure networks for data environments. Involves understan
     - Leads network transformation initiatives and capacity planning
 
 ## System Architecture
+
+System Architecture establishes the foundational design principles for secure, scalable, and maintainable research environments. This subdomain encompasses creating secure environment designs with defense-in-depth approaches, developing microservices and API architectures that enable modular and flexible systems, implementing strategies for scalability and performance under varying workloads, creating robust enterprise solutions that meet critical requirements, and designing component-based architectures that promote reusability and maintainability.
 
 ### Secure Environment Design
 

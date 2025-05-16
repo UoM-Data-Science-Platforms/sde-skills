@@ -4,6 +4,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ## Statistical Disclosure Control
 
+Statistical Disclosure Control employs mathematical and statistical techniques to protect sensitive information in research outputs. This subdomain encompasses assessing disclosure risks through comprehensive evaluation methodologies, applying appropriate control techniques that balance data protection with research utility, and implementing automated systems that enforce consistent application of disclosure controls across varied research outputs while maintaining statistical validity.
+
 ### Disclosure Risk Assessment
 
 Evaluates research outputs for potential privacy violations and re-identification risks. Involves identifying different types of disclosure risks (identity and attribute), conducting comprehensive assessments, analyzing complex outputs for subtle risks, recommending appropriate controls, developing assessment methodologies, and implementing advanced quantification approaches to enhance risk management.
@@ -72,6 +74,8 @@ Implements systems that automatically apply disclosure controls to research outp
 
 ## Output Checking
 
+Output Checking provides systematic review and verification of research outputs before they leave secure environments. This subdomain focuses on implementing structured review processes for different output formats, creating comprehensive documentation and justification records that support release decisions, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
+
 ### Output Review Processes
 
 Reviews research outputs to ensure they meet disclosure control requirements before release. Involves understanding review requirements for different output formats, conducting reviews using established checklists, designing workflows, implementing tracking and governance processes, establishing frameworks and policies, and developing innovative approaches to improve efficiency.
@@ -139,6 +143,8 @@ Develops tools and frameworks to guide consistent disclosure control decisions. 
     - Leads initiatives to improve decision consistency and quality
 
 ## Safe Data Publication
+
+Safe Data Publication enables secure sharing of research data beyond secure environments. This subdomain encompasses implementing robust de-identification techniques that remove identifying information while preserving analytical value, generating synthetic datasets that maintain statistical properties without exposing real individuals' data, and adhering to established publication standards that ensure appropriate documentation, formatting, and accessibility while maintaining privacy protection.
 
 ### De-identification Techniques
 

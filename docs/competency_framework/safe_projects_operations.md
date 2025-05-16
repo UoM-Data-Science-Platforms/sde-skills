@@ -4,6 +4,8 @@ This domain covers the management of secure data environment projects, operation
 
 ## Project Management
 
+Project Management oversees the planning and delivery of secure data environment initiatives. This subdomain encompasses structured planning of SDE projects with appropriate methodologies, supporting researchers through effective facilitation of technical needs, implementing agile delivery methods adapted for secure environments, managing procurement and vendor relationships, and optimizing resource allocation with effective cost management to ensure successful project outcomes.
+
 ### SDE Project Planning
 
 Plans and executes projects related to secure data environments. Involves understanding project management concepts, using documentation and tracking tools, developing comprehensive plans, managing resources and timelines, identifying risks, establishing methodologies, and leading strategic planning for SDE capabilities across the organization.
@@ -116,6 +118,8 @@ Allocates and optimizes resources within secure data environments to maximize va
 
 ## Service Management
 
+Service Management ensures the reliable delivery of secure data environment services to research users. This subdomain focuses on defining and maintaining appropriate service quality through structured service level agreements, implementing effective incident and problem management processes that minimize disruptions and prevent recurrences, and controlling changes to infrastructure and applications through governance frameworks that balance security requirements with operational flexibility.
+
 ### Service Level Management
 
 Defines, measures, and maintains service quality for SDE users. Involves understanding service level concepts and metrics, tracking performance, developing agreements and objectives, implementing monitoring and reporting, analyzing issues, establishing governance frameworks, developing improvement strategies, and leading cross-organizational service level negotiations.
@@ -184,6 +188,8 @@ Controls modifications to SDE infrastructure, applications, and services. Involv
 
 ## Operational Excellence
 
+Operational Excellence establishes consistent, high-quality service delivery within secure data environments. This subdomain encompasses systematic continuous improvement of processes and services using methodologies like Lean and Six Sigma, comprehensive documentation and knowledge management that preserves operational expertise, and robust monitoring and observability practices that provide insight into system health, performance, and security status while enabling proactive management of the environment.
+
 ### Continuous Improvement
 
 Systematically enhances SDE processes, services, and capabilities. Involves understanding improvement concepts, identifying opportunities, implementing initiatives, applying methodologies like Lean and Six Sigma, measuring outcomes, establishing improvement cultures, developing enterprise strategies, and leading transformational programs across the organization.
@@ -251,6 +257,8 @@ Tracks system health, performance, and security in the SDE. Involves understandi
     - Leads initiatives to enhance operational visibility
 
 ## Research Support & Innovation
+
+Research Support & Innovation enhances researcher effectiveness within secure data environments. This subdomain focuses on enabling researchers through comprehensive training and support programs, providing specialized tools and capabilities that meet research requirements while maintaining security, exploring and implementing innovative technologies that advance secure research capabilities, and engaging with the wider community through active participation and knowledge sharing across the secure data environment ecosystem.
 
 ### Researcher Training & Support
 
