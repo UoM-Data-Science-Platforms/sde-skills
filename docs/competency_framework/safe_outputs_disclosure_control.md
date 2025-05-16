@@ -6,6 +6,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### Disclosure Risk Assessment
 
+Evaluates research outputs for potential privacy violations and re-identification risks. Involves identifying different types of disclosure risks (identity and attribute), conducting comprehensive assessments, analyzing complex outputs for subtle risks, recommending appropriate controls, developing assessment methodologies, and implementing advanced quantification approaches to enhance risk management.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic disclosure risk concepts
@@ -26,6 +28,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### SDC Techniques & Methods
 
+Applies statistical methods to protect confidentiality while preserving data utility. Involves implementing techniques like suppression and rounding, evaluating their effectiveness and impact, designing appropriate strategies for different outputs, developing advanced methodologies for complex scenarios, and establishing frameworks and best practices for the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands common SDC techniques (suppression, rounding, etc.)
@@ -45,6 +49,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
     - Leads research into innovative SDC approaches
 
 ### Automated Disclosure Control
+
+Implements systems that automatically apply disclosure controls to research outputs. Involves using automated tools, implementing solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
 
 === ":material-battery-10: Entry Level"
 
@@ -68,6 +74,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### Output Review Processes
 
+Reviews research outputs to ensure they meet disclosure control requirements before release. Involves understanding review requirements for different output formats, conducting reviews using established checklists, designing workflows, implementing tracking and governance processes, establishing frameworks and policies, and developing innovative approaches to improve efficiency.
+
 === ":material-battery-10: Entry Level"
 
     - Understands output review requirements and processes
@@ -88,6 +96,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### Output Documentation & Justification
 
+Creates records explaining the purpose and contents of research outputs to support safe release. Involves preparing documentation, understanding justification criteria, designing templates and standards, reviewing for completeness and validity, implementing management systems, establishing frameworks, and developing cross-organizational standards to enhance traceability.
+
 === ":material-battery-10: Entry Level"
 
     - Understands output documentation requirements
@@ -107,6 +117,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
     - Leads initiatives to enhance output traceability
 
 ### Decision Support Systems
+
+Develops tools and frameworks to guide consistent disclosure control decisions. Involves understanding decision criteria, using support tools, implementing systems for output checking, developing rules for different output types, evaluating effectiveness, architecting advanced frameworks, implementing AI/ML approaches, and leading initiatives to improve decision consistency and quality.
 
 === ":material-battery-10: Entry Level"
 
@@ -130,6 +142,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### De-identification Techniques
 
+Removes or transforms identifying information in datasets to enable safer sharing. Involves understanding basic concepts, identifying direct and indirect identifiers, applying de-identification methods, implementing complex strategies, evaluating effectiveness, designing approaches for different data types, and developing advanced methodologies including cutting-edge techniques like differential privacy.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic de-identification concepts and techniques
@@ -149,6 +163,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
     - Leads de-identification research and innovation
 
 ### Synthetic Data Generation
+
+Creates artificial datasets that preserve statistical properties without containing real individuals' data. Involves understanding synthetic data concepts, using generation tools, implementing pipelines, evaluating utility and privacy, designing approaches for specific research needs, developing advanced methodologies, and leading innovation in synthetic data generation techniques.
 
 === ":material-battery-10: Entry Level"
 
@@ -170,6 +186,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
 
 ### Data Publication Standards
 
+Ensures released data follows appropriate standards for documentation, format, and accessibility. Involves understanding publication requirements, preparing metadata and documentation, implementing workflows and processes, ensuring compliance with standards and policies, establishing frameworks and governance, and developing organizational standards aligned with best practices.
+
 === ":material-battery-10: Entry Level"
 
     - Understands data publication requirements and standards
@@ -189,6 +207,8 @@ This domain covers the processes, techniques, and tools used to ensure that rese
     - Leads initiatives to enhance data sharing capabilities
 
 ### Code Publication & Reusability
+
+Makes research code available in a secure, reusable, and transparent manner following FAIR principles. Involves understanding code publication principles, using repositories and sharing platforms, preparing code for publication, implementing workflows, ensuring proper documentation, establishing frameworks and governance, and developing best practices while maintaining security.
 
 === ":material-battery-10: Entry Level"
 

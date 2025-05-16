@@ -6,6 +6,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Data Classification & Sensitivity
 
+Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing automated classification systems and leading risk assessment initiatives across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic data classification principles and sensitivity levels
@@ -26,6 +28,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Data Lineage & Provenance
 
+Tracks and documents the origins, movements, and transformations of data throughout systems. Involves maintaining metadata documentation, implementing lineage tools, verifying data provenance, analyzing quality issues, and architecting enterprise-wide systems. Requires developing governance frameworks that maintain visibility of sensitive data across multiple systems.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic concepts of data tracking through systems
@@ -45,6 +49,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
     - Leads initiatives to improve cross-system data lineage visibility
 
 ### Data Quality Management
+
+Ensures the accuracy, completeness, and reliability of data within secure environments. Involves understanding quality dimensions, performing validation, designing quality frameworks, developing metrics, implementing automated validation, and establishing enterprise-wide strategies. Requires leading quality improvement initiatives and developing advanced measurement and remediation approaches.
 
 === ":material-battery-10: Entry Level"
 
@@ -68,6 +74,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Data Pipeline Development
 
+Builds and maintains processes that extract, transform, and load data securely between systems. Involves developing ETL processes, designing secure pipelines for various data types, implementing error handling, monitoring data flows, and optimizing performance. Requires architecting complex systems at enterprise scale and establishing best practices for secure data processing.
+
 === ":material-battery-10: Entry Level"
 
     - Familiar with data pipeline concepts and components
@@ -87,6 +95,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
     - Leads pipeline modernization and optimization initiatives
 
 ### Data Storage & Database Management
+
+Designs and maintains secure database systems for storing and retrieving sensitive data. Involves understanding database types, performing SQL operations, designing secure schemas, implementing access policies, optimizing performance, and architecting enterprise storage strategies. Requires developing governance frameworks and leading database modernization initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -108,6 +118,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Data Models & Standardization
 
+Creates structured representations of data entities and their relationships. Involves understanding modeling concepts, interpreting existing models, designing models for specific domains, implementing standardization processes, adopting appropriate standards, and establishing maintenance procedures. Requires developing enterprise modeling strategies and harmonizing models across systems.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic data modeling concepts
@@ -128,6 +140,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Healthcare Data Models
 
+Implements specialized data models designed for healthcare data exchange and analysis. Involves working with standardized healthcare models like OMOP and FHIR, managing clinical terminology systems, implementing models for specific use cases, maintaining code sets, and creating transformation processes. Requires architecting enterprise healthcare data strategies and harmonizing clinical data.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic healthcare data model concepts (OMOP, FHIR, etc.)
@@ -147,6 +161,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
     - Develops advanced methodologies for clinical data standardization
 
 ### Event-Driven Data Processing
+
+Implements systems that process data in real-time based on events and triggers. Involves understanding event-driven architecture, working with streaming platforms like Kafka, implementing event producers and consumers, designing specialized pipelines, and ensuring data quality. Requires architecting enterprise event strategies and designing high-throughput, reliable processing systems.
 
 === ":material-battery-10: Entry Level"
 
@@ -170,6 +186,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Research Dataset Creation
 
+Extracts and prepares data in formats suitable for research analysis. Involves understanding research data formats, creating datasets from single and multiple sources, implementing linking and deidentification techniques, and ensuring security requirements are met. Requires developing frameworks for data preparation and establishing governance processes.
+
 === ":material-battery-10: Entry Level"
 
     - Understands the process of extracting data for research purposes
@@ -190,6 +208,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ### Data Cohort Building
 
+Identifies and groups subjects within datasets according to specified criteria. Involves understanding patient/subject cohort concepts, implementing inclusion/exclusion criteria, building cohorts based on research requirements, designing complex selection algorithms, validating cohort integrity, and optimizing performance. Requires developing advanced methodologies and establishing management frameworks.
+
 === ":material-battery-10: Entry Level"
 
     - Understands patient/subject cohort concepts
@@ -209,6 +229,8 @@ This domain covers all aspects of data handling, processing, governance, and eng
     - Leads initiatives to improve cohort building capabilities
 
 ### Data Cataloging & Discovery
+
+Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
 
 === ":material-battery-10: Entry Level"
 

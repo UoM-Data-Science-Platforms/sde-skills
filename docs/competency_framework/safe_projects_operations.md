@@ -6,6 +6,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### SDE Project Planning
 
+Plans and executes projects related to secure data environments. Involves understanding project management concepts, using documentation and tracking tools, developing comprehensive plans, managing resources and timelines, identifying risks, establishing methodologies, and leading strategic planning for SDE capabilities across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic project management concepts for SDEs
@@ -25,6 +27,8 @@ This domain covers the management of secure data environment projects, operation
     - Leads strategic planning for SDE capabilities
 
 ### Research Project Facilitation
+
+Supports researchers in utilizing secure data environments effectively. Involves understanding research requirements, workflows and processes, assisting with basic SDE usage, coordinating complex projects, implementing technical solutions, ensuring compliance, developing support frameworks, and leading initiatives to enhance research capabilities.
 
 === ":material-battery-10: Entry Level"
 
@@ -46,6 +50,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Agile Delivery Methods
 
+Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure environments, managing teams and processes, adapting approaches for security needs, establishing delivery frameworks, and leading agile transformation while maintaining compliance.
+
 === ":material-battery-10: Entry Level"
 
     - Understands agile concepts and methodologies
@@ -66,6 +72,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Procurement & Vendor Management
 
+Acquires and manages external resources and services for secure data environments. Involves understanding procurement processes, assisting with activities, managing procurement for resources and services, negotiating with vendors, ensuring compliance with policies, developing strategies, establishing governance, and leading strategic vendor relationships.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic procurement processes and requirements
@@ -85,6 +93,8 @@ This domain covers the management of secure data environment projects, operation
     - Leads strategic vendor relationships and partnership initiatives
 
 ### Resource & Cost Management
+
+Allocates and optimizes resources within secure data environments to maximize value. Involves understanding resource allocation principles, monitoring cloud costs, generating usage reports, implementing management processes, developing optimization strategies, creating costing models, establishing financial governance, and enhancing resource efficiency.
 
 === ":material-battery-10: Entry Level"
 
@@ -108,6 +118,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Service Level Management
 
+Defines, measures, and maintains service quality for SDE users. Involves understanding service level concepts and metrics, tracking performance, developing agreements and objectives, implementing monitoring and reporting, analyzing issues, establishing governance frameworks, developing improvement strategies, and leading cross-organizational service level negotiations.
+
 === ":material-battery-10: Entry Level"
 
     - Understands service level concepts and metrics
@@ -128,6 +140,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Incident & Problem Management
 
+Responds to and resolves service disruptions while preventing recurrence. Involves understanding incident concepts, classifying and documenting issues, implementing management processes, leading response activities, conducting root cause analysis, establishing frameworks, developing strategies to reduce frequency and impact, and leading service resilience initiatives.
+
 === ":material-battery-10: Entry Level"
 
     - Understands incident and problem management concepts
@@ -147,6 +161,8 @@ This domain covers the management of secure data environment projects, operation
     - Leads service resilience and reliability initiatives
 
 ### Change & Release Management
+
+Controls modifications to SDE infrastructure, applications, and services. Involves understanding change management concepts, following procedures, designing processes, evaluating impacts, coordinating implementation, ensuring security and compliance, establishing governance frameworks, and leading initiatives to balance change agility with necessary controls.
 
 === ":material-battery-10: Entry Level"
 
@@ -170,6 +186,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Continuous Improvement
 
+Systematically enhances SDE processes, services, and capabilities. Involves understanding improvement concepts, identifying opportunities, implementing initiatives, applying methodologies like Lean and Six Sigma, measuring outcomes, establishing improvement cultures, developing enterprise strategies, and leading transformational programs across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands continuous improvement concepts
@@ -190,6 +208,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Documentation & Knowledge Management
 
+Creates, maintains, and shares operational knowledge within the SDE. Involves understanding documentation requirements, using knowledge management systems, creating basic documentation, implementing comprehensive strategies, developing knowledge bases, ensuring security compliance, establishing governance standards, and enhancing organizational knowledge sharing.
+
 === ":material-battery-10: Entry Level"
 
     - Understands documentation requirements and standards
@@ -209,6 +229,8 @@ This domain covers the management of secure data environment projects, operation
     - Leads initiatives to enhance organizational knowledge sharing
 
 ### Monitoring & Observability
+
+Tracks system health, performance, and security in the SDE. Involves understanding monitoring concepts and tools, using metrics and logs, implementing comprehensive strategies, designing dashboards and alerts for complex systems, analyzing data, establishing enterprise frameworks, and leading initiatives to enhance operational visibility across the environment.
 
 === ":material-battery-10: Entry Level"
 
@@ -232,6 +254,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Researcher Training & Support
 
+Enables researchers to effectively use secure data environments. Involves understanding researcher needs, providing basic support, developing training programs, implementing support processes, addressing complex issues, establishing engagement strategies, developing innovative enablement approaches, and leading initiatives to enhance the researcher experience.
+
 === ":material-battery-10: Entry Level"
 
     - Understands researcher needs and support requirements
@@ -251,6 +275,8 @@ This domain covers the management of secure data environment projects, operation
     - Leads initiatives to enhance researcher experience
 
 ### TRE Tools & Capabilities
+
+Provides and manages tools for research in secure environments. Involves understanding common tools and requirements, configuring environments, evaluating and implementing research tools, designing workspaces, ensuring security and compliance, developing implementation strategies, establishing governance, and leading initiatives to enhance capabilities.
 
 === ":material-battery-10: Entry Level"
 
@@ -272,6 +298,8 @@ This domain covers the management of secure data environment projects, operation
 
 ### Future TRE Innovation
 
+Explores and implements new technologies and approaches for secure research. Involves understanding emerging trends, researching new technologies, evaluating for TRE application, implementing proof-of-concept projects, developing roadmaps and strategies, establishing innovation frameworks, leading horizon scanning, and developing strategic partnerships for advancement.
+
 === ":material-battery-10: Entry Level"
 
     - Understands emerging trends in secure research environments
@@ -291,6 +319,8 @@ This domain covers the management of secure data environment projects, operation
     - Develops strategic partnerships for TRE advancement
 
 ### Community Engagement & Networking
+
+Participates in and contributes to the wider secure data environment community. Involves understanding the importance of engagement, participating in events and discussions, actively contributing to communities, representing the organization, building professional networks, leading engagement strategies, organizing events, and developing strategic partnerships across the community.
 
 === ":material-battery-10: Entry Level"
 

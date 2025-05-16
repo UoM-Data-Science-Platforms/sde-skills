@@ -6,6 +6,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Information Governance
 
+Establishes and maintains frameworks for managing information assets securely and compliantly. Involves implementing governance controls, conducting assessments, ensuring system compliance, developing enterprise strategies, establishing oversight mechanisms, and leading maturity initiatives that align with organizational requirements and industry standards.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic information governance principles
@@ -25,6 +27,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Leads information governance maturity initiatives
 
 ### Data Protection Compliance
+
+Ensures adherence to data protection laws and regulations such as GDPR. Involves understanding subject rights and consent requirements, implementing protection controls, conducting impact assessments, developing comprehensive frameworks, establishing governance oversight, and leading enhancement initiatives across the organization.
 
 === ":material-battery-10: Entry Level"
 
@@ -46,6 +50,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Healthcare Standards Compliance
 
+Ensures adherence to healthcare-specific regulatory standards such as DSPT and NHS DTAC. Involves implementing compliance frameworks, conducting assessments, ensuring systems meet regulatory requirements, developing enterprise strategies, establishing governance programs, and leading standards compliance initiatives.
+
 === ":material-battery-10: Entry Level"
 
     - Understands relevant healthcare standards (DSPT, NHS DTAC, etc.)
@@ -66,6 +72,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Healthcare Data Security Frameworks
 
+Implements specialized security controls required for protecting healthcare data. Involves understanding healthcare-specific frameworks like DSPT and NHS DTAC, implementing compliance controls, conducting assessments, ensuring regulatory requirements are met, developing strategies, and establishing governance oversight specific to healthcare environments.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
@@ -85,6 +93,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Leads healthcare standards compliance initiatives
 
 ### Ethics & Research Approval Systems
+
+Manages systems and processes for ensuring research meets ethical standards and approval requirements. Involves understanding ethical review processes, preparing documentation for submissions, implementing tracking systems, ensuring compliance with approvals, and developing strategies to enhance ethical governance across the research environment.
 
 === ":material-battery-10: Entry Level"
 
@@ -108,6 +118,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Security Controls Implementation
 
+Deploys technical, administrative, and physical safeguards to protect data and systems. Involves understanding control concepts, implementing basic and comprehensive security frameworks, evaluating effectiveness, mapping to compliance requirements, developing enterprise strategies, and leading maturity initiatives across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands security control concepts and categories
@@ -128,6 +140,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Security Assessment & Testing
 
+Evaluates the effectiveness of security controls through testing and analysis. Involves understanding assessment methodologies, conducting vulnerability scanning and penetration testing, analyzing results, prioritizing remediation, implementing testing programs, and establishing governance frameworks to mature assessment capabilities.
+
 === ":material-battery-10: Entry Level"
 
     - Understands security assessment concepts and methodologies
@@ -147,6 +161,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Leads security assessment maturity initiatives
 
 ### Incident Response Management
+
+Prepares for and manages security incidents effectively to minimize impact. Involves understanding incident response procedures, classifying and reporting incidents, implementing response plans, leading investigations, analyzing for improvement, developing enterprise strategies, and enhancing response capabilities across the organization.
 
 === ":material-battery-10: Entry Level"
 
@@ -170,6 +186,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Research Ethics Compliance
 
+Ensures research activities adhere to ethical principles and requirements. Involves understanding ethics principles, following approval processes, implementing frameworks, conducting assessments, ensuring compliance, developing enterprise strategies, and establishing governance to enhance ethical research practices across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic research ethics principles
@@ -190,6 +208,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Consent Management
 
+Manages processes for obtaining, recording, and honoring data subject consent. Involves understanding consent requirements, verifying documentation, implementing management systems, ensuring research activities align with consent parameters, developing enterprise strategies, and establishing governance frameworks to enhance consent practices.
+
 === ":material-battery-10: Entry Level"
 
     - Understands consent concepts and requirements
@@ -209,6 +229,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Leads consent management enhancement initiatives
 
 ### Ethical Review Processes
+
+Facilitates the assessment of research proposals against ethical standards. Involves preparing documentation for review submissions, coordinating complex submissions, implementing tracking systems, ensuring compliance with approvals, developing streamlined frameworks, and leading initiatives to enhance the efficiency and effectiveness of ethical review processes.
 
 === ":material-battery-10: Entry Level"
 
@@ -232,6 +254,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Audit Trail Implementation
 
+Creates comprehensive records of system and user activities for security and compliance. Involves implementing logging capabilities, ensuring appropriate content and formats, designing comprehensive strategies, implementing secure collection and storage, developing enterprise architectures, and establishing governance frameworks to enhance audit capabilities.
+
 === ":material-battery-10: Entry Level"
 
     - Understands audit logging concepts and requirements
@@ -252,6 +276,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
 
 ### Compliance Monitoring & Reporting
 
+Continuously assesses and documents adherence to regulatory requirements and standards. Involves producing compliance reports, implementing monitoring programs, analyzing trends and issues, developing enterprise strategies, establishing reporting frameworks, and leading initiatives to enhance monitoring capabilities across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands compliance monitoring concepts
@@ -271,6 +297,8 @@ This domain covers the regulatory, ethical, and compliance aspects of operating 
     - Leads compliance monitoring enhancement initiatives
 
 ### Certification & Accreditation
+
+Guides systems through formal security validation by external authorities. Involves understanding certification requirements, collecting evidence, managing certification processes, preparing documentation, addressing findings, developing enterprise strategies, and establishing governance to maintain certifications such as ISO27001 across the organization.
 
 === ":material-battery-10: Entry Level"
 

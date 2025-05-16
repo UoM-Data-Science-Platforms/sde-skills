@@ -6,6 +6,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Software Development Lifecycle
 
+Applies structured approaches to developing and maintaining software throughout its lifecycle. Involves following established processes, using version control systems, implementing bug fixes, applying methodologies appropriate to context, managing code repositories, designing secure features, establishing best practices, leading architectural decisions, and mentoring team members in engineering excellence.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic SDLC concepts and can follow established development processes
@@ -25,6 +27,8 @@ This domain covers the technical implementation and maintenance of secure system
     - Mentors team members on software engineering excellence
 
 ### Secure Coding Practices
+
+Develops software with security built into the code itself. Involves understanding common vulnerabilities like OWASP Top 10, applying input validation and error handling, following secure coding guidelines, identifying and mitigating security issues, implementing secure authentication and authorization, conducting security-focused code reviews, and developing organizational standards.
 
 === ":material-battery-10: Entry Level"
 
@@ -46,6 +50,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Testing & Quality Assurance
 
+Validates software functionality, security, and performance before deployment. Involves creating unit tests, using testing frameworks, executing test plans, designing comprehensive strategies, implementing automated pipelines, analyzing results to improve quality, establishing processes and standards, implementing advanced testing, and driving continuous improvement initiatives.
+
 === ":material-battery-10: Entry Level"
 
     - Creates basic unit tests for code components
@@ -65,6 +71,8 @@ This domain covers the technical implementation and maintenance of secure system
     - Drives quality metrics and continuous improvement initiatives
 
 ### Code Documentation & Reusability
+
+Creates understandable, maintainable, and reusable code. Involves writing clear comments explaining functionality, following documentation patterns, creating comprehensive explanations, designing for reusability with appropriate abstraction, implementing self-documenting principles, establishing organizational standards, developing reuse strategies, and creating knowledge sharing frameworks.
 
 === ":material-battery-10: Entry Level"
 
@@ -88,6 +96,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Cloud Infrastructure Management
 
+Designs, deploys, and manages cloud resources for secure data environments. Involves working with major providers like AWS, Azure, and GCP, provisioning resources following patterns, implementing infrastructure as code, designing secure architectures, implementing monitoring and scaling, architecting enterprise solutions, developing governance strategies, and leading cloud transformation initiatives.
+
 === ":material-battery-10: Entry Level"
 
     - Familiar with major cloud providers (AWS, Azure, GCP) and their core services
@@ -108,6 +118,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Containerization & Orchestration
 
+Packages and manages applications in isolated, portable environments. Involves understanding container concepts, working with Docker and container registries, designing container-based architectures, implementing orchestration with Kubernetes or similar platforms, creating CI/CD pipelines, architecting enterprise strategies, implementing advanced security features, and establishing compliance processes.
+
 === ":material-battery-10: Entry Level"
 
     - Understands container concepts and can build/run basic containers
@@ -127,6 +139,8 @@ This domain covers the technical implementation and maintenance of secure system
     - Establishes container security scanning and compliance processes
 
 ### Network Architecture
+
+Designs and implements secure networks for data environments. Involves understanding networking concepts like IP addressing and routing, configuring network settings, designing secure architectures with appropriate segmentation, implementing VPCs and access controls, troubleshooting issues, architecting complex multi-environment solutions, and developing network security strategies.
 
 === ":material-battery-10: Entry Level"
 
@@ -150,6 +164,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Secure Environment Design
 
+Creates system designs that prioritize data security and privacy. Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
+
 === ":material-battery-10: Entry Level"
 
     - Understands principles of secure environment design
@@ -169,6 +185,8 @@ This domain covers the technical implementation and maintenance of secure system
     - Leads security architecture reviews and remediation efforts
 
 ### Microservices & API Design
+
+Develops loosely coupled, independently deployable services that communicate via APIs. Involves understanding microservices principles, working with API concepts and documentation, designing appropriate service boundaries, implementing secure API gateways, developing versioning strategies, architecting enterprise API strategies, establishing best practices, and leading API security initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -190,6 +208,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Scalability & Performance
 
+Builds systems that can handle growing workloads while maintaining responsiveness. Involves understanding performance concepts and metrics, performing basic testing, designing scalable architectures, implementing caching strategies, conducting load testing, architecting high-performance systems, developing capacity planning strategies, and leading optimization initiatives across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic performance concepts and metrics
@@ -210,6 +230,8 @@ This domain covers the technical implementation and maintenance of secure system
 
 ### Enterprise Solution Development
 
+Creates robust systems that meet business-critical requirements. Involves understanding quality of service criteria, working with enterprise architecture concepts, explaining trade-offs between quality attributes, designing solutions that meet requirements, implementing patterns for reliability and resilience, architecting enterprise-grade solutions, and developing reference architectures.
+
 === ":material-battery-10: Entry Level"
 
     - Understands quality of service criteria for business-critical services
@@ -229,6 +251,8 @@ This domain covers the technical implementation and maintenance of secure system
     - Leads initiatives to enhance the quality and reliability of enterprise systems
 
 ### Component-Based Architecture
+
+Designs systems as assemblies of modular, reusable components. Involves understanding component-based design principles, working with component libraries and frameworks, developing simple components, designing modular interfaces, implementing composition strategies, optimizing for maintainability, developing enterprise strategies, establishing standards, and leading reuse initiatives.
 
 === ":material-battery-10: Entry Level"
 
