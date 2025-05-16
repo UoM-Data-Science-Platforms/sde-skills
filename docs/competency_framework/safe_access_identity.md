@@ -6,6 +6,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### Authentication Systems
 
+Implements and maintains secure user verification mechanisms within research environments. Involves designing and configuring authentication protocols, password policies, and MFA solutions while troubleshooting security incidents. Requires the ability to evaluate technologies and architect enterprise-wide authentication strategies aligned with organizational security needs.
+
 === ":material-battery-10: Entry Level"
 
     - Understands basic authentication concepts and mechanisms
@@ -26,6 +28,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### User Provisioning & Lifecycle
 
+Manages the complete lifecycle of user accounts from creation to deactivation within secure environments. Encompasses designing and automating provisioning processes, ensuring compliance with management policies, and establishing governance frameworks that support efficient identity management across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands user account lifecycle stages
@@ -45,6 +49,8 @@ This domain covers all aspects of user authentication, authorization, and access
     - Leads identity management modernization initiatives
 
 ### Federated Identity Management
+
+Enables secure authentication across organizational boundaries through single sign-on protocols like SAML, OAuth, and OIDC. Involves configuring and managing federation with multiple identity providers, troubleshooting security issues, and developing governance frameworks to enhance secure collaboration between healthcare organizations and research institutions.
 
 === ":material-battery-10: Entry Level"
 
@@ -68,6 +74,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### Role-Based Access Control
 
+Implements access permissions based on organizational roles within secure data environments. Involves defining appropriate roles, designing organizational role structures, implementing management processes, and conducting reviews. Requires skills to develop enterprise frameworks and optimize role structures to minimize access risks while meeting business needs.
+
 === ":material-battery-10: Entry Level"
 
     - Understands RBAC concepts and principles
@@ -88,6 +96,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### Attribute-Based Access Control
 
+Implements dynamic, context-aware access control using attributes rather than roles. Requires defining policies based on various attribute types, designing controls for different contexts, evaluating their effectiveness, and developing advanced policy models for complex scenarios. Involves leading initiatives to implement dynamic access management across the organization.
+
 === ":material-battery-10: Entry Level"
 
     - Understands ABAC concepts and use cases
@@ -107,6 +117,8 @@ This domain covers all aspects of user authentication, authorization, and access
     - Leads initiatives to implement dynamic access control
 
 ### Least Privilege Implementation
+
+Ensures users and systems have only the minimum access privileges needed for their functions. Involves identifying excessive permissions, implementing appropriate access models, conducting reviews, and designing attestation processes. Requires developing enterprise-wide strategies and implementing tools to maintain effective privilege governance throughout the organization.
 
 === ":material-battery-10: Entry Level"
 
@@ -130,6 +142,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### Researcher Onboarding
 
+Designs and implements secure processes for integrating researchers into data environments. Involves verifying training and certifications, creating efficient workflows, implementing credential verification, and establishing governance frameworks. Requires developing cross-organizational strategies that enhance both security and researcher experience.
+
 === ":material-battery-10: Entry Level"
 
     - Understands researcher onboarding requirements and processes
@@ -150,6 +164,8 @@ This domain covers all aspects of user authentication, authorization, and access
 
 ### Secure Research Workspaces
 
+Creates and maintains protected environments for researchers working with sensitive data. Involves designing secure environments tailored to research needs, implementing isolation controls, troubleshooting issues, and optimizing user experience. Requires evaluating technologies and leading modernization initiatives to enhance security while supporting research activities.
+
 === ":material-battery-10: Entry Level"
 
     - Understands secure workspace concepts and components
@@ -169,6 +185,8 @@ This domain covers all aspects of user authentication, authorization, and access
     - Leads workspace modernization and security enhancement initiatives
 
 ### Secure Collaboration Tools
+
+Implements platforms enabling researchers to securely share and collaborate on sensitive data. Involves configuring security features, designing controls for data sharing, and evaluating tools for compliance. Requires developing cross-environment strategies, establishing governance frameworks, and enhancing collaborative capabilities while maintaining strong security standards.
 
 === ":material-battery-10: Entry Level"
 
