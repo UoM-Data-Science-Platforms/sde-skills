@@ -181,7 +181,7 @@ Creates system designs that prioritise data security and privacy. Involves under
 === ":material-battery-50: Mid Level"
 
     - Designs secure environments incorporating appropriate controls
-    - Implements security patterns such as sero trust architecture
+    - Implements security patterns such as zero trust architecture
     - Evaluates security implications of architectural decisions
 
 === ":material-battery-90: Senior Level"
