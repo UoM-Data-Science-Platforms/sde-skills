@@ -79,4 +79,4 @@ The framework has been enhanced to incorporate specialised areas critical to Sec
 6. **Resource & Cost Management** - Optimizing cloud resources and managing costs
 7. **Community Engagement** - Building networks and sharing knowledge across SDEs
 
-This comprehensive framework represents a complete mapping of competencies from both theoretical frameworks and real-world skills needed by Research Technical Professionals working with Secure Data Environments.
+This framework represents an initial mapping of competencies from both theoretical frameworks and real-world skills needed by Research Technical Professionals responsible for building, deploying and managing Trusted Research Environment / Secure Data Environments.
