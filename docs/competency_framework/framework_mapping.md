@@ -1,6 +1,6 @@
 # Competency Framework Mapping
 
-This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the Five Safes model and SATRE specification.
+This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) model and [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specification.
 
 ## Mapping to Five Safes
 
