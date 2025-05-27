@@ -1,6 +1,6 @@
 # Competency Framework Mapping
 
-This document provides a detailed mapping of the SDE Skills Competency Framework to established industry frameworks, specifically the Five Safes model and SATRE specification.
+This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the Five Safes model and SATRE specification.
 
 ## Mapping to Five Safes
 
