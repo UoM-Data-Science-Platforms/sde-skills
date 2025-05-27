@@ -1,6 +1,6 @@
 # Competency Framework Overview
 
-The SDE Skills Competency Framework is designed to map the skills and knowledge needed by Research Technical Professionals (RTPs) working with Secure Data Environments. The framework aligns with established industry models such as the Five Safes and SATRE specifications, while maintaining its unique focus on the technical skills required in secure research environments.
+The SDE Skills Competency Framework is designed to map the skills and knowledge needed by Research Technical Professionals (RTPs) working with Secure Data Environments. The framework aligns with established industry models such as the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) and [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specifications, while maintaining its unique focus on the technical skills required in secure research environments.
 
 ## Framework Structure
 
