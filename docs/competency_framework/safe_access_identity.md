@@ -1,6 +1,6 @@
 # Safe Access & Identity
 
-This domain covers all aspects of user authentication, authorization, and access control within Secure Data Environments, ensuring that only authorized users can access appropriate resources.
+This domain covers all aspects of user authentication, authorization, and access control within Secure Data Environments, ensuring that only authorised users can access appropriate resources.
 
 ## Identity Management
 
@@ -74,11 +74,11 @@ Enables secure authentication across organizational boundaries through single si
 
 ## Access Control
 
-Access Control ensures that only authorized individuals can access specific resources within secure data environments through structured permission systems. This subdomain covers role-based and attribute-based access models as well as least privilege implementation, providing robust security frameworks that enforce authorization policies while balancing operational requirements and minimizing access risks across research environments.
+Access Control ensures that only authorised individuals can access specific resources within secure data environments through structured permission systems. This subdomain covers role-based and attribute-based access models as well as least privilege implementation, providing robust security frameworks that enforce authorization policies while balancing operational requirements and minimizing access risks across research environments.
 
 ### Role-Based Access Control
 
-Implements access permissions based on organizational roles within secure data environments. Involves defining appropriate roles, designing organizational role structures, implementing management processes, and conducting reviews. Requires skills to develop enterprise frameworks and optimize role structures to minimize access risks while meeting business needs.
+Implements access permissions based on organizational roles within secure data environments. Involves defining appropriate roles, designing organizational role structures, implementing management processes, and conducting reviews. Requires skills to develop enterprise frameworks and optimise role structures to minimise access risks while meeting business needs.
 
 === ":material-battery-10: Entry Level"
 
@@ -96,7 +96,7 @@ Implements access permissions based on organizational roles within secure data e
 
     - Develops enterprise RBAC frameworks and strategies
     - Implements advanced access governance and role mining
-    - Leads initiatives to optimize role structures and reduce access risk
+    - Leads initiatives to optimise role structures and reduce access risk
 
 ### Attribute-Based Access Control
 
@@ -160,7 +160,7 @@ Designs and implements secure processes for integrating researchers into data en
 
     - Designs researcher onboarding workflows and documentation
     - Implements verification systems for researcher credentials
-    - Optimizes onboarding processes for efficiency and security
+    - Optimises onboarding processes for efficiency and security
 
 === ":material-battery-90: Senior Level"
 
@@ -182,7 +182,7 @@ Creates and maintains protected environments for researchers working with sensit
 
     - Designs secure workspace environments for different research needs
     - Implements workspace isolation and security controls
-    - Troubleshoots workspace issues and optimizes user experience
+    - Troubleshoots workspace issues and optimises user experience
 
 === ":material-battery-90: Senior Level"
 

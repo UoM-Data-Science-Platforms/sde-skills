@@ -40,7 +40,7 @@ The Five Safes framework is a set of principles enabling safe research access to
 
 ### Safe People
 
-> *Researchers are trained and authorized to use data safely.*
+> *Researchers are trained and authorised to use data safely.*
 
 **Primary Domain Mapping:**
 
@@ -56,7 +56,7 @@ The Five Safes framework is a set of principles enabling safe research access to
 
 ### Safe Settings
 
-> *A SecureLab environment prevents unauthorized use.*
+> *A SecureLab environment prevents unauthorised use.*
 
 **Primary Domain Mapping:**
 
