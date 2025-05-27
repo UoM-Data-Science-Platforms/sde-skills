@@ -19,7 +19,7 @@ Evaluates research outputs for potential privacy violations and re-identificatio
 === ":material-battery-50: Mid Level"
 
     - Conducts comprehensive disclosure risk assessments
-    - Analyzes complex outputs for subtle disclosure risks
+    - Analyses complex outputs for subtle disclosure risks
     - Recommends appropriate controls based on risk assessment
 
 === ":material-battery-90: Senior Level"

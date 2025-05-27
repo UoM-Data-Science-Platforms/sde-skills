@@ -42,7 +42,7 @@ Tracks and documents the origins, movements, and transformations of data through
 
     - Implements data lineage tools and frameworks
     - Designs processes to maintain and verify data provenance
-    - Analyzes data lineage to identify quality or security issues
+    - Analyses data lineage to identify quality or security issues
 
 === ":material-battery-90: Senior Level"
 
@@ -90,7 +90,7 @@ Builds and maintains processes that extract, transform, and load data securely b
 
     - Designs and implements secure data pipelines for various data types
     - Develops error handling and monitoring for data flows
-    - Optimizes pipeline performance and resource usage
+    - Optimises pipeline performance and resource usage
 
 === ":material-battery-90: Senior Level"
 
@@ -112,7 +112,7 @@ Designs and maintains secure database systems for storing and retrieving sensiti
 
     - Designs database schemas for security and performance
     - Implements database security controls and access policies
-    - Optimizes database performance and troubleshoots issues
+    - Optimises database performance and troubleshoots issues
 
 === ":material-battery-90: Senior Level"
 
@@ -140,11 +140,11 @@ Creates structured representations of data entities and their relationships. Inv
 
     - Develops enterprise data modeling strategies and governance
     - Establishes processes for maintaining and evolving data models
-    - Leads initiatives to harmonize data models across systems
+    - Leads initiatives to harmonise data models across systems
 
 ### Healthcare Data Models
 
-Implements specialized data models designed for healthcare data exchange and analysis. Involves working with standardized healthcare models like OMOP and FHIR, managing clinical terminology systems, implementing models for specific use cases, maintaining code sets, and creating transformation processes. Requires architecting enterprise healthcare data strategies and harmonizing clinical data.
+Implements specialised data models designed for healthcare data exchange and analysis. Involves working with standardised healthcare models like OMOP and FHIR, managing clinical terminology systems, implementing models for specific use cases, maintaining code sets, and creating transformation processes. Requires architecting enterprise healthcare data strategies and harmonizing clinical data.
 
 === ":material-battery-10: Entry Level"
 
@@ -161,12 +161,12 @@ Implements specialized data models designed for healthcare data exchange and ana
 === ":material-battery-90: Senior Level"
 
     - Architects enterprise healthcare data modeling strategies
-    - Leads initiatives to harmonize clinical data across systems
+    - Leads initiatives to harmonise clinical data across systems
     - Develops advanced methodologies for clinical data standardization
 
 ### Event-Driven Data Processing
 
-Implements systems that process data in real-time based on events and triggers. Involves understanding event-driven architecture, working with streaming platforms like Kafka, implementing event producers and consumers, designing specialized pipelines, and ensuring data quality. Requires architecting enterprise event strategies and designing high-throughput, reliable processing systems.
+Implements systems that process data in real-time based on events and triggers. Involves understanding event-driven architecture, working with streaming platforms like Kafka, implementing event producers and consumers, designing specialised pipelines, and ensuring data quality. Requires architecting enterprise event strategies and designing high-throughput, reliable processing systems.
 
 === ":material-battery-10: Entry Level"
 
@@ -178,7 +178,7 @@ Implements systems that process data in real-time based on events and triggers. 
 
     - Designs event-driven data pipelines for specific domains
     - Implements event schemas and data quality controls
-    - Develops specialized processing for domains like NLP or analytics
+    - Develops specialised processing for domains like NLP or analytics
 
 === ":material-battery-90: Senior Level"
 
@@ -188,7 +188,7 @@ Implements systems that process data in real-time based on events and triggers. 
 
 ## Research Data Preparation
 
-Research Data Preparation involves transforming raw healthcare data into structured, anonymized datasets ready for scientific analysis. This subdomain encompasses creating research-ready datasets, building subject cohorts based on specific criteria, and implementing data cataloging systems that enable researchers to discover and understand available data while ensuring all preparation activities maintain appropriate security, privacy controls, and data quality standards.
+Research Data Preparation involves transforming raw healthcare data into structured, anonymised datasets ready for scientific analysis. This subdomain encompasses creating research-ready datasets, building subject cohorts based on specific criteria, and implementing data cataloging systems that enable researchers to discover and understand available data while ensuring all preparation activities maintain appropriate security, privacy controls, and data quality standards.
 
 ### Research Dataset Creation
 
@@ -226,7 +226,7 @@ Identifies and groups subjects within datasets according to specified criteria. 
 
     - Designs and implements complex cohort selection algorithms
     - Validates cohort integrity and representativeness
-    - Optimizes cohort building processes for performance
+    - Optimises cohort building processes for performance
 
 === ":material-battery-90: Senior Level"
 
