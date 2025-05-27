@@ -4,7 +4,7 @@ The SDE Skills Competency Framework is designed to map the skills and knowledge 
 
 ## Framework Structure
 
-The framework is organized as a 3-level hierarchy:
+The framework is organised as a 3-level hierarchy:
 
 1. **Domains** - Top-level categorization of competencies
 2. **Subdomains** - Mid-level grouping of related skills
@@ -17,7 +17,7 @@ For each competency item, we define three levels of proficiency:
 
 ## Competency Domains
 
-Our competency framework is organized around six core domains that align with both the Five Safes model and SATRE specification:
+Our competency framework is organised around six core domains that align with both the Five Safes model and SATRE specification:
 
 1. **Safe Technology & Engineering** - Technical implementation of secure systems
 2. **Safe Data Management** - Handling, processing, and governing data
@@ -63,9 +63,9 @@ This competency framework serves multiple purposes:
 
 ## Enhanced Competency Areas
 
-The framework has been enhanced to incorporate specialized areas critical to Secure Data Environments:
+The framework has been enhanced to incorporate specialised areas critical to Secure Data Environments:
 
-1. **Healthcare Data Models & Standards** - Working with specialized healthcare data structures like OMOP, FHIR
+1. **Healthcare Data Models & Standards** - Working with specialised healthcare data structures like OMOP, FHIR
 2. **Enterprise Solution Development** - Building production-ready, scalable solutions
 3. **Component-Based Architecture** - Designing modular and reusable system components
 4. **Healthcare Regulatory Frameworks** - Implementing NHS-specific standards (DSPT, DTAC)

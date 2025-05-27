@@ -64,7 +64,7 @@ Validates software functionality, security, and performance before deployment. I
 
     - Designs comprehensive test strategies including unit, integration, and security testing
     - Implements automated testing pipelines and monitors code coverage
-    - Analyzes test results to improve code quality
+    - Analyses test results to improve code quality
 
 === ":material-battery-90: Senior Level"
 
@@ -128,13 +128,13 @@ Packages and manages applications in isolated, portable environments. Involves u
 
     - Understands container concepts and can build/run basic containers
     - Familiar with Docker and container registries
-    - Can deploy containerized applications following established patterns
+    - Can deploy containerised applications following established patterns
 
 === ":material-battery-50: Mid Level"
 
     - Designs container-based architectures and multi-container applications
     - Implements container orchestration using Kubernetes or similar platforms
-    - Creates and manages CI/CD pipelines for containerized applications
+    - Creates and manages CI/CD pipelines for containerised applications
 
 === ":material-battery-90: Senior Level"
 
@@ -170,7 +170,7 @@ System Architecture establishes the foundational design principles for secure, s
 
 ### Secure Environment Design
 
-Creates system designs that prioritize data security and privacy. Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
+Creates system designs that prioritise data security and privacy. Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
 
 === ":material-battery-10: Entry Level"
 
@@ -181,7 +181,7 @@ Creates system designs that prioritize data security and privacy. Involves under
 === ":material-battery-50: Mid Level"
 
     - Designs secure environments incorporating appropriate controls
-    - Implements security patterns such as zero trust architecture
+    - Implements security patterns such as sero trust architecture
     - Evaluates security implications of architectural decisions
 
 === ":material-battery-90: Senior Level"
@@ -270,7 +270,7 @@ Designs systems as assemblies of modular, reusable components. Involves understa
 
     - Designs modular, reusable components with well-defined interfaces
     - Implements component composition strategies for complex systems
-    - Optimizes components for maintainability and testability
+    - Optimises components for maintainability and testability
 
 === ":material-battery-90: Senior Level"
 
