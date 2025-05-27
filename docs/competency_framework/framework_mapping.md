@@ -88,7 +88,7 @@ The Five Safes framework is a set of principles enabling safe research access to
 
 ## Mapping to SATRE
 
-The SATRE (Secure Access to Research Environments) specification defines technical components for interoperable secure research environments. Our framework aligns with these components:
+The [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specification _provides a comprehensive high-level architecture for research organisations handling sensitive data safely._ Our framework aligns with these components:
 
 ### Authentication & Authorization
 
