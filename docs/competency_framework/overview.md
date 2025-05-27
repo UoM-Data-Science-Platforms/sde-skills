@@ -42,7 +42,7 @@ Governance & Compliance spans across all Five Safes principles.
 
 ## Mapping to SATRE
 
-The framework also aligns with SATRE (Secure Access to Research Environments) specification components:
+The framework also aligns with [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specification components:
 
 - Authentication & Authorization → Safe Access & Identity
 - Environment Provisioning → Safe Technology & Engineering
