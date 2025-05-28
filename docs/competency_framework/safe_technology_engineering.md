@@ -15,18 +15,25 @@ Applies structured approaches to developing and maintaining software throughout 
     - Understands basic SDLC concepts and can follow established development processes
     - Familiar with version control systems like Git for code management
     - Can implement simple bug fixes and feature enhancements under supervision
+    - familiarity with JSON files 
+    - familiarity with IDE (preferred VSCode) for code development 
+    - Can understand code deployment concepts 
 
 === ":material-battery-50: Mid Level"
 
     - Proficient in applying SDLC methodologies appropriate to the project context
     - Independently manages code repositories and review processes
     - Designs and implements features with security and scalability in mind
+    - Understands JSON files structure.
+    - can validate and promote codes to test-environment
 
 === ":material-battery-90: Senior Level"
 
     - Establishes SDLC best practices and processes for the organization
     - Leads architectural decisions and ensures secure coding standards
     - Mentors team members on software engineering excellence
+    - Supervise/support working with JSON files. 
+    - Lead, review and approve code deployment to production environment
 
 ### Secure Coding Practices
 
