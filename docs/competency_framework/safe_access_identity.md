@@ -15,18 +15,23 @@ Implements and maintains secure user verification mechanisms within research env
     - Understands basic authentication concepts and mechanisms
     - Familiar with password policies and multi-factor authentication
     - Can configure user accounts in identity systems under supervision
+    - Can understand existing SDE security Matrix.
+    - Knowledge of Microsoft Entra
 
 === ":material-battery-50: Mid Level"
 
     - Implements secure authentication systems and protocols
     - Designs MFA solutions appropriate to security requirements
     - Troubleshoots authentication issues and security incidents
+    - Can modify existing SDE security matrix
+	- Can configure Microsoft Entra for usage. 
 
 === ":material-battery-90: Senior Level"
 
     - Architects enterprise authentication strategies and frameworks
     - Evaluates and selects authentication technologies aligned with security needs
     - Leads identity system transformations and security enhancements
+    - Lead and provide support for existing Security Matrix.   
 
 ### User Provisioning & Lifecycle
 
@@ -37,18 +42,21 @@ Manages the complete lifecycle of user accounts from creation to deactivation wi
     - Understands user account lifecycle stages
     - Familiar with provisioning and deprovisioning processes
     - Can execute account management tasks following established procedures
+    - Understand existing user provisioning specification.  
 
 === ":material-battery-50: Mid Level"
 
     - Designs and implements user lifecycle management processes
     - Develops automation for provisioning and deprovisioning
     - Ensures compliance with account management policies
+    - Can modify/troubleshoot existing user provisioning specification queries
 
 === ":material-battery-90: Senior Level"
 
     - Establishes enterprise user lifecycle governance frameworks
     - Implements advanced identity governance and administration solutions
     - Leads identity management modernization initiatives
+    - Can lead new user provisioning specification implementation and support
 
 ### Federated Identity Management
 
@@ -85,18 +93,21 @@ Implements access permissions based on organizational roles within secure data e
     - Understands RBAC concepts and principles
     - Familiar with role definition and assignment processes
     - Can implement basic role assignments following established patterns
+    - Can understand existing Role definitions
 
 === ":material-battery-50: Mid Level"
 
     - Designs role structures appropriate to organizational needs
     - Implements role management and governance processes
     - Conducts role reviews and recommends improvements
+    - Can modify/troubleshoot existing Role definitions queries.
 
 === ":material-battery-90: Senior Level"
 
     - Develops enterprise RBAC frameworks and strategies
     - Implements advanced access governance and role mining
     - Leads initiatives to optimize role structures and reduce access risk
+    - Can lead new Role definitions implementation and support.  
 
 ### Attribute-Based Access Control
 
@@ -129,18 +140,21 @@ Ensures users and systems have only the minimum access privileges needed for the
     - Understands the principle of least privilege
     - Familiar with privilege management concepts
     - Can identify excessive permissions in simple scenarios
+    - Understand existing role-level security 
 
 === ":material-battery-50: Mid Level"
 
     - Implements least privilege access models across systems
     - Conducts privilege reviews and recommends right-sizing
     - Designs processes for regular privilege attestation
+    - Support existing role-level security policy
 
 === ":material-battery-90: Senior Level"
 
     - Develops enterprise privilege management strategies
     - Implements advanced tools for privilege discovery and management
     - Leads initiatives to mature privilege governance practices
+    - Leads/supervise implementation involving role-level security.
 
 ## Secure User Experience
 
@@ -177,18 +191,21 @@ Creates and maintains protected environments for researchers working with sensit
     - Understands secure workspace concepts and components
     - Familiar with workspace provisioning processes
     - Can configure basic workspace settings following templates
+    - Understand current Research workspace
 
 === ":material-battery-50: Mid Level"
 
     - Designs secure workspace environments for different research needs
     - Implements workspace isolation and security controls
     - Troubleshoots workspace issues and optimizes user experience
+    - Support existing current Research workspace
 
 === ":material-battery-90: Senior Level"
 
     - Architects enterprise workspace strategies and frameworks
     - Evaluates and selects secure workspace technologies
     - Leads workspace modernization and security enhancement initiatives
+    - Leads and support new/existing Research workspace
 
 ### Secure Collaboration Tools
 
@@ -199,15 +216,19 @@ Implements platforms enabling researchers to securely share and collaborate on s
     - Understands secure collaboration requirements in research environments
     - Familiar with collaboration tool security features
     - Can configure basic sharing and access controls
+    - Knowledge of any secret cloud service provider e.g azure kevaults
+    - Knowledge of simple collaborative platforms
 
 === ":material-battery-50: Mid Level"
 
     - Implements secure collaboration platforms and integrations
     - Designs security controls for data sharing and communication
     - Evaluates collaboration tools for security and compliance
+    - Support/create/maintain secrets using cloud services.
 
 === ":material-battery-90: Senior Level"
 
     - Develops secure collaboration strategies across research environments
     - Establishes governance frameworks for secure information sharing
     - Leads initiatives to enhance collaboration capabilities while maintaining security
+    - Leads task/communication management on collaborative platforms.
