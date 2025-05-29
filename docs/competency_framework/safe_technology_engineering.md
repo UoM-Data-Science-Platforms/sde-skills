@@ -72,6 +72,28 @@ Validates software functionality, security, and performance before deployment. I
     - Implements advanced testing strategies for complex systems
     - Drives quality metrics and continuous improvement initiatives
 
+### Microservices & API Design
+
+Develops loosely coupled, independently deployable services that communicate via APIs. Involves understanding microservices principles, working with API concepts and documentation, designing appropriate service boundaries, implementing secure API gateways, developing versioning strategies, architecting enterprise API strategies, establishing best practices, and leading API security initiatives.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands microservices architecture principles
+    - Familiar with API concepts and documentation (e.g., OpenAPI/Swagger)
+    - Can develop and use RESTful APIs following established patterns
+
+=== ":material-battery-50: Mid Level"
+
+    - Designs microservice architectures with appropriate boundaries
+    - Implements secure API gateways and authorization mechanisms
+    - Develops API versioning strategies and documentation standards
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise API strategies and governance models
+    - Establishes microservices best practices and standards
+    - Leads API security initiatives and evaluates API management solutions
+
 ### Code Documentation & Reusability
 
 Creates understandable, maintainable, and reusable code. Involves writing clear comments explaining functionality, following documentation patterns, creating comprehensive explanations, designing for reusability with appropriate abstraction, implementing self-documenting principles, establishing organizational standards, developing reuse strategies, and creating knowledge sharing frameworks.
@@ -164,6 +186,28 @@ Designs and implements secure networks for data environments. Involves understan
     - Develops network security strategies and implements defense-in-depth
     - Leads network transformation initiatives and capacity planning
 
+### Encryption & Key Management
+
+Encryption & Key Management ensures that data is protected at rest and in transit using secure algorithms and robust key management practices. This subdomain covers encryption implementation, algorithm selection, and secure key generation, storage, and access control.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic encryption concepts (at rest, in transit)
+    - Can apply encryption using standard tools and libraries
+    - Follows procedures for handling encryption keys
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements encryption for data at rest and in transit
+    - Selects and configures secure encryption algorithms
+    - Manages encryption keys using secure key management systems
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops enterprise encryption and key management strategies
+    - Establishes governance for key lifecycle and access controls
+    - Leads initiatives to enhance encryption and key management practices
+
 ## System Architecture
 
 System Architecture establishes the foundational design principles for secure, scalable, and maintainable research environments. This subdomain encompasses creating secure environment designs with [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) approaches, developing microservices and API architectures that enable modular and flexible systems, implementing strategies for scalability and performance under varying workloads, creating robust enterprise solutions that meet critical requirements, and adopting [component-based software engineering (CBSE)](https://en.wikipedia.org/wiki/Component-based_software_engineering) practices that promote reusability and maintainability.
@@ -189,28 +233,6 @@ Creates system designs that prioritise data security and privacy, compliance wit
     - Architects enterprise-wide secure data environments
     - Develops architectural principles and standards for secure environments
     - Leads security architecture reviews and remediation efforts
-
-### Microservices & API Design
-
-Develops loosely coupled, independently deployable services that communicate via APIs. Involves understanding microservices principles, working with API concepts and documentation, designing appropriate service boundaries, implementing secure API gateways, developing versioning strategies, architecting enterprise API strategies, establishing best practices, and leading API security initiatives.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands microservices architecture principles
-    - Familiar with API concepts and documentation (e.g., OpenAPI/Swagger)
-    - Can develop and use RESTful APIs following established patterns
-
-=== ":material-battery-50: Mid Level"
-
-    - Designs microservice architectures with appropriate boundaries
-    - Implements secure API gateways and authorization mechanisms
-    - Develops API versioning strategies and documentation standards
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects enterprise API strategies and governance models
-    - Establishes microservices best practices and standards
-    - Leads API security initiatives and evaluates API management solutions
 
 ### Scalability & Performance
 
@@ -277,3 +299,69 @@ Designs systems as assemblies of modular, reusable components. Involves understa
     - Develops enterprise component strategies and governance models
     - Establishes component design standards and best practices
     - Leads initiatives to enhance component reuse and maintainability
+
+### Vulnerability & Patch Management
+
+Vulnerability & Patch Management ensures that all systems are regularly scanned for vulnerabilities and that security patches are applied promptly. This subdomain covers the use of automated scanning tools, triage and remediation of vulnerabilities, and the implementation of patch management processes for all infrastructure and software components.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic vulnerability concepts and patching processes
+    - Can use vulnerability scanning tools under supervision
+    - Applies security updates following established procedures
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements vulnerability scanning and patch management processes
+    - Triages and remediates vulnerabilities based on risk
+    - Automates patch deployment and monitors compliance
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops enterprise vulnerability management strategies
+    - Establishes automated patching frameworks and governance
+    - Leads vulnerability and patch management maturity initiatives
+
+### Configuration Management
+
+Configuration Management ensures that infrastructure and applications are deployed and maintained in a consistent, secure, and compliant state. This subdomain includes the use of configuration management tools, regular verification of configurations, and processes for replacing non-compliant systems.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands configuration management concepts and tools
+    - Can apply basic configuration changes using automation tools
+    - Follows established configuration procedures
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements configuration management tools and processes
+    - Regularly verifies configuration compliance
+    - Automates remediation of non-compliant configurations
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops configuration management strategies and standards
+    - Establishes processes for rapid replacement of non-compliant systems
+    - Leads configuration management improvement initiatives
+
+### Advanced Computing & Artefact Management
+
+Advanced Computing & Artefact Management covers the provision and secure management of high-performance computing resources, accelerators (e.g., GPUs), and artefact repositories (e.g., software/package registries). This subdomain includes ensuring segregation of users/data, controlling access to artefacts, and scanning for malicious packages.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic concepts of HPC, GPUs, and artefact repositories
+    - Can configure access to shared compute and artefact resources
+    - Follows procedures for secure use of advanced compute
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements secure management of advanced compute resources
+    - Controls access to artefact repositories and scans for malicious packages
+    - Ensures segregation of users and data in shared environments
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops strategies for advanced compute and artefact management
+    - Establishes governance for secure artefact and compute resource usage
+    - Leads initiatives to enhance advanced computing capabilities and security
