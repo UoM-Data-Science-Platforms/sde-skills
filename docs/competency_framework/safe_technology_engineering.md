@@ -166,11 +166,11 @@ Designs and implements secure networks for data environments. Involves understan
 
 ## System Architecture
 
-System Architecture establishes the foundational design principles for secure, scalable, and maintainable research environments. This subdomain encompasses creating secure environment designs with defense-in-depth approaches, developing microservices and API architectures that enable modular and flexible systems, implementing strategies for scalability and performance under varying workloads, creating robust enterprise solutions that meet critical requirements, and designing component-based architectures that promote reusability and maintainability.
+System Architecture establishes the foundational design principles for secure, scalable, and maintainable research environments. This subdomain encompasses creating secure environment designs with [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) approaches, developing microservices and API architectures that enable modular and flexible systems, implementing strategies for scalability and performance under varying workloads, creating robust enterprise solutions that meet critical requirements, and adopting [component-based software engineering (CBSE)](https://en.wikipedia.org/wiki/Component-based_software_engineering) practices that promote reusability and maintainability.
 
 ### Secure Environment Design
 
-Creates system designs that prioritise data security and privacy. Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
+Creates system designs that prioritise data security and privacy, compliance with 5-safes and SATRE. Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
 
 === ":material-battery-10: Entry Level"
 
