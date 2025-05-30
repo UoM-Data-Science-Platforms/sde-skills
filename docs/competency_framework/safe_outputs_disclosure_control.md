@@ -12,21 +12,21 @@ Evaluates research outputs for potential privacy violations and re-identificatio
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic disclosure risk concepts
+    - Understands basic disclosure risk concepts (re-identification risks, data sensitivity levels)
     - Familiar with common types of disclosure risks (identity, attribute)
-    - Can identify obvious disclosure risks in simple outputs
+    - Can identify obvious disclosure risks in simple outputs (e.g., direct identifiers like name or address)
 
 === ":material-battery-50: Mid Level"
 
     - Conducts comprehensive disclosure risk assessments
-    - Analyzes complex outputs for subtle disclosure risks
+    - Analyzes complex outputs for subtle disclosure risks (e.g., cross-tabulations, indirect identifiers)
     - Recommends appropriate controls based on risk assessment
 
 === ":material-battery-90: Senior Level"
 
     - Develops disclosure risk assessment methodologies and frameworks
     - Implements advanced risk quantification approaches
-    - Leads initiatives to enhance disclosure risk management
+    - Leads initiatives to enhance disclosure risk management (e.g., developing training programs, implementing new tools or techniques, anticipate introduction of new regulatory frameworks).
 
 ### SDC Techniques & Methods
 
@@ -35,7 +35,7 @@ Applies statistical methods to protect confidentiality while preserving data uti
 === ":material-battery-10: Entry Level"
 
     - Understands common SDC techniques (suppression, rounding, etc.)
-    - Familiar with when to apply different SDC methods
+    - Familiar with when to apply different SDC methods (e.g., suppression for small cell sizes)
     - Can apply basic SDC techniques following established guidelines
 
 === ":material-battery-50: Mid Level"
@@ -46,7 +46,7 @@ Applies statistical methods to protect confidentiality while preserving data uti
 
 === ":material-battery-90: Senior Level"
 
-    - Develops advanced SDC methodologies for complex scenarios
+    - Develops advanced SDC methodologies for complex scenarios (e.g., multi-dimensional datasets, linked data sets)
     - Establishes SDC frameworks and best practices
     - Leads research into innovative SDC approaches
 
@@ -56,7 +56,7 @@ Implements systems that automatically apply disclosure controls to research outp
 
 === ":material-battery-10: Entry Level"
 
-    - Understands automated SDC tool concepts
+    - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
     - Familiar with available SDC automation tools
     - Can use automated tools following established procedures
 
@@ -64,12 +64,12 @@ Implements systems that automatically apply disclosure controls to research outp
 
     - Implements automated SDC solutions for common output types
     - Configures SDC rules and thresholds in automation systems
-    - Validates accuracy and effectiveness of automated controls
+    - Validates accuracy and effectiveness of automated controls (e.g., testing against known risks, benchmarking)
 
 === ":material-battery-90: Senior Level"
 
     - Architects enterprise automated SDC strategies
-    - Develops advanced SDC algorithms and automation approaches
+    - Develops advanced SDC algorithms and automation approaches (e.g., machine learning-based risk detection).
     - Leads initiatives to enhance automated SDC capabilities
 
 ## Output Checking
@@ -88,15 +88,15 @@ Reviews research outputs to ensure they meet disclosure control requirements bef
 
 === ":material-battery-50: Mid Level"
 
-    - Designs output review workflows and documentation
-    - Conducts thorough reviews of complex research outputs
-    - Implements output tracking and governance processes
+    - Designs output review workflows and documentation to ensure consistency 
+    - Conducts thorough reviews of complex research outputs (e.g., large or multi-file outputs, program source code, images)
+    - Implements output tracking and governance processes # come back
 
 === ":material-battery-90: Senior Level"
 
     - Establishes enterprise output review frameworks and policies
     - Develops innovative approaches to output review efficiency
-    - Leads initiatives to mature output checking capabilities
+    - Leads initiatives to mature output checking capabilities (e.g., achieving ISO compliance, automating reviews).
 
 ### Output Documentation & Justification
 
@@ -154,19 +154,18 @@ Removes or transforms identifying information in datasets to enable safer sharin
 
     - Understands basic de-identification concepts and techniques
     - Familiar with direct and indirect identifiers
-    - Can apply simple de-identification methods following guidelines
+    - Can apply simple de-identification methods following guidelines (e.g., masking, generalization).
 
 === ":material-battery-50: Mid Level"
 
     - Implements complex de-identification strategies
     - Evaluates and validates effectiveness of de-identification
-    - Designs de-identification approaches for different data types
+    - Designs de-identification approaches for different data types (e.g., text data, geospatial data, imaging data).
 
 === ":material-battery-90: Senior Level"
 
     - Develops advanced de-identification methodologies and frameworks
     - Implements cutting-edge techniques like differential privacy
-    - Leads de-identification research and innovation
 
 ### Synthetic Data Generation
 
@@ -176,19 +175,18 @@ Creates artificial datasets that preserve statistical properties without contain
 
     - Understands synthetic data concepts and use cases
     - Familiar with basic synthetic data generation approaches
-    - Can use synthetic data tools following established procedures
+    - Can use synthetic data tools (e.g., DataSynthesizer). following established procedures 
 
 === ":material-battery-50: Mid Level"
 
     - Implements synthetic data generation pipelines
     - Evaluates utility and privacy of synthetic datasets
-    - Designs synthetic data approaches for specific research needs
+    - Designs synthetic data approaches for specific research needs (e.g., training machine learning models).
 
 === ":material-battery-90: Senior Level"
 
     - Develops advanced synthetic data generation methodologies
     - Implements cutting-edge synthetic data technologies
-    - Leads research into synthetic data innovation
 
 ### Data Publication Standards
 
@@ -219,17 +217,17 @@ Makes research code available in a secure, reusable, and transparent manner foll
 === ":material-battery-10: Entry Level"
 
     - Understands the principles of open code publication (FAIR principles)
-    - Familiar with code repositories and sharing platforms
+    - Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
     - Can prepare code for publication following established templates
 
 === ":material-battery-50: Mid Level"
 
-    - Implements code publication workflows and processes
+    - Implements code publication workflows and processes (e.g., code reviews)
     - Ensures code is well-documented and follows best practices
-    - Addresses security concerns specific to SDEs when publishing code
+    - Addresses security concerns specific to SDEs when publishing code (e.g., ensuring secrets such as passwords, api keys, ip addresses are removed. Ensuring the code doesn't contain PID such as filtering on hospital ID numbers)
 
 === ":material-battery-90: Senior Level"
 
     - Establishes code publication frameworks and governance
     - Develops best practices for code metadata and documentation
-    - Leads initiatives to enhance code sharing while maintaining security
+    - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating secure code repositories, developing sharing policies).
