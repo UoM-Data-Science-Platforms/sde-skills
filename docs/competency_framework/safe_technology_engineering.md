@@ -116,6 +116,28 @@ Creates understandable, maintainable, and reusable code. Involves writing clear 
     - Develops strategies for code reuse across projects and teams
     - Creates knowledge sharing frameworks and mentors others in documentation
 
+### Artefact Management
+
+Securely stores, distributes, and controls access to software artefacts including container images, helm charts, and package repositories. Involves understanding artefact concepts, accessing repositories following procedures, working with vulnerability scanning, implementing secure registries, controlling access and scanning for threats, managing distributions, developing enterprise strategies, establishing governance processes, and leading security initiatives.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic concepts of container registries, package repositories, and helm charts
+    - Can access and use artefact repositories following established procedures
+    - Familiar with vulnerability scanning concepts for software artefacts
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements secure container registries and package repository management
+    - Controls access to artefacts and scans for malicious packages and vulnerabilities
+    - Manages helm chart repositories and software library distributions
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops enterprise strategies for artefact management and governance
+    - Establishes automated scanning and compliance processes for all artefacts
+    - Leads initiatives to enhance artefact security and supply chain integrity
+
 ## Infrastructure & Deployment
 
 Infrastructure & Deployment establishes the foundation for secure, scalable research environments. This subdomain focuses on designing and managing cloud resources with appropriate security controls, implementing containerization and orchestration technologies that enable portable, isolated application environments, and creating secure network architectures with proper segmentation and access controls that collectively provide the technical infrastructure needed for protected data processing and analysis.
@@ -188,7 +210,7 @@ Designs and implements secure networks for data environments. Involves understan
 
 ### Encryption & Key Management
 
-Encryption & Key Management ensures that data is protected at rest and in transit using secure algorithms and robust key management practices. This subdomain covers encryption implementation, algorithm selection, and secure key generation, storage, and access control.
+Protects data at rest and in transit using secure algorithms and robust key management practices. Involves understanding encryption concepts, implementing encryption solutions, selecting appropriate algorithms, generating and storing keys securely, managing key lifecycles, implementing access controls, developing enterprise strategies, establishing governance frameworks, and leading security enhancement initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -302,7 +324,7 @@ Designs systems as assemblies of modular, reusable components. Involves understa
 
 ### Vulnerability & Patch Management
 
-Vulnerability & Patch Management ensures that all systems are regularly scanned for vulnerabilities and that security patches are applied promptly. This subdomain covers the use of automated scanning tools, triage and remediation of vulnerabilities, and the implementation of patch management processes for all infrastructure and software components.
+Identifies, assesses, and remediates security vulnerabilities across systems and infrastructure. Involves understanding vulnerability concepts, using scanning tools, applying security updates, implementing automated processes, triaging vulnerabilities by risk, monitoring compliance, developing enterprise strategies, establishing governance frameworks, and leading maturity initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -324,7 +346,7 @@ Vulnerability & Patch Management ensures that all systems are regularly scanned 
 
 ### Configuration Management
 
-Configuration Management ensures that infrastructure and applications are deployed and maintained in a consistent, secure, and compliant state. This subdomain includes the use of configuration management tools, regular verification of configurations, and processes for replacing non-compliant systems.
+Deploys and maintains infrastructure and applications in consistent, secure, and compliant states. Involves understanding configuration concepts, applying changes using automation tools, following established procedures, implementing management processes, verifying compliance, automating remediation, developing strategies and standards, establishing replacement processes, and leading improvement initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -344,24 +366,24 @@ Configuration Management ensures that infrastructure and applications are deploy
     - Establishes processes for rapid replacement of non-compliant systems
     - Leads configuration management improvement initiatives
 
-### Advanced Computing & Artefact Management
+### High Performance Computing
 
-Advanced Computing & Artefact Management covers the provision and secure management of high-performance computing resources, accelerators (e.g., GPUs), and artefact repositories (e.g., software/package registries). This subdomain includes ensuring segregation of users/data, controlling access to artefacts, and scanning for malicious packages.
+Provisions, configures, and securely manages high-performance computing resources and specialized hardware accelerators. Involves understanding HPC concepts, configuring access to shared resources, working with job scheduling systems, implementing secure management practices, integrating with university infrastructure, ensuring user and data segregation, developing infrastructure strategies, establishing governance frameworks, and leading capability enhancement initiatives.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic concepts of HPC, GPUs, and artefact repositories
-    - Can configure access to shared compute and artefact resources
-    - Follows procedures for secure use of advanced compute
+    - Understands basic concepts of HPC, GPU computing, and cluster architectures
+    - Can configure access to shared compute resources following established procedures
+    - Familiar with job scheduling systems and resource allocation concepts
 
 === ":material-battery-50: Mid Level"
 
-    - Implements secure management of advanced compute resources
-    - Controls access to artefact repositories and scans for malicious packages
-    - Ensures segregation of users and data in shared environments
+    - Implements secure management of advanced compute resources and accelerators
+    - Integrates with existing university HPC infrastructure and capacity
+    - Ensures proper segregation of users and data in shared computing environments
 
 === ":material-battery-90: Senior Level"
 
-    - Develops strategies for advanced compute and artefact management
-    - Establishes governance for secure artefact and compute resource usage
-    - Leads initiatives to enhance advanced computing capabilities and security
+    - Develops strategies for advanced computing infrastructure and capacity planning
+    - Establishes governance for secure multi-tenant HPC resource usage
+    - Leads initiatives to enhance computing capabilities and optimize resource utilization
