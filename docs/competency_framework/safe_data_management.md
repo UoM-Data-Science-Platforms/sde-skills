@@ -186,72 +186,24 @@ Implements systems that process data in real-time based on events and triggers. 
     - Designs high-throughput, reliable event processing systems
     - Leads innovation in event-based analytical systems
 
-## Research Data Preparation
+### Data Retention & Disposal
 
-Research Data Preparation involves transforming raw healthcare data into structured, anonymised datasets ready for scientific analysis. This subdomain encompasses creating research-ready datasets, building subject cohorts based on specific criteria, and implementing data cataloging systems that enable researchers to discover and understand available data while ensuring all preparation activities maintain appropriate security, privacy controls, and data quality standards.
-
-### Research Dataset Creation
-
-Extracts and prepares data in formats suitable for research analysis. Involves understanding research data formats, creating datasets from single and multiple sources, implementing linking and deidentification techniques, and ensuring security requirements are met. Requires developing frameworks for data preparation and establishing governance processes.
+Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organizational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands the process of extracting data for research purposes
-    - Familiar with common research data formats and structures
-    - Can create simple research datasets from single sources
+    - Familiar with different storage types (databases, cloud storage, file systems) and data retention concepts
+    - Can follow predefined data lifecycle rules and retention guidelines
+    - Assists in tracking data usage and retention timelines for audit and compliance checks
 
 === ":material-battery-50: Mid Level"
 
-    - Designs and creates complex research datasets from multiple sources
-    - Implements data linking and deidentification techniques
-    - Ensures datasets meet research requirements while maintaining security
+    - Implements data lifecycle strategies that balance retention requirements with storage efficiency
+    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorized access
+    - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
 
 === ":material-battery-90: Senior Level"
 
-    - Develops frameworks and methodologies for research data preparation
-    - Establishes governance processes for research dataset creation
-    - Leads initiatives to improve research data quality and availability
-
-### Data Cohort Building
-
-Identifies and groups subjects within datasets according to specified criteria. Involves understanding patient/subject cohort concepts, implementing inclusion/exclusion criteria, building cohorts based on research requirements, designing complex selection algorithms, validating cohort integrity, and optimizing performance. Requires developing advanced methodologies and establishing management frameworks.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands patient/subject cohort concepts
-    - Familiar with inclusion/exclusion criteria and their implementation
-    - Can build simple cohorts based on specified criteria
-
-=== ":material-battery-50: Mid Level"
-
-    - Designs and implements complex cohort selection algorithms
-    - Validates cohort integrity and representativeness
-    - Optimises cohort building processes for performance
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced methodologies for cohort definition and validation
-    - Establishes cohort management frameworks and standards
-    - Leads initiatives to improve cohort building capabilities
-
-### Data Cataloging & Discovery
-
-Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the purpose and structure of data catalogs
-    - Familiar with metadata standards and practices
-    - Can document datasets in established catalogs
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements and maintains data catalog systems
-    - Develops metadata standards and collection processes
-    - Ensures catalog accuracy and usability for researchers
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects enterprise data catalog strategies and implementations
-    - Establishes governance frameworks for metadata management
-    - Leads initiatives to enhance data discovery and reuse
+    - Defines and implements enterprise data retention policies including archival and secure disposal strategies to comply with regulatory requirements
+    - Architects scalable storage solutions balancing performance, cost, and compliance requirements ensuring long-term data accessibility without unnecessary overhead
+    - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific standards) to ensure data retention practices align with security, privacy, and governance requirements.
