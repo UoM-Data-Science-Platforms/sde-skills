@@ -143,27 +143,6 @@ Enables the secure and effective use of standardized data models such as FHIR an
     - Leads initiatives to enhance platform interoperability and compliance with data model standards
     - Advises on risk, security, and governance considerations related to enabling standardized data models
 
-### Healthcare Data Models
-
-Implements specialized data models designed for healthcare data exchange and analysis. Involves working with standardized healthcare models like OMOP and FHIR, managing clinical terminology systems, implementing models for specific use cases, maintaining code sets, and creating transformation processes. Requires architecting enterprise healthcare data strategies and harmonizing clinical data.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands basic healthcare data model concepts (OMOP, FHIR, etc.)
-    - Familiar with clinical terminology systems and code sets
-    - Can work with structured healthcare data following established patterns
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements healthcare data models for specific use cases
-    - Develops and maintains clinical code sets and mappings
-    - Creates data transformation processes for healthcare data standards
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects enterprise healthcare data modeling strategies
-    - Leads initiatives to harmonize clinical data across systems
-    - Develops advanced methodologies for clinical data standardization
 
 ### Event-Driven Data Processing
 
