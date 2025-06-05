@@ -185,3 +185,25 @@ Implements systems that process data in real-time based on events and triggers. 
     - Architects enterprise event-driven data strategies
     - Designs high-throughput, reliable event processing systems
     - Leads innovation in event-based analytical systems
+
+### Data Retention & Disposal
+
+Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organizational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
+
+=== ":material-battery-10: Entry Level"
+
+    - Familiar with different storage types (databases, cloud storage, file systems) and data retention concepts
+    - Can follow predefined data lifecycle rules and retention guidelines
+    - Assists in tracking data usage and retention timelines for audit and compliance checks
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements data lifecycle strategies that balance retention requirements with storage efficiency
+    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorized access
+    - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
+
+=== ":material-battery-90: Senior Level"
+
+    - Defines and implements enterprise data retention policies including archival and secure disposal strategies to comply with regulatory requirements
+    - Architects scalable storage solutions balancing performance, cost, and compliance requirements ensuring long-term data accessibility without unnecessary overhead
+    - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific standards) to ensure data retention practices align with security, privacy, and governance requirements.
