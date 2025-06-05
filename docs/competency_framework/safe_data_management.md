@@ -8,7 +8,7 @@ Data Governance establishes frameworks and processes for ensuring data quality, 
 
 ### Data Classification & Sensitivity
 
-Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing automated classification systems and leading risk assessment initiatives across the organization.
+Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing classification systems and leading risk assessment initiatives across the organization.
 
 === ":material-battery-10: Entry Level"
 
@@ -25,7 +25,7 @@ Implements frameworks for categorizing data based on sensitivity and security re
 === ":material-battery-90: Senior Level"
 
     - Develops organizational data classification frameworks and policies
-    - Implements automated classification and data discovery systems
+    - Implements classification and data discovery systems
     - Leads data sensitivity governance and risk assessment initiatives
 
 ### Data Lineage & Provenance
