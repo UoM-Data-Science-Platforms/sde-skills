@@ -143,25 +143,25 @@ Designs and maintains secure database systems for storing and retrieving sensiti
 
 ### Data Models & Standardization
 
-Enables the secure and effective use of standardized data models such as FHIR and OMOP within secure data environments. Involves understanding platform and integration requirements, assessing platform capabilities, supporting configuration and adaptation for model adoption, and ensuring compliance with relevant standards. Requires developing strategies to enhance interoperability, security, and governance for standardized data models across platforms.
+Enables the secure and effective use of standardised data models such as FHIR and OMOP within secure data environments. Involves understanding platform and integration requirements, assessing platform capabilities, supporting configuration and adaptation for model adoption, and ensuring compliance with relevant standards. Requires developing strategies to enhance interoperability, security, and governance for standardised data models across platforms.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands the purpose and basic structure of standardized data models (e.g., FHIR, OMOP)
+    - Understands the purpose and basic structure of standardised data models (e.g., FHIR, OMOP)
     - Aware of the need for platform support to enable use of these models
     - Can identify when a platform supports or does not support a given data model
 
 === ":material-battery-50: Mid Level"
 
-    - Assesses platform capabilities for supporting standardized data models
+    - Assesses platform capabilities for supporting standardised data models
     - Identifies integration requirements and dependencies for enabling models like FHIR and OMOP
     - Supports configuration or adaptation of platforms to facilitate use of these models
 
 === ":material-battery-90: Senior Level"
 
-    - Develops enterprise data modeling strategies and governance
-    - Establishes processes for maintaining and evolving data models
-    - Leads initiatives to harmonise data models across systems
+    - Defines platform requirements and strategies for supporting standardised data models at scale
+    - Leads initiatives to enhance platform interoperability and compliance with data model standards
+    - Advises on risk, security, and governance considerations related to enabling standardised data models
 
 
 ### Event-Driven Data Processing
@@ -210,7 +210,7 @@ Implements cryptographic solutions to protect sensitive data throughout its life
 
 ### Data Backups
 
-Ensures data availability and recoverability through systematic backup and restoration processes. Involves understanding backup strategies, implementing automated backup systems, managing retention policies, and designing recovery procedures. Requires architecting resilient backup infrastructures, establishing security protocols, and developing enterprise-wide policies that minimize data loss and downtime while maintaining compliance with regulatory requirements.
+Ensures data availability and recoverability through systematic backup and restoration processes. Involves understanding backup strategies, implementing automated backup systems, managing retention policies, and designing recovery procedures. Requires architecting resilient backup infrastructures, establishing security protocols, and developing enterprise-wide policies that minimise data loss and downtime while maintaining compliance with regulatory requirements.
 
 === ":material-battery-10: Entry Level"
 
@@ -220,14 +220,14 @@ Ensures data availability and recoverability through systematic backup and resto
 
 === ":material-battery-50: Mid Level"
 
-    - Configures and optimizes backup strategies for different environments (on-premises, cloud, hybrid)
+    - Configures and optimises backup strategies for different environments (on-premises, cloud, hybrid)
     - Implements scripts and tools to streamline backup operations and reduce manual intervention
     - Ensures backups meet regulatory requirements and conducts regular integrity checks
 
 === ":material-battery-90: Senior Level"
 
     - Designs scalable, resilient backup architectures for large-scale systems
-    - Leads the development of recovery strategies to minimize downtime and data loss
+    - Leads the development of recovery strategies to minimise downtime and data loss
     - Establishes policies for backup security, encryption, and compliance with industry standards
 
 ### Data Retention & Disposal
@@ -243,7 +243,7 @@ Manages the secure lifecycle of data from creation to disposal, ensuring complia
 === ":material-battery-50: Mid Level"
 
     - Implements data lifecycle strategies that balance retention requirements with storage efficiency
-    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorized access
+    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorised access
     - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
 
 === ":material-battery-90: Senior Level"
