@@ -208,6 +208,28 @@ Implements cryptographic solutions to protect sensitive data throughout its life
     - Implements advanced cryptographic techniques (post-quantum cryptography, zero-knowledge proofs, homomorphic encryption)
     - Establishes encryption policies and oversees compliance across the organization
 
+### Data Backups
+
+Ensures data availability and recoverability through systematic backup and restoration processes. Involves understanding backup strategies, implementing automated backup systems, managing retention policies, and designing recovery procedures. Requires architecting resilient backup infrastructures, establishing security protocols, and developing enterprise-wide policies that minimize data loss and downtime while maintaining compliance with regulatory requirements.
+
+=== ":material-battery-10: Entry Level"
+
+    - Familiar with different backup types (full, incremental, differential) and their use cases
+    - Can adhere to predefined backup schedules and retention policies
+    - Understands how to restore data from backups in case of accidental deletion or corruption
+
+=== ":material-battery-50: Mid Level"
+
+    - Configures and optimizes backup strategies for different environments (on-premises, cloud, hybrid)
+    - Implements scripts and tools to streamline backup operations and reduce manual intervention
+    - Ensures backups meet regulatory requirements and conducts regular integrity checks
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs scalable, resilient backup architectures for large-scale systems
+    - Leads the development of recovery strategies to minimize downtime and data loss
+    - Establishes policies for backup security, encryption, and compliance with industry standards
+
 ### Data Retention & Disposal
 
 Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organizational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
