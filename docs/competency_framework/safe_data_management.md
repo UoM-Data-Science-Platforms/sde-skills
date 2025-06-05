@@ -64,7 +64,7 @@ Ensures the accuracy, completeness, and reliability of data within secure enviro
 
     - Designs and implements data quality frameworks and controls
     - Develops data quality metrics and monitoring processes
-    - Implements automated data quality validation pipelines
+    - Implements data quality validation pipelines
 
 === ":material-battery-90: Senior Level"
 
