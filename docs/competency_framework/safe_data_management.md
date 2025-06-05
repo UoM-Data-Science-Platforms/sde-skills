@@ -186,6 +186,28 @@ Implements systems that process data in real-time based on events and triggers. 
     - Designs high-throughput, reliable event processing systems
     - Leads innovation in event-based analytical systems
 
+### Encryption Standards & Implementation
+
+Implements cryptographic solutions to protect sensitive data throughout its lifecycle in secure environments. Involves understanding encryption methods, configuring cryptographic systems, managing encryption keys, and ensuring compliance with security standards. Requires designing enterprise encryption frameworks, implementing advanced cryptographic techniques, and establishing organizational policies that maintain data confidentiality and integrity.
+
+=== ":material-battery-10: Entry Level"
+
+    - Familiar with symmetric and asymmetric encryption methods (AES, RSA, etc.)
+    - Can follow predefined encryption standards and best practices
+    - Understands how encryption protects data at rest and in transit
+
+=== ":material-battery-50: Mid Level"
+
+    - Configures and deploys encryption technologies in storage and communication systems
+    - Implements secure key generation, storage, and rotation practices
+    - Ensures encryption implementations align with regulatory standards (GDPR, HIPAA, FIPS)
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs enterprise encryption frameworks and security architectures
+    - Implements advanced cryptographic techniques (post-quantum cryptography, zero-knowledge proofs, homomorphic encryption)
+    - Establishes encryption policies and oversees compliance across the organization
+
 ### Data Retention & Disposal
 
 Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organizational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
