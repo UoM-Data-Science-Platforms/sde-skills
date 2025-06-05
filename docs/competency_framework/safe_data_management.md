@@ -74,7 +74,8 @@ Ensures the accuracy, completeness, and reliability of data within secure enviro
 
 ## Data Engineering & Processing
 
-Data Engineering & Processing focuses on building and maintaining secure systems that extract, transform, store, and process sensitive research data. This subdomain covers the development of secure data pipelines, management of database systems, implementation of structured data models and healthcare standards, and event-driven processing methodologies that ensure data is securely handled throughout automated workflows while maintaining appropriate levels of performance and reliability.
+Data Engineering & Processing focuses on building and maintaining secure systems that extract, transform, store, and process sensitive data.
+This subdomain covers the development of secure data pipelines, management of database systems, implementation of structured data models and healthcare standards, and processing methodologies that ensure data is securely handled throughout workflows while maintaining appropriate levels of performance and reliability.
 
 ### Data Pipeline Development
 
