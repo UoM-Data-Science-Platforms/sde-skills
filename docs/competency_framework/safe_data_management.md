@@ -6,6 +6,28 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 Data Governance establishes frameworks and processes for ensuring data quality, security, and proper management throughout its lifecycle. This subdomain encompasses classification of sensitive data, tracking data lineage and provenance, and implementing quality management practices that maintain data integrity, accuracy, and compliance with organizational policies while providing visibility into data origins and transformations.
 
+### Data Cataloging & Discovery
+
+Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the purpose and structure of data catalogs
+    - Familiar with metadata standards and practices
+    - Can document datasets in established catalogs
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements and maintains data catalog systems
+    - Develops metadata standards and collection processes
+    - Ensures catalog accuracy and usability for researchers
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise data catalog strategies and implementations
+    - Establishes governance frameworks for metadata management
+    - Leads initiatives to enhance data discovery and reuse
+
 ### Data Classification & Sensitivity
 
 Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing classification systems and leading risk assessment initiatives across the organization.
@@ -165,73 +187,3 @@ Implements systems that process data in real-time based on events and triggers. 
     - Architects enterprise event-driven data strategies
     - Designs high-throughput, reliable event processing systems
     - Leads innovation in event-based analytical systems
-
-## Research Data Preparation
-
-Research Data Preparation involves transforming raw healthcare data into structured, anonymized datasets ready for scientific analysis. This subdomain encompasses creating research-ready datasets, building subject cohorts based on specific criteria, and implementing data cataloging systems that enable researchers to discover and understand available data while ensuring all preparation activities maintain appropriate security, privacy controls, and data quality standards.
-
-### Research Dataset Creation
-
-Extracts and prepares data in formats suitable for research analysis. Involves understanding research data formats, creating datasets from single and multiple sources, implementing linking and deidentification techniques, and ensuring security requirements are met. Requires developing frameworks for data preparation and establishing governance processes.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the process of extracting data for research purposes
-    - Familiar with common research data formats and structures
-    - Can create simple research datasets from single sources
-
-=== ":material-battery-50: Mid Level"
-
-    - Designs and creates complex research datasets from multiple sources
-    - Implements data linking and deidentification techniques
-    - Ensures datasets meet research requirements while maintaining security
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops frameworks and methodologies for research data preparation
-    - Establishes governance processes for research dataset creation
-    - Leads initiatives to improve research data quality and availability
-
-### Data Cohort Building
-
-Identifies and groups subjects within datasets according to specified criteria. Involves understanding patient/subject cohort concepts, implementing inclusion/exclusion criteria, building cohorts based on research requirements, designing complex selection algorithms, validating cohort integrity, and optimizing performance. Requires developing advanced methodologies and establishing management frameworks.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands patient/subject cohort concepts
-    - Familiar with inclusion/exclusion criteria and their implementation
-    - Can build simple cohorts based on specified criteria
-
-=== ":material-battery-50: Mid Level"
-
-    - Designs and implements complex cohort selection algorithms
-    - Validates cohort integrity and representativeness
-    - Optimizes cohort building processes for performance
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced methodologies for cohort definition and validation
-    - Establishes cohort management frameworks and standards
-    - Leads initiatives to improve cohort building capabilities
-
-### Data Cataloging & Discovery
-
-Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the purpose and structure of data catalogs
-    - Familiar with metadata standards and practices
-    - Can document datasets in established catalogs
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements and maintains data catalog systems
-    - Develops metadata standards and collection processes
-    - Ensures catalog accuracy and usability for researchers
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects enterprise data catalog strategies and implementations
-    - Establishes governance frameworks for metadata management
-    - Leads initiatives to enhance data discovery and reuse
