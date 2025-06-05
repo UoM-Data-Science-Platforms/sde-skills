@@ -14,13 +14,11 @@ Creates and maintains systems that enable researchers to find and understand ava
 
     - Understands the purpose and structure of data catalogs
     - Familiar with metadata standards and practices
-    - Can document datasets in established catalogs
 
 === ":material-battery-50: Mid Level"
 
     - Implements and maintains data catalog systems
     - Develops metadata standards and collection processes
-    - Ensures catalog accuracy and usability for researchers
 
 === ":material-battery-90: Senior Level"
 
