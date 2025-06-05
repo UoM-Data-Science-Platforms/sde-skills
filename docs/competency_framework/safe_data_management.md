@@ -123,19 +123,19 @@ Designs and maintains secure database systems for storing and retrieving sensiti
 
 ### Data Models & Standardization
 
-Creates structured representations of data entities and their relationships. Involves understanding modeling concepts, interpreting existing models, designing models for specific domains, implementing standardization processes, adopting appropriate standards, and establishing maintenance procedures. Requires developing enterprise modeling strategies and harmonizing models across systems.
+Enables the secure and effective use of standardized data models such as FHIR and OMOP within secure data environments. Involves understanding platform and integration requirements, assessing platform capabilities, supporting configuration and adaptation for model adoption, and ensuring compliance with relevant standards. Requires developing strategies to enhance interoperability, security, and governance for standardized data models across platforms.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic data modeling concepts
-    - Familiar with common healthcare data models (OMOP, FHIR, etc.)
-    - Can interpret existing data models and their relationships
+    - Understands the purpose and basic structure of standardized data models (e.g., FHIR, OMOP)
+    - Aware of the need for platform support to enable use of these models
+    - Can identify when a platform supports or does not support a given data model
 
 === ":material-battery-50: Mid Level"
 
-    - Designs data models for specific use cases and domains
-    - Implements data standardization processes and mappings
-    - Evaluates and adopts appropriate data standards and terminologies
+    - Assesses platform capabilities for supporting standardized data models
+    - Identifies integration requirements and dependencies for enabling models like FHIR and OMOP
+    - Supports configuration or adaptation of platforms to facilitate use of these models
 
 === ":material-battery-90: Senior Level"
 
