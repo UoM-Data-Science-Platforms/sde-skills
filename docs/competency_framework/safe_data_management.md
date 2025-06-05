@@ -6,6 +6,28 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 Data Governance establishes frameworks and processes for ensuring data quality, security, and proper management throughout its lifecycle. This subdomain encompasses classification of sensitive data, tracking data lineage and provenance, and implementing quality management practices that maintain data integrity, accuracy, and compliance with organizational policies while providing visibility into data origins and transformations.
 
+### Data Cataloging & Discovery
+
+Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the purpose and structure of data catalogs
+    - Familiar with metadata standards and practices
+    - Can document datasets in established catalogs
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements and maintains data catalog systems
+    - Develops metadata standards and collection processes
+    - Ensures catalog accuracy and usability for researchers
+
+=== ":material-battery-90: Senior Level"
+
+    - Architects enterprise data catalog strategies and implementations
+    - Establishes governance frameworks for metadata management
+    - Leads initiatives to enhance data discovery and reuse
+
 ### Data Classification & Sensitivity
 
 Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing classification systems and leading risk assessment initiatives across the organization.
