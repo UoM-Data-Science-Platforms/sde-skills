@@ -12,21 +12,21 @@ Establishes and maintains frameworks for managing information assets securely an
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic information governance principles
-    - Familiar with key information governance frameworks
+    - Understands basic information governance principles (e.g., data minimization, accountability)
+    - Familiar with key information governance frameworks  (e.g., Caldicott Principles, ISO 27001)
     - Can follow established information governance procedures
 
 === ":material-battery-50: Mid Level"
 
     - Implements information governance controls and processes
-    - Conducts information governance assessments
+    - Conducts information governance assessments (e.g., data flow mapping, risk assessments)
     - Ensures systems comply with governance requirements
 
 === ":material-battery-90: Senior Level"
 
     - Develops enterprise information governance strategies
     - Establishes governance frameworks and oversight mechanisms
-    - Leads information governance maturity initiatives
+    - Leads information governance maturity initiatives (e.g., implementing maturity models)
 
 ### Data Protection Compliance
 
@@ -36,11 +36,11 @@ Ensures adherence to data protection laws and regulations such as GDPR. Involves
 
     - Understands relevant data protection regulations (GDPR, etc.)
     - Familiar with data subject rights and consent requirements
-    - Can implement basic data protection controls
+    - Can implement basic data protection controls (e.g., pseudonymization, access controls)
 
 === ":material-battery-50: Mid Level"
 
-    - Implements comprehensive data protection frameworks
+    - Implements comprehensive data protection frameworks  (e.g., Data Protection Impact Assessments, privacy by design).
     - Conducts data protection impact assessments
     - Ensures systems comply with data protection requirements
 
@@ -48,7 +48,7 @@ Ensures adherence to data protection laws and regulations such as GDPR. Involves
 
     - Develops enterprise data protection strategies
     - Establishes data protection governance and oversight
-    - Leads data protection enhancement initiatives
+    - Leads data protection enhancement initiatives (e.g., organization-wide training, new privacy technologies).
 
 ### Healthcare Standards Compliance
 
@@ -80,11 +80,11 @@ Implements specialised security controls required for protecting healthcare data
 
     - Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
     - Familiar with healthcare-specific compliance requirements
-    - Can follow established healthcare compliance procedures
+    - Can follow established healthcare compliance procedures (e.g., incident reporting, access reviews)
 
 === ":material-battery-50: Mid Level"
 
-    - Implements healthcare compliance controls and processes
+    - Implements healthcare compliance controls and processes (e.g., encryption, audit logging) 
     - Conducts healthcare compliance assessments
     - Ensures systems meet healthcare regulatory requirements
 
@@ -102,11 +102,11 @@ Manages systems and processes for ensuring research meets ethical standards and 
 
     - Understands ethical review requirements and research approval processes
     - Familiar with ethics and IRAS documentation requirements
-    - Can assist with preparing submissions for ethical approval
+    - Can assist with preparing submissions for ethical approval (e.g., drafting consent forms, compiling supporting documents)
 
 === ":material-battery-50: Mid Level"
 
-    - Implements systems for tracking ethical approvals and requirements
+    - Implements systems for tracking ethical approvals and requirements (e.g., electronic tracking tools, spreadsheets)
     - Ensures research activities comply with ethical approvals
     - Conducts ethics compliance reviews and assessments
 
@@ -128,13 +128,13 @@ Deploys technical, administrative, and physical safeguards to protect data and s
 
     - Understands security control concepts and categories
     - Familiar with common security controls and their purpose
-    - Can implement basic security controls following guidelines
+    - Can implement basic security controls following guidelines (e.g., password policies, firewall rules)
 
 === ":material-battery-50: Mid Level"
 
     - Designs and implements comprehensive security control frameworks
     - Evaluates effectiveness and suitability of security controls
-    - Maps controls to specific compliance requirements
+    - Maps controls to specific compliance requirements (e.g., GDPR Article 32, ISO 27001 Annex A)
 
 === ":material-battery-90: Senior Level"
 
@@ -150,7 +150,7 @@ Evaluates the effectiveness of security controls through testing and analysis. I
 
     - Understands security assessment concepts and methodologies
     - Familiar with vulnerability scanning and penetration testing
-    - Can assist with security assessments following established procedures
+    - Can assist with security assessments following established procedures (e.g., running vulnerability scans, documenting findings)
 
 === ":material-battery-50: Mid Level"
 
@@ -220,7 +220,7 @@ Manages processes for obtaining, recording, and honoring data subject consent. I
 
     - Understands consent concepts and requirements
     - Familiar with consent documentation and verification
-    - Can implement basic consent management procedures
+    - Can implement basic consent management procedures (e.g., verifying withdrawal requests)
 
 === ":material-battery-50: Mid Level"
 
