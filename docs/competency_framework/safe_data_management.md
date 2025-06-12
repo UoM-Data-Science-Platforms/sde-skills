@@ -4,31 +4,53 @@ This domain covers all aspects of data handling, processing, governance, and eng
 
 ## Data Governance
 
-Data Governance establishes frameworks and processes for ensuring data quality, security, and proper management throughout its lifecycle. This subdomain encompasses classification of sensitive data, tracking data lineage and provenance, and implementing quality management practices that maintain data integrity, accuracy, and compliance with organizational policies while providing visibility into data origins and transformations.
+Data Governance establishes frameworks and processes for ensuring data quality, security, and proper management throughout its lifecycle. This subdomain encompasses classification of sensitive data, tracking data lineage and provenance, and implementing quality management practices that maintain data integrity, accuracy, and compliance with organisational policies while providing visibility into data origins and transformations.
 
-### Data Cataloging & Discovery
+### Data Integrity
 
-Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalog systems, developing metadata standards, ensuring catalog accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
+Ensures that data remains accurate, consistent, and unaltered throughout its lifecycle. Involves implementing mechanisms such as checksums, hash validation, and digital signatures to detect and prevent unauthorised modification or corruption. Requires regular integrity checks, monitoring, and alerting, as well as procedures for remediation in the event of integrity violations.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands the purpose and structure of data catalogs
+    - Understands the importance of data integrity in secure environments
+    - Familiar with basic integrity verification methods (e.g., checksums)
+    - Can perform manual integrity checks under supervision
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements automated data integrity verification processes
+    - Monitors and responds to integrity check failures
+    - Integrates integrity validation into data pipelines and storage workflows
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs and oversees enterprise-wide data integrity strategies
+    - Establishes policies and procedures for ongoing integrity assurance
+    - Leads incident response for data integrity breaches
+
+### Data Cataloguing & Discovery
+
+Creates and maintains systems that enable researchers to find and understand available datasets. Involves documenting datasets with appropriate metadata, implementing catalogue systems, developing metadata standards, ensuring catalogue accuracy and usability, and architecting enterprise discovery strategies. Requires establishing governance frameworks and enhancing data reusability.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the purpose and structure of data catalogues
     - Familiar with metadata standards and practices
 
 === ":material-battery-50: Mid Level"
 
-    - Implements and maintains data catalog systems
+    - Implements and maintains data catalogue systems
     - Develops metadata standards and collection processes
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise data catalog strategies and implementations
+    - Architects enterprise data catalogue strategies and implementations
     - Establishes governance frameworks for metadata management
     - Leads initiatives to enhance data discovery and reuse
 
 ### Data Classification & Sensitivity
 
-Implements frameworks for categorizing data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organizational policies. Requires implementing classification systems and leading risk assessment initiatives across the organization.
+Implements frameworks for categorising data based on sensitivity and security requirements. Involves understanding different data types, applying appropriate classification labels, designing handling procedures, conducting reviews, and developing organisational policies. Requires implementing classification systems and leading risk assessment initiatives across the organisation.
 
 === ":material-battery-10: Entry Level"
 
@@ -44,13 +66,13 @@ Implements frameworks for categorizing data based on sensitivity and security re
 
 === ":material-battery-90: Senior Level"
 
-    - Develops organizational data classification frameworks and policies
+    - Develops organisational data classification frameworks and policies
     - Implements classification and data discovery systems
     - Leads data sensitivity governance and risk assessment initiatives
 
 ### Data Lineage & Provenance
 
-Tracks and documents the origins, movements, and transformations of data throughout systems. Involves maintaining metadata documentation, implementing lineage tools, verifying data provenance, analyzing quality issues, and architecting enterprise-wide systems. Requires developing governance frameworks that maintain visibility of sensitive data across multiple systems.
+Tracks and documents the origins, movements, and transformations of data throughout systems. Involves maintaining metadata documentation, implementing lineage tools, verifying data provenance, analysing quality issues, and architecting enterprise-wide systems. Requires developing governance frameworks that maintain visibility of sensitive data across multiple systems.
 
 === ":material-battery-10: Entry Level"
 
@@ -89,7 +111,7 @@ Ensures the accuracy, completeness, and reliability of data within secure enviro
 === ":material-battery-90: Senior Level"
 
     - Establishes enterprise data quality strategies and governance
-    - Leads data quality improvement initiatives across the organization
+    - Leads data quality improvement initiatives across the organisation
     - Develops advanced data quality measurement and remediation approaches
 
 ## Data Engineering & Processing
@@ -99,7 +121,7 @@ This subdomain covers the development of secure data pipelines, management of da
 
 ### Data Pipeline Development
 
-Builds and maintains processes that extract, transform, and load data securely between systems. Involves developing ETL processes, designing secure pipelines for various data types, implementing error handling, monitoring data flows, and optimizing performance. Requires architecting complex systems at enterprise scale and establishing best practices for secure data processing.
+Builds and maintains processes that extract, transform, and load data securely between systems. Involves developing ETL processes, designing secure pipelines for various data types, implementing error handling, monitoring data flows, and optimising performance. Requires architecting complex systems at enterprise scale and establishing best practices for secure data processing.
 
 === ":material-battery-10: Entry Level"
 
@@ -117,11 +139,11 @@ Builds and maintains processes that extract, transform, and load data securely b
 
     - Architects complex data pipeline systems at enterprise scale
     - Establishes best practices and patterns for secure data processing
-    - Leads pipeline modernization and optimization initiatives
+    - Leads pipeline modernisation and optimisation initiatives
 
 ### Data Storage & Database Management
 
-Designs and maintains secure database systems for storing and retrieving sensitive data. Involves understanding database types, performing SQL operations, designing secure schemas, implementing access policies, optimizing performance, and architecting enterprise storage strategies. Requires developing governance frameworks and leading database modernization initiatives.
+Designs and maintains secure database systems for storing and retrieving sensitive data. Involves understanding database types, performing SQL operations, designing secure schemas, implementing access policies, optimising performance, and architecting enterprise storage strategies. Requires developing governance frameworks and leading database modernisation initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -139,30 +161,29 @@ Designs and maintains secure database systems for storing and retrieving sensiti
 
     - Architects enterprise data storage strategies across platforms
     - Develops database governance and security frameworks
-    - Leads database modernization and migration initiatives
+    - Leads database modernisation and migration initiatives
 
-### Data Models & Standardization
+### Data Models & Standardisation
 
-Enables the secure and effective use of standardized data models such as FHIR and OMOP within secure data environments. Involves understanding platform and integration requirements, assessing platform capabilities, supporting configuration and adaptation for model adoption, and ensuring compliance with relevant standards. Requires developing strategies to enhance interoperability, security, and governance for standardized data models across platforms.
+Enables the secure and effective use of standardised data models such as FHIR and OMOP within secure data environments. Involves understanding platform and integration requirements, assessing platform capabilities, supporting configuration and adaptation for model adoption, and ensuring compliance with relevant standards. Requires developing strategies to enhance interoperability, security, and governance for standardised data models across platforms.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands the purpose and basic structure of standardized data models (e.g., FHIR, OMOP)
+    - Understands the purpose and basic structure of standardised data models (e.g., FHIR, OMOP)
     - Aware of the need for platform support to enable use of these models
     - Can identify when a platform supports or does not support a given data model
 
 === ":material-battery-50: Mid Level"
 
-    - Assesses platform capabilities for supporting standardized data models
+    - Assesses platform capabilities for supporting standardised data models
     - Identifies integration requirements and dependencies for enabling models like FHIR and OMOP
     - Supports configuration or adaptation of platforms to facilitate use of these models
 
 === ":material-battery-90: Senior Level"
 
-    - Develops enterprise data modeling strategies and governance
+    - Develops enterprise data modelling strategies and governance
     - Establishes processes for maintaining and evolving data models
     - Leads initiatives to harmonise data models across systems
-
 
 ### Event-Driven Data Processing
 
@@ -188,7 +209,7 @@ Implements systems that process data in real-time based on events and triggers. 
 
 ### Encryption Standards & Implementation
 
-Implements cryptographic solutions to protect sensitive data throughout its lifecycle in secure environments. Involves understanding encryption methods, configuring cryptographic systems, managing encryption keys, and ensuring compliance with security standards. Requires designing enterprise encryption frameworks, implementing advanced cryptographic techniques, and establishing organizational policies that maintain data confidentiality and integrity.
+Implements cryptographic solutions to protect sensitive data throughout its lifecycle in secure environments. Involves understanding encryption methods, configuring cryptographic systems, managing encryption keys, and ensuring compliance with security standards. Requires designing enterprise encryption frameworks, implementing advanced cryptographic techniques, and establishing organisational policies that maintain data confidentiality and integrity.
 
 === ":material-battery-10: Entry Level"
 
@@ -206,11 +227,11 @@ Implements cryptographic solutions to protect sensitive data throughout its life
 
     - Designs enterprise encryption frameworks and security architectures
     - Implements advanced cryptographic techniques (post-quantum cryptography, zero-knowledge proofs, homomorphic encryption)
-    - Establishes encryption policies and oversees compliance across the organization
+    - Establishes encryption policies and oversees compliance across the organisation
 
 ### Data Backups
 
-Ensures data availability and recoverability through systematic backup and restoration processes. Involves understanding backup strategies, implementing automated backup systems, managing retention policies, and designing recovery procedures. Requires architecting resilient backup infrastructures, establishing security protocols, and developing enterprise-wide policies that minimize data loss and downtime while maintaining compliance with regulatory requirements.
+Ensures data availability and recoverability through systematic backup and restoration processes. Involves understanding backup strategies, implementing automated backup systems, managing retention policies, and designing recovery procedures. Requires architecting resilient backup infrastructures, establishing security protocols, and developing enterprise-wide policies that minimise data loss and downtime while maintaining compliance with regulatory requirements.
 
 === ":material-battery-10: Entry Level"
 
@@ -220,19 +241,19 @@ Ensures data availability and recoverability through systematic backup and resto
 
 === ":material-battery-50: Mid Level"
 
-    - Configures and optimizes backup strategies for different environments (on-premises, cloud, hybrid)
+    - Configures and optimises backup strategies for different environments (on-premises, cloud, hybrid)
     - Implements scripts and tools to streamline backup operations and reduce manual intervention
     - Ensures backups meet regulatory requirements and conducts regular integrity checks
 
 === ":material-battery-90: Senior Level"
 
     - Designs scalable, resilient backup architectures for large-scale systems
-    - Leads the development of recovery strategies to minimize downtime and data loss
+    - Leads the development of recovery strategies to minimise downtime and data loss
     - Establishes policies for backup security, encryption, and compliance with industry standards
 
 ### Data Retention & Disposal
 
-Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organizational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
+Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organisational policies. Involves understanding storage types and data lifecycles, implementing retention strategies, designing secure disposal processes, and establishing governance frameworks. Requires developing enterprise-wide policies that balance performance, cost, and compliance while maintaining data accessibility and security throughout the retention period.
 
 === ":material-battery-10: Entry Level"
 
@@ -243,7 +264,7 @@ Manages the secure lifecycle of data from creation to disposal, ensuring complia
 === ":material-battery-50: Mid Level"
 
     - Implements data lifecycle strategies that balance retention requirements with storage efficiency
-    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorized access
+    - Applies data access policies, encryption, and secure storage practices to protect retained data from unauthorised access
     - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
 
 === ":material-battery-90: Senior Level"
@@ -251,3 +272,27 @@ Manages the secure lifecycle of data from creation to disposal, ensuring complia
     - Defines and implements enterprise data retention policies including archival and secure disposal strategies to comply with regulatory requirements
     - Architects scalable storage solutions balancing performance, cost, and compliance requirements ensuring long-term data accessibility without unnecessary overhead
     - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific standards) to ensure data retention practices align with security, privacy, and governance requirements.
+
+### Data Migration
+
+Ensures the secure, reliable, and efficient transfer of data between systems, storage solutions, or environments. Involves planning and executing migrations to minimise downtime and data loss, validating data integrity before and after migration, and ensuring compliance with security and regulatory requirements. Requires implementing automated migration workflows, monitoring migration processes, and remediating issues as they arise.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands the basic concepts and risks associated with data migration
+    - Can assist with manual data migration tasks under supervision
+    - Follows established procedures for data validation post-migration
+
+=== ":material-battery-50: Mid Level"
+
+    - Plans and executes secure data migrations between systems or environments
+    - Implements automated migration workflows and tools
+    - Validates data integrity and completeness before and after migration
+    - Monitors migration processes and resolves common issues
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs enterprise-wide data migration strategies and policies
+    - Leads complex or large-scale migration projects with minimal downtime
+    - Ensures compliance with security and regulatory requirements during migration
+    - Develops and oversees remediation plans for migration failures or data discrepancies
