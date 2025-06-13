@@ -24,7 +24,6 @@ Evaluates research outputs for potential privacy violations and re-identificatio
 
 === ":material-battery-90: Senior Level"
 
-    - Develops disclosure risk assessment methodologies and frameworks
     - Implements advanced risk quantification approaches
     - Leads initiatives to enhance disclosure risk management (e.g., developing training programs, implementing new tools or techniques, anticipate introduction of new regulatory frameworks).
 
@@ -48,7 +47,6 @@ Applies statistical methods to protect confidentiality while preserving data uti
 
     - Develops advanced SDC methodologies for complex scenarios (e.g., multi-dimensional datasets, linked data sets)
     - Establishes SDC frameworks and best practices
-    - Leads research into innovative SDC approaches
 
 ### Automated Disclosure Control
 
@@ -164,8 +162,7 @@ Removes or transforms identifying information in datasets to enable safer sharin
 
 === ":material-battery-90: Senior Level"
 
-    - Develops advanced de-identification methodologies and frameworks
-    - Implements cutting-edge techniques like differential privacy
+    - Understands and can implement complex or cutting edge de-identification techniques (e.g., differential privacy or k-anonymisation)
 
 ### Synthetic Data Generation
 
