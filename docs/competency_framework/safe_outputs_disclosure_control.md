@@ -8,18 +8,15 @@ Statistical Disclosure Control employs mathematical and statistical techniques t
 
 ### Disclosure Risk Assessment
 
-Evaluates research outputs for potential privacy violations and re-identification risks. Involves identifying different types of disclosure risks (identity and attribute), conducting comprehensive assessments, analyzing complex outputs for subtle risks, recommending appropriate controls, developing assessment methodologies, and implementing advanced quantification approaches to enhance risk management.
+Implementing tools to facilitate reviewing research outputs for potential privacy violations and re-identification risks. Has an awareness of different types of disclosure risks (identity and attribute), recommending appropriate controls.
 
 === ":material-battery-10: Entry Level"
 
     - Understands basic disclosure risk concepts (re-identification risks, data sensitivity levels)
     - Familiar with common types of disclosure risks (identity, attribute)
-    - Can identify obvious disclosure risks in simple outputs (e.g., direct identifiers like name or address)
 
 === ":material-battery-50: Mid Level"
 
-    - Conducts comprehensive disclosure risk assessments
-    - Analyzes complex outputs for subtle disclosure risks (e.g., cross-tabulations, indirect identifiers)
     - Recommends appropriate controls based on risk assessment
 
 === ":material-battery-90: Senior Level"
