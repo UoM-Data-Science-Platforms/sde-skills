@@ -46,13 +46,12 @@ Applies statistical methods to protect confidentiality while preserving data uti
 
 ### Automated Disclosure Control
 
-Implements systems that automatically apply disclosure controls to research outputs. Involves using automated tools, implementing solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
+Implements systems that automatically apply disclosure controls to research outputs. Involves  automated tools and solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
 
 === ":material-battery-10: Entry Level"
 
     - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
     - Familiar with available SDC automation tools
-    - Can use automated tools following established procedures
 
 === ":material-battery-50: Mid Level"
 
@@ -63,7 +62,6 @@ Implements systems that automatically apply disclosure controls to research outp
 === ":material-battery-90: Senior Level"
 
     - Architects enterprise automated SDC strategies
-    - Develops advanced SDC algorithms and automation approaches (e.g., machine learning-based risk detection).
     - Leads initiatives to enhance automated SDC capabilities
 
 ## Output Checking
