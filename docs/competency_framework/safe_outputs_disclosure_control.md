@@ -32,11 +32,10 @@ Applies statistical methods to protect confidentiality while preserving data uti
 
     - Understands common SDC techniques (suppression, rounding, etc.)
     - Familiar with when to apply different SDC methods (e.g., suppression for small cell sizes)
-    - Can apply basic SDC techniques following established guidelines
+    - Understands basic SDC techniques and guidelines
 
 === ":material-battery-50: Mid Level"
 
-    - Implements a wide range of SDC techniques for different data types
     - Evaluates effectiveness and impact of SDC methods
     - Designs SDC strategies appropriate to specific outputs
 
