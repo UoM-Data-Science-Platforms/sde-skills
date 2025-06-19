@@ -66,140 +66,21 @@ Implements systems that automatically apply disclosure controls to research outp
 
 ## Output Checking
 
-Output Checking provides systematic review and verification of research outputs before they leave secure environments. This subdomain focuses on implementing structured review processes for different output formats, creating comprehensive documentation and justification records that support release decisions, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
+Output Checking provides systematic review and verification of research outputs before they leave secure environments. This subdomain focuses on facilitating structured review processes for different output formats, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
 
 ### Output Review Processes
 
-Reviews research outputs to ensure they meet disclosure control requirements before release. Involves understanding review requirements for different output formats, conducting reviews using established checklists, designing workflows, implementing tracking and governance processes, establishing frameworks and policies, and developing innovative approaches to improve efficiency.
+Involves understanding review requirements for different output formats, conducting reviews using established checklists, designing workflows, implementing tracking and governance processes, establishing frameworks and policies, and developing innovative approaches to improve efficiency.
 
 === ":material-battery-10: Entry Level"
 
     - Understands output review requirements and processes
     - Familiar with common output formats and their risks
-    - Can conduct basic output reviews following established checklists
 
 === ":material-battery-50: Mid Level"
 
-    - Designs output review workflows and documentation to ensure consistency 
-    - Conducts thorough reviews of complex research outputs (e.g., large or multi-file outputs, program source code, images)
-    - Implements output tracking and governance processes # come back
+    - Implements output tracking and audit logs to support governance processes 
 
-=== ":material-battery-90: Senior Level"
-
-    - Establishes enterprise output review frameworks and policies
-    - Develops innovative approaches to output review efficiency
-    - Leads initiatives to mature output checking capabilities (e.g., achieving ISO compliance, automating reviews).
-
-### Output Documentation & Justification
-
-Creates records explaining the purpose and contents of research outputs to support safe release. Involves preparing documentation, understanding justification criteria, designing templates and standards, reviewing for completeness and validity, implementing management systems, establishing frameworks, and developing cross-organizational standards to enhance traceability.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands output documentation requirements
-    - Familiar with justification criteria for different output types
-    - Can prepare basic documentation for research outputs
-
-=== ":material-battery-50: Mid Level"
-
-    - Designs documentation templates and standards
-    - Reviews output justifications for completeness and validity
-    - Implements systems for managing output documentation
-
-=== ":material-battery-90: Senior Level"
-
-    - Establishes enterprise output documentation frameworks
-    - Develops cross-organizational standards for output justification
-    - Leads initiatives to enhance output traceability
-
-### Decision Support Systems
-
-Develops tools and frameworks to guide consistent disclosure control decisions. Involves understanding decision criteria, using support tools, implementing systems for output checking, developing rules for different output types, evaluating effectiveness, architecting advanced frameworks, implementing AI/ML approaches, and leading initiatives to improve decision consistency and quality.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the role of decision support in output checking
-    - Familiar with decision criteria and guidelines
-    - Can use decision support tools following established procedures
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements decision support systems for output checking
-    - Develops decision rules and logic for different output types
-    - Evaluates effectiveness of decision support approaches
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects advanced decision support frameworks for complex scenarios
-    - Implements AI/ML approaches to enhance decision support
-    - Leads initiatives to improve decision consistency and quality
-
-## Safe Data Publication
-
-Safe Data Publication enables secure sharing of research data beyond secure environments. This subdomain encompasses implementing robust de-identification techniques that remove identifying information while preserving analytical value, generating synthetic datasets that maintain statistical properties without exposing real individuals' data, and adhering to established publication standards that ensure appropriate documentation, formatting, and accessibility while maintaining privacy protection.
-
-### De-identification Techniques
-
-Removes or transforms identifying information in datasets to enable safer sharing. Involves understanding basic concepts, identifying direct and indirect identifiers, applying de-identification methods, implementing complex strategies, evaluating effectiveness, designing approaches for different data types, and developing advanced methodologies including cutting-edge techniques like differential privacy.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands basic de-identification concepts and techniques
-    - Familiar with direct and indirect identifiers
-    - Can apply simple de-identification methods following guidelines (e.g., masking, generalization).
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements complex de-identification strategies
-    - Evaluates and validates effectiveness of de-identification
-    - Designs de-identification approaches for different data types (e.g., text data, geospatial data, imaging data).
-
-=== ":material-battery-90: Senior Level"
-
-    - Understands and can implement complex or cutting edge de-identification techniques (e.g., differential privacy or k-anonymisation)
-
-### Synthetic Data Generation
-
-Creates artificial datasets that preserve statistical properties without containing real individuals' data. Involves understanding synthetic data concepts, using generation tools, implementing pipelines, evaluating utility and privacy, designing approaches for specific research needs, developing advanced methodologies, and leading innovation in synthetic data generation techniques.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands synthetic data concepts and use cases
-    - Familiar with basic synthetic data generation approaches
-    - Can use synthetic data tools (e.g., DataSynthesizer). following established procedures 
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements synthetic data generation pipelines
-    - Evaluates utility and privacy of synthetic datasets
-    - Designs synthetic data approaches for specific research needs (e.g., training machine learning models).
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced synthetic data generation methodologies
-    - Implements cutting-edge synthetic data technologies
-
-### Data Publication Standards
-
-Ensures released data follows appropriate standards for documentation, format, and accessibility. Involves understanding publication requirements, preparing metadata and documentation, implementing workflows and processes, ensuring compliance with standards and policies, establishing frameworks and governance, and developing organizational standards aligned with best practices.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands data publication requirements and standards
-    - Familiar with metadata and documentation needs
-    - Can prepare data for publication following established templates
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements data publication workflows and processes
-    - Ensures compliance with relevant standards and policies
-    - Designs documentation approaches for different data types
-
-=== ":material-battery-90: Senior Level"
-
-    - Establishes data publication frameworks and governance
-    - Develops organizational standards aligned with best practices
-    - Leads initiatives to enhance data sharing capabilities
 
 ### Code Publication & Reusability
 
