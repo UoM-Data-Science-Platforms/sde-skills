@@ -325,3 +325,159 @@ Guides systems through formal security validation by external authorities. Invol
     - Develops enterprise certification strategies
     - Establishes certification governance and oversight
     - Leads certification readiness and maintenance programs
+
+# Research & Technology Support for Governance & Compliance
+
+This section outlines how research and technology roles support governance and compliance activities in Secure Data Environments (SDEs). For each area, competencies are described at entry, mid, and senior levels.
+
+---
+
+### Automation & Efficiency
+
+=== ":material-battery-10: Entry Level"
+
+    - Can use automated tools for compliance checks (e.g., data export validation, code review tools) following established procedures
+    - Understands the purpose of automation in compliance workflows
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements and maintains automated compliance processes (e.g., audit logging, scheduled reporting)
+    - Integrates compliance requirements into research and data workflows (e.g., mandatory metadata fields, automated review gates)
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs and leads the development of new automation solutions to improve compliance efficiency and accuracy
+    - Advises on the strategic adoption of automation technologies for governance processes
+
+---
+
+### Evidence & Traceability
+
+=== ":material-battery-10: Entry Level"
+
+    - Uses version control systems (e.g., Git) to track code and data changes
+    - Understands the importance of audit trails and data lineage
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements and manages audit trail and provenance tracking systems
+    - Ensures research outputs are reproducible and traceable for compliance purposes
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops strategies for comprehensive evidence and traceability across systems
+    - Leads initiatives to enhance auditability and transparency in research and technical workflows
+
+---
+
+### Embedding Compliance in Research Practice
+
+=== ":material-battery-10: Entry Level"
+
+    - Follows compliance steps embedded in research workflows (e.g., consent checks, ethics sign-off)
+    - Uses provided templates and tools to meet documentation requirements
+
+=== ":material-battery-50: Mid Level"
+
+    - Develops and customizes workflow tools to ensure compliance steps are integrated into research processes
+    - Supports colleagues in understanding and using compliance-embedded workflows
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads the design and implementation of privacy-by-design and ethics-by-design frameworks in research systems
+    - Champions the integration of compliance requirements into all stages of research and technical development
+
+---
+
+### Secure Collaboration & Sharing
+
+=== ":material-battery-10: Entry Level"
+
+    - Uses secure repositories and sharing platforms (e.g., GitHub, GitLab) with appropriate access controls
+    - Understands the basics of secure communication and data/code sharing
+
+=== ":material-battery-50: Mid Level"
+
+    - Configures and manages secure collaboration tools for research teams
+    - Implements access controls and review processes for shared data and code
+
+=== ":material-battery-90: Senior Level"
+
+    - Develops and oversees secure sharing strategies and policies for the organization
+    - Leads initiatives to improve secure collaboration infrastructure
+
+---
+
+### Monitoring, Alerting & Incident Support
+
+=== ":material-battery-10: Entry Level"
+
+    - Responds to compliance alerts and follows incident response procedures
+    - Can access and interpret basic compliance dashboards
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements monitoring and alerting systems for compliance and security
+    - Supports incident response by providing technical evidence (e.g., logs, system data)
+
+=== ":material-battery-90: Senior Level"
+
+    - Designs and leads the deployment of advanced monitoring and incident support systems
+    - Advises on continuous compliance monitoring strategies
+
+---
+
+### Training, Awareness & Support
+
+=== ":material-battery-10: Entry Level"
+
+    - Completes required compliance and security training modules
+    - Uses in-system prompts and guidance to support compliant behavior
+
+=== ":material-battery-50: Mid Level"
+
+    - Develops and delivers training materials and sessions for research and technical staff
+    - Gathers and analyzes feedback to improve compliance support resources
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads organization-wide compliance awareness and training initiatives
+    - Evaluates and implements new approaches to compliance education
+
+---
+
+### Innovation in Compliance
+
+=== ":material-battery-10: Entry Level"
+
+    - Stays informed about new compliance technologies and methods relevant to their work
+
+=== ":material-battery-50: Mid Level"
+
+    - Pilots and evaluates new privacy-preserving or compliance technologies (e.g., differential privacy, federated learning)
+    - Contributes to the development of innovative compliance solutions
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads research and adoption of emerging compliance best practices and technologies
+    - Advises on strategic innovation in governance and compliance processes
+
+---
+
+### Feedback & Continuous Improvement
+
+=== ":material-battery-10: Entry Level"
+
+    - Provides feedback on compliance workflows and tools as a user
+
+=== ":material-battery-50: Mid Level"
+
+    - Analyzes system logs and user feedback to identify areas for compliance process improvement
+    - Participates in policy and process reviews
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads continuous improvement initiatives for compliance processes and technologies
+    - Uses data-driven insights to inform governance and compliance strategy
+
+---
