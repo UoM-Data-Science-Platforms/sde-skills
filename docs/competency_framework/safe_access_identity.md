@@ -12,7 +12,7 @@ Implements and maintains secure user verification mechanisms within research env
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic authentication concepts and mechanisms, e.g. AD/Entra, kerberos, oauth2/OIDC 
+    - Understands basic authentication concepts and mechanisms (e.g. AD/Entra, kerberos, oauth2/OIDC) 
     - Familiar with password best practice and multi-factor authentication
     - Can configure user accounts in identity systems under supervision
     - Can understand existing SDE security Matrix.
