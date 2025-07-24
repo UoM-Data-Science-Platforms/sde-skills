@@ -1,0 +1,483 @@
+domain:
+  id: safe-projects-operations
+  name: Safe Projects & Operations
+  description: This domain covers the management of secure data environment projects, operational excellence,
+    and the delivery of services to research communities.
+  source_file: safe_projects_operations.md
+  subdomains:
+    project-management:
+      id: project-management
+      name: Project Management
+      description: Project Management oversees the planning and delivery of secure data environment initiatives.
+        This subdomain encompasses structured planning of SDE projects with appropriate methodologies,
+        supporting researchers through effective facilitation of technical needs, implementing agile delivery
+        methods adapted for secure environments, managing procurement and vendor relationships, and optimizing
+        resource allocation with effective cost management to ensure successful project outcomes.
+      competencies:
+        sde-project-planning:
+          id: sde-project-planning
+          name: SDE Project Planning
+          description: Plans and executes projects related to secure data environments. Involves understanding
+            project management concepts, using documentation and tracking tools, developing comprehensive
+            plans, managing resources and timelines, identifying risks, establishing methodologies, and
+            leading strategic planning for SDE capabilities across the organization.
+          levels:
+            entry:
+              id: sde-project-planning-entry
+              name: Entry Level
+              skills:
+              - Understands basic project management concepts for SDEs
+              - Familiar with project documentation and tracking tools
+              - Can assist with SDE project planning activities
+            mid:
+              id: sde-project-planning-mid
+              name: Mid Level
+              skills:
+              - Develops comprehensive SDE project plans
+              - Manages resources and timelines for SDE projects
+              - Identifies and mitigates project risks
+            senior:
+              id: sde-project-planning-senior
+              name: Senior Level
+              skills:
+              - Establishes SDE project management methodologies
+              - Oversees complex, multi-stakeholder SDE initiatives
+              - Leads strategic planning for SDE capabilities
+        research-project-facilitation:
+          id: research-project-facilitation
+          name: Research Project Facilitation
+          description: Supports researchers in utilizing secure data environments effectively. Involves
+            understanding research requirements, workflows and processes, assisting with basic SDE usage,
+            coordinating complex projects, implementing technical solutions, ensuring compliance, developing
+            support frameworks, and leading initiatives to enhance research capabilities.
+          levels:
+            entry:
+              id: research-project-facilitation-entry
+              name: Entry Level
+              skills:
+              - Understands research project requirements within SDEs
+              - Familiar with research workflows and processes
+              - Can assist researchers with basic SDE usage
+            mid:
+              id: research-project-facilitation-mid
+              name: Mid Level
+              skills:
+              - Coordinates complex research projects in SDEs
+              - Implements technical solutions for research needs
+              - Ensures research activities comply with SDE requirements
+            senior:
+              id: research-project-facilitation-senior
+              name: Senior Level
+              skills:
+              - Develops frameworks for supporting diverse research needs
+              - Establishes researcher engagement and support strategies
+              - Leads initiatives to enhance research capabilities in SDEs
+        agile-delivery-methods:
+          id: agile-delivery-methods
+          name: Agile Delivery Methods
+          description: Applies iterative and incremental approaches to SDE development and operations.
+            Involves understanding agile concepts, participating in ceremonies, implementing practices
+            appropriate to secure environments, managing teams and processes, adapting approaches for
+            security needs, establishing delivery frameworks, and leading agile transformation while maintaining
+            compliance.
+          levels:
+            entry:
+              id: agile-delivery-methods-entry
+              name: Entry Level
+              skills:
+              - Understands agile concepts and methodologies
+              - Familiar with agile ceremonies and artifacts
+              - Can participate effectively in agile teams
+            mid:
+              id: agile-delivery-methods-mid
+              name: Mid Level
+              skills:
+              - Implements agile practices appropriate to SDE development
+              - Manages agile teams and processes
+              - Adapts agile approaches for security and compliance needs
+            senior:
+              id: agile-delivery-methods-senior
+              name: Senior Level
+              skills:
+              - Establishes agile delivery frameworks for secure environments
+              - Develops agile governance models that maintain compliance
+              - Leads agile transformation initiatives
+        procurement-vendor-management:
+          id: procurement-vendor-management
+          name: Procurement & Vendor Management
+          description: Acquires and manages external resources and services for secure data environments.
+            Involves understanding procurement processes, assisting with activities, managing procurement
+            for resources and services, negotiating with vendors, ensuring compliance with policies, developing
+            strategies, establishing governance, and leading strategic vendor relationships.
+          levels:
+            entry:
+              id: procurement-vendor-management-entry
+              name: Entry Level
+              skills:
+              - Understands basic procurement processes and requirements
+              - Familiar with vendor management concepts and documentation
+              - Can assist with procurement activities following established procedures
+            mid:
+              id: procurement-vendor-management-mid
+              name: Mid Level
+              skills:
+              - Manages procurement processes for SDE resources and services
+              - Negotiates with vendors and evaluates service offerings
+              - Ensures compliance with procurement policies and regulations
+            senior:
+              id: procurement-vendor-management-senior
+              name: Senior Level
+              skills:
+              - Develops procurement strategies and vendor management frameworks
+              - Establishes procurement governance and oversight mechanisms
+              - Leads strategic vendor relationships and partnership initiatives
+        resource-cost-management:
+          id: resource-cost-management
+          name: Resource & Cost Management
+          description: Allocates and optimises resources within secure data environments to maximise value.
+            Involves understanding resource allocation principles, monitoring cloud costs, generating
+            usage reports, implementing management processes, developing optimization strategies, creating
+            costing models, establishing financial governance, and enhancing resource efficiency.
+          levels:
+            entry:
+              id: resource-cost-management-entry
+              name: Entry Level
+              skills:
+              - Understands resource allocation and cost management principles
+              - Familiar with cloud cost monitoring tools and techniques
+              - Can generate basic resource usage reports and cost analyses
+            mid:
+              id: resource-cost-management-mid
+              name: Mid Level
+              skills:
+              - Implements comprehensive resource management processes
+              - Develops cost monitoring and optimization strategies
+              - Creates and maintains costing models for SDE operations
+            senior:
+              id: resource-cost-management-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise resource management and cost optimization strategies
+              - Establishes financial governance frameworks for SDE operations
+              - Leads initiatives to enhance resource efficiency and cost-effectiveness
+    service-management:
+      id: service-management
+      name: Service Management
+      description: Service Management ensures the reliable delivery of secure data environment services
+        to research users. This subdomain focuses on defining and maintaining appropriate service quality
+        through structured service level agreements, implementing effective incident and problem management
+        processes that minimise disruptions and prevent recurrences, and controlling changes to infrastructure
+        and applications through governance frameworks that balance security requirements with operational
+        flexibility.
+      competencies:
+        service-level-management:
+          id: service-level-management
+          name: Service Level Management
+          description: Defines, measures, and maintains service quality for SDE users. Involves understanding
+            service level concepts and metrics, tracking performance, developing agreements and objectives,
+            implementing monitoring and reporting, analyzing issues, establishing governance frameworks,
+            developing improvement strategies, and leading cross-organizational service level negotiations.
+          levels:
+            entry:
+              id: service-level-management-entry
+              name: Entry Level
+              skills:
+              - Understands service level concepts and metrics
+              - Familiar with SLA documentation and monitoring
+              - Can track and report on basic service levels
+            mid:
+              id: service-level-management-mid
+              name: Mid Level
+              skills:
+              - Develops service level agreements and objectives
+              - Implements service level monitoring and reporting
+              - Analyses service performance and addresses issues
+            senior:
+              id: service-level-management-senior
+              name: Senior Level
+              skills:
+              - Establishes service level frameworks and governance
+              - Develops service improvement strategies
+              - Leads negotiations for cross-organizational service levels
+        incident-problem-management:
+          id: incident-problem-management
+          name: Incident & Problem Management
+          description: Responds to and resolves service disruptions while preventing recurrence. Involves
+            understanding incident concepts, classifying and documenting issues, implementing management
+            processes, leading response activities, conducting root cause analysis, establishing frameworks,
+            developing strategies to reduce frequency and impact, and leading service resilience initiatives.
+          levels:
+            entry:
+              id: incident-problem-management-entry
+              name: Entry Level
+              skills:
+              - Understands incident and problem management concepts
+              - Familiar with incident classification and prioritization
+              - Can document and track incidents following established processes
+            mid:
+              id: incident-problem-management-mid
+              name: Mid Level
+              skills:
+              - Implements incident and problem management processes
+              - Leads incident response and resolution activities
+              - Conducts root cause analysis and develops permanent fixes
+            senior:
+              id: incident-problem-management-senior
+              name: Senior Level
+              skills:
+              - Establishes incident and problem management frameworks
+              - Develops strategies to reduce incident frequency and impact
+              - Leads service resilience and reliability initiatives
+        change-release-management:
+          id: change-release-management
+          name: Change & Release Management
+          description: Controls modifications to SDE infrastructure, applications, and services. Involves
+            understanding change management concepts, following procedures, designing processes, evaluating
+            impacts, coordinating implementation, ensuring security and compliance, establishing governance
+            frameworks, and leading initiatives to balance change agility with necessary controls.
+          levels:
+            entry:
+              id: change-release-management-entry
+              name: Entry Level
+              skills:
+              - Understands change management concepts and processes
+              - Familiar with change documentation and approval workflows
+              - Can implement changes following established procedures
+            mid:
+              id: change-release-management-mid
+              name: Mid Level
+              skills:
+              - Designs change and release management processes
+              - Evaluates change impacts and coordinates implementations
+              - Ensures changes maintain security and compliance
+            senior:
+              id: change-release-management-senior
+              name: Senior Level
+              skills:
+              - Establishes change governance frameworks and policies
+              - Develops strategies for balancing change agility and control
+              - Leads change management improvement initiatives
+    operational-excellence:
+      id: operational-excellence
+      name: Operational Excellence
+      description: Operational Excellence establishes consistent, high-quality service delivery within
+        secure data environments. This subdomain encompasses systematic continuous improvement of processes
+        and services using methodologies like Lean and Six Sigma, comprehensive documentation and knowledge
+        management that preserves operational expertise, and robust monitoring and observability practices
+        that provide insight into system health, performance, and security status while enabling proactive
+        management of the environment.
+      competencies:
+        continuous-improvement:
+          id: continuous-improvement
+          name: Continuous Improvement
+          description: Systematically enhances SDE processes, services, and capabilities. Involves understanding
+            improvement concepts, identifying opportunities, implementing initiatives, applying methodologies
+            like Lean and Six Sigma, measuring outcomes, establishing improvement cultures, developing
+            enterprise strategies, and leading transformational programs across the organization.
+          levels:
+            entry:
+              id: continuous-improvement-entry
+              name: Entry Level
+              skills:
+              - Understands continuous improvement concepts
+              - Familiar with improvement methodologies (Lean, Six Sigma)
+              - Can identify opportunities for process improvement
+            mid:
+              id: continuous-improvement-mid
+              name: Mid Level
+              skills:
+              - Implements continuous improvement initiatives
+              - Applies appropriate methodologies to enhance processes
+              - Measures and reports on improvement outcomes
+            senior:
+              id: continuous-improvement-senior
+              name: Senior Level
+              skills:
+              - Establishes continuous improvement frameworks and culture
+              - Develops enterprise improvement strategies
+              - Leads transformational improvement programs
+        documentation-knowledge-management:
+          id: documentation-knowledge-management
+          name: Documentation & Knowledge Management
+          description: Creates, maintains, and shares operational knowledge within the SDE. Involves understanding
+            documentation requirements, using knowledge management systems, creating basic documentation,
+            implementing comprehensive strategies, developing knowledge bases, ensuring security compliance,
+            establishing governance standards, and enhancing organizational knowledge sharing.
+          levels:
+            entry:
+              id: documentation-knowledge-management-entry
+              name: Entry Level
+              skills:
+              - Understands documentation requirements and standards
+              - Familiar with knowledge management systems and practices
+              - Can create and maintain basic documentation
+            mid:
+              id: documentation-knowledge-management-mid
+              name: Mid Level
+              skills:
+              - Implements comprehensive documentation strategies
+              - Develops knowledge bases and sharing mechanisms
+              - Ensures documentation meets security and compliance needs
+            senior:
+              id: documentation-knowledge-management-senior
+              name: Senior Level
+              skills:
+              - Establishes documentation governance and standards
+              - Develops enterprise knowledge management strategies
+              - Leads initiatives to enhance organizational knowledge sharing
+        monitoring-observability:
+          id: monitoring-observability
+          name: Monitoring & Observability
+          description: Tracks system health, performance, and security in the SDE. Involves understanding
+            monitoring concepts and tools, using metrics and logs, implementing comprehensive strategies,
+            designing dashboards and alerts for complex systems, analyzing data, establishing enterprise
+            frameworks, and leading initiatives to enhance operational visibility across the environment.
+          levels:
+            entry:
+              id: monitoring-observability-entry
+              name: Entry Level
+              skills:
+              - Understands monitoring concepts and tools
+              - Familiar with metrics, logs, and alerts
+              - Can use monitoring tools to track system health
+            mid:
+              id: monitoring-observability-mid
+              name: Mid Level
+              skills:
+              - Implements comprehensive monitoring strategies
+              - Designs dashboards and alerting for complex systems
+              - Analyses monitoring data to optimise performance
+            senior:
+              id: monitoring-observability-senior
+              name: Senior Level
+              skills:
+              - Establishes enterprise monitoring frameworks
+              - Develops observability strategies across systems
+              - Leads initiatives to enhance operational visibility
+    research-support-innovation:
+      id: research-support-innovation
+      name: Research Support & Innovation
+      description: Research Support & Innovation enhances researcher effectiveness within secure data
+        environments. This subdomain focuses on enabling researchers through comprehensive training and
+        support programs, providing specialised tools and capabilities that meet research requirements
+        while maintaining security, exploring and implementing innovative technologies that advance secure
+        research capabilities, and engaging with the wider community through active participation and
+        knowledge sharing across the secure data environment ecosystem.
+      competencies:
+        researcher-training-support:
+          id: researcher-training-support
+          name: Researcher Training & Support
+          description: Enables researchers to effectively use secure data environments. Involves understanding
+            researcher needs, providing basic support, developing training programs, implementing support
+            processes, addressing complex issues, establishing engagement strategies, developing innovative
+            enablement approaches, and leading initiatives to enhance the researcher experience.
+          levels:
+            entry:
+              id: researcher-training-support-entry
+              name: Entry Level
+              skills:
+              - Understands researcher needs and support requirements
+              - Familiar with SDE training materials and documentation
+              - Can provide basic support to researchers
+            mid:
+              id: researcher-training-support-mid
+              name: Mid Level
+              skills:
+              - Develops comprehensive researcher training programs
+              - Implements support processes and knowledge bases
+              - Addresses complex researcher issues and requirements
+            senior:
+              id: researcher-training-support-senior
+              name: Senior Level
+              skills:
+              - Establishes researcher engagement and support strategies
+              - Develops innovative approaches to researcher enablement
+              - Leads initiatives to enhance researcher experience
+        tre-tools-capabilities:
+          id: tre-tools-capabilities
+          name: TRE Tools & Capabilities
+          description: Provides and manages tools for research in secure environments. Involves understanding
+            common tools and requirements, configuring environments, evaluating and implementing research
+            tools, designing workspaces, ensuring security and compliance, developing implementation strategies,
+            establishing governance, and leading initiatives to enhance capabilities.
+          levels:
+            entry:
+              id: tre-tools-capabilities-entry
+              name: Entry Level
+              skills:
+              - Understands common TRE tools and capabilities
+              - Familiar with researcher tool requirements
+              - Can configure basic researcher environments
+            mid:
+              id: tre-tools-capabilities-mid
+              name: Mid Level
+              skills:
+              - Evaluates and implements tools for research needs
+              - Designs researcher environments and workspaces
+              - Ensures tools meet security and compliance requirements
+            senior:
+              id: tre-tools-capabilities-senior
+              name: Senior Level
+              skills:
+              - Develops strategies for tool evaluation and implementation
+              - Establishes tool governance and lifecycle management
+              - Leads initiatives to enhance TRE capabilities
+        future-tre-innovation:
+          id: future-tre-innovation
+          name: Future TRE Innovation
+          description: Explores and implements new technologies and approaches for secure research. Involves
+            understanding emerging trends, researching new technologies, evaluating for TRE application,
+            implementing proof-of-concept projects, developing roadmaps and strategies, establishing innovation
+            frameworks, leading horizon scanning, and developing strategic partnerships for advancement.
+          levels:
+            entry:
+              id: future-tre-innovation-entry
+              name: Entry Level
+              skills:
+              - Understands emerging trends in secure research environments
+              - Familiar with innovation processes and evaluation
+              - Can research new technologies and approaches
+            mid:
+              id: future-tre-innovation-mid
+              name: Mid Level
+              skills:
+              - Evaluates emerging technologies for TRE application
+              - Implements proof-of-concept projects and pilots
+              - Develops innovation roadmaps and strategies
+            senior:
+              id: future-tre-innovation-senior
+              name: Senior Level
+              skills:
+              - Establishes innovation frameworks and governance
+              - Leads horizon scanning for future TRE technologies
+              - Develops strategic partnerships for TRE advancement
+        community-engagement-networking:
+          id: community-engagement-networking
+          name: Community Engagement & Networking
+          description: Participates in and contributes to the wider secure data environment community.
+            Involves understanding the importance of engagement, participating in events and discussions,
+            actively contributing to communities, representing the organization, building professional
+            networks, leading engagement strategies, organizing events, and developing strategic partnerships
+            across the community.
+          levels:
+            entry:
+              id: community-engagement-networking-entry
+              name: Entry Level
+              skills:
+              - Understands the importance of community engagement for SDEs
+              - Familiar with relevant SDE communities and networks
+              - Can participate in community events and discussions
+            mid:
+              id: community-engagement-networking-mid
+              name: Mid Level
+              skills:
+              - Actively contributes to SDE communities and knowledge sharing
+              - Represents the organization at community events and forums
+              - Builds and maintains professional networks in the SDE ecosystem
+            senior:
+              id: community-engagement-networking-senior
+              name: Senior Level
+              skills:
+              - Leads community engagement strategies and initiatives
+              - Organises community events and knowledge sharing forums
+              - Develops strategic partnerships across the SDE community
