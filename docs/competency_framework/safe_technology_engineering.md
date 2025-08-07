@@ -26,14 +26,14 @@ Involves following established processes, using version control systems, impleme
 
 === ":material-battery-90: Senior Level"
 
-    - Establishes SDLC best practices and processes for the organization
+    - Establishes SDLC best practices and processes for the organisation
     - Leads architectural decisions and ensures secure coding standards
     - Mentors team members on software engineering excellence
 
 ### Secure Coding Practices
 
 Develops software with security built into the code itself.
-Involves understanding common vulnerabilities like OWASP Top 10, applying input validation and error handling, following secure coding guidelines, identifying and mitigating security issues, implementing secure authentication and authorization, conducting security-focused code reviews, and developing organizational standards.
+Involves understanding common vulnerabilities like OWASP Top 10, applying input validation and error handling, following secure coding guidelines, identifying and mitigating security issues, implementing secure authentication and authorisation, conducting security-focused code reviews, and developing organisational standards.
 
 === ":material-battery-10: Entry Level"
 
@@ -44,19 +44,19 @@ Involves understanding common vulnerabilities like OWASP Top 10, applying input 
 === ":material-battery-50: Mid Level"
 
     - Proactively identifies and mitigates security vulnerabilities in code
-    - Implements secure authentication, authorization, and data protection mechanisms
+    - Implements secure authentication, authorisation, and data protection mechanisms
     - Conducts code reviews with a focus on security aspects
 
 === ":material-battery-90: Senior Level"
 
-    - Develops security standards and coding guidelines for the organization
+    - Develops security standards and coding guidelines for the organisation
     - Evaluates and selects appropriate security libraries and frameworks
     - Implements advanced security patterns for high-risk components
 
 ### Testing & Quality Assurance
 
 Validates software functionality, security, and performance before deployment.
-Involves creating unit tests, using testing frameworks, executing test plans, designing comprehensive approaches, implementing automated pipelines, analyzing results to improve quality, establishing processes and standards, implementing advanced testing, and driving continuous improvement initiatives.
+Involves creating unit tests, using testing frameworks, executing test plans, designing comprehensive approaches, implementing automated pipelines, analysing results to improve quality, establishing processes and standards, implementing advanced testing, and driving continuous improvement initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -79,7 +79,7 @@ Involves creating unit tests, using testing frameworks, executing test plans, de
 ### Microservices & API Design
 
 Develops loosely coupled, independently deployable services that communicate via APIs.
-Involves understanding microservices principles, working with API concepts and documentation, designing appropriate service boundaries, implementing secure API gateways, developing versioning approaches, architecting enterprise API frameworks, establishing best practices, and leading API security initiatives.
+Involves understanding microservices principles, working with API concepts and documentation, designing appropriate service boundaries, implementing secure API gateways, developing versioning approaches, architecting API frameworks, establishing best practices, and leading API security initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -90,19 +90,19 @@ Involves understanding microservices principles, working with API concepts and d
 === ":material-battery-50: Mid Level"
 
     - Designs microservice architectures with appropriate boundaries
-    - Implements secure API gateways and authorization mechanisms
+    - Implements secure API gateways and authorisation mechanisms
     - Develops API versioning standards and documentation standards
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise API frameworks and governance models
+    - Architects API frameworks and governance models
     - Establishes microservices best practices and standards
     - Leads API security initiatives and evaluates API management solutions
 
 ### Code Documentation & Reusability
 
 Creates understandable, maintainable, and reusable code.
-Involves writing clear comments explaining functionality, following documentation patterns, creating comprehensive explanations, designing for reusability with appropriate abstraction, implementing self-documenting principles, establishing organizational standards, developing reuse approaches, and creating knowledge sharing frameworks.
+Involves writing clear comments explaining functionality, following documentation patterns, creating comprehensive explanations, designing for reusability with appropriate abstraction, implementing self-documenting principles, establishing organisational standards, developing reuse approaches, and creating knowledge sharing policies.
 
 === ":material-battery-10: Entry Level"
 
@@ -118,14 +118,14 @@ Involves writing clear comments explaining functionality, following documentatio
 
 === ":material-battery-90: Senior Level"
 
-    - Establishes documentation standards and best practices for the organization
+    - Establishes documentation standards and best practices for the organisation
     - Develops methodologies for code reuse across projects and teams
-    - Creates knowledge sharing frameworks and mentors others in documentation
+    - Creates knowledge sharing policies and mentors others in documentation
 
 ### Artefact Management
 
 Securely stores, distributes, and controls access to software artefacts including container images, helm charts, and package repositories.
-Involves understanding artefact concepts, accessing repositories following procedures, working with vulnerability scanning, implementing secure registries, controlling access and scanning for threats, managing distributions, developing enterprise frameworks, establishing governance processes, and leading security initiatives.
+Involves understanding artefact concepts, accessing repositories following procedures, working with vulnerability scanning, implementing secure registries, controlling access and scanning for threats, managing distributions, establishing governance processes, and leading security initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -141,19 +141,19 @@ Involves understanding artefact concepts, accessing repositories following proce
 
 === ":material-battery-90: Senior Level"
 
-    - Develops enterprise frameworks for artefact management and governance
+    - Develops strategies for artefact management and governance
     - Establishes automated scanning and compliance processes for all artefacts
     - Leads initiatives to enhance artefact security and supply chain integrity
 
 ## Infrastructure & Deployment
 
 Infrastructure & Deployment establishes the foundation for secure, scalable research environments.
-This subdomain focuses on designing and managing cloud resources with appropriate security controls, implementing containerization and orchestration technologies that enable portable, isolated application environments, and creating secure network architectures with proper segmentation and access controls that collectively provide the technical infrastructure needed for protected data processing and analysis.
+This subdomain focuses on designing and managing cloud resources with appropriate security controls, implementing containerisation and orchestration technologies that enable portable, isolated application environments, and creating secure network architectures with proper segmentation and access controls that collectively provide the technical infrastructure needed for protected data processing and analysis.
 
 ### Cloud Infrastructure Management
 
 Designs, deploys, and manages cloud resources for secure data environments.
-Involves working with major providers like AWS, Azure, and GCP, provisioning resources following patterns, implementing infrastructure as code, designing secure architectures, implementing monitoring and scaling, architecting enterprise solutions, developing governance frameworks, and leading cloud transformation initiatives.
+Involves working with major providers like AWS, Azure, and GCP, provisioning resources following patterns, implementing infrastructure as code, designing secure architectures, implementing monitoring and scaling, architecting enterprise-scale solutions, developing governance frameworks, and leading cloud transformation initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -169,14 +169,14 @@ Involves working with major providers like AWS, Azure, and GCP, provisioning res
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise-grade cloud solutions with high availability and security
-    - Develops cloud governance frameworks and cost optimization approaches
+    - Architects enterprise-scale cloud solutions with high availability and security
+    - Develops cloud governance frameworks and cost optimisation approaches
     - Leads cloud transformation initiatives and capacity planning
 
-### Containerization & Orchestration
+### Containerisation & Orchestration
 
 Packages and manages applications in isolated, portable environments.
-Involves understanding container concepts, working with Docker and container registries, designing container-based architectures, implementing orchestration with Kubernetes or similar platforms, creating CI/CD pipelines, architecting enterprise frameworks, implementing advanced security features, and establishing compliance processes.
+Involves understanding container concepts, working with Docker and container registries, designing container-based architectures, implementing orchestration with Kubernetes or similar platforms, creating CI/CD pipelines, implementing advanced security features, and establishing compliance processes.
 
 === ":material-battery-10: Entry Level"
 
@@ -192,7 +192,7 @@ Involves understanding container concepts, working with Docker and container reg
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise container frameworks and governance models
+    - Designs enterprise-scale container orchestration strategy
     - Implements advanced Kubernetes features for security, scaling, and resilience
     - Establishes container security scanning and compliance processes
 
@@ -222,7 +222,7 @@ Involves understanding networking concepts like IP addressing and routing, confi
 ### Encryption & Key Management
 
 Protects data at rest and in transit using secure algorithms and robust key management practices.
-Involves understanding encryption concepts, implementing encryption solutions, selecting appropriate algorithms, generating and storing keys securely, managing key lifecycles, implementing access controls, developing enterprise frameworks, establishing governance frameworks, and leading security enhancement initiatives.
+Involves understanding encryption concepts, implementing encryption solutions, selecting appropriate algorithms, generating and storing keys securely, managing key lifecycles, implementing access controls, developing enterprise-wide governance and security enhancement initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -245,12 +245,12 @@ Involves understanding encryption concepts, implementing encryption solutions, s
 ## System Architecture
 
 System Architecture establishes the foundational design principles for secure, scalable, and maintainable research environments.
-This subdomain encompasses creating secure environment designs with [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) approaches, developing microservices and API architectures that enable modular and flexible systems, implementing approaches for scalability and performance under varying workloads, creating robust enterprise solutions that meet critical requirements, and adopting [component-based software engineering (CBSE)](https://en.wikipedia.org/wiki/Component-based_software_engineering) practices that promote reusability and maintainability.
+This subdomain encompasses creating secure environment designs with [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) approaches, developing microservices and API architectures that enable modular and flexible systems, implementing approaches for scalability and performance under varying workloads, creating robust solutions that meet critical requirements, and adopting [component-based software engineering (CBSE)](https://en.wikipedia.org/wiki/Component-based_software_engineering) practices that promote reusability and maintainability.
 
 ### Secure Environment Design
 
 Creates system designs that prioritise data security and privacy, compliance with 5-safes and SATRE.
-Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting enterprise-wide secure environments, developing standards, and leading security architecture reviews and remediation.
+Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting environments, implementing appropriate controls, evaluating security implications, architecting secure analytics environments, developing standards, and leading security architecture reviews and remediation.
 
 === ":material-battery-10: Entry Level"
 
@@ -266,14 +266,14 @@ Involves understanding principles of secure design, applying defense-in-depth an
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise-wide secure data environments
+    - Architects secure data environments
     - Develops architectural principles and standards for secure environments
     - Leads security architecture reviews and remediation efforts
 
 ### Scalability & Performance
 
 Builds systems that can handle growing workloads while maintaining responsiveness.
-Involves understanding performance concepts and metrics, performing basic testing, designing scalable architectures, implementing caching approaches, conducting load testing, architecting high-performance systems, developing capacity planning methodologies, and leading optimization initiatives across the organization.
+Involves understanding performance concepts and metrics, performing basic testing, designing scalable architectures, implementing caching approaches, conducting load testing, architecting high-performance systems, developing capacity planning methodologies, and leading optimisation initiatives across the organisation.
 
 === ":material-battery-10: Entry Level"
 
@@ -284,19 +284,19 @@ Involves understanding performance concepts and metrics, performing basic testin
 === ":material-battery-50: Mid Level"
 
     - Designs scalable architectures for varying workloads
-    - Implements caching techniques and performance optimizations
+    - Implements caching techniques and performance optimisations
     - Conducts load testing and performance analysis
 
 === ":material-battery-90: Senior Level"
 
-    - Architects high-performance systems for enterprise workloads
+    - Architects high-performance systems for demanding workloads
     - Develops capacity planning and scaling methodologies
-    - Leads performance optimization initiatives across systems
+    - Leads performance optimisation initiatives across systems
 
 ### Enterprise Solution Development
 
 Creates robust systems that meet business-critical requirements.
-Involves understanding quality of service criteria, working with enterprise architecture concepts, explaining trade-offs between quality attributes, designing solutions that meet requirements, implementing patterns for reliability and resilience, architecting enterprise-grade solutions, and developing reference architectures.
+Involves understanding quality of service criteria, working with enterprise architecture concepts, explaining trade-offs between quality attributes, designing solutions that meet requirements, implementing patterns for reliability and resilience, and developing reference architectures.
 
 === ":material-battery-10: Entry Level"
 
@@ -312,14 +312,14 @@ Involves understanding quality of service criteria, working with enterprise arch
 
 === ":material-battery-90: Senior Level"
 
-    - Architects enterprise-grade solutions balancing QoS attributes with organizational constraints
-    - Develops frameworks and reference architectures for enterprise solutions
+    - Architects large-scale solutions balancing QoS attributes with organisational constraints
+    - Develops reference architectures for enterprise solutions
     - Leads initiatives to enhance the quality and reliability of enterprise systems
 
 ### Component-Based Architecture
 
 Designs systems as assemblies of modular, reusable components.
-Involves understanding component-based design principles, working with component libraries and frameworks, developing simple components, designing modular interfaces, implementing composition approaches, optimizing for maintainability, developing enterprise frameworks, establishing standards, and leading reuse initiatives.
+Involves understanding component-based design principles, working with component libraries and frameworks, developing simple components, designing modular interfaces, implementing composition approaches, optimising for maintainability, establishing standards, and leading reuse initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -335,14 +335,14 @@ Involves understanding component-based design principles, working with component
 
 === ":material-battery-90: Senior Level"
 
-    - Develops enterprise component frameworks and governance models
+    - Leads on enterprise component architecture design
     - Establishes component design standards and best practices
     - Leads initiatives to enhance component reuse and maintainability
 
 ### Vulnerability & Patch Management
 
 Identifies, assesses, and remediates security vulnerabilities across systems and infrastructure.
-Involves understanding vulnerability concepts, using scanning tools, applying security updates, implementing automated processes, triaging vulnerabilities by risk, monitoring compliance, developing enterprise frameworks, establishing governance frameworks, and leading maturity initiatives.
+Involves understanding vulnerability concepts, using scanning tools, applying security updates, implementing automated processes, triaging vulnerabilities by risk, monitoring compliance, establishing governance frameworks, and leading maturity initiatives.
 
 === ":material-battery-10: Entry Level"
 
@@ -358,7 +358,7 @@ Involves understanding vulnerability concepts, using scanning tools, applying se
 
 === ":material-battery-90: Senior Level"
 
-    - Develops enterprise vulnerability management frameworks
+    - Develops vulnerability management initiatives
     - Establishes automated patching frameworks and governance
     - Leads vulnerability and patch management maturity initiatives
 
@@ -387,7 +387,7 @@ Involves understanding configuration concepts, applying changes using automation
 
 ### High Performance Computing
 
-Provisions, configures, and securely manages high-performance computing resources and specialized hardware accelerators.
+Provisions, configures, and securely manages high-performance computing resources and specialised hardware accelerators.
 Involves understanding HPC concepts, configuring access to shared resources, working with job scheduling systems, implementing secure management practices, integrating with university infrastructure, ensuring user and data segregation, developing infrastructure frameworks, establishing governance frameworks, and leading capability enhancement initiatives.
 
 === ":material-battery-10: Entry Level"
@@ -406,4 +406,4 @@ Involves understanding HPC concepts, configuring access to shared resources, wor
 
     - Develops methodologies for advanced computing infrastructure and capacity planning
     - Establishes governance for secure multi-tenant HPC resource usage
-    - Leads initiatives to enhance computing capabilities and optimize resource utilization
+    - Leads initiatives to enhance computing capabilities and optimize resource utilisation
