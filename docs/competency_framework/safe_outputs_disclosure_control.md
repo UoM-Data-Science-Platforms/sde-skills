@@ -1,235 +1,158 @@
 # Safe Outputs & Disclosure Control
 
-This domain covers the processes, techniques, and tools used to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.
-
-## Statistical Disclosure Control
-
-Statistical Disclosure Control employs mathematical and statistical techniques to protect sensitive information in research outputs. This subdomain encompasses assessing disclosure risks through comprehensive evaluation methodologies, applying appropriate control techniques that balance data protection with research utility, and implementing automated systems that enforce consistent application of disclosure controls across varied research outputs while maintaining statistical validity.
-
-### Disclosure Risk Assessment
-
-Evaluates research outputs for potential privacy violations and re-identification risks. Involves identifying different types of disclosure risks (identity and attribute), conducting comprehensive assessments, analyzing complex outputs for subtle risks, recommending appropriate controls, developing assessment methodologies, and implementing advanced quantification approaches to enhance risk management.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands basic disclosure risk concepts
-    - Familiar with common types of disclosure risks (identity, attribute)
-    - Can identify obvious disclosure risks in simple outputs
-
-=== ":material-battery-50: Mid Level"
-
-    - Conducts comprehensive disclosure risk assessments
-    - Analyses complex outputs for subtle disclosure risks
-    - Recommends appropriate controls based on risk assessment
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops disclosure risk assessment methodologies and frameworks
-    - Implements advanced risk quantification approaches
-    - Leads initiatives to enhance disclosure risk management
-
-### SDC Techniques & Methods
-
-Applies statistical methods to protect confidentiality while preserving data utility. Involves implementing techniques like suppression and rounding, evaluating their effectiveness and impact, designing appropriate strategies for different outputs, developing advanced methodologies for complex scenarios, and establishing frameworks and best practices for the organization.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands common SDC techniques (suppression, rounding, etc.)
-    - Familiar with when to apply different SDC methods
-    - Can apply basic SDC techniques following established guidelines
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements a wide range of SDC techniques for different data types
-    - Evaluates effectiveness and impact of SDC methods
-    - Designs SDC strategies appropriate to specific outputs
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced SDC methodologies for complex scenarios
-    - Establishes SDC frameworks and best practices
-    - Leads research into innovative SDC approaches
-
-### Automated Disclosure Control
-
-Implements systems that automatically apply disclosure controls to research outputs. Involves using automated tools, implementing solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands automated SDC tool concepts
-    - Familiar with available SDC automation tools
-    - Can use automated tools following established procedures
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements automated SDC solutions for common output types
-    - Configures SDC rules and thresholds in automation systems
-    - Validates accuracy and effectiveness of automated controls
-
-=== ":material-battery-90: Senior Level"
-
-    - Architects enterprise automated SDC strategies
-    - Develops advanced SDC algorithms and automation approaches
-    - Leads initiatives to enhance automated SDC capabilities
+This domain covers the technical controls that help to protect projects from accidental or intentional disclosure, as well as providing tooling to support disclosure review operations of project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.
 
 ## Output Checking
 
-Output Checking provides systematic review and verification of research outputs before they leave secure environments. This subdomain focuses on implementing structured review processes for different output formats, creating comprehensive documentation and justification records that support release decisions, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
+This subdomain focuses on providing output checkers with tools that facilitate structured review processes for different output formats, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
 
 ### Output Review Processes
 
-Reviews research outputs to ensure they meet disclosure control requirements before release. Involves understanding review requirements for different output formats, conducting reviews using established checklists, designing workflows, implementing tracking and governance processes, establishing frameworks and policies, and developing innovative approaches to improve efficiency.
+Involves understanding review requirements for different output formats, designing workflows, implementing tracking and governance processes.
 
 === ":material-battery-10: Entry Level"
 
     - Understands output review requirements and processes
     - Familiar with common output formats and their risks
-    - Can conduct basic output reviews following established checklists
 
 === ":material-battery-50: Mid Level"
 
-    - Designs output review workflows and documentation
-    - Conducts thorough reviews of complex research outputs
-    - Implements output tracking and governance processes
+    - Implements output tracking and audit logs to support governance processes 
 
-=== ":material-battery-90: Senior Level"
+## Tools and platforms to support output checking
 
-    - Establishes enterprise output review frameworks and policies
-    - Develops innovative approaches to output review efficiency
-    - Leads initiatives to mature output checking capabilities
-
-### Output Documentation & Justification
-
-Creates records explaining the purpose and contents of research outputs to support safe release. Involves preparing documentation, understanding justification criteria, designing templates and standards, reviewing for completeness and validity, implementing management systems, establishing frameworks, and developing cross-organizational standards to enhance traceability.
+### Workflow engines
+Deploy and administer workflow engines to help ensure consistency, reliability, and traceability of output checking processes. Create individual workflow that meet governance and legal requirements for project teams.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands output documentation requirements
-    - Familiar with justification criteria for different output types
-    - Can prepare basic documentation for research outputs
+    - is aware of workflow engines and the functionality they provide
+    - is aware of actors and stages in the disclosure review process
+    - can administer workflow engines to make changes to existing disclosure review workflows
 
 === ":material-battery-50: Mid Level"
 
-    - Designs documentation templates and standards
-    - Reviews output justifications for completeness and validity
-    - Implements systems for managing output documentation
+    - can assess suitability of workflow engines for achieving desired functionality
+    - can work with project stakeholder to design workflows that address local policy and governance/regulatory stipulations
+    - can administer workflow engines to implement disclosure review workflows
+    - can develop and maintain workflow templates so maximize reuse across similar governance constraints
 
 === ":material-battery-90: Senior Level"
 
-    - Establishes enterprise output documentation frameworks
-    - Develops cross-organizational standards for output justification
-    - Leads initiatives to enhance output traceability
+    - Leads the technology strategy for business process management
 
-### Decision Support Systems
+### Data airlocks
 
-Develops tools and frameworks to guide consistent disclosure control decisions. Involves understanding decision criteria, using support tools, implementing systems for output checking, developing rules for different output types, evaluating effectiveness, architecting advanced frameworks, implementing AI/ML approaches, and leading initiatives to improve decision consistency and quality.
+Install and administer data airlock applications, understand the roles and what level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit, review etc.) within the airlock application, create user documentation and training materials, contribute to on-going improvements to data airlocks to ensure they meet user needs as well as comply with standards and regulations.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands the role of decision support in output checking
-    - Familiar with decision criteria and guidelines
-    - Can use decision support tools following established procedures
+    - is familiar with data airlocks
+    - is familiar with user roles in data airlocks
 
 === ":material-battery-50: Mid Level"
 
-    - Implements decision support systems for output checking
-    - Develops decision rules and logic for different output types
-    - Evaluates effectiveness of decision support approaches
+    - can write user documentation relating to the operation of data airlocks
+    - can provide training to users relating to the operation of data airlocks
+    - can troubleshoot common user issues with data airlocks
 
 === ":material-battery-90: Senior Level"
 
-    - Architects advanced decision support frameworks for complex scenarios
-    - Implements AI/ML approaches to enhance decision support
-    - Leads initiatives to improve decision consistency and quality
+    - can influence design of data airlocks according to user requirements and changes in standards and governance
 
-## Safe Data Publication
-
-Safe Data Publication enables secure sharing of research data beyond secure environments. This subdomain encompasses implementing robust de-identification techniques that remove identifying information while preserving analytical value, generating synthetic datasets that maintain statistical properties without exposing real individuals' data, and adhering to established publication standards that ensure appropriate documentation, formatting, and accessibility while maintaining privacy protection.
-
-### De-identification Techniques
-
-Removes or transforms identifying information in datasets to enable safer sharing. Involves understanding basic concepts, identifying direct and indirect identifiers, applying de-identification methods, implementing complex strategies, evaluating effectiveness, designing approaches for different data types, and developing advanced methodologies including cutting-edge techniques like differential privacy.
+### Code repositories
+Install and configure code repository systems (e.g., Git) that allow source code to be imported and exported from SDEs in industry standard ways. Develop automated checks that can perform static analysis to ensure source code doesn't contain passwords, API keys, or other infrastructural secrets. Develop workflows for disclosure checking to ensure the source code does not contain any restricted data. Use advanced techniques to perform automated code reviews to assess further requirement for manual inspection.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic de-identification concepts and techniques
-    - Familiar with direct and indirect identifiers
-    - Can apply simple de-identification methods following guidelines
+    - Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
 
 === ":material-battery-50: Mid Level"
 
-    - Implements complex de-identification strategies
-    - Evaluates and validates effectiveness of de-identification
-    - Designs de-identification approaches for different data types
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced de-identification methodologies and frameworks
-    - Implements cutting-edge techniques like differential privacy
-    - Leads de-identification research and innovation
-
-### Synthetic Data Generation
-
-Creates artificial datasets that preserve statistical properties without containing real individuals' data. Involves understanding synthetic data concepts, using generation tools, implementing pipelines, evaluating utility and privacy, designing approaches for specific research needs, developing advanced methodologies, and leading innovation in synthetic data generation techniques.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands synthetic data concepts and use cases
-    - Familiar with basic synthetic data generation approaches
-    - Can use synthetic data tools following established procedures
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements synthetic data generation pipelines
-    - Evaluates utility and privacy of synthetic datasets
-    - Designs synthetic data approaches for specific research needs
-
-=== ":material-battery-90: Senior Level"
-
-    - Develops advanced synthetic data generation methodologies
-    - Implements cutting-edge synthetic data technologies
-    - Leads research into synthetic data innovation
-
-### Data Publication Standards
-
-Ensures released data follows appropriate standards for documentation, format, and accessibility. Involves understanding publication requirements, preparing metadata and documentation, implementing workflows and processes, ensuring compliance with standards and policies, establishing frameworks and governance, and developing organizational standards aligned with best practices.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands data publication requirements and standards
-    - Familiar with metadata and documentation needs
-    - Can prepare data for publication following established templates
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements data publication workflows and processes
-    - Ensures compliance with relevant standards and policies
-    - Designs documentation approaches for different data types
-
-=== ":material-battery-90: Senior Level"
-
-    - Establishes data publication frameworks and governance
-    - Develops organizational standards aligned with best practices
-    - Leads initiatives to enhance data sharing capabilities
-
-### Code Publication & Reusability
-
-Makes research code available in a secure, reusable, and transparent manner following FAIR principles. Involves understanding code publication principles, using repositories and sharing platforms, preparing code for publication, implementing workflows, ensuring proper documentation, establishing frameworks and governance, and developing best practices while maintaining security.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands the principles of open code publication (FAIR principles)
-    - Familiar with code repositories and sharing platforms
-    - Can prepare code for publication following established templates
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements code publication workflows and processes
-    - Ensures code is well-documented and follows best practices
-    - Addresses security concerns specific to SDEs when publishing code
+    - Implements code publication workflows and processes (e.g., code reviews)
+    - Can install and configure code repositories with correct access controls for data ingress and egress
+    - Can develop automated pipelines that check for known security risk (e.g., using static analysis techniques to check for passwords, ip addresses, or other sensitive infrastructural information)
 
 === ":material-battery-90: Senior Level"
 
     - Establishes code publication frameworks and governance
-    - Develops best practices for code metadata and documentation
-    - Leads initiatives to enhance code sharing while maintaining security
+    - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating secure code repositories, developing sharing policies, designing automated pipelines to review eligibility of code for release).
+
+## Statistical Disclosure Control
+
+Implementing automated systems that enforce consistent application of disclosure controls across varied research outputs while maintaining statistical validity.
+
+### Disclosure Risk Assessment
+
+Implementing tools to facilitate reviewing research outputs for potential privacy violations and re-identification risks. Has an awareness of different types of disclosure risks (identity and attribute), recommending appropriate controls.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands basic disclosure risk concepts (re-identification risks, data sensitivity levels)
+    - Familiar with common types of disclosure risks (identity, attribute)
+
+=== ":material-battery-50: Mid Level"
+
+    - Recommends appropriate controls based on risk assessment
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads initiatives to enhance disclosure risk management (e.g., implementing new tools or techniques, anticipate introduction of new regulatory frameworks).
+
+
+### Automated Disclosure Control
+
+Implements systems that automatically apply disclosure controls to research outputs. Involves automated tools and solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
+    - Familiar with available SDC automation tools
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements automated SDC solutions for common output types
+    - Configures SDC rules and thresholds in automation systems
+    - Validates accuracy and effectiveness of automated controls (e.g., testing against known risks, benchmarking)
+
+=== ":material-battery-90: Senior Level"
+
+    - Leads initiatives to enhance automated SDC capabilities
+
+
+
+
+
+
+## Accidental disclosure
+Install and configure applications that can prevent accidental disclosure such as copying and pasting between remote desktops and local computer.
+
+=== ":material-battery-10: Entry Level"
+
+    - identify ways (e.g., copy/paste) in which users might inadvertently move data from SDE to any other system or network without following approved controls and procedure
+    - identify tools (e.g., remote desktop services) and techniques that minimize these risks
+    - test controls to ensure they are effective in different operating scenarios (e.g., different Operating Systems, different web browsers)
+
+=== ":material-battery-50: Mid Level"
+
+    - configure applications and services to better protect against accidental disclosure
+
+
+## Emergency response
+
+The infrastructure team should be prepared for emergency response when a suspected data leak is reported.
+
+=== ":material-battery-10: Entry Level"
+
+    - can work under direction to acquire logs and other facts relating to a potential data breaches
+
+=== ":material-battery-50: Mid Level"
+
+    - can review and assess logs and other facts relating to data breaches and communicate findings appropriately to diverse audiences
+
+=== ":material-battery-90: Senior Level"
+
+    - can represent the infrastructure team when designing emergency response plans (in accordance with necessary governance, regulatory, and legal requirements) to  address suspected data breach
+    - can liaise across organisational units facts relating to a data breach
+    - can design short term mitigations to prevent further disclosure
+    - can design long term mitigations against confirmed data leaks
