@@ -96,7 +96,7 @@ Acquires and manages external resources and services for secure data environment
 
 ### Resource & Cost Management
 
-Allocates and optimizes resources within secure data environments to maximize value. Involves understanding resource allocation principles, monitoring cloud costs, generating usage reports, implementing management processes, developing optimization strategies, creating costing models, establishing financial governance, and enhancing resource efficiency.
+Allocates and optimises resources within secure data environments to maximise value. Involves understanding resource allocation principles, monitoring cloud costs, generating usage reports, implementing management processes, developing optimization strategies, creating costing models, establishing financial governance, and enhancing resource efficiency.
 
 === ":material-battery-10: Entry Level"
 
@@ -118,7 +118,7 @@ Allocates and optimizes resources within secure data environments to maximize va
 
 ## Service Management
 
-Service Management ensures the reliable delivery of secure data environment services to research users. This subdomain focuses on defining and maintaining appropriate service quality through structured service level agreements, implementing effective incident and problem management processes that minimize disruptions and prevent recurrences, and controlling changes to infrastructure and applications through governance frameworks that balance security requirements with operational flexibility.
+Service Management ensures the reliable delivery of secure data environment services to research users. This subdomain focuses on defining and maintaining appropriate service quality through structured service level agreements, implementing effective incident and problem management processes that minimise disruptions and prevent recurrences, and controlling changes to infrastructure and applications through governance frameworks that balance security requirements with operational flexibility.
 
 ### Service Level Management
 
@@ -134,7 +134,7 @@ Defines, measures, and maintains service quality for SDE users. Involves underst
 
     - Develops service level agreements and objectives
     - Implements service level monitoring and reporting
-    - Analyzes service performance and addresses issues
+    - Analyses service performance and addresses issues
 
 === ":material-battery-90: Senior Level"
 
@@ -248,7 +248,7 @@ Tracks system health, performance, and security in the SDE. Involves understandi
 
     - Implements comprehensive monitoring strategies
     - Designs dashboards and alerting for complex systems
-    - Analyzes monitoring data to optimize performance
+    - Analyses monitoring data to optimise performance
 
 === ":material-battery-90: Senior Level"
 
@@ -258,7 +258,7 @@ Tracks system health, performance, and security in the SDE. Involves understandi
 
 ## Research Support & Innovation
 
-Research Support & Innovation enhances researcher effectiveness within secure data environments. This subdomain focuses on enabling researchers through comprehensive training and support programs, providing specialized tools and capabilities that meet research requirements while maintaining security, exploring and implementing innovative technologies that advance secure research capabilities, and engaging with the wider community through active participation and knowledge sharing across the secure data environment ecosystem.
+Research Support & Innovation enhances researcher effectiveness within secure data environments. This subdomain focuses on enabling researchers through comprehensive training and support programs, providing specialised tools and capabilities that meet research requirements while maintaining security, exploring and implementing innovative technologies that advance secure research capabilities, and engaging with the wider community through active participation and knowledge sharing across the secure data environment ecosystem.
 
 ### Researcher Training & Support
 
@@ -345,5 +345,5 @@ Participates in and contributes to the wider secure data environment community. 
 === ":material-battery-90: Senior Level"
 
     - Leads community engagement strategies and initiatives
-    - Organizes community events and knowledge sharing forums
+    - Organises community events and knowledge sharing forums
     - Develops strategic partnerships across the SDE community

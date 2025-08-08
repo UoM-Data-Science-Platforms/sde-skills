@@ -221,7 +221,7 @@ Based on the analysis of the skills matrix content, the following competencies s
 
 - **Data Engineering & Processing**
   - Add: Clinical code sets implementation
-  - Add: Specialized data models (OMOP, FHIR)
+  - Add: Specialised data models (OMOP, FHIR)
   - Add: Event-driven architectures for data processing
 
 ### Safe Projects & Operations
