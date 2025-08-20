@@ -8,51 +8,51 @@ Project Management oversees the planning and delivery of secure data environment
 
 ### SDE Project Planning
 
-Plans and executes projects related to secure data environments. Involves understanding project management concepts, using documentation and tracking tools, developing comprehensive plans, managing resources and timelines, identifying risks, establishing methodologies, and leading strategic planning for SDE capabilities across the organization.
+Plans and executes projects related to secure data environments. Involves understanding project management concepts, using documentation and tracking tools, collaborating to comprehensive plans, managing resources and timelines, identifying risks and translating requirements into deliverables.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands basic project management concepts for SDEs
+    - Understands basic project management concepts
     - Familiar with project documentation and tracking tools
     - Can assist with SDE project planning activities
 
 === ":material-battery-50: Mid Level"
 
-    - Develops comprehensive SDE project plans
+    - Contributes to SDE project planning
     - Manages resources and timelines for SDE projects
     - Identifies and mitigates project risks
 
 === ":material-battery-90: Senior Level"
 
-    - Establishes SDE project management methodologies
-    - Oversees complex, multi-stakeholder SDE initiatives
+    - Responsible for SDE project implentations - Need something that talks about responsibility for meetings strategic objectives.
+    - Oversees complex, multi-stakeholder SDE engagements
     - Leads strategic planning for SDE capabilities
 
 ### Research Project Facilitation
 
-Supports researchers in utilizing secure data environments effectively. Involves understanding research requirements, workflows and processes, assisting with basic SDE usage, coordinating complex projects, implementing technical solutions, ensuring compliance, developing support frameworks, and leading initiatives to enhance research capabilities.
+Supports researchers in utilizing secure data environments effectively. Involves understanding research requirements, workflows and processes, assisting with basic SDE usage, implementing technical solutions, ensuring compliance, developing support frameworks, and leading initiatives to enhance research capabilities.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands research project requirements within SDEs
+    - Understands basic research project requirements
     - Familiar with research workflows and processes
     - Can assist researchers with basic SDE usage
 
 === ":material-battery-50: Mid Level"
 
-    - Coordinates complex research projects in SDEs
+    - Coordinates research projects in SDEs
     - Implements technical solutions for research needs
     - Ensures research activities comply with SDE requirements
 
 === ":material-battery-90: Senior Level"
 
-    - Develops frameworks for supporting diverse research needs
-    - Establishes researcher engagement and support strategies
+    - Implement processes to support diverse research needs
+    - Establishes researcher engagement and support
     - Leads initiatives to enhance research capabilities in SDEs
 
-### Agile Delivery Methods
+### Agile Delivery Methods - ****move up one****
 
-Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure environments, managing teams and processes, adapting approaches for security needs, establishing delivery frameworks, and leading agile transformation while maintaining compliance.
+Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure data environments, managing teams and processes, adapting approaches for security needs, and establishing delivery frameworks.
 
 === ":material-battery-10: Entry Level"
 
