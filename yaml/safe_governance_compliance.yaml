@@ -1,0 +1,453 @@
+domain:
+  id: safe-governance-compliance
+  name: Safe Governance & Compliance
+  description: This domain covers the regulatory, ethical, and compliance aspects of operating Secure
+    Data Environments, ensuring systems meet legal requirements and maintain appropriate controls.
+  source_file: safe_governance_compliance.md
+  subdomains:
+    regulatory-compliance:
+      id: regulatory-compliance
+      name: Regulatory Compliance
+      description: Regulatory Compliance ensures that secure data environments meet legal requirements
+        and standards for handling sensitive healthcare information. This subdomain encompasses information
+        governance frameworks, data protection compliance with laws like GDPR, adherence to healthcare-specific
+        standards such as DSPT and NHS DTAC, implementation of specialised security frameworks, and management
+        of ethics and research approval systems that collectively maintain legal and regulatory adherence
+        across all aspects of data handling.
+      competencies:
+        information-governance:
+          id: information-governance
+          name: Information Governance
+          description: Establishes and maintains frameworks for managing information assets securely and
+            compliantly. Involves implementing governance controls, conducting assessments, ensuring system
+            compliance, developing enterprise strategies, establishing oversight mechanisms, and leading
+            maturity initiatives that align with organizational requirements and industry standards.
+          levels:
+            entry:
+              id: information-governance-entry
+              name: Entry Level
+              skills:
+              - Understands basic information governance principles
+              - Familiar with key information governance frameworks
+              - Can follow established information governance procedures
+            mid:
+              id: information-governance-mid
+              name: Mid Level
+              skills:
+              - Implements information governance controls and processes
+              - Conducts information governance assessments
+              - Ensures systems comply with governance requirements
+            senior:
+              id: information-governance-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise information governance strategies
+              - Establishes governance frameworks and oversight mechanisms
+              - Leads information governance maturity initiatives
+        data-protection-compliance:
+          id: data-protection-compliance
+          name: Data Protection Compliance
+          description: Ensures adherence to data protection laws and regulations such as GDPR. Involves
+            understanding subject rights and consent requirements, implementing protection controls, conducting
+            impact assessments, developing comprehensive frameworks, establishing governance oversight,
+            and leading enhancement initiatives across the organization.
+          levels:
+            entry:
+              id: data-protection-compliance-entry
+              name: Entry Level
+              skills:
+              - Understands relevant data protection regulations (GDPR, etc.)
+              - Familiar with data subject rights and consent requirements
+              - Can implement basic data protection controls
+            mid:
+              id: data-protection-compliance-mid
+              name: Mid Level
+              skills:
+              - Implements comprehensive data protection frameworks
+              - Conducts data protection impact assessments
+              - Ensures systems comply with data protection requirements
+            senior:
+              id: data-protection-compliance-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise data protection strategies
+              - Establishes data protection governance and oversight
+              - Leads data protection enhancement initiatives
+        healthcare-standards-compliance:
+          id: healthcare-standards-compliance
+          name: Healthcare Standards Compliance
+          description: Ensures adherence to healthcare-specific regulatory standards such as DSPT and
+            NHS DTAC. Involves implementing compliance frameworks, conducting assessments, ensuring systems
+            meet regulatory requirements, developing enterprise strategies, establishing governance programs,
+            and leading standards compliance initiatives.
+          levels:
+            entry:
+              id: healthcare-standards-compliance-entry
+              name: Entry Level
+              skills:
+              - Understands relevant healthcare standards (DSPT, NHS DTAC, etc.)
+              - Familiar with healthcare compliance requirements
+              - Can implement basic healthcare compliance controls
+            mid:
+              id: healthcare-standards-compliance-mid
+              name: Mid Level
+              skills:
+              - Implements healthcare standards compliance frameworks
+              - Conducts healthcare compliance assessments
+              - Ensures systems meet healthcare regulatory requirements
+            senior:
+              id: healthcare-standards-compliance-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise healthcare compliance strategies
+              - Establishes healthcare compliance governance programs
+              - Leads healthcare standards compliance initiatives
+        healthcare-data-security-frameworks:
+          id: healthcare-data-security-frameworks
+          name: Healthcare Data Security Frameworks
+          description: Implements specialised security controls required for protecting healthcare data.
+            Involves understanding healthcare-specific frameworks like DSPT and NHS DTAC, implementing
+            compliance controls, conducting assessments, ensuring regulatory requirements are met, developing
+            strategies, and establishing governance oversight specific to healthcare environments.
+          levels:
+            entry:
+              id: healthcare-data-security-frameworks-entry
+              name: Entry Level
+              skills:
+              - Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
+              - Familiar with healthcare-specific compliance requirements
+              - Can follow established healthcare compliance procedures
+            mid:
+              id: healthcare-data-security-frameworks-mid
+              name: Mid Level
+              skills:
+              - Implements healthcare compliance controls and processes
+              - Conducts healthcare compliance assessments
+              - Ensures systems meet healthcare regulatory requirements
+            senior:
+              id: healthcare-data-security-frameworks-senior
+              name: Senior Level
+              skills:
+              - Develops healthcare compliance strategies and frameworks
+              - Establishes healthcare compliance governance and oversight
+              - Leads healthcare standards compliance initiatives
+        ethics-research-approval-systems:
+          id: ethics-research-approval-systems
+          name: Ethics & Research Approval Systems
+          description: Manages systems and processes for ensuring research meets ethical standards and
+            approval requirements. Involves understanding ethical review processes, preparing documentation
+            for submissions, implementing tracking systems, ensuring compliance with approvals, and developing
+            strategies to enhance ethical governance across the research environment.
+          levels:
+            entry:
+              id: ethics-research-approval-systems-entry
+              name: Entry Level
+              skills:
+              - Understands ethical review requirements and research approval processes
+              - Familiar with ethics and IRAS documentation requirements
+              - Can assist with preparing submissions for ethical approval
+            mid:
+              id: ethics-research-approval-systems-mid
+              name: Mid Level
+              skills:
+              - Implements systems for tracking ethical approvals and requirements
+              - Ensures research activities comply with ethical approvals
+              - Conducts ethics compliance reviews and assessments
+            senior:
+              id: ethics-research-approval-systems-senior
+              name: Senior Level
+              skills:
+              - Develops ethical compliance strategies and frameworks
+              - Establishes ethics governance and oversight processes
+              - Leads initiatives to enhance ethical compliance
+    security-management:
+      id: security-management
+      name: Security Management
+      description: Security Management establishes and maintains protections for data assets and systems
+        within secure research environments. This subdomain focuses on implementing comprehensive technical,
+        administrative, and physical security controls, conducting regular assessments and testing to
+        verify effectiveness, and managing incident response processes that collectively ensure research
+        data remains protected from unauthorised access or breaches while enabling appropriate recovery
+        and improvement from security events.
+      competencies:
+        security-controls-implementation:
+          id: security-controls-implementation
+          name: Security Controls Implementation
+          description: Deploys technical, administrative, and physical safeguards to protect data and
+            systems. Involves understanding control concepts, implementing basic and comprehensive security
+            frameworks, evaluating effectiveness, mapping to compliance requirements, developing enterprise
+            strategies, and leading maturity initiatives across the organization.
+          levels:
+            entry:
+              id: security-controls-implementation-entry
+              name: Entry Level
+              skills:
+              - Understands security control concepts and categories
+              - Familiar with common security controls and their purpose
+              - Can implement basic security controls following guidelines
+            mid:
+              id: security-controls-implementation-mid
+              name: Mid Level
+              skills:
+              - Designs and implements comprehensive security control frameworks
+              - Evaluates effectiveness and suitability of security controls
+              - Maps controls to specific compliance requirements
+            senior:
+              id: security-controls-implementation-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise security control strategies
+              - Establishes security control governance and oversight
+              - Leads security control maturity initiatives
+        security-assessment-testing:
+          id: security-assessment-testing
+          name: Security Assessment & Testing
+          description: Evaluates the effectiveness of security controls through testing and analysis.
+            Involves understanding assessment methodologies, conducting vulnerability scanning and penetration
+            testing, analyzing results, prioritizing remediation, implementing testing programs, and establishing
+            governance frameworks to mature assessment capabilities.
+          levels:
+            entry:
+              id: security-assessment-testing-entry
+              name: Entry Level
+              skills:
+              - Understands security assessment concepts and methodologies
+              - Familiar with vulnerability scanning and penetration testing
+              - Can assist with security assessments following established procedures
+            mid:
+              id: security-assessment-testing-mid
+              name: Mid Level
+              skills:
+              - Conducts comprehensive security assessments and testing
+              - Analyses security assessment results and prioritises remediation
+              - Implements security testing programs and schedules
+            senior:
+              id: security-assessment-testing-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise security assessment strategies
+              - Establishes security testing governance and methodologies
+              - Leads security assessment maturity initiatives
+        incident-response-management:
+          id: incident-response-management
+          name: Incident Response Management
+          description: Prepares for and manages security incidents effectively to minimise impact. Involves
+            understanding incident response procedures, classifying and reporting incidents, implementing
+            response plans, leading investigations, analyzing for improvement, developing enterprise strategies,
+            and enhancing response capabilities across the organization.
+          levels:
+            entry:
+              id: incident-response-management-entry
+              name: Entry Level
+              skills:
+              - Understands incident response concepts and procedures
+              - Familiar with incident classification and reporting
+              - Can assist with incident response following established protocols
+            mid:
+              id: incident-response-management-mid
+              name: Mid Level
+              skills:
+              - Implements incident response plans and procedures
+              - Leads incident investigations and coordinates response activities
+              - Analyses incidents for lessons learned and improvement opportunities
+            senior:
+              id: incident-response-management-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise incident response strategies
+              - Establishes incident response governance and oversight
+              - Leads incident response capability enhancement initiatives
+    ethics-research-governance:
+      id: ethics-research-governance
+      name: Ethics & Research Governance
+      description: Ethics & Research Governance maintains the ethical integrity of research activities
+        involving sensitive healthcare data. This subdomain encompasses ensuring adherence to ethical
+        principles and requirements, managing data subject consent throughout the research lifecycle,
+        and facilitating thorough ethical review processes that collectively ensure research is conducted
+        responsibly while respecting patient rights, maintaining public trust, and supporting scientific
+        integrity.
+      competencies:
+        research-ethics-compliance:
+          id: research-ethics-compliance
+          name: Research Ethics Compliance
+          description: Ensures research activities adhere to ethical principles and requirements. Involves
+            understanding ethics principles, following approval processes, implementing frameworks, conducting
+            assessments, ensuring compliance, developing enterprise strategies, and establishing governance
+            to enhance ethical research practices across the organization.
+          levels:
+            entry:
+              id: research-ethics-compliance-entry
+              name: Entry Level
+              skills:
+              - Understands basic research ethics principles
+              - Familiar with research ethics approval processes
+              - Can follow established research ethics procedures
+            mid:
+              id: research-ethics-compliance-mid
+              name: Mid Level
+              skills:
+              - Implements research ethics frameworks and processes
+              - Conducts research ethics assessments and reviews
+              - Ensures research activities comply with ethical requirements
+            senior:
+              id: research-ethics-compliance-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise research ethics strategies
+              - Establishes research ethics governance and oversight
+              - Leads research ethics enhancement initiatives
+        consent-management:
+          id: consent-management
+          name: Consent Management
+          description: Manages processes for obtaining, recording, and honoring data subject consent.
+            Involves understanding consent requirements, verifying documentation, implementing management
+            systems, ensuring research activities align with consent parameters, developing enterprise
+            strategies, and establishing governance frameworks to enhance consent practices.
+          levels:
+            entry:
+              id: consent-management-entry
+              name: Entry Level
+              skills:
+              - Understands consent concepts and requirements
+              - Familiar with consent documentation and verification
+              - Can implement basic consent management procedures
+            mid:
+              id: consent-management-mid
+              name: Mid Level
+              skills:
+              - Designs and implements consent management systems
+              - Ensures research activities align with consent parameters
+              - Conducts consent compliance reviews and assessments
+            senior:
+              id: consent-management-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise consent management strategies
+              - Establishes consent governance frameworks and processes
+              - Leads consent management enhancement initiatives
+        ethical-review-processes:
+          id: ethical-review-processes
+          name: Ethical Review Processes
+          description: Facilitates the assessment of research proposals against ethical standards. Involves
+            preparing documentation for review submissions, coordinating complex submissions, implementing
+            tracking systems, ensuring compliance with approvals, developing streamlined frameworks, and
+            leading initiatives to enhance the efficiency and effectiveness of ethical review processes.
+          levels:
+            entry:
+              id: ethical-review-processes-entry
+              name: Entry Level
+              skills:
+              - Understands ethical review requirements and processes
+              - Familiar with ethical review documentation
+              - Can prepare basic ethical review submissions
+            mid:
+              id: ethical-review-processes-mid
+              name: Mid Level
+              skills:
+              - Coordinates complex ethical review submissions
+              - Implements systems for tracking ethical approvals
+              - Ensures research activities comply with ethical approvals
+            senior:
+              id: ethical-review-processes-senior
+              name: Senior Level
+              skills:
+              - Develops streamlined ethical review frameworks
+              - Establishes ethical review governance and oversight
+              - Leads initiatives to enhance ethical review processes
+    audit-compliance-monitoring:
+      id: audit-compliance-monitoring
+      name: Audit & Compliance Monitoring
+      description: Audit & Compliance Monitoring ensures continuous verification of regulatory adherence
+        through systematic tracking and reporting. This subdomain encompasses implementing comprehensive
+        audit trail systems that record system and user activities, conducting regular compliance monitoring
+        with structured reporting processes, and managing certification and accreditation programs that
+        collectively provide assurance that secure data environments maintain required standards while
+        enabling effective oversight and continuous improvement.
+      competencies:
+        audit-trail-implementation:
+          id: audit-trail-implementation
+          name: Audit Trail Implementation
+          description: Creates comprehensive records of system and user activities for security and compliance.
+            Involves implementing logging capabilities, ensuring appropriate content and formats, designing
+            comprehensive strategies, implementing secure collection and storage, developing enterprise
+            architectures, and establishing governance frameworks to enhance audit capabilities.
+          levels:
+            entry:
+              id: audit-trail-implementation-entry
+              name: Entry Level
+              skills:
+              - Understands audit logging concepts and requirements
+              - Familiar with audit log contents and formats
+              - Can implement basic audit logging following guidelines
+            mid:
+              id: audit-trail-implementation-mid
+              name: Mid Level
+              skills:
+              - Designs comprehensive audit logging strategies
+              - Implements secure audit trail collection and storage
+              - Ensures audit coverage across systems and processes
+            senior:
+              id: audit-trail-implementation-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise audit strategy and architecture
+              - Establishes audit governance frameworks and policies
+              - Leads audit capability enhancement initiatives
+        compliance-monitoring-reporting:
+          id: compliance-monitoring-reporting
+          name: Compliance Monitoring & Reporting
+          description: Continuously assesses and documents adherence to regulatory requirements and standards.
+            Involves producing compliance reports, implementing monitoring programs, analyzing trends
+            and issues, developing enterprise strategies, establishing reporting frameworks, and leading
+            initiatives to enhance monitoring capabilities across the organization.
+          levels:
+            entry:
+              id: compliance-monitoring-reporting-entry
+              name: Entry Level
+              skills:
+              - Understands compliance monitoring concepts
+              - Familiar with compliance reporting requirements
+              - Can produce basic compliance reports using established templates
+            mid:
+              id: compliance-monitoring-reporting-mid
+              name: Mid Level
+              skills:
+              - Implements compliance monitoring programs and tools
+              - Produces comprehensive compliance reporting and dashboards
+              - Analyses compliance data to identify trends and issues
+            senior:
+              id: compliance-monitoring-reporting-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise compliance monitoring strategies
+              - Establishes compliance reporting frameworks and governance
+              - Leads compliance monitoring enhancement initiatives
+        certification-accreditation:
+          id: certification-accreditation
+          name: Certification & Accreditation
+          description: Guides systems through formal security validation by external authorities. Involves
+            understanding certification requirements, collecting evidence, managing certification processes,
+            preparing documentation, addressing findings, developing enterprise strategies, and establishing
+            governance to maintain certifications such as ISO27001 across the organization.
+          levels:
+            entry:
+              id: certification-accreditation-entry
+              name: Entry Level
+              skills:
+              - Understands certification and accreditation concepts
+              - Familiar with common certifications (ISO27001, etc.)
+              - Can assist with certification evidence collection
+            mid:
+              id: certification-accreditation-mid
+              name: Mid Level
+              skills:
+              - Manages certification and accreditation processes
+              - Prepares systems and documentation for certification
+              - Addresses certification findings and remediation
+            senior:
+              id: certification-accreditation-senior
+              name: Senior Level
+              skills:
+              - Develops enterprise certification strategies
+              - Establishes certification governance and oversight
+              - Leads certification readiness and maintenance programs
