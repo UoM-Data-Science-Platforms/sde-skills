@@ -24,9 +24,31 @@ Plans and executes projects related to secure data environments. Involves unders
 
 === ":material-battery-90: Senior Level"
 
-    - Responsible for SDE project implentations - Need something that talks about responsibility for meetings strategic objectives.
+    - Responsible for SDE project implentations in order to meet strategic objectives.
     - Oversees complex, multi-stakeholder SDE engagements
     - Leads strategic planning for SDE capabilities
+
+    ### Agile Delivery Methods 
+
+Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure data environments, managing teams and processes, adapting approaches for security needs, and establishing delivery frameworks.
+
+=== ":material-battery-10: Entry Level"
+
+    - Understands agile concepts and methodologies
+    - Familiar with agile ceremonies and artifacts
+    - Can participate effectively in agile teams
+
+=== ":material-battery-50: Mid Level"
+
+    - Implements agile practices appropriate to SDE development
+    - Manages agile teams and processes
+    - Adapts agile approaches for security and compliance needs
+
+=== ":material-battery-90: Senior Level"
+
+    - Establishes agile delivery frameworks for secure environments
+    - Develops agile governance models that maintain compliance
+    - Leads agile transformation initiatives
 
 ### Research Project Facilitation
 
@@ -50,31 +72,9 @@ Supports researchers in utilizing secure data environments effectively. Involves
     - Establishes researcher engagement and support
     - Leads initiatives to enhance research capabilities in SDEs
 
-### Agile Delivery Methods - ****move up one****
+### Procurement & Vendor Management 
 
-Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure data environments, managing teams and processes, adapting approaches for security needs, and establishing delivery frameworks.
-
-=== ":material-battery-10: Entry Level"
-
-    - Understands agile concepts and methodologies
-    - Familiar with agile ceremonies and artifacts
-    - Can participate effectively in agile teams
-
-=== ":material-battery-50: Mid Level"
-
-    - Implements agile practices appropriate to SDE development
-    - Manages agile teams and processes
-    - Adapts agile approaches for security and compliance needs
-
-=== ":material-battery-90: Senior Level"
-
-    - Establishes agile delivery frameworks for secure environments
-    - Develops agile governance models that maintain compliance
-    - Leads agile transformation initiatives
-
-### Procurement & Vendor Management
-
-Acquires and manages external resources and services for secure data environments. Involves understanding procurement processes, assisting with activities, managing procurement for resources and services, negotiating with vendors, ensuring compliance with policies, developing strategies, establishing governance, and leading strategic vendor relationships.
+Acquires and manages external resources and services for secure data environments. Identifies and documents requirement, assists with procurement activities, oversees technical deliver of procured services, engages with vendors, and managing strategic relationships.
 
 === ":material-battery-10: Entry Level"
 
@@ -84,30 +84,30 @@ Acquires and manages external resources and services for secure data environment
 
 === ":material-battery-50: Mid Level"
 
-    - Manages procurement processes for SDE resources and services
-    - Negotiates with vendors and evaluates service offerings
+    - Can identify and document requirements in order to enable procument 
+    - Can evaluate service offerings against requirement
     - Ensures compliance with procurement policies and regulations
 
 === ":material-battery-90: Senior Level"
 
-    - Develops procurement strategies and vendor management frameworks
+    - Ensures that vendor deliveries meet strategic objectives
     - Establishes procurement governance and oversight mechanisms
     - Leads strategic vendor relationships and partnership initiatives
 
 ### Resource & Cost Management
 
-Allocates and optimises resources within secure data environments to maximise value. Involves understanding resource allocation principles, monitoring cloud costs, generating usage reports, implementing management processes, developing optimization strategies, creating costing models, establishing financial governance, and enhancing resource efficiency.
+Allocates and optimises resources within secure data environments to maximise value. Involves understanding the cost implications of resource allocation, monitoring cloud costs, generating usage reports, implementing management processes, and enhancing resource efficiency.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands resource allocation and cost management principles
+    - Understands resource allocation and the monitoring of costs
     - Familiar with cloud cost monitoring tools and techniques
     - Can generate basic resource usage reports and cost analyses
 
 === ":material-battery-50: Mid Level"
 
     - Implements comprehensive resource management processes
-    - Develops cost monitoring and optimization strategies
+    - Develops cost monitoring and optimisation strategies
     - Creates and maintains costing models for SDE operations
 
 === ":material-battery-90: Senior Level"
