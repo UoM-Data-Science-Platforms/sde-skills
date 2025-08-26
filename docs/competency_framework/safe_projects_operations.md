@@ -192,11 +192,11 @@ Operational Excellence ensures consistent, high-quality service delivery within 
 
 ### Continuous Improvement
 
-Systematically enhances SDE processes, services, and capabilities. Involves understanding improvement concepts, identifying opportunities, implementing initiatives, applying methodologies like Lean and Six Sigma, measuring outcomes, establishing improvement cultures, developing enterprise strategies, and leading transformational programs across the organisation.
+Systematically enhances SDE processes, services, and capabilities. Involves understanding improvement concepts, identifying opportunities, implementing initiatives, applying methodologies like Lean and Six Sigma, measuring outcomes and establishing a culture of improvement.
 
 === ":material-battery-10: Entry Level"
 
-    - Understands continuous improvement concepts
+    - Understands the concept of continuous improvement
     - Familiar with improvement methodologies (Lean, Six Sigma)
     - Can identify opportunities for process improvement
 
@@ -209,12 +209,12 @@ Systematically enhances SDE processes, services, and capabilities. Involves unde
 === ":material-battery-90: Senior Level"
 
     - Establishes continuous improvement frameworks and culture
-    - Develops enterprise improvement strategies
+    - Contributes to organisational improvement strategies
     - Leads transformational improvement programs
 
 ### Documentation & Knowledge Management
 
-Creates, maintains, and shares operational knowledge within the SDE. Involves understanding documentation requirements, using knowledge management systems, creating basic documentation, implementing comprehensive strategies, developing knowledge bases, ensuring security compliance, establishing governance standards, and enhancing organisational knowledge sharing.
+Creates, maintains,understands, interprets and utilises documentation and shares operational knowledge within the SDE and the wider organisation. Involvesunderstanding documentation requirements, using knowledge management systems, creating basic documentation, and developing knowledge bases.
 
 === ":material-battery-10: Entry Level"
 
@@ -224,19 +224,19 @@ Creates, maintains, and shares operational knowledge within the SDE. Involves un
 
 === ":material-battery-50: Mid Level"
 
-    - Implements comprehensive documentation strategies
+    - Implements documentation processes and proceedures
     - Develops knowledge bases and sharing mechanisms
     - Ensures documentation meets security and compliance needs
 
 === ":material-battery-90: Senior Level"
 
     - Establishes documentation governance and standards
-    - Develops enterprise knowledge management strategies
+    - Contributes to organisational knowledge management strategies
     - Leads initiatives to enhance organisational knowledge sharing
 
 ### Monitoring & Observability
 
-Tracks system health, performance, and security in the SDE. Involves understanding monitoring concepts and tools, using metrics and logs, implementing comprehensive strategies, designing dashboards and alerts for complex systems, analysing data, establishing enterprise frameworks, and leading initiatives to enhance operational visibility across the environment.
+Tracks system health, performance, and security in the SDE. Involves understanding monitoring concepts and tools, using metrics and logs, implementing monitoring strategies, designing dashboards and alerts for complex systems, analysing performance data and logs, and leading initiatives to enhance operational visibility across the environment.
 
 === ":material-battery-10: Entry Level"
 
@@ -246,7 +246,7 @@ Tracks system health, performance, and security in the SDE. Involves understandi
 
 === ":material-battery-50: Mid Level"
 
-    - Implements comprehensive monitoring strategies
+    - Implements monitoring processes
     - Designs dashboards and alerting for complex systems
     - Analyses monitoring data to optimise performance
 
@@ -254,27 +254,27 @@ Tracks system health, performance, and security in the SDE. Involves understandi
 
     - Establishes enterprise monitoring frameworks
     - Develops observability strategies across systems
-    - Leads initiatives to enhance operational visibility
+    - Leads initiatives to enhance operational visibility???
 
 ## Research Support & Innovation
 
-Research Support & Innovation enhances researcher effectiveness within secure data environments. This subdomain focuses on enabling researchers through comprehensive training and support programs, providing specialised tools and capabilities that meet research requirements while maintaining security, exploring and implementing innovative technologies that advance secure research capabilities, and engaging with the wider community through active participation and knowledge sharing across the secure data environment ecosystem.
+Research Support & Innovation enhances researcher effectiveness within secure data environments. This subdomain focuses on enabling researchers through comprehensive training and support programs, providing specialised tools and capabilities that meet research requirements, exploring and implementing innovative technologies that advance secure research capabilities, and engaging with the wider community through active participation and knowledge sharing across the secure data environment ecosystem.
 
 ### Researcher Training & Support
 
-Enables researchers to effectively use secure data environments. Involves understanding researcher needs, providing basic support, developing training programs, implementing support processes, addressing complex issues, establishing engagement strategies, developing innovative enablement approaches, and leading initiatives to enhance the researcher experience.
+Enables researchers to effectively use secure data environments. Involves understanding researcher needs, providing basic support, developing training programs,documenting requirements, establishing and implementing engagement processes, managing researcher issues, and leading initiatives to enhance researcher experience.
 
 === ":material-battery-10: Entry Level"
 
     - Understands researcher needs and support requirements
     - Familiar with SDE training materials and documentation
-    - Can provide basic support to researchers
+    - Can provide basic support and training to researchers
 
 === ":material-battery-50: Mid Level"
 
     - Develops comprehensive researcher training programs
     - Implements support processes and knowledge bases
-    - Addresses complex researcher issues and requirements
+    - Identifies, documents and addresses complex researcher issues and requirements
 
 === ":material-battery-90: Senior Level"
 
@@ -284,7 +284,7 @@ Enables researchers to effectively use secure data environments. Involves unders
 
 ### TRE Tools & Capabilities
 
-Provides and manages tools for research in secure environments. Involves understanding common tools and requirements, configuring environments, evaluating and implementing research tools, designing workspaces, ensuring security and compliance, developing implementation strategies, establishing governance, and leading initiatives to enhance capabilities.
+Provides and manages tools for research in secure environments. Involves understanding common tools and requirements, configuring environments, evaluating and implementing research tools, designing workspaces, ensuring security and compliance, establishing governance, and leading initiatives to enhance capability.
 
 === ":material-battery-10: Entry Level"
 
@@ -306,7 +306,7 @@ Provides and manages tools for research in secure environments. Involves underst
 
 ### Future TRE Innovation
 
-Explores and implements new technologies and approaches for secure research. Involves understanding emerging trends, researching new technologies, evaluating for TRE application, implementing proof-of-concept projects, developing roadmaps and strategies, establishing innovation frameworks, leading horizon scanning, and developing strategic partnerships for advancement.
+Explores and implements new technologies and approaches for secure research. Involves understanding emerging trends, researching new technologies, evaluating for TRE application, implementing proof-of-concept projects, developing roadmaps, and developing strategic partnerships to enhance TRE.
 
 === ":material-battery-10: Entry Level"
 
@@ -318,17 +318,17 @@ Explores and implements new technologies and approaches for secure research. Inv
 
     - Evaluates emerging technologies for TRE application
     - Implements proof-of-concept projects and pilots
-    - Develops innovation roadmaps and strategies
+    - Contributes to innovation roadmaps and strategies
 
 === ":material-battery-90: Senior Level"
 
-    - Establishes innovation frameworks and governance
+    - Establishes innovation roadmaps and strategies
     - Leads horizon scanning for future TRE technologies
-    - Develops strategic partnerships for TRE advancement
+    - Develops strategic partnerships for TRE enhancement
 
 ### Community Engagement & Networking
 
-Participates in and contributes to the wider secure data environment community. Involves understanding the importance of engagement, participating in events and discussions, actively contributing to communities, representing the organisation, building professional networks, leading engagement strategies, organizing events, and developing strategic partnerships across the community.
+Participates in and contributes to the wider secure data environment community. Involves understanding the importance of engagement, participating in events and discussions, actively contributing to communities, representing the organisation, building professional networks, organizing events, and developing strategic partnerships across the community.
 
 === ":material-battery-10: Entry Level"
 
@@ -344,6 +344,6 @@ Participates in and contributes to the wider secure data environment community. 
 
 === ":material-battery-90: Senior Level"
 
-    - Leads community engagement strategies and initiatives
-    - Organises community events and knowledge sharing forums
+    - Leads community engagement initiatives
+    - Organises and chairs community events and knowledge sharing forums
     - Develops strategic partnerships across the SDE community
