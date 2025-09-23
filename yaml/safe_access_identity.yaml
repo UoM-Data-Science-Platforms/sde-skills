@@ -13,6 +13,11 @@ domain:
         credentials, from verification mechanisms and account provisioning to cross-organizational federation,
         ensuring that only properly authenticated users can access sensitive research data while maintaining
         security, operational efficiency, and compliance with organizational policies.
+      recommended-tech:  
+        - OAuth 2.0
+        - OpenID Connect
+        - SAML
+        - LDAP
       competencies:
         authentication-systems:
           id: authentication-systems
