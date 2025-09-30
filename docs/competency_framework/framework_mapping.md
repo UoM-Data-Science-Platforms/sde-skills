@@ -4,7 +4,7 @@ This document provides a detailed mapping of the SDE Skills Competency Framework
 
 ## Mapping to Five Safes
 
-The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles:
+The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles:   
 
 ### Safe Data
 
