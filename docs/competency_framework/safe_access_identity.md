@@ -164,7 +164,7 @@ Secure User Experience focuses on designing and maintaining protected research e
 
 ### Researcher Onboarding
 
-Research onboarding concerns designing and implementing secure processes for new researcher user into secure data environments. This involves verifying training and certifications, creating efficient workflows, implementing credential verification, and establishing governance frameworks. Requires developing cross-organisational strategies that enhance both security and researcher experience.
+Researcher onboarding concerns designing and implementing secure processes for new researcher user into secure data environments. This involves verifying training and certifications, creating efficient workflows, implementing credential verification, and establishing governance frameworks. Requires developing cross-organisational strategies that enhance both security and researcher experience.
 
 === ":material-battery-10: Entry Level"
 
