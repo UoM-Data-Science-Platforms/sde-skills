@@ -96,7 +96,7 @@ Bloom’s Taxonomy is a hierarchical model used to classify learning objectives 
 
 ## Application of Bloom’s Taxonomy to this to this framework
 
-When creating a competency framework, Bloom’s Taxonomy helps define clear, measurable, and progressive skill levels. Here's how it's applied:
+When creating a competency framework, Bloom’s Taxonomy helps define clear, measurable, and progressive skill levels. Here's how it's applied to this framework :
 - **Competency Statements**: Using Bloom’s action verbs to describe competencies
 - **Skill Progression**: Aligning tasks and responsibilities with increasing cognitive complexity 
-- **Training Objectives**: Linking skills knowledge for competencies to specific Bloom’s levels.
+- **Training Objectives**: Linking skills knowledge for competencies to specific Bloom’s levels
