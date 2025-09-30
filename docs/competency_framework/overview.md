@@ -80,3 +80,23 @@ The framework has been enhanced to incorporate specialised areas critical to Sec
 7. **Community Engagement** - Building networks and sharing knowledge across SDEs
 
 This framework represents an initial mapping of competencies from both theoretical frameworks and real-world skills needed by Research Technical Professionals responsible for building, deploying and managing Trusted Research Environment / Secure Data Environments.
+
+## Bloom's Taxonomy
+
+Bloom’s Taxonomy is a hierarchical model used to classify learning objectives based on cognitive complexity. It helps educators and trainers design curriculum, assessments, and learning outcomes. The Cognitive domain is most commonly used in competency frameworks and includes sixlevels (from basic to advanced):
+
+| Level | Description | Example Verbs |
+|---------------|-----------------|----------------------------------|
+| Remember | Recall facts and basic concepts | Define, List, Recall
+| Understand | Explain ideas or concepts | Describe, Summarize,Interpret
+| Apply | Use information in new situations | Implement, Use, Execute
+| Analyse | Draw connections among ideas | Compare, Examine, Differentiate
+| Evaluate | Justify decisions or opinions | Critique, Judge, Assess
+| Create | Produce new or original work | Design, Construct, Develop
+
+## Application of Bloom’s Taxonomy to this to this framework
+
+When creating a competency framework, Bloom’s Taxonomy helps define clear, measurable, and progressive skill levels. Here's how it's applied:
+- **Competency Statements**: Using Bloom’s action verbs to describe competencies
+- **Skill Progression**: Aligning tasks and responsibilities with increasing cognitive complexity 
+- **Training Objectives**: Linking skills knowledge for competencies to specific Bloom’s levels.
