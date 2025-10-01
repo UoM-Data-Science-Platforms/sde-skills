@@ -8,7 +8,7 @@ Identity Management encompasses the systems and processes that govern user digit
 
 ### Authentication Systems
 
-Authentication Systems enable implementation and maintanance wof secure user verification mechanisms within secure data environments. This involves designing and configuring authentication protocols, password policies, and  Multi-Factor Authentication (MFA) solutions, whilst troubleshooting security incidents. Requires the ability to evaluate technologies and architect enterprise-wide authentication strategies aligned with organisational security needs.
+Authentication Systems enable implementation and maintanance of secure user verification mechanisms within secure data environments. This involves designing and configuring authentication protocols, password policies, and  Multi-Factor Authentication (MFA) solutions, whilst troubleshooting security incidents. Requires the ability to evaluate technologies and architect enterprise-wide authentication strategies aligned with organisational security needs.
 
 === ":material-battery-10: Entry Level"
 
