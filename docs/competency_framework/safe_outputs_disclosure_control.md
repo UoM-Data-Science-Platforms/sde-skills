@@ -19,6 +19,14 @@ Involves understanding review requirements for different output formats, designi
 
     - Implements output tracking and audit logs to support governance processes 
 
+
+## Technologies/Tools
+
+Awareness of output formats (e.g., CSV, PDF), basic audit logs
+Output tracking systems, audit trail tools (e.g., ELK Stack)
+Governance platforms, enterprise disclosure review systems
+
+
 ## Tools and platforms to support output checking
 
 ### Workflow engines
@@ -41,6 +49,14 @@ Deploy and administer workflow engines to help ensure consistency, reliability, 
 
     - Leads the technology strategy for business process management
 
+
+## Technologies/Tools
+
+Camunda, Apache Airflow (basic admin), BPMN viewers
+Camunda Modeler, custom workflow templates, stakeholder-driven design
+Enterprise BPM platforms (e.g., Bonita, Bizagi), strategic workflow architecture
+
+
 ### Data airlocks
 
 Install and administer data airlock applications, understand the roles and what level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit, review etc.) within the airlock application, create user documentation and training materials, contribute to on-going improvements to data airlocks to ensure they meet user needs as well as comply with standards and regulations.
@@ -60,6 +76,15 @@ Install and administer data airlock applications, understand the roles and what 
 
     - can influence design of data airlocks according to user requirements and changes in standards and governance
 
+
+
+## Technologies/Tools
+
+Basic airlock portals, role-based access awareness
+Training modules, user documentation systems, troubleshooting tools
+Custom airlock design platforms, compliance-driven airlock architecture
+
+
 ### Code repositories
 Install and configure code repository systems (e.g., Git) that allow source code to be imported and exported from SDEs in industry standard ways. Develop automated checks that can perform static analysis to ensure source code doesn't contain passwords, API keys, or other infrastructural secrets. Develop workflows for disclosure checking to ensure the source code does not contain any restricted data. Use advanced techniques to perform automated code reviews to assess further requirement for manual inspection.
 
@@ -77,6 +102,14 @@ Install and configure code repository systems (e.g., Git) that allow source code
 
     - Establishes code publication frameworks and governance
     - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating secure code repositories, developing sharing policies, designing automated pipelines to review eligibility of code for release).
+
+
+## Technologies/Tools
+
+Git, GitHub, GitLab
+GitLab CI/CD, static analysis tools (e.g., Semgrep, TruffleHog)
+Secure code governance platforms, automated disclosure pipelines
+
 
 ## Statistical Disclosure Control
 
@@ -100,6 +133,14 @@ Implementing tools to facilitate reviewing research outputs for potential privac
     - Leads initiatives to enhance disclosure risk management (e.g., implementing new tools or techniques, anticipate introduction of new regulatory frameworks).
 
 
+
+## Technologies/Tools
+
+Risk classification templates, sensitivity tagging tools
+Risk scoring engines, control recommendation systems
+Enterprise risk management platforms, regulatory forecasting tools
+
+
 ### Automated Disclosure Control
 
 Implements systems that automatically apply disclosure controls to research outputs. Involves automated tools and solutions for common output types, configuring rules and thresholds, validating effectiveness, architecting enterprise strategies, and developing advanced algorithms to enhance automated disclosure control capabilities.
@@ -121,6 +162,13 @@ Implements systems that automatically apply disclosure controls to research outp
 
 
 
+## Technologies/Tools
+
+Rule-based SDC tools (e.g., sdcMicro), threshold configuration interfaces
+Automated SDC pipelines, benchmarking tools
+AI-driven SDC systems, enterprise automation strategies
+
+
 
 
 
@@ -136,6 +184,14 @@ Install and configure applications that can prevent accidental disclosure such a
 === ":material-battery-50: Mid Level"
 
     - configure applications and services to better protect against accidental disclosure
+
+
+## Technologies/Tools
+
+Remote desktop restrictions, clipboard control tools
+Endpoint protection platforms, browser isolation tools
+Cross-platform disclosure prevention architecture
+
 
 
 ## Emergency response
@@ -156,3 +212,10 @@ The infrastructure team should be prepared for emergency response when a suspect
     - can liaise across organisational units facts relating to a data breach
     - can design short term mitigations to prevent further disclosure
     - can design long term mitigations against confirmed data leaks
+
+
+## Technologies/Tools
+
+Log collection tools (e.g., syslog, journald)
+SIEM platforms (e.g., Splunk, Graylog), incident analysis dashboards
+Incident response orchestration tools, breach mitigation frameworks

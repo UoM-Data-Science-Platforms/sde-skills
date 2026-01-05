@@ -28,6 +28,14 @@ Establishes and maintains frameworks for managing information assets securely an
     - Establishes governance frameworks and oversight mechanisms
     - Leads information governance maturity initiatives (e.g., implementing maturity models)
 
+
+## Technologies/Tools
+
+Caldicott Principles, ISO 27001 awareness
+Data flow mapping tools, risk assessment templates
+Governance maturity models, enterprise IG platforms
+
+
 ### Data Protection Compliance
 
 Ensures adherence to data protection laws and regulations such as GDPR. Involves understanding subject rights and consent requirements, implementing protection controls, conducting impact assessments, developing comprehensive frameworks, establishing governance oversight, and leading enhancement initiatives across the organization.
@@ -49,6 +57,14 @@ Ensures adherence to data protection laws and regulations such as GDPR. Involves
     - Develops enterprise data protection strategies
     - Establishes data protection governance and oversight
     - Leads data protection enhancement initiatives (e.g., organization-wide training, new privacy technologies).
+
+
+## Technologies/Tools
+
+GDPR awareness, pseudonymization tools
+DPIA templates, privacy by design frameworks
+Enterprise privacy platforms, privacy tech (e.g., OneTrust)
+
 
 ### Healthcare Standards Compliance
 
@@ -72,6 +88,14 @@ Ensures adherence to healthcare-specific regulatory standards such as DSPT and N
     - Establishes healthcare compliance governance programs
     - Leads healthcare standards compliance initiatives
 
+
+## Technologies/Tools
+
+DSPT, NHS DTAC awareness
+Compliance checklists, audit templates
+Healthcare compliance governance platforms
+
+
 ### Healthcare Data Security Frameworks
 
 Implements specialised security controls required for protecting healthcare data. Involves understanding healthcare-specific frameworks like DSPT and NHS DTAC, implementing compliance controls, conducting assessments, ensuring regulatory requirements are met, developing strategies, and establishing governance oversight specific to healthcare environments.
@@ -94,6 +118,14 @@ Implements specialised security controls required for protecting healthcare data
     - Establishes healthcare compliance governance and oversight
     - Leads healthcare standards compliance initiatives
 
+
+## Technologies/Tools
+
+Basic encryption, access review tools
+Audit logging tools, encryption platforms
+Security governance frameworks
+
+
 ### Ethics & Research Approval Systems
 
 Manages systems and processes for ensuring research meets ethical standards and approval requirements. Involves understanding ethical review processes, preparing documentation for submissions, implementing tracking systems, ensuring compliance with approvals, and developing strategies to enhance ethical governance across the research environment.
@@ -115,6 +147,14 @@ Manages systems and processes for ensuring research meets ethical standards and 
     - Develops ethical compliance strategies and frameworks
     - Establishes ethics governance and oversight processes
     - Leads initiatives to enhance ethical compliance
+
+
+## Technologies/Tools
+
+IRAS documentation, consent form templates
+Ethics tracking systems, compliance dashboards
+Ethics governance platforms
+
 
 ## Security Management
 
@@ -142,6 +182,14 @@ Deploys technical, administrative, and physical safeguards to protect data and s
     - Establishes security control governance and oversight
     - Leads security control maturity initiatives
 
+
+## Technologies/Tools
+
+Firewall rules, password policy templates
+ISO 27001 Annex A mapping tools
+Enterprise security control platforms
+
+
 ### Security Assessment & Testing
 
 Evaluates the effectiveness of security controls through testing and analysis. Involves understanding assessment methodologies, conducting vulnerability scanning and penetration testing, analyzing results, prioritizing remediation, implementing testing programs, and establishing governance frameworks to mature assessment capabilities.
@@ -164,6 +212,14 @@ Evaluates the effectiveness of security controls through testing and analysis. I
     - Establishes security testing governance and methodologies
     - Leads security assessment maturity initiatives
 
+
+## Technologies/Tools
+
+Nessus, OpenVAS
+Penetration testing tools, vulnerability scanners
+Security testing governance platforms
+
+
 ### Incident Response Management
 
 Prepares for and manages security incidents effectively to minimise impact. Involves understanding incident response procedures, classifying and reporting incidents, implementing response plans, leading investigations, analyzing for improvement, developing enterprise strategies, and enhancing response capabilities across the organization.
@@ -185,6 +241,14 @@ Prepares for and manages security incidents effectively to minimise impact. Invo
     - Develops enterprise incident response strategies
     - Establishes incident response governance and oversight
     - Leads incident response capability enhancement initiatives
+
+
+## Technologies/Tools
+
+Incident logging templates
+SIEM tools (e.g., Splunk), incident response plans
+Enterprise incident response platforms
+
 
 ## Ethics & Research Governance
 
@@ -212,6 +276,14 @@ Ensures research activities adhere to ethical principles and requirements. Invol
     - Establishes research ethics governance and oversight
     - Leads research ethics enhancement initiatives
 
+
+## Technologies/Tools
+
+Ethics approval templates
+Ethics review systems
+Enterprise ethics governance platforms
+
+
 ### Consent Management
 
 Manages processes for obtaining, recording, and honoring data subject consent. Involves understanding consent requirements, verifying documentation, implementing management systems, ensuring research activities align with consent parameters, developing enterprise strategies, and establishing governance frameworks to enhance consent practices.
@@ -234,6 +306,14 @@ Manages processes for obtaining, recording, and honoring data subject consent. I
     - Establishes consent governance frameworks and processes
     - Leads consent management enhancement initiatives
 
+
+## Technologies/Tools
+
+Consent form templates
+Consent tracking systems
+Enterprise consent governance platforms
+
+
 ### Ethical Review Processes
 
 Facilitates the assessment of research proposals against ethical standards. Involves preparing documentation for review submissions, coordinating complex submissions, implementing tracking systems, ensuring compliance with approvals, developing streamlined frameworks, and leading initiatives to enhance the efficiency and effectiveness of ethical review processes.
@@ -255,6 +335,14 @@ Facilitates the assessment of research proposals against ethical standards. Invo
     - Develops streamlined ethical review frameworks
     - Establishes ethical review governance and oversight
     - Leads initiatives to enhance ethical review processes
+
+
+## Technologies/Tools
+
+Review submission templates
+Ethical approval tracking tools
+Ethical review governance platforms
+
 
 ## Audit & Compliance Monitoring
 
@@ -282,6 +370,14 @@ Creates comprehensive records of system and user activities for security and com
     - Establishes audit governance frameworks and policies
     - Leads audit capability enhancement initiatives
 
+
+## Technologies/Tools
+
+Syslog, journald
+Centralized logging platforms (e.g., ELK Stack)
+Enterprise audit governance platforms
+
+
 ### Compliance Monitoring & Reporting
 
 Continuously assesses and documents adherence to regulatory requirements and standards. Involves producing compliance reports, implementing monitoring programs, analyzing trends and issues, developing enterprise strategies, establishing reporting frameworks, and leading initiatives to enhance monitoring capabilities across the organization.
@@ -304,6 +400,14 @@ Continuously assesses and documents adherence to regulatory requirements and sta
     - Establishes compliance reporting frameworks and governance
     - Leads compliance monitoring enhancement initiatives
 
+
+## Technologies/Tools
+
+Compliance report templates
+Compliance dashboards, monitoring tools
+Enterprise compliance reporting platforms
+
+
 ### Certification & Accreditation
 
 Guides systems through formal security validation by external authorities. Involves understanding certification requirements, collecting evidence, managing certification processes, preparing documentation, addressing findings, developing enterprise strategies, and establishing governance to maintain certifications such as ISO27001 across the organization.
@@ -325,3 +429,11 @@ Guides systems through formal security validation by external authorities. Invol
     - Develops enterprise certification strategies
     - Establishes certification governance and oversight
     - Leads certification readiness and maintenance programs
+
+
+## Technologies/Tools
+
+ISO27001 awareness
+Certification evidence collection tools
+Certification governance platforms
+
