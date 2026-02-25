@@ -255,7 +255,7 @@ Creates and maintains protected environments for researchers working with sensit
 
 ## Technologies/Tools
 
-Workspace provisioning templates, basic configuration tools, Workspace isolation tools, software installation and configuration, Workspace isolation tools, software installation and configuration.
+Workspace provisioning templates, basic configuration tools, Workspace isolation tools, software installation and configuration.
 
 
 ### Secure Collaboration Tools
