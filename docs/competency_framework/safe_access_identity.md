@@ -33,6 +33,12 @@ Implements and maintains secure user verification mechanisms within research env
     - Leads identity system transformations and security enhancements
     - Lead and provide support for existing Security Matrix.   
 
+
+## Technologies/Tools
+
+Microsoft Entra, MFA implementation, SDE security matrix configuration, Enterprise authentication strategy, identity system transformation
+
+
 ### User Provisioning & Lifecycle
 
 Manages the complete lifecycle of user accounts from creation to deactivation within secure environments. Encompasses designing and automating provisioning processes, ensuring compliance with management policies, and establishing governance frameworks that support efficient identity management across the organisation.
@@ -58,6 +64,12 @@ Manages the complete lifecycle of user accounts from creation to deactivation wi
     - Leads identity management modernization initiatives
     - Can lead new user provisioning specification implementation and support
 
+
+## Technologies/Tools
+
+Provisioning tools, user lifecycle awareness Automation tools, provisioning scripts, policy enforcement, Identity governance frameworks, lifecycle modernization tools
+
+
 ### Federated Identity Management
 
 Enables secure authentication across organisational boundaries through single sign-on protocols like SAML, OAuth, and OIDC. Involves configuring and managing federation with multiple identity providers, troubleshooting security issues, and developing governance frameworks to enhance secure collaboration between healthcare organisations and research institutions.
@@ -79,6 +91,12 @@ Enables secure authentication across organisational boundaries through single si
     - Architects complex federated identity solutions across organisational boundaries
     - Develops federation governance and security frameworks
     - Leads initiatives to enhance identity federation capabilities across healthcare organisations and research institutions
+
+
+## Technologies/Tools
+
+SSO protocols (SAML, OAuth, OIDC), Federation configuration tools, identity provider integration, Federation governance frameworks, cross-org federation architecture.
+
 
 ## Access Control
 
@@ -112,6 +130,11 @@ Implements access permissions based on organizational roles within secure data e
     - Can lead new Role definitions implementation and support.  
 
 
+## Technologies/Tools
+
+RBAC concepts, role assignment tools, Role management systems, governance tools, Enterprise RBAC frameworks, role mining tools.
+
+
 ### Attribute-Based Access Control
 
 Implements dynamic, context-aware access control using attributes rather than roles. Requires defining policies based on various attribute types, designing controls for different contexts, evaluating their effectiveness, and developing advanced policy models for complex scenarios. Involves leading initiatives to implement dynamic access management across the organisation.
@@ -133,6 +156,12 @@ Implements dynamic, context-aware access control using attributes rather than ro
     - Architects enterprise ABAC strategies and frameworks
     - Develops advanced policy models for complex authorization scenarios
     - Leads initiatives to implement dynamic access control
+
+
+## Technologies/Tools
+
+ABAC concepts, simple policy tools, Attribute management systems, policy enforcement engines, Enterprise ABAC frameworks, dynamic access control tools.
+
 
 ### Least Privilege Implementation
 
@@ -158,6 +187,11 @@ Ensures users and systems have only the minimum access privileges needed for the
     - Implements advanced tools for privilege discovery and management
     - Leads initiatives to mature privilege governance practices
     - Leads audit, implementation involving role-level security.
+
+
+## Technologies/Tools
+
+Privilege audit tools, role-level security awareness, Privilege attestation tools, access review systems, Enterprise privilege management tools, governance platforms.
 
 ## Secure User Experience
 
@@ -186,6 +220,12 @@ Designs and implements secure processes for integrating researchers into data en
     - Develops cross-organisational onboarding strategies
     - Leads initiatives to enhance researcher experience and security
 
+
+## Technologies/Tools
+
+Training verification systems, onboarding templates, Credential verification tools, onboarding workflow engines, Cross-org onboarding strategies, governance frameworks.
+
+
 ### Secure Research Workspaces
 
 Creates and maintains protected environments for researchers working with sensitive data. Involves designing secure environments tailored to research needs, implementing isolation controls, troubleshooting issues, and optimizing user experience. Requires evaluating technologies and leading modernization initiatives to enhance security while supporting research activities.
@@ -212,6 +252,12 @@ Creates and maintains protected environments for researchers working with sensit
     - Leads workspace modernization and security enhancement initiatives
     - Leads and support new/existing Research workspace
 
+
+## Technologies/Tools
+
+Workspace provisioning templates, basic configuration tools, Workspace isolation tools, software installation and configuration.
+
+
 ### Secure Collaboration Tools
 
 Implements platforms enabling researchers to securely share and collaborate on sensitive data. Involves configuring security features, designing controls for data sharing, and evaluating tools for compliance. Requires developing cross-environment strategies, establishing governance frameworks, and enhancing collaborative capabilities while maintaining strong security standards.
@@ -237,3 +283,9 @@ Implements platforms enabling researchers to securely share and collaborate on s
     - Implements governance frameworks for secure information sharing
     - Leads initiatives to enhance collaboration capabilities while maintaining security
     - Leads task/communication management on collaborative platforms.
+
+
+
+## Technologies/Tools
+
+Basic collaboration platforms, Azure Key Vault awareness, Secure sharing tools, cloud secret management, Collaboration governance frameworks, enterprise sharing platforms.
