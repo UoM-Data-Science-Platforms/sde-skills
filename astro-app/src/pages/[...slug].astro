@@ -1,0 +1,60 @@
+---
+import SkillsFramework from "../components/SkillsFramework.jsx";
+import Sidebar from "../components/Sidebar.jsx";
+import "../styles/theme.css";
+
+export async function getStaticPaths() {
+  const paths = [
+    { params: { slug: undefined } },
+    { params: { slug: 'technology-engineering' } },
+    { params: { slug: 'access-identity' } },
+    { params: { slug: 'data-management' } },
+    { params: { slug: 'governance-compliance' } },
+    { params: { slug: 'outputs-disclosure-control' } },
+    { params: { slug: 'projects-operations' } },
+    { params: { slug: 'skills-index' } },
+  ];
+  return paths;
+}
+
+const { slug } = Astro.params;
+const currentPath = slug || "/";
+
+const domains = [
+  { id: 'technology-engineering', name: 'Safe Technology & Engineering' },
+  { id: 'access-identity', name: 'Safe Access & Identity' },
+  { id: 'data-management', name: 'Safe Data Management' },
+  { id: 'governance-compliance', name: 'Safe Governance & Compliance' },
+  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
+  { id: 'projects-operations', name: 'Safe Projects & Operations' }
+];
+
+const currentDomainId = slug || "/";
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Skills Framework</title>
+    <!-- font preconnects for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Premium Animated Background -->
+    <div class="bg-wrapper">
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+      <div class="bg-orb orb-3"></div>
+      <div class="bg-noise"></div>
+    </div>
+   
+    <div style={{display:'flex', minHeight:'100vh'}}>
+      <Sidebar domains={domains} currentDomain={currentDomainId} client:load />
+      <main class="main-content">
+        <SkillsFramework client:load />
+      </main>
+    </div>
+  </body>
+</html>
