@@ -25,3 +25,7 @@ site/
 /local
 
 .ipynb_checkpoints
+**/node_modules/**
+**/.astro/**
+
+astro-app/data/**
