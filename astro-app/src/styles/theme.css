@@ -291,7 +291,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   padding: var(--space-lg) var(--space-xl);
   background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
-  cursor: default;
+  cursor: pointer;
 }
 
 .sticky-header h1 {
@@ -437,6 +437,9 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   font-weight: 600;
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
+  transition:
+    opacity   var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 /* First subdomain needs no extra top margin */
@@ -468,7 +471,10 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   padding: var(--space-lg) var(--space-xl);
   margin-bottom: var(--space-md);
   box-shadow: var(--shadow-sm);
+  /* All transitions in one declaration — merges Step 5 hover + Step 8 fade-up */
   transition:
+    opacity      var(--transition-slow),
+    transform    var(--transition-slow),
     box-shadow   var(--transition-base),
     border-color var(--transition-base);
 }
@@ -742,14 +748,12 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
    ============================================= */
 
 /* Competency cards and subdomain titles start invisible
-   and fade up when IntersectionObserver adds .is-visible */
+   and fade up when IntersectionObserver adds .is-visible
+   (transition is declared on .competency-card above to avoid duplicate) */
 .competency-card,
 .subdomain-title {
   opacity: 0;
   transform: translateY(10px);
-  transition:
-    opacity   var(--transition-slow),
-    transform var(--transition-slow);
 }
 
 .competency-card.is-visible,
@@ -772,4 +776,75 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
     transform: none;
     transition: none;
   }
+}
+
+/* =============================================
+   STEP 9 — POLISH & REFINEMENT
+   ============================================= */
+
+/* Reset stagger delay on hover so hover feedback is instant */
+.competency-card.is-visible:hover {
+  transition-delay: 0ms;
+}
+
+/* Max readable width on very wide viewports */
+.scroll-area > * {
+  max-width: 960px;
+}
+
+/* Proficiency panel fade-in when rendered */
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.proficiency-panel {
+  animation: panelIn var(--transition-slow) ease both;
+}
+
+/* Proficiency detail fade when switching items */
+@keyframes detailIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.proficiency-detail {
+  animation: detailIn var(--transition-base) ease both;
+}
+
+/* Focus-visible styles — keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Suppress focus ring on mouse click (only show for keyboard) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Subtly highlight the active collapsible section header */
+.collapsible.is-open > .collapsible-summary {
+  color: var(--color-text);
+}
+
+/* Ensure last card in scroll area has bottom breathing room */
+.subdomain-section:last-child {
+  padding-bottom: var(--space-2xl);
+}
+
+/* Sticky header hover — subtle signal it's clickable */
+.sticky-header:hover h1 {
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+
+/* Loading state centred and breathing */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-style: italic;
 }
