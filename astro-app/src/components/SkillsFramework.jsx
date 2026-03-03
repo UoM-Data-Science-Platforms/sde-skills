@@ -1,6 +1,26 @@
 import React from 'react';
 import yaml from 'js-yaml';
 
+function CollapsibleSection({ title, defaultOpen = false, children }) {
+  const [open, setOpen] = React.useState(defaultOpen);
+  return (
+    <div className={`collapsible${open ? ' is-open' : ''}`}>
+      <button
+        className="collapsible-summary"
+        onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
+      >
+        {title}
+      </button>
+      <div className="collapsible-content">
+        <div className="collapsible-inner">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SkillsFramework() {
   const [data, setData] = React.useState(null);
   const [stickySubdomain, setStickySubdomain] = React.useState('');
@@ -259,18 +279,15 @@ export default function SkillsFramework() {
                           {activeProficiency[compNumber] != null ? (
                             <div className="proficiency-detail">
                               <h4>{selectedLevelData.skills[activeProficiency[compNumber]]}</h4>
-                              <details open>
-                                <summary>Technologies</summary>
+                              <CollapsibleSection title="Technologies" defaultOpen={true}>
                                 <p>No technologies listed yet.</p>
-                              </details>
-                              <details>
-                                <summary>Training Materials</summary>
+                              </CollapsibleSection>
+                              <CollapsibleSection title="Training Materials">
                                 <p>No training materials listed yet.</p>
-                              </details>
-                              <details>
-                                <summary>Qualifications</summary>
+                              </CollapsibleSection>
+                              <CollapsibleSection title="Qualifications">
                                 <p>No qualifications listed yet.</p>
-                              </details>
+                              </CollapsibleSection>
                             </div>
                           ) : (
                             <p className="proficiency-placeholder">Select a proficiency to view details</p>
