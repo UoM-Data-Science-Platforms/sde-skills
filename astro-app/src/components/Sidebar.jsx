@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle.jsx";
+
 export default function Sidebar({ domains, currentDomain }) {
   return (
     <aside className="sidebar">
@@ -7,10 +9,7 @@ export default function Sidebar({ domains, currentDomain }) {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <a
-              href="/"
-              className={`nav-link${currentDomain === '/' ? ' active' : ''}`}
-            >
+            <a href="/" className={`nav-link${currentDomain === '/' ? ' active' : ''}`}>
               Skills Index
             </a>
           </li>
@@ -26,6 +25,9 @@ export default function Sidebar({ domains, currentDomain }) {
           ))}
         </ul>
       </nav>
+      <div className="sidebar-footer">
+        <ThemeToggle />
+      </div>
     </aside>
   );
 }
