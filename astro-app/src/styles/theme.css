@@ -646,52 +646,81 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   border-bottom: 1px solid var(--color-border);
 }
 
-/* Collapsible section blocks */
-.proficiency-detail details {
+/* =============================================
+   STEP 7 — COLLAPSIBLE SUBSECTIONS
+   (replaces native <details> with .collapsible)
+   ============================================= */
+
+/* Container */
+.collapsible {
   border-top: 1px solid var(--color-border);
 }
 
-.proficiency-detail details:first-of-type {
+.collapsible:first-child {
   border-top: none;
 }
 
-.proficiency-detail summary {
+/* Header button */
+.collapsible-summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: var(--space-sm) 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
   font-size: var(--text-small);
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;
-  list-style: none;
+  text-align: left;
   user-select: none;
+  transition: color var(--transition-fast);
 }
 
-.proficiency-detail summary::-webkit-details-marker {
-  display: none;
+.collapsible-summary:hover {
+  color: var(--color-accent);
 }
 
-/* Chevron — added via ::after, rotates when open */
-.proficiency-detail summary::after {
+/* Chevron — CSS border trick, rotates on open */
+.collapsible-summary::after {
   content: '';
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-right: 2px solid var(--color-text-muted);
   border-bottom: 2px solid var(--color-text-muted);
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-2px);
   flex-shrink: 0;
-  transition: transform var(--transition-base);
+  transition: transform var(--transition-base), border-color var(--transition-fast);
 }
 
-.proficiency-detail details[open] > summary::after {
-  transform: rotate(-135deg);
+.collapsible.is-open > .collapsible-summary::after {
+  transform: rotate(-135deg) translateY(-2px);
+  border-color: var(--color-accent);
 }
 
-/* Content inside open sections */
-.proficiency-detail details > p,
-.proficiency-detail details > ul {
+/* Grid trick: animates height on both open AND close */
+.collapsible-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-slow);
+}
+
+.collapsible.is-open > .collapsible-content {
+  grid-template-rows: 1fr;
+}
+
+/* Inner wrapper must have overflow:hidden for grid trick to work */
+.collapsible-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Content typography inside sections */
+.collapsible-inner p,
+.collapsible-inner ul {
   font-size: var(--text-small);
   color: var(--color-text-muted);
   line-height: 1.6;
@@ -699,11 +728,11 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   padding: var(--space-2xs) 0 var(--space-sm) var(--space-sm);
 }
 
-.proficiency-detail details > ul {
+.collapsible-inner ul {
   padding-left: var(--space-lg);
 }
 
-.proficiency-detail details > ul li {
+.collapsible-inner ul li {
   list-style: disc;
   margin-bottom: var(--space-2xs);
 }
