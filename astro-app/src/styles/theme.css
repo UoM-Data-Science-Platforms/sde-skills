@@ -124,10 +124,11 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   align-items: stretch;
 }
 
-/* Main content takes all remaining space */
+/* Main content: offset by fixed sidebar on md+ */
 .main-content {
   flex: 1;
-  min-width: 0; /* prevents flex child from overflowing */
+  min-width: 0;
+  margin-left: var(--sidebar-width);
 }
 
 /* =============================================
@@ -155,3 +156,114 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
    lg  ≥ 1024px
    xl  ≥ 1280px
    ============================================= */
+
+/* =============================================
+   STEP 3 — LEFT GLOBAL NAVIGATION
+   ============================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background: var(--color-white);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+/* Brand / logo area */
+.sidebar-brand {
+  padding: var(--space-lg) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.sidebar-brand h2 {
+  font-size: var(--text-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* Nav list */
+.sidebar-nav {
+  flex: 1;
+  padding: var(--space-md) var(--space-sm);
+  overflow-y: auto;
+}
+
+.sidebar-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+/* Nav links */
+.nav-link {
+  display: block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid transparent;
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition:
+    background   var(--transition-fast),
+    color        var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.nav-link.active {
+  border-left-color: var(--color-accent);
+  color: var(--color-text);
+  font-weight: 700;
+  background: rgba(0, 169, 206, 0.06);
+}
+
+/* Footer — theme toggle */
+.sidebar-footer {
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.theme-toggle {
+  width: 100%;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  transition:
+    background var(--transition-fast),
+    color      var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+/* Mobile: collapse sidebar, remove content offset */
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
