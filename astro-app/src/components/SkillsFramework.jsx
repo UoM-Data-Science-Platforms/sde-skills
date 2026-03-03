@@ -32,6 +32,7 @@ export default function SkillsFramework() {
   const scrollAreaRef = React.useRef(null);
   const sectionRefs = React.useRef([]);
   const competencyTabsRef = React.useRef(null);
+  const subdomainTabsRef = React.useRef(null);
   const subdomainRefs = React.useRef({});
   const compRefs = React.useRef({});
 
@@ -105,17 +106,39 @@ export default function SkillsFramework() {
     }
   }, [data]);
 
+  // Scroll active competency tab into view when sync updates
   React.useEffect(() => {
-    if (competencyTabsRef.current) {
-      const activeTab = competencyTabsRef.current.querySelector('.competency-tab.active');
-      if (activeTab) {
-        const container = competencyTabsRef.current;
-        const containerRect = container.getBoundingClientRect();
-        const tabRect = activeTab.getBoundingClientRect();
-        container.scrollBy({ left: tabRect.left - containerRect.left, behavior: 'smooth' });
-      }
-    }
+    competencyTabsRef.current
+      ?.querySelector('.competency-tab.active')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
   }, [stickyCompNumber]);
+
+  // Scroll active subdomain tab into view when sync updates
+  React.useEffect(() => {
+    subdomainTabsRef.current
+      ?.querySelector('.subdomain-tab.active')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+  }, [stickySubNumber]);
+
+  // Fade-up on scroll — observe cards and titles entering the scroll area
+  React.useEffect(() => {
+    const root = scrollAreaRef.current;
+    if (!root) return;
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root, rootMargin: '0px', threshold: 0.05 }
+    );
+    root.querySelectorAll('.competency-card, .subdomain-title')
+      .forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [data]);
 
   const handleScroll = () => {
     if (!sectionRefs.current.length) return;
@@ -172,7 +195,7 @@ export default function SkillsFramework() {
 
       {/* Sticky subdomain / competency nav */}
       <div className="sticky-subnav">
-        <div className="subdomain-tabs">
+        <div className="subdomain-tabs" ref={subdomainTabsRef}>
           {subdomains.map(([subKey, subVal], idx) => {
             const subNumber = `${domainNumber}.${idx + 1}`;
             return (
