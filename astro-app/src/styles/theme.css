@@ -418,3 +418,292 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
     padding: var(--space-md);
   }
 }
+
+/* =============================================
+   STEP 5 — COMPETENCY CONTENT AREA
+   ============================================= */
+
+/* Subdomain section — generous vertical rhythm */
+.subdomain-section {
+  padding-bottom: var(--space-3xl);
+}
+
+/* Subdomain heading */
+.subdomain-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-size: var(--text-subdomain);
+  font-weight: 600;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+/* First subdomain needs no extra top margin */
+.subdomain-section:first-child .subdomain-title {
+  margin-top: 0;
+}
+
+.section-number {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.subdomain-description {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-xl);
+}
+
+/* Competency card */
+.competency-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow   var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.competency-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 169, 206, 0.25);
+}
+
+.competency-card h3 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: var(--text-competency);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.comp-number {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.competency-description {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Experience-level selector --- */
+.level-buttons {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  flex: 1;
+  min-width: 80px;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  transition:
+    background   var(--transition-fast),
+    color        var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow   var(--transition-fast);
+}
+
+.level-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
+}
+
+.level-btn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 169, 206, 0.3);
+}
+
+.level-btn.active:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Mobile: allow buttons to wrap at two per row if needed */
+@media (max-width: 480px) {
+  .level-btn {
+    flex: 1 1 calc(50% - var(--space-xs));
+  }
+}
+
+/* =============================================
+   STEP 6 — TWO-COLUMN PROFICIENCY PANEL
+   ============================================= */
+
+/* Panel container — mobile-first: stacks vertically */
+.proficiency-panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+/* Desktop: side-by-side columns */
+@media (min-width: 768px) {
+  .proficiency-panel {
+    flex-direction: row;
+    min-height: 160px;
+  }
+}
+
+/* --- Left column: proficiency button list --- */
+.proficiency-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .proficiency-list {
+    width: 32%;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+  }
+}
+
+.proficiency-btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  transition:
+    background var(--transition-fast),
+    color      var(--transition-fast);
+}
+
+.proficiency-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.proficiency-btn.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.proficiency-btn.active:hover {
+  background: var(--color-accent-hover);
+}
+
+/* --- Right column: detail display --- */
+.proficiency-display {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-lg);
+}
+
+.proficiency-placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+  font-style: italic;
+}
+
+/* Detail view heading */
+.proficiency-detail h4 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Collapsible section blocks */
+.proficiency-detail details {
+  border-top: 1px solid var(--color-border);
+}
+
+.proficiency-detail details:first-of-type {
+  border-top: none;
+}
+
+.proficiency-detail summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.proficiency-detail summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Chevron — added via ::after, rotates when open */
+.proficiency-detail summary::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+}
+
+.proficiency-detail details[open] > summary::after {
+  transform: rotate(-135deg);
+}
+
+/* Content inside open sections */
+.proficiency-detail details > p,
+.proficiency-detail details > ul {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  padding: var(--space-2xs) 0 var(--space-sm) var(--space-sm);
+}
+
+.proficiency-detail details > ul {
+  padding-left: var(--space-lg);
+}
+
+.proficiency-detail details > ul li {
+  list-style: disc;
+  margin-bottom: var(--space-2xs);
+}
