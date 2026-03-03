@@ -124,11 +124,15 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   align-items: stretch;
 }
 
-/* Main content: offset by fixed sidebar on md+ */
+/* Main content: offset by fixed sidebar, constrained to viewport height */
 .main-content {
   flex: 1;
   min-width: 0;
   margin-left: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* =============================================
@@ -265,5 +269,152 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
   .main-content {
     margin-left: 0;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* =============================================
+   STEP 4 — TOP PAGE-LEVEL NAVIGATION
+   ============================================= */
+
+.skills-framework {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* --- Domain title bar --- */
+.sticky-header {
+  flex-shrink: 0;
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  cursor: default;
+}
+
+.sticky-header h1 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* --- Subdomain + competency tab rows --- */
+.sticky-subnav {
+  flex-shrink: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 var(--space-xl);
+  box-shadow: 0 4px 16px -8px rgba(66, 85, 99, 0.1);
+}
+
+.subdomain-tabs,
+.competency-tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subdomain-tabs::-webkit-scrollbar,
+.competency-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.subdomain-tabs { padding: var(--space-sm) 0 0; }
+.competency-tabs { padding: var(--space-2xs) 0; }
+
+/* Individual tab */
+.tab {
+  flex-shrink: 0;
+  padding: var(--space-xs) var(--space-md);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color        var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.tab:hover {
+  color: var(--color-text);
+  border-bottom-color: rgba(0, 169, 206, 0.35);
+}
+
+.subdomain-tab {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-bottom: var(--space-sm);
+}
+
+.subdomain-tab.active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+.competency-tab {
+  font-size: 0.8rem;
+}
+
+.competency-tab.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* --- Scrollable content area --- */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xl);
+}
+
+.scroll-area::-webkit-scrollbar       { width: 4px; }
+.scroll-area::-webkit-scrollbar-track { background: transparent; }
+.scroll-area::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+}
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Loading state */
+.loading {
+  padding: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+}
+
+/* Mobile: page scrolls, nav bars become sticky */
+@media (max-width: 767px) {
+  .skills-framework {
+    height: auto;
+    overflow: visible;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--space-md);
+  }
+
+  .sticky-subnav {
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+    padding: 0 var(--space-md);
+  }
+
+  .scroll-area {
+    overflow: visible;
+    padding: var(--space-md);
   }
 }
