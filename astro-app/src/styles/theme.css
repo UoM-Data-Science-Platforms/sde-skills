@@ -736,3 +736,40 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   list-style: disc;
   margin-bottom: var(--space-2xs);
 }
+
+/* =============================================
+   STEP 8 — MOTION & SCROLL-SYNC
+   ============================================= */
+
+/* Competency cards and subdomain titles start invisible
+   and fade up when IntersectionObserver adds .is-visible */
+.competency-card,
+.subdomain-title {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity   var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.competency-card.is-visible,
+.subdomain-title.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger cards within a section for a subtle cascade */
+.competency-card:nth-child(2) { transition-delay: 40ms;  }
+.competency-card:nth-child(3) { transition-delay: 80ms;  }
+.competency-card:nth-child(4) { transition-delay: 120ms; }
+.competency-card:nth-child(5) { transition-delay: 160ms; }
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .competency-card,
+  .subdomain-title {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
