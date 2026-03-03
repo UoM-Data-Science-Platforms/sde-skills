@@ -12,6 +12,7 @@ export default function SkillsFramework() {
   const [activeProficiency, setActiveProficiency] = React.useState({});
   const scrollAreaRef = React.useRef(null);
   const sectionRefs = React.useRef([]);
+  const competencyTabsRef = React.useRef(null);
   const levelMap = { entry: 'E', mid: 'M', senior: 'S' };
   const levelLabels = { entry: 'Entry', mid: 'Mid', senior: 'Senior' };
   // refs for subdomain and competency headings to support click-to-scroll
@@ -83,8 +84,9 @@ export default function SkillsFramework() {
   React.useEffect(() => {
     if (!data) return;
     const firstSub = Object.entries(data.domain.subdomains)[0];
+    const domainNumber = data.domain.index;
     const firstSubName = firstSub?.[1]?.name || '';
-    const firstSubNumber = '1.1';
+    const firstSubNumber = `${domainNumber}.1`;
 
     setStickySubdomain(firstSubName);
     setStickySubNumber(firstSubNumber);
@@ -92,12 +94,25 @@ export default function SkillsFramework() {
     const firstComp = Object.entries(firstSub?.[1]?.competencies || {})[0];
     if (firstComp) {
       setStickyCompetency(firstComp[1]?.name || firstComp[1]?.id || '');
-      setStickyCompNumber('1.1.1');
+      setStickyCompNumber(`${domainNumber}.1.1`);
     } else {
       setStickyCompetency('');
       setStickyCompNumber('');
     }
   }, [data]);
+
+  React.useEffect(() => {
+    if (competencyTabsRef.current) {
+      const activeTab = competencyTabsRef.current.querySelector('.competency-tab.active');
+      if (activeTab) {
+        const container = competencyTabsRef.current;
+        const containerRect = container.getBoundingClientRect();
+        const tabRect = activeTab.getBoundingClientRect();
+        const offset = tabRect.left - containerRect.left;
+        container.scrollBy({ left: offset, behavior: 'smooth' });
+      }
+    }
+  }, [stickyCompNumber]);
 
   const handleScroll = () => {
     if (!sectionRefs.current.length) return;
@@ -137,7 +152,7 @@ export default function SkillsFramework() {
     if (foundCompNumber) setStickyCompNumber(foundCompNumber);
   };
 
-  const domainNumber = '1.0';
+  const domainNumber = data ? data.domain.index : '';
   const subdomains = data ? Object.entries(data.domain.subdomains || {}) : [];
 
   // Build refs for each competency section: must call hook unconditionally
@@ -167,7 +182,7 @@ export default function SkillsFramework() {
       <div className="sticky-subheader-nav">
         <div className="subdomain-tabs">
           {subdomains.map(([subKey, subVal], idx) => {
-            const subNumber = `1.${idx + 1}`;
+            const subNumber = `${domainNumber}.${idx + 1}`;
             const isActive = stickySubNumber === subNumber;
             return (
               <div
@@ -180,9 +195,9 @@ export default function SkillsFramework() {
             );
           })}
         </div>
-        <div className="competency-tabs">
-          {subdomains.find(([_, subVal], idx) => `1.${idx + 1}` === stickySubNumber)?.[1].competencies &&
-            Object.entries(subdomains.find(([_, subVal], idx) => `1.${idx + 1}` === stickySubNumber)[1].competencies).map(([compKey, compVal], idx) => {
+        <div className="competency-tabs" ref={competencyTabsRef}>
+          {subdomains.find(([_, subVal], idx) => `${domainNumber}.${idx + 1}` === stickySubNumber)?.[1].competencies &&
+            Object.entries(subdomains.find(([_, subVal], idx) => `${domainNumber}.${idx + 1}` === stickySubNumber)[1].competencies).map(([compKey, compVal], idx) => {
               const compNumber = `${stickySubNumber}.${idx + 1}`;
               const isActive = stickyCompNumber === compNumber;
               return (
@@ -209,16 +224,17 @@ export default function SkillsFramework() {
           return (
             <div key={subKey} className="subdomain-section">
               <h2
-                ref={el => { if (el) subdomainRefs.current[`1.${subIdx + 1}`] = el; }}
+                ref={el => { if (el) subdomainRefs.current[`${domainNumber}.${subIdx + 1}`] = el; }}
                 className="section-title fade-in"
               >
-                {`1.${subIdx + 1}`} {subVal.name}
+                <span className="section-number">{`${domainNumber}.${subIdx + 1}`}</span>
+                {subVal.name}
               </h2>
               {subVal.description && (
-                <div style={{ fontStyle: 'italic', padding: '0.5rem 0' }}>{subVal.description}</div>
+                <div className="subdomain-description">{subVal.description}</div>
               )}
               {competencies.map(([compKey, compVal], compIdx) => {
-                const compNumber = `1.${subIdx + 1}.${compIdx + 1}`;
+                const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;
                 const idx = refIdx++;
                 const levels = Object.entries(compVal.levels || {});
                 const selectedLevel = activeLevel[compNumber] || null;
@@ -231,12 +247,12 @@ export default function SkillsFramework() {
                       if (el) compRefs.current[compNumber] = el;
                     }}
                     data-subdomain={subVal.name}
-                    data-subnumber={`1.${subIdx + 1}`}
+                    data-subnumber={`${domainNumber}.${subIdx + 1}`}
                     data-competency={compVal.name || compVal.id}
                     data-compnumber={compNumber}
                     className="competency fade-in"
                   >
-                    <h3>{compNumber} {compVal.name || compVal.id}</h3>
+                    <h3><span className="comp-number">{compNumber}</span>{compVal.name || compVal.id}</h3>
                     <div>{compVal.description}</div>
                     {/* Level toggle buttons */}
                     <div className="level-buttons">

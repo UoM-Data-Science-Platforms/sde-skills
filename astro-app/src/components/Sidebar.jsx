@@ -9,7 +9,9 @@ export default function Sidebar({ domains, currentDomain, onSelectDomain }) {
       background: 'var(--sidebar-bg)',
       color: 'var(--sidebar-fg)',
       padding: '2rem 1rem',
-      boxShadow: '2px 0 8px rgba(0,0,0,0.04)',
+      backdropFilter: 'blur(20px)',
+      WebkitBackdropFilter: 'blur(20px)',
+      borderRight: '1px solid rgba(59, 130, 246, 0.07)',
       position: 'fixed',
       left: 0,
       top: 0,
@@ -17,7 +19,7 @@ export default function Sidebar({ domains, currentDomain, onSelectDomain }) {
       display: 'flex',
       flexDirection: 'column'
     }}>
-      <h2 style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: '2rem' }}>Skills Framework</h2>
+      <h2 style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '2rem', letterSpacing: '0.06em', textTransform: 'uppercase', opacity: 0.5 }}>Skills Framework</h2>
       <nav>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
           <li key="home">
