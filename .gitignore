@@ -29,3 +29,4 @@ site/
 **/.astro/**
 
 astro-app/data/**
+astro-app/dist/**
