@@ -1,9 +1,12 @@
 import React from "react";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = React.useState(() =>
-    localStorage.getItem('theme') === 'dark'
-  );
+  const [dark, setDark] = React.useState(false);
+
+  React.useEffect(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') setDark(true);
+  }, []);
 
   React.useEffect(() => {
     document.body.dataset.theme = dark ? 'dark' : 'light';
