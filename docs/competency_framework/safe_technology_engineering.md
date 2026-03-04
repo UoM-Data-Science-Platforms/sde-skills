@@ -1,7 +1,7 @@
 <!-- meta
 {
     index: 6
-    main-color: "color-deep-purple"
+    main-color: "color-purple"
 }
 /meta-->
 # Safe Technology & Engineering
