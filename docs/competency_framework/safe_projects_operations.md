@@ -1,9 +1,9 @@
-<!--
+<!-- meta
 {
     index: 5
     main-color: "color-deep-blue"
 }
--->
+/meta-->
 # Safe Projects & Operations
 
 This domain covers the management of secure data environment projects, operational excellence, and the delivery of services to research communities.

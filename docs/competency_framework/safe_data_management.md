@@ -1,9 +1,9 @@
-<!--
+<!-- meta
 {
     index: 2
     main-color: "color-deep-blue"
 }
--->
+/meta-->
 
 # Safe Data Management
 

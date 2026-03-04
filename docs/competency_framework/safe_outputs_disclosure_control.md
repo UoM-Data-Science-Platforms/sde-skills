@@ -1,9 +1,9 @@
-<!--
+<!-- meta
 {
     index: 4
     main-color: "color-nhs-blue"
 }
--->
+/meta-->
 
 # Safe Outputs & Disclosure Control
 
