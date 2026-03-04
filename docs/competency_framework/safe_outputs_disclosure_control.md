@@ -1,3 +1,10 @@
+<!--
+{
+    index: 4
+    main-color: "color-nhs-blue"
+}
+-->
+
 # Safe Outputs & Disclosure Control
 
 This domain covers the technical controls that help to protect projects from accidental or intentional disclosure, as well as providing tooling to support disclosure review operations of project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.

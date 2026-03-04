@@ -1,3 +1,10 @@
+<!--
+{
+    index: 3
+    main-color: "color-deep-purple"
+}
+-->
+
 # Safe Governance & Compliance
 
 This domain covers the regulatory, ethical, and compliance aspects of operating Secure Data Environments, ensuring systems meet legal requirements and maintain appropriate controls.
