@@ -1,9 +1,9 @@
-<!--
+<!-- meta
 {
     index: 3
     main-color: "color-deep-purple"
 }
--->
+/meta-->
 
 # Safe Governance & Compliance
 
