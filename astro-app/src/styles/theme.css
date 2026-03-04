@@ -6,19 +6,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* --- Design tokens --- */
+
 :root {
-  /* Colour palette */
   --color-bg:         #F7F9FB;
   --color-text:       #425563;
   --color-text-muted: #768692;
+  --color-heading:    #1E1E1E;
   --color-surface:    #E8EDEE;
-  --color-border:     #D4DCE0;
+  --color-border:     #000000;
   --color-accent:     #00A9CE;
   --color-accent-hover: #0092B3;
   --color-purple:     #660099;
   --color-deep-blue:  #222B56;
   --color-nhs-blue:   #005EB8;
   --color-white:      #ffffff;
+  --color-mix-base:   white;
+  --color-bg-sticky-header:  #ffffff3b;
+  --color-bg-sidebar: var(--color-bg-sticky-header);
+  --color-competency-card-bg: #ffffff3b;
+  --color-domain: var(--color-domain-base);
+  
+  --1bg-gradient: radial-gradient(circle at 20% 50%, #F4E8FF, #EAD8FF, #E2D2FF, #DAD7FF, #D3E0FF, #CFE6FF, #D7EEFF, #E3F5FF, #E6F2FF, #EAF6FF, #E7F8FF, #E6FBFF);
+  --bg-gradient: radial-gradient(circle at 20% 50%, #F4E8FF, #CFE6FF, #E6FBFF);
 
   /* Typography */
   --font-heading: 'Poppins', system-ui, sans-serif;
@@ -78,7 +87,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
+  background: var(--bg-gradient);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
@@ -171,7 +180,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   left: 0;
   height: 100vh;
   width: var(--sidebar-width);
-  background: var(--color-white);
+  background: var(--color-bg-sidebar);
   border-right: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
@@ -223,15 +232,15 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .nav-link:hover {
-  background: var(--color-surface);
-  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-item, var(--color-accent)) 12%, var(--color-mix-base));
+  color: var(--color-item, var(--color-accent));
 }
 
 .nav-link.active {
-  border-left-color: var(--color-accent);
-  color: var(--color-text);
+  border-left-color: var(--color-item, var(--color-accent));
+  color: var(--color-item, var(--color-accent));
   font-weight: 700;
-  background: rgba(0, 169, 206, 0.06);
+  background: color-mix(in srgb, var(--color-item, var(--color-accent)) 10%, var(--color-mix-base));
 }
 
 /* Footer — theme toggle */
@@ -285,11 +294,18 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   overflow: hidden;
 }
 
+.skills-framework h1,
+.skills-framework h2,
+.skills-framework h3,
+.skills-framework h4 {
+  color: var(--color-domain, var(--color-heading));
+}
+
 /* --- Domain title bar --- */
 .sticky-header {
   flex-shrink: 0;
   padding: var(--space-lg) var(--space-xl);
-  background: var(--color-bg);
+  background: var(--color-bg-sticky-header);
   border-bottom: 1px solid var(--color-border);
   cursor: pointer;
 }
@@ -303,7 +319,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 /* --- Subdomain + competency tab rows --- */
 .sticky-subnav {
   flex-shrink: 0;
-  background: var(--color-bg);
+  background: var(--color-bg-sticky-header);
   border-bottom: 1px solid var(--color-border);
   padding: 0 var(--space-xl);
   box-shadow: 0 4px 16px -8px rgba(66, 85, 99, 0.1);
@@ -355,8 +371,8 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .subdomain-tab.active {
-  color: var(--color-text);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-domain, var(--color-accent));
+  border-bottom-color: var(--color-domain, var(--color-accent));
 }
 
 .competency-tab {
@@ -364,8 +380,8 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .competency-tab.active {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-domain, var(--color-accent));
+  border-bottom-color: var(--color-domain, var(--color-accent));
 }
 
 /* --- Scrollable content area --- */
@@ -373,6 +389,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex: 1;
   overflow-y: auto;
   padding: var(--space-xl);
+  scroll-snap-type: y proximity;
 }
 
 .scroll-area::-webkit-scrollbar       { width: 4px; }
@@ -430,6 +447,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 /* Subdomain heading */
 .subdomain-title {
+  scroll-snap-align: start;
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
@@ -465,7 +483,8 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 /* Competency card */
 .competency-card {
-  background: var(--color-white);
+  scroll-snap-align: start;
+  background: var(--color-competency-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-lg) var(--space-xl);
@@ -533,22 +552,29 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .level-btn:hover {
-  background: var(--color-border);
-  color: var(--color-text);
-  border-color: var(--color-text-muted);
+  background: color-mix(in srgb, var(--color-domain, var(--color-accent)) 12%, var(--color-mix-base));
+  color: var(--color-domain, var(--color-accent));
+  border-color: var(--color-domain, var(--color-accent));
 }
 
 .level-btn.active {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
+  background: var(--color-domain, var(--color-accent));
+  border-color: var(--color-domain, var(--color-accent));
   color: var(--color-white);
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 169, 206, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+body[data-theme="dark"] .level-btn.active {
+  
+  background: var(--color-surface);
+  color: var(--color-domain);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--color-domain);
 }
 
 .level-btn.active:hover {
-  background: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
+  filter: brightness(0.88);
 }
 
 /* Mobile: allow buttons to wrap at two per row if needed */
@@ -616,18 +642,28 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .proficiency-btn:hover {
-  background: var(--color-border);
-  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-domain, var(--color-accent)) 12%, var(--color-mix-base));
+  color: var(--color-domain, var(--color-accent));
 }
 
 .proficiency-btn.active {
-  background: var(--color-accent);
+  background: var(--color-domain, var(--color-accent));
   color: var(--color-white);
+  font-weight: 500;
+  border: 1px solid var(--color-domain, var(--color-accent));
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+body[data-theme="dark"] .proficiency-btn.active {  
+  background: var(--color-surface);
+  color: var(--color-domain);
   font-weight: 500;
 }
 
 .proficiency-btn.active:hover {
-  background: var(--color-accent-hover);
+  filter: brightness(0.88);
 }
 
 /* --- Right column: detail display --- */
@@ -686,7 +722,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .collapsible-summary:hover {
-  color: var(--color-accent);
+  color: var(--color-domain, var(--color-accent));
 }
 
 /* Chevron — CSS border trick, rotates on open */
@@ -704,7 +740,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 .collapsible.is-open > .collapsible-summary::after {
   transform: rotate(-135deg) translateY(-2px);
-  border-color: var(--color-accent);
+  border-color: var(--color-domain, var(--color-accent));
 }
 
 /* Grid trick: animates height on both open AND close */
@@ -824,9 +860,9 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   outline: none;
 }
 
-/* Subtly highlight the active collapsible section header */
+/* Highlight the active collapsible section header */
 .collapsible.is-open > .collapsible-summary {
-  color: var(--color-text);
+  color: var(--color-domain, var(--color-accent));
 }
 
 /* Ensure last card in scroll area has bottom breathing room */
@@ -848,3 +884,37 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   height: 100%;
   font-style: italic;
 }
+
+/* =============================================
+   DARK MODE
+   ============================================= */
+
+
+body[data-theme="dark"] {
+
+    --color-bg:         #0D1117;
+    --color-white:      #161B22;
+    --color-surface:    #21262D;
+    --color-border:     #30363D;
+    --color-text:       #C9D1D9;
+    --color-text-muted: #8B949E;
+    --color-heading:    #F0F6FC;
+    --color-mix-base:   #161b22a3;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.4);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
+
+    /* Fluorescent domain colors for dark mode */
+    --color-purple:    #e9bcff;
+    --color-deep-blue: #a0bcff;
+    --color-nhs-blue:  #afeaff;
+
+    --color-domain: color-mix(in srgb, white 100%, var(--color-domain-base) 100%);
+    
+    --bg-gradient: radial-gradient(ellipse 80% 60% at 30% 20%, #3c005a, transparent 50%), 
+               radial-gradient(ellipse 70% 50% at 80% 70%, #151b36, transparent 60%), 
+               radial-gradient(ellipse 60% 80% at 10% 80%, #003262, transparent 40%),
+               linear-gradient(135deg, #E6F2FF, #EAF6FF, #E7F8FF, #E6FBFF);--bg-gradient: radial-gradient(circle at 20% 50%, #660099, #222B56, #005EB8);
+
+
+}
+

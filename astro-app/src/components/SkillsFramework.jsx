@@ -30,11 +30,18 @@ export default function SkillsFramework() {
   const [activeLevel, setActiveLevel] = React.useState({});
   const [activeProficiency, setActiveProficiency] = React.useState({});
   const scrollAreaRef = React.useRef(null);
+  const frameworkRef = React.useRef(null);
   const sectionRefs = React.useRef([]);
   const competencyTabsRef = React.useRef(null);
   const subdomainTabsRef = React.useRef(null);
   const subdomainRefs = React.useRef({});
   const compRefs = React.useRef({});
+
+  const DOMAIN_COLOR_VARS = {
+    'color-purple':    '--color-purple',
+    'color-deep-blue': '--color-deep-blue',
+    'color-nhs-blue':  '--color-nhs-blue',
+  };
 
   const levelLabels = { entry: 'Entry', mid: 'Mid', senior: 'Senior' };
 
@@ -120,6 +127,22 @@ export default function SkillsFramework() {
       ?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
   }, [stickySubNumber]);
 
+  // Pad the bottom so the last card can scroll to the threshold but no further
+  React.useEffect(() => {
+    const el = scrollAreaRef.current;
+    if (!el) return;
+    const update = () => {
+      const cards = el.querySelectorAll('.competency-card');
+      const lastCard = cards[cards.length - 1];
+      const lastCardHeight = lastCard ? lastCard.offsetHeight : 0;
+      el.style.paddingBottom = `${Math.max(0, el.clientHeight - lastCardHeight)}px`;
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [data]);
+
   // Fade-up on scroll — observe cards and titles entering the scroll area
   React.useEffect(() => {
     const root = scrollAreaRef.current;
@@ -141,8 +164,12 @@ export default function SkillsFramework() {
   }, [data]);
 
   const handleScroll = () => {
-    if (!sectionRefs.current.length) return;
-    const scrollTop = scrollAreaRef.current.scrollTop;
+    if (!sectionRefs.current.length || !scrollAreaRef.current) return;
+
+    // The top of the scroll area in viewport coords = bottom of the sticky header.
+    // An element triggers when its top edge crosses this boundary.
+    const threshold = scrollAreaRef.current.getBoundingClientRect().top;
+
     let foundSubdomain = '';
     let foundSubNumber = '';
     let foundCompetency = '';
@@ -150,7 +177,7 @@ export default function SkillsFramework() {
 
     for (let subNumber in subdomainRefs.current) {
       const ref = subdomainRefs.current[subNumber];
-      if (ref && scrollTop >= ref.offsetTop - 100) {
+      if (ref && ref.getBoundingClientRect().top <= threshold) {
         foundSubNumber = subNumber;
         foundSubdomain = ref.textContent.replace(subNumber, '').trim();
       }
@@ -158,7 +185,7 @@ export default function SkillsFramework() {
 
     for (let i = 0; i < sectionRefs.current.length; i++) {
       const ref = sectionRefs.current[i];
-      if (ref && scrollTop >= ref.offsetTop - 20) {
+      if (ref && ref.getBoundingClientRect().top <= threshold) {
         foundCompetency = ref.dataset.competency;
         foundCompNumber = ref.dataset.compNumber;
       }
@@ -180,6 +207,12 @@ export default function SkillsFramework() {
     });
   }, [data]);
 
+  React.useEffect(() => {
+    if (!data) return;
+    const varName = DOMAIN_COLOR_VARS[data.domain['main-color']];
+    if (varName) document.documentElement.style.setProperty('--color-domain-base', `var(${varName})`);
+  }, [data]);
+
   if (!data) return <div className="loading">Loading…</div>;
 
   const domainNumber = data.domain.index;
@@ -187,7 +220,7 @@ export default function SkillsFramework() {
   let refIdx = 0;
 
   return (
-    <div className="skills-framework">
+    <div className="skills-framework" ref={frameworkRef}>
       {/* Sticky domain header */}
       <div className="sticky-header" onClick={handleDomainClick}>
         <h1>{domainNumber} {data.domain.name}</h1>
