@@ -1,0 +1,79 @@
+name: Deploy Astro App
+
+on:
+  push:
+    branches:
+      - feature/layout
+    paths:
+      - 'astro-app/**'
+      - 'scripts/markdown_to_yaml.py'
+      - 'docs/competency_framework/**'
+      - '.github/workflows/deploy-astro.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --locked --all-extras --dev
+
+      - name: Generate YAML from markdown
+        run: |
+          uv run python3 -c "
+          import sys, os
+          sys.path.insert(0, 'scripts')
+          from markdown_to_yaml import convert_file_to_yaml
+          input_dir = 'docs/competency_framework'
+          output_dir = 'astro-app/data'
+          os.makedirs(output_dir, exist_ok=True)
+          for f in sorted(os.listdir(input_dir)):
+              if f.endswith('.md'):
+                  convert_file_to_yaml(os.path.join(input_dir, f), output_dir)
+          print('YAML generation complete')
+          "
+
+      - name: Set Astro deploy config
+        run: |
+          cat > astro-app/astro.config.mjs <<'EOF'
+          import { defineConfig } from 'astro/config';
+          import react from '@astrojs/react';
+          export default defineConfig({
+            integrations: [react()],
+            site: 'https://uom-data-science-platforms.github.io',
+            base: '/sde-skills/demo',
+          });
+          EOF
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: astro-app/package-lock.json
+
+      - name: Install Node dependencies
+        run: npm ci
+        working-directory: astro-app
+
+      - name: Build Astro app
+        run: npm run build
+        working-directory: astro-app
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: astro-app/dist
+          destination_dir: demo
