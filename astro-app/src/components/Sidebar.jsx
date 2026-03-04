@@ -18,7 +18,7 @@ export default function Sidebar({ domains, currentDomain }) {
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
-                href={`${base}${domain.id}`}
+                href={`${base}${domain.id}/`}
                 className={`nav-link${currentDomain === domain.id ? ' active' : ''}`}
                 style={domain.color ? { '--color-item': domain.color } : undefined}
               >
