@@ -3,10 +3,6 @@ import React from "react";
 export default function ThemeToggle() {
   const [dark, setDark] = React.useState(false);
 
-  React.useEffect(() => {
-    const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-    setDark(prefersDark);
-  }, []);
 
   React.useEffect(() => {
     document.body.dataset.theme = dark ? 'dark' : 'light';
@@ -18,7 +14,7 @@ export default function ThemeToggle() {
       onClick={() => setDark(d => !d)}
       aria-label="Toggle dark mode"
     >
-      {dark ? 'Dark mode' : 'Light mode'}
+      {dark ? 'Light mode' : 'Dark mode'}
     </button>
   );
 }

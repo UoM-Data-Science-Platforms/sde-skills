@@ -21,12 +21,12 @@ const { slug } = Astro.params;
 const currentPath = slug || "/";
 
 const domains = [
-  { id: 'technology-engineering', name: 'Safe Technology & Engineering' },
-  { id: 'access-identity', name: 'Safe Access & Identity' },
-  { id: 'data-management', name: 'Safe Data Management' },
-  { id: 'governance-compliance', name: 'Safe Governance & Compliance' },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations', name: 'Safe Projects & Operations' }
+  { id: 'access-identity',           name: 'Safe Access & Identity',           color: 'var(--color-nhs-blue)'  },
+  { id: 'data-management',           name: 'Safe Data Management',             color: 'var(--color-deep-blue)' },
+  { id: 'governance-compliance',     name: 'Safe Governance & Compliance',     color: 'var(--color-purple)'    },
+  { id: 'outputs-disclosure-control',name: 'Safe Outputs & Disclosure Control',color: 'var(--color-nhs-blue)'  },
+  { id: 'projects-operations',       name: 'Safe Projects & Operations',       color: 'var(--color-deep-blue)' },
+  { id: 'technology-engineering',    name: 'Safe Technology & Engineering',    color: 'var(--color-purple)'    },
 ];
 
 const currentDomainId = slug || "/";

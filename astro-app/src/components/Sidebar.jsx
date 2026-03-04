@@ -18,6 +18,7 @@ export default function Sidebar({ domains, currentDomain }) {
               <a
                 href={`/${domain.id}`}
                 className={`nav-link${currentDomain === domain.id ? ' active' : ''}`}
+                style={domain.color ? { '--color-item': domain.color } : undefined}
               >
                 {domain.name}
               </a>
