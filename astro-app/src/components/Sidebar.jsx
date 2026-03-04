@@ -1,6 +1,6 @@
 import ThemeToggle from "./ThemeToggle.jsx";
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 export default function Sidebar({ domains, currentDomain }) {
   return (
