@@ -1,5 +1,7 @@
 import ThemeToggle from "./ThemeToggle.jsx";
 
+const base = import.meta.env.BASE_URL;
+
 export default function Sidebar({ domains, currentDomain }) {
   return (
     <aside className="sidebar">
@@ -9,14 +11,14 @@ export default function Sidebar({ domains, currentDomain }) {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <a href="/" className={`nav-link${currentDomain === '/' ? ' active' : ''}`}>
+            <a href={base} className={`nav-link${currentDomain === '/' ? ' active' : ''}`}>
               Skills Index
             </a>
           </li>
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
-                href={`/${domain.id}`}
+                href={`${base}${domain.id}`}
                 className={`nav-link${currentDomain === domain.id ? ' active' : ''}`}
                 style={domain.color ? { '--color-item': domain.color } : undefined}
               >
