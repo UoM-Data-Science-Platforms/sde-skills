@@ -69,16 +69,22 @@ export default function SkillsFramework() {
     if (scrollAreaRef.current) scrollAreaRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
   const getYamlFilename = () => {
-    if (typeof window === 'undefined') return '/data/skills_index.yaml';
-    const path = window.location.pathname.replace(/\/$/, '');
-    if (!path || path === '/' || path === '/skills-index') return '/data/skills_index.yaml';
-    const name = path.slice(1).replace(/-/g, '_');
-    return `/data/safe_${name}.yaml`;
+    const dataBase = `${base}data/`;
+    if (typeof window === 'undefined') return `${dataBase}skills_index.yaml`;
+    const basePath = base.replace(/\/$/, '');
+    const fullPath = window.location.pathname.replace(/\/$/, '');
+    const slug = fullPath.startsWith(basePath) ? fullPath.slice(basePath.length).replace(/^\//, '') : fullPath.slice(1);
+    if (!slug || slug === 'skills-index') return `${dataBase}skills_index.yaml`;
+    const name = slug.replace(/-/g, '_');
+    return `${dataBase}safe_${name}.yaml`;
   };
 
   React.useEffect(() => {
     const filename = getYamlFilename();
+    const indexFile = `${base}data/skills_index.yaml`;
     fetch(filename)
       .then(res => {
         if (!res.ok) throw new Error(`Could not load ${filename}`);
@@ -87,8 +93,8 @@ export default function SkillsFramework() {
       .then(text => setData(yaml.load(text)))
       .catch(err => {
         console.error(err);
-        if (filename !== '/data/skills_index.yaml') {
-          fetch('/data/skills_index.yaml')
+        if (filename !== indexFile) {
+          fetch(indexFile)
             .then(res => res.text())
             .then(text => setData(yaml.load(text)));
         }
