@@ -1,3 +1,10 @@
+<!--
+{
+    index: 2
+    main-color: "color-deep-blue"
+}
+-->
+
 # Safe Data Management
 
 This domain covers all aspects of data handling, processing, governance, and engineering within Secure Data Environments, focusing on ensuring data is managed securely and effectively throughout its lifecycle.

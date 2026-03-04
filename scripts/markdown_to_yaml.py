@@ -150,6 +150,14 @@ def parse_subdomain_section(content: str, subdomain_title: str) -> Dict[str, Any
     }
 
 
+def extract_meta(content: str) -> Dict[str, Any]:
+    """Extract key/value pairs from <!-- meta {...} /meta--> blocks."""
+    match = re.search(r"<!--\s*meta\s*\{(.*?)\}\s*/meta-->", content, re.DOTALL)
+    if not match:
+        return {}
+    return yaml.safe_load(match.group(1)) or {}
+
+
 def parse_markdown_file(file_path: str) -> Dict[str, Any]:
     """Parse a competency framework markdown file."""
     with open(file_path, "r", encoding="utf-8") as f:
@@ -177,8 +185,10 @@ def parse_markdown_file(file_path: str) -> Dict[str, Any]:
         subdomain_data = parse_subdomain_section(content, subdomain_title)
         subdomains[subdomain_data["id"]] = subdomain_data
 
+    meta = extract_meta(content)
     return {
         "domain": {
+            **meta,
             "id": domain_id,
             "name": domain_title,
             "description": domain_description,

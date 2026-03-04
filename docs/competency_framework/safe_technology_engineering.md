@@ -1,3 +1,9 @@
+<!-- meta
+{
+    index: 6
+    main-color: "color-deep-purple"
+}
+/meta-->
 # Safe Technology & Engineering
 
 This domain covers the technical implementation and maintenance of secure systems, focusing on the infrastructure, development, and engineering aspects of Secure Data Environments.
