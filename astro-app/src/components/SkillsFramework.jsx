@@ -36,6 +36,7 @@ export default function SkillsFramework() {
   const subdomainTabsRef = React.useRef(null);
   const subdomainRefs = React.useRef({});
   const compRefs = React.useRef({});
+  const snappingRef = React.useRef(false);
 
   const DOMAIN_COLOR_VARS = {
     'color-purple':    '--color-purple',
@@ -62,7 +63,11 @@ export default function SkillsFramework() {
 
   const scrollToElement = (el) => {
     if (!el || !scrollAreaRef.current) return;
-    scrollAreaRef.current.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
+    const containerTop = scrollAreaRef.current.getBoundingClientRect().top;
+    const target = Math.max(0, el.getBoundingClientRect().top - containerTop + scrollAreaRef.current.scrollTop - 22);
+    snappingRef.current = true;
+    scrollAreaRef.current.scrollTo({ top: target, behavior: 'smooth' });
+    setTimeout(() => { snappingRef.current = false; }, 600);
   };
 
   const handleDomainClick = () => {
@@ -133,6 +138,47 @@ export default function SkillsFramework() {
       ?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
   }, [stickySubNumber]);
 
+  // JS scroll snapping — one stop at a time in scroll direction
+  React.useEffect(() => {
+    const el = scrollAreaRef.current;
+    if (!el) return;
+    const OFFSET = 22;
+    let timer;
+    let lastScrollTop = el.scrollTop;
+    let direction = 1;
+    const snap = () => {
+      const stops = [...el.querySelectorAll('[data-scroll-stop]')];
+      if (!stops.length) return;
+      const containerTop = el.getBoundingClientRect().top;
+      const scrollTop = el.scrollTop;
+      const positions = stops.map(s =>
+        Math.max(0, s.getBoundingClientRect().top - containerTop + scrollTop - OFFSET)
+      );
+      let target;
+      if (direction > 0) {
+        target = positions.find(p => p > scrollTop + 2);
+      } else {
+        target = [...positions].reverse().find(p => p < scrollTop - 2);
+      }
+      if (target != null) {
+        snappingRef.current = true;
+        el.scrollTo({ top: target, behavior: 'smooth' });
+        setTimeout(() => { snappingRef.current = false; lastScrollTop = el.scrollTop; }, 600);
+      }
+    };
+
+    const onScroll = () => {
+      if (snappingRef.current) return;
+      direction = el.scrollTop > lastScrollTop ? 1 : -1;
+      lastScrollTop = el.scrollTop;
+      clearTimeout(timer);
+      timer = setTimeout(snap, 100);
+    };
+
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => { el.removeEventListener('scroll', onScroll); clearTimeout(timer); };
+  }, [data]);
+
   // Pad the bottom so the last card can scroll to the threshold but no further
   React.useEffect(() => {
     const el = scrollAreaRef.current;
@@ -174,7 +220,7 @@ export default function SkillsFramework() {
 
     // The top of the scroll area in viewport coords = bottom of the sticky header.
     // An element triggers when its top edge crosses this boundary.
-    const threshold = scrollAreaRef.current.getBoundingClientRect().top;
+    const threshold = scrollAreaRef.current.getBoundingClientRect().top + 23;
 
     let foundSubdomain = '';
     let foundSubNumber = '';
@@ -278,6 +324,7 @@ export default function SkillsFramework() {
               <h2
                 ref={el => { if (el) subdomainRefs.current[`${domainNumber}.${subIdx + 1}`] = el; }}
                 className="subdomain-title"
+                data-scroll-stop
               >
                 <span className="section-number">{domainNumber}.{subIdx + 1}</span>
                 {subVal.name}
@@ -303,6 +350,7 @@ export default function SkillsFramework() {
                     data-competency={compVal.name || compVal.id}
                     data-comp-number={compNumber}
                     className="competency-card"
+                    data-scroll-stop
                   >
                     <h3>
                       <span className="comp-number">{compNumber}</span>
