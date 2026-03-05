@@ -6,15 +6,12 @@ export default function Sidebar({ domains, currentDomain }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <h2>Skills Framework</h2>
+        <h2>RTP</h2>
+        <h2>Competency Framework</h2>
       </div>
       <nav className="sidebar-nav">
         <ul>
-          <li>
-            <a href={base} className={`nav-link${currentDomain === '/' ? ' active' : ''}`}>
-              Skills Index
-            </a>
-          </li>
+          
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
