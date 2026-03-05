@@ -9,13 +9,11 @@
 
 :root {
   --color-bg:         #F7F9FB;
-  --color-text:       #425563;
-  --color-text-muted: #768692;
-  --color-heading:    #1E1E1E;
+  --color-text:       #444;
+  --color-text-muted: #333;
+  --color-heading:    #333;
   --color-surface:    #E8EDEE;
-  --color-border:     #000000;
-  --color-accent:     #00A9CE;
-  --color-accent-hover: #0092B3;
+  --color-border:     #00000026;
   --color-purple:     #660099;
   --color-deep-blue:  #222B56;
   --color-nhs-blue:   #005EB8;
@@ -24,11 +22,21 @@
   --color-bg-sticky-header:  #ffffff3b;
   --color-bg-sidebar: var(--color-bg-sticky-header);
   --color-competency-card-bg: #ffffff3b;
-  --color-domain: var(--color-domain-base);
-  
-  --1bg-gradient: radial-gradient(circle at 20% 50%, #F4E8FF, #EAD8FF, #E2D2FF, #DAD7FF, #D3E0FF, #CFE6FF, #D7EEFF, #E3F5FF, #E6F2FF, #EAF6FF, #E7F8FF, #E6FBFF);
-  --bg-gradient: radial-gradient(circle at 20% 50%, #e5c8ff, #a6d1ff, #b6f3ff);
+  --color-domain: var(--color-domain-base);  
+  --color-accent: var(--color-domain);
+  --color-accent-hover: var(--color-domain);
 
+
+  --color-purple-pastel:    #e9bcff;
+  --color-deep-blue-pastel: #a0bcff;
+  --color-nhs-blue-pastel:  #afeaff;
+
+  --bg-gradient:
+    radial-gradient(ellipse 57% 100% at 1% 50%, var(--color-deep-blue-pastel), transparent 50%),
+    radial-gradient(ellipse 60% 84% at 85% 10%, var(--color-purple-pastel), transparent 75%),
+    radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-pastel), transparent 100%),
+    linear-gradient(45deg, white 99%);
+    
   /* Typography */
   --font-heading: 'Poppins', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -186,6 +194,13 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex-direction: column;
   z-index: 200;
   overflow-y: auto;
+
+  /* From https://css.glass */
+background-color: #3438411f;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 /* Brand / logo area */
@@ -220,8 +235,6 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 .nav-link {
   display: block;
   padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-sm);
-  border-left: 3px solid transparent;
   font-size: var(--text-small);
   font-weight: 500;
   color: var(--color-text-muted);
@@ -232,15 +245,17 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .nav-link:hover {
-  background: color-mix(in srgb, var(--color-item, var(--color-accent)) 12%, var(--color-mix-base));
-  color: var(--color-item, var(--color-accent));
+  color: var(--color-item, var(--color-accent));  
+  font-size: calc(var(--text-small) * 1.05);
+  
+  border-bottom: var(--color-item) 2px solid;
 }
 
 .nav-link.active {
-  border-left-color: var(--color-item, var(--color-accent));
-  color: var(--color-item, var(--color-accent));
-  font-weight: 700;
-  background: color-mix(in srgb, var(--color-item, var(--color-accent)) 10%, var(--color-mix-base));
+  color: var(--color-domain);
+  font-size: calc(var(--text-small) * 1.05);
+  border-bottom: var(--color-domain) 2px solid;
+  
 }
 
 /* Footer — theme toggle */
@@ -308,12 +323,19 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   background: var(--color-bg-sticky-header);
   border-bottom: 1px solid var(--color-border);
   cursor: pointer;
+
+  background: #3438411f;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 .sticky-header h1 {
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
+  color: var(--color-heading)
 }
 
 /* --- Subdomain + competency tab rows --- */
@@ -323,6 +345,12 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   border-bottom: 1px solid var(--color-border);
   padding: 0 var(--space-xl);
   box-shadow: 0 4px 16px -8px rgba(66, 85, 99, 0.1);
+
+  background: rgba(255, 255, 255, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 .subdomain-tabs,
@@ -360,8 +388,9 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .tab:hover {
-  color: var(--color-text);
-  border-bottom-color: rgba(0, 169, 206, 0.35);
+  color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  border-bottom-color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  font-size: calc(var(--text-small) * 1.05);
 }
 
 .subdomain-tab {
@@ -389,7 +418,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex: 1;
   overflow-y: auto;
   padding: var(--space-xl);
-  scroll-snap-type: y proximity;
+  background-color: #3438411f;
 }
 
 .scroll-area::-webkit-scrollbar       { width: 4px; }
@@ -447,7 +476,6 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 /* Subdomain heading */
 .subdomain-title {
-  scroll-snap-align: start;
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
@@ -463,6 +491,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 /* First subdomain needs no extra top margin */
 .subdomain-section:first-child .subdomain-title {
   margin-top: 0;
+  padding-top: 22px;
 }
 
 .section-number {
@@ -483,7 +512,6 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 /* Competency card */
 .competency-card {
-  scroll-snap-align: start;
   background: var(--color-competency-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -496,6 +524,14 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
     transform    var(--transition-slow),
     box-shadow   var(--transition-base),
     border-color var(--transition-base);
+  
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.4px);
+-webkit-backdrop-filter: blur(6.4px);
+border: 1px solid rgba(255, 255, 255, 0.19);
 }
 
 .competency-card:hover {
@@ -537,8 +573,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex: 1;
   min-width: 80px;
   padding: var(--space-xs) var(--space-sm);
-  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-text-muted);
   border-radius: var(--radius-md);
   font-size: var(--text-small);
   font-weight: 500;
@@ -552,16 +587,15 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 .level-btn:hover {
-  background: color-mix(in srgb, var(--color-domain, var(--color-accent)) 12%, var(--color-mix-base));
-  color: var(--color-domain, var(--color-accent));
+  font-size: calc(var(--text-small) * 1.05);
   border-color: var(--color-domain, var(--color-accent));
 }
 
 .level-btn.active {
-  background: var(--color-domain, var(--color-accent));
   border-color: var(--color-domain, var(--color-accent));
-  color: var(--color-white);
-  font-weight: 600;
+  color: var(--color-domain);
+  
+  font-size: calc(var(--text-small) * 1.05);
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
@@ -647,7 +681,7 @@ body[data-theme="dark"] .level-btn.active {
 }
 
 .proficiency-btn.active {
-  background: var(--color-domain, var(--color-accent));
+  background: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
   color: var(--color-white);
   font-weight: 500;
   border: 1px solid var(--color-domain, var(--color-accent));
@@ -890,7 +924,7 @@ body[data-theme="dark"] {
     --color-bg:         #0D1117;
     --color-white:      #161B22;
     --color-surface:    #21262D;
-    --color-border:     #30363D;
+    --color-border:     #ffffff;
     --color-text:       #C9D1D9;
     --color-text-muted: #8B949E;
     --color-heading:    #F0F6FC;
@@ -898,17 +932,23 @@ body[data-theme="dark"] {
     --shadow-sm: 0 4px 12px rgba(0,0,0,0.4);
     --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
 
-    /* Fluorescent domain colors for dark mode */
+    --color-purple-original:     #410062;
+    --color-deep-blue-original:  #222B56;
+    --color-nhs-blue-original:   #004789;
+
     --color-purple:    #e9bcff;
     --color-deep-blue: #a0bcff;
     --color-nhs-blue:  #afeaff;
 
     --color-domain: color-mix(in srgb, white 100%, var(--color-domain-base) 100%);
-    
-    --bg-gradient: radial-gradient(ellipse 80% 60% at 30% 20%, #3c005a, transparent 50%), 
-               radial-gradient(ellipse 70% 50% at 80% 70%, #151b36, transparent 60%), 
-               radial-gradient(ellipse 60% 80% at 10% 80%, #003262, transparent 40%),
-               linear-gradient(135deg, #E6F2FF, #EAF6FF, #E7F8FF, #E6FBFF);--bg-gradient: radial-gradient(circle at 20% 50%, #660099, #222B56, #005EB8);
+    --bg-gradient:
+    radial-gradient(ellipse 57% 60% at 1% 50%, var(--color-deep-blue-original), #2222 99%),
+    radial-gradient(ellipse 60% 84% at 85% 10%, var(--color-purple-original), #3333 99%),
+    radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-original), #2222 99%),
+    radial-gradient(ellipse 80% 61% at 51% 70%, var(--color-domain), #333 99%),
+    linear-gradient(90deg, #222, #444 99%);
+   
+   
 
 
 }
