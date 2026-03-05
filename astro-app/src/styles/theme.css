@@ -27,7 +27,7 @@
   --color-domain: var(--color-domain-base);
   
   --1bg-gradient: radial-gradient(circle at 20% 50%, #F4E8FF, #EAD8FF, #E2D2FF, #DAD7FF, #D3E0FF, #CFE6FF, #D7EEFF, #E3F5FF, #E6F2FF, #EAF6FF, #E7F8FF, #E6FBFF);
-  --bg-gradient: radial-gradient(circle at 20% 50%, #F4E8FF, #CFE6FF, #E6FBFF);
+  --bg-gradient: radial-gradient(circle at 20% 50%, #e5c8ff, #a6d1ff, #b6f3ff);
 
   /* Typography */
   --font-heading: 'Poppins', system-ui, sans-serif;
@@ -537,7 +537,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex: 1;
   min-width: 80px;
   padding: var(--space-xs) var(--space-sm);
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   font-size: var(--text-small);
@@ -595,7 +595,7 @@ body[data-theme="dark"] .level-btn.active {
   margin-top: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-bg);
+  
   overflow: hidden;
 }
 
@@ -613,7 +613,7 @@ body[data-theme="dark"] .level-btn.active {
   flex-direction: column;
   gap: var(--space-2xs);
   padding: var(--space-sm);
-  background: var(--color-surface);
+  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
   border-bottom: 1px solid var(--color-border);
   flex-shrink: 0;
 }
@@ -685,7 +685,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   font-weight: 600;
   margin-bottom: var(--space-md);
   padding-bottom: var(--space-sm);
-  border-bottom: 1px solid var(--color-border);
 }
 
 /* =============================================
@@ -870,11 +869,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   padding-bottom: var(--space-2xl);
 }
 
-/* Sticky header hover — subtle signal it's clickable */
-.sticky-header:hover h1 {
-  color: var(--color-accent);
-  transition: color var(--transition-fast);
-}
+
 
 /* Loading state centred and breathing */
 .loading {
