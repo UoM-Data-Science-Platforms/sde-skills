@@ -1,0 +1,31 @@
+---
+import { Content } from '../../data/about.md';
+import Sidebar from "../components/Sidebar.jsx";
+import "../styles/theme.css";
+
+const domains = [
+  { id: 'access-identity',           name: 'Safe Access & Identity',           color: 'var(--color-nhs-blue)'  },
+  { id: 'data-management',           name: 'Safe Data Management',             color: 'var(--color-deep-blue)' },
+  { id: 'governance-compliance',     name: 'Safe Governance & Compliance',     color: 'var(--color-purple)'    },
+  { id: 'outputs-disclosure-control',name: 'Safe Outputs & Disclosure Control',color: 'var(--color-nhs-blue)'  },
+  { id: 'projects-operations',       name: 'Safe Projects & Operations',       color: 'var(--color-deep-blue)' },
+  { id: 'technology-engineering',    name: 'Safe Technology & Engineering',    color: 'var(--color-purple)'    },
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Team – SDE Team Development Hub</title>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <Sidebar domains={domains} currentDomain="about" client:load />
+      <main class="main-content">
+        <article class="prose">
+          <Content />
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

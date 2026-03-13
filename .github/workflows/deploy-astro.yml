@@ -9,6 +9,8 @@ on:
       - 'scripts/markdown_to_yaml.py'
       - 'docs/competency_framework/**'
       - 'docs/index.md'
+      - 'docs/about.md'
+      - 'docs/assets/img/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
 
@@ -46,7 +48,11 @@ jobs:
           "
 
       - name: Copy home page markdown
-        run: cp docs/index.md astro-app/data/index.md
+        run: |
+          cp docs/index.md astro-app/data/index.md
+          cp docs/about.md astro-app/data/about.md
+          mkdir -p astro-app/data/assets/img
+          cp docs/assets/img/* astro-app/data/assets/img/
 
       - name: Set Astro deploy config
         run: |

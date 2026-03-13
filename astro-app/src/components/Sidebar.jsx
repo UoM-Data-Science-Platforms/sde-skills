@@ -19,6 +19,14 @@ export default function Sidebar({ domains, currentDomain }) {
               Home
             </a>
           </li>
+          <li>
+            <a
+              href={`${base}about/`}
+              className={`nav-link${currentDomain === 'about' ? ' active' : ''}`}
+            >
+              About
+            </a>
+          </li>
           {domains.map((domain) => (
             <li key={domain.id}>
               <a

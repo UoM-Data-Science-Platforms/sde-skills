@@ -30,3 +30,4 @@ site/
 
 astro-app/data/**
 astro-app/dist/**
+astro-app/public/about/assets/img/**
