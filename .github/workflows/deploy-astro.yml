@@ -10,6 +10,7 @@ on:
       - 'docs/competency_framework/**'
       - 'docs/index.md'
       - 'docs/about.md'
+      - 'docs/contributing.md'
       - 'docs/assets/img/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
@@ -51,6 +52,7 @@ jobs:
         run: |
           cp docs/index.md astro-app/data/index.md
           cp docs/about.md astro-app/data/about.md
+          cp docs/contributing.md astro-app/data/contributing.md
           mkdir -p astro-app/data/assets/img
           cp docs/assets/img/* astro-app/data/assets/img/
 
