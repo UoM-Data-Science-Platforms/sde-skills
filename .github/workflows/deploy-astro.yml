@@ -8,6 +8,7 @@ on:
       - 'astro-app/**'
       - 'scripts/markdown_to_yaml.py'
       - 'docs/competency_framework/**'
+      - 'docs/index.md'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
 
@@ -43,6 +44,9 @@ jobs:
                   convert_file_to_yaml(os.path.join(input_dir, f), output_dir)
           print('YAML generation complete')
           "
+
+      - name: Copy home page markdown
+        run: cp docs/index.md astro-app/data/index.md
 
       - name: Set Astro deploy config
         run: |

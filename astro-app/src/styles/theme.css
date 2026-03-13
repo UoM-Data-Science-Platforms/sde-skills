@@ -905,6 +905,53 @@ body[data-theme="dark"] .proficiency-btn.active {
 
 
 
+/* =============================================
+   PROSE (home page markdown)
+   ============================================= */
+
+.prose {
+  padding: var(--space-2xl) var(--space-xl);
+  color: var(--color-text);
+  overflow-y: auto;
+  height: 100%;
+}
+
+.prose h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.prose h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--color-heading);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.prose h3 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-heading);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-2xs);
+}
+
+.prose p {
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.prose li {
+  line-height: 1.75;
+  margin-bottom: var(--space-2xs);
+}
+
 /* Loading state centred and breathing */
 .loading {
   display: flex;
@@ -926,7 +973,7 @@ body[data-theme="dark"] {
     --color-surface:    #21262D;
     --color-border:     #ffffff;
     --color-text:       #C9D1D9;
-    --color-text-muted: #8B949E;
+    --color-text-muted: #d6dee7;
     --color-heading:    #F0F6FC;
     --color-mix-base:   #161b22a3;
     --shadow-sm: 0 4px 12px rgba(0,0,0,0.4);
@@ -947,9 +994,5 @@ body[data-theme="dark"] {
     radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-original), #2222 99%),
     radial-gradient(ellipse 80% 61% at 51% 70%, var(--color-domain), #333 99%),
     linear-gradient(90deg, #222, #444 99%);
-   
-   
-
-
 }
 
