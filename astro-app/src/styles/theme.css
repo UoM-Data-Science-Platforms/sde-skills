@@ -252,10 +252,9 @@ border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 .nav-link.active {
-  color: var(--color-domain);
+  color: var(--color-item, var(--color-domain));
   font-size: calc(var(--text-small) * 1.05);
-  border-bottom: var(--color-domain) 2px solid;
-  
+  border-bottom: var(--color-item, var(--color-domain)) 2px solid;
 }
 
 /* Footer — theme toggle */

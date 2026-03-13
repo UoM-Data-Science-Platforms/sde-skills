@@ -15,26 +15,12 @@ export default function Sidebar({ domains, currentDomain }) {
             <a
               href={base}
               className={`nav-link${currentDomain === '/' ? ' active' : ''}`}
+              style={{ '--color-item': 'var(--color-purple)' }}
             >
               Home
             </a>
           </li>
-          <li>
-            <a
-              href={`${base}about/`}
-              className={`nav-link${currentDomain === 'about' ? ' active' : ''}`}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href={`${base}contributing/`}
-              className={`nav-link${currentDomain === 'contributing' ? ' active' : ''}`}
-            >
-              Contributing
-            </a>
-          </li>
+        
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
@@ -46,6 +32,24 @@ export default function Sidebar({ domains, currentDomain }) {
               </a>
             </li>
           ))}
+           <li>
+            <a
+              href={`${base}about/`}
+              className={`nav-link${currentDomain === 'about' ? ' active' : ''}`}
+              style={{ '--color-item': 'var(--color-nhs-blue)' }}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${base}contributing/`}
+              className={`nav-link${currentDomain === 'contributing' ? ' active' : ''}`}
+              style={{ '--color-item': 'var(--color-blue-blue)' }}
+            >
+              Contributing
+            </a>
+          </li>
         </ul>
       </nav>
       <div className="sidebar-footer">
