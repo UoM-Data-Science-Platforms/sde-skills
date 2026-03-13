@@ -27,6 +27,14 @@ export default function Sidebar({ domains, currentDomain }) {
               About
             </a>
           </li>
+          <li>
+            <a
+              href={`${base}contributing/`}
+              className={`nav-link${currentDomain === 'contributing' ? ' active' : ''}`}
+            >
+              Contributing
+            </a>
+          </li>
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
