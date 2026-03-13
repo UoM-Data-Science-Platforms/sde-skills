@@ -1,23 +1,7 @@
 ---
-import SkillsFramework from "../components/SkillsFramework.jsx";
+import { Content } from '../../data/index.md';
 import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
-
-export async function getStaticPaths() {
-  const paths = [
-    { params: { slug: 'technology-engineering' } },
-    { params: { slug: 'access-identity' } },
-    { params: { slug: 'data-management' } },
-    { params: { slug: 'governance-compliance' } },
-    { params: { slug: 'outputs-disclosure-control' } },
-    { params: { slug: 'projects-operations' } },
-    { params: { slug: 'skills-index' } },
-  ];
-  return paths;
-}
-
-const { slug } = Astro.params;
-const currentPath = slug || "/";
 
 const domains = [
   { id: 'access-identity',           name: 'Safe Access & Identity',           color: 'var(--color-nhs-blue)'  },
@@ -27,20 +11,20 @@ const domains = [
   { id: 'projects-operations',       name: 'Safe Projects & Operations',       color: 'var(--color-deep-blue)' },
   { id: 'technology-engineering',    name: 'Safe Technology & Engineering',    color: 'var(--color-purple)'    },
 ];
-
-const currentDomainId = slug || "/";
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Skills Framework</title>
+    <title>SDE Team Development Hub</title>
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain={currentDomainId} client:load />
+      <Sidebar domains={domains} currentDomain="/" client:load />
       <main class="main-content">
-        <SkillsFramework client:load />
+        <article class="prose">
+          <Content />
+        </article>
       </main>
     </div>
   </body>

@@ -11,7 +11,14 @@ export default function Sidebar({ domains, currentDomain }) {
       </div>
       <nav className="sidebar-nav">
         <ul>
-          
+          <li>
+            <a
+              href={base}
+              className={`nav-link${currentDomain === '/' ? ' active' : ''}`}
+            >
+              Home
+            </a>
+          </li>
           {domains.map((domain) => (
             <li key={domain.id}>
               <a
