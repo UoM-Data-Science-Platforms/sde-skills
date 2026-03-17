@@ -1,5 +1,5 @@
 ---
-import { Content } from '../../data/about.md';
+import SatreMappingMatrix from "../components/SatreMappingMatrix.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
 
@@ -16,7 +16,7 @@ const domains = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Team – SDE Team Development Hub</title>
+    <title>SATRE Mapping – SDE Team Development Hub</title>
     <script>
       document.body.dataset.theme = localStorage.getItem('theme') || 'light';
       document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
@@ -24,11 +24,20 @@ const domains = [
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="about" client:load />
+      <Sidebar domains={domains} currentDomain="satre-mapping" client:load />
       <main class="main-content">
-        <article class="prose">
-          <Content />
-        </article>
+        <div class="skills-framework">
+          <div class="sticky-header">
+            <h1>SATRE Mapping</h1>
+            <p style="margin: 0; font-size: var(--text-small); color: var(--color-text-muted); line-height: 1.6;">
+              How the SDE Skills Competency Framework subdomains address each component of the
+              <a href="https://satre-specification.readthedocs.io/" target="_blank" rel="noopener" style="color: var(--color-nhs-blue);">Standard Architecture for Trusted Research Environments (SATRE)</a> specification.
+            </p>
+          </div>
+          <div class="scroll-area">
+            <SatreMappingMatrix client:load />
+          </div>
+        </div>
       </main>
     </div>
   </body>

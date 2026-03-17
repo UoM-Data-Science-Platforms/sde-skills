@@ -1,5 +1,5 @@
 ---
-import { Content } from '../../data/about.md';
+import { Content } from '../../data/cf-overview.md';
 import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
 
@@ -16,15 +16,15 @@ const domains = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Team – SDE Team Development Hub</title>
+    <title>Overview – Competency Framework</title>
     <script>
       document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
+      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-purple)');
     </script>
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="about" client:load />
+      <Sidebar domains={domains} currentDomain="cf-overview" client:load />
       <main class="main-content">
         <article class="prose">
           <Content />

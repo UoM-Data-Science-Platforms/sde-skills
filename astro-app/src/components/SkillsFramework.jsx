@@ -124,6 +124,41 @@ export default function SkillsFramework() {
     }
   }, [data]);
 
+  // Deep-link: scroll to ?sub=subdomain-id&comp=competency-id on load
+  React.useEffect(() => {
+    if (!data) return;
+    const params = new URLSearchParams(window.location.search);
+    const targetSub  = params.get('sub');
+    const targetComp = params.get('comp');
+    if (!targetSub) return;
+    const subdomains   = Object.entries(data.domain.subdomains ?? {});
+    const domainNumber = data.domain.index;
+    const subIdx       = subdomains.findIndex(([key]) => key === targetSub);
+    if (subIdx < 0) return;
+    const subNumber = `${domainNumber}.${subIdx + 1}`;
+    setStickySubdomain(subdomains[subIdx][1]?.name ?? '');
+    setStickySubNumber(subNumber);
+    if (targetComp) {
+      const comps   = Object.entries(subdomains[subIdx][1].competencies ?? {});
+      const compIdx = comps.findIndex(([key]) => key === targetComp);
+      if (compIdx >= 0) {
+        const compNumber = `${subNumber}.${compIdx + 1}`;
+        setStickyCompetency(comps[compIdx][1]?.name ?? '');
+        setStickyCompNumber(compNumber);
+      }
+    }
+    // Delay scroll until refs are populated after render
+    setTimeout(() => {
+      if (targetComp) {
+        const comps      = Object.entries(subdomains[subIdx][1].competencies ?? {});
+        const compIdx    = comps.findIndex(([key]) => key === targetComp);
+        if (compIdx >= 0) scrollToElement(compRefs.current[`${subNumber}.${compIdx + 1}`]);
+      } else {
+        scrollToElement(subdomainRefs.current[subNumber]);
+      }
+    }, 300);
+  }, [data]);
+
   // Scroll active competency tab into view when sync updates
   React.useEffect(() => {
     competencyTabsRef.current
@@ -317,6 +352,9 @@ export default function SkillsFramework() {
 
       {/* Scrollable content */}
       <div className="scroll-area" ref={scrollAreaRef} onScroll={handleScroll}>
+        {data.domain.description && (
+          <p className="domain-description">{data.domain.description}</p>
+        )}
         {subdomains.map(([subKey, subVal], subIdx) => {
           const competencies = Object.entries(subVal.competencies || {});
           return (

@@ -1,5 +1,5 @@
 ---
-import { Content } from '../../data/about.md';
+import MappingMatrix from "../components/MappingMatrix.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
 
@@ -16,19 +16,24 @@ const domains = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Team – SDE Team Development Hub</title>
+    <title>Mapping Matrix – Competency Framework</title>
     <script>
       document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
+      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-deep-blue)');
     </script>
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="about" client:load />
+      <Sidebar domains={domains} currentDomain="mapping-matrix" client:load />
       <main class="main-content">
-        <article class="prose">
-          <Content />
-        </article>
+        <div class="skills-framework">
+          <div class="sticky-header">
+            <h1>Mapping Matrix</h1>
+          </div>
+          <div class="scroll-area">
+            <MappingMatrix client:load />
+          </div>
+        </div>
       </main>
     </div>
   </body>

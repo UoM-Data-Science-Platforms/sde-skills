@@ -4,12 +4,20 @@ import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
 
 const domains = [
-  { id: 'access-identity',           name: 'Safe Access & Identity',           color: 'var(--color-nhs-blue)'  },
-  { id: 'data-management',           name: 'Safe Data Management',             color: 'var(--color-deep-blue)' },
-  { id: 'governance-compliance',     name: 'Safe Governance & Compliance',     color: 'var(--color-purple)'    },
-  { id: 'outputs-disclosure-control',name: 'Safe Outputs & Disclosure Control',color: 'var(--color-nhs-blue)'  },
-  { id: 'projects-operations',       name: 'Safe Projects & Operations',       color: 'var(--color-deep-blue)' },
-  { id: 'technology-engineering',    name: 'Safe Technology & Engineering',    color: 'var(--color-purple)'    },
+  { id: 'access-identity',            name: 'Safe Access & Identity'            },
+  { id: 'data-management',            name: 'Safe Data Management'              },
+  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
+  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
+  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
+  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
+];
+
+const sections = [
+  { id: 'ways-to-contribute',                                        label: 'Ways to Contribute'  },
+  { id: 'option-1-creating-an-issue-non-technical-approach',         label: 'Option 1: Issues'    },
+  { id: 'option-2-submitting-changes-via-pull-request',              label: 'Option 2: Pull Requests' },
+  { id: 'guidelines-for-contributions',                              label: 'Guidelines'          },
+  { id: 'getting-help',                                              label: 'Getting Help'        },
 ];
 ---
 <html lang="en">
@@ -19,17 +27,65 @@ const domains = [
     <title>Contributing – SDE Team Development Hub</title>
     <script>
       document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', `var(--color-nhs-blue)`);
+      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-deep-blue)');
     </script>
   </head>
   <body>
     <div class="app-wrapper">
       <Sidebar domains={domains} currentDomain="contributing" client:load />
       <main class="main-content">
-        <article class="prose">
-          <Content />
-        </article>
+        <div class="skills-framework">
+          <div class="sticky-header">
+            <h1>Contributing</h1>
+          </div>
+          <div class="sticky-subnav">
+            <div class="subdomain-tabs" id="section-tabs">
+              {sections.map(s => (
+                <button class="tab subdomain-tab" data-section={s.id}>
+                  {s.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div class="scroll-area" id="scroll-area">
+            <article class="prose" style="padding: 0; height: auto; overflow-y: visible;">
+              <Content />
+            </article>
+          </div>
+        </div>
       </main>
     </div>
   </body>
 </html>
+
+<script define:vars={{ sections }}>
+  const tabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
+  const OFFSET = window.innerHeight * 0.4;
+
+  const setActive = (id) =>
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.section === id));
+
+  const getActive = (ids) => {
+    let active = ids[0];
+    for (const id of ids) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= OFFSET) active = id;
+    }
+    return active;
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      setActive(tab.dataset.section);
+      document.getElementById(tab.dataset.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  const allIds = sections.map(s => s.id);
+  document.addEventListener('scroll', () => setActive(getActive(allIds)), { passive: true, capture: true });
+
+  // Hide h1 — sticky header shows the title
+  document.querySelector('#scroll-area h1')?.remove();
+
+  setActive(allIds[0]);
+</script>

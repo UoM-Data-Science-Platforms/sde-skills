@@ -53,6 +53,8 @@ jobs:
           cp docs/index.md astro-app/data/index.md
           cp docs/about.md astro-app/data/about.md
           cp docs/contributing.md astro-app/data/contributing.md
+          cp docs/competency_framework/overview.md astro-app/data/cf-overview.md
+          cp docs/competency_framework/framework_mapping.md astro-app/data/cf-framework-mapping.md
           mkdir -p astro-app/data/assets/img
           cp docs/assets/img/* astro-app/data/assets/img/
 
