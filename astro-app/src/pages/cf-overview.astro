@@ -1,33 +1,7 @@
 ---
-import Sidebar from "../components/Sidebar.jsx";
-import CFOverview from "../components/CFOverview.jsx";
-import "../styles/theme.css";
-
-const domains = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
-];
+import CFOverview from '../components/CFOverview.jsx';
+import Layout from '../layouts/Layout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Overview – Competency Framework</title>
-    <script>
-      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-purple)');
-    </script>
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="cf-overview" client:load />
-      <main class="main-content">
-        <CFOverview client:load />
-      </main>
-    </div>
-  </body>
-</html>
+<Layout title="Overview – Competency Framework" currentDomain="cf-overview">
+  <CFOverview client:load />
+</Layout>

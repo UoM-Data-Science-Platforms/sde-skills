@@ -1,35 +1,9 @@
 ---
 import { Content } from '../../data/about.md';
-import Sidebar from "../components/Sidebar.jsx";
-import "../styles/theme.css";
-
-const domains = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
-];
+import Layout from '../layouts/Layout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Team – SDE Team Development Hub</title>
-    <script>
-      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
-    </script>
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="about" client:load />
-      <main class="main-content">
-        <article class="prose">
-          <Content />
-        </article>
-      </main>
-    </div>
-  </body>
-</html>
+<Layout title="The Team – SDE Team Development Hub" currentDomain="about">
+  <article class="prose">
+    <Content />
+  </article>
+</Layout>

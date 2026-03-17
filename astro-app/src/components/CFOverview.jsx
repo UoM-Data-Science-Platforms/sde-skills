@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { SATRE_PILLARS, SUBDOMAINS, DOMAINS as SATRE_DOMAINS } from '../data/satreMapping.js';
+import { DOMAIN_COLORS } from '../data/domains.js';
 
 // domainId -> array of its subdomain IDs
 const DOMAIN_SUB_IDS = Object.fromEntries(
@@ -25,15 +26,6 @@ const FIVE_SAFES_LOOKUP = {
   'Safe Outputs & Disclosure Control': 'Safe Outputs',
   'Safe Projects & Operations':        'Safe Projects',
   'Safe Governance & Compliance':      'Spans all five',
-};
-
-const DOMAIN_COLORS = {
-  'technology-engineering':    'var(--color-purple)',
-  'data-management':           'var(--color-nhs-blue)',
-  'access-identity':           'var(--color-deep-blue)',
-  'outputs-disclosure-control':'var(--color-purple)',
-  'projects-operations':       'var(--color-nhs-blue)',
-  'governance-compliance':     'var(--color-deep-blue)',
 };
 
 const DOMAINS = [
@@ -240,9 +232,7 @@ export default function CFOverview() {
 
   const color = 'var(--color-purple)';
 
-  useEffect(() => {
-    document.documentElement.style.setProperty('--color-domain-base', 'var(--color-purple)');
-  }, []);
+  // --color-domain-base is set by Layout.astro — no need to set it here
 
   // True when the scroll-area element is the scroll container (desktop)
   const isContainerScroll = () => {

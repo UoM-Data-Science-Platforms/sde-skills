@@ -1,20 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import yaml from 'js-yaml';
+import { DOMAINS, DOMAIN_COLORS } from '../data/domains.js';
 
-const DOMAIN_SLUGS = [
-  'access-identity',
-  'data-management',
-  'governance-compliance',
-  'outputs-disclosure-control',
-  'projects-operations',
-  'technology-engineering',
-];
-
-const COLOR_MAP = {
-  'color-nhs-blue':  'var(--color-nhs-blue)',
-  'color-deep-blue': 'var(--color-deep-blue)',
-  'color-purple':    'var(--color-purple)',
-};
+const DOMAIN_SLUGS = DOMAINS.map(d => d.id);
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
@@ -88,7 +76,7 @@ export default function FrameworkContents() {
             <button
               key={slug}
               className={`tab subdomain-tab${activeSlug === slug ? ' active' : ''}`}
-              style={{ '--color-domain': COLOR_MAP[data.domain['main-color']] ?? 'var(--color-domain)' }}
+              style={{ '--color-domain': DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)' }}
               onClick={() => scrollTo(slug)}
             >
               {data.domain.index}. {data.domain.name.replace(/^Safe /, '')}
@@ -108,7 +96,7 @@ export default function FrameworkContents() {
 }
 
 function DomainSection({ slug, domain }) {
-  const color = COLOR_MAP[domain['main-color']] ?? 'var(--color-domain)';
+  const color = DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)';
   const subdomains = Object.entries(domain.subdomains ?? {});
   const totalComps = subdomains.reduce((n, [, s]) => n + Object.keys(s.competencies ?? {}).length, 0);
 
@@ -127,7 +115,7 @@ function DomainSection({ slug, domain }) {
           <span style={{ fontSize: '1.1rem', fontWeight: 800, color, minWidth: '1.8rem', flexShrink: 0 }}>
             {domain.index}
           </span>
-          <span style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)', fontWeight: 700, color: 'var(--color-heading)' }}>
+          <span style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)', fontWeight: 700, color }}>
             {domain.name}
           </span>
           <span style={{ marginLeft: 'auto', fontSize: '0.7rem', color, opacity: 0.6, fontWeight: 500, flexShrink: 0 }}>

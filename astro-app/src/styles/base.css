@@ -1,0 +1,198 @@
+/* =============================================
+   BASE RESET
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul  { list-style: none; margin: 0; padding: 0; }
+a   { color: inherit; text-decoration: none; }
+p   { margin: 0; }
+img { max-width: 100%; display: block; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =============================================
+   TYPOGRAPHY HIERARCHY
+   ============================================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 { font-size: var(--text-domain);      font-weight: 700; }
+h2 { font-size: var(--text-subdomain);   font-weight: 600; }
+h3 { font-size: var(--text-competency);  font-weight: 600; }
+h4 { font-size: var(--text-proficiency); font-weight: 600; }
+
+/* =============================================
+   LAYOUT FOUNDATIONS
+   ============================================= */
+
+/* Page wrapper — sidebar + main side by side */
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+/* Main content: offset by fixed sidebar, constrained to viewport height */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =============================================
+   ANIMATION UTILITIES
+   ============================================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp var(--transition-slow) ease both;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS (mobile-first)
+   sm  ≥ 640px
+   md  ≥ 768px
+   lg  ≥ 1024px
+   xl  ≥ 1280px
+   ============================================= */
+
+/* =============================================
+   GLASS-MORPHISM UTILITIES
+   ============================================= */
+
+/* Full blur — for nav bars and sticky headers */
+.glass {
+  background-color: rgba(52, 56, 65, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+/* Soft blur — for content cards and tiles */
+.glass--soft {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+/* =============================================
+   MISSION GRID LAYOUT
+   ============================================= */
+
+.mission-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mission-tile {
+  flex: 1 1 200px;
+  max-width: 280px;
+  min-width: 180px;
+  border-radius: 16px;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.mission-section-heading {
+  margin-bottom: var(--space-xl);
+}
+
+.mission-section-heading h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  color: var(--color-domain);
+  margin: 0 0 0.75rem;
+}
+
+.mission-section-heading p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Tile internal typography */
+.mission-tile h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.mission-tile p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Accent line inside tiles */
+.card__accent-line--tile {
+  width: 28px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color-accent);
+}
+
+/* Step progress dots (MissionScroll) */
+.step-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--color-border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-dot--active {
+  width: 28px;
+  background: var(--color-accent);
+}

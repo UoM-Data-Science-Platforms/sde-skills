@@ -1,89 +1,46 @@
 ---
 import { Content } from '../../data/index.md';
-import Sidebar from "../components/Sidebar.jsx";
-import MissionGrid from "../components/MissionGrid.jsx";
-import "../styles/theme.css";
-
-const domains = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
-];
+import MissionGrid from '../components/MissionGrid.jsx';
+import Layout from '../layouts/Layout.astro';
 
 const sections = [
   { id: 'our-mission', label: 'Our Mission' },
 ];
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SDE Team Development Hub</title>
-    <script>
-      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-purple)');
-    </script>
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="/" client:load />
-      <main class="main-content">
-        <div class="skills-framework">
-          <div class="sticky-header">
-            <h1>Building Capacity and Capability for UK Secure Data Environments</h1>
-          </div>
-          <div class="sticky-subnav">
-            <div class="subdomain-tabs" id="section-tabs">
-              {sections.map(s => (
-                <button class="tab subdomain-tab" data-section={s.id}>
-                  {s.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div class="scroll-area" id="scroll-area">
-            <article class="prose" style="padding: 0; height: auto; overflow-y: visible; font-style: italic;">
-              <Content />
-            </article>
-            <MissionGrid client:load />
-          </div>
-        </div>
-      </main>
+<Layout title="SDE Team Development Hub" currentDomain="/">
+  <div class="skills-framework">
+    <div class="sticky-header">
+      <h1>Building Capacity and Capability for UK Secure Data Environments</h1>
     </div>
-  </body>
-</html>
+    <div class="sticky-subnav">
+      <div class="subdomain-tabs" id="section-tabs">
+        {sections.map(s => (
+          <button class="tab subdomain-tab" data-section={s.id}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="scroll-area" id="scroll-area">
+      <article class="prose prose--reset prose--italic">
+        <Content />
+      </article>
+      <MissionGrid client:load />
+    </div>
+  </div>
+</Layout>
 
 <script define:vars={{ sections }}>
-  const tabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
-  const OFFSET = window.innerHeight * 0.4;
+  window._pageSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+  initScrollSync({ sections: window._pageSections });
 
-  const setActive = (id) =>
-    tabs.forEach(t => t.classList.toggle('active', t.dataset.section === id));
-
-  const getActive = (ids) => {
-    let active = ids[0];
-    for (const id of ids) {
-      const el = document.getElementById(id);
-      if (el && el.getBoundingClientRect().top <= OFFSET) active = id;
-    }
-    return active;
-  };
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      setActive(tab.dataset.section);
-      document.getElementById(tab.dataset.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  const allIds = sections.map(s => s.id);
-  document.addEventListener('scroll', () => setActive(getActive(allIds)), { passive: true, capture: true });
-
-  // Remove h1 and replace the About h2 with a zero-height anchor so tab scroll tracking still works
+  // Remove h1 — sticky header shows the title
   document.querySelector('#scroll-area h1')?.remove();
+
+  // Replace the markdown h2 with a zero-height anchor so tab scroll tracking still works
   const aboutH2 = document.getElementById('building-capacity-and-capability-for-uk-secure-data-environments');
   if (aboutH2) {
     const anchor = document.createElement('div');
@@ -92,7 +49,7 @@ const sections = [
     aboutH2.replaceWith(anchor);
   }
 
-  // Hide the markdown mission section — MissionScroll replaces it
+  // Hide the markdown mission section — MissionGrid replaces it
   const article = document.querySelector('#scroll-area article');
   const missionH2 = article?.querySelector('#our-mission');
   if (missionH2) {
@@ -103,6 +60,4 @@ const sections = [
       el = next;
     }
   }
-
-  setActive(allIds[0]);
 </script>

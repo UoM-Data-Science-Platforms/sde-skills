@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   }, []);
 
   React.useEffect(() => {
-    document.body.dataset.theme = dark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
     localStorage.setItem('theme', dark ? 'dark' : 'light');
   }, [dark]);
 
