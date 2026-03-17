@@ -1,0 +1,612 @@
+/* =============================================
+   COMPETENCY CONTENT AREA
+   ============================================= */
+
+/* Subdomain section — generous vertical rhythm */
+.subdomain-section {
+  padding-bottom: var(--space-3xl);
+}
+
+/* Subdomain heading */
+.subdomain-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-size: var(--text-subdomain);
+  font-weight: 600;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  transition:
+    opacity   var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+/* First subdomain needs no extra top margin */
+.subdomain-section:first-child .subdomain-title {
+  margin-top: 0;
+  padding-top: 22px;
+}
+
+.section-number {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.domain-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.subdomain-description {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-xl);
+}
+
+/* Competency card */
+.competency-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-md);
+  /* All transitions in one declaration — merges hover + fade-up */
+  transition:
+    opacity      var(--transition-slow),
+    transform    var(--transition-slow),
+    box-shadow   var(--transition-base),
+    border-color var(--transition-base);
+  /* glass applied via .glass--soft utility class on the element */
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.competency-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 169, 206, 0.25);
+}
+
+.competency-card h3 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: var(--text-competency);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.comp-number {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.competency-description {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Experience-level selector --- */
+.level-buttons {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.level-btn {
+  flex: 1;
+  min-width: 80px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-text-muted);
+  border-radius: var(--radius-md);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  transition:
+    background   var(--transition-fast),
+    color        var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow   var(--transition-fast);
+}
+
+.level-btn:hover {
+  font-size: calc(var(--text-small) * 1.05);
+  border-color: var(--color-domain, var(--color-accent));
+}
+
+.level-btn.active {
+  border-color: var(--color-domain, var(--color-accent));
+  color: var(--color-domain);
+  font-size: calc(var(--text-small) * 1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+body[data-theme="dark"] .level-btn.active {
+  background: var(--color-surface);
+  color: var(--color-domain);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--color-domain);
+}
+
+.level-btn.active:hover {
+  filter: brightness(0.88);
+}
+
+/* Mobile: allow buttons to wrap at two per row if needed */
+@media (max-width: 480px) {
+  .level-btn {
+    flex: 1 1 calc(50% - var(--space-xs));
+  }
+
+  .competency-card {
+    padding: var(--space-md);
+  }
+
+  .subdomain-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+}
+
+/* =============================================
+   TWO-COLUMN PROFICIENCY PANEL
+   ============================================= */
+
+/* Panel container — mobile-first: stacks vertically */
+.proficiency-panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  animation: panelIn var(--transition-slow) ease both;
+}
+
+/* Desktop: side-by-side columns */
+@media (min-width: 768px) {
+  .proficiency-panel {
+    flex-direction: row;
+    min-height: 160px;
+  }
+}
+
+/* --- Left column: proficiency button list --- */
+.proficiency-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .proficiency-list {
+    width: 32%;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+  }
+}
+
+.proficiency-btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  transition:
+    background var(--transition-fast),
+    color      var(--transition-fast);
+}
+
+.proficiency-btn:hover {
+  background: color-mix(in srgb, var(--color-domain, var(--color-accent)) 12%, var(--color-mix-base));
+  color: var(--color-domain, var(--color-accent));
+}
+
+.proficiency-btn.active {
+  background: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  color: var(--color-white);
+  font-weight: 500;
+  border: 1px solid var(--color-domain, var(--color-accent));
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+body[data-theme="dark"] .proficiency-btn.active {
+  background: var(--color-surface);
+  color: var(--color-domain);
+  font-weight: 500;
+}
+
+.proficiency-btn.active:hover {
+  filter: brightness(0.88);
+}
+
+/* --- Right column: detail display --- */
+.proficiency-display {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-lg);
+}
+
+.proficiency-placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+  font-style: italic;
+}
+
+/* Detail view heading */
+.proficiency-detail h4 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+}
+
+.proficiency-detail {
+  animation: detailIn var(--transition-base) ease both;
+}
+
+/* =============================================
+   COLLAPSIBLE SUBSECTIONS
+   ============================================= */
+
+/* Container */
+.collapsible {
+  border-top: 1px solid var(--color-border);
+}
+
+.collapsible:first-child {
+  border-top: none;
+}
+
+/* Header button */
+.collapsible-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-sm) 0;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.collapsible-summary:hover {
+  color: var(--color-domain, var(--color-accent));
+}
+
+/* Chevron — CSS border trick, rotates on open */
+.collapsible-summary::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-text-muted);
+  border-bottom: 2px solid var(--color-text-muted);
+  transform: rotate(45deg) translateY(-2px);
+  flex-shrink: 0;
+  transition: transform var(--transition-base), border-color var(--transition-fast);
+}
+
+.collapsible.is-open > .collapsible-summary::after {
+  transform: rotate(-135deg) translateY(-2px);
+  border-color: var(--color-domain, var(--color-accent));
+}
+
+/* Grid trick: animates height on both open AND close */
+.collapsible-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-slow);
+}
+
+.collapsible.is-open > .collapsible-content {
+  grid-template-rows: 1fr;
+}
+
+/* Inner wrapper must have overflow:hidden for grid trick to work */
+.collapsible-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Content typography inside sections */
+.collapsible-inner p,
+.collapsible-inner ul {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+  padding: var(--space-2xs) 0 var(--space-sm) var(--space-sm);
+}
+
+.collapsible-inner ul {
+  padding-left: var(--space-lg);
+}
+
+.collapsible-inner ul li {
+  list-style: disc;
+  margin-bottom: var(--space-2xs);
+}
+
+/* =============================================
+   MOTION & SCROLL-SYNC
+   ============================================= */
+
+/* Cards and subdomain titles start invisible,
+   fade up when IntersectionObserver adds .is-visible */
+.competency-card,
+.subdomain-title {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.competency-card.is-visible,
+.subdomain-title.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger cards within a section for a subtle cascade */
+.competency-card:nth-child(2) { transition-delay: 40ms;  }
+.competency-card:nth-child(3) { transition-delay: 80ms;  }
+.competency-card:nth-child(4) { transition-delay: 120ms; }
+.competency-card:nth-child(5) { transition-delay: 160ms; }
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .competency-card,
+  .subdomain-title {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =============================================
+   POLISH & REFINEMENT
+   ============================================= */
+
+/* Reset stagger delay on hover so hover feedback is instant */
+.competency-card.is-visible:hover {
+  transition-delay: 0ms;
+}
+
+/* Max readable width on very wide viewports */
+.scroll-area > * {
+  max-width: 960px;
+}
+
+/* Focus-visible styles — keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Suppress focus ring on mouse click (only show for keyboard) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Highlight the active collapsible section header */
+.collapsible.is-open > .collapsible-summary {
+  color: var(--color-domain, var(--color-accent));
+}
+
+/* Ensure last card in scroll area has bottom breathing room */
+.subdomain-section:last-child {
+  padding-bottom: var(--space-2xl);
+}
+
+/* =============================================
+   COLOR-ACCENT UTILITIES
+   (set --color-accent on the container element)
+   ============================================= */
+
+/* Tinted card backgrounds */
+.card--accent-bg {
+  background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+/* Coloured top strip on stacked cards */
+.card__top-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* Large faded background number */
+.card__ghost-number {
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.1;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+/* Accent divider line */
+.card__accent-line {
+  background: var(--color-accent);
+}
+
+/* Step counter badge */
+.card__step-counter {
+  position: absolute;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  opacity: 0.5;
+}
+
+/* Icon in grid tiles */
+.tile__icon {
+  width: 44px;
+  height: 44px;
+  margin-top: 0.25rem;
+  color: var(--color-accent);
+}
+
+/* Number label in grid tiles */
+.tile__number {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  opacity: 0.7;
+}
+
+/* MissionScroll — sticky panel and content */
+.mission-scroll__panel {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mission-scroll__indicators {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+
+.mission-scroll__content {
+  text-align: center;
+  max-width: 560px;
+  padding: 0 var(--space-xl);
+  animation: missionIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.mission-scroll__ghost-number {
+  font-size: clamp(6rem, 18vw, 10rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.12;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.mission-scroll__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-heading);
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.mission-scroll__nudge {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: nudgeDown 2s ease-in-out infinite;
+}
+
+/* Stacked mission card inner panel */
+.mission-card__inner {
+  height: 100%;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+  border-bottom: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.mission-card__inner.is-past {
+  transform: scale(0.97);
+  opacity: 0.6;
+}
+
+.mission-card__content {
+  max-width: 560px;
+  padding: 0 var(--space-xl);
+  text-align: center;
+}
+
+.mission-card__title {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-heading);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.mission-card__accent-line {
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  margin: 0 auto 1.25rem;
+  transition: background 0.4s ease;
+}
+
+.mission-card__body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+/* CFOverview color-mix presets — set --color-accent on the parent */
+.cf-bg-6   { background: color-mix(in srgb, var(--color-accent)  6%, var(--color-surface)); }
+.cf-bg-8   { background: color-mix(in srgb, var(--color-accent)  8%, var(--color-surface)); }
+.cf-bg-12  { background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)); }
+.cf-border-20 { border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent); }
+.cf-border-35 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent); }
+.cf-border-40 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 40%, transparent); }

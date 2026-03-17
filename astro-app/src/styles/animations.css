@@ -1,0 +1,23 @@
+/* =============================================
+   KEYFRAMES & ANIMATION UTILITIES
+   ============================================= */
+
+@keyframes missionIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nudgeDown {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%       { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes detailIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

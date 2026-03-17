@@ -1,16 +1,6 @@
 ---
 import { Content } from '../../data/contributing.md';
-import Sidebar from "../components/Sidebar.jsx";
-import "../styles/theme.css";
-
-const domains = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
-];
+import Layout from '../layouts/Layout.astro';
 
 const sections = [
   { id: 'ways-to-contribute',                                        label: 'Ways to Contribute'  },
@@ -20,72 +10,33 @@ const sections = [
   { id: 'getting-help',                                              label: 'Getting Help'        },
 ];
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contributing – SDE Team Development Hub</title>
-    <script>
-      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-deep-blue)');
-    </script>
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="contributing" client:load />
-      <main class="main-content">
-        <div class="skills-framework">
-          <div class="sticky-header">
-            <h1>Contributing</h1>
-          </div>
-          <div class="sticky-subnav">
-            <div class="subdomain-tabs" id="section-tabs">
-              {sections.map(s => (
-                <button class="tab subdomain-tab" data-section={s.id}>
-                  {s.label}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div class="scroll-area" id="scroll-area">
-            <article class="prose" style="padding: 0; height: auto; overflow-y: visible;">
-              <Content />
-            </article>
-          </div>
-        </div>
-      </main>
+<Layout title="Contributing – SDE Team Development Hub" currentDomain="contributing">
+  <div class="skills-framework">
+    <div class="sticky-header">
+      <h1>Contributing</h1>
     </div>
-  </body>
-</html>
+    <div class="sticky-subnav">
+      <div class="subdomain-tabs" id="section-tabs">
+        {sections.map(s => (
+          <button class="tab subdomain-tab" data-section={s.id}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="scroll-area" id="scroll-area">
+      <article class="prose prose--reset prose--lead">
+        <Content />
+      </article>
+    </div>
+  </div>
+</Layout>
 
 <script define:vars={{ sections }}>
-  const tabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
-  const OFFSET = window.innerHeight * 0.4;
-
-  const setActive = (id) =>
-    tabs.forEach(t => t.classList.toggle('active', t.dataset.section === id));
-
-  const getActive = (ids) => {
-    let active = ids[0];
-    for (const id of ids) {
-      const el = document.getElementById(id);
-      if (el && el.getBoundingClientRect().top <= OFFSET) active = id;
-    }
-    return active;
-  };
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      setActive(tab.dataset.section);
-      document.getElementById(tab.dataset.section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  const allIds = sections.map(s => s.id);
-  document.addEventListener('scroll', () => setActive(getActive(allIds)), { passive: true, capture: true });
-
-  // Hide h1 — sticky header shows the title
+  window._pageSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+  initScrollSync({ sections: window._pageSections });
   document.querySelector('#scroll-area h1')?.remove();
-
-  setActive(allIds[0]);
 </script>

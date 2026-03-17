@@ -1,0 +1,41 @@
+---
+import Sidebar from '../components/Sidebar.jsx';
+import { DOMAINS, PAGE_COLORS } from '../data/domains.js';
+import '../styles/theme.css';
+import '../styles/base.css';
+import '../styles/animations.css';
+import '../styles/sidebar.css';
+import '../styles/page-nav.css';
+import '../styles/skills-framework.css';
+import '../styles/prose.css';
+
+interface Props {
+  title: string;
+  currentDomain?: string;
+}
+
+const { title, currentDomain = '/' } = Astro.props;
+const domainColor = PAGE_COLORS[currentDomain] ?? 'var(--color-purple)';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <!-- Inline: must run before first paint to prevent flash of unstyled theme -->
+    <script is:inline>
+      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
+    </script>
+    <script define:vars={{ domainColor }} is:inline>
+      document.documentElement.style.setProperty('--color-domain-base', domainColor);
+    </script>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <Sidebar domains={DOMAINS} currentDomain={currentDomain} client:load />
+      <main class="main-content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

@@ -36,13 +36,6 @@ export default function SkillsFramework() {
   const subdomainTabsRef = React.useRef(null);
   const subdomainRefs = React.useRef({});
   const compRefs = React.useRef({});
-  const snappingRef = React.useRef(false);
-
-  const DOMAIN_COLOR_VARS = {
-    'color-purple':    '--color-purple',
-    'color-deep-blue': '--color-deep-blue',
-    'color-nhs-blue':  '--color-nhs-blue',
-  };
 
   const levelLabels = { entry: 'Entry', mid: 'Mid', senior: 'Senior' };
 
@@ -63,15 +56,32 @@ export default function SkillsFramework() {
 
   const scrollToElement = (el) => {
     if (!el || !scrollAreaRef.current) return;
-    const containerTop = scrollAreaRef.current.getBoundingClientRect().top;
-    const target = Math.max(0, el.getBoundingClientRect().top - containerTop + scrollAreaRef.current.scrollTop - 22);
-    snappingRef.current = true;
-    scrollAreaRef.current.scrollTo({ top: target, behavior: 'smooth' });
-    setTimeout(() => { snappingRef.current = false; }, 600);
+    const scrollArea = scrollAreaRef.current;
+    const offset = 22;
+
+    if (scrollArea.scrollHeight > scrollArea.clientHeight) {
+      // Desktop: scroll-area element is the scroller
+      const containerTop = scrollArea.getBoundingClientRect().top;
+      scrollArea.scrollTo({
+        top: Math.max(0, el.getBoundingClientRect().top - containerTop + scrollArea.scrollTop - offset),
+        behavior: 'smooth',
+      });
+    } else {
+      // Mobile: window is the scroller.
+      // stickyHeight = absolute document Y of the scroll-area top (= sticky header + subnav height).
+      // This stays constant regardless of current scroll position.
+      const stickyHeight = scrollArea.getBoundingClientRect().top + window.scrollY;
+      const elAbsolute  = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: Math.max(0, elAbsolute - stickyHeight - offset),
+        behavior: 'smooth',
+      });
+    }
   };
 
   const handleDomainClick = () => {
-    if (scrollAreaRef.current) scrollAreaRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollAreaRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -173,46 +183,6 @@ export default function SkillsFramework() {
       ?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
   }, [stickySubNumber]);
 
-  // JS scroll snapping — one stop at a time in scroll direction
-  React.useEffect(() => {
-    const el = scrollAreaRef.current;
-    if (!el) return;
-    const OFFSET = 22;
-    let timer;
-    let lastScrollTop = el.scrollTop;
-    let direction = 1;
-    const snap = () => {
-      const stops = [...el.querySelectorAll('[data-scroll-stop]')];
-      if (!stops.length) return;
-      const containerTop = el.getBoundingClientRect().top;
-      const scrollTop = el.scrollTop;
-      const positions = stops.map(s =>
-        Math.max(0, s.getBoundingClientRect().top - containerTop + scrollTop - OFFSET)
-      );
-      let target;
-      if (direction > 0) {
-        target = positions.find(p => p > scrollTop + 2);
-      } else {
-        target = [...positions].reverse().find(p => p < scrollTop - 2);
-      }
-      if (target != null) {
-        snappingRef.current = true;
-        el.scrollTo({ top: target, behavior: 'smooth' });
-        setTimeout(() => { snappingRef.current = false; lastScrollTop = el.scrollTop; }, 600);
-      }
-    };
-
-    const onScroll = () => {
-      if (snappingRef.current) return;
-      direction = el.scrollTop > lastScrollTop ? 1 : -1;
-      lastScrollTop = el.scrollTop;
-      clearTimeout(timer);
-      timer = setTimeout(snap, 100);
-    };
-
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => { el.removeEventListener('scroll', onScroll); clearTimeout(timer); };
-  }, [data]);
 
   // Pad the bottom so the last card can scroll to the threshold but no further
   React.useEffect(() => {
@@ -294,11 +264,13 @@ export default function SkillsFramework() {
     });
   }, [data]);
 
+  // On mobile the scroll-area has overflow:visible so the window scrolls instead.
+  // Mirror the same handleScroll onto the window so the sticky nav updates.
   React.useEffect(() => {
-    if (!data) return;
-    const varName = DOMAIN_COLOR_VARS[data.domain['main-color']];
-    if (varName) document.documentElement.style.setProperty('--color-domain-base', `var(${varName})`);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [data]);
+
 
   if (!data) return <div className="loading">Loading…</div>;
 

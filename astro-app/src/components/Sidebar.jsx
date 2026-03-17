@@ -1,24 +1,13 @@
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle.jsx";
+import { PAGE_COLORS } from "../data/domains.js";
 
-const COLORS = ['var(--color-purple)', 'var(--color-nhs-blue)', 'var(--color-deep-blue)'];
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 export default function Sidebar({ domains, currentDomain }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Build ordered flat list of all nav items to assign alternating colors by index
-  const navItems = [
-    { id: '/' },
-    { id: 'contributing' },
-    { id: 'cf-overview' },
-    { id: 'cf-framework-mapping' },
-    { id: 'mapping-matrix' },
-    { id: 'framework-contents' },
-    ...domains.map(d => ({ id: d.id })),
-  ].map((item, i) => ({ ...item, color: COLORS[i % 3] }));
-
-  const colorOf = (id) => navItems.find(n => n.id === id)?.color ?? COLORS[0];
+  const colorOf = (id) => PAGE_COLORS[id] ?? 'var(--color-purple)';
   const activeColor = colorOf(currentDomain);
 
   useEffect(() => {
@@ -54,9 +43,9 @@ export default function Sidebar({ domains, currentDomain }) {
       {/* Backdrop */}
       {isOpen && <div className="sidebar-backdrop" onClick={close} aria-hidden="true" />}
 
-      <aside className={`sidebar${isOpen ? ' is-open' : ''}`}>
+      <aside className={`sidebar glass${isOpen ? ' is-open' : ''}`}>
         <div className="sidebar-brand">
-          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+          <div className="sidebar-brand__inner">
             <div>
               <h2>RTP</h2>
               <h2>Competency Framework</h2>

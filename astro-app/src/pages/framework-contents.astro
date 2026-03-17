@@ -1,33 +1,7 @@
 ---
-import FrameworkContents from "../components/FrameworkContents.jsx";
-import Sidebar from "../components/Sidebar.jsx";
-import "../styles/theme.css";
-
-const domains = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
-  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
-];
+import FrameworkContents from '../components/FrameworkContents.jsx';
+import Layout from '../layouts/Layout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Framework Contents – SDE Competency Framework</title>
-    <script>
-      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-purple)');
-    </script>
-  </head>
-  <body>
-    <div class="app-wrapper">
-      <Sidebar domains={domains} currentDomain="framework-contents" client:load />
-      <main class="main-content">
-        <FrameworkContents client:load />
-      </main>
-    </div>
-  </body>
-</html>
+<Layout title="Framework Contents – SDE Competency Framework" currentDomain="framework-contents">
+  <FrameworkContents client:load />
+</Layout>
