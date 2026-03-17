@@ -89,6 +89,9 @@ jobs:
         run: npm run build
         working-directory: astro-app
 
+      - name: Add .nojekyll to dist
+        run: touch astro-app/dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
