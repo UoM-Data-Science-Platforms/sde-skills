@@ -1,0 +1,166 @@
+---
+import { Content } from '../../data/cf-framework-mapping.md';
+import Sidebar from "../components/Sidebar.jsx";
+import "../styles/theme.css";
+
+const domains = [
+  { id: 'access-identity',            name: 'Safe Access & Identity'            },
+  { id: 'data-management',            name: 'Safe Data Management'              },
+  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
+  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
+  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
+  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
+];
+
+const sections = [
+  {
+    id: 'mapping-to-five-safes',
+    label: 'Five Safes',
+    subsections: [
+      { id: 'safe-data',     label: 'Safe Data'     },
+      { id: 'safe-projects', label: 'Safe Projects' },
+      { id: 'safe-people',   label: 'Safe People'   },
+      { id: 'safe-settings', label: 'Safe Settings' },
+      { id: 'safe-outputs',  label: 'Safe Outputs'  },
+    ],
+  },
+  {
+    id: 'mapping-to-satre',
+    label: 'SATRE',
+    subsections: [
+      { id: 'authentication--authorization', label: 'Authentication & Authorization' },
+      { id: 'environment-provisioning',      label: 'Environment Provisioning'       },
+      { id: 'data-ingestion--egress',        label: 'Data Ingestion & Egress'        },
+      { id: 'resource-management',           label: 'Resource Management'            },
+      { id: 'audit--monitoring',             label: 'Audit & Monitoring'             },
+      { id: 'output-checking',               label: 'Output Checking'                },
+    ],
+  },
+  {
+    id: 'cross-cutting-competencies',
+    label: 'Cross-Cutting',
+    subsections: [
+      { id: 'governance--compliance',        label: 'Governance & Compliance'        },
+      { id: 'collaboration--communication',  label: 'Collaboration & Communication'  },
+    ],
+  },
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Framework Mapping – SDE Team Development Hub</title>
+    <script>
+      document.body.dataset.theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
+    </script>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <Sidebar domains={domains} currentDomain="cf-framework-mapping" client:load />
+      <main class="main-content">
+        <div class="skills-framework">
+          <div class="sticky-header">
+            <h1>Competency Framework Mapping</h1>
+          </div>
+          <div class="sticky-subnav">
+            <div class="subdomain-tabs" id="section-tabs">
+              {sections.map(s => (
+                <button class="tab subdomain-tab" data-section={s.id}>
+                  {s.label}
+                </button>
+              ))}
+            </div>
+            <div class="competency-tabs" id="subsection-tabs"></div>
+          </div>
+          <div class="scroll-area" id="scroll-area">
+            <article class="prose" style="padding: 0; height: auto; overflow-y: visible;">
+              <Content />
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script define:vars={{ sections }}>
+  const sectionTabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
+  const subsectionNav = document.getElementById('subsection-tabs');
+
+  let currentSectionId = sections[0]?.id ?? null;
+
+  // --- render subsection buttons for a given section ---
+  const renderSubsections = (sectionId) => {
+    const sec = sections.find(s => s.id === sectionId);
+    subsectionNav.innerHTML = '';
+    (sec?.subsections ?? []).forEach(sub => {
+      const btn = document.createElement('button');
+      btn.className = 'tab competency-tab';
+      btn.dataset.sub = sub.id;
+      btn.textContent = sub.label;
+      btn.addEventListener('click', () =>
+        document.getElementById(sub.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      );
+      subsectionNav.appendChild(btn);
+    });
+  };
+
+  const setActiveSection = (id, force = false) => {
+    sectionTabs.forEach(t => t.classList.toggle('active', t.dataset.section === id));
+    if (id !== currentSectionId || force) {
+      currentSectionId = id;
+      renderSubsections(id);
+    }
+  };
+
+  const setActiveSubsection = (id) => {
+    subsectionNav.querySelectorAll('.competency-tab').forEach(t =>
+      t.classList.toggle('active', t.dataset.sub === id)
+    );
+  };
+
+  // --- which heading is "active" = last one whose top is above the threshold ---
+  const OFFSET = window.innerHeight * 0.4;
+
+  const getActive = (ids) => {
+    let active = ids[0];
+    for (const id of ids) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= OFFSET) active = id;
+    }
+    return active;
+  };
+
+  // --- section tab clicks ---
+  sectionTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const sectionId = tab.dataset.section;
+      setActiveSection(sectionId, true);
+      const sec = sections.find(s => s.id === sectionId);
+      if (sec?.subsections[0]) setActiveSubsection(sec.subsections[0].id);
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // --- scroll handler ---
+  const allSectionIds = sections.map(s => s.id);
+  const allSubIds     = sections.flatMap(s => s.subsections.map(sub => sub.id));
+
+  const onScroll = () => {
+    const secId = getActive(allSectionIds);
+    setActiveSection(secId);
+
+    const sec    = sections.find(s => s.id === secId);
+    const subIds = (sec?.subsections ?? []).map(s => s.id);
+    if (subIds.length) setActiveSubsection(getActive(subIds));
+  };
+
+  document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+
+  // --- initialise ---
+  renderSubsections(currentSectionId);
+  if (sections[0]?.subsections[0]) setActiveSubsection(sections[0].subsections[0].id);
+  sectionTabs[0]?.classList.add('active');
+</script>

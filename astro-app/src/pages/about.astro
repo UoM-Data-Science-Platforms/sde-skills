@@ -4,12 +4,12 @@ import Sidebar from "../components/Sidebar.jsx";
 import "../styles/theme.css";
 
 const domains = [
-  { id: 'access-identity',           name: 'Safe Access & Identity',           color: 'var(--color-nhs-blue)'  },
-  { id: 'data-management',           name: 'Safe Data Management',             color: 'var(--color-deep-blue)' },
-  { id: 'governance-compliance',     name: 'Safe Governance & Compliance',     color: 'var(--color-purple)'    },
-  { id: 'outputs-disclosure-control',name: 'Safe Outputs & Disclosure Control',color: 'var(--color-nhs-blue)'  },
-  { id: 'projects-operations',       name: 'Safe Projects & Operations',       color: 'var(--color-deep-blue)' },
-  { id: 'technology-engineering',    name: 'Safe Technology & Engineering',    color: 'var(--color-purple)'    },
+  { id: 'access-identity',            name: 'Safe Access & Identity'            },
+  { id: 'data-management',            name: 'Safe Data Management'              },
+  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
+  { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
+  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
+  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
 ];
 ---
 <html lang="en">
@@ -19,7 +19,7 @@ const domains = [
     <title>The Team – SDE Team Development Hub</title>
     <script>
       document.body.dataset.theme = localStorage.getItem('theme') || 'light';
-      document.documentElement.style.setProperty('--color-domain-base', `var(--color-purple)`);
+      document.documentElement.style.setProperty('--color-domain-base', 'var(--color-nhs-blue)');
     </script>
   </head>
   <body>
