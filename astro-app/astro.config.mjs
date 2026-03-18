@@ -6,5 +6,6 @@ export default defineConfig({
   integrations: [react()],
   markdown: {
     remarkPlugins: [remarkMkdocsAttr]
-  }
+  },
+  base: '/sde-skills/demo',
 });

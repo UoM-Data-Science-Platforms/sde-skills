@@ -1,42 +1,177 @@
 ---
-import { Content } from '../../data/contributing.md';
 import Layout from '../layouts/Layout.astro';
 
-const sections = [
-  { id: 'ways-to-contribute',                                        label: 'Ways to Contribute'  },
-  { id: 'option-1-creating-an-issue-non-technical-approach',         label: 'Option 1: Issues'    },
-  { id: 'option-2-submitting-changes-via-pull-request',              label: 'Option 2: Pull Requests' },
-  { id: 'guidelines-for-contributions',                              label: 'Guidelines'          },
-  { id: 'getting-help',                                              label: 'Getting Help'        },
+const ISSUE_STEPS = [
+  { text: 'Navigate to the <a href="https://github.com/UoM-Data-Science-Platforms/sde-skills" target="_blank" rel="noreferrer">GitHub repository</a> for this project.' },
+  { text: 'Click on the <a href="https://github.com/UoM-Data-Science-Platforms/sde-skills/issues" target="_blank" rel="noreferrer"><strong>Issues</strong></a> tab near the top of the page.' },
+  { text: 'Click the green <strong>"New issue"</strong> button.' },
+  { text: 'Fill in the <strong>Title</strong> (brief summary) and <strong>Description</strong> — include which competency you\'re referring to, what change you\'re suggesting, why it would be beneficial, and any relevant references.' },
+  { text: 'Click <strong>"Submit new issue"</strong> when you\'re done.' },
+];
+
+const PR_PREREQS = [
+  'A GitHub account',
+  'Git installed on your computer',
+  'Basic understanding of Markdown formatting',
+];
+
+const PR_STEPS = [
+  { text: 'Fork the repository by clicking the <strong>"Fork"</strong> button at the top right of the repository page.' },
+  { text: 'Clone your fork to your local machine.', code: 'git clone https://github.com/YOUR-USERNAME/sde-skills.git\ncd sde-skills' },
+  { text: 'Create a new branch for your changes.', code: 'git checkout -b your-branch-name' },
+  { text: 'Edit the relevant Markdown files in <code>docs/competency_framework/</code> using any text editor.' },
+  { text: 'Stage and commit your changes.', code: 'git add .\ngit commit -m "Brief description of your changes"' },
+  { text: 'Push your changes to your fork.', code: 'git push origin your-branch-name' },
+  { text: 'Open a Pull Request — go to the original repository, click <strong>Pull Requests → New Pull Request → compare across forks</strong>, select your fork and branch, then fill in the details.' },
+];
+
+const GUIDELINES = [
+  { title: 'Be specific',            desc: 'Reference the exact competency or section you are addressing.' },
+  { title: 'Provide rationale',      desc: 'Explain why the change would be beneficial.' },
+  { title: 'Include references',     desc: 'Cite industry standards, academic papers, or other relevant sources.' },
+  { title: 'Use clear language',     desc: 'Write in plain, accessible language for all readers.' },
+  { title: 'Follow existing format', desc: 'Match the structure and style of existing documents when editing directly.' },
 ];
 ---
 <Layout title="Contributing – SDE Team Development Hub" currentDomain="contributing">
   <div class="skills-framework">
+
     <div class="sticky-header">
       <h1>Contributing</h1>
     </div>
-    <div class="sticky-subnav">
-      <div class="subdomain-tabs" id="section-tabs">
-        {sections.map(s => (
-          <button class="tab subdomain-tab" data-section={s.id}>
-            {s.label}
-          </button>
-        ))}
+
+    <div class="scroll-area">
+
+      <p class="domain-description">
+        Thank you for your interest in improving the RTP Competency Framework.
+        There are two paths depending on your technical comfort level — expand either below to get started.
+      </p>
+
+      {/* ── Accordion: Create an Issue ── */}
+      <div class="competency-card is-visible card--flush collapsible">
+        <button class="collapsible-summary">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"/>
+          </svg>
+          <span class="accordion-text">
+            <span class="accordion-title">Create an Issue</span>
+            <span class="accordion-subtitle">The simplest way to suggest changes — no Git knowledge required.</span>
+          </span>
+          <span class="badge--domain">Recommended</span>
+        </button>
+
+        <div class="collapsible-content">
+          <div class="collapsible-inner">
+            <div class="collapsible-body">
+              <p>Creating an issue is the simplest way to suggest changes, report errors, or propose additions to the competency framework.</p>
+
+              <div class="card__sub">
+                <div class="card__label">Steps</div>
+                {ISSUE_STEPS.map((step, i) => (
+                  <div class="step-row">
+                    <span class="step-badge">{i + 1}</span>
+                    <span class="step-text" set:html={step.text} />
+                  </div>
+                ))}
+              </div>
+
+              <div class="card__sub">
+                <div class="card__label">Example Issue</div>
+                <pre class="code-example">Title: Suggest additional skills for Cloud Infrastructure competency
+
+Description:
+I would like to suggest adding "Kubernetes administration" as a skill under the
+Cloud Infrastructure competency at the Senior level.
+
+This would be valuable because more research environments are adopting
+containerisation for reproducible research, and Kubernetes skills are increasingly
+needed for managing these environments.
+
+Reference: [insert link or page reference]</pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="scroll-area" id="scroll-area">
-      <article class="prose prose--reset prose--lead">
-        <Content />
-      </article>
+
+      {/* ── Accordion: Pull Request ── */}
+      <div class="competency-card is-visible card--flush collapsible">
+        <button class="collapsible-summary">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8">
+            <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
+          </svg>
+          <span class="accordion-text">
+            <span class="accordion-title">Submit a Pull Request</span>
+            <span class="accordion-subtitle">Directly propose changes — for those comfortable with Git and Markdown.</span>
+          </span>
+        </button>
+
+        <div class="collapsible-content">
+          <div class="collapsible-inner">
+            <div class="collapsible-body">
+              <p>If you are comfortable with Git and GitHub, you can directly propose changes by creating a pull request.</p>
+
+              <div class="card__sub">
+                <div class="card__label">Prerequisites</div>
+                {PR_PREREQS.map((item, i) => (
+                  <div class="step-row">
+                    <span class="bullet-dot"></span>
+                    <span class="step-text">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div class="card__sub">
+                <div class="card__label">Steps</div>
+                {PR_STEPS.map((step, i) => (
+                  <div class={`step-row${step.code ? ' step-row--block' : ''}`}>
+                    <div class="step-header">
+                      <span class="step-badge">{i + 1}</span>
+                      <span class="step-text" set:html={step.text} />
+                    </div>
+                    {step.code && <pre class="code-snippet">{step.code}</pre>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Guidelines + Getting Help — side by side ── */}
+      <div class="pair-grid">
+
+        <div class="competency-card is-visible card--flush">
+          <div class="card__label">Guidelines for Contributions</div>
+          {GUIDELINES.map((g, i) => (
+            <div class="step-row">
+              <span class="step-badge">{i + 1}</span>
+              <span class="step-text"><strong>{g.title}</strong> — {g.desc}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="competency-card is-visible card--flush">
+          <div class="card__label">Getting Help</div>
+          <div class="step-row">
+            <span class="bullet-dot"></span>
+            <span class="step-text">For technical help with Git or GitHub, refer to <a href="https://docs.github.com/en" target="_blank" rel="noreferrer">GitHub's documentation</a>.</span>
+          </div>
+          <div class="step-row">
+            <span class="bullet-dot"></span>
+            <span class="step-text">For questions about the framework itself, <a href="https://github.com/UoM-Data-Science-Platforms/sde-skills/issues/new" target="_blank" rel="noreferrer">open an issue</a> with the <strong>"question"</strong> label.</span>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </Layout>
 
-<script define:vars={{ sections }}>
-  window._pageSections = sections;
-</script>
 <script>
-  import { initScrollSync } from '../scripts/scrollSync.js';
-  initScrollSync({ sections: window._pageSections });
-  document.querySelector('#scroll-area h1')?.remove();
+  document.querySelectorAll('.collapsible .collapsible-summary').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.collapsible').classList.toggle('is-open'));
+  });
 </script>
