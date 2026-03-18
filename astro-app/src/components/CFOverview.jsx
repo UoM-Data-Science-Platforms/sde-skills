@@ -216,6 +216,8 @@ const ENHANCED_AREAS = [
   },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
 const SECTIONS = [
   { id: 'introduction',         label: 'Introduction'    },
   { id: 'framework-structure',  label: 'Structure'       },
@@ -484,7 +486,7 @@ export default function CFOverview() {
             return (
               <a
                 key={d.id}
-                href={`/${d.id}/`}
+                href={`${base}${d.id}/`}
                 className="competency-card is-visible"
                 style={{
                   display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)',
@@ -568,7 +570,7 @@ export default function CFOverview() {
           <h2 className="subdomain-title is-visible" style={{ marginTop: 'var(--space-sm)' }} id="standards-alignment">Standards Alignment</h2>
           <p className="subdomain-description">
             How each domain maps to the Five Safes model and SATRE specification.
-            <a href="/cf-framework-mapping/" style={{ color, marginLeft: '0.5rem', fontSize: '0.85rem' }}>Full mapping detail →</a>
+            <a href={`${base}cf-framework-mapping/`} style={{ color, marginLeft: '0.5rem', fontSize: '0.85rem' }}>Full mapping detail →</a>
           </p>
 
           {/* Toggle tabs */}
@@ -649,7 +651,7 @@ export default function CFOverview() {
                     <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', textTransform: 'capitalize' }}>{level}</span>
                   </span>
                 ))}
-                <a href="/satre-mapping/" style={{ marginLeft: 'auto', fontSize: '0.8rem', color }}>Full competency detail →</a>
+                <a href={`${base}satre-mapping/`} style={{ marginLeft: 'auto', fontSize: '0.8rem', color }}>Full competency detail →</a>
               </div>
             </div>
           )}

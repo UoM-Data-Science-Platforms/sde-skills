@@ -342,6 +342,24 @@ export default function SkillsFramework() {
               {subVal.description && (
                 <p className="subdomain-description">{subVal.description}</p>
               )}
+
+              {/* HACK: hardcoded relevant tools/technologies/standards prototype — remove when implementing properly */}
+              <div className="subdomain-relevant">
+                <div className="relevant-group">
+                  <span className="relevant-label">Tools</span>
+                  {['Git / GitHub', 'VS Code', 'SonarQube', 'Jira'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
+                </div>
+                <div className="relevant-group">
+                  <span className="relevant-label">Technologies</span>
+                  {['Python', 'REST APIs', 'Docker', 'CI/CD Pipelines'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
+                </div>
+                <div className="relevant-group">
+                  <span className="relevant-label">Standards</span>
+                  {['OWASP Top 10', 'ISO/IEC 27001', 'NCSC Secure Dev'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
+                </div>
+              </div>
+              {/* END HACK */}
+
               {competencies.map(([compKey, compVal], compIdx) => {
                 const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;
                 const idx = refIdx++;
@@ -399,9 +417,6 @@ export default function SkillsFramework() {
                           {activeProficiency[compNumber] != null ? (
                             <div className="proficiency-detail">
                               <h4>{selectedLevelData.skills[activeProficiency[compNumber]]}</h4>
-                              <CollapsibleSection title="Technologies" defaultOpen={true}>
-                                <p>No technologies listed yet.</p>
-                              </CollapsibleSection>
                               <CollapsibleSection title="Training Materials">
                                 <p>No training materials listed yet.</p>
                               </CollapsibleSection>

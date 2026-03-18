@@ -114,6 +114,28 @@ a.nav-group-title {
 
 .nav-sub-link {
   font-size: calc(var(--text-small) * 0.95);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.nav-sub-link::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  opacity: 0.4;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav-sub-link:hover::before,
+.nav-sub-link.active::before {
+  opacity: 1;
+  border-color: var(--color-item, currentColor);
 }
 
 /* Footer — theme toggle */
