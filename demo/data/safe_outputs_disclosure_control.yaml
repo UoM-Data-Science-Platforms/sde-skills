@@ -1,0 +1,210 @@
+domain:
+  index: 4
+  main-color: color-nhs-blue
+  id: safe-outputs-disclosure-control
+  name: Safe Outputs & Disclosure Control
+  description: This domain covers the technical controls that help to protect projects from accidental
+    or intentional disclosure, as well as providing tooling to support disclosure review operations of
+    project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose
+    sensitive information.
+  source_file: safe_outputs_disclosure_control.md
+  subdomains:
+    output-checking:
+      id: output-checking
+      name: Output Checking
+      description: This subdomain focuses on providing output checkers with tools that facilitate structured
+        review processes for different output formats, and developing decision support systems that ensure
+        consistent application of disclosure control rules while maintaining appropriate governance and
+        traceability.
+      competencies:
+        output-review-processes:
+          id: output-review-processes
+          name: Output Review Processes
+          description: Involves understanding review requirements for different output formats, designing
+            workflows, implementing tracking and governance processes.
+          levels:
+            entry:
+              id: output-review-processes-entry
+              name: Entry Level
+              skills:
+              - Understands output review requirements and processes
+              - Familiar with common output formats and their risks
+            mid:
+              id: output-review-processes-mid
+              name: Mid Level
+              skills:
+              - Implements output tracking and audit logs to support governance processes
+    tools-and-platforms-to-support-output-checking:
+      id: tools-and-platforms-to-support-output-checking
+      name: Tools and platforms to support output checking
+      description: "### Workflow engines\nDeploy and administer workflow engines to help ensure consistency,\
+        \ reliability, and traceability of output checking processes. Create individual workflow that\
+        \ meet governance and legal requirements for project teams.\n\n=== \":material-battery-10: Entry\
+        \ Level\"\n\n    - is aware of workflow engines and the functionality they provide\n    - is aware\
+        \ of actors and stages in the disclosure review process\n    - can administer workflow engines\
+        \ to make changes to existing disclosure review workflows\n\n=== \":material-battery-50: Mid Level\"\
+        \n\n    - can assess suitability of workflow engines for achieving desired functionality\n   \
+        \ - can work with project stakeholder to design workflows that address local policy and governance/regulatory\
+        \ stipulations\n    - can administer workflow engines to implement disclosure review workflows\n\
+        \    - can develop and maintain workflow templates so maximize reuse across similar governance\
+        \ constraints\n\n=== \":material-battery-90: Senior Level\"\n\n    - Leads the technology strategy\
+        \ for business process management"
+      competencies:
+        workflow-engines:
+          id: workflow-engines
+          name: Workflow engines
+          description: Deploy and administer workflow engines to help ensure consistency, reliability,
+            and traceability of output checking processes. Create individual workflow that meet governance
+            and legal requirements for project teams.
+          levels:
+            entry:
+              id: workflow-engines-entry
+              name: Entry Level
+              skills:
+              - is aware of workflow engines and the functionality they provide
+              - is aware of actors and stages in the disclosure review process
+              - can administer workflow engines to make changes to existing disclosure review workflows
+            mid:
+              id: workflow-engines-mid
+              name: Mid Level
+              skills:
+              - can assess suitability of workflow engines for achieving desired functionality
+              - can work with project stakeholder to design workflows that address local policy and governance/regulatory
+                stipulations
+              - can administer workflow engines to implement disclosure review workflows
+              - can develop and maintain workflow templates so maximize reuse across similar governance
+                constraints
+            senior:
+              id: workflow-engines-senior
+              name: Senior Level
+              skills:
+              - Leads the technology strategy for business process management
+        data-airlocks:
+          id: data-airlocks
+          name: Data airlocks
+          description: Install and administer data airlock applications, understand the roles and what
+            level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit,
+            review etc.) within the airlock application, create user documentation and training materials,
+            contribute to on-going improvements to data airlocks to ensure they meet user needs as well
+            as comply with standards and regulations.
+          levels:
+            entry:
+              id: data-airlocks-entry
+              name: Entry Level
+              skills:
+              - is familiar with data airlocks
+              - is familiar with user roles in data airlocks
+            mid:
+              id: data-airlocks-mid
+              name: Mid Level
+              skills:
+              - can write user documentation relating to the operation of data airlocks
+              - can provide training to users relating to the operation of data airlocks
+              - can troubleshoot common user issues with data airlocks
+            senior:
+              id: data-airlocks-senior
+              name: Senior Level
+              skills:
+              - can influence design of data airlocks according to user requirements and changes in standards
+                and governance
+        code-repositories:
+          id: code-repositories
+          name: Code repositories
+          description: Install and configure code repository systems (e.g., Git) that allow source code
+            to be imported and exported from SDEs in industry standard ways. Develop automated checks
+            that can perform static analysis to ensure source code doesn't contain passwords, API keys,
+            or other infrastructural secrets. Develop workflows for disclosure checking to ensure the
+            source code does not contain any restricted data. Use advanced techniques to perform automated
+            code reviews to assess further requirement for manual inspection.
+          levels:
+            entry:
+              id: code-repositories-entry
+              name: Entry Level
+              skills:
+              - Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
+            mid:
+              id: code-repositories-mid
+              name: Mid Level
+              skills:
+              - Implements code publication workflows and processes (e.g., code reviews)
+              - Can install and configure code repositories with correct access controls for data ingress
+                and egress
+              - Can develop automated pipelines that check for known security risk (e.g., using static
+                analysis techniques to check for passwords, ip addresses, or other sensitive infrastructural
+                information)
+            senior:
+              id: code-repositories-senior
+              name: Senior Level
+              skills:
+              - Establishes code publication frameworks and governance
+              - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating
+                secure code repositories, developing sharing policies, designing automated pipelines to
+                review eligibility of code for release).
+    statistical-disclosure-control:
+      id: statistical-disclosure-control
+      name: Statistical Disclosure Control
+      description: Implementing automated systems that enforce consistent application of disclosure controls
+        across varied research outputs while maintaining statistical validity.
+      competencies:
+        disclosure-risk-assessment:
+          id: disclosure-risk-assessment
+          name: Disclosure Risk Assessment
+          description: Implementing tools to facilitate reviewing research outputs for potential privacy
+            violations and re-identification risks. Has an awareness of different types of disclosure
+            risks (identity and attribute), recommending appropriate controls.
+          levels:
+            entry:
+              id: disclosure-risk-assessment-entry
+              name: Entry Level
+              skills:
+              - Understands basic disclosure risk concepts (re-identification risks, data sensitivity
+                levels)
+              - Familiar with common types of disclosure risks (identity, attribute)
+            mid:
+              id: disclosure-risk-assessment-mid
+              name: Mid Level
+              skills:
+              - Recommends appropriate controls based on risk assessment
+            senior:
+              id: disclosure-risk-assessment-senior
+              name: Senior Level
+              skills:
+              - Leads initiatives to enhance disclosure risk management (e.g., implementing new tools
+                or techniques, anticipate introduction of new regulatory frameworks).
+        automated-disclosure-control:
+          id: automated-disclosure-control
+          name: Automated Disclosure Control
+          description: Implements systems that automatically apply disclosure controls to research outputs.
+            Involves automated tools and solutions for common output types, configuring rules and thresholds,
+            validating effectiveness, architecting enterprise strategies, and developing advanced algorithms
+            to enhance automated disclosure control capabilities.
+          levels:
+            entry:
+              id: automated-disclosure-control-entry
+              name: Entry Level
+              skills:
+              - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
+              - Familiar with available SDC automation tools
+            mid:
+              id: automated-disclosure-control-mid
+              name: Mid Level
+              skills:
+              - Implements automated SDC solutions for common output types
+              - Configures SDC rules and thresholds in automation systems
+              - Validates accuracy and effectiveness of automated controls (e.g., testing against known
+                risks, benchmarking)
+            senior:
+              id: automated-disclosure-control-senior
+              name: Senior Level
+              skills:
+              - Leads initiatives to enhance automated SDC capabilities
+    accidental-disclosure:
+      id: accidental-disclosure
+      name: Accidental disclosure
+      description: ''
+      competencies: {}
+    emergency-response:
+      id: emergency-response
+      name: Emergency response
+      description: ''
+      competencies: {}

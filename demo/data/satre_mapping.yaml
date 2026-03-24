@@ -1,0 +1,36 @@
+domain:
+  id: satre-mapping-to-sde-skills-competency-framework
+  name: SATRE Mapping to SDE Skills Competency Framework
+  description: 'This document maps the [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/)
+    specification to the SDE Skills Competency Framework. An **X** indicates that the competencies within
+    that subdomain substantively contribute to a TRE''s ability to address that SATRE component''s requirements.
+
+
+    Each X reflects a considered judgement across all individual competencies within the subdomain — the
+    question asked is: *do the skills in this subdomain meaningfully enable a TRE team to deliver this
+    SATRE capability?*
+
+
+    ---'
+  source_file: satre_mapping.md
+  subdomains:
+    column-key:
+      id: column-key
+      name: Column Key
+      description: ''
+      competencies: {}
+    mapping-table:
+      id: mapping-table
+      name: Mapping Table
+      description: ''
+      competencies: {}
+    coverage-summary:
+      id: coverage-summary
+      name: Coverage Summary
+      description: ''
+      competencies: {}
+    observations:
+      id: observations
+      name: Observations
+      description: ''
+      competencies: {}

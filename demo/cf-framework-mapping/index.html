@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Framework Mapping – SDE Team Development Hub</title><!-- Inline: must run before first paint to prevent flash of unstyled theme --><script>
+      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
+    </script><script>(function(){const domainColor = "var(--color-deep-blue)";
+
+      document.documentElement.style.setProperty('--color-domain-base', domainColor);
+    })();</script><link rel="stylesheet" href="/sde-skills/demo/_astro/_slug_.B7dYsHWC.css"></head> <body> <div class="app-wrapper"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="NSt5" prefix="r1" component-url="/sde-skills/demo/_astro/Sidebar.B-fdSEER.js" component-export="default" renderer-url="/sde-skills/demo/_astro/client.dXHaCmHv.js" props="{&quot;domains&quot;:[1,[[0,{&quot;id&quot;:[0,&quot;access-identity&quot;],&quot;name&quot;:[0,&quot;Safe Access &amp; Identity&quot;]}],[0,{&quot;id&quot;:[0,&quot;data-management&quot;],&quot;name&quot;:[0,&quot;Safe Data Management&quot;]}],[0,{&quot;id&quot;:[0,&quot;governance-compliance&quot;],&quot;name&quot;:[0,&quot;Safe Governance &amp; Compliance&quot;]}],[0,{&quot;id&quot;:[0,&quot;outputs-disclosure-control&quot;],&quot;name&quot;:[0,&quot;Safe Outputs &amp; Disclosure Control&quot;]}],[0,{&quot;id&quot;:[0,&quot;projects-operations&quot;],&quot;name&quot;:[0,&quot;Safe Projects &amp; Operations&quot;]}],[0,{&quot;id&quot;:[0,&quot;technology-engineering&quot;],&quot;name&quot;:[0,&quot;Safe Technology &amp; Engineering&quot;]}]]],&quot;currentDomain&quot;:[0,&quot;cf-framework-mapping&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;Sidebar&quot;,&quot;value&quot;:true}" await-children><button class="mobile-menu-btn" aria-label="Open navigation"><span></span><span></span><span></span></button><aside class="sidebar glass"><div class="sidebar-brand"><div class="sidebar-brand__inner"><div><h2>RTP</h2><h2>Competency Framework</h2></div><button class="sidebar-close-btn" aria-label="Close navigation">✕</button></div></div><nav class="sidebar-nav"><ul><li class="nav-group"><a href="/sde-skills/demo/" class="nav-link nav-group-title" style="--color-item:var(--color-purple)">Home</a><ul class="nav-sub"><li><a href="/sde-skills/demo/contributing/" class="nav-link nav-sub-link" style="--color-item:var(--color-nhs-blue)">Contributing</a></li></ul></li><li class="nav-group"><a href="/sde-skills/demo/cf-overview/" class="nav-link nav-group-title" style="--color-item:var(--color-deep-blue)">Competency Framework</a><ul class="nav-sub"><li><a href="/sde-skills/demo/framework-contents/" class="nav-link nav-sub-link" style="--color-item:var(--color-purple)">Contents</a></li><li><a href="/sde-skills/demo/mapping-matrix/" class="nav-link nav-sub-link" style="--color-item:var(--color-nhs-blue)">Mapping Matrix</a></li><li><a href="/sde-skills/demo/access-identity/" class="nav-link nav-sub-link" style="--color-item:var(--color-deep-blue)">Safe Access &amp; Identity</a></li><li><a href="/sde-skills/demo/data-management/" class="nav-link nav-sub-link" style="--color-item:var(--color-purple)">Safe Data Management</a></li><li><a href="/sde-skills/demo/governance-compliance/" class="nav-link nav-sub-link" style="--color-item:var(--color-nhs-blue)">Safe Governance &amp; Compliance</a></li><li><a href="/sde-skills/demo/outputs-disclosure-control/" class="nav-link nav-sub-link" style="--color-item:var(--color-deep-blue)">Safe Outputs &amp; Disclosure Control</a></li><li><a href="/sde-skills/demo/projects-operations/" class="nav-link nav-sub-link" style="--color-item:var(--color-purple)">Safe Projects &amp; Operations</a></li><li><a href="/sde-skills/demo/technology-engineering/" class="nav-link nav-sub-link" style="--color-item:var(--color-nhs-blue)">Safe Technology &amp; Engineering</a></li></ul></li></ul></nav><div class="sidebar-footer"><a href="https://github.com/UoM-Data-Science-Platforms/sde-skills" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:8px;padding:var(--space-xs) var(--space-md);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sm);text-decoration:none;margin-bottom:var(--space-sm);transition:background var(--transition-fast), color var(--transition-fast)"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="color:var(--color-text-muted);flex-shrink:0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg><span style="display:flex;align-items:center;gap:10px;font-size:var(--text-small);color:var(--color-text-muted);flex:1"><span style="display:flex;align-items:center;gap:3px"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="opacity:0.7"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.873 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>—</span><span style="display:flex;align-items:center;gap:3px"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="opacity:0.7"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path></svg>—</span></span></a><button class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button></div></aside><!--astro:end--></astro-island> <main class="main-content">  <div class="skills-framework"> <div class="sticky-header"> <h1>Competency Framework Mapping</h1> </div> <div class="sticky-subnav"> <div class="subdomain-tabs" id="section-tabs"> <button class="tab subdomain-tab" data-section="mapping-to-five-safes"> Five Safes </button><button class="tab subdomain-tab" data-section="mapping-to-satre"> SATRE </button><button class="tab subdomain-tab" data-section="cross-cutting-competencies"> Cross-Cutting </button> </div> <div class="competency-tabs" id="subsection-tabs"></div> </div> <div class="scroll-area" id="scroll-area"> <article class="prose prose--reset"> <h1 id="competency-framework-mapping">Competency Framework Mapping</h1>
+<p>This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the <a href="https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/">Five Safes</a> model and <a href="https://satre-specification.readthedocs.io/">Standard Architecture for Trusted Research Environments (SATRE)</a> specification.</p>
+<h2 id="mapping-to-five-safes">Mapping to Five Safes</h2>
+<p>The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles:</p>
+<h3 id="safe-data">Safe Data</h3>
+<blockquote>
+<p><em>Data is treated to protect any confidentiality concerns.</em></p>
+</blockquote>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Data Management</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Data classification &#x26; sensitivity assessment</li>
+<li>Data lineage &#x26; provenance tracking</li>
+<li>De-identification techniques</li>
+<li>Data quality management</li>
+<li>Data storage &#x26; database security</li>
+</ul>
+<h3 id="safe-projects">Safe Projects</h3>
+<blockquote>
+<p><em>Research projects are approved by data owners for the public good.</em></p>
+</blockquote>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Projects &#x26; Operations</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>SDE project planning</li>
+<li>Research project facilitation</li>
+<li>Research ethics compliance</li>
+<li>Service level management</li>
+<li>Researcher training &#x26; support</li>
+</ul>
+<h3 id="safe-people">Safe People</h3>
+<blockquote>
+<p><em>Researchers are trained and authorised to use data safely.</em></p>
+</blockquote>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Access &#x26; Identity</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Authentication systems</li>
+<li>User provisioning &#x26; lifecycle management</li>
+<li>Role-based access control</li>
+<li>Researcher onboarding</li>
+<li>Training &#x26; certification verification</li>
+</ul>
+<h3 id="safe-settings">Safe Settings</h3>
+<blockquote>
+<p><em>A SecureLab environment prevents unauthorised use.</em></p>
+</blockquote>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Technology &#x26; Engineering</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Secure environment design</li>
+<li>Network architecture</li>
+<li>Infrastructure &#x26; deployment</li>
+<li>Cloud infrastructure management</li>
+<li>System architecture</li>
+</ul>
+<h3 id="safe-outputs">Safe Outputs</h3>
+<blockquote>
+<p><em>Screened and approved outputs that are non-disclosive.</em></p>
+</blockquote>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Outputs &#x26; Disclosure Control</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Statistical disclosure control techniques</li>
+<li>Disclosure risk assessment</li>
+<li>Output review processes</li>
+<li>Output documentation &#x26; justification</li>
+<li>Synthetic data generation</li>
+</ul>
+<h2 id="mapping-to-satre">Mapping to SATRE</h2>
+<p>The <a href="https://satre-specification.readthedocs.io/">Standard Architecture for Trusted Research Environments (SATRE)</a> specification <em>provides a comprehensive high-level architecture for research organisations handling sensitive data safely.</em> Our framework aligns with these components:</p>
+<h3 id="authentication--authorization">Authentication &#x26; Authorization</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Access &#x26; Identity</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Authentication systems</li>
+<li>Federated identity management</li>
+<li>Role-based access control</li>
+<li>Attribute-based access control</li>
+<li>Least privilege implementation</li>
+</ul>
+<h3 id="environment-provisioning">Environment Provisioning</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Technology &#x26; Engineering</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Secure environment design</li>
+<li>Containerization &#x26; orchestration</li>
+<li>Cloud infrastructure management</li>
+<li>Microservices &#x26; API design</li>
+<li>Software development lifecycle</li>
+</ul>
+<h3 id="data-ingestion--egress">Data Ingestion &#x26; Egress</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Data Management</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Data pipeline development</li>
+<li>Data validation</li>
+<li>Data models &#x26; standardization</li>
+<li>Data quality management</li>
+<li>Research dataset creation</li>
+</ul>
+<h3 id="resource-management">Resource Management</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Projects &#x26; Operations</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Service level management</li>
+<li>Change &#x26; release management</li>
+<li>TRE tools &#x26; capabilities</li>
+<li>Monitoring &#x26; observability</li>
+<li>Documentation &#x26; knowledge management</li>
+</ul>
+<h3 id="audit--monitoring">Audit &#x26; Monitoring</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Governance &#x26; Compliance</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Audit trail implementation</li>
+<li>Compliance monitoring &#x26; reporting</li>
+<li>Security assessment &#x26; testing</li>
+<li>Certification &#x26; accreditation</li>
+<li>Incident response management</li>
+</ul>
+<h3 id="output-checking">Output Checking</h3>
+<p><strong>Primary Domain Mapping:</strong></p>
+<ul>
+<li>Safe Outputs &#x26; Disclosure Control</li>
+</ul>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Output review processes</li>
+<li>Statistical disclosure control techniques</li>
+<li>Decision support systems</li>
+<li>De-identification techniques</li>
+<li>Synthetic data generation</li>
+</ul>
+<h2 id="cross-cutting-competencies">Cross-Cutting Competencies</h2>
+<p>Some competencies span multiple Five Safes principles or SATRE components:</p>
+<h3 id="governance--compliance">Governance &#x26; Compliance</h3>
+<p><strong>Spans across all Five Safes principles and SATRE components</strong></p>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Information governance</li>
+<li>Data protection compliance</li>
+<li>Healthcare standards compliance</li>
+<li>Research ethics compliance</li>
+<li>Security controls implementation</li>
+</ul>
+<h3 id="collaboration--communication">Collaboration &#x26; Communication</h3>
+<p><strong>Key to effective implementation of all domains</strong></p>
+<p><strong>Key Competencies:</strong></p>
+<ul>
+<li>Documentation &#x26; knowledge management</li>
+<li>Researcher training &#x26; support</li>
+<li>Continuous improvement</li>
+<li>Research project facilitation</li>
+<li>Technical collaboration</li>
+</ul> </article> </div> </div>  </main> </div> </body></html> <script>(function(){const sections = [{"id":"mapping-to-five-safes","label":"Five Safes","subsections":[{"id":"safe-data","label":"Safe Data"},{"id":"safe-projects","label":"Safe Projects"},{"id":"safe-people","label":"Safe People"},{"id":"safe-settings","label":"Safe Settings"},{"id":"safe-outputs","label":"Safe Outputs"}]},{"id":"mapping-to-satre","label":"SATRE","subsections":[{"id":"authentication--authorization","label":"Authentication & Authorization"},{"id":"environment-provisioning","label":"Environment Provisioning"},{"id":"data-ingestion--egress","label":"Data Ingestion & Egress"},{"id":"resource-management","label":"Resource Management"},{"id":"audit--monitoring","label":"Audit & Monitoring"},{"id":"output-checking","label":"Output Checking"}]},{"id":"cross-cutting-competencies","label":"Cross-Cutting","subsections":[{"id":"governance--compliance","label":"Governance & Compliance"},{"id":"collaboration--communication","label":"Collaboration & Communication"}]}];
+
+  window._pageSections = sections;
+})();</script> <script type="module" src="/sde-skills/demo/_astro/cf-framework-mapping.astro_astro_type_script_index_0_lang.CZjCq96m.js"></script>
