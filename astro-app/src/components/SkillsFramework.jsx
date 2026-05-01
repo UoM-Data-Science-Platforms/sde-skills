@@ -344,7 +344,8 @@ export default function SkillsFramework() {
               )}
 
               {/* HACK: hardcoded relevant tools/technologies/standards prototype — remove when implementing properly */}
-              <div className="subdomain-relevant">
+                {false && (
+                  <div className="subdomain-relevant">
                 <div className="relevant-group">
                   <span className="relevant-label">Tools</span>
                   {['Git / GitHub', 'VS Code', 'SonarQube', 'Jira'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
@@ -357,7 +358,7 @@ export default function SkillsFramework() {
                   <span className="relevant-label">Standards</span>
                   {['OWASP Top 10', 'ISO/IEC 27001', 'NCSC Secure Dev'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
                 </div>
-              </div>
+              </div>)}
               {/* END HACK */}
 
               {competencies.map(([compKey, compVal], compIdx) => {

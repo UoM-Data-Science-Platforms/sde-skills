@@ -24,10 +24,24 @@ Thank you for considering contributing to the SDE Skills project! Here are some 
 - Lint your code using `ruff`.
 - Write clear and concise commit messages.
 
-## Publishing Documentation
+## Previewing the Site
 
-- Use `mkdocs serve` to preview changes locally.
-- Ensure the documentation builds successfully before submitting a pull request.
+To preview the Astro app locally:
+
+1. Install Node dependencies:
+   ```bash
+   cd astro-app
+   npm install
+   ```
+
+2. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+
+The site will be available at `http://localhost:4321/sde-skills`.
+
+Ensure the documentation builds locally before submitting a pull request.
 
 ## Submitting a Pull Request
 

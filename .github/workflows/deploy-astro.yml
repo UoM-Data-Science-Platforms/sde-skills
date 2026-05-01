@@ -3,7 +3,7 @@ name: Deploy Astro App
 on:
   push:
     branches:
-      - feature/layout
+      - main
     paths:
       - 'astro-app/**'
       - 'scripts/markdown_to_yaml.py'
@@ -70,7 +70,7 @@ jobs:
               remarkPlugins: [remarkMkdocsAttr]
             },
             site: 'https://uom-data-science-platforms.github.io',
-            base: '/sde-skills/demo',
+            base: '/sde-skills',
           });
           EOF
 
@@ -97,4 +97,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: astro-app/dist
-          destination_dir: demo
+          destination_dir: .
