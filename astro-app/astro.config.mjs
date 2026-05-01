@@ -7,5 +7,5 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMkdocsAttr]
   },
-  base: '/sde-skills/demo',
+  base: '/sde-skills',
 });
