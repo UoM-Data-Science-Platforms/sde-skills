@@ -37,14 +37,19 @@ Involves following established processes, using version control systems, impleme
     - Mentors team members on software engineering excellence
 
 
-## Technologies/Tools
 
-Git, GitHub, basic bug tracking tools (e.g., Jira)
-GitLab CI/CD, branching strategies, code review tools
-Architecture design tools (e.g., C4 model), SDLC frameworks (Agile, DevOps), mentoring platforms
+#### Tools
 
+- GitHub
+- Jira)
+GitLab CI/CD
 
+#### Technologies
 
+- Git
+- C4 model)
+- DevOps)
+- mentoring platforms
 ### Secure Coding Practices
 
 Develops software with security built into the code itself.
@@ -69,14 +74,17 @@ Involves understanding common vulnerabilities like OWASP Top 10, applying input 
     - Implements advanced security patterns for high-risk components
 
 
-## Technologies/Tools
 
-OWASP Top 10 awareness, basic input validation libraries
-JWT, OAuth2, secure coding libraries (e.g., ESLint security rules)
-SAST/DAST tools (e.g., SonarQube, Veracode), custom security frameworks
+#### Tools
 
+- SonarQube
 
+#### Technologies
 
+- basic input validation libraries
+JWT
+- OAuth2
+- Veracode)
 ### Testing & Quality Assurance
 
 Validates software functionality, security, and performance before deployment.
@@ -101,13 +109,20 @@ Involves creating unit tests, using testing frameworks, executing test plans, de
     - Drives quality metrics and continuous improvement initiatives
 
 
-## Technologies/Tools
 
-JUnit, PyTest, basic CI tools (e.g., Travis CI)
-Selenium, Postman, automated pipelines (e.g., Jenkins)
-Test orchestration tools (e.g., TestNG, Allure), QA dashboards
+#### Tools
 
+- Postman
 
+#### Technologies
+
+- JUnit
+- PyTest
+- Travis CI)
+Selenium
+- TestNG
+- Allure)
+- QA dashboards
 ### Microservices & API Design
 
 Develops loosely coupled, independently deployable services that communicate via APIs.
@@ -132,13 +147,13 @@ Involves understanding microservices principles, working with API concepts and d
     - Leads API security initiatives and evaluates API management solutions
 
 
-## Technologies/Tools
 
-REST APIs, Swagger/OpenAPI
-API gateways (e.g., Kong, Apigee), OAuth2
-Service mesh (e.g., Istio), enterprise API management platforms
+#### Technologies
 
-
+- REST APIs
+- Kong
+- Apigee)
+- Istio)
 ### Code Documentation & Reusability
 
 Creates understandable, maintainable, and reusable code.
@@ -163,13 +178,18 @@ Involves writing clear comments explaining functionality, following documentatio
     - Creates knowledge sharing policies and mentors others in documentation
 
 
-## Technologies/Tools
 
-Markdown, basic inline comments
-Sphinx, JSDoc, reusable modules
-Knowledge bases (e.g., Confluence), documentation standards
+#### Tools
 
+- Confluence)
 
+#### Technologies
+
+- Markdown
+- basic inline comments
+Sphinx
+- JSDoc
+- documentation standards
 ### Artefact Management
 
 Securely stores, distributes, and controls access to software artefacts including container images, helm charts, and package repositories.
@@ -194,12 +214,17 @@ Involves understanding artefact concepts, accessing repositories following proce
     - Leads initiatives to enhance artefact security and supply chain integrity
 
 
-## Technologies/Tools
 
-Docker Hub, GitHub Packages
-Nexus, JFrog Artifactory, Helm
-Enterprise artefact governance tools, automated vulnerability scanning (e.g., Clair)
+#### Tools
 
+- Docker Hub
+- GitHub Packages
+Nexus
+- JFrog Artifactory
+
+#### Technologies
+
+- Clair)
 
 ## Infrastructure & Deployment
 
@@ -230,13 +255,19 @@ Involves working with major providers like AWS, Azure, and GCP, provisioning res
     - Leads cloud transformation initiatives and capacity planning
 
 
-## Technologies/Tools
 
-AWS Console, Azure Portal basics
-Terraform, CloudFormation, monitoring tools (e.g., CloudWatch)
-Multi-cloud orchestration tools, cost optimization platforms
+#### Tools
 
+- AWS Console
+- Azure Portal basics
+Terraform
 
+#### Technologies
+
+- CloudFormation
+- CloudWatch)
+Multi-cloud orchestration tools
+- cost optimization platforms
 ### Containerisation & Orchestration
 
 Packages and manages applications in isolated, portable environments.
@@ -261,13 +292,20 @@ Involves understanding container concepts, working with Docker and container reg
     - Establishes container security scanning and compliance processes
 
 
-## Technologies/Tools
 
-Docker CLI, Docker Compose
-Kubernetes, Helm, CI/CD for containers
-Advanced Kubernetes (RBAC, Network Policies), OpenShift
+#### Tools
 
+- Docker CLI
+- Docker Compose
+Kubernetes
+- Helm
+- CI/CD for containers
+Advanced Kubernetes (RBAC
 
+#### Technologies
+
+- Network Policies)
+- OpenShift
 ### Network Architecture
 
 Designs and implements secure networks for data environments.
@@ -292,13 +330,16 @@ Involves understanding networking concepts like IP addressing and routing, confi
     - Leads network transformation initiatives and capacity planning
 
 
-## Technologies/Tools
 
-Basic firewall rules, IP/Subnetting tools
-VPC setup, security groups, VPNs
-SDN, enterprise network monitoring (e.g., Zabbix)
+#### Technologies
 
-
+- Basic firewall rules
+- IP/Subnetting tools
+VPC setup
+- security groups
+- VPNs
+SDN
+- Zabbix)
 ### Encryption & Key Management
 
 Protects data at rest and in transit using secure algorithms and robust key management practices.
@@ -323,12 +364,16 @@ Involves understanding encryption concepts, implementing encryption solutions, s
     - Leads initiatives to enhance encryption and key management practices
 
 
-## Technologies/Tools
 
-TLS/SSL, GPG
-AWS KMS, HashiCorp Vault
-Enterprise key lifecycle management, HSMs
+#### Tools
 
+- GPG
+AWS KMS
+
+#### Technologies
+
+- TLS/SSL
+- HSMs
 
 ## System Architecture
 
@@ -359,13 +404,11 @@ Involves understanding principles of secure design, applying defense-in-depth an
     - Leads security architecture reviews and remediation efforts
 
 
-## Technologies/Tools
 
-Documentation tools, basic IAM
-Zero Trust frameworks, compliance checkers
-Enterprise security architecture tools (e.g., SABSA)
+#### Technologies
 
-
+- Documentation tools
+- SABSA)
 ### Scalability & Performance
 
 Builds systems that can handle growing workloads while maintaining responsiveness.
@@ -390,13 +433,13 @@ Involves understanding performance concepts and metrics, performing basic testin
     - Leads performance optimisation initiatives across systems
 
 
-## Technologies/Tools
 
-Basic load testing tools (e.g., Apache JMeter)
-Caching (Redis), performance monitoring (New Relic)
-Distributed tracing (e.g., Jaeger), capacity planning tools
+#### Technologies
 
-
+- Apache JMeter)
+Caching (Redis)
+- Jaeger)
+- capacity planning tools
 ### Enterprise Solution Development
 
 Creates robust systems that meet business-critical requirements.
@@ -421,13 +464,11 @@ Involves understanding quality of service criteria, working with enterprise arch
     - Leads initiatives to enhance the quality and reliability of enterprise systems
 
 
-## Technologies/Tools
 
-UML tools, basic architecture diagrams
-Resilience patterns (e.g., Circuit Breaker), service reliability tools
-Reference architecture frameworks, enterprise modeling tools
+#### Technologies
 
-
+- UML tools
+- Circuit Breaker)
 ### Component-Based Architecture
 
 Designs systems as assemblies of modular, reusable components.
@@ -452,13 +493,12 @@ Involves understanding component-based design principles, working with component
     - Leads initiatives to enhance component reuse and maintainability
 
 
-## Technologies/Tools
 
-React components, modular Python packages
-Micro frontends, shared libraries
-Component governance platforms, enterprise reuse strategies
+#### Technologies
 
-
+- React components
+- modular Python packages
+Micro frontends
 ### Vulnerability & Patch Management
 
 Identifies, assesses, and remediates security vulnerabilities across systems and infrastructure.
@@ -483,13 +523,17 @@ Involves understanding vulnerability concepts, using scanning tools, applying se
     - Leads vulnerability and patch management maturity initiatives
 
 
-## Technologies/Tools
 
-Windows Update, basic scanning tools (e.g., Nessus)
-Patch automation (WSUS, Ansible), vulnerability triage tools
-Enterprise vulnerability management platforms (e.g., Qualys)
+#### Tools
 
+- Nessus)
+Patch automation (WSUS
+- Ansible)
 
+#### Technologies
+
+- Windows Update
+- Qualys)
 ### Configuration Management
 
 Deploys and maintains infrastructure and applications in consistent, secure, and compliant states.
@@ -514,13 +558,17 @@ Involves understanding configuration concepts, applying changes using automation
     - Leads configuration management improvement initiatives
 
 
-## Technologies/Tools
 
-Ansible basics, shell scripts
-Puppet, Chef, compliance tools (e.g., OpenSCAP)
-Enterprise CMDBs, automated remediation platforms
+#### Tools
 
+- Ansible basics
 
+#### Technologies
+
+- shell scripts
+Puppet
+- Chef
+- automated remediation platforms
 ### High Performance Computing
 
 Provisions, configures, and securely manages high-performance computing resources and specialised hardware accelerators.
@@ -546,8 +594,9 @@ Involves understanding HPC concepts, configuring access to shared resources, wor
 
 
 
-## Technologies/Tools
 
-SLURM, SSH access to clusters
-GPU provisioning, HPC job schedulers
-HPC governance tools, multi-tenant resource management
+#### Technologies
+
+- SLURM
+- SSH access to clusters
+GPU provisioning

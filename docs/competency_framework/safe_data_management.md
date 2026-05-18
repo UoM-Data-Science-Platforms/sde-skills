@@ -40,13 +40,12 @@ Requires regular integrity checks, monitoring, and alerting, as well as procedur
 
 
 
-## Technologies/Tools
 
-Checksums, manual validation tools
-Automated integrity verification (e.g., hash checks), monitoring tools
-Enterprise integrity frameworks, digital signature systems
+#### Technologies
 
-
+- Checksums
+- hash checks)
+- digital signature systems
 ### Data Cataloguing & Discovery
 
 Creates and maintains systems that enable researchers to find and understand available datasets in line with FAIR (Findable, Accessible, Interoperable, and Reusable) principles.
@@ -72,13 +71,12 @@ Requires establishing governance frameworks and enhancing data reusability.
     - Leads initiatives to enhance data discovery and reuse
 
 
-## Technologies/Tools
 
-Basic metadata tools, CSV documentation
-Data catalogue platforms (e.g., CKAN, DataHub), metadata standards
-Enterprise data discovery platforms, metadata governance tools
+#### Technologies
 
-
+- Basic metadata tools
+- CKAN
+- DataHub)
 ### Data Classification & Sensitivity
 
 Implements frameworks for categorising data based on sensitivity and security requirements.
@@ -105,13 +103,13 @@ Requires implementing classification systems and leading risk assessment initiat
 
 
 
-## Technologies/Tools
 
-Labeling tools, sensitivity templates
-Classification engines, policy-based access controls
-Enterprise classification frameworks, risk assessment platforms
+#### Technologies
 
-
+- Labeling tools
+- sensitivity templates
+Classification engines
+- risk assessment platforms
 ### Data Lineage & Provenance
 
 Tracks and documents the origins, movements, and transformations of data throughout systems.
@@ -138,13 +136,11 @@ Requires developing governance frameworks that maintain visibility of sensitive 
 
 
 
-## Technologies/Tools
 
-Manual lineage documentation, metadata tracking
-Lineage tools (e.g., Apache Atlas), provenance validation systems
-Enterprise lineage platforms, cross-system governance tools
+#### Technologies
 
-
+- Manual lineage documentation
+- Apache Atlas)
 ### Data Quality Management
 
 Ensures the accuracy, completeness, and reliability of data within secure environments.
@@ -170,12 +166,12 @@ Requires leading quality improvement initiatives and developing advanced measure
     - Develops advanced data quality measurement and remediation approaches
 
 
-## Technologies/Tools
 
-Excel validation templates, manual checks
-Quality frameworks (e.g., Great Expectations), validation pipelines
-Enterprise quality dashboards, remediation platforms
+#### Technologies
 
+- Excel validation templates
+- Great Expectations)
+- remediation platforms
 
 ## Data Engineering & Processing
 
@@ -207,14 +203,16 @@ Requires architecting complex systems at enterprise scale and establishing best 
     - Leads pipeline modernisation and optimisation initiatives
 
 
-## Technologies/Tools
 
-Basic ETL scripts (e.g., Python, SQL)
-ETL platforms (e.g., Apache NiFi, Airflow), monitoring tools
-Enterprise pipeline orchestration tools, performance optimization suites
+#### Tools
 
+- Airflow)
 
+#### Technologies
 
+- Python
+- Apache NiFi
+- performance optimization suites
 ### Data Storage & Database Management
 
 Designs and maintains secure database systems for storing and retrieving sensitive data.
@@ -240,13 +238,15 @@ Requires developing governance frameworks and leading database modernisation ini
     - Leads database modernisation and migration initiatives
 
 
-## Technologies/Tools
 
-SQLite, MySQL Workbench
-PostgreSQL, MongoDB, access control systems
-Enterprise DBMS (e.g., Oracle, SQL Server), governance frameworks
+#### Technologies
 
-
+- SQLite
+- MySQL Workbench
+PostgreSQL
+- MongoDB
+- Oracle
+- SQL Server)
 ### Data Models & Standardisation
 
 Enables the secure and effective use of standardised data models such as FHIR and OMOP within secure data environments.
@@ -272,13 +272,13 @@ Requires developing approaches to enhance interoperability, security, and govern
     - Leads initiatives to harmonise data models across systems
 
 
-## Technologies/Tools
 
-FHIR/OMOP documentation, schema viewers
-FHIR servers, OMOP converters, integration tools
-Enterprise model harmonisation platforms, governance systems
+#### Technologies
 
-
+- FHIR/OMOP documentation
+- schema viewers
+FHIR servers
+- OMOP converters
 ### Event-Driven Data Processing
 
 Implements systems that process data in real-time based on events and triggers.
@@ -304,12 +304,13 @@ Requires architecting enterprise-scale, high-throughput, reliable event-driven p
     - Leads innovation in event-based analytical systems
 
 
-## Technologies/Tools
 
-Kafka CLI, basic event consumers
-Kafka Streams, schema registries, domain-specific processors
-Enterprise event platforms, high-throughput processing systems
+#### Technologies
 
+- Kafka CLI
+- basic event consumers
+Kafka Streams
+- schema registries
 ### Encryption Standards & Implementation
 
 Implements cryptographic solutions to protect sensitive data throughout its lifecycle in secure environments.
@@ -335,13 +336,15 @@ Requires designing enterprise encryption frameworks, implementing advanced crypt
     - Establishes encryption policies and oversees compliance across the organisation
 
 
-## Technologies/Tools
 
-AES/RSA libraries, OpenSSL
-Key management systems (e.g., HashiCorp Vault), TLS/SSL configuration
-Enterprise encryption frameworks, advanced cryptography (e.g., homomorphic encryption)
+#### Tools
 
+- HashiCorp Vault)
 
+#### Technologies
+
+- AES/RSA libraries
+- homomorphic encryption)
 ### Data Backups
 
 Ensures data availability and recoverability through systematic backup and restoration processes.
@@ -367,13 +370,16 @@ Requires architecting resilient backup infrastructures, establishing security pr
     - Establishes policies for backup security, encryption, and compliance with industry standards
 
 
-## Technologies/Tools
 
-Windows Backup, rsync
-Backup automation tools (e.g., Veeam, Bacula), integrity checkers
-Enterprise backup platforms, disaster recovery orchestration
+#### Tools
 
+- Veeam
 
+#### Technologies
+
+- Windows Backup
+- Bacula)
+- disaster recovery orchestration
 ### Data Retention & Disposal
 
 Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organisational policies.
@@ -399,13 +405,13 @@ Requires developing enterprise-wide policies that balance performance, cost, and
     - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific standards) to ensure data retention practices align with security, privacy, and governance requirements.
 
 
-## Technologies/Tools
 
-Retention policy templates, manual tracking
-Automated retention systems, secure deletion tools
-Enterprise lifecycle management platforms, compliance engines
+#### Technologies
 
-
+- Retention policy templates
+- manual tracking
+Automated retention systems
+- compliance engines
 ### Data Migration
 
 Ensures the secure, reliable, and efficient transfer of data between systems, storage solutions, or environments.
@@ -433,9 +439,13 @@ Requires implementing automated migration workflows, monitoring migration proces
     - Develops and oversees remediation plans for migration failures or data discrepancies
 
 
-## Technologies/Tools
 
-Manual migration scripts, CSV exports
-Migration tools (e.g., Talend, AWS DMS), validation systems
-Enterprise migration orchestration platforms, compliance monitoring
+#### Tools
 
+- AWS DMS)
+
+#### Technologies
+
+- Manual migration scripts
+- Talend
+- compliance monitoring

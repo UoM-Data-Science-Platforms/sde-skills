@@ -5,6 +5,7 @@ Convert competency framework markdown files to structured YAML format.
 
 import os
 import re
+import sys
 import yaml
 from pathlib import Path
 from typing import Dict, List, Any
@@ -41,6 +42,33 @@ def extract_level_content(content: str, level_marker: str) -> List[str]:
     return bullets
 
 
+def extract_tools_for_competency(content: str) -> Dict[str, List[str]]:
+    """Extract tools, technologies, and standards for a competency."""
+    result = {"tools": [], "technologies": [], "standards": []}
+
+    # Pattern to find #### Tools/Technologies/Standards sections
+    # These appear after the === level blocks
+    sections = {
+        "tools": r"#### Tools\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
+        "technologies": r"#### Technologies\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
+        "standards": r"#### Standards\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
+    }
+
+    for section_name, pattern in sections.items():
+        match = re.search(pattern, content, re.DOTALL)
+        if match:
+            section_text = match.group(1).strip()
+            # Extract bullet points
+            items = []
+            for line in section_text.split("\n"):
+                line = line.strip()
+                if line.startswith("- "):
+                    items.append(line[2:].strip())
+            result[section_name] = items
+
+    return result
+
+
 def parse_competency_section(content: str, competency_title: str) -> Dict[str, Any]:
     """Parse a competency section from markdown content."""
     competency_id = slugify(competency_title)
@@ -58,8 +86,9 @@ def parse_competency_section(content: str, competency_title: str) -> Dict[str, A
 
     start_pos = start_match.end()
 
-    # Find the next ### or ## to determine the end of this section
-    next_section_pattern = r"\n(###|##) "
+    # Find the next ### (competency level) to determine the end of this section
+    # We look for ### specifically, not ## (which could be Technologies/Tools)
+    next_section_pattern = r"\n### "
     next_match = re.search(next_section_pattern, content[start_pos:])
     if next_match:
         end_pos = start_pos + next_match.start()
@@ -107,11 +136,17 @@ def parse_competency_section(content: str, competency_title: str) -> Dict[str, A
             "skills": senior_skills,
         }
 
+    # Extract tools, technologies, and standards
+    tools_data = extract_tools_for_competency(section_content)
+
     return {
         "id": competency_id,
         "name": competency_title,
         "description": description,
         "levels": levels,
+        "tools": tools_data.get("tools", []),
+        "technologies": tools_data.get("technologies", []),
+        "standards": tools_data.get("standards", []),
     }
 
 
@@ -128,7 +163,8 @@ def parse_subdomain_section(content: str, subdomain_title: str) -> Dict[str, Any
     competencies = {}
 
     # Pattern to find ### sections within this subdomain
-    subdomain_pattern = rf"## {re.escape(subdomain_title)}(.*?)(?=\n## |\Z)"
+    # Stop at the next ## heading that is NOT "Technologies/Tools"
+    subdomain_pattern = rf"## {re.escape(subdomain_title)}(.*?)(?=\n## (?!Technologies/Tools)|\Z)"
     subdomain_match = re.search(subdomain_pattern, content, re.DOTALL)
 
     if subdomain_match:
@@ -176,12 +212,15 @@ def parse_markdown_file(file_path: str) -> Dict[str, Any]:
     desc_match = re.search(desc_pattern, content, re.DOTALL)
     domain_description = desc_match.group(1).strip() if desc_match else ""
 
-    # Find all subdomain sections (## headings)
+    # Find all subdomain sections (## headings, excluding Technologies/Tools sections)
     subdomains = {}
     subdomain_matches = re.finditer(r"^## (.+?)$", content, re.MULTILINE)
 
     for subdomain_match in subdomain_matches:
         subdomain_title = subdomain_match.group(1).strip()
+        # Skip Technologies/Tools sections as they're within competencies, not subdomains
+        if subdomain_title == "Technologies/Tools":
+            continue
         subdomain_data = parse_subdomain_section(content, subdomain_title)
         subdomains[subdomain_data["id"]] = subdomain_data
 
@@ -239,9 +278,18 @@ def convert_file_to_yaml(input_file: str, output_dir: str):
 
 def main():
     """Main conversion function."""
-    # Define paths
-    input_dir = "/home/vc/dev/sde-skills/docs/competency_framework"
-    output_dir = "/home/vc/dev/sde-skills/local/yaml"
+    if len(sys.argv) != 3:
+        print("Usage: python markdown_to_yaml.py <input_dir> <output_dir>")
+        print("Example: python markdown_to_yaml.py ./docs/competency_framework ./local/yaml")
+        sys.exit(1)
+
+    input_dir = sys.argv[1]
+    output_dir = sys.argv[2]
+
+    # Validate input directory exists
+    if not os.path.isdir(input_dir):
+        print(f"Error: Input directory '{input_dir}' does not exist")
+        sys.exit(1)
 
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
