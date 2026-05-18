@@ -1,0 +1,63 @@
+---
+import { Content } from '../../data/index.md';
+import MissionGrid from '../components/MissionGrid.jsx';
+import Layout from '../layouts/Layout.astro';
+
+const sections = [
+  { id: 'our-mission', label: 'Our Mission' },
+];
+---
+<Layout title="SDE Team Development Hub" currentDomain="/">
+  <div class="skills-framework">
+    <div class="sticky-header">
+      <h1>Building Capacity and Capability for UK Secure Data Environments</h1>
+    </div>
+    <div class="sticky-subnav">
+      <div class="subdomain-tabs" id="section-tabs">
+        {sections.map(s => (
+          <button class="tab subdomain-tab" data-section={s.id}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="scroll-area" id="scroll-area">
+      <article class="prose prose--reset prose--italic">
+        <Content />
+      </article>
+      <MissionGrid client:load />
+    </div>
+  </div>
+</Layout>
+
+<script define:vars={{ sections }}>
+  window._pageSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+  initScrollSync({ sections: window._pageSections });
+
+  // Remove h1 — sticky header shows the title
+  document.querySelector('#scroll-area h1')?.remove();
+
+  // Replace the markdown h2 with a zero-height anchor so tab scroll tracking still works
+  const aboutH2 = document.getElementById('building-capacity-and-capability-for-uk-secure-data-environments');
+  if (aboutH2) {
+    const anchor = document.createElement('div');
+    anchor.id = aboutH2.id;
+    anchor.style.cssText = 'height:0;margin:0;padding:0;overflow:hidden';
+    aboutH2.replaceWith(anchor);
+  }
+
+  // Hide the markdown mission section — MissionGrid replaces it
+  const article = document.querySelector('#scroll-area article');
+  const missionH2 = article?.querySelector('#our-mission');
+  if (missionH2) {
+    let el = missionH2;
+    while (el) {
+      const next = el.nextElementSibling;
+      el.style.display = 'none';
+      el = next;
+    }
+  }
+</script>

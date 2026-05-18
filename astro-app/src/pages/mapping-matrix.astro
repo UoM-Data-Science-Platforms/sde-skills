@@ -1,0 +1,14 @@
+---
+import MappingMatrix from '../components/MappingMatrix.jsx';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Mapping Matrix – Competency Framework" currentDomain="mapping-matrix">
+  <div class="skills-framework">
+    <div class="sticky-header">
+      <h1>Mapping Matrix</h1>
+    </div>
+    <div class="scroll-area">
+      <MappingMatrix client:load />
+    </div>
+  </div>
+</Layout>
