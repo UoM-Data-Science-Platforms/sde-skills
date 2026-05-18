@@ -35,13 +35,19 @@ Plans and executes projects related to secure data environments. Involves unders
     - Leads strategic planning for SDE capabilities
 
 
-## Technologies/Tools
 
-Trello, Microsoft Planner, basic Excel templates
-MS Project, Jira, Confluence
-Portfolio management tools (e.g., Planview), strategic planning platforms
+#### Tools
 
+- Trello
+- Jira
 
+#### Technologies
+
+- Microsoft Planner
+- basic Excel templates
+MS Project
+- Planview)
+- strategic planning platforms
 ### Research Project Facilitation
 
 Supports researchers in utilizing secure data environments effectively. Involves understanding research requirements, workflows and processes, assisting with basic SDE usage, coordinating complex projects, implementing technical solutions, ensuring compliance, developing support frameworks, and leading initiatives to enhance research capabilities.
@@ -65,13 +71,16 @@ Supports researchers in utilizing secure data environments effectively. Involves
     - Leads initiatives to enhance research capabilities in SDEs
 
 
-## Technologies/Tools
 
-SharePoint, basic SDE access tools
-REDCap, LabArchives, secure collaboration platforms
-Research management systems, custom support frameworks
+#### Tools
 
+- SharePoint
+- basic SDE access tools
+REDCap
 
+#### Technologies
+
+- LabArchives
 ### Agile Delivery Methods
 
 Applies iterative and incremental approaches to SDE development and operations. Involves understanding agile concepts, participating in ceremonies, implementing practices appropriate to secure environments, managing teams and processes, adapting approaches for security needs, establishing delivery frameworks, and leading agile transformation while maintaining compliance.
@@ -95,13 +104,16 @@ Applies iterative and incremental approaches to SDE development and operations. 
     - Leads agile transformation initiatives
 
 
-## Technologies/Tools
 
-Scrum boards, stand-up tools (e.g., Miro)
-Jira Agile, Azure DevOps, Kanban systems
-Agile governance platforms, SAFe frameworks
+#### Tools
 
+- Miro)
+Jira Agile
+- Azure DevOps
 
+#### Technologies
+
+- Scrum boards
 ### Procurement & Vendor Management
 
 Acquires and manages external resources and services for secure data environments. Involves understanding procurement processes, assisting with activities, managing procurement for resources and services, negotiating with vendors, ensuring compliance with policies, developing strategies, establishing governance, and leading strategic vendor relationships.
@@ -125,13 +137,17 @@ Acquires and manages external resources and services for secure data environment
     - Leads strategic vendor relationships and partnership initiatives
 
 
-## Technologies/Tools
 
-SAP Ariba (view-only), Excel-based tracking
-Coupa, Oracle Procurement Cloud
-Strategic sourcing platforms, vendor risk management tools
+#### Tools
 
+- SAP Ariba (view-only)
+- Excel-based tracking
+Coupa
 
+#### Technologies
+
+- Oracle Procurement Cloud
+Strategic sourcing platforms
 ### Resource & Cost Management
 
 Allocates and optimises resources within secure data environments to maximise value. Involves understanding resource allocation principles, monitoring cloud costs, generating usage reports, implementing management processes, developing optimization strategies, creating costing models, establishing financial governance, and enhancing resource efficiency.
@@ -155,12 +171,17 @@ Allocates and optimises resources within secure data environments to maximise va
     - Leads initiatives to enhance resource efficiency and cost-effectiveness
 
 
-## Technologies/Tools
 
-AWS Cost Explorer, Azure Pricing Calculator
-CloudHealth, CloudCheckr
-FinOps platforms, enterprise cost governance tools
+#### Tools
 
+- AWS Cost Explorer
+- Azure Pricing Calculator
+CloudHealth
+
+#### Technologies
+
+- CloudCheckr
+FinOps platforms
 
 ## Service Management
 
@@ -189,13 +210,17 @@ Defines, measures, and maintains service quality for SDE users. Involves underst
     - Leads negotiations for cross-organizational service levels
 
 
-## Technologies/Tools
 
-SLA templates, basic monitoring dashboards
-ServiceNow, Opsgenie, custom SLA tracking tools
-Enterprise service governance platforms, ITSM suites
+#### Tools
 
+- basic monitoring dashboards
+ServiceNow
+- Opsgenie
 
+#### Technologies
+
+- SLA templates
+- ITSM suites
 ### Incident & Problem Management
 
 Responds to and resolves service disruptions while preventing recurrence. Involves understanding incident concepts, classifying and documenting issues, implementing management processes, leading response activities, conducting root cause analysis, establishing frameworks, developing strategies to reduce frequency and impact, and leading service resilience initiatives.
@@ -219,13 +244,17 @@ Responds to and resolves service disruptions while preventing recurrence. Involv
     - Leads service resilience and reliability initiatives
 
 
-## Technologies/Tools
 
-Freshservice, basic ticketing systems
-PagerDuty, Splunk On-Call, root cause analysis tools
-ITIL-based service management platforms, resilience orchestration tools
+#### Tools
 
+- basic ticketing systems
+PagerDuty
+- Splunk On-Call
 
+#### Technologies
+
+- Freshservice
+- resilience orchestration tools
 ### Change & Release Management
 
 Controls modifications to SDE infrastructure, applications, and services. Involves understanding change management concepts, following procedures, designing processes, evaluating impacts, coordinating implementation, ensuring security and compliance, establishing governance frameworks, and leading initiatives to balance change agility with necessary controls.
@@ -249,12 +278,16 @@ Controls modifications to SDE infrastructure, applications, and services. Involv
     - Leads change management improvement initiatives
 
 
-## Technologies/Tools
 
-GitHub Actions, change request forms
-Jenkins, Azure DevOps Pipelines
-Enterprise change governance tools, automated release orchestration
+#### Tools
 
+- GitHub Actions
+- change request forms
+Jenkins
+
+#### Technologies
+
+- automated release orchestration
 
 ## Operational Excellence
 
@@ -283,13 +316,13 @@ Systematically enhances SDE processes, services, and capabilities. Involves unde
     - Leads transformational improvement programs
 
 
-## Technologies/Tools
 
-Lean Six Sigma templates, Excel-based tracking
-Minitab, process mapping tools (e.g., Lucidchart)
-Enterprise CI platforms, transformation dashboards
+#### Technologies
 
-
+- Lean Six Sigma templates
+- Excel-based tracking
+Minitab
+- transformation dashboards
 ### Documentation & Knowledge Management
 
 Creates, maintains, and shares operational knowledge within the SDE. Involves understanding documentation requirements, using knowledge management systems, creating basic documentation, implementing comprehensive strategies, developing knowledge bases, ensuring security compliance, establishing governance standards, and enhancing organizational knowledge sharing.
@@ -313,13 +346,16 @@ Creates, maintains, and shares operational knowledge within the SDE. Involves un
     - Leads initiatives to enhance organizational knowledge sharing
 
 
-## Technologies/Tools
 
-OneNote, Google Docs
-Confluence, SharePoint Knowledge Bases
-Enterprise KM platforms (e.g., ServiceNow KM), governance frameworks
+#### Tools
 
+- Google Docs
+Confluence
+- ServiceNow KM)
 
+#### Technologies
+
+- OneNote
 ### Monitoring & Observability
 
 Tracks system health, performance, and security in the SDE. Involves understanding monitoring concepts and tools, using metrics and logs, implementing comprehensive strategies, designing dashboards and alerts for complex systems, analyzing data, establishing enterprise frameworks, and leading initiatives to enhance operational visibility across the environment.
@@ -343,12 +379,18 @@ Tracks system health, performance, and security in the SDE. Involves understandi
     - Leads initiatives to enhance operational visibility
 
 
-## Technologies/Tools
 
-CloudWatch, Azure Monitor
-Prometheus, Grafana, ELK Stack
-Enterprise observability platforms (e.g., Datadog, Dynatrace)
+#### Tools
 
+- Azure Monitor
+Prometheus
+- Grafana
+
+#### Technologies
+
+- CloudWatch
+- Datadog
+- Dynatrace)
 
 ## Research Support & Innovation
 
@@ -377,13 +419,19 @@ Enables researchers to effectively use secure data environments. Involves unders
     - Leads initiatives to enhance researcher experience
 
 
-## Technologies/Tools
 
-Moodle, basic helpdesk tools
-LMS platforms, Zendesk, custom training portals
-Research enablement platforms, strategic engagement tools
+#### Tools
 
+- Moodle
+- Zendesk
 
+#### Technologies
+
+- basic helpdesk tools
+LMS platforms
+- custom training portals
+Research enablement platforms
+- strategic engagement tools
 ### TRE Tools & Capabilities
 
 Provides and manages tools for research in secure environments. Involves understanding common tools and requirements, configuring environments, evaluating and implementing research tools, designing workspaces, ensuring security and compliance, developing implementation strategies, establishing governance, and leading initiatives to enhance capabilities.
@@ -407,13 +455,18 @@ Provides and manages tools for research in secure environments. Involves underst
     - Leads initiatives to enhance TRE capabilities
 
 
-## Technologies/Tools
 
-RStudio, Jupyter Notebooks, basic TRE access
-Secure VMs, containerized research environments
-Custom TRE orchestration platforms, tool lifecycle governance
+#### Tools
 
+- RStudio
+- Jupyter Notebooks
 
+#### Technologies
+
+- basic TRE access
+Secure VMs
+- containerized research environments
+Custom TRE orchestration platforms
 ### Future TRE Innovation
 
 Explores and implements new technologies and approaches for secure research. Involves understanding emerging trends, researching new technologies, evaluating for TRE application, implementing proof-of-concept projects, developing roadmaps and strategies, establishing innovation frameworks, leading horizon scanning, and developing strategic partnerships for advancement.
@@ -437,13 +490,14 @@ Explores and implements new technologies and approaches for secure research. Inv
     - Develops strategic partnerships for TRE advancement
 
 
-## Technologies/Tools
 
-Horizon scanning tools (e.g., Feedly), innovation logs
-Pilot platforms, sandbox environments
-Strategic innovation platforms, partnership management tools
+#### Technologies
 
-
+- Feedly)
+- innovation logs
+Pilot platforms
+- sandbox environments
+Strategic innovation platforms
 ### Community Engagement & Networking
 
 Participates in and contributes to the wider secure data environment community. Involves understanding the importance of engagement, participating in events and discussions, actively contributing to communities, representing the organization, building professional networks, leading engagement strategies, organizing events, and developing strategic partnerships across the community.
@@ -467,9 +521,11 @@ Participates in and contributes to the wider secure data environment community. 
     - Develops strategic partnerships across the SDE community
 
 
-## Technologies/Tools
 
-LinkedIn, Slack communities
-Event platforms (e.g., Eventbrite), community forums
-Strategic engagement platforms, CRM for partnerships
+#### Technologies
 
+- LinkedIn
+- Eventbrite)
+- community forums
+Strategic engagement platforms
+- CRM for partnerships

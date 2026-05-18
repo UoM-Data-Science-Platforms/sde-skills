@@ -387,6 +387,42 @@ export default function SkillsFramework() {
                     </h3>
                     <p className="competency-description">{compVal.description}</p>
 
+                    {/* Tools, Technologies, and Standards */}
+                    {(compVal.tools?.length > 0 || compVal.technologies?.length > 0 || compVal.standards?.length > 0) && (
+                      <div className="competency-tech-section">
+                        {compVal.tools?.length > 0 && (
+                          <div className="tech-category">
+                            <span className="tech-label">Tools:</span>
+                            <div className="tech-chips">
+                              {compVal.tools.map((item, idx) => (
+                                <span key={idx} className="tech-chip tool">{item}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {compVal.technologies?.length > 0 && (
+                          <div className="tech-category">
+                            <span className="tech-label">Technologies:</span>
+                            <div className="tech-chips">
+                              {compVal.technologies.map((item, idx) => (
+                                <span key={idx} className="tech-chip technology">{item}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {compVal.standards?.length > 0 && (
+                          <div className="tech-category">
+                            <span className="tech-label">Standards:</span>
+                            <div className="tech-chips">
+                              {compVal.standards.map((item, idx) => (
+                                <span key={idx} className="tech-chip standard">{item}</span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
                     {/* Experience-level selector */}
                     <div className="level-buttons">
                       {levels.map(([levelKey]) => (
