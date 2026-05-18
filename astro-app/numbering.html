@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDE Skills - Competency Framework with Numbering Scheme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .domain {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .domain-header {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .domain-number {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .subdomain {
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .subdomain-number {
+            color: #333;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .subdomain-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .subdomain-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .competencies {
+            display: grid;
+            gap: 15px;
+        }
+
+        .competency {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .competency:hover {
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+
+        .competency-number {
+            color: #333;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            display: inline;
+            margin-right: 8px;
+        }
+
+        .competency-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            display: inline;
+        }
+
+        .proficiency-levels {
+            margin-top: 12px;
+        }
+
+        .proficiency-tabs {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            gap: 5px;
+        }
+
+        .proficiency-tab {
+            padding: 10px 20px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .proficiency-tab:hover {
+            background: #e8e8e8;
+        }
+
+        .proficiency-tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+        }
+
+        .proficiency-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .proficiency-content.active {
+            display: block;
+        }
+
+        .proficiency-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+        }
+
+        .proficiency-description {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .legend {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .legend h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .legend-item {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .legend-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .legend-item code {
+            background: #f0f4ff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .legend-item strong {
+            color: #333;
+        }
+
+        .breadcrumb {
+            font-size: 0.85em;
+            color: #999;
+            margin: 0 0 4px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            color: #999;
+            padding: 30px 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .proficiency-levels {
+                flex-direction: column;
+            }
+
+            .proficiency {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Secure Data Environments Skills Competency Framework</h1>
+            <p>Structured Numbering Scheme Implementation</p>
+        </header>
+
+        <div class="legend">
+            <h3>📋 Numbering Scheme Reference</h3>
+            <div class="legend-item">
+                <strong>Level 1 (Domains):</strong> <code>1.0 - 6.0</code> (e.g., 1.0 Safe Technology & Engineering)
+            </div>
+            <div class="legend-item">
+                <strong>Level 2 (Subdomains):</strong> <code>[Domain].[Subdomain]</code> (e.g., 1.1 Software Engineering, 1.2 Infrastructure & Deployment)
+            </div>
+            <div class="legend-item">
+                <strong>Level 3 (Competency Items):</strong> <code>[Domain].[Subdomain].[Item]</code> (e.g., 1.1.1 Software Development Lifecycle)
+            </div>
+            <div class="legend-item">
+                <strong>Proficiency Levels:</strong> <code>.E</code> (Entry), <code>.M</code> (Mid), <code>.S</code> (Senior)
+            </div>
+            <div class="legend-item">
+                <strong>Full Example:</strong> <code>1.1.1.E</code> = Safe Technology & Engineering → Software Engineering → Software Development Lifecycle → Entry Level
+            </div>
+        </div>
+
+        <!-- DOMAIN 1.0: SAFE TECHNOLOGY & ENGINEERING -->
+        <div class="domain" id="domain-1">
+            <div class="domain-header">
+                <span class="domain-number">1.0</span>Safe Technology & Engineering
+            </div>
+
+            <!-- Subdomain 1.1 -->
+            <div class="subdomain" id="subdomain-1-1">
+                <div class="breadcrumb">
+                    <a href="#domain-1">1.0 Safe Technology & Engineering</a>
+                    <span class="breadcrumb-separator">></span>
+                </div>
+                <div>
+                    <span class="subdomain-number">1.1</span>
+                    <span class="subdomain-title">Software Engineering</span>
+                </div>
+                <div class="subdomain-description">
+                    Applies structured approaches to developing and maintaining secure, high-quality code for research environments.
+                </div>
+
+                <div class="competencies">
+                    <!-- Competency 1.3.8 Example 4 - Side-by-side Panels -->
+                    <div class="competency" id="competency-1-3-8-ex4" style="border-left: 4px solid #16a085; background: #e8f8f5;">
+                        <div style="background: #16a085; color: white; padding: 15px; margin: -20px -20px 20px -20px; font-weight: bold; font-size: 1.1em;">
+                            
+                        
+                        <div class="competency-number">1.3.8</div>
+                        <div class="competency-title">High Performance Computing</div>
+</div>                        <div class="breadcrumb">
+                            <a href="#domain-1">1.0 Safe Technology & Engineering</a>
+                            <span class="breadcrumb-separator">></span>
+                            <a href="#subdomain-1-3">1.3 System Architecture</a>
+                        </div>
+
+                        <h4 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.1em;">Select Proficiency Level:</h4>
+                        <div style="margin-bottom: 20px;">
+                            <button onclick="showEx4Level('entry')" id="ex4-btn-entry" style="background: #16a085; color: white; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer; border-radius: 4px; font-weight: bold;">Entry Level</button>
+                            <button onclick="showEx4Level('mid')" id="ex4-btn-mid" style="background: #ddd; color: #333; border: none; padding: 10px 20px; margin-right: 10px; cursor: pointer; border-radius: 4px;">Mid Level</button>
+                            <button onclick="showEx4Level('senior')" id="ex4-btn-senior" style="background: #ddd; color: #333; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Senior Level</button>
+                        </div>
+
+                        <div style="display: flex; gap: 20px; min-height: 400px;">
+                            <!-- Left Panel: Activities -->
+                            <div style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <h4 style="color: #16a085; margin-top: 0;">Architectural Activities</h4>
+                                
+                                <!-- Entry Level Activities -->
+                                <div id="ex4-activities-entry" class="ex4-activities" style="display: block;">
+                                    <p style="color: #666; font-style: italic; margin-bottom: 15px;">Click an activity to see technologies, training, and qualifications:</p>
+                                    <div onclick="showEx4Details('workload-basic')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Understand workload scheduling concepts</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Basic job submission, queue systems, resource requests</p>
+                                    </div>
+                                    <div onclick="showEx4Details('network-basic')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Evaluate HPC network topologies</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Understand fat-tree, dragonfly, bandwidth concepts</p>
+                                    </div>
+                                    <div onclick="showEx4Details('storage-basic')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Review parallel file system architectures</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Striping, OSS/MDS roles, I/O patterns</p>
+                                    </div>
+                                </div>
+
+                                <!-- Mid Level Activities -->
+                                <div id="ex4-activities-mid" class="ex4-activities" style="display: none;">
+                                    <p style="color: #666; font-style: italic; margin-bottom: 15px;">Click an activity to see technologies, training, and qualifications:</p>
+                                    <div onclick="showEx4Details('workload-mid')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Design partition and QoS policies</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Multi-tier hierarchies, fair-share, priority schemes</p>
+                                    </div>
+                                    <div onclick="showEx4Details('network-mid')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Design fabric topology for 500-1000 nodes</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Calculate blocking ratios, subnet manager redundancy</p>
+                                    </div>
+                                    <div onclick="showEx4Details('storage-mid')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Implement storage tiering strategies</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Progressive layouts, DNE configuration, quota systems</p>
+                                    </div>
+                                </div>
+
+                                <!-- Senior Level Activities -->
+                                <div id="ex4-activities-senior" class="ex4-activities" style="display: none;">
+                                    <p style="color: #666; font-style: italic; margin-bottom: 15px;">Click an activity to see technologies, training, and qualifications:</p>
+                                    <div onclick="showEx4Details('workload-senior')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Architect multi-site federation strategy</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Cross-datacenter, governance, cloud bursting</p>
+                                    </div>
+                                    <div onclick="showEx4Details('network-senior')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Create 5-year network evolution roadmap</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Technology refresh cycles, cost optimization, 100K+ node scale</p>
+                                    </div>
+                                    <div onclick="showEx4Details('storage-senior')" class="ex4-activity-item" style="padding: 12px; margin-bottom: 8px; background: #f8f9fa; border-left: 3px solid #16a085; cursor: pointer; border-radius: 4px; transition: all 0.2s;">
+                                        <strong>Design petabyte-scale data lifecycle</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">HSM integration, disaster recovery, multi-tier strategies</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Panel: Details -->
+                            <div style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                <div id="ex4-details-placeholder" style="color: #999; font-style: italic; text-align: center; padding-top: 50px;">
+                                    Select an activity from the left to see relevant technologies, training materials, and qualifications here.
+                                </div>
+
+                                <div id="ex4-details-content" style="display: none;">
+                                    <h4 style="color: #16a085; margin-top: 0;" id="ex4-details-title">Activity Details</h4>
+                                    
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #555; border-bottom: 2px solid #16a085; padding-bottom: 5px;">Technologies & Products</h5>
+                                        <div id="ex4-technologies" style="line-height: 1.8;"></div>
+                                    </div>
+
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #555; border-bottom: 2px solid #16a085; padding-bottom: 5px;">Training Materials</h5>
+                                        <div id="ex4-training" style="line-height: 1.8;"></div>
+                                    </div>
+
+                                    <div>
+                                        <h5 style="color: #555; border-bottom: 2px solid #16a085; padding-bottom: 5px;">Relevant Qualifications</h5>
+                                        <div id="ex4-qualifications" style="line-height: 1.8;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 University of Manchester - Secure Data Environments Skills Competency Framework</p>
+            <p>This is a demo showcasing the structured numbering scheme applied to the competency framework.</p>
+        </footer>
+    </div>
+
+    <style>
+        .training-item {
+            transition: background-color 0.3s ease, padding-left 0.3s ease;
+        }
+        .training-item.highlight {
+            background-color: #f39c12;
+            color: white;
+            padding: 8px;
+            padding-left: 15px;
+            border-radius: 4px;
+            animation: pulse 1s ease-in-out 3;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .ex4-activity-item:hover {
+            background: #e8f8f5 !important;
+            transform: translateX(5px);
+        }
+        .ex4-activity-item.active {
+            background: #16a085 !important;
+            color: white !important;
+        }
+        .ex4-activity-item.active p {
+            color: #e8f8f5 !important;
+        }
+        .ex5-card {
+            transition: all 0.3s ease;
+        }
+        .ex5-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+            transform: translateY(-2px);
+        }
+        @keyframes bounceDown {
+            0%, 100% { 
+                transform: translateY(0); 
+                opacity: 0.7;
+            }
+            50% { 
+                transform: translateY(10px); 
+                opacity: 1;
+            }
+        }
+        @keyframes floatNode {
+            0%, 100% { 
+                transform: translateY(0px) scale(1); 
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.02); 
+            }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px currentColor, 0 0 60px currentColor;
+                transform: scale(1.1);
+            }
+        }
+        @keyframes drawLine {
+            from {
+                stroke-dashoffset: 1000;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .ex9-node {
+            position: absolute;
+            padding: 15px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 600;
+            font-size: 0.9em;
+            text-align: center;
+            border: 3px solid transparent;
+            animation: floatNode 4s ease-in-out infinite;
+            backdrop-filter: blur(5px);
+            white-space: nowrap;
+        }
+        .ex9-node:hover {
+            transform: scale(1.15) translateY(-5px) !important;
+            z-index: 100 !important;
+        }
+        .ex9-node.active {
+            animation: pulseGlow 2s ease-in-out infinite !important;
+            z-index: 200 !important;
+            transform: scale(1.2) !important;
+        }
+        .ex9-node.faded {
+            opacity: 0.15 !important;
+            filter: grayscale(80%) !important;
+        }
+        .ex9-connection {
+            stroke-width: 2;
+            stroke: rgba(255,255,255,0.2);
+            fill: none;
+            transition: all 0.4s ease;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+        .ex9-connection.active {
+            stroke: #e91e63;
+            stroke-width: 4;
+            filter: drop-shadow(0 0 8px #e91e63);
+            animation: drawLine 1s ease-out forwards;
+        }
+        .ex9-connection.faded {
+            opacity: 0.05;
+        }
+    </style>
+
+    <script>
+        // Example 4 data
+        const ex4Data = {
+            'workload-basic': {
+                title: 'Understand workload scheduling concepts',
+                technologies: '<ul><li><strong>Slurm:</strong> Review partition configurations, understand sbatch/srun commands</li><li><strong>PBS Pro:</strong> Study queue structures, job submission syntax</li></ul>',
+                training: '<ul><li><strong>HPC Carpentry:</strong> Introduction to job scheduling</li><li><strong>ARCHER2 Training:</strong> Getting started with Slurm</li></ul>',
+                qualifications: '<ul><li><strong>CompTIA Linux+:</strong> Foundation for HPC systems</li></ul>'
+            },
+            'network-basic': {
+                title: 'Evaluate HPC network topologies',
+                technologies: '<ul><li><strong>InfiniBand:</strong> Fat-tree basics, bandwidth specs (HDR, NDR)</li><li><strong>Ethernet RDMA:</strong> RoCE concepts, lossless Ethernet</li></ul>',
+                training: '<ul><li><strong>LLNL HPC Tutorials:</strong> Network architecture overview</li><li><strong>Intel Developer Zone:</strong> Introduction to high-speed fabrics</li></ul>',
+                qualifications: '<ul><li><strong>Cisco CCNP Data Center:</strong> Advanced networking fundamentals</li></ul>'
+            },
+            'storage-basic': {
+                title: 'Review parallel file system architectures',
+                technologies: '<ul><li><strong>Lustre:</strong> OSS/MDS architecture, striping concepts</li><li><strong>BeeGFS:</strong> Metadata vs storage services, basic configuration</li></ul>',
+                training: '<ul><li><strong>Lustre User Group:</strong> Lustre architecture fundamentals</li><li><strong>ARCHER2 Training:</strong> Parallel I/O best practices</li></ul>',
+                qualifications: '<ul><li><strong>Red Hat Certified Engineer:</strong> Storage management expertise</li></ul>'
+            },
+            'workload-mid': {
+                title: 'Design partition and QoS policies',
+                technologies: '<ul><li><strong>Slurm:</strong> Configure multifactor priority, design partition hierarchies, implement QoS limits</li><li><strong>PBS Pro:</strong> Create queue routing policies, set up resource sets</li></ul>',
+                training: '<ul><li><strong>SchedMD Slurm Training:</strong> Advanced administration and QoS design</li><li><strong>XSEDE Training:</strong> Resource management strategies</li></ul>',
+                qualifications: '<ul><li><strong>Red Hat Certified Architect:</strong> System design specialization</li><li><strong>HPC Systems Professional:</strong> Industry certification</li></ul>'
+            },
+            'network-mid': {
+                title: 'Design fabric topology for 500-1000 nodes',
+                technologies: '<ul><li><strong>InfiniBand:</strong> 2-tier fat-tree design, subnet manager redundancy, adaptive routing</li><li><strong>Omni-Path:</strong> Fabric manager deployment, PSM2 configuration</li></ul>',
+                training: '<ul><li><strong>Mellanox Academy:</strong> InfiniBand architecture and design</li><li><strong>Intel Developer Zone:</strong> Omni-Path fabric management</li></ul>',
+                qualifications: '<ul><li><strong>Cisco CCNP Data Center:</strong> Advanced topology design</li><li><strong>TOGAF Certification:</strong> Architecture framework</li></ul>'
+            },
+            'storage-mid': {
+                title: 'Implement storage tiering strategies',
+                technologies: '<ul><li><strong>Lustre:</strong> Progressive file layouts, DNE configuration, HSM integration</li><li><strong>Spectrum Scale:</strong> AFM caching, policy engine rules, ILM</li></ul>',
+                training: '<ul><li><strong>Lustre User Group:</strong> Advanced Lustre administration</li><li><strong>IBM Training:</strong> Spectrum Scale architecture</li></ul>',
+                qualifications: '<ul><li><strong>Red Hat Certified Architect:</strong> Storage specialization</li></ul>'
+            },
+            'workload-senior': {
+                title: 'Architect multi-site federation strategy',
+                technologies: '<ul><li><strong>Slurm:</strong> Multi-cluster federation, cloud bursting integration, enterprise accounting</li><li><strong>PBS Pro:</strong> Multi-site job routing, global resource policies</li></ul>',
+                training: '<ul><li><strong>SchedMD Slurm Training:</strong> Enterprise federation architecture</li><li><strong>TOGAF Training:</strong> Enterprise architecture frameworks</li></ul>',
+                qualifications: '<ul><li><strong>TOGAF Certification:</strong> Enterprise architecture</li><li><strong>AWS/Azure Solutions Architect:</strong> Cloud integration</li></ul>'
+            },
+            'network-senior': {
+                title: 'Create 5-year network evolution roadmap',
+                technologies: '<ul><li><strong>InfiniBand/Slingshot:</strong> Technology refresh planning, cost optimization models, 100K+ node architectures</li><li><strong>Emerging Tech:</strong> CXL, UCIe, photonics evaluation</li></ul>',
+                training: '<ul><li><strong>Industry Conferences:</strong> SC, ISC, NVIDIA GTC for emerging trends</li><li><strong>Vendor Briefings:</strong> HPE, NVIDIA, Intel roadmap sessions</li></ul>',
+                qualifications: '<ul><li><strong>TOGAF Certification:</strong> Strategic planning</li><li><strong>Enterprise Architecture certifications</strong></li></ul>'
+            },
+            'storage-senior': {
+                title: 'Design petabyte-scale data lifecycle',
+                technologies: '<ul><li><strong>Lustre:</strong> 100+ OST architectures, multi-tier HSM, disaster recovery frameworks</li><li><strong>Spectrum Scale:</strong> Enterprise AFM, cross-site replication, data governance</li></ul>',
+                training: '<ul><li><strong>Lustre User Group:</strong> Exascale storage design</li><li><strong>Enterprise Storage Conferences:</strong> Data lifecycle management</li></ul>',
+                qualifications: '<ul><li><strong>TOGAF Certification:</strong> Enterprise data architecture</li><li><strong>Cloud Architect certifications:</strong> Hybrid strategies</li></ul>'
+            }
+        };
+
+        function showEx4Level(level) {
+            // Update button styles
+            document.getElementById('ex4-btn-entry').style.background = level === 'entry' ? '#16a085' : '#ddd';
+            document.getElementById('ex4-btn-entry').style.color = level === 'entry' ? 'white' : '#333';
+            document.getElementById('ex4-btn-mid').style.background = level === 'mid' ? '#16a085' : '#ddd';
+            document.getElementById('ex4-btn-mid').style.color = level === 'mid' ? 'white' : '#333';
+            document.getElementById('ex4-btn-senior').style.background = level === 'senior' ? '#16a085' : '#ddd';
+            document.getElementById('ex4-btn-senior').style.color = level === 'senior' ? 'white' : '#333';
+
+            // Show appropriate activities
+            document.querySelectorAll('.ex4-activities').forEach(el => el.style.display = 'none');
+            document.getElementById('ex4-activities-' + level).style.display = 'block';
+
+            // Reset right panel
+            document.getElementById('ex4-details-placeholder').style.display = 'block';
+            document.getElementById('ex4-details-content').style.display = 'none';
+        }
+
+        function showEx4Details(activityId) {
+            const data = ex4Data[activityId];
+            if (!data) return;
+
+            // Remove active class from all activities
+            document.querySelectorAll('.ex4-activity-item').forEach(el => el.classList.remove('active'));
+            
+            // Add active class to clicked activity
+            event.currentTarget.classList.add('active');
+
+            // Update right panel
+            document.getElementById('ex4-details-placeholder').style.display = 'none';
+            document.getElementById('ex4-details-content').style.display = 'block';
+            document.getElementById('ex4-details-title').textContent = data.title;
+            document.getElementById('ex4-technologies').innerHTML = data.technologies;
+            document.getElementById('ex4-training').innerHTML = data.training;
+            document.getElementById('ex4-qualifications').innerHTML = data.qualifications;
+        }
+
+        
+    </script>
+</body>
+</html>

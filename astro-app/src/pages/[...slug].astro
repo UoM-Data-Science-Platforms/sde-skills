@@ -1,0 +1,22 @@
+---
+import SkillsFramework from '../components/SkillsFramework.jsx';
+import Layout from '../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const paths = [
+    { params: { slug: 'technology-engineering' } },
+    { params: { slug: 'access-identity' } },
+    { params: { slug: 'data-management' } },
+    { params: { slug: 'governance-compliance' } },
+    { params: { slug: 'outputs-disclosure-control' } },
+    { params: { slug: 'projects-operations' } },
+    { params: { slug: 'skills-index' } },
+  ];
+  return paths;
+}
+
+const { slug } = Astro.params;
+---
+<Layout title="Skills Framework" currentDomain={slug}>
+  <SkillsFramework client:load />
+</Layout>

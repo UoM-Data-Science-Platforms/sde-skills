@@ -1,0 +1,211 @@
+/* =============================================
+   TOP PAGE-LEVEL NAVIGATION
+   ============================================= */
+
+.skills-framework {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.skills-framework h1,
+.skills-framework h2,
+.skills-framework h3,
+.skills-framework h4 {
+  color: var(--color-domain, var(--color-heading));
+}
+
+/* --- Domain title bar --- */
+.sticky-header {
+  flex-shrink: 0;
+  padding: var(--space-lg) var(--space-xl);
+  cursor: pointer;
+  /* glass applied via .glass utility class on the element */
+  background: #3438411f;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.sticky-header h1 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-heading);
+}
+
+/* --- Subdomain + competency tab rows --- */
+.sticky-subnav {
+  flex-shrink: 0;
+  padding: 0 var(--space-xl);
+  /* glass applied via .glass utility class on the element */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+
+.subdomain-tabs,
+.competency-tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subdomain-tabs::-webkit-scrollbar,
+.competency-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.subdomain-tabs { padding: var(--space-sm) 0 0; }
+.competency-tabs { padding: var(--space-2xs) 0; }
+
+/* Individual tab */
+.tab {
+  flex-shrink: 0;
+  padding: var(--space-xs) var(--space-md);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color        var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.tab:hover {
+  color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  border-bottom-color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  font-size: calc(var(--text-small) * 1.05);
+}
+
+.subdomain-tab {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-bottom: var(--space-sm);
+}
+
+.subdomain-tab.active {
+  color: var(--color-domain, var(--color-accent));
+  border-bottom-color: var(--color-domain, var(--color-accent));
+}
+
+.competency-tab {
+  font-size: 0.8rem;
+}
+
+.competency-tab.active {
+  color: var(--color-domain, var(--color-accent));
+  border-bottom-color: var(--color-domain, var(--color-accent));
+}
+
+/* --- Scrollable content area --- */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xl);
+  background-color: #3438411f;
+}
+
+.scroll-area::-webkit-scrollbar       { width: 4px; }
+.scroll-area::-webkit-scrollbar-track { background: transparent; }
+.scroll-area::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+}
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Pill scrollbar — used on wide overflow tables */
+.pill-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-nhs-blue) 45%, transparent) transparent;
+}
+.pill-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.pill-scroll::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--color-text) 6%, transparent);
+  border-radius: var(--radius-pill);
+  margin: 0 var(--space-lg);
+}
+.pill-scroll::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-nhs-blue) 50%, transparent);
+  border-radius: var(--radius-pill);
+}
+.pill-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-nhs-blue);
+}
+
+/* Loading state */
+.loading {
+  padding: var(--space-xl);
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+}
+
+/* --- Subdomain button (FrameworkContents, SatreMappingMatrix) --- */
+.subdomain-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--color-accent) 9%, transparent);
+}
+
+.subdomain-btn--expanded {
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+/* Mobile: page scrolls, nav bars become sticky */
+@media (max-width: 767px) {
+  .skills-framework {
+    height: auto;
+    overflow: visible;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* left padding makes room for the 40px hamburger (left: 16px) + a gap */
+    padding: var(--space-md) var(--space-md) var(--space-md) calc(40px + var(--space-md) + var(--space-sm));
+  }
+
+  .sticky-subnav {
+    position: sticky;
+    top: 56px;
+    z-index: 99;
+    padding: 0 var(--space-sm);
+  }
+
+  .scroll-area {
+    overflow: visible;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  /* Ensure scroll area content fills width on mobile */
+  .scroll-area > * {
+    max-width: 100%;
+  }
+
+  /* Offset scroll targets for sticky header + subnav so scrollIntoView lands below them */
+  .scroll-area [id],
+  [id].subdomain-section {
+    scroll-margin-top: 110px;
+  }
+}

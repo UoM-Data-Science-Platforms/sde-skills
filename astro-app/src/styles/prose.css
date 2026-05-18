@@ -1,0 +1,112 @@
+/* =============================================
+   PROSE (markdown content)
+   ============================================= */
+
+.prose {
+  padding: var(--space-2xl) var(--space-xl);
+  color: var(--color-text);
+  overflow-y: auto;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .prose {
+    padding: var(--space-xl) var(--space-md);
+    height: auto;
+  }
+}
+
+.prose h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.prose h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--color-heading);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.prose h3 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-heading);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-2xs);
+}
+
+/* Within skills-framework, prose headings pick up the domain colour */
+.skills-framework .prose h2,
+.skills-framework .prose h3,
+.skills-framework .prose h4 {
+  color: var(--color-domain, var(--color-heading));
+}
+
+.prose img {
+  height: auto;
+  max-width: 100%;
+}
+
+.prose p {
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.prose li {
+  line-height: 1.75;
+  margin-bottom: var(--space-2xs);
+}
+
+/* Loading state centred and breathing */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-style: italic;
+}
+
+/* =============================================
+   PROSE MODIFIER UTILITIES
+   ============================================= */
+
+/* Applied when the scroll-area already provides padding and overflow */
+.prose--reset {
+  padding: 0;
+  height: auto;
+  overflow-y: visible;
+}
+
+/* Italicise all direct prose text */
+.prose--italic {
+  font-style: italic;
+}
+
+/* Italicise only the opening description paragraph */
+.prose--lead > p:first-of-type {
+  font-style: italic;
+}
+
+/* =============================================
+   PAGE-LEVEL DESCRIPTION UTILITIES
+   ============================================= */
+
+/* Small muted description — used in sticky headers */
+.page-description {
+  margin: 0;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* NHS blue inline link */
+.link--accent {
+  color: var(--color-nhs-blue);
+}

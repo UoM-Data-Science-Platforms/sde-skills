@@ -1,3 +1,10 @@
+<!-- meta
+{
+    index: 1
+    main-color: "color-nhs-blue"
+}
+/meta-->
+
 # Safe Access & Identity
 
 This domain covers all aspects of user authentication, authorization, and access control within Secure Data Environments, ensuring that only authorised users can access appropriate resources.
