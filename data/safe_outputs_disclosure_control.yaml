@@ -34,6 +34,19 @@ domain:
               name: Mid Level
               skills:
               - Implements output tracking and audit logs to support governance processes
+    technologiestools:
+      id: technologiestools
+      name: Technologies/Tools
+      description: 'Awareness of output formats (e.g., CSV, PDF), basic audit logs
+
+        Output tracking systems, audit trail tools (e.g., ELK Stack)
+
+        Governance platforms, enterprise disclosure review systems
+
+
+
+        ## Tools and platforms to support output checking'
+      competencies: {}
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
       name: Tools and platforms to support output checking
@@ -48,7 +61,9 @@ domain:
         \ stipulations\n    - can administer workflow engines to implement disclosure review workflows\n\
         \    - can develop and maintain workflow templates so maximize reuse across similar governance\
         \ constraints\n\n=== \":material-battery-90: Senior Level\"\n\n    - Leads the technology strategy\
-        \ for business process management"
+        \ for business process management\n\n\n## Technologies/Tools\n\nCamunda, Apache Airflow (basic\
+        \ admin), BPMN viewers\nCamunda Modeler, custom workflow templates, stakeholder-driven design\n\
+        Enterprise BPM platforms (e.g., Bonita, Bizagi), strategic workflow architecture"
       competencies:
         workflow-engines:
           id: workflow-engines
@@ -79,67 +94,6 @@ domain:
               name: Senior Level
               skills:
               - Leads the technology strategy for business process management
-        data-airlocks:
-          id: data-airlocks
-          name: Data airlocks
-          description: Install and administer data airlock applications, understand the roles and what
-            level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit,
-            review etc.) within the airlock application, create user documentation and training materials,
-            contribute to on-going improvements to data airlocks to ensure they meet user needs as well
-            as comply with standards and regulations.
-          levels:
-            entry:
-              id: data-airlocks-entry
-              name: Entry Level
-              skills:
-              - is familiar with data airlocks
-              - is familiar with user roles in data airlocks
-            mid:
-              id: data-airlocks-mid
-              name: Mid Level
-              skills:
-              - can write user documentation relating to the operation of data airlocks
-              - can provide training to users relating to the operation of data airlocks
-              - can troubleshoot common user issues with data airlocks
-            senior:
-              id: data-airlocks-senior
-              name: Senior Level
-              skills:
-              - can influence design of data airlocks according to user requirements and changes in standards
-                and governance
-        code-repositories:
-          id: code-repositories
-          name: Code repositories
-          description: Install and configure code repository systems (e.g., Git) that allow source code
-            to be imported and exported from SDEs in industry standard ways. Develop automated checks
-            that can perform static analysis to ensure source code doesn't contain passwords, API keys,
-            or other infrastructural secrets. Develop workflows for disclosure checking to ensure the
-            source code does not contain any restricted data. Use advanced techniques to perform automated
-            code reviews to assess further requirement for manual inspection.
-          levels:
-            entry:
-              id: code-repositories-entry
-              name: Entry Level
-              skills:
-              - Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
-            mid:
-              id: code-repositories-mid
-              name: Mid Level
-              skills:
-              - Implements code publication workflows and processes (e.g., code reviews)
-              - Can install and configure code repositories with correct access controls for data ingress
-                and egress
-              - Can develop automated pipelines that check for known security risk (e.g., using static
-                analysis techniques to check for passwords, ip addresses, or other sensitive infrastructural
-                information)
-            senior:
-              id: code-repositories-senior
-              name: Senior Level
-              skills:
-              - Establishes code publication frameworks and governance
-              - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating
-                secure code repositories, developing sharing policies, designing automated pipelines to
-                review eligibility of code for release).
     statistical-disclosure-control:
       id: statistical-disclosure-control
       name: Statistical Disclosure Control
@@ -171,33 +125,6 @@ domain:
               skills:
               - Leads initiatives to enhance disclosure risk management (e.g., implementing new tools
                 or techniques, anticipate introduction of new regulatory frameworks).
-        automated-disclosure-control:
-          id: automated-disclosure-control
-          name: Automated Disclosure Control
-          description: Implements systems that automatically apply disclosure controls to research outputs.
-            Involves automated tools and solutions for common output types, configuring rules and thresholds,
-            validating effectiveness, architecting enterprise strategies, and developing advanced algorithms
-            to enhance automated disclosure control capabilities.
-          levels:
-            entry:
-              id: automated-disclosure-control-entry
-              name: Entry Level
-              skills:
-              - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
-              - Familiar with available SDC automation tools
-            mid:
-              id: automated-disclosure-control-mid
-              name: Mid Level
-              skills:
-              - Implements automated SDC solutions for common output types
-              - Configures SDC rules and thresholds in automation systems
-              - Validates accuracy and effectiveness of automated controls (e.g., testing against known
-                risks, benchmarking)
-            senior:
-              id: automated-disclosure-control-senior
-              name: Senior Level
-              skills:
-              - Leads initiatives to enhance automated SDC capabilities
     accidental-disclosure:
       id: accidental-disclosure
       name: Accidental disclosure
