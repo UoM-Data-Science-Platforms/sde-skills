@@ -94,16 +94,11 @@
   padding-bottom: var(--space-sm);
 }
 
-.subdomain-tab.active {
-  color: var(--color-domain, var(--color-accent));
-  border-bottom-color: var(--color-domain, var(--color-accent));
-}
-
 .competency-tab {
   font-size: 0.8rem;
 }
 
-.competency-tab.active {
+.tab.active {
   color: var(--color-domain, var(--color-accent));
   border-bottom-color: var(--color-domain, var(--color-accent));
 }

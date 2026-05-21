@@ -1,0 +1,26 @@
+domain:
+  name: Safe Governance & Compliance
+subdomains:
+  regulatory-compliance:
+    name: Regulatory Compliance
+    items:
+    - Caldicott Principles
+    - pseudonymization tools
+    - DSPT
+    - Basic encryption
+    - IRAS documentation
+  security-management:
+    name: Security Management
+    items:
+    - Firewall rules
+    - Nessus
+    - OpenVAS
+    - Splunk
+  ethics-and-research-governance:
+    name: Ethics & Research Governance
+    items: []
+  audit-and-compliance-monitoring:
+    name: Audit & Compliance Monitoring
+    items:
+    - Syslog
+    - Compliance report templates

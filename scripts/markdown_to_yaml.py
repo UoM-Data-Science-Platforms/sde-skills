@@ -42,33 +42,6 @@ def extract_level_content(content: str, level_marker: str) -> List[str]:
     return bullets
 
 
-def extract_tools_for_competency(content: str) -> Dict[str, List[str]]:
-    """Extract tools, technologies, and standards for a competency."""
-    result = {"tools": [], "technologies": [], "standards": []}
-
-    # Pattern to find #### Tools/Technologies/Standards sections
-    # These appear after the === level blocks
-    sections = {
-        "tools": r"#### Tools\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
-        "technologies": r"#### Technologies\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
-        "standards": r"#### Standards\n\n(.*?)(?=\n####|\n###|\n##|\Z)",
-    }
-
-    for section_name, pattern in sections.items():
-        match = re.search(pattern, content, re.DOTALL)
-        if match:
-            section_text = match.group(1).strip()
-            # Extract bullet points
-            items = []
-            for line in section_text.split("\n"):
-                line = line.strip()
-                if line.startswith("- "):
-                    items.append(line[2:].strip())
-            result[section_name] = items
-
-    return result
-
-
 def parse_competency_section(content: str, competency_title: str) -> Dict[str, Any]:
     """Parse a competency section from markdown content."""
     competency_id = slugify(competency_title)
@@ -136,18 +109,54 @@ def parse_competency_section(content: str, competency_title: str) -> Dict[str, A
             "skills": senior_skills,
         }
 
-    # Extract tools, technologies, and standards
-    tools_data = extract_tools_for_competency(section_content)
-
     return {
         "id": competency_id,
         "name": competency_title,
         "description": description,
         "levels": levels,
-        "tools": tools_data.get("tools", []),
-        "technologies": tools_data.get("technologies", []),
-        "standards": tools_data.get("standards", []),
     }
+
+
+def extract_tools_for_subdomain(content: str, subdomain_title: str) -> Dict[str, List[str]]:
+    """Extract tools, technologies, and standards at subdomain level."""
+    result = {"tools": [], "technologies": [], "standards": []}
+
+    # Find the subdomain section
+    subdomain_pattern = rf"## {re.escape(subdomain_title)}\n\n(.*?)(?=\n## |\Z)"
+    subdomain_match = re.search(subdomain_pattern, content, re.DOTALL)
+
+    if not subdomain_match:
+        return result
+
+    subdomain_content = subdomain_match.group(1)
+
+    # Extract #### sections that appear before the first ### competency
+    first_comp_match = re.search(r"\n### ", subdomain_content)
+    if first_comp_match:
+        # Tools/Technologies/Standards should be before first competency
+        section_content = subdomain_content[:first_comp_match.start()]
+    else:
+        section_content = subdomain_content
+
+    # Pattern to find #### Tools/Technologies/Standards sections
+    sections = {
+        "tools": r"#### Tools\n\n(.*?)(?=\n####|\n###|\Z)",
+        "technologies": r"#### Technologies\n\n(.*?)(?=\n####|\n###|\Z)",
+        "standards": r"#### Standards\n\n(.*?)(?=\n####|\n###|\Z)",
+    }
+
+    for section_name, pattern in sections.items():
+        match = re.search(pattern, section_content, re.DOTALL)
+        if match:
+            section_text = match.group(1).strip()
+            items = []
+            for line in section_text.split("\n"):
+                line = line.strip()
+                if line.startswith("- "):
+                    items.append(line[2:].strip())
+            result[section_name] = items
+
+    return result
 
 
 def parse_subdomain_section(content: str, subdomain_title: str) -> Dict[str, Any]:
@@ -170,18 +179,26 @@ def parse_subdomain_section(content: str, subdomain_title: str) -> Dict[str, Any
     if subdomain_match:
         subdomain_content = subdomain_match.group(1)
 
-        # Find all ### competency titles
-        competency_matches = re.finditer(r"### (.+?)(?=\n)", subdomain_content)
+        # Find all ### competency titles (excluding #### and above)
+        competency_matches = re.finditer(r"^### (.+?)$", subdomain_content, re.MULTILINE)
 
         for comp_match in competency_matches:
             competency_title = comp_match.group(1).strip()
-            competency_data = parse_competency_section(content, competency_title)
-            competencies[competency_data["id"]] = competency_data
+            # Skip if it's actually a #### or ##### etc (safety check)
+            if not competency_title.startswith('#'):
+                competency_data = parse_competency_section(content, competency_title)
+                competencies[competency_data["id"]] = competency_data
+
+    # Extract tools, technologies, and standards at subdomain level
+    tools_data = extract_tools_for_subdomain(content, subdomain_title)
 
     return {
         "id": subdomain_id,
         "name": subdomain_title,
         "description": description,
+        "tools": tools_data.get("tools", []),
+        "technologies": tools_data.get("technologies", []),
+        "standards": tools_data.get("standards", []),
         "competencies": competencies,
     }
 

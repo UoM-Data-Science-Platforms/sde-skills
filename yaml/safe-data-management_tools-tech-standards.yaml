@@ -1,0 +1,26 @@
+domain:
+  name: Safe Data Management
+subdomains:
+  data-governance:
+    name: Data Governance
+    items:
+    - Checksums
+    - Basic metadata tools
+    - Labeling tools
+    - Manual lineage documentation
+    - Excel validation templates
+  data-engineering-and-processing:
+    name: Data Engineering & Processing
+    items:
+    - Airflow
+    - Python
+    - SQLite
+    - FHIR/OMOP documentation
+    - Kafka CLI
+    - HashiCorp Vault
+    - AES/RSA libraries
+    - Veeam
+    - Windows Backup
+    - Retention policy templates
+    - AWS DMS
+    - Manual migration scripts

@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { INSTITUTION_COLORS } from '../data/domains.js';
+
+const sections = [
+  { id: 'team', label: 'Team' },
+];
+
+const team = [
+  { name: 'Philip Couch', institution: 'manchester', role: 'Research Technical Professional & Information Systems Programme Manager', affiliation: 'The University of Manchester', background: 'PhD in Chemistry (Molecular Astrophysics); experience in data science standards, software, and infrastructure development', notable: 'Principal Investigator for the SDE Team Development Hub' },
+  { name: 'Georgina Moulton', institution: 'manchester', role: 'Professor of BioHealth Informatics and Education; Associate Dean of Teaching Excellence and Student Outcomes', affiliation: 'University of Manchester, Faculty of Biology, Medicine and Health Sciences', background: '20 years\' experience developing digital health education frameworks and advocating for technical professional recognition' },
+  { name: 'Charlie Stockton-Powdrell', institution: 'manchester', role: 'Information Systems Programme Manager; Co-Lead, Digital Health Software Team', affiliation: 'The University of Manchester', background: '10+ years in digital health research; co-leads Team Research Programme with Ruth Norris' },
+  { name: 'Ruth Norris', institution: 'manchester', affiliation:'The University of Manchester', role: 'Co-Lead, Team Research Programme', background: '20+ years delivering change in commercial and academic settings; founding Operational Director of Christabel Pankhurst Institute' },
+  { name: 'Vishnu Chandrabalan', institution: 'lancashire', role: 'Director & Chief Clinical Information Officer', affiliation: 'Lancashire and South Cumbria Secure Data Environment', notable: 'Team won HDRUK national award; OHDSI Titan award nomination' },
+  { name: 'Gary Leeming', institution: 'liverpool', role: 'Technical Director, Civic Health Innovation Labs & Mental Health Research for Innovation Centre', affiliation: 'University of Liverpool', background: 'Former Chief Technology Officer at Connected Health Cities' },
+  { name: 'Michael Adekoya', institution: 'lancashire', role: 'Senior Data Engineer & Azure Cloud Solution Consultant', affiliation: 'Lancashire Teaching Hospital', background: '8+ years in data engineering; MSc in Big Data Analytics' },
+  { name: 'Mike', institution: 'lancashire', role: 'Research Fellow/Research Software Engineer', affiliation: 'Lancaster University; seconded to Lancashire Teaching Hospital (LSCSDE Programme)', focus: 'Cloud computing infrastructure for secure data environments' },
+  { name: 'Edd Tempest', institution: 'manchester', role: 'Senior Infrastructure Engineer', affiliation: 'The University of Manchester', focus: 'Developing secure research infrastructure and platforms' },
+];
+---
+
+<Layout title="Meet the Team" currentDomain="meet-the-team">
+  <div class="skills-framework">
+    <PageHeader title="Meet the Team" />
+    <div class="sticky-subnav">
+      <div class="subdomain-tabs" id="section-tabs">
+        {sections.map(s => (
+          <button class="tab subdomain-tab" data-section={s.id}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="scroll-area" id="scroll-area">
+      <div class="page-container">
+        <h2 id="team" style="display: none;"></h2>
+        <div class="team-cards-grid">
+          {team.map((member) => (
+            <article class="card team-card">
+              <div class="card-header">
+                <div class="card-info">
+                  <h3 style={member.institution ? { color: INSTITUTION_COLORS[member.institution] } : {}}>{member.name}</h3>
+                  {member.affiliation && <div class="info-row affiliation-italic"><i>{member.affiliation}</i></div>}
+                  <div class="info-row"><strong>Role:</strong> {member.role}</div>
+                  {member.background && <div class="info-row"><strong>Background:</strong> {member.background}</div>}
+                  {member.notable && <div class="info-row"><strong>Notable:</strong> {member.notable}</div>}
+                  {member.focus && <div class="info-row"><strong>Focus:</strong> {member.focus}</div>}
+                </div>
+                <div class="card-photo">
+                  <img src={`/assets/images/${member.name.split(" ")[0].toLowerCase()}.png`} alt={member.name} />
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script define:vars={{ sections }}>
+  window._pageSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+  initScrollSync({ sections: window._pageSections });
+</script>

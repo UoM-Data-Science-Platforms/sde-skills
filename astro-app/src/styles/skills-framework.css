@@ -89,6 +89,18 @@
   margin-bottom: var(--space-xl);
 }
 
+/* Tools, Technologies, and Standards at subdomain level */
+.subdomain-tech-section {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  
+}
+
 /* Competency card */
 .competency-card {
   border-radius: var(--radius-lg);
@@ -163,7 +175,6 @@
   letter-spacing: 0.06em;
   color: var(--color-text-muted);
   flex-shrink: 0;
-  align-self: center;
   min-width: 60px;
 }
 
@@ -923,3 +934,79 @@ body[data-theme="dark"] .proficiency-btn.active {
 .cf-border-20 { border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent); }
 .cf-border-35 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent); }
 .cf-border-40 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 40%, transparent); }
+
+/* Training and Qualifications Lists */
+.training-list,
+.qualifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.training-card,
+.qualification-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #ffffff
+  overflow: hidden;
+}
+
+.training-name,
+.qualification-name {
+  width: 100%;
+  padding: var(--space-md);
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training-name::after,
+.qualification-name::after {
+  content: '▼';
+  font-size: 0.7rem;
+  margin-left: var(--space-sm);
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+}
+
+.training-card:has(.training-name:focus),
+.qualification-card:has(.qualification-name:focus) {
+  outline: 2px solid var(--color-text);
+  outline-offset: -1px;
+}
+
+.training-name:hover,
+.qualification-name:hover {
+  background: var(--color-surface-raised);
+}
+
+.training-detail,
+.qualification-detail {
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.detail-field {
+  color: var(--color-text);
+}
+
+.detail-field strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--color-text-strong);
+}

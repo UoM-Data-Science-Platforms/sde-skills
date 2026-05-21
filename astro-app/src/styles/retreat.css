@@ -1,0 +1,66 @@
+/* =============================================
+   RETREAT PAGE STYLING
+   ============================================= */
+
+/* Ensure consistent text sizing across all content */
+.card-info p,
+.card-info li,
+.card-info td {
+  font-size: var(--text-body);
+  line-height: 1.75;
+}
+
+/* Ensure unordered lists show bullets */
+.card-info ul {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.card-info ol {
+  list-style: decimal;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+/* Agenda table styling — matching mapping matrix style */
+.agenda-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
+.agenda-table thead tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agenda-table th {
+  padding: var(--space-xs) var(--space-sm);
+  font-weight: 500;
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  text-align: left;
+}
+
+.agenda-table td {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-small);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agenda-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Day subheadings */
+.card-info h3 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+/* First h3 doesn't need top margin */
+.card-info h3:first-of-type {
+  margin-top: 0;
+}

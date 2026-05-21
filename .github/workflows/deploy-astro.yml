@@ -7,7 +7,10 @@ on:
     paths:
       - 'astro-app/**'
       - 'scripts/markdown_to_yaml.py'
+      - 'scripts/extract_tools_tech_standards.py'
+      - 'scripts/build_data.py'
       - 'docs/competency_framework/**'
+      - 'yaml/**'
       - 'docs/index.md'
       - 'docs/about.md'
       - 'docs/contributing.md'
@@ -33,20 +36,11 @@ jobs:
       - name: Install Python dependencies
         run: uv sync --locked --all-extras --dev
 
-      - name: Generate YAML from markdown
-        run: |
-          uv run python3 -c "
-          import sys, os
-          sys.path.insert(0, 'scripts')
-          from markdown_to_yaml import convert_file_to_yaml
-          input_dir = 'docs/competency_framework'
-          output_dir = 'astro-app/public/data'
-          os.makedirs(output_dir, exist_ok=True)
-          for f in sorted(os.listdir(input_dir)):
-              if f.endswith('.md'):
-                  convert_file_to_yaml(os.path.join(input_dir, f), output_dir)
-          print('YAML generation complete')
-          "
+      - name: Extract tools/technologies/standards from markdown
+        run: uv run python scripts/extract_tools_tech_standards.py
+
+      - name: Build and merge YAML data
+        run: uv run python scripts/build_data.py
 
       - name: Copy home page markdown
         run: |

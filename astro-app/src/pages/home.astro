@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContentBlock from '../components/ContentBlock.astro';
+import yaml from 'js-yaml';
+import { readFileSync } from 'fs';
+import path from 'path';
+
+const yamlPath = path.join(process.cwd(), '/public/data/project/home.yaml');
+const fileContent = readFileSync(yamlPath, 'utf-8');
+const data = yaml.load(fileContent);
+
+const pageData = data.home;
+const headData = pageData.head;
+const pageTitle = pageData.title;
+const bodyBlocks = pageData.body;
+---
+
+<Layout title={headData.title}>
+  <PageHeader title={pageTitle} />
+  <div class="page-container">
+    {bodyBlocks.map((block) => {
+      if (block.type) {
+        return <ContentBlock block={block} />;
+      }
+
+      if (block.columns) {
+        return (
+          <div class={`columns-container ${block.class || ''}`} id={block.id}>
+            {block.columns.map((colWrapper) => {
+              const col = colWrapper.col;
+              const colClass = colWrapper.class;
+              const colId = colWrapper.id;
+              return (
+                <div class={`column ${colClass || ''}`} id={colId}>
+                  {Array.isArray(col) ? col.map((contentBlock) => (
+                    <ContentBlock block={contentBlock} />
+                  )) : (
+                    <ContentBlock block={col} />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        );
+      }
+    })}
+  </div>
+</Layout>

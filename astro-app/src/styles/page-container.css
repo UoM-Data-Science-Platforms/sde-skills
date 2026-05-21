@@ -1,0 +1,315 @@
+.page-container {
+  padding: 0;
+}
+
+.page-container h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.page-container > h2:first-child {
+  margin-top: 0;
+}
+
+.page-container p {
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.page-container p:last-child {
+  margin-bottom: 0;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+.nhs-blue{
+  color: var(--color-nhs-blue) !important;
+}
+/* =============================================
+   TABLE STYLING
+   ============================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+thead {
+  background: transparent;
+}
+
+thead th {
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--text-small);
+  color: var(--color-heading);
+  border-bottom: 1px solid var(--color-border);
+  letter-spacing: 0.02em;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-fast);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: transparent;
+}
+
+tbody td {
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* =============================================
+   CARD
+   ============================================= */
+.card {
+  border-radius: 16px;
+  padding: var(--space-lg) var(--space-xl);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 169, 206, 0.25);
+}
+
+/* =============================================
+   CASE STUDY CARDS
+   ============================================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.card h3 {
+  font-size: var(--text-competency);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  margin-top: 0;
+  color: var(--color-heading);
+}
+
+.card .card-subtitle {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+  margin-bottom: var(--space-lg);
+  align-items: flex-start;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.info-row {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.info-row strong {
+  color: var(--color-heading);
+}
+
+.card-photo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-domain-base) 8%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================================
+   TABLE ROW CLICKABLE
+   ============================================= */
+
+.table-row-clickable {
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.table-row-clickable:hover {
+  background-color: color-mix(in srgb, var(--color-domain-base) 8%, transparent);
+}
+
+/* =============================================
+   RTP CARDS
+   ============================================= */
+
+.card blockquote {
+  margin: var(--space-sm) 0 0 0;
+  padding-left: var(--space-lg);
+  border-left: 3px solid color-mix(in srgb, var(--color-domain-base) 30%, transparent);
+  font-style: italic;
+}
+
+.card blockquote p {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+}
+
+.skill-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background: color-mix(in srgb, var(--color-domain-base) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-domain-base) 30%, transparent);
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* =============================================
+   TEAM CARDS
+   ============================================= */
+
+.team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.team-card {
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+}
+
+.team-card h3 {
+  font-size: var(--text-competency);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  margin-top: 0;
+  color: var(--color-heading);
+}
+
+.team-card .card-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-lg);
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.team-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.team-card .info-row {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.team-card .info-row strong {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.team-card .affiliation-italic {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.team-card .affiliation-italic i {
+  font-style: italic;
+}
+
+.team-card .card-photo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-domain-base) 8%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+/* =============================================
+   EOI CARD
+   ============================================= */
+
+.eoi-card {
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  margin-top: var(--space-lg);
+}
