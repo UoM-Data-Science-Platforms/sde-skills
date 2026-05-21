@@ -1,0 +1,42 @@
+domain:
+  name: Safe Projects & Operations
+subdomains:
+  project-management:
+    name: Project Management
+    items:
+    - Trello
+    - Microsoft Planner
+    - SharePoint
+    - LabArchives
+    - Miro
+    - Scrum boards
+    - SAP Ariba (view-only
+    - Oracle Procurement Cloud
+    - AWS Cost Explorer
+    - CloudCheckr
+  service-management:
+    name: Service Management
+    items:
+    - basic monitoring dashboards
+    - SLA templates
+    - basic ticketing systems
+    - Freshservice
+    - GitHub Actions
+    - automated release orchestration
+  operational-excellence:
+    name: Operational Excellence
+    items:
+    - Lean Six Sigma templates
+    - Google Docs
+    - OneNote
+    - Azure Monitor
+    - CloudWatch
+  research-support-and-innovation:
+    name: Research Support & Innovation
+    items:
+    - Moodle
+    - basic helpdesk tools
+    - RStudio
+    - basic TRE access
+    - Feedly
+    - LinkedIn

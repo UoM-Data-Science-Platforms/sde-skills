@@ -106,6 +106,18 @@
   line-height: 1.6;
 }
 
+/* Inline link */
+.link {
+  color: var(--color-domain-base);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
 /* NHS blue inline link */
 .link--accent {
   color: var(--color-nhs-blue);

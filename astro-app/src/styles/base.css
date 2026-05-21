@@ -11,13 +11,27 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-gradient);
+  
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg-image);
+
+  /* Set exact matching sizes for the repeating patterns */
+  background-size: var(--bg-size);
+  background-repeat: var(--bg-repeat);
+  background-position: var(--bg-position);
+
+
+
 }
+
+
 
 ul  { list-style: none; margin: 0; padding: 0; }
 a   { color: inherit; text-decoration: none; }
@@ -102,8 +116,8 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 .glass {
   background-color: rgba(52, 56, 65, 0.12);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
@@ -111,10 +125,11 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 .glass--soft {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.4px);
-  -webkit-backdrop-filter: blur(6.4px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.19);
 }
+
 
 /* =============================================
    MISSION GRID LAYOUT

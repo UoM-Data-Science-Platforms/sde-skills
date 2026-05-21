@@ -24,15 +24,17 @@ export const PAGE_COLORS = {
   // Nav items in order (index % 3 determines color)
   '/':                          C[0],  // 0
   'contributing':               C[1],  // 1
-  'cf-overview':                C[2],  // 2
-  'framework-contents':         C[0],  // 3
-  'mapping-matrix':             C[1],  // 4
-  'access-identity':            C[2],  // 5
-  'data-management':            C[0],  // 6
-  'governance-compliance':      C[1],  // 7
-  'outputs-disclosure-control': C[2],  // 8
-  'projects-operations':        C[0],  // 9
-  'technology-engineering':     C[1],  // 10
+  'retreat-2026':               C[2],  // 2
+  'expression-of-interest':     C[0],  // 3
+  'cf-overview':                C[1],  // 4
+  'framework-contents':         C[2],  // 5
+  'mapping-matrix':             C[0],  // 6
+  'access-identity':            C[1],  // 7
+  'data-management':            C[2],  // 8
+  'governance-compliance':      C[0],  // 9
+  'outputs-disclosure-control': C[1],  // 10
+  'projects-operations':        C[2],  // 11
+  'technology-engineering':     C[0],  // 12
   // Pages without a sidebar nav link — pick a reasonable match
   'cf-framework-mapping':       C[2],
   'about':                      C[2],
@@ -47,3 +49,12 @@ export const PAGE_COLORS = {
 export const DOMAIN_COLORS = Object.fromEntries(
   DOMAINS.map(d => [d.id, PAGE_COLORS[d.id]])
 );
+
+/**
+ * Institution-specific accent colors for RTP trainees
+ */
+export const INSTITUTION_COLORS = {
+  'manchester': 'var(--color-purple)',
+  'lancashire': 'var(--color-nhs-blue)',
+  'liverpool': 'var(--color-deep-blue)',
+};

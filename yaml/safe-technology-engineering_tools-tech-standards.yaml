@@ -1,0 +1,39 @@
+domain:
+  name: Safe Technology & Engineering
+subdomains:
+  software-engineering:
+    name: Software Engineering
+    items:
+    - GitHub
+    - Git
+    - SonarQube
+    - basic input validation libraries
+    - Postman
+    - JUnit
+    - REST APIs
+    - Confluence
+    - Markdown
+    - Docker Hub
+    - Clair
+  infrastructure-and-deployment:
+    name: Infrastructure & Deployment
+    items:
+    - AWS Console
+    - CloudFormation
+    - Docker CLI
+    - Network Policies
+    - Basic firewall rules
+    - GPG
+    - TLS/SSL
+  system-architecture:
+    name: System Architecture
+    items:
+    - Documentation tools
+    - Apache JMeter
+    - UML tools
+    - React components
+    - Nessus
+    - Windows Update
+    - Ansible basics
+    - shell scripts
+    - SLURM

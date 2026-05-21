@@ -79,7 +79,24 @@
 
   /* Layout */
   --sidebar-width: clamp(200px, 20vw, 260px);
-}
+
+--bg-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
+     conic-gradient(
+      #e9bcff,
+      #a0bcff,
+      #afeaff
+    );
+
+  
+  /* Set exact matching sizes for the repeating patterns */
+  --bg-size: 60px 104px, 60px 104px, auto;
+  --bg-repeat: repeat, repeat, no-repeat;
+  
+  /* THE PERFECT HONEYCOMB LOCK: Layer B is shifted by exactly half-width and half-height */
+  --bg-position: 0 0, 30px 52px, 0 0;
+  }
 
 /* =============================================
    DARK MODE
@@ -112,4 +129,26 @@ html[data-theme="dark"] {
     radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-original), #2222 99%),
     radial-gradient(ellipse 80% 61% at 51% 70%, var(--color-domain), #333 99%),
     linear-gradient(90deg, #222, #444 99%);
+
+  --bg-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23060b1e"/></svg>'),
+    
+    /* 3. MIDDLE LAYER: Hexagon Layer B (Identical dimensions for the row stagger) */
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23060b1e"/></svg>'),
+     conic-gradient(
+      #222b56,
+      #004789,
+      #410062,
+      #222b56,
+      #004789,
+      #410062
+    );
+
+  
+  /* Set exact matching sizes for the repeating patterns */
+  --bg-size: 60px 104px, 60px 104px, auto;
+  --bg-repeat: repeat, repeat, no-repeat;
+  
+  /* THE PERFECT HONEYCOMB LOCK: Layer B is shifted by exactly half-width and half-height */
+  --bg-position: 0 0, 30px 52px, 0 0;
 }

@@ -1,0 +1,246 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const sections = [
+{ id: 'retreat', label: 'Retreat 2026' },
+{ id: 'where', label: 'Where and when' },
+{ id: 'who', label: 'Who is it for?' },
+{ id: 'overview', label: 'Overview' },
+{ id: 'outcomes', label: 'Workshop outcomes' },
+{ id: 'apply', label: 'How to apply' },
+];
+---
+
+<Layout title="Retreat 2026" currentDomain="retreat-2026">
+  <div class="skills-framework">
+    <PageHeader title="Retreat 2026" />
+    <div class="sticky-subnav">
+      <div class="subdomain-tabs" id="section-tabs">
+        {sections.map(s => (
+        <button class="tab subdomain-tab" data-section={s.id}>
+          {s.label}
+        </button>
+        ))}
+      </div>
+    </div>
+    <div class="scroll-area" id="scroll-area">
+      <div class="page-container">
+        <h2 id="retreat">Retreat 2026</h2>
+        <p>
+          Applications are open to attend a <b> fully funded technical skills residential training workshop </b> to
+          develop skills to pursue a career supporting research organisations to design, build and maintain secure data
+          environments.
+        </p>
+        <p>
+          This workshop will focus on developing an understanding of the Research Technical Professional role and the
+          skills needed to design, build and maintain Secure Data Environments (SDEs).
+        </p>
+        <article class="card glass--soft">
+          <div class="card-header">
+            <div id="where" class="card-info">
+              <h2>Where and when</h2>
+              <div class="info-row"><strong>Location:</strong> The Rookery Hotel, Crewe</div>
+              <div class="info-row"><strong>Dates:</strong> 11-13 November 2026</div>
+              <div class="info-row"><strong>Arrival:</strong> by 3pm 11 November</div>
+              <div class="info-row"><strong>Departure:</strong> 3pm 13 November</div>
+            </div>
+
+          </div>
+          <hr />
+          <div>
+            <div id="who" class="card-info">
+              <h2>Who is it for?</h2>
+
+              <p>Individuals currently supporting research organisations to design, build and maintain secure data
+                environments, or individuals that have a desire to work in this area in the future. Attendees should be
+                at an early stage of personal development in this area and might be from a range of backgrounds
+                including technical, professional services or research/ academic. Attendees could include:</p>
+              <ul>
+                <li>Recent graduates from courses in computer science, data science, informatics or related disciplines;
+                </li>
+
+                <li>Junior or trainee technical professionals working with secure data environments in a research
+                  setting, for example: platform, data and DevOps engineers; </li>
+
+                <li>Those with Research Support Roles (e.g., RSEs, System Administrators, and IT Solution Architects)
+                </li>
+
+                <li>Research technical professionals in other fields looking to pivot into research data infrastructure.
+                </li>
+              </ul>
+              <p>Prior knowledge required: All attendees should have some experience with software development or
+                scripting, understand basic terminal commands and have some experience with version control systems
+                including Git. </p>
+            </div>
+            <hr />
+            <div id="overview" class="card-info">
+              <h2>Overview</h2>
+              <ol>
+                <li>Architecting Secure Data Environments: Core Principles and Practical Implementation As the UK
+                  increasingly relies on Secure Data Environments (SDEs) to analyse sensitive research datasets, the
+                  ability to design and maintain these systems has become a vital capability. This workshop offers a
+                  guided, hands-on introduction to Trusted Research Environments (TREs) for individuals looking to build
+                  their expertise in this specialized area. </li>
+
+
+
+                <li> Foundations & Architecture: We will begin by exploring the specific needs of secure research data
+                  services and the essential skills required to operate as a Research Technical Professional (RTP). You
+                  will learn the core architectural principles that govern SDEs, focusing on data security, access
+                  control, and scalable compute.</li>
+
+
+
+                <li> Practical Implementation
+                  <p>To ensure you gain practical experience without getting bogged down in initial setup, the technical
+                    portion of the workshop is heavily scaffolded. You will be provided with a foundational, Azure-based
+                    codebase to act as a working demonstration of our taught principles. Throughout the exercise, you
+                    will:</p>
+
+                  <ul>
+                    <li>Adapt and modify the core codebase to meet specific requirements. </li>
+                    <li>Discuss and defend your design choices, linking them directly to the RTP skills framework. </li>
+
+                    <li>Learn how to translate these specific Azure implementations into equivalent architectures for
+                      AWS, GCP, or on-premises environments. </li>
+
+                    <li>Participants will conclude the session equipped with a working knowledge of SDE architecture and
+                      the necessary resources to pursue independent, follow-up learning. </li>
+
+                    <li>We will also run parallel sessions on different models for implementation and related skills or
+                      technologies. These will include Kubernetes, data engineering and AI. </li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <hr />
+
+            <div id="outcomes" class="card-info">
+              <h2>Workshop outcomes</h2>
+              <p>Attendees will have participated in a collaborative, expert-led event that included: </p>
+              <ul>
+                <li><strong>Expert Insight:</strong> Direct training from field experts on the evolving standards for UK
+                  research data services. Includes understanding the research technical professional pathway and
+                  opportunities within research and academia and its role in enabling Team Science and collaborative
+                  ways of working. </li>
+
+                <li><strong>Practical Deployment:</strong> Hands-on experience adapting and deploying secure, scalable
+                  research frameworks. Developing practical technical skills training and development supporting trusted
+                  research environments (TREs). </li>
+
+                <li><strong>Architectural Translation:</strong> Skills to move beyond a single cloud provider, applying
+                  security controls across different cloud environments, data services and research tools. </li>
+
+                <li><strong>Competency Alignment:</strong> A clear understanding of how to document and demonstrate
+                  technical work against the RTP professional standards. </li>
+              </ul>
+            </div>
+            <hr />
+            <div id="agenda" class="card-info">
+              <h2>Indicative agenda (subject to change)</h2>
+
+              <h3>Wednesday 10th November</h3>
+              <table class="agenda-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>14.00</td>
+                    <td>Arrival</td>
+                  </tr>
+                  <tr>
+                    <td>Afternoon</td>
+                    <td>Introductory Session</td>
+                  </tr>
+                  <tr>
+                    <td>Evening</td>
+                    <td>Free-time<br />Dinner with invited speaker<br />Free-time / Social activity (optional)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Thursday 11th November</h3>
+              <table class="agenda-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Morning</td>
+                    <td><strong>Session 1:</strong> Icebreaker<br />Introduction to Team Science and The RTP Competency Framework<br /><br /><strong>Session 2:</strong> Overview of Trusted Research Environments (TREs and SDEs)</td>
+                  </tr>
+                  <tr>
+                    <td>Afternoon</td>
+                    <td>Lunch<br /><br /><strong>Session 3 —</strong> Technical Hand-on Workshop: Building and Modifying a TRE</td>
+                  </tr>
+                  <tr>
+                    <td>Evening</td>
+                    <td>Dinner with invited speaker<br />Free-time / Social activity (optional)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Friday 12th November</h3>
+              <table class="agenda-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Morning</td>
+                    <td>Icebreaker/wakeup exercise<br />Parallel Sessions – Specialist topics</td>
+                  </tr>
+                  <tr>
+                    <td>Afternoon</td>
+                    <td>Lunch<br /><br />15.00 - Refreshments & Close</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr />
+            <div id="apply" class="card-info">
+              <h2>How to apply</h2>
+              <p><a href="#">Click here</a> to go to our Google forms application form.</p>
+               <p>We are using a short application process rather than first-come, first-served registration. This helps us: 
+                  <ul>
+                    <li><strong>Manage demand:</strong> this is expected to be highly competitive and with limited spaces we wish to enable equal opportunity to apply </li>
+
+                    <li><strong>Allocate places fairly:</strong> with a balanced mix of participants </li>
+
+                    <li><strong>Support those who will benefit most:</strong> from the residential experience </li>
+                  </ul>
+               </p>
+
+ 
+
+                <p>We encourage ALL applications at this stage so if this event speaks to you, we welcome you to apply.</p>
+
+ 
+
+<p>All applications will be reviewed and applicants will be sorted into successful / waiting list / unsuccessful and applicants informed.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script define:vars={{ sections }}>
+  window._pageSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+  initScrollSync({ sections: window._pageSections });
+</script>

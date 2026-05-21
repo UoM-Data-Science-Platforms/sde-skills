@@ -21,6 +21,63 @@ function CollapsibleSection({ title, defaultOpen = false, children }) {
   );
 }
 
+function TrainingCard({ training }) {
+  const [showDetail, setShowDetail] = React.useState(false);
+  return (
+    <div className="training-card">
+      <button
+        className="training-name"
+        onClick={() => setShowDetail(!showDetail)}
+      >
+        {training.name}
+      </button>
+      {showDetail && (
+        <div className="training-detail">
+          <div className="detail-field">
+            <strong>Format:</strong> {training.format}
+          </div>
+          <div className="detail-field">
+            <strong>Duration:</strong> {training.duration}
+          </div>
+          <div className="detail-field">
+            <strong>What:</strong> {training.description}
+          </div>
+          <div className="detail-field">
+            <strong>Why:</strong> {training.why}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function QualificationCard({ qualification }) {
+  const [showDetail, setShowDetail] = React.useState(false);
+  return (
+    <div className="qualification-card">
+      <button
+        className="qualification-name"
+        onClick={() => setShowDetail(!showDetail)}
+      >
+        {qualification.name}
+      </button>
+      {showDetail && (
+        <div className="qualification-detail">
+          <div className="detail-field">
+            <strong>Issued by:</strong> {qualification.issuer}
+          </div>
+          <div className="detail-field">
+            {qualification.description}
+          </div>
+          <div className="detail-field">
+            <strong>Career Impact:</strong> {qualification.career_impact}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function SkillsFramework() {
   const [data, setData] = React.useState(null);
   const [stickySubdomain, setStickySubdomain] = React.useState('');
@@ -100,6 +157,7 @@ export default function SkillsFramework() {
   React.useEffect(() => {
     const filename = getYamlFilename();
     const indexFile = `${base}data/skills_index.yaml`;
+
     fetch(filename)
       .then(res => {
         if (!res.ok) throw new Error(`Could not load ${filename}`);
@@ -343,23 +401,17 @@ export default function SkillsFramework() {
                 <p className="subdomain-description">{subVal.description}</p>
               )}
 
-              {/* HACK: hardcoded relevant tools/technologies/standards prototype — remove when implementing properly */}
-                {false && (
-                  <div className="subdomain-relevant">
-                <div className="relevant-group">
-                  <span className="relevant-label">Tools</span>
-                  {['Git / GitHub', 'VS Code', 'SonarQube', 'Jira'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
+              {/* Tools, Technologies, and Standards at subdomain level */}
+              {subVal.items?.length > 0 && (
+                <div className="subdomain-tech-section glass--soft">
+                  <span className="tech-label">Tools, Technologies & Standards:</span>
+                  <div className="tech-chips">
+                    {subVal.items.map((item, idx) => (
+                      <span key={idx} className="tech-chip">{item}</span>
+                    ))}
+                  </div>
                 </div>
-                <div className="relevant-group">
-                  <span className="relevant-label">Technologies</span>
-                  {['Python', 'REST APIs', 'Docker', 'CI/CD Pipelines'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
-                </div>
-                <div className="relevant-group">
-                  <span className="relevant-label">Standards</span>
-                  {['OWASP Top 10', 'ISO/IEC 27001', 'NCSC Secure Dev'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
-                </div>
-              </div>)}
-              {/* END HACK */}
+              )}
 
               {competencies.map(([compKey, compVal], compIdx) => {
                 const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;
@@ -386,42 +438,6 @@ export default function SkillsFramework() {
                       {compVal.name || compVal.id}
                     </h3>
                     <p className="competency-description">{compVal.description}</p>
-
-                    {/* Tools, Technologies, and Standards */}
-                    {(compVal.tools?.length > 0 || compVal.technologies?.length > 0 || compVal.standards?.length > 0) && (
-                      <div className="competency-tech-section">
-                        {compVal.tools?.length > 0 && (
-                          <div className="tech-category">
-                            <span className="tech-label">Tools:</span>
-                            <div className="tech-chips">
-                              {compVal.tools.map((item, idx) => (
-                                <span key={idx} className="tech-chip tool">{item}</span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                        {compVal.technologies?.length > 0 && (
-                          <div className="tech-category">
-                            <span className="tech-label">Technologies:</span>
-                            <div className="tech-chips">
-                              {compVal.technologies.map((item, idx) => (
-                                <span key={idx} className="tech-chip technology">{item}</span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                        {compVal.standards?.length > 0 && (
-                          <div className="tech-category">
-                            <span className="tech-label">Standards:</span>
-                            <div className="tech-chips">
-                              {compVal.standards.map((item, idx) => (
-                                <span key={idx} className="tech-chip standard">{item}</span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    )}
 
                     {/* Experience-level selector */}
                     <div className="level-buttons">
@@ -455,10 +471,26 @@ export default function SkillsFramework() {
                             <div className="proficiency-detail">
                               <h4>{selectedLevelData.skills[activeProficiency[compNumber]]}</h4>
                               <CollapsibleSection title="Training Materials">
-                                <p>No training materials listed yet.</p>
+                                {selectedLevelData?.training_materials?.length > 0 ? (
+                                  <div className="training-list">
+                                    {selectedLevelData.training_materials.map((training, idx) => (
+                                      <TrainingCard key={idx} training={training} />
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p>No training materials for this level.</p>
+                                )}
                               </CollapsibleSection>
                               <CollapsibleSection title="Qualifications">
-                                <p>No qualifications listed yet.</p>
+                                {selectedLevelData?.qualifications?.length > 0 ? (
+                                  <div className="qualifications-list">
+                                    {selectedLevelData.qualifications.map((qual, idx) => (
+                                      <QualificationCard key={idx} qualification={qual} />
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p>No qualifications for this level.</p>
+                                )}
                               </CollapsibleSection>
                             </div>
                           ) : (
