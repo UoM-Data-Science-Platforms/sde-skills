@@ -161,7 +161,7 @@ const thStyle = {
 function ByStandardView({ standards, domains, selected, onCellClick }) {
   const frameworks = FRAMEWORKS.filter(f => standards.some(s => s.framework === f));
   return (
-    <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+    <table className="table table-sm mb-0">
       <thead>
         <tr>
           <th style={{ ...thStyle, textAlign: 'left', minWidth: 160 }}>Standard</th>
@@ -217,7 +217,7 @@ function ByStandardView({ standards, domains, selected, onCellClick }) {
 
 function ByDomainView({ standards, domains, selected, onCellClick }) {
   return (
-    <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+    <table className="table table-sm mb-0">
       <thead>
         <tr>
           <th style={{ ...thStyle, textAlign: 'left', minWidth: 140 }}>Domain</th>
@@ -283,36 +283,31 @@ export default function MappingMatrix() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)', height: '100%' }}>
 
       {/* Controls */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 'var(--space-sm)' }}>
+      <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
         {/* Framework filter tabs */}
-        <div style={{ display: 'flex', gap: 0 }}>
+        <ul className="nav nav-pills subdomain-tabs mb-0" role="tablist">
           {FRAMEWORKS.map(f => (
-            <button
-              key={f}
-              className={`tab subdomain-tab${filter === f ? ' active' : ''}`}
-              style={{ '--color-domain': FRAMEWORK_COLORS[f] ?? 'var(--color-domain)' }}
-              onClick={() => { setFilter(f); setSelected(null); }}
-            >
-              {f}
-            </button>
+            <li key={f} className="nav-item" role="presentation">
+              <button
+                className={`nav-link tab subdomain-tab${filter === f ? ' active' : ''}`}
+                style={{ '--color-domain': FRAMEWORK_COLORS[f] ?? 'var(--color-domain)' }}
+                role="tab"
+                onClick={() => { setFilter(f); setSelected(null); }}
+              >
+                {f}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Perspective toggle — hidden for SATRE view */}
         {filter !== 'SATRE' && (
-          <div style={{ display: 'flex', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', overflow: 'hidden' }}>
+          <div className="btn-group" role="group" aria-label="View perspective">
             {[['by-standard', 'By Standard'], ['by-domain', 'By Domain']].map(([val, label]) => (
               <button
                 key={val}
+                className={`btn btn-sm${perspective === val ? ' btn-primary' : ' btn-outline-secondary'}`}
                 onClick={() => { setPerspective(val); setSelected(null); }}
-                style={{
-                  padding: 'var(--space-xs) var(--space-md)',
-                  fontSize: 'var(--text-small)', fontWeight: 500,
-                  background: perspective === val ? 'var(--color-domain)' : 'transparent',
-                  color: perspective === val ? 'white' : 'var(--color-text-muted)',
-                  border: 'none', cursor: 'pointer',
-                  transition: 'all var(--transition-fast)',
-                }}
               >
                 {label}
               </button>
@@ -341,7 +336,7 @@ export default function MappingMatrix() {
         <SatreMappingMatrix />
       ) : (
         <>
-          <div style={{ overflowX: 'auto' }}>
+          <div className="table-responsive">
             {perspective === 'by-standard'
               ? <ByStandardView standards={filteredStandards} domains={DOMAINS} selected={selected} onCellClick={handleCellClick} />
               : <ByDomainView   standards={filteredStandards} domains={DOMAINS} selected={selected} onCellClick={handleCellClick} />

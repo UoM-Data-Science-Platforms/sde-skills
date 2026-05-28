@@ -345,21 +345,23 @@ export default function SkillsFramework() {
 
       {/* Sticky subdomain / competency nav */}
       <div className="sticky-subnav">
-        <div className="subdomain-tabs" ref={subdomainTabsRef}>
+        <ul className="nav nav-pills subdomain-tabs" ref={subdomainTabsRef} role="tablist">
           {subdomains.map(([subKey, subVal], idx) => {
             const subNumber = `${domainNumber}.${idx + 1}`;
             return (
-              <button
-                key={subKey}
-                className={`tab subdomain-tab${stickySubNumber === subNumber ? ' active' : ''}`}
-                onClick={() => scrollToElement(subdomainRefs.current[subNumber])}
-              >
-                {subNumber} {subVal.name}
-              </button>
+              <li key={subKey} className="nav-item" role="presentation">
+                <button
+                  className={`nav-link tab subdomain-tab${stickySubNumber === subNumber ? ' active' : ''}`}
+                  role="tab"
+                  onClick={() => scrollToElement(subdomainRefs.current[subNumber])}
+                >
+                  {subNumber} {subVal.name}
+                </button>
+              </li>
             );
           })}
-        </div>
-        <div className="competency-tabs" ref={competencyTabsRef}>
+        </ul>
+        <ul className="nav nav-pills competency-tabs" ref={competencyTabsRef} role="tablist">
           {subdomains
             .find(([, subVal], idx) => `${domainNumber}.${idx + 1}` === stickySubNumber)
             ?.[1].competencies &&
@@ -368,16 +370,18 @@ export default function SkillsFramework() {
             ).map(([compKey, compVal], idx) => {
               const compNumber = `${stickySubNumber}.${idx + 1}`;
               return (
-                <button
-                  key={compKey}
-                  className={`tab competency-tab${stickyCompNumber === compNumber ? ' active' : ''}`}
-                  onClick={() => scrollToElement(compRefs.current[compNumber])}
-                >
-                  {compNumber} {compVal.name || compVal.id}
-                </button>
+                <li key={compKey} className="nav-item" role="presentation">
+                  <button
+                    className={`nav-link tab competency-tab${stickyCompNumber === compNumber ? ' active' : ''}`}
+                    role="tab"
+                    onClick={() => scrollToElement(compRefs.current[compNumber])}
+                  >
+                    {compNumber} {compVal.name || compVal.id}
+                  </button>
+                </li>
               );
             })}
-        </div>
+        </ul>
       </div>
 
       {/* Scrollable content */}
@@ -407,7 +411,7 @@ export default function SkillsFramework() {
                   <span className="tech-label">Tools, Technologies & Standards:</span>
                   <div className="tech-chips">
                     {subVal.items.map((item, idx) => (
-                      <span key={idx} className="tech-chip">{item}</span>
+                      <span key={idx} className="badge tech-chip">{item}</span>
                     ))}
                   </div>
                 </div>
@@ -440,11 +444,11 @@ export default function SkillsFramework() {
                     <p className="competency-description">{compVal.description}</p>
 
                     {/* Experience-level selector */}
-                    <div className="level-buttons">
+                    <div className="btn-group level-buttons" role="group" aria-label="Experience level">
                       {levels.map(([levelKey]) => (
                         <button
                           key={levelKey}
-                          className={`level-btn${selectedLevel === levelKey ? ' active' : ''}`}
+                          className={`btn level-btn${selectedLevel === levelKey ? ' active btn-primary' : ' btn-outline-primary'}`}
                           onClick={() => toggleLevel(compNumber, levelKey)}
                         >
                           {levelLabels[levelKey] || levelKey.charAt(0).toUpperCase() + levelKey.slice(1)}

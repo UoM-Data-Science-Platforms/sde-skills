@@ -4,12 +4,7 @@ import { STEPS, MISSION_COLORS as COLORS } from '../data/missions.jsx';
 export default function MissionGrid() {
   return (
     <div>
-      {/* Section heading */}
-      <div id="our-mission" className="mission-section-heading">
-        <h2>Our Mission</h2>
-        <p>We aim to achieve this through five key initiatives:</p>
-      </div>
-
+      
       {/* Tile grid */}
       <div className="mission-grid">
         {STEPS.map((step, i) => (

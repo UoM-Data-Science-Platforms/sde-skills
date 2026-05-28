@@ -71,18 +71,20 @@ export default function FrameworkContents() {
         <h1>Framework Contents</h1>
       </div>
       <div className="sticky-subnav">
-        <div className="subdomain-tabs">
+        <ul className="nav nav-pills subdomain-tabs" role="tablist">
           {domains.map(({ slug, data }) => (
-            <button
-              key={slug}
-              className={`tab subdomain-tab${activeSlug === slug ? ' active' : ''}`}
-              style={{ '--color-domain': DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)' }}
-              onClick={() => scrollTo(slug)}
-            >
-              {data.domain.index}. {data.domain.name.replace(/^Safe /, '')}
-            </button>
+            <li key={slug} className="nav-item" role="presentation">
+              <button
+                className={`nav-link tab subdomain-tab${activeSlug === slug ? ' active' : ''}`}
+                style={{ '--color-domain': DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)' }}
+                role="tab"
+                onClick={() => scrollTo(slug)}
+              >
+                {data.domain.index}. {data.domain.name.replace(/^Safe /, '')}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div className="scroll-area" ref={scrollRef} style={{ padding: 'var(--space-xl)' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>

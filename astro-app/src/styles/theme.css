@@ -11,7 +11,7 @@
   --color-bg:         #F7F9FB;
   --color-text:       #444;
   --color-text-muted: #333;
-  --color-heading:    #333;
+  --color-heading:    #222B56;
   --color-surface:    #E8EDEE;
   --color-border:     #00000026;
   --color-purple:     #660099;
@@ -83,7 +83,7 @@
 --bg-image: 
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
-     conic-gradient(
+     linear-gradient(
       #e9bcff,
       #a0bcff,
       #afeaff
@@ -151,4 +151,45 @@ html[data-theme="dark"] {
   
   /* THE PERFECT HONEYCOMB LOCK: Layer B is shifted by exactly half-width and half-height */
   --bg-position: 0 0, 30px 52px, 0 0;
+}
+
+/* =============================================
+   BOOTSTRAP 5.3 VARIABLE OVERRIDES
+   Maps brand colours into Bootstrap's component system.
+   These load after Bootstrap so they take precedence.
+   ============================================= */
+
+:root {
+  --bs-primary:             #222B56;
+  --bs-primary-rgb:         34, 43, 86;
+  --bs-link-color:          #005EB8;
+  --bs-link-hover-color:    #222B56;
+  --bs-border-radius:       6px;
+  --bs-border-radius-lg:    12px;
+  --bs-font-sans-serif:     'Inter', system-ui, sans-serif;
+  --bs-body-font-family:    var(--bs-font-sans-serif);
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary:       #a0bcff;
+  --bs-primary-rgb:   160, 188, 255;
+  --bs-link-color:    #afeaff;
+}
+
+.btn-primary {
+  --bs-btn-bg:                #222B56;
+  --bs-btn-border-color:      #222B56;
+  --bs-btn-hover-bg:          #005EB8;
+  --bs-btn-hover-border-color:#005EB8;
+  --bs-btn-active-bg:         #005EB8;
+  --bs-btn-active-border-color:#005EB8;
+}
+
+.btn-secondary {
+  --bs-btn-bg:                #660099;
+  --bs-btn-border-color:      #660099;
+  --bs-btn-hover-bg:          #4a006e;
+  --bs-btn-hover-border-color:#4a006e;
+  --bs-btn-active-bg:         #4a006e;
+  --bs-btn-active-border-color:#4a006e;
 }

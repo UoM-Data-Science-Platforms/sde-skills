@@ -31,50 +31,87 @@
   flex-direction: column;
   gap: var(--space-lg);
 }
+/* =============================================
+   MINI HERO
+   ============================================= */
+
+.scroll-area > .mini-hero {
+  margin: calc(-1 * var(--space-xl));
+  margin-bottom: 0;
+  width: calc(100% + 2 * var(--space-xl));
+}
+
+.mini-hero {
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, var(--color-deep-blue), #3a4a78);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.mini-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mini-hero-content h2 {
+  font-size: var(--text-subdomain);
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.mini-hero-content p {
+  font-size: var(--text-body);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: var(--space-xs);
+}
+
+.mini-hero-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .mini-hero {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .scroll-area > .mini-hero {
+    margin: calc(-1 * var(--space-md));
+    margin-bottom: 0;
+    width: calc(100% + 2 * var(--space-md));
+  }
+}
+
+.list-disc {
+  list-style-type: disc;
+  padding-left: var(--space-xl);
+}
+
+.list-disc li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: 600;
+}
+
 .nhs-blue{
   color: var(--color-nhs-blue) !important;
 }
 /* =============================================
-   TABLE STYLING
+   TABLE STYLING — overrides on top of Bootstrap's .table
    ============================================= */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-}
-
-thead {
-  background: transparent;
-}
-
-thead th {
+.table thead th {
   padding: var(--space-md) var(--space-lg);
-  text-align: left;
   font-weight: 600;
   font-size: var(--text-small);
   color: var(--color-heading);
-  border-bottom: 1px solid var(--color-border);
   letter-spacing: 0.02em;
 }
 
-tbody tr {
-  border-bottom: 1px solid var(--color-border);
-  transition: background var(--transition-fast);
-}
-
-tbody tr:last-child {
-  border-bottom: none;
-}
-
-tbody tr:hover {
-  background: transparent;
-}
-
-tbody td {
+.table tbody td {
   padding: var(--space-md) var(--space-lg);
   color: var(--color-text);
   line-height: 1.6;
@@ -144,14 +181,15 @@ tbody td {
   margin-bottom: 0;
 }
 
-.card-header {
+/* Bootstrap's .card-header handles padding; keep custom border colour and the
+   photo-sidebar grid layout used on case-study / team / trainee cards. */
+.card > .card-header {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--space-lg);
-  padding-bottom: var(--space-lg);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
-  margin-bottom: var(--space-lg);
   align-items: flex-start;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
 }
 
 .card-info {

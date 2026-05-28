@@ -17,6 +17,12 @@ on:
       - 'docs/assets/img/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
+    inputs:
+      app_root:
+        description: 'Application root path (e.g., sde-skills, demo)'
+        required: false
+        default: 'sde-skills'
+        type: string
 
 permissions:
   contents: write
@@ -53,8 +59,10 @@ jobs:
           cp docs/assets/img/* astro-app/data/assets/img/
 
       - name: Set Astro deploy config
+        env:
+          APP_ROOT: ${{ github.event.inputs.app_root || 'sde-skills' }}
         run: |
-          cat > astro-app/astro.config.mjs <<'EOF'
+          cat > astro-app/astro.config.mjs <<EOF
           import { defineConfig } from 'astro/config';
           import react from '@astrojs/react';
           import remarkMkdocsAttr from './src/plugins/remark-mkdocs-attr.js';
@@ -64,7 +72,7 @@ jobs:
               remarkPlugins: [remarkMkdocsAttr]
             },
             site: 'https://uom-data-science-platforms.github.io',
-            base: '/sde-skills',
+            base: '/${process.env.APP_ROOT}',
           });
           EOF
 

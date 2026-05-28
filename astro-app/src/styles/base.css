@@ -3,6 +3,22 @@
    ============================================= */
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Bootstrap overrides */
+.table-light {
+  --bs-table-bg: color-mix(in srgb, var(--color-heading) 8%, transparent);
+  --bs-table-color: var(--color-heading);
+  --bs-table-border-color: var(--color-border);
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link:hover {
+  color: unset;
+  background-color: transparent;
+  border-radius: 0;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -50,7 +66,7 @@ button {
    ============================================= */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--color-text);
+  color: var(--color-heading);
   line-height: 1.2;
   margin: 0;
 }
@@ -79,7 +95,17 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: clip;
+}
+
+/* Mobile: sidebar becomes an offcanvas overlay, so no margin needed */
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-left: 0;
+    height: auto;
+    overflow: visible;
+  }
 }
 
 /* =============================================

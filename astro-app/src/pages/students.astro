@@ -18,7 +18,7 @@ const bodyBlocks = pageData.body;
 
 <Layout title={headData.title}>
   <PageHeader title={pageTitle} />
-  <div class="page-container">
+  <div class="container-fluid px-4 py-4">
     {bodyBlocks.map((block) => {
       if (block.type) {
         return <ContentBlock block={block} />;
@@ -26,13 +26,13 @@ const bodyBlocks = pageData.body;
 
       if (block.columns) {
         return (
-          <div class={`columns-container ${block.class || ''}`} id={block.id}>
+          <div class={`row g-4 ${block.class || ''}`} id={block.id}>
             {block.columns.map((colWrapper) => {
               const col = colWrapper.col;
               const colClass = colWrapper.class;
               const colId = colWrapper.id;
               return (
-                <div class={`column ${colClass || ''}`} id={colId}>
+                <div class={`col-12 col-md-6 ${colClass || ''}`} id={colId}>
                   {Array.isArray(col) ? col.map((contentBlock) => (
                     <ContentBlock block={contentBlock} />
                   )) : (

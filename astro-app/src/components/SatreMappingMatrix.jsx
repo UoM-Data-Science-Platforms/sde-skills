@@ -287,8 +287,8 @@ export default function SatreMappingMatrix() {
         Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read the SATRE requirement and see which subdomains address it, then expand a <strong>subdomain</strong> to see the contributing competencies.
       </p>
 
-      <div className="pill-scroll">
-        <table style={{ borderCollapse: 'collapse', fontSize: 'var(--text-small)' }}>
+      <div className="table-responsive pill-scroll">
+        <table className="table table-sm mb-0" style={{ fontSize: 'var(--text-small)' }}>
           <thead>
             {/* Row 1 — domain group headers */}
             <tr>
