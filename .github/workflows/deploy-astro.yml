@@ -72,7 +72,7 @@ jobs:
               remarkPlugins: [remarkMkdocsAttr]
             },
             site: 'https://uom-data-science-platforms.github.io',
-            base: '/${process.env.APP_ROOT}',
+            base: '/${APP_ROOT}',
           });
           EOF
 
