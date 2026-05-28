@@ -338,17 +338,19 @@ export default function CFOverview() {
 
       {/* Sticky subnav */}
       <div className="sticky-subnav">
-        <div className="subdomain-tabs">
+        <ul className="nav nav-pills subdomain-tabs" role="tablist">
           {SECTIONS.map(s => (
-            <button
-              key={s.id}
-              className={`tab subdomain-tab${activeSection === s.id ? ' active' : ''}`}
-              onClick={() => scrollTo(s.id)}
-            >
-              {s.label}
-            </button>
+            <li key={s.id} className="nav-item" role="presentation">
+              <button
+                className={`nav-link tab subdomain-tab${activeSection === s.id ? ' active' : ''}`}
+                role="tab"
+                onClick={() => scrollTo(s.id)}
+              >
+                {s.label}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* Scroll area */}
@@ -467,7 +469,7 @@ export default function CFOverview() {
             Six core domains aligned with both the Five Safes model and SATRE specification.
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 'var(--space-md)' }}>
+          <div className="row g-3">
           {DOMAINS.map((d, i) => {
             const c = DOMAIN_COLORS[d.id];
             const satreId = DOMAIN_SATRE_ID[d.id];
@@ -484,10 +486,10 @@ export default function CFOverview() {
             const satreCount = pillarHits.reduce((n, p) => n + p.addressed, 0);
 
             return (
+              <div key={d.id} className="col-12 col-md-6 col-lg-4">
               <a
-                key={d.id}
                 href={`${base}${d.id}/`}
-                className="competency-card is-visible"
+                className="competency-card is-visible h-100"
                 style={{
                   display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)',
                   textDecoration: 'none', cursor: 'pointer',
@@ -527,7 +529,7 @@ export default function CFOverview() {
                 {/* SATRE pillar table */}
                 <p style={{ margin: '0 0 4px', fontSize: '0.58rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>SATRE Coverage</p>
                 <div style={{ borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: `1px solid color-mix(in srgb, ${c} 15%, transparent)` }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.68rem' }}>
+                  <table className="table table-sm mb-0" style={{ fontSize: '0.68rem' }}>
                     <tbody>
                       {pillarHits.map((p, pi) => (
                         <tr key={pi} style={{ borderTop: pi > 0 ? `1px solid color-mix(in srgb, ${c} 10%, transparent)` : undefined }}>
@@ -560,6 +562,7 @@ export default function CFOverview() {
                   ))}
                 </div>
               </a>
+              </div>
             );
           })}
           </div>
@@ -574,11 +577,11 @@ export default function CFOverview() {
           </p>
 
           {/* Toggle tabs */}
-          <div style={{ display: 'flex', gap: 'var(--space-xs)', marginBottom: 'var(--space-lg)' }}>
+          <div className="btn-group mb-4" role="group" aria-label="Standards alignment">
             {[['five-safes', 'Five Safes'], ['satre', 'SATRE']].map(([id, label]) => (
               <button
                 key={id}
-                className={`tab subdomain-tab${alignTab === id ? ' active' : ''}`}
+                className={`btn tab subdomain-tab${alignTab === id ? ' active btn-primary' : ' btn-outline-primary'}`}
                 onClick={() => setAlignTab(id)}
                 style={{ fontSize: '0.8rem' }}
               >
@@ -590,22 +593,24 @@ export default function CFOverview() {
           {/* Five Safes table */}
           {alignTab === 'five-safes' && (
             <div className="competency-card is-visible" style={{ padding: 0, overflow: 'hidden' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <thead>
-                  <tr style={{ background: `color-mix(in srgb, ${color} 6%, var(--color-surface))` }}>
-                    <th style={thStyle}>Framework Domain</th>
-                    <th style={thStyle}>Five Safes Principle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {FIVE_SAFES.map((row, i) => (
-                    <tr key={i} style={{ borderTop: '1px solid var(--color-border)' }}>
-                      <td style={tdStyle}>{row.domain}</td>
-                      <td style={{ ...tdStyle, color, fontWeight: 600, fontStyle: row.principle === 'Spans all five' ? 'italic' : 'normal' }}>{row.principle}</td>
+              <div className="table-responsive">
+                <table className="table table-hover mb-0">
+                  <thead>
+                    <tr style={{ background: `color-mix(in srgb, ${color} 6%, var(--color-surface))` }}>
+                      <th style={thStyle}>Framework Domain</th>
+                      <th style={thStyle}>Five Safes Principle</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {FIVE_SAFES.map((row, i) => (
+                      <tr key={i} style={{ borderTop: '1px solid var(--color-border)' }}>
+                        <td style={tdStyle}>{row.domain}</td>
+                        <td style={{ ...tdStyle, color, fontWeight: 600, fontStyle: row.principle === 'Spans all five' ? 'italic' : 'normal' }}>{row.principle}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
 
@@ -613,7 +618,7 @@ export default function CFOverview() {
           {alignTab === 'satre' && (
             <div className="competency-card is-visible" style={{ padding: 0, overflow: 'hidden' }}>
               <div className="pill-scroll">
-                <table style={{ borderCollapse: 'collapse', fontSize: 'var(--text-small)', width: '100%' }}>
+                <table className="table table-sm mb-0" style={{ fontSize: 'var(--text-small)' }}>
                   <thead>
                     <tr style={{ background: `color-mix(in srgb, ${color} 6%, var(--color-surface))`, borderBottom: '2px solid var(--color-border)' }}>
                       <th style={{ ...thStyle, minWidth: 260, textAlign: 'left' }}>SATRE Component</th>
@@ -665,35 +670,37 @@ export default function CFOverview() {
           </p>
 
           {/* Merged Applications + Enhanced Areas grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 'var(--space-md)' }}>
+          <div className="row g-3">
             {[...APPLICATIONS, ...ENHANCED_AREAS].map(({ label, desc, icon, type }, i) => {
               const isEnhanced = type === 'Enhanced Area';
               return (
-                <div key={i} className="competency-card is-visible" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
-                  {/* Icon + type pill row */}
-                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-                    <div style={{
-                      width: 44, height: 44, borderRadius: 'var(--radius-md)', flexShrink: 0,
-                      background: `color-mix(in srgb, ${color} 8%, var(--color-surface))`,
-                      border: `1px solid color-mix(in srgb, ${color} 20%, transparent)`,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    }}>
-                      {icon(color)}
+                <div key={i} className="col-12 col-md-6 col-lg-4">
+                  <div className="competency-card is-visible h-100 d-flex flex-column" style={{ gap: 'var(--space-sm)' }}>
+                    {/* Icon + type pill row */}
+                    <div className="d-flex align-items-start justify-content-between">
+                      <div style={{
+                        width: 44, height: 44, borderRadius: 'var(--radius-md)', flexShrink: 0,
+                        background: `color-mix(in srgb, ${color} 8%, var(--color-surface))`,
+                        border: `1px solid color-mix(in srgb, ${color} 20%, transparent)`,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      }}>
+                        {icon(color)}
+                      </div>
+                      <span style={{
+                        padding: '2px 8px', borderRadius: 'var(--radius-pill)',
+                        background: isEnhanced
+                          ? `color-mix(in srgb, ${color} 12%, transparent)`
+                          : `color-mix(in srgb, ${color} 6%, transparent)`,
+                        border: `1px solid color-mix(in srgb, ${color} ${isEnhanced ? 30 : 18}%, transparent)`,
+                        fontSize: '0.6rem', fontWeight: 700, color,
+                        textTransform: 'uppercase', letterSpacing: '0.05em',
+                        opacity: isEnhanced ? 1 : 0.75,
+                        whiteSpace: 'nowrap', alignSelf: 'flex-start',
+                      }}>{type}</span>
                     </div>
-                    <span style={{
-                      padding: '2px 8px', borderRadius: 'var(--radius-pill)',
-                      background: isEnhanced
-                        ? `color-mix(in srgb, ${color} 12%, transparent)`
-                        : `color-mix(in srgb, ${color} 6%, transparent)`,
-                      border: `1px solid color-mix(in srgb, ${color} ${isEnhanced ? 30 : 18}%, transparent)`,
-                      fontSize: '0.6rem', fontWeight: 700, color,
-                      textTransform: 'uppercase', letterSpacing: '0.05em',
-                      opacity: isEnhanced ? 1 : 0.75,
-                      whiteSpace: 'nowrap', alignSelf: 'flex-start',
-                    }}>{type}</span>
+                    <div style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--color-heading)', lineHeight: 1.3 }}>{label}</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', lineHeight: 1.55 }}>{desc}</div>
                   </div>
-                  <div style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--color-heading)', lineHeight: 1.3 }}>{label}</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', lineHeight: 1.55 }}>{desc}</div>
                 </div>
               );
             })}

@@ -48,29 +48,31 @@ const GUIDELINES = [
       </p>
 
       {/* ── Accordion: Create an Issue ── */}
-      <div class="competency-card is-visible card--flush collapsible">
-        <button class="collapsible-summary">
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8">
-            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
-            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"/>
-          </svg>
-          <span class="accordion-text">
-            <span class="accordion-title">Create an Issue</span>
-            <span class="accordion-subtitle">The simplest way to suggest changes — no Git knowledge required.</span>
-          </span>
-          <span class="badge--domain">Recommended</span>
-        </button>
-
-        <div class="collapsible-content">
-          <div class="collapsible-inner">
-            <div class="collapsible-body">
+      <div class="accordion competency-card is-visible card--flush" id="contributing-accordion">
+        <div class="accordion-item border-0 bg-transparent">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapse-issue" aria-expanded="false" aria-controls="collapse-issue">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8" class="me-2 flex-shrink-0">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/>
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"/>
+              </svg>
+              <span class="accordion-text">
+                <span class="accordion-title">Create an Issue</span>
+                <span class="accordion-subtitle">The simplest way to suggest changes — no Git knowledge required.</span>
+              </span>
+              <span class="badge bg-primary ms-2 flex-shrink-0">Recommended</span>
+            </button>
+          </h2>
+          <div id="collapse-issue" class="accordion-collapse collapse" data-bs-parent="#contributing-accordion">
+            <div class="accordion-body">
               <p>Creating an issue is the simplest way to suggest changes, report errors, or propose additions to the competency framework.</p>
 
               <div class="card__sub">
                 <div class="card__label">Steps</div>
                 {ISSUE_STEPS.map((step, i) => (
                   <div class="step-row">
-                    <span class="step-badge">{i + 1}</span>
+                    <span class="badge rounded-pill step-badge">{i + 1}</span>
                     <span class="step-text" set:html={step.text} />
                   </div>
                 ))}
@@ -93,23 +95,23 @@ Reference: [insert link or page reference]</pre>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* ── Accordion: Pull Request ── */}
-      <div class="competency-card is-visible card--flush collapsible">
-        <button class="collapsible-summary">
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8">
-            <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
-          </svg>
-          <span class="accordion-text">
-            <span class="accordion-title">Submit a Pull Request</span>
-            <span class="accordion-subtitle">Directly propose changes — for those comfortable with Git and Markdown.</span>
-          </span>
-        </button>
-
-        <div class="collapsible-content">
-          <div class="collapsible-inner">
-            <div class="collapsible-body">
+        {/* ── Accordion: Pull Request ── */}
+        <div class="accordion-item border-0 bg-transparent">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapse-pr" aria-expanded="false" aria-controls="collapse-pr">
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="var(--color-domain-base)" opacity="0.8" class="me-2 flex-shrink-0">
+                <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
+              </svg>
+              <span class="accordion-text">
+                <span class="accordion-title">Submit a Pull Request</span>
+                <span class="accordion-subtitle">Directly propose changes — for those comfortable with Git and Markdown.</span>
+              </span>
+            </button>
+          </h2>
+          <div id="collapse-pr" class="accordion-collapse collapse" data-bs-parent="#contributing-accordion">
+            <div class="accordion-body">
               <p>If you are comfortable with Git and GitHub, you can directly propose changes by creating a pull request.</p>
 
               <div class="card__sub">
@@ -127,7 +129,7 @@ Reference: [insert link or page reference]</pre>
                 {PR_STEPS.map((step, i) => (
                   <div class={`step-row${step.code ? ' step-row--block' : ''}`}>
                     <div class="step-header">
-                      <span class="step-badge">{i + 1}</span>
+                      <span class="badge rounded-pill step-badge">{i + 1}</span>
                       <span class="step-text" set:html={step.text} />
                     </div>
                     {step.code && <pre class="code-snippet">{step.code}</pre>}
@@ -140,18 +142,21 @@ Reference: [insert link or page reference]</pre>
       </div>
 
       {/* ── Guidelines + Getting Help — side by side ── */}
-      <div class="pair-grid">
+      <div class="row g-4 mt-0">
 
+        <div class="col-12 col-md-6">
         <div class="competency-card is-visible card--flush">
           <div class="card__label">Guidelines for Contributions</div>
           {GUIDELINES.map((g, i) => (
             <div class="step-row">
-              <span class="step-badge">{i + 1}</span>
+              <span class="badge rounded-pill step-badge">{i + 1}</span>
               <span class="step-text"><strong>{g.title}</strong> — {g.desc}</span>
             </div>
           ))}
         </div>
+        </div>
 
+        <div class="col-12 col-md-6">
         <div class="competency-card is-visible card--flush">
           <div class="card__label">Getting Help</div>
           <div class="step-row">
@@ -163,15 +168,10 @@ Reference: [insert link or page reference]</pre>
             <span class="step-text">For questions about the framework itself, <a href="https://github.com/UoM-Data-Science-Platforms/sde-skills/issues/new" target="_blank" rel="noreferrer">open an issue</a> with the <strong>"question"</strong> label.</span>
           </div>
         </div>
+        </div>
 
       </div>
 
     </div>
   </div>
 </Layout>
-
-<script>
-  document.querySelectorAll('.collapsible .collapsible-summary').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('.collapsible').classList.toggle('is-open'));
-  });
-</script>

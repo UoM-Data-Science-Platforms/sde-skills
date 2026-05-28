@@ -119,6 +119,7 @@
   backdrop-filter: blur(6.4px);
   -webkit-backdrop-filter: blur(6.4px);
   border: 1px solid rgba(255, 255, 255, 0.19);
+  cursor: default;
 }
 
 .competency-card:hover {
@@ -231,12 +232,6 @@
 }
 
 /* --- Experience-level selector --- */
-.level-buttons {
-  display: flex;
-  gap: var(--space-xs);
-  flex-wrap: wrap;
-}
-
 .level-btn {
   flex: 1;
   min-width: 80px;
@@ -266,7 +261,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-body[data-theme="dark"] .level-btn.active {
+html[data-theme="dark"] .level-btn.active {
   background: var(--color-surface);
   color: var(--color-domain);
   font-weight: 600;
@@ -364,7 +359,7 @@ body[data-theme="dark"] .level-btn.active {
   border-bottom-right-radius: 0;
 }
 
-body[data-theme="dark"] .proficiency-btn.active {
+html[data-theme="dark"] .proficiency-btn.active {
   background: var(--color-surface);
   color: var(--color-domain);
   font-weight: 500;
@@ -399,95 +394,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   animation: detailIn var(--transition-base) ease both;
 }
 
-/* =============================================
-   COLLAPSIBLE SUBSECTIONS
-   ============================================= */
-
-/* Container */
-.collapsible {
-  border-top: 1px solid var(--color-border);
-}
-
-.collapsible:first-child {
-  border-top: none;
-}
-
-/* Header button */
-.collapsible-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: var(--space-sm) 0;
-  background: none;
-  border: none;
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  font-weight: 600;
-  color: var(--color-text);
-  cursor: pointer;
-  text-align: left;
-  user-select: none;
-  transition: color var(--transition-fast);
-}
-
-.collapsible-summary:hover {
-  color: var(--color-domain, var(--color-accent));
-}
-
-/* Chevron — CSS border trick, rotates on open */
-.collapsible-summary::after {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--color-text-muted);
-  border-bottom: 2px solid var(--color-text-muted);
-  transform: rotate(45deg) translateY(-2px);
-  flex-shrink: 0;
-  transition: transform var(--transition-base), border-color var(--transition-fast);
-}
-
-.collapsible.is-open > .collapsible-summary::after {
-  transform: rotate(-135deg) translateY(-2px);
-  border-color: var(--color-domain, var(--color-accent));
-}
-
-/* Grid trick: animates height on both open AND close */
-.collapsible-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-slow);
-}
-
-.collapsible.is-open > .collapsible-content {
-  grid-template-rows: 1fr;
-}
-
-/* Inner wrapper must have overflow:hidden for grid trick to work */
-.collapsible-inner {
-  overflow: hidden;
-  min-height: 0;
-}
-
-/* Content typography inside sections */
-.collapsible-inner p,
-.collapsible-inner ul {
-  font-size: var(--text-small);
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  margin: 0;
-  padding: var(--space-2xs) 0 var(--space-sm) var(--space-sm);
-}
-
-.collapsible-inner ul {
-  padding-left: var(--space-lg);
-}
-
-.collapsible-inner ul li {
-  list-style: disc;
-  margin-bottom: var(--space-2xs);
-}
 
 /* =============================================
    MOTION & SCROLL-SYNC
@@ -532,10 +438,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   transition-delay: 0ms;
 }
 
-/* Max readable width on very wide viewports */
-.scroll-area > * {
-  max-width: 960px;
-}
 
 /* Focus-visible styles — keyboard navigation */
 :focus-visible {
@@ -547,11 +449,6 @@ body[data-theme="dark"] .proficiency-btn.active {
 /* Suppress focus ring on mouse click (only show for keyboard) */
 :focus:not(:focus-visible) {
   outline: none;
-}
-
-/* Highlight the active collapsible section header */
-.collapsible.is-open > .collapsible-summary {
-  color: var(--color-domain, var(--color-accent));
 }
 
 /* Ensure last card in scroll area has bottom breathing room */
@@ -849,17 +746,6 @@ body[data-theme="dark"] .proficiency-btn.active {
    ACCORDION (card-flush + collapsible combo)
    ============================================= */
 
-/* Override collapsible-summary padding when inside a flush card */
-.card--flush > .collapsible-summary {
-  padding: var(--space-md) var(--space-lg);
-  gap: var(--space-sm);
-}
-
-/* Border between summary and collapsible content inside a flush card */
-.card--flush .collapsible-inner {
-  border-top: 1px solid var(--color-border);
-}
-
 /* Flex-1 text block inside accordion summary (pushes badge/chevron to right) */
 .accordion-text {
   flex: 1;
@@ -876,19 +762,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   display: flex;
   gap: var(--space-md);
   align-items: baseline;
-}
-
-/* Padded body area with domain-tinted background — matches domain page pattern */
-.collapsible-body {
-  padding: var(--space-md) var(--space-lg);
-  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
-}
-
-.collapsible-body > p:first-child {
-  margin: 0 0 var(--space-md);
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  font-style: italic;
 }
 
 .accordion-title {
@@ -917,14 +790,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   border: 1px solid color-mix(in srgb, var(--color-domain-base) 25%, transparent);
   color: var(--color-domain-base);
   flex-shrink: 0;
-}
-
-/* Two-column auto-fit grid */
-.pair-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-md);
 }
 
 /* CFOverview color-mix presets — set --color-accent on the parent */

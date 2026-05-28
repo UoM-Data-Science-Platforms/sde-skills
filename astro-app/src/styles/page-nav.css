@@ -101,6 +101,8 @@
 .tab.active {
   color: var(--color-domain, var(--color-accent));
   border-bottom-color: var(--color-domain, var(--color-accent));
+  background-color: transparent;
+  border-radius: 0;
 }
 
 /* --- Scrollable content area --- */

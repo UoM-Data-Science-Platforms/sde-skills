@@ -1,49 +1,138 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
-import ContentBlock from '../components/ContentBlock.astro';
-import yaml from 'js-yaml';
-import { readFileSync } from 'fs';
-import path from 'path';
+import MissionGrid from '../components/MissionGrid.jsx';
 
-const yamlPath = path.join(process.cwd(), '/public/data/project/home.yaml');
-const fileContent = readFileSync(yamlPath, 'utf-8');
-const data = yaml.load(fileContent);
-
-const pageData = data.home;
-const headData = pageData.head;
-const pageTitle = pageData.title;
-const bodyBlocks = pageData.body;
+const sections = [
+  { id: 'project', label: 'About' },
+  { id: 'competency-framework', label: 'Our Aims' },
+];
 ---
 
-<Layout title={headData.title}>
-  <PageHeader title={pageTitle} />
-  <div class="page-container">
-    {bodyBlocks.map((block) => {
-      if (block.type) {
-        return <ContentBlock block={block} />;
-      }
+<Layout title="About the project - Supporting Research Technical Professionals">
+  <div class="skills-framework">
+    <PageHeader title="SDE Team Development Hub" />
+    <nav class="home-subnav" id="home-subnav" role="navigation" aria-label="Page sections">
+      <div class="home-subnav__top" id="section-tabs">
+        {sections.map(s => (
+          <button class="tab subdomain-tab" data-section={s.id}>
+            {s.label}
+          </button>
+        ))}
+      </div>
+    </nav>
 
-      if (block.columns) {
-        return (
-          <div class={`columns-container ${block.class || ''}`} id={block.id}>
-            {block.columns.map((colWrapper) => {
-              const col = colWrapper.col;
-              const colClass = colWrapper.class;
-              const colId = colWrapper.id;
-              return (
-                <div class={`column ${colClass || ''}`} id={colId}>
-                  {Array.isArray(col) ? col.map((contentBlock) => (
-                    <ContentBlock block={contentBlock} />
-                  )) : (
-                    <ContentBlock block={col} />
-                  )}
-                </div>
-              );
-            })}
+    <div class="scroll-area" id="scroll-area">
+         <section class="mini-hero">
+          <div class="mini-hero-content">
+            <h2 id="project">About the project</h2>
+            <p>The SDE Team Development Hub is a collaboration between like-minded individuals that aims to find better ways to develop and support Research Technical Professionals (RTPs) that underpin the creation of Secure Data Environments (SDEs).</p>
+            <p>The SDE Team Development Hub is funded by Health Data Research UK and brings together partners across the North West of England to build technical capacity in secure data environments.</p>
+
+            <h2 id="competency-framework">We aim to achieve this by:</h2>            
           </div>
-        );
-      }
-    })}
-  </div>
+        </section>
+        <div class="container-fluid px-4 py-4">
+          <MissionGrid client:load />
+        </div>
+      </div>
+    </div>
 </Layout>
+
+<script define:vars={{ sections }}>
+  window._homeSections = sections;
+</script>
+<script>
+  import { initScrollSync } from '../scripts/scrollSync.js';
+
+  // Sticky-below-hero behaviour: nav starts at position:sticky below the hero,
+  // then once the hero scrolls out of view it sticks to the top.
+  const nav = document.getElementById('home-subnav');
+  const hero = document.querySelector('.sticky-header');
+
+  if (nav && hero) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        nav.classList.toggle('home-subnav--stuck', !entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: '0px 0px 0px 0px' }
+    );
+    observer.observe(hero);
+  }
+
+  initScrollSync({ sections: window._homeSections });
+</script>
+
+<style>
+  .home-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .home-subnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+    transition: box-shadow var(--transition-base), background var(--transition-base);
+  }
+
+  .home-subnav--stuck {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .home-subnav__top {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: var(--space-sm) var(--space-xl) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .home-subnav__top::-webkit-scrollbar { display: none; }
+
+  .home-subnav__sub {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: var(--space-2xs) var(--space-xl);
+    min-height: 2rem;
+  }
+
+  .home-subnav__sub::-webkit-scrollbar { display: none; }
+
+  .scroll-area {
+    flex: 1;
+    padding: var(--space-xl);
+  }
+
+  @media (max-width: 767px) {
+    .home-subnav__top,
+    .home-subnav__sub {
+      padding-left: var(--space-md);
+      padding-right: var(--space-md);
+    }
+
+    .scroll-area {
+      padding: var(--space-md);
+    }
+  }
+
+  :global(html[data-theme="dark"]) .home-subnav {
+    background: rgba(13, 17, 23, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(html[data-theme="dark"]) .home-subnav--stuck {
+    background: rgba(13, 17, 23, 0.85);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  }
+</style>

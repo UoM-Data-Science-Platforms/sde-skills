@@ -2,63 +2,66 @@
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import { INSTITUTION_COLORS } from '../data/domains.js';
+import { rtps } from '../data/rtps.js';
 
 const sections = [
   { id: 'overview', label: 'Overview' },
   { id: 'trainees', label: 'Trainees' },
-];
-
-const trainees = [
-  { id: 'justin', name: 'Justin Leung', institution: 'manchester', fullInstitution: 'University of Manchester', focus: 'GPU platform and hybrid cloud deployment with Microsoft Azure', skills: ['Terraform', 'GitHub Actions', 'cloud infrastructure'], quote: '"the mix of technical training, meetings, and exposure to real project requirements has given me a clear sense of direction"' },
-  { id: 'saurav', name: 'Saurav Sudhar', institution: 'lancashire', fullInstitution: 'Lancashire Teaching Hospitals', focus: 'Karectl, a Kubernetes-based Trusted Research Environment implementation', skills: ['Kubernetes', 'Terraform', 'Azure', 'secure infrastructure development'], quote: '"learning how tools and technologies such as Kubernetes, Terraform, Azure are applied in practice, which is far more valuable"' },
-  { id: 'teddy', name: 'Teddy McManus', institution: 'liverpool', fullInstitution: 'University of Liverpool', focus: 'Azure TRE infrastructure for mental health and civic health research initiatives', skills: ['Microsoft Azure', 'Pulumi', 'Terraform', 'data security'], quote: '"valuable to see how different disciplines and backgrounds can come together to support healthcare professionals and researchers"' },
 ];
 ---
 
 <Layout title="RTP Placements - Professional Training Placements" currentDomain="professional-training-placements">
   <div class="skills-framework">
     <PageHeader title="RTP Placements" />
-    <div class="sticky-subnav">
-      <div class="subdomain-tabs" id="section-tabs">
+    <nav class="home-subnav" id="home-subnav" role="navigation" aria-label="Page sections">
+      <div class="home-subnav__top" id="section-tabs">
         {sections.map(s => (
           <button class="tab subdomain-tab" data-section={s.id}>
             {s.label}
           </button>
         ))}
       </div>
-    </div>
+      <div class="home-subnav__sub" id="subsection-tabs"></div>
+    </nav>
     <div class="scroll-area" id="scroll-area">
-      <div class="page-container">
-        <h2 id="overview">Research Technical Professional Training Program</h2>
+    <section class="mini-hero">
+        <div class="mini-hero-content">
+          <h2 id="overview">Research Technical Professional Training Program</h2>
+          <p>The SDE Team Development Hub operates a Research Technical Professional (RTP) training scheme offering one-year placement opportunities at partner institutions. The program aims to develop the next generation of technical professionals in research infrastructure.</p>
+          <p>Trainees receive structured mentoring, formal technical training, conference access, and professional certification support to build careers in research infrastructure and cloud engineering.</p>
 
-    <p>The SDE Team Development Hub operates a Research Technical Professional (RTP) training scheme offering one-year placement opportunities at partner institutions. The program aims to develop the next generation of technical professionals in research infrastructure.</p>
-    <p>Trainees receive structured mentoring, formal technical training, conference access, and professional certification support to build careers in research infrastructure and cloud engineering.</p>
+        </div>
+      </section>
+      <div class="container-fluid px-4 py-4">
+      
 
     <h2 id="trainees">Current RTP Placements</h2>
     <p>Three active trainees are currently enrolled:</p>
 
     <div class="cards-grid">
-      {trainees.map((trainee) => (
-        <article class="card glass--soft" id={`trainee-${trainee.id}`}>
+      {rtps.map((r) => (
+        <article class="card glass--soft" id={`trainee-${r.id}`}>
           <div class="card-header">
             <div class="card-info">
-              <h3 style={{ color: INSTITUTION_COLORS[trainee.institution] }}>{trainee.name}</h3>
-              <div class="info-row"><strong>Institution:</strong> {trainee.fullInstitution}</div>
-              <div class="info-row"><i>{trainee.focus}</i></div>
+              <h3 class="card-title" style={{ color: INSTITUTION_COLORS[r.institution] }}>{r.name}</h3>
+              <div class="info-row"><strong>Institution:</strong> {r.affiliation}</div>
+              <div class="info-row"><i>{r.focus}</i></div>
               <div class="info-row"><strong>Key skills:</strong></div>
               <div class="skills-row">
-                {trainee.skills.map((skill) => (
-                  <span class="skill-pill" style={{ borderColor: INSTITUTION_COLORS[trainee.institution], background: `color-mix(in srgb, ${INSTITUTION_COLORS[trainee.institution]} 15%, transparent)` }}>{skill}</span>
+                {r.skills.map((skill) => (
+                  <span class="badge rounded-pill skill-pill" style={{ borderColor: INSTITUTION_COLORS[r.institution], background: `color-mix(in srgb, ${INSTITUTION_COLORS[r.institution]} 15%, transparent)` }}>{skill}</span>
                 ))}
               </div>
             </div>
             <div class="card-photo">
-              <img src={`/assets/images/${trainee.name.split(" ")[0].toLowerCase()}.png`} alt={trainee.name} />
+              <img src={r.photo} alt={r.name} />
             </div>
           </div>
-          <blockquote>
-            <p>{trainee.quote}</p>
-          </blockquote>
+          <div class="card-body">
+            <blockquote>
+              <p class="card-text">{r.quote}</p>
+            </blockquote>
+          </div>
         </article>
       ))}
     </div>
