@@ -1,0 +1,1 @@
+import{i as t}from"./scrollSync.CM8XkxZO.js";const e=document.getElementById("home-subnav"),o=document.querySelector(".sticky-header");e&&o&&new IntersectionObserver(([s])=>{e.classList.toggle("home-subnav--stuck",!s.isIntersecting)},{threshold:0,rootMargin:"0px 0px 0px 0px"}).observe(o);t({sections:window._homeSections});

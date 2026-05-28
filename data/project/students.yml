@@ -1,0 +1,46 @@
+students:
+  title: Student projects
+  nav:
+    title: Student projects
+  head:
+    title: Student projects
+  body:
+    - type: text
+      value: "Our cohort of students are undertaking short projects supported by the project. See the table below for a summary, followed by a selection of reflective student case studies."
+    - type: text
+      value: Completed Projects Summary
+    - type: table
+      header:
+        - Site
+        - Scheme
+        - Project title
+        - Dates
+        - Student name
+      rows:
+        - - Manchester
+          - MSc Health data science	
+          - Designing a secure architecture that blends on-premise and cloud based computation infrastructure for use in SDE	
+          - June–Sept 2025	
+          - Emaan Hajara
+        - - Manchester
+          - MSc Computer Science	
+          - AI support for statistical disclosure checks and synthetic data
+          - June–Sept 2025	
+          - Tejal Ravikumar Yekkula        
+        - - Manchester
+          - MSc Computer Science	
+          - AI support for statistical disclosure checks and synthetic data
+          - June–Sept 2025	
+          - Nouar Nagem
+        - - Lancaster	MSc Computer Science
+          - Kubernetes microservices development and integration	
+          - Jan- Mar 2025	
+          - James Gardener
+    
+    - type: text
+      value: "Student experiences"
+    - type: image
+      value: /assets/images/avatar.png
+    - type: text
+      value: "Name: Waleed Ali"
+      

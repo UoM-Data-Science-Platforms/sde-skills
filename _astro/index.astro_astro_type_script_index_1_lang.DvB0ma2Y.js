@@ -1,0 +1,1 @@
+import{i as t}from"./scrollSync.CM8XkxZO.js";const o=document.getElementById("page-subnav"),n=document.getElementById("home-hero"),e=document.querySelector(".index-layout .scroll-area");o&&n&&e&&e.addEventListener("scroll",()=>{o.classList.toggle("page-subnav--stuck",e.scrollTop>0)},{passive:!0});t({sections:window._indexSections});
