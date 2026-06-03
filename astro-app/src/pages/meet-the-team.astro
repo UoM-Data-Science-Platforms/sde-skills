@@ -7,6 +7,8 @@ import { staff } from '../data/staff.js';
 const sections = [
   { id: 'team', label: 'Team' },
 ];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Meet the Team" currentDomain="meet-the-team">
@@ -37,7 +39,7 @@ const sections = [
                   {member.focus && <div class="info-row"><strong>Focus:</strong> {member.focus}</div>}
                 </div>
                 <div class="card-photo">
-                  <img src={member.photo} alt={member.name} />
+                  <img src={`${base}${member.photo.replace(/^\//, '')}`} alt={member.name} />
                 </div>
               </div>
             </article>

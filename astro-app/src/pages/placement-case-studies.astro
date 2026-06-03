@@ -9,6 +9,8 @@ const sections = [
 ];
 
 const studentsWithBios = placementStudents.filter(s => s.bio.length > 0 || s.summary.length > 0);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Student Projects - Placement Case Studies" currentDomain="placement-case-studies">
@@ -36,7 +38,7 @@ const studentsWithBios = placementStudents.filter(s => s.bio.length > 0 || s.sum
             <thead class="table-light">
               <tr>
                 <th>Site</th>
-                <th>Scheme</th>
+                <th>Course</th>
                 <th>Project title</th>
                 <th>Dates</th>
                 <th>Student name</th>
@@ -46,7 +48,7 @@ const studentsWithBios = placementStudents.filter(s => s.bio.length > 0 || s.sum
               {placementStudents.map(s => (
                 <tr class={s.bio.length > 0 || s.summary.length > 0 ? 'table-row-clickable' : ''} data-student={s.id}>
                   <td>{s.site}</td>
-                  <td>{s.scheme}</td>
+                  <td>{s.course}</td>
                   <td>{s.projectTitle}</td>
                   <td>{s.dates}</td>
                   <td>{s.name}</td>
@@ -65,12 +67,12 @@ const studentsWithBios = placementStudents.filter(s => s.bio.length > 0 || s.sum
                 <div class="card-info">
                   <h2 class={`card-title${s.titleStyle ? ` ${s.titleStyle}` : ''}`}>{s.name}</h2>
                   <div class="info-row"><i>{s.projectTitle}</i></div>
+                  {s.site && <div class="info-row"><strong>Site:</strong> {s.site}</div>}
                   {s.course && <div class="info-row"><strong>Course:</strong> {s.course}</div>}
-                  {s.institution && <div class="info-row"><strong>Institution:</strong> {s.institution}</div>}
                 </div>
                 {s.photo && (
                   <div class="card-photo">
-                    <img src={s.photo} alt={s.name} />
+                    <img src={`${base}${s.photo.replace(/^\//, '')}`} alt={s.name} />
                   </div>
                 )}
               </div>
