@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Acknowledgements & Attributions – SDE Skills Hub" currentDomain="acknowledgements">
@@ -12,7 +14,7 @@ import PageHeader from '../components/PageHeader.astro';
           <h2>Funding</h2>
           <div class="glass ack-card ack-card--funding">
             <img
-              src="/assets/images/eprsc_logo.png"
+              src={`${base}assets/images/eprsc_logo.png`}
               alt="EPSRC Logo"
               class="ack-logo"
             />
@@ -28,7 +30,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>The University of Manchester</h3>
               <img
-                src="/assets/images/manchester-logo.png"
+                src={`${base}assets/images/manchester-logo.png`}
                 alt="The University of Manchester Logo"
                 class="ack-logo"
               />
@@ -37,7 +39,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>University of Liverpool</h3>
               <img
-                src="/assets/images/liverpool-logo.png"
+                src={`${base}assets/images/liverpool-logo.png`}
                 alt="University of Liverpool Logo"
                 class="ack-logo"
               />
@@ -46,7 +48,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>Lancashire Teaching Hospitals NHS Foundation Trust</h3>
               <img
-                src="/assets/images/lancashire-nhs-logo.jpg"
+                src={`${base}assets/images/lancashire-nhs-logo.jpg`}
                 alt="Lancashire Teaching Hospitals NHS Foundation Trust Logo"
                 class="ack-logo"
               />
@@ -60,7 +62,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>ARO Technology</h3>
               <img
-                src="/assets/images/aro-logo.jpeg"
+                src={`${base}assets/images/aro-logo.jpeg`}
                 alt="ARO Technology logo"
                 class="ack-logo"
               />
@@ -72,7 +74,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>Mersey Care NHS Trust</h3>
               <img
-                src="/assets/images/mersey-care-logo.png"
+                src={`${base}assets/images/mersey-care-logo.png`}
                 alt="Mersey Care NHS Trust Logo"
                 class="ack-logo"
               />
@@ -84,7 +86,7 @@ import PageHeader from '../components/PageHeader.astro';
             <article class="glass ack-card">
               <h3>Health Innovation Manchester</h3>
               <img
-                src="/assets/images/hinm_logo.png"
+                src={`${base}assets/images/hinm_logo.png`}
                 alt="Health Innovation Manchester logo"
                 class="ack-logo ack-logo--hinm"
               />

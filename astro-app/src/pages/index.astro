@@ -8,6 +8,8 @@ import { staff } from '../data/staff.js';
 const siteLeads = staff.filter(s => s.siteLead);
 const teamMembers = staff.filter(s => !s.siteLead);
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+
 const sections = [
   {
     id: 'our-project',
@@ -36,8 +38,8 @@ const sections = [
       <h1 class="hero-title">SDE Team Development Hub</h1>
       <p class="hero-subtitle">Developing technical capability and capacity for UK Secure Data Environments</p>
       <div class="hero-cta-group d-flex flex-wrap gap-3">
-        <a href="#explore" class="hero-cta">View our project</a>
-        <a href="#explore" class="hero-cta">Explore the Framework</a>
+        <a href="#our-project" class="hero-cta">View our project</a>
+        <a href="#competency-framework" class="hero-cta">Explore the Framework</a>
       </div>
     </div>
     <div class="hero-visual col-12 col-lg-6">
@@ -124,25 +126,25 @@ const sections = [
             <div class="card-header">
               <div class="card-info">
                 <h3>{s.name}</h3>
-                <p class="student-institution">{s.institution}</p>
+                <p class="student-institution">{s.site}</p>
                 <p class="student-course">{s.course}</p>
                 {s.status && <p class="">{s.status}</p>}
               </div>
               <div class="card-photo">
-                <img src={s.photo} alt={s.name} />
+                <img src={`${base}${s.photo.replace(/^\//, '')}`} alt={s.name} />
               </div>
             </div>
             <div class="project-content">
               <h4 class="project-title">{s.projectTitle}</h4>
               <p class="project-description">{s.projectDescription}</p>
-              <a href={`/placement-case-studies/#${s.caseStudyAnchor}`} class="read-more">Read full story →</a>
+              <a href={`${base}placement-case-studies/#${s.caseStudyAnchor}`} class="read-more">Read full story →</a>
             </div>
           </div>
         </div>
       ))}
     </div>
     <div class="projects-link-container">
-      <a href="/placement-case-studies/" class="projects-link">Find out about all our student projects here</a>
+      <a href={`${base}placement-case-studies/`} class="projects-link">Find out about all our student projects here</a>
     </div>
   </section>
 
@@ -164,7 +166,7 @@ const sections = [
                 <p class="team-role">{r.role}</p>
               </div>
               <div class="rtp-photo">
-                <img src={r.photo} alt={r.name} />
+                <img src={`${base}${r.photo.replace(/^\//, '')}`} alt={r.name} />
               </div>
             </div>
             <div class="rtp-content">
@@ -176,7 +178,7 @@ const sections = [
       ))}
     </div>
     <div class="rtp-link-container">
-      <a href="/professional-training-placements/" class="rtp-placement-link">Find out more about our RTP placements here</a>
+      <a href={`${base}professional-training-placements/`} class="rtp-placement-link">Find out more about our RTP placements here</a>
     </div>
   </section>
 
@@ -197,7 +199,7 @@ const sections = [
                 <p class="team-affiliation">{l.affiliation}</p>
               </div>
               <div class="team-photo">
-                <img src={l.photo} alt={l.name} />
+                <img src={`${base}${l.photo.replace(/^\//, '')}`} alt={l.name} />
               </div>
               <p class="card-header-role">{l.siteLeadRole}</p>
             </div>
@@ -212,13 +214,13 @@ const sections = [
     <div class="team-members-carousel" id="teamMembersCarousel">
       {teamMembers.map(m => (
         <div class="team-member-thumbnail">
-          <img src={m.photo} alt={m.name} />
+          <img src={`${base}${m.photo.replace(/^\//, '')}`} alt={m.name} />
           <p>{m.name}</p>
         </div>
       ))}
     </div>
     <div class="team-link-container">
-      <a href="/team/" class="team-link">Find out more about the team here</a>
+      <a href={`${base}meet-the-team/`} class="team-link">Find out more about the team here</a>
     </div>
   </section>
 
@@ -294,8 +296,8 @@ const sections = [
       <h2>Ready to Develop Your Skills?</h2>
       <p>Dive into the competency framework and start your learning journey today.</p>
       <div class="cta-buttons">
-        <a href="/cf-overview/" class="btn btn-primary">View Framework Overview</a>
-        <a href="/framework-contents/" class="btn btn-secondary">Browse Contents</a>
+        <a href={`${base}cf-overview/`} class="btn btn-primary">View Framework Overview</a>
+        <a href={`${base}framework-contents/`} class="btn btn-secondary">Browse Contents</a>
       </div>
     </div>
   </section>
