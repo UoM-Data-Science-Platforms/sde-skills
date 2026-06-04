@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
     inputs:
       app_root:
-        description: 'Application root path (e.g., sde-skills, demo)'
+        description: 'Review sub-path under /sde-skills/ (e.g. "review", "pr-42"). Leave blank to deploy gold tier at /sde-skills/.'
         required: false
-        default: 'sde-skills'
+        default: ''
         type: string
 
 permissions:
@@ -44,9 +44,18 @@ jobs:
           mkdir -p astro-app/data
           cp docs/competency_framework/framework_mapping.md astro-app/data/cf-framework-mapping.md
 
+      - name: Compute deploy paths
+        run: |
+          APP_ROOT="${{ github.event.inputs.app_root }}"
+          if [ -z "$APP_ROOT" ]; then
+            echo "ASTRO_BASE=/sde-skills" >> $GITHUB_ENV
+            echo "DEST_DIR=sde-skills" >> $GITHUB_ENV
+          else
+            echo "ASTRO_BASE=/sde-skills/$APP_ROOT" >> $GITHUB_ENV
+            echo "DEST_DIR=sde-skills/$APP_ROOT" >> $GITHUB_ENV
+          fi
+
       - name: Set Astro deploy config
-        env:
-          APP_ROOT: ${{ github.event.inputs.app_root || 'sde-skills' }}
         run: |
           cat > astro-app/astro.config.mjs <<EOF
           import { defineConfig } from 'astro/config';
@@ -58,7 +67,7 @@ jobs:
               remarkPlugins: [remarkMkdocsAttr]
             },
             site: 'https://uom-data-science-platforms.github.io',
-            base: '/${APP_ROOT}',
+            base: '$ASTRO_BASE',
           });
           EOF
 
@@ -85,5 +94,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: astro-app/dist
-          destination_dir: ${{ github.event.inputs.app_root || 'sde-skills' }}
+          destination_dir: ${{ env.DEST_DIR }}
           keep_files: true
