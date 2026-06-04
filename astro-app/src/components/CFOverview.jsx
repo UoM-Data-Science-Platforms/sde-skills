@@ -337,8 +337,8 @@ export default function CFOverview() {
       </div>
 
       {/* Sticky subnav */}
-      <div className="sticky-subnav">
-        <ul className="nav nav-pills subdomain-tabs" role="tablist">
+      <nav className="sticky-nav" role="navigation" aria-label="Page sections">
+        <ul className="nav nav-tabs sticky-nav-top" role="tablist">
           {SECTIONS.map(s => (
             <li key={s.id} className="nav-item" role="presentation">
               <button
@@ -351,7 +351,7 @@ export default function CFOverview() {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
 
       {/* Scroll area */}
       <div className="scroll-area" ref={scrollRef}>

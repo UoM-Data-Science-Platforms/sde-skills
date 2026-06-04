@@ -6,15 +6,9 @@ on:
       - main
     paths:
       - 'astro-app/**'
-      - 'scripts/markdown_to_yaml.py'
-      - 'scripts/extract_tools_tech_standards.py'
       - 'scripts/build_data.py'
-      - 'docs/competency_framework/**'
+      - 'docs/competency_framework/framework_mapping.md'
       - 'yaml/**'
-      - 'docs/index.md'
-      - 'docs/about.md'
-      - 'docs/contributing.md'
-      - 'docs/assets/img/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
     inputs:
@@ -42,21 +36,13 @@ jobs:
       - name: Install Python dependencies
         run: uv sync --locked --all-extras --dev
 
-      - name: Extract tools/technologies/standards from markdown
-        run: uv run python scripts/extract_tools_tech_standards.py
-
       - name: Build and merge YAML data
         run: uv run python scripts/build_data.py
 
-      - name: Copy home page markdown
+      - name: Copy framework mapping markdown
         run: |
-          mkdir -p astro-app/data/assets/img
-          cp docs/index.md astro-app/data/index.md
-          cp docs/about.md astro-app/data/about.md
-          cp docs/contributing.md astro-app/data/contributing.md
-          cp docs/competency_framework/overview.md astro-app/data/cf-overview.md
+          mkdir -p astro-app/data
           cp docs/competency_framework/framework_mapping.md astro-app/data/cf-framework-mapping.md
-          cp docs/assets/img/* astro-app/data/assets/img/
 
       - name: Set Astro deploy config
         env:

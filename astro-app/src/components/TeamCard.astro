@@ -1,0 +1,72 @@
+---
+import { INSTITUTION_COLORS } from '../data/domains.js';
+
+interface Props {
+  member: any;
+  variant?: 'full' | 'thumbnail' | 'lead';
+}
+
+const { member, variant = 'full' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+const photoUrl = `${base}${member.photo.replace(/^\//, '')}`;
+const nameColor = member.institution ? INSTITUTION_COLORS[member.institution] : undefined;
+---
+
+{variant === 'thumbnail' ? (
+  <div class="team-member-thumbnail">
+    <img src={photoUrl} alt={member.name} />
+    <p>{member.name}</p>
+  </div>
+) : variant === 'lead' ? (
+  <article class="card lead-card glass--soft">
+    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site) -->
+    <div class="card-header">
+      <div class="card-info">
+        <h3 class="card-title" style={nameColor ? { color: nameColor } : {}}>{member.name}</h3>
+        {member.affiliation && <div class="team-affiliation"><i>{member.affiliation}</i></div>}
+      </div>
+      <div class="team-photo">
+        <img src={photoUrl} alt={member.name} />
+      </div>
+    </div>
+    
+    <!-- Row 2: Card Body (1 col: role and background) -->
+    <div class="card-body">
+      {(member.siteLeadRole || member.role) && (
+        <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
+      )}
+      {(member.siteLeadBackground || member.background) && (
+        <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
+      )}
+    </div>
+  </article>
+) : (
+  <article class="card team-card glass--soft">
+    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site) -->
+    <div class="card-header">
+      <div class="card-info">
+        <h3 class="card-title" style={nameColor ? { color: nameColor } : {}}>{member.name}</h3>
+        {member.affiliation && <div class="team-affiliation"><i>{member.affiliation}</i></div>}
+      </div>
+      <div class="team-photo">
+        <img src={photoUrl} alt={member.name} />
+      </div>
+    </div>
+    
+    <!-- Row 2: Card Body (1 col: role, background, focus, notable) -->
+    <div class="card-body">
+      {(member.siteLeadRole || member.role) && (
+        <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
+      )}
+      {(member.siteLeadBackground || member.background) && (
+        <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
+      )}
+      {member.focus && (
+        <p class="team-focus"><strong>Focus:</strong> {member.focus}</p>
+      )}
+      {member.notable && (
+        <p class="team-notable"><strong>Notable:</strong> {member.notable}</p>
+      )}
+    </div>
+  </article>
+)}

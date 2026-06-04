@@ -1,0 +1,626 @@
+/* =============================================
+   CARDS — canonical card styles
+   Consolidated from page-container.css and index.css.
+   Built on top of Bootstrap's .card class.
+   ============================================= */
+
+/* --- Base card overrides (on top of Bootstrap .card) --- */
+.card {
+  border-radius: 16px;
+  padding: var(--space-lg) var(--space-xl);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-decoration: none;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-cyan-soft);
+}
+
+/* --- Cards grid (single-column stack) --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* --- Card typography --- */
+.card h3 {
+  font-size: var(--text-competency);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  margin-top: 0;
+  color: var(--color-heading);
+}
+
+.card .card-subtitle {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Card header — photo-sidebar grid layout --- */
+.card > .card-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  background: transparent;
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* --- Card table rows --- */
+.table-row-clickable { cursor: pointer; }
+
+/* --- Card photo (photo always on the right via grid) --- */
+.card-photo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-domain-base) 8%, transparent);
+  border: 1px solid var(--color-glass-border);
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Card blockquotes (RTP cards) --- */
+.card blockquote {
+  margin: var(--space-sm) 0 0 0;
+  padding-left: var(--space-lg);
+  border-left: 3px solid color-mix(in srgb, var(--color-domain-base) 30%, transparent);
+  font-style: italic;
+}
+
+.card blockquote p {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* =============================================
+   TEAM CARDS GRID (meet-the-team page)
+   ============================================= */
+.team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.team-card {
+  padding: var(--space-lg);
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-cyan-soft);
+}
+
+.team-card .card-header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  background: transparent;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.team-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.team-card .team-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-card .team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card .card-body {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+}
+
+.team-card h3 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.team-card .team-affiliation {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.team-card .card-header-role {
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.team-card .lead-background,
+.team-card .team-focus,
+.team-card .team-notable {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* =============================================
+   EOI CARD
+   ============================================= */
+.eoi-card {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  margin-top: var(--space-lg);
+}
+
+/* =============================================
+   PROJECT CARD (index.astro — student project carousel)
+   ============================================= */
+.project-card {
+  flex: 0 0 32%;
+  min-width: 280px;
+  scroll-snap-align: start;
+  padding: var(--space-lg);
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-cyan-soft);
+}
+
+.project-card .card-header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.project-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.project-card h3 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.project-card .card-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-card .card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card .student-institution {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.project-card .student-course {
+  font-size: 0.95rem;
+  color: var(--color-deep-blue);
+  font-weight: 600;
+  margin: 0;
+}
+
+.project-card .student-status {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.project-card .project-content {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.project-card .project-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.project-card .project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.project-card .read-more {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  align-self: flex-end;
+  margin-top: var(--space-xs);
+}
+
+/* =============================================
+   RTP CARD (index.astro — RTP trainee carousel)
+   ============================================= */
+.rtp-card {
+  padding: var(--space-lg);
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.rtp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-cyan-soft);
+}
+
+.rtp-card .card-header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.rtp-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.rtp-card h3 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.rtp-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.rtp-card .team-affiliation {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.rtp-card .rtp-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rtp-card .rtp-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rtp-card .rtp-content {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.rtp-card .team-role {
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  font-size: 0.95rem;
+}
+
+.rtp-card .rtp-focus {
+  color: var(--color-text-muted);
+}
+
+.rtp-card .rtp-quote {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* =============================================
+   LEAD CARD (index.astro — site leads)
+   ============================================= */
+.lead-card {
+  padding: var(--space-lg);
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--space-md);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.lead-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-cyan-soft);
+}
+
+.lead-card .card-header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  background: transparent;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.lead-card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.lead-card .team-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lead-card .team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lead-card .card-body {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+}
+
+.lead-card h3 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.lead-card .team-affiliation {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.lead-card .lead-background {
+  margin-top: 0;
+}
+
+/* =============================================
+   FEATURE CARD (index.astro — competency feature carousel)
+   ============================================= */
+.feature-card .slide-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--color-deep-blue);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =============================================
+   SHARED CARD TEXT STYLES
+   (used within project-card, rtp-card, lead-card on index page)
+   ============================================= */
+
+.student-institution {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.student-course {
+  font-size: var(--text-small);
+  color: var(--color-deep-blue);
+  font-weight: 500;
+  margin: 0;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.project-title {
+  font-size: var(--text-competency);
+  font-weight: 600;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+.project-description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.read-more {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  align-self: flex-end;
+}
+
+.read-more:hover {
+  transform: translateX(4px);
+}
+
+.rtp-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.rtp-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-affiliation {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.team-role {
+  font-size: var(--text-small);
+  color: var(--color-deep-blue);
+  font-weight: 500;
+  margin: 0;
+}
+
+.rtp-focus {
+  margin: 0;
+}
+
+.rtp-quote {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.card-header-role {
+  font-weight: 600;
+  color: var(--color-deep-blue);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.lead-background {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-top: calc(-1 * var(--space-sm));
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -18,6 +18,10 @@
   --color-deep-blue:  #222B56;
   --color-nhs-blue:   #005EB8;
   --color-white:      #ffffff;
+  --color-accent-cyan-soft: rgba(0, 169, 206, 0.25);
+  --color-glass-border: rgba(255, 255, 255, 0.19);
+  --color-deep-blue-light: #3a4a78;
+  --color-glass-bg: rgba(52, 56, 65, 0.12);
   --color-mix-base:   white;
   --color-bg-sticky-header:  #ffffff3b;
   --color-bg-sidebar: var(--color-bg-sticky-header);

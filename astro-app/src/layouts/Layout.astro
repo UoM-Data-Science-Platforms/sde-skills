@@ -1,5 +1,6 @@
 ---
 import Sidebar from '../components/Sidebar.jsx';
+import SocialLinks from '../components/SocialLinks.astro';
 import Footer from '../components/Footer.astro';
 import { DOMAINS, PAGE_COLORS } from '../data/domains.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,7 +12,9 @@ import '../styles/page-nav.css';
 import '../styles/skills-framework.css';
 import '../styles/prose.css';
 import '../styles/page-container.css';
-import '../styles/retreat.css';
+import '../styles/sticky-nav.css';
+import '../styles/cards.css';
+
 import '../styles/acknowledgements.css';
 
 interface Props {
@@ -39,7 +42,9 @@ const domainColor = PAGE_COLORS[currentDomain] ?? 'var(--color-purple)';
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={DOMAINS} currentDomain={currentDomain} client:load />
+      <Sidebar domains={DOMAINS} currentDomain={currentDomain} client:load>
+        <SocialLinks />
+      </Sidebar>
       <main class="main-content">
         <slot />
       </main>

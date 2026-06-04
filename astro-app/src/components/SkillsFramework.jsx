@@ -344,8 +344,8 @@ export default function SkillsFramework() {
       </div>
 
       {/* Sticky subdomain / competency nav */}
-      <div className="sticky-subnav">
-        <ul className="nav nav-pills subdomain-tabs" ref={subdomainTabsRef} role="tablist">
+      <nav className="sticky-nav" role="navigation" aria-label="Page sections">
+        <ul className="nav nav-tabs sticky-nav-top" ref={subdomainTabsRef} role="tablist">
           {subdomains.map(([subKey, subVal], idx) => {
             const subNumber = `${domainNumber}.${idx + 1}`;
             return (
@@ -361,7 +361,7 @@ export default function SkillsFramework() {
             );
           })}
         </ul>
-        <ul className="nav nav-pills competency-tabs" ref={competencyTabsRef} role="tablist">
+        <ul className="nav nav-tabs sticky-nav-sub" ref={competencyTabsRef} role="tablist">
           {subdomains
             .find(([, subVal], idx) => `${domainNumber}.${idx + 1}` === stickySubNumber)
             ?.[1].competencies &&
@@ -382,7 +382,7 @@ export default function SkillsFramework() {
               );
             })}
         </ul>
-      </div>
+      </nav>
 
       {/* Scrollable content */}
       <div className="scroll-area" ref={scrollAreaRef} onScroll={handleScroll}>

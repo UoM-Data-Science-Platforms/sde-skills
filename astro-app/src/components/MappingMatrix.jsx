@@ -285,7 +285,7 @@ export default function MappingMatrix() {
       {/* Controls */}
       <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
         {/* Framework filter tabs */}
-        <ul className="nav nav-pills subdomain-tabs mb-0" role="tablist">
+        <ul className="nav nav-tabs sticky-nav-top mb-0" role="tablist">
           {FRAMEWORKS.map(f => (
             <li key={f} className="nav-item" role="presentation">
               <button

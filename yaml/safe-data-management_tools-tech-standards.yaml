@@ -5,9 +5,6 @@ subdomains:
     name: Data Governance
     items:
     - Checksums
-    - Basic metadata tools
-    - Labeling tools
-    - Manual lineage documentation
     - Excel validation templates
   data-engineering-and-processing:
     name: Data Engineering & Processing
@@ -16,11 +13,7 @@ subdomains:
     - Python
     - SQLite
     - FHIR/OMOP documentation
-    - Kafka CLI
     - HashiCorp Vault
-    - AES/RSA libraries
-    - Veeam
+    - AES/RSA
     - Windows Backup
-    - Retention policy templates
     - AWS DMS
-    - Manual migration scripts
