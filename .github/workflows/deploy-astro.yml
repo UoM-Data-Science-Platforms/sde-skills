@@ -95,4 +95,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: astro-app/dist
           destination_dir: ${{ env.DEST_DIR }}
-          keep_files: true
