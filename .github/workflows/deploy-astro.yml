@@ -45,14 +45,21 @@ jobs:
           cp docs/competency_framework/framework_mapping.md astro-app/data/cf-framework-mapping.md
 
       - name: Compute deploy paths
+        id: deploy_paths
         run: |
           APP_ROOT="${{ github.event.inputs.app_root }}"
+          APP_ROOT="${APP_ROOT#/}"
+          APP_ROOT="${APP_ROOT%/}"
+          APP_ROOT="${APP_ROOT#sde-skills/}"
+          if [ "$APP_ROOT" = "sde-skills" ]; then
+            APP_ROOT=""
+          fi
           if [ -z "$APP_ROOT" ]; then
             echo "ASTRO_BASE=/sde-skills" >> $GITHUB_ENV
-            echo "DEST_DIR=sde-skills" >> $GITHUB_ENV
+            echo "dest_dir=" >> $GITHUB_OUTPUT
           else
             echo "ASTRO_BASE=/sde-skills/$APP_ROOT" >> $GITHUB_ENV
-            echo "DEST_DIR=sde-skills/$APP_ROOT" >> $GITHUB_ENV
+            echo "dest_dir=$APP_ROOT" >> $GITHUB_OUTPUT
           fi
 
       - name: Set Astro deploy config
@@ -89,9 +96,17 @@ jobs:
       - name: Add .nojekyll to dist
         run: touch astro-app/dist/.nojekyll
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages root
+        if: steps.deploy_paths.outputs.dest_dir == ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: astro-app/dist
-          destination_dir: ${{ env.DEST_DIR }}
+
+      - name: Deploy to GitHub Pages subdirectory
+        if: steps.deploy_paths.outputs.dest_dir != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: astro-app/dist
+          destination_dir: ${{ steps.deploy_paths.outputs.dest_dir }}
