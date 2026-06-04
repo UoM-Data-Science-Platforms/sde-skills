@@ -70,8 +70,8 @@ export default function FrameworkContents() {
       <div className="sticky-header">
         <h1>Framework Contents</h1>
       </div>
-      <div className="sticky-subnav">
-        <ul className="nav nav-pills subdomain-tabs" role="tablist">
+      <nav className="sticky-nav" role="navigation" aria-label="Page sections">
+        <ul className="nav nav-tabs sticky-nav-top" role="tablist">
           {domains.map(({ slug, data }) => (
             <li key={slug} className="nav-item" role="presentation">
               <button
@@ -85,7 +85,7 @@ export default function FrameworkContents() {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
       <div className="scroll-area" ref={scrollRef} style={{ padding: 'var(--space-xl)' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
           {domains.map(({ slug, data }) => (

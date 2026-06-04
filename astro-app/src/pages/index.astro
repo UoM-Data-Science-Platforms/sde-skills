@@ -4,6 +4,10 @@ import '../styles/index.css';
 import { featuredStudents } from '../data/students.js';
 import { rtps } from '../data/rtps.js';
 import { staff } from '../data/staff.js';
+import TeamCard from '../components/TeamCard.astro';
+import StudentCard from '../components/StudentCard.astro';
+import RTPCard from '../components/RTPCard.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
 
 const siteLeads = staff.filter(s => s.siteLead);
 const teamMembers = staff.filter(s => !s.siteLead);
@@ -30,16 +34,16 @@ const sections = [
 ];
 ---
 
-<Layout title="Home" currentDomain="/">
+<Layout title="Home — SDE Team Development Hub" currentDomain="/">
   <div class="index-layout">
   <div class="scroll-area">
   <div class="home-hero row g-4 align-items-center" id="home-hero">
     <div class="hero-content col-12 col-lg-6">
       <h1 class="hero-title">SDE Team Development Hub</h1>
       <p class="hero-subtitle">Developing technical capability and capacity for UK Secure Data Environments</p>
-      <div class="hero-cta-group d-flex flex-wrap gap-3">
-        <a href="#our-project" class="hero-cta">View our project</a>
-        <a href="#competency-framework" class="hero-cta">Explore the Framework</a>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="#our-project" class="btn btn-primary">View our project</a>
+        <a href="#competency-framework" class="btn btn-outline-primary">Explore the Framework</a>
       </div>
     </div>
     <div class="hero-visual col-12 col-lg-6">
@@ -88,18 +92,7 @@ const sections = [
     </div>
   </div>
 
-  <nav class="page-subnav" id="page-subnav" role="navigation" aria-label="Page sections">
-    <ul class="nav nav-pills page-subnav__top" id="section-tabs" role="tablist">
-      {sections.map(s => (
-        <li class="nav-item" role="presentation">
-          <button class="nav-link tab subdomain-tab" data-section={s.id} role="tab">
-            {s.label}
-          </button>
-        </li>
-      ))}
-    </ul>
-    <ul class="nav nav-pills page-subnav__sub" id="subsection-tabs" role="tablist"></ul>
-  </nav>
+  <StickyNavigation sections={sections} id="page-subnav" />
 
 
   <!-- Our Project Section -->
@@ -122,29 +115,12 @@ const sections = [
     <div class="projects-grid row g-4">
       {featuredStudents.map(s => (
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="project-card glass--soft">
-            <div class="card-header">
-              <div class="card-info">
-                <h3>{s.name}</h3>
-                <p class="student-institution">{s.site}</p>
-                <p class="student-course">{s.course}</p>
-                {s.status && <p class="">{s.status}</p>}
-              </div>
-              <div class="card-photo">
-                <img src={`${base}${s.photo.replace(/^\//, '')}`} alt={s.name} />
-              </div>
-            </div>
-            <div class="project-content">
-              <h4 class="project-title">{s.projectTitle}</h4>
-              <p class="project-description">{s.projectDescription}</p>
-              <a href={`${base}placement-case-studies/#${s.caseStudyAnchor}`} class="read-more">Read full story →</a>
-            </div>
-          </div>
+          <StudentCard student={s} variant="compact" />
         </div>
       ))}
     </div>
     <div class="projects-link-container">
-      <a href={`${base}placement-case-studies/`} class="projects-link">Find out about all our student projects here</a>
+      <a href={`${base}student-projects/`} class="projects-link">Find out about all our student projects here</a>
     </div>
   </section>
 
@@ -158,27 +134,12 @@ const sections = [
     <div class="rtp-grid row g-4">
       {rtps.map(r => (
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="rtp-card glass--soft">
-            <div class="card-header">
-              <div class="card-info">
-                <h3>{r.name}</h3>
-                <p class="team-affiliation">{r.affiliation}</p>
-                <p class="team-role">{r.role}</p>
-              </div>
-              <div class="rtp-photo">
-                <img src={`${base}${r.photo.replace(/^\//, '')}`} alt={r.name} />
-              </div>
-            </div>
-            <div class="rtp-content">
-              <p class="rtp-focus"><strong>Focus:</strong> {r.focus}</p>
-              <p class="rtp-quote">{r.quote}</p>
-            </div>
-          </div>
+          <RTPCard trainee={r} variant="featured" />
         </div>
       ))}
     </div>
     <div class="rtp-link-container">
-      <a href={`${base}professional-training-placements/`} class="rtp-placement-link">Find out more about our RTP placements here</a>
+      <a href={`${base}rtp-placements/`} class="rtp-placement-link">Find out more about our RTP placements here</a>
     </div>
   </section>
 
@@ -192,19 +153,7 @@ const sections = [
     <div class="team-leads row g-4">
       {siteLeads.map(l => (
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="lead-card glass--soft">
-            <div class="card-header">
-              <div class="card-info">
-                <h3>{l.name}</h3>
-                <p class="team-affiliation">{l.affiliation}</p>
-              </div>
-              <div class="team-photo">
-                <img src={`${base}${l.photo.replace(/^\//, '')}`} alt={l.name} />
-              </div>
-              <p class="card-header-role">{l.siteLeadRole}</p>
-            </div>
-            <p class="lead-background">{l.siteLeadBackground}</p>
-          </div>
+          <TeamCard member={l} variant="lead" />
         </div>
       ))}
     </div>
@@ -213,10 +162,7 @@ const sections = [
     <h3 class="team-members-heading" id="the-team">The Team</h3>
     <div class="team-members-carousel" id="teamMembersCarousel">
       {teamMembers.map(m => (
-        <div class="team-member-thumbnail">
-          <img src={`${base}${m.photo.replace(/^\//, '')}`} alt={m.name} />
-          <p>{m.name}</p>
-        </div>
+        <TeamCard member={m} variant="thumbnail" />
       ))}
     </div>
     <div class="team-link-container">
@@ -240,11 +186,11 @@ const sections = [
       </p>
     </div>
   </section>
-  <section class="carousel-section">
+  <section class="feature-scroll-section">
     <h2 id="key-features">Key Features</h2>
-    <div class="carousel-container">
-      <div class="carousel" id="featureCarousel">
-        <div class="carousel-slide feature-card glass--soft">
+    <div class="feature-scroll-container">
+      <div class="feature-scroll" id="featureCarousel">
+        <div class="feature-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -252,7 +198,7 @@ const sections = [
           <h3>Six Core Domains</h3>
           <p>Comprehensive coverage of Safe Access & Identity, Data Management, Governance & Compliance, and more.</p>
         </div>
-        <div class="carousel-slide feature-card glass--soft">
+        <div class="feature-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
@@ -260,7 +206,7 @@ const sections = [
           <h3>Competency Mapping</h3>
           <p>Detailed competency levels with proficiency descriptions for career development.</p>
         </div>
-        <div class="carousel-slide feature-card glass--soft">
+        <div class="feature-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
@@ -268,7 +214,7 @@ const sections = [
           <h3>SATRE Aligned</h3>
           <p>Mapped to UK research ethics frameworks for consistent professional standards.</p>
         </div>
-        <div class="carousel-slide feature-card glass--soft">
+        <div class="feature-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -278,7 +224,7 @@ const sections = [
           <h3>Collaborative Design</h3>
           <p>Developed by teams across Manchester, Liverpool, and Lancashire institutions.</p>
         </div>
-        <div class="carousel-slide feature-card glass--soft">
+        <div class="feature-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="12" y1="2" x2="12" y2="22"></line>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -305,23 +251,16 @@ const sections = [
 </Layout>
 
 
-<script define:vars={{ sections }}>
-  window._indexSections = sections;
-</script>
 <script>
-  import { initScrollSync } from '../scripts/scrollSync.js';
-
   const nav = document.getElementById('page-subnav');
   const hero = document.getElementById('home-hero');
   const scroller = document.querySelector('.index-layout .scroll-area');
 
   if (nav && hero && scroller) {
     scroller.addEventListener('scroll', () => {
-      nav.classList.toggle('page-subnav--stuck', scroller.scrollTop > 0);
+      nav.classList.toggle('sticky-nav--stuck', scroller.scrollTop > 0);
     }, { passive: true });
   }
-
-  initScrollSync({ sections: window._indexSections });
 </script>
 <script>
   // Animated counters
@@ -386,60 +325,5 @@ const sections = [
     max-width: 100%;
   }
 
-  .page-subnav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.48);
-    transition: box-shadow var(--transition-base), background var(--transition-base);
-  }
-
-  .page-subnav--stuck {
-    background: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  }
-
-  .page-subnav__top {
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: var(--space-sm) var(--space-xl) 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .page-subnav__top::-webkit-scrollbar { display: none; }
-
-  .page-subnav__sub {
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: var(--space-2xs) var(--space-xl);
-    min-height: 2rem;
-  }
-
-  .page-subnav__sub::-webkit-scrollbar { display: none; }
-
-  @media (max-width: 767px) {
-    .page-subnav__top,
-    .page-subnav__sub {
-      padding-left: var(--space-md);
-      padding-right: var(--space-md);
-    }
-  }
-
-  :global(html[data-theme="dark"]) .page-subnav {
-    background: rgba(13, 17, 23, 0);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-  }
-
-  :global(html[data-theme="dark"]) .page-subnav--stuck {
-    background: rgba(13, 17, 23, 0.85);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-  }
+  /* Subnav styles now in sticky-nav.css */
 </style>

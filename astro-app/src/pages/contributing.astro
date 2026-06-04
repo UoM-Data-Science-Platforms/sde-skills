@@ -12,14 +12,14 @@ const ISSUE_STEPS = [
 const PR_PREREQS = [
   'A GitHub account',
   'Git installed on your computer',
-  'Basic understanding of Markdown formatting',
+  'Basic understanding of YAML formatting',
 ];
 
 const PR_STEPS = [
   { text: 'Fork the repository by clicking the <strong>"Fork"</strong> button at the top right of the repository page.' },
   { text: 'Clone your fork to your local machine.', code: 'git clone https://github.com/YOUR-USERNAME/sde-skills.git\ncd sde-skills' },
   { text: 'Create a new branch for your changes.', code: 'git checkout -b your-branch-name' },
-  { text: 'Edit the relevant Markdown files in <code>docs/competency_framework/</code> using any text editor.' },
+  { text: 'Edit the relevant YAML files in <code>yaml/</code> using any text editor.' },
   { text: 'Stage and commit your changes.', code: 'git add .\ngit commit -m "Brief description of your changes"' },
   { text: 'Push your changes to your fork.', code: 'git push origin your-branch-name' },
   { text: 'Open a Pull Request — go to the original repository, click <strong>Pull Requests → New Pull Request → compare across forks</strong>, select your fork and branch, then fill in the details.' },
@@ -33,7 +33,7 @@ const GUIDELINES = [
   { title: 'Follow existing format', desc: 'Match the structure and style of existing documents when editing directly.' },
 ];
 ---
-<Layout title="Contributing – SDE Team Development Hub" currentDomain="contributing">
+<Layout title="Contributing — SDE Team Development Hub" currentDomain="contributing">
   <div class="skills-framework">
 
     <div class="sticky-header">
@@ -68,8 +68,8 @@ const GUIDELINES = [
             <div class="accordion-body">
               <p>Creating an issue is the simplest way to suggest changes, report errors, or propose additions to the competency framework.</p>
 
-              <div class="card__sub">
-                <div class="card__label">Steps</div>
+              <div class="card-sub">
+                <div class="card-label">Steps</div>
                 {ISSUE_STEPS.map((step, i) => (
                   <div class="step-row">
                     <span class="badge rounded-pill step-badge">{i + 1}</span>
@@ -78,8 +78,8 @@ const GUIDELINES = [
                 ))}
               </div>
 
-              <div class="card__sub">
-                <div class="card__label">Example Issue</div>
+              <div class="card-sub">
+                <div class="card-label">Example Issue</div>
                 <pre class="code-example">Title: Suggest additional skills for Cloud Infrastructure competency
 
 Description:
@@ -114,8 +114,8 @@ Reference: [insert link or page reference]</pre>
             <div class="accordion-body">
               <p>If you are comfortable with Git and GitHub, you can directly propose changes by creating a pull request.</p>
 
-              <div class="card__sub">
-                <div class="card__label">Prerequisites</div>
+              <div class="card-sub">
+                <div class="card-label">Prerequisites</div>
                 {PR_PREREQS.map((item, i) => (
                   <div class="step-row">
                     <span class="bullet-dot"></span>
@@ -124,8 +124,8 @@ Reference: [insert link or page reference]</pre>
                 ))}
               </div>
 
-              <div class="card__sub">
-                <div class="card__label">Steps</div>
+              <div class="card-sub">
+                <div class="card-label">Steps</div>
                 {PR_STEPS.map((step, i) => (
                   <div class={`step-row${step.code ? ' step-row--block' : ''}`}>
                     <div class="step-header">
@@ -146,7 +146,7 @@ Reference: [insert link or page reference]</pre>
 
         <div class="col-12 col-md-6">
         <div class="competency-card is-visible card--flush">
-          <div class="card__label">Guidelines for Contributions</div>
+          <div class="card-label">Guidelines for Contributions</div>
           {GUIDELINES.map((g, i) => (
             <div class="step-row">
               <span class="badge rounded-pill step-badge">{i + 1}</span>
@@ -158,7 +158,7 @@ Reference: [insert link or page reference]</pre>
 
         <div class="col-12 col-md-6">
         <div class="competency-card is-visible card--flush">
-          <div class="card__label">Getting Help</div>
+          <div class="card-label">Getting Help</div>
           <div class="step-row">
             <span class="bullet-dot"></span>
             <span class="step-text">For technical help with Git or GitHub, refer to <a href="https://docs.github.com/en" target="_blank" rel="noreferrer">GitHub's documentation</a>.</span>

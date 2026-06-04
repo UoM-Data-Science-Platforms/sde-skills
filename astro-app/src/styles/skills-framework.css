@@ -91,7 +91,7 @@
 
 /* Tools, Technologies, and Standards at subdomain level */
 .subdomain-tech-section {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
@@ -116,15 +116,15 @@
   background: rgba(255, 255, 255, 0);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.4px);
-  -webkit-backdrop-filter: blur(6.4px);
-  border: 1px solid rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--color-glass-border);
   cursor: default;
 }
 
 .competency-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(0, 169, 206, 0.25);
+  border-color: var(--color-accent-cyan-soft);
 }
 
 .competency-card h3 {
@@ -192,32 +192,19 @@
   border: 1px solid;
   white-space: nowrap;
   font-weight: 500;
+  background: color-mix(in srgb, var(--color-heading) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-heading) 20%, transparent);
+  color: var(--color-heading);
   transition:
     background var(--transition-fast),
     border-color var(--transition-fast),
     color var(--transition-fast);
 }
 
-.tech-chip.tool {
-  background: color-mix(in srgb, rgb(59, 130, 246) 8%, var(--color-surface));
-  border-color: color-mix(in srgb, rgb(59, 130, 246) 20%, transparent);
-  color: rgb(59, 130, 246);
-}
-
-.tech-chip.tool:hover {
-  background: color-mix(in srgb, rgb(59, 130, 246) 15%, var(--color-surface));
-  border-color: color-mix(in srgb, rgb(59, 130, 246) 35%, transparent);
-}
-
-.tech-chip.technology {
-  background: color-mix(in srgb, rgb(168, 85, 247) 8%, var(--color-surface));
-  border-color: color-mix(in srgb, rgb(168, 85, 247) 20%, transparent);
-  color: rgb(168, 85, 247);
-}
-
-.tech-chip.technology:hover {
-  background: color-mix(in srgb, rgb(168, 85, 247) 15%, var(--color-surface));
-  border-color: color-mix(in srgb, rgb(168, 85, 247) 35%, transparent);
+.tech-chip:hover {
+  background: color-mix(in srgb, var(--color-heading) 15%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-heading) 35%, transparent);
+  color: var(--color-heading);
 }
 
 .tech-chip.standard {
@@ -273,7 +260,7 @@ html[data-theme="dark"] .level-btn.active {
 }
 
 /* Mobile: allow buttons to wrap at two per row if needed */
-@media (max-width: 480px) {
+@media (max-width: 575.98px) {
   .level-btn {
     flex: 1 1 calc(50% - var(--space-xs));
   }
@@ -468,7 +455,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Coloured top strip on stacked cards */
-.card__top-bar {
+.card-top-bar {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
@@ -477,7 +464,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Large faded background number */
-.card__ghost-number {
+.card-ghost-number {
   font-size: clamp(5rem, 14vw, 9rem);
   font-weight: 900;
   line-height: 1;
@@ -489,12 +476,12 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Accent divider line */
-.card__accent-line {
+.card-accent-line {
   background: var(--color-accent);
 }
 
 /* Step counter badge */
-.card__step-counter {
+.card-step-counter {
   position: absolute;
   bottom: var(--space-lg);
   right: var(--space-lg);
@@ -506,7 +493,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Icon in grid tiles */
-.tile__icon {
+.tile-icon {
   width: 44px;
   height: 44px;
   margin-top: 0.25rem;
@@ -514,7 +501,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Number label in grid tiles */
-.tile__number {
+.tile-number {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.15em;
@@ -523,7 +510,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* MissionScroll — sticky panel and content */
-.mission-scroll__panel {
+.mission-scroll-panel {
   position: sticky;
   top: 0;
   display: flex;
@@ -533,20 +520,20 @@ html[data-theme="dark"] .proficiency-btn.active {
   overflow: hidden;
 }
 
-.mission-scroll__indicators {
+.mission-scroll-indicators {
   display: flex;
   gap: 8px;
   margin-bottom: 3rem;
 }
 
-.mission-scroll__content {
+.mission-scroll-content {
   text-align: center;
   max-width: 560px;
   padding: 0 var(--space-xl);
   animation: missionIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.mission-scroll__ghost-number {
+.mission-scroll-ghost-number {
   font-size: clamp(6rem, 18vw, 10rem);
   font-weight: 900;
   line-height: 1;
@@ -557,7 +544,7 @@ html[data-theme="dark"] .proficiency-btn.active {
   user-select: none;
 }
 
-.mission-scroll__title {
+.mission-scroll-title {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 800;
   color: var(--color-heading);
@@ -565,7 +552,7 @@ html[data-theme="dark"] .proficiency-btn.active {
   line-height: 1.2;
 }
 
-.mission-scroll__nudge {
+.mission-scroll-nudge {
   position: absolute;
   bottom: 2rem;
   display: flex;
@@ -580,7 +567,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Stacked mission card inner panel */
-.mission-card__inner {
+.mission-card-inner {
   height: 100%;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
@@ -593,18 +580,18 @@ html[data-theme="dark"] .proficiency-btn.active {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
 }
 
-.mission-card__inner.is-past {
+.mission-card-inner.is-past {
   transform: scale(0.97);
   opacity: 0.6;
 }
 
-.mission-card__content {
+.mission-card-content {
   max-width: 560px;
   padding: 0 var(--space-xl);
   text-align: center;
 }
 
-.mission-card__title {
+.mission-card-title {
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--color-heading);
@@ -612,7 +599,7 @@ html[data-theme="dark"] .proficiency-btn.active {
   line-height: 1.2;
 }
 
-.mission-card__accent-line {
+.mission-card-accent-line {
   width: 36px;
   height: 3px;
   border-radius: 2px;
@@ -621,7 +608,7 @@ html[data-theme="dark"] .proficiency-btn.active {
   transition: background 0.4s ease;
 }
 
-.mission-card__body {
+.mission-card-body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-text-muted);
@@ -640,7 +627,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Labelled header bar — top of a flush card or sub-card */
-.card__label {
+.card-label {
   padding: var(--space-xs) var(--space-md);
   background: color-mix(in srgb, var(--color-domain-base) 6%, var(--color-surface));
   border-bottom: 1px solid var(--color-border);
@@ -652,14 +639,14 @@ html[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Inner bordered sub-card (nested inside a flush card) */
-.card__sub {
+.card-sub {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--space-md);
 }
 
-.card__sub:last-child {
+.card-sub:last-child {
   margin-bottom: 0;
 }
 
@@ -812,7 +799,7 @@ html[data-theme="dark"] .proficiency-btn.active {
 .qualification-card {
   border: 1px solid var(--color-border);
   border-radius: 6px;
-  background: #ffffff
+  background: var(--color-white)
   overflow: hidden;
 }
 

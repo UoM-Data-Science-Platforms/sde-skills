@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
+import TeamCard from '../components/TeamCard.astro';
 import { INSTITUTION_COLORS } from '../data/domains.js';
 import { staff } from '../data/staff.js';
 
@@ -11,38 +13,16 @@ const sections = [
 const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 
-<Layout title="Meet the Team" currentDomain="meet-the-team">
+<Layout title="Meet the Team — SDE Team Development Hub" currentDomain="meet-the-team">
   <div class="skills-framework">
     <PageHeader title="Meet the Team" />
-    <div class="sticky-subnav">
-      <div class="subdomain-tabs" id="section-tabs">
-        {sections.map(s => (
-          <button class="tab subdomain-tab" data-section={s.id}>
-            {s.label}
-          </button>
-        ))}
-      </div>
-    </div>
+    <StickyNavigation sections={sections} />
     <div class="scroll-area" id="scroll-area">
       <div class="container-fluid px-4 py-4">
-        <h2 id="team" style="display: none;"></h2>
+        <h2 id="team" class="visually-hidden"></h2>
         <div class="team-cards-grid">
           {staff.map((member) => (
-            <article class="card team-card">
-              <div class="card-header">
-                <div class="card-info">
-                  <h3 class="card-title" style={member.institution ? { color: INSTITUTION_COLORS[member.institution] } : {}}>{member.name}</h3>
-                  {member.affiliation && <div class="info-row affiliation-italic"><i>{member.affiliation}</i></div>}
-                  {member.role && <div class="info-row"><strong>Role:</strong> {member.role}</div>}
-                  {member.background && <div class="info-row"><strong>Background:</strong> {member.background}</div>}
-                  {member.notable && <div class="info-row"><strong>Notable:</strong> {member.notable}</div>}
-                  {member.focus && <div class="info-row"><strong>Focus:</strong> {member.focus}</div>}
-                </div>
-                <div class="card-photo">
-                  <img src={`${base}${member.photo.replace(/^\//, '')}`} alt={member.name} />
-                </div>
-              </div>
-            </article>
+            <TeamCard member={member} variant="full" />
           ))}
         </div>
       </div>
@@ -50,10 +30,4 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
   </div>
 </Layout>
 
-<script define:vars={{ sections }}>
-  window._pageSections = sections;
-</script>
-<script>
-  import { initScrollSync } from '../scripts/scrollSync.js';
-  initScrollSync({ sections: window._pageSections });
-</script>
+

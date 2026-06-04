@@ -1,0 +1,84 @@
+---
+import { INSTITUTION_COLORS } from '../data/domains.js';
+
+interface Props {
+  student: any;
+  variant?: 'compact' | 'detailed';
+}
+
+const { student: s, variant = 'compact' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+const photoUrl = s.photo ? `${base}${s.photo.replace(/^\//, '')}` : null;
+
+// Map site short name to full institution name
+const siteMappings: Record<string, string> = {
+  'Manchester': 'University of Manchester',
+  'Lancaster': 'Lancaster University',
+  'Liverpool': 'University of Liverpool',
+};
+const fullSiteName = siteMappings[s.site] || s.site;
+
+const institutionKey = s.site ? (s.site.toLowerCase() === 'lancaster' ? 'lancashire' : s.site.toLowerCase()) : '';
+const nameColor = INSTITUTION_COLORS[institutionKey];
+---
+
+{variant === 'compact' ? (
+  <div class="project-card glass--soft">
+    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site, course, status) -->
+    <div class="card-header">
+      <div class="card-info">
+        <h3 style={nameColor ? { color: nameColor } : {}}>{s.name}</h3>
+        <p class="student-institution">{fullSiteName}</p>
+        <p class="student-course">{s.course}</p>
+        {s.status && <p class="student-status">{s.status}</p>}
+      </div>
+      {photoUrl && (
+        <div class="card-photo">
+          <img src={photoUrl} alt={s.name} />
+        </div>
+      )}
+    </div>
+    <!-- Row 2: Card Body (1 col: project title and description) -->
+    <div class="project-content">
+      <h4 class="project-title">{s.projectTitle}</h4>
+      <p class="project-description">{s.projectDescription}</p>
+      <a href={`${base}student-projects/#student-${s.id}`} class="read-more">Read full story →</a>
+    </div>
+  </div>
+) : (
+  <article class="card glass--soft" id={`student-${s.id}`}>
+    <div class="card-header">
+      <div class="card-info">
+        <h2 class={`card-title${s.titleStyle ? ` ${s.titleStyle}` : ''}`}>{s.name}</h2>
+        <div class="mb-1"><i>{s.projectTitle}</i></div>
+        {s.site && <div class="mb-1"><strong>Site:</strong> {s.site}</div>}
+        {s.course && <div class="mb-1"><strong>Course:</strong> {s.course}</div>}
+      </div>
+      {photoUrl && (
+        <div class="card-photo">
+          <img src={photoUrl} alt={s.name} />
+        </div>
+      )}
+    </div>
+    <div class="card-body">
+      {s.bio && s.bio.length > 0 && (
+        <>
+          <p class="card-text"><strong>Biography:</strong> {s.bio[0]}</p>
+          {s.bio.slice(1).map(p => <p class="card-text">{p}</p>)}
+        </>
+      )}
+      {s.summary && s.summary.length > 0 && (
+        <>
+          <p class="card-text"><strong>Project Summary:</strong> {s.summary[0]}</p>
+          {s.summary.slice(1).map(p => <p class="card-text">{p}</p>)}
+        </>
+      )}
+      {s.supervision && s.supervision.length > 0 && (
+        <>
+          <p class="card-text"><strong>Supervision:</strong> {s.supervision[0]}</p>
+          {s.supervision.slice(1).map(p => <p class="card-text">{p}</p>)}
+        </>
+      )}
+    </div>
+  </article>
+)}

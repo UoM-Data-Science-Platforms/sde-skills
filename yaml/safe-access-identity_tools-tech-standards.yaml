@@ -16,8 +16,4 @@ subdomains:
   secure-user-experience:
     name: Secure User Experience
     items:
-    - Training verification systems
-    - Workspace provisioning templates
-    - Workspace isolation tools
     - azure kevaults
-    - Basic collaboration platforms

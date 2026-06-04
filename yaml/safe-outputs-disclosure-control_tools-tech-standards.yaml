@@ -9,8 +9,7 @@ subdomains:
     name: Tools and platforms to support output checking
     items:
     - Camunda
-    - custom workflow templates
-    - Basic airlock portals
+    - Data airlocks
     - GitHub
     - Git
   statistical-disclosure-control:

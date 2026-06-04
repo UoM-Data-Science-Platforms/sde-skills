@@ -20,8 +20,6 @@ export const PAGE_COLORS = {
   '/':                          ACCENT,
   'project':                    ACCENT,
   'contributing':               ACCENT,
-  'retreat-2026':               ACCENT,
-  'expression-of-interest':     ACCENT,
   'cf-overview':                ACCENT,
   'framework-contents':         ACCENT,
   'mapping-matrix':             ACCENT,
@@ -32,12 +30,11 @@ export const PAGE_COLORS = {
   'projects-operations':        ACCENT,
   'technology-engineering':     ACCENT,
   'cf-framework-mapping':       ACCENT,
-  'about':                      ACCENT,
   'satre-mapping':              ACCENT,
   'acknowledgements':           ACCENT,
-  'placement-case-studies':     ACCENT,
+  'student-projects':           ACCENT,
   'meet-the-team':              ACCENT,
-  'professional-training-placements': ACCENT,
+  'rtp-placements':             ACCENT,
 };
 
 /**

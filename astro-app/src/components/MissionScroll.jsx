@@ -47,11 +47,11 @@ export default function MissionScroll() {
   return (
     <div ref={trackRef} style={{ height: panelHeight * STEPS.length }}>
       <div
-        className="mission-scroll__panel"
+        className="mission-scroll-panel"
         style={{ height: panelHeight, '--color-accent': color }}
       >
         {/* Step indicator dots */}
-        <div className="mission-scroll__indicators">
+        <div className="mission-scroll-indicators">
           {STEPS.map((_, i) => (
             <div
               key={i}
@@ -61,23 +61,23 @@ export default function MissionScroll() {
         </div>
 
         {/* Animated content block */}
-        <div key={animKey} className="mission-scroll__content">
+        <div key={animKey} className="mission-scroll-content">
           {/* Large ghost number */}
-          <div className="mission-scroll__ghost-number">{current.number}</div>
+          <div className="mission-scroll-ghost-number">{current.number}</div>
 
           {/* Title */}
-          <h2 className="mission-scroll__title">{current.title}</h2>
+          <h2 className="mission-scroll-title">{current.title}</h2>
 
           {/* Accent line */}
-          <div className="mission-card__accent-line" />
+          <div className="mission-card-accent-line" />
 
           {/* Body */}
-          <p className="mission-card__body">{current.body}</p>
+          <p className="mission-card-body">{current.body}</p>
         </div>
 
         {/* Scroll nudge on first step */}
         {step === 0 && (
-          <div className="mission-scroll__nudge">
+          <div className="mission-scroll-nudge">
             <span>scroll</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M7 2v10M2 8l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

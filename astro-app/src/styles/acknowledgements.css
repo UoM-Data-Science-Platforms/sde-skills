@@ -74,7 +74,7 @@
   max-width: 350px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .ack-grid {
     grid-template-columns: 1fr;
   }
@@ -86,12 +86,6 @@
 
 html[data-theme="dark"] .ack-card--funding p {
   color: #F0F6FC;
-}
-
-html[data-theme="dark"] .ack-logo {
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: var(--radius-md);
 }
 
 .ack-logo--hinm {
