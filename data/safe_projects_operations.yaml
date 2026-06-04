@@ -1,4 +1,6 @@
 domain:
+  index: 5
+  main-color: color-deep-blue
   id: safe-projects-operations
   name: Safe Projects & Operations
   description: This domain covers the management of secure data environment projects, operational excellence, and the delivery
@@ -13,6 +15,9 @@ domain:
         facilitation of technical needs, implementing agile delivery methods adapted for secure environments, managing procurement
         and vendor relationships, and optimizing resource allocation with effective cost management to ensure successful project
         outcomes.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         sde-project-planning:
           id: sde-project-planning
@@ -166,10 +171,6 @@ domain:
       - LabArchives
       - Miro
       - Scrum boards
-      - SAP Ariba (view-only
-      - Oracle Procurement Cloud
-      - AWS Cost Explorer
-      - CloudCheckr
     service-management:
       id: service-management
       name: Service Management
@@ -178,6 +179,9 @@ domain:
         implementing effective incident and problem management processes that minimise disruptions and prevent recurrences,
         and controlling changes to infrastructure and applications through governance frameworks that balance security requirements
         with operational flexibility.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         service-level-management:
           id: service-level-management
@@ -267,12 +271,10 @@ domain:
               - Develops strategies for balancing change agility and control
               - Leads change management improvement initiatives
       items:
-      - basic monitoring dashboards
-      - SLA templates
       - basic ticketing systems
+      - Service now
       - Freshservice
       - GitHub Actions
-      - automated release orchestration
     operational-excellence:
       id: operational-excellence
       name: Operational Excellence
@@ -281,6 +283,9 @@ domain:
         and Six Sigma, comprehensive documentation and knowledge management that preserves operational expertise, and robust
         monitoring and observability practices that provide insight into system health, performance, and security status while
         enabling proactive management of the environment.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         continuous-improvement:
           id: continuous-improvement
@@ -370,7 +375,7 @@ domain:
               - Develops observability strategies across systems
               - Leads initiatives to enhance operational visibility
       items:
-      - Lean Six Sigma templates
+      - Lean Six Sigma
       - Google Docs
       - OneNote
       - Azure Monitor
@@ -383,6 +388,9 @@ domain:
         capabilities that meet research requirements while maintaining security, exploring and implementing innovative technologies
         that advance secure research capabilities, and engaging with the wider community through active participation and
         knowledge sharing across the secure data environment ecosystem.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         researcher-training-support:
           id: researcher-training-support

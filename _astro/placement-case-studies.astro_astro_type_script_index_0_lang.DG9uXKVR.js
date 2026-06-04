@@ -1,1 +1,0 @@
-import{i as c}from"./scrollSync.CM8XkxZO.js";c({sections:window._pageSections});document.querySelectorAll(".table-row-clickable").forEach(e=>{e.addEventListener("click",()=>{const o=e.dataset.student,t=document.getElementById(`student-${o}`);t&&document.querySelector(".scroll-area")&&t.scrollIntoView({behavior:"smooth",block:"start"})})});
