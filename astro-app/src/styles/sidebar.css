@@ -219,6 +219,10 @@ html[data-theme="dark"] .theme-toggle:hover {
     transform: translateX(0);
     visibility: visible;
   }
+
+  .offcanvas-backdrop.show {
+    opacity: 1;
+  }
 }
 
 /* =============================================
