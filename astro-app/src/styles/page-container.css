@@ -71,14 +71,18 @@
 }
 
 @media (max-width: 767.98px) {
+  .mini-hero-content {
+    max-width: 100%;
+  }
+
   .mini-hero {
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-lg) var(--space-sm);
   }
 
   .scroll-area > .mini-hero {
-    margin: calc(-1 * var(--space-md));
+    margin: calc(-1 * var(--space-sm));
     margin-bottom: 0;
-    width: calc(100% + 2 * var(--space-md));
+    width: calc(100% + 2 * var(--space-sm));
   }
 }
 
