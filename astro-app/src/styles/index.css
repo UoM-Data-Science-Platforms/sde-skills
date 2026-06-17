@@ -466,12 +466,18 @@
 }
 
 @media (max-width: 575.98px) {
+  .hero-content,
+  .cf-hero-content,
+  .project-hero-content {
+    max-width: 100%;
+  }
+
   .feature-scroll-card {
     flex: 0 0 100%;
   }
 
   .home-hero {
-    padding: var(--space-2xl) var(--space-md);
+    padding: var(--space-2xl) var(--space-sm);
   }
 
   .feature-scroll-section,
@@ -481,6 +487,6 @@
   .cta-section,
   .cf-hero,
   .our-project-hero {
-    padding: var(--space-2xl) var(--space-md);
+    padding: var(--space-2xl) var(--space-sm);
   }
 }
