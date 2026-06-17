@@ -37,3 +37,129 @@ jobs:
 
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
+
+  summary:
+    name: CodeQL Summary
+    runs-on: ubuntu-latest
+    needs: analyze
+    if: always()
+    permissions:
+      actions: read
+      contents: read
+      security-events: read
+    env:
+      ANALYZE_RESULT: ${{ needs.analyze.result }}
+    steps:
+      - name: Build CodeQL summary
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runScope = context.eventName === 'pull_request'
+              ? `PR #${context.payload.pull_request.number}`
+              : context.ref;
+
+            const params = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tool_name: 'CodeQL',
+              state: 'open',
+              per_page: 100,
+            };
+
+            if (context.eventName === 'pull_request') {
+              params.pr = context.payload.pull_request.number;
+            } else {
+              params.ref = context.ref;
+            }
+
+            const alerts = await github.paginate(
+              github.rest.codeScanning.listAlertsForRepo,
+              params,
+            );
+
+            const groups = {
+              high: [],
+              medium: [],
+              low: [],
+            };
+
+            function classifyPriority(alert) {
+              const securitySeverity = (alert.rule?.security_severity_level || '').toLowerCase();
+              if (securitySeverity === 'critical' || securitySeverity === 'high') {
+                return 'high';
+              }
+              if (securitySeverity === 'medium' || securitySeverity === 'moderate') {
+                return 'medium';
+              }
+              if (securitySeverity === 'low') {
+                return 'low';
+              }
+
+              const ruleSeverity = (alert.rule?.severity || '').toLowerCase();
+              if (ruleSeverity === 'error') {
+                return 'high';
+              }
+              if (ruleSeverity === 'warning') {
+                return 'medium';
+              }
+              return 'low';
+            }
+
+            function formatLocation(alert) {
+              const instance = alert.most_recent_instance || {};
+              const location = instance.location || {};
+              const path = location.path || 'Unknown file';
+              const line = location.start_line ? `:${location.start_line}` : '';
+              return `${path}${line}`;
+            }
+
+            for (const alert of alerts) {
+              groups[classifyPriority(alert)].push(alert);
+            }
+
+            const counts = {
+              high: groups.high.length,
+              medium: groups.medium.length,
+              low: groups.low.length,
+            };
+
+            let recommendation = 'No open CodeQL alerts were found. The scanned code appears safe to merge from a static-analysis perspective, subject to normal review and testing.';
+            if (process.env.ANALYZE_RESULT !== 'success') {
+              recommendation = 'One or more CodeQL analysis jobs did not complete successfully. Treat this report as incomplete until the failed analysis is fixed and rerun.';
+            } else if (counts.high > 0) {
+              recommendation = 'High-priority findings are present. The code should not be treated as safe to merge or deploy until those alerts are reviewed and addressed.';
+            } else if (counts.medium > 0) {
+              recommendation = 'No high-priority findings were detected, but medium-priority alerts are open. Merge only with review of those findings and a clear remediation plan.';
+            } else if (counts.low > 0) {
+              recommendation = 'Only low-priority alerts are open. The code appears broadly safe to proceed, but the findings should still be reviewed and scheduled for cleanup.';
+            }
+
+            const summary = core.summary;
+            summary.addHeading('CodeQL Security Summary', 1);
+            summary.addRaw(`**Scan scope:** ${runScope}\n\n`);
+            summary.addRaw('| Priority | Count |\n');
+            summary.addRaw('| --- | ---: |\n');
+            summary.addRaw(`| High | ${counts.high} |\n`);
+            summary.addRaw(`| Medium | ${counts.medium} |\n`);
+            summary.addRaw(`| Low | ${counts.low} |\n\n`);
+            summary.addHeading('Recommendation', 2);
+            summary.addRaw(`${recommendation}\n\n`);
+
+            for (const level of ['high', 'medium', 'low']) {
+              const title = `${level.charAt(0).toUpperCase()}${level.slice(1)} Priority`;
+              summary.addHeading(title, 2);
+
+              if (groups[level].length === 0) {
+                summary.addRaw(`No open ${level}-priority alerts.\n\n`);
+                continue;
+              }
+
+              summary.addList(
+                groups[level].map((alert) => {
+                  const rule = alert.rule?.name || alert.rule?.id || 'Unnamed rule';
+                  return `${rule} (${formatLocation(alert)})`;
+                }),
+              );
+            }
+
+            await summary.write();
