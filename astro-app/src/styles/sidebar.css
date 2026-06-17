@@ -210,6 +210,12 @@ html[data-theme="dark"] .theme-toggle:hover {
    ============================================= */
 
 @media (max-width: 991.98px) {
+  #sidebar-offcanvas.offcanvas {
+    background: var(--color-bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   #sidebar-offcanvas.offcanvas:not(.show) {
     transform: translateX(-100%);
     visibility: hidden;
@@ -218,10 +224,6 @@ html[data-theme="dark"] .theme-toggle:hover {
   #sidebar-offcanvas.offcanvas.show {
     transform: translateX(0);
     visibility: visible;
-  }
-
-  .offcanvas-backdrop.show {
-    opacity: 1;
   }
 }
 
