@@ -17,6 +17,11 @@ on:
         required: false
         default: ''
         type: string
+      custom_domain:
+        description: 'Custom domain to publish for root GitHub Pages deploys.'
+        required: false
+        default: 'sdertp.org'
+        type: string
 
 permissions:
   contents: write
@@ -48,6 +53,10 @@ jobs:
         id: deploy_paths
         run: |
           APP_ROOT="${{ github.event.inputs.app_root }}"
+          CUSTOM_DOMAIN="${{ github.event.inputs.custom_domain }}"
+          if [ -z "$CUSTOM_DOMAIN" ]; then
+            CUSTOM_DOMAIN="sdertp.org"
+          fi
           APP_ROOT="${APP_ROOT#/}"
           APP_ROOT="${APP_ROOT%/}"
           APP_ROOT="${APP_ROOT#sde-skills/}"
@@ -57,9 +66,13 @@ jobs:
           if [ -z "$APP_ROOT" ]; then
             echo "ASTRO_BASE=" >> $GITHUB_ENV
             echo "dest_dir=" >> $GITHUB_OUTPUT
+            echo "ASTRO_SITE=https://$CUSTOM_DOMAIN" >> $GITHUB_ENV
+            printf '%s\n' "$CUSTOM_DOMAIN" > astro-app/public/CNAME
           else
             echo "ASTRO_BASE=/sde-skills/$APP_ROOT" >> $GITHUB_ENV
             echo "dest_dir=$APP_ROOT" >> $GITHUB_OUTPUT
+            echo "ASTRO_SITE=https://uom-data-science-platforms.github.io" >> $GITHUB_ENV
+            rm -f astro-app/public/CNAME
           fi
 
       - name: Set Astro deploy config
@@ -73,7 +86,7 @@ jobs:
             markdown: {
               remarkPlugins: [remarkMkdocsAttr]
             },
-            site: 'https://uom-data-science-platforms.github.io',
+            site: '$ASTRO_SITE',
             base: '$ASTRO_BASE',
           });
           EOF
