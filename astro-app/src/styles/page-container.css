@@ -31,60 +31,9 @@
   flex-direction: column;
   gap: var(--space-lg);
 }
-/* =============================================
-   MINI HERO
-   ============================================= */
 
-.scroll-area > .mini-hero {
-  margin: calc(-1 * var(--space-xl));
-  margin-bottom: 0;
-  width: calc(100% + 2 * var(--space-xl));
-}
 
-.mini-hero {
-  padding: var(--space-xl);
-  background: linear-gradient(135deg, var(--color-deep-blue), var(--color-deep-blue-light));
-  color: var(--color-white);
-  text-align: center;
-}
 
-.mini-hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.mini-hero-content h2 {
-  font-size: var(--text-subdomain);
-  color: var(--color-white);
-  margin-bottom: var(--space-sm);
-}
-
-.mini-hero-content p {
-  font-size: var(--text-body);
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.6;
-  margin-bottom: var(--space-xs);
-}
-
-.mini-hero-content p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 767.98px) {
-  .mini-hero-content {
-    max-width: 100%;
-  }
-
-  .mini-hero {
-    padding: var(--space-lg) var(--space-sm);
-  }
-
-  .scroll-area > .mini-hero {
-    margin: calc(-1 * var(--space-sm));
-    margin-bottom: 0;
-    width: calc(100% + 2 * var(--space-sm));
-  }
-}
 
 .list-disc {
   list-style-type: disc;
@@ -120,6 +69,3 @@
   color: var(--color-text);
   line-height: 1.6;
 }
-/* =============================================
-   CARD STYLES — consolidated into cards.css
-   ============================================= */

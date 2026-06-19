@@ -104,6 +104,8 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   overflow-x: clip;
 }
 
+
+
 /* Mobile: sidebar becomes an offcanvas overlay, so no margin needed */
 @media (max-width: 991.98px) {
   .main-content {
@@ -242,3 +244,25 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   width: 28px;
   background: var(--color-accent);
 }
+
+/* wide layout overrides */
+  .wide-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .wide-layout :global(.scroll-area) {
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+  }
+
+  .wide-layout .scroll-area {
+    padding: 0;
+  }
+
+  .wide-layout :global(.scroll-area > *) {
+    max-width: 100%;
+  }

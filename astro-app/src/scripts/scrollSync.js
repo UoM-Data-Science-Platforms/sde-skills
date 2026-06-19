@@ -18,6 +18,8 @@
 export function initScrollSync({ sections }) {
   const sectionTabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
   const subsectionNav = document.getElementById('subsection-tabs');
+  const scrollToLinks      = document.querySelectorAll('[data-scroll-to]');
+  console.log('initScrollSync', { sections, sectionTabs, subsectionNav, scrollToLinks });
   const hasSubsections = sections.some(s => s.subsections?.length);
 
   const OFFSET = window.innerHeight * 0.4;
@@ -66,14 +68,26 @@ export function initScrollSync({ sections }) {
   sectionTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const sectionId = tab.dataset.section;
-      setActiveSection(sectionId, true);
+      onTabClick(sectionId);
+    });
+  });
+
+  scrollToLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const sectionId = link.dataset.scrollTo;
+      onTabClick(sectionId);
+    });
+  });
+
+  const onTabClick = (sectionId) => {
+    setActiveSection(sectionId, true);
       if (hasSubsections) {
         const sec = sections.find(s => s.id === sectionId);
         if (sec?.subsections?.[0]) setActiveSubsection(sec.subsections[0].id);
       }
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
+  }
 
   const allSectionIds = sections.map(s => s.id);
 
