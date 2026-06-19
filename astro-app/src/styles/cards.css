@@ -37,12 +37,23 @@
 }
 
 /* --- Card typography --- */
-.card h3 {
+.card h2, .card h3, .card h4 {
   font-size: var(--text-competency);
   font-weight: 600;
   margin-bottom: var(--space-xs);
   margin-top: 0;
   color: var(--color-heading);
+}
+.card h3 {
+  font-weight: 600;
+}
+
+.card h2 {
+  font-weight: 800;
+}
+
+.card h4 {
+  font-weight: 400;
 }
 
 .card .card-subtitle {
@@ -211,14 +222,6 @@
   margin: 0;
 }
 
-/* =============================================
-   EOI CARD
-   ============================================= */
-.eoi-card {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  margin-top: var(--space-lg);
-}
 
 /* =============================================
    PROJECT CARD (index.astro — student project carousel)
@@ -623,4 +626,32 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.retreat-card { 
+  margin-top: var(--space-lg);
+}
+
+.retreat-card .list-group {
+    list-style-type: disc; /* Adds the standard bullet point */
+    padding-left: 2rem;    /* Creates space for the bullets */
+}
+
+.retreat-card .list-group .list-group-item {
+    display: list-item;    /* Overrides Bootstrap's flex/block display */
+}
+
+.retreat-card .card-body{ 
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.retreat-card .card-body .card-title,
+.retreat-card .card-body:last-child { 
+  border-bottom: none;
+}
+
+.retreat-card li { 
+  background-color: unset;
+  font-size: 0.9375rem;
+  border-bottom: none;
 }

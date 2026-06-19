@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/hero.css';
+import '../styles/carousel.css';
+import '../styles/horizontal-scroller.css';
+import '../styles/section.css';
 import '../styles/index.css';
 import { featuredStudents } from '../data/students.js';
 import { rtps } from '../data/rtps.js';
@@ -35,9 +39,9 @@ const sections = [
 ---
 
 <Layout title="Home — SDE Team Development Hub" currentDomain="/">
-  <div class="index-layout">
+  <div class="index-page wide-layout">
   <div class="scroll-area">
-  <div class="home-hero row g-4 align-items-center" id="home-hero">
+  <div class="wide-hero row g-4 align-items-center" id="home-hero">
     <div class="hero-content col-12 col-lg-6">
       <h1 class="hero-title">SDE Team Development Hub</h1>
       <p class="hero-subtitle">Developing technical capability and capacity for UK Secure Data Environments</p>
@@ -77,15 +81,15 @@ const sections = [
 
 
   <!-- Our Project Section -->
-  <section class="our-project-hero" id="our-project">
-    <div class="project-hero-content">
+  <section class="mini-hero" id="our-project">
+    <div class="mini-hero-content">
       <h2>Our Project</h2>
       <p>The future of secure research depends on skilled, knowledgeable, and experienced colleagues who can navigate complex technical and governance landscapes. In addition to defining core competencies at entry, mid, and senior levels for existing colleagues to help them to navigate and plan their career progression, we're developing the next generation of secure data environment professionals through hands-on projects, structured mentoring, and bespoke training and development plans. Discover how we're using insights from our competency framework to guide our students and trainees, and how their real-world experiences are feeding back into the framework to ensure it remains grounded in practice.</p>
     </div>
   </section>
 
   <!-- Student Projects Section -->
-  <section class="student-projects-section" id="student-projects">
+  <section class="section" id="student-projects">
     <h2>Student Projects</h2>
     <p class="section-intro">
       To ensure future sustainability for the technical workforce, we are supervising students from Masters degree programmes at the three host institutions. 
@@ -93,45 +97,45 @@ const sections = [
       In addition, all of our research team provide mentoring to students to help them to develop technical/professional skills and to discover formal training opportunities that will help them to standout in the jobs market post-graduation, 
       and to inspire them to pursue careers designing, developing, and operating SDEs. Find out more about our students below:
     </p>
-    <div class="projects-grid row g-4">
+    <div class="section-grid row g-4">
       {featuredStudents.map(s => (
         <div class="col-12 col-md-6 col-lg-4">
           <StudentCard student={s} variant="compact" />
         </div>
       ))}
     </div>
-    <div class="projects-link-container">
-      <a href={`${base}student-projects/`} class="projects-link">Find out about all our student projects here</a>
+    <div class="section-link-container">
+      <a href={`${base}student-projects/`} class="section-link">Find out about all our student projects here</a>
     </div>
   </section>
 
   <!-- RTP Placements Section -->
-  <section class="rtp-section" id="rtp-placements">
+  <section class="section" id="rtp-placements">
     <h2>RTP Professional Placements</h2>
     <p class="section-intro">
     This programme has funded 3 full-time trainee positions for early careers Research Technical Professionals with aspirations to design, build, and operate secure research infrastructure.
     Find out more about our trainees below:
     </p>
-    <div class="rtp-grid row g-4">
+    <div class="section-grid row g-4">
       {rtps.map(r => (
         <div class="col-12 col-md-6 col-lg-4">
           <RTPCard trainee={r} variant="featured" />
         </div>
       ))}
     </div>
-    <div class="rtp-link-container">
-      <a href={`${base}rtp-placements/`} class="rtp-placement-link">Find out more about our RTP placements here</a>
+    <div class="section-link-container">
+      <a href={`${base}rtp-placements/`} class="section-link">Find out more about our RTP placements here</a>
     </div>
   </section>
 
   <!-- Team Section -->
-  <section class="team-section" id="team">
+  <section class="section" id="team">
     <h2>Us</h2>
     <p class="section-intro">Meet the multidisciplinary team behind the SDE Team Development Hub.</p>
 
     <!-- Team Leads -->
-    <h3 class="team-members-heading" id="site-leads">Site Leads</h3>
-    <div class="team-leads row g-4">
+    <h3 class="section-heading" id="site-leads">Site Leads</h3>
+    <div class="team-leads row">
       {siteLeads.map(l => (
         <div class="col-12 col-md-6 col-lg-4">
           <TeamCard member={l} variant="lead" />
@@ -140,21 +144,21 @@ const sections = [
     </div>
 
     <!-- Team Members Carousel -->
-    <h3 class="team-members-heading" id="the-team">The Team</h3>
-    <div class="team-members-carousel" id="teamMembersCarousel">
+    <h3 class="section-heading" id="the-team">The Team</h3>
+    <div class="carousel" id="teamMembersCarousel">
       {teamMembers.map(m => (
         <TeamCard member={m} variant="thumbnail" />
       ))}
     </div>
-    <div class="team-link-container">
-      <a href={`${base}meet-the-team/`} class="team-link">Find out more about the team here</a>
+    <div class="section-container">
+      <a href={`${base}meet-the-team/`} class="section-link">Find out more about the team here</a>
     </div>
   </section>
 
   
   <!-- Feature Carousel -->
-  <section class="cf-hero" id="competency-framework">
-    <div class="cf-hero-content">
+  <section class="mini-hero" id="competency-framework">
+    <div class="mini-hero-content">
       <h2>SDE RTP Competency Framework</h2>
       <p>
         We have developed a comprehensive competency framework alongside a growing community of 
@@ -167,11 +171,11 @@ const sections = [
       </p>
     </div>
   </section>
-  <section class="feature-scroll-section">
+  <section class="horizontal-scroll-section">
     <h2 id="key-features">Key Features</h2>
-    <div class="feature-scroll-container">
-      <div class="feature-scroll" id="featureCarousel">
-        <div class="feature-scroll-card feature-card glass--soft">
+    <div class="horizontal-scroll-container">
+      <div class="horizontal-scroll" id="featureCarousel">
+        <div class="horizontal-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -179,7 +183,7 @@ const sections = [
           <h3>Six Core Domains</h3>
           <p>Comprehensive coverage of Safe Access & Identity, Data Management, Governance & Compliance, and more.</p>
         </div>
-        <div class="feature-scroll-card feature-card glass--soft">
+        <div class="horizontal-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
@@ -187,7 +191,7 @@ const sections = [
           <h3>Competency Mapping</h3>
           <p>Detailed competency levels with proficiency descriptions for career development.</p>
         </div>
-        <div class="feature-scroll-card feature-card glass--soft">
+        <div class="horizontal-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
@@ -195,7 +199,7 @@ const sections = [
           <h3>SATRE Aligned</h3>
           <p>Mapped to UK research ethics frameworks for consistent professional standards.</p>
         </div>
-        <div class="feature-scroll-card feature-card glass--soft">
+        <div class="horizontal-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
@@ -205,7 +209,7 @@ const sections = [
           <h3>Collaborative Design</h3>
           <p>Developed by teams across Manchester, Liverpool, and Lancashire institutions.</p>
         </div>
-        <div class="feature-scroll-card feature-card glass--soft">
+        <div class="horizontal-scroll-card feature-card glass--soft">
           <svg class="slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="12" y1="2" x2="12" y2="22"></line>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
@@ -235,7 +239,7 @@ const sections = [
 <script>
   const nav = document.getElementById('page-subnav');
   const hero = document.getElementById('home-hero');
-  const scroller = document.querySelector('.index-layout .scroll-area');
+  const scroller = document.querySelector('.wide-layout .scroll-area');
 
   if (nav && hero && scroller) {
     scroller.addEventListener('scroll', () => {
@@ -243,68 +247,5 @@ const sections = [
     }, { passive: true });
   }
 </script>
-<script>
-  // Animated counters
-  function initCounters() {
-    const counters = document.querySelectorAll('.stat-number');
-    const observerOptions = {
-      threshold: 0.5,
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const target = parseInt(entry.target.getAttribute('data-target'));
-          const duration = 2000;
-          const increment = target / (duration / 16);
-          let current = 0;
 
-          const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-              entry.target.textContent = Math.floor(current);
-              requestAnimationFrame(updateCounter);
-            } else {
-              entry.target.textContent = target;
-            }
-          };
-
-          observer.unobserve(entry.target);
-          updateCounter();
-        }
-      });
-    }, observerOptions);
-
-    counters.forEach((counter) => observer.observe(counter));
-  }
-
-// Initialize on page load
-  document.addEventListener('DOMContentLoaded', () => {
-  });
-</script>
-
-<style>
-  :global(.main-content):has(.index-layout) {
-    overflow-y: hidden;
-  }
-
-  .index-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-  }
-
-  .index-layout :global(.scroll-area) {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    background-color: transparent;
-  }
-
-  .index-layout :global(.scroll-area > *) {
-    max-width: 100%;
-  }
-
-  /* Subnav styles now in sticky-nav.css */
-</style>

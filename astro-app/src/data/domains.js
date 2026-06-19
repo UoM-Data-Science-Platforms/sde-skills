@@ -23,7 +23,7 @@ export const PAGE_COLORS = {
   'cf-overview':                ACCENT,
   'framework-contents':         ACCENT,
   'mapping-matrix':             ACCENT,
-  'retreat-2026':               ACCENT,
+  'retreat':                    ACCENT,
   'access-identity':            ACCENT,
   'data-management':            ACCENT,
   'governance-compliance':      ACCENT,
