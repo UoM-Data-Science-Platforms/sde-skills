@@ -7,44 +7,44 @@
     display: none;
 }
 
+.hero-panel {
+    width: 100%;
+    max-width: 32rem;
+    padding: var(--space-xl);
+}
+
+.venue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+}
+
+.venue-grid strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: var(--text-body);
+}
+
+.retreat-page .label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: var(--text-small);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.scroll-area {
+    overflow-y: auto;
+}
 
 
-    .hero-panel {
-        width: 100%;
-        max-width: 32rem;
-        padding: var(--space-xl);
-    }
+.agenda p:last-child {
+    margin-bottom: 0;
+}
 
+@media (max-width: 767.98px) {
     .venue-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-lg);
+        grid-columns: 1fr;
     }
-
-    .venue-grid strong {
-        display: block;
-        color: var(--color-heading);
-        font-size: var(--text-body);
-    }
-
-    .retreat-page .label {
-        display: block;
-        margin-bottom: var(--space-xs);
-        font-size: var(--text-small);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--color-text-muted);
-    }
-
-
-
-
-    .agenda p:last-child {
-        margin-bottom: 0;
-    }
-
-    @media (max-width: 767.98px) {
-        .venue-grid {
-            grid-columns: 1fr;
-        }
-    }
+}
