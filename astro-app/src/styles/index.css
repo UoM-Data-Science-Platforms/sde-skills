@@ -77,3 +77,7 @@
     margin: var(--space-3xl) var(--space-xl);
     scroll-margin-top: 20px; 
 }
+
+.scroll-area  {
+  overflow-x: hidden;
+}
