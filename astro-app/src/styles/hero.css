@@ -3,7 +3,6 @@
   padding: var(--space-3xl) var(--space-xl);
   min-height: 60vh;
   background: var(--bg-gradient);
-  width: 100%;
 }
 
 .hero-content {
