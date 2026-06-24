@@ -33,7 +33,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
     <>
       {/* Mobile hamburger — Bootstrap navbar-toggler, hidden on lg+ */}
       <button
-        className={`navbar-toggler sidebar-toggler d-lg-none position-fixed top-0 start-0 m-2`}
+        className={`navbar-toggler sidebar-toggler d-lg-none position-fixed top-0 start-0 m-3`}
         style={{ zIndex: 1045 }}
         onClick={() => setIsOpen(true)}
         aria-label="Open navigation"
@@ -76,7 +76,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
                   onClick={close}
                 >
                   <svg className="nav-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 8V13C2 13.5304 2.21071 14.0391 2.58579 14.4142C2.96086 14.7893 3.46957 15 4 15H12C12.5304 15 13.0391 14.7893 13.4142 14.4142C13.7893 14.0391 14 13.5304 14 13V8M1 7L8 2L15 7M5 13V9H11V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 8V13C2 13.5304 2.21071 14.0391 2.58579 14.4142C2.96086 14.7893 3.46957 15 4 15H12C12.5304 15 13.0391 14.7893 13.4142 14.4142C13.7893 14.0391 14 13.5304 14 13V8M1 7L8 2L15 7M5 13V9H11V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span>Home</span>
                 </a>
@@ -91,7 +91,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
                   onClick={close}
                 >
                   <svg className="nav-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span>Project</span>
                 </a>
@@ -126,7 +126,15 @@ export default function Sidebar({ domains, currentDomain, children }) {
                       className={`nav-link nav-sub-link${currentDomain === 'acknowledgements' ? ' active' : ''}`}
                       style={{ '--color-item': colorOf('acknowledgements') }}
                       onClick={close}
-                    >Acknowledgements &amp; Attributions</a>
+                    >Acknowledgements</a>
+                  </li>
+                  <li className="nav-item">
+                    <a
+                      href={`${base}retreat/`}
+                      className={`nav-link nav-sub-link${currentDomain === 'retreat' ? ' active' : ''}`}
+                      style={{ '--color-item': colorOf('retreat') }}
+                      onClick={close}
+                    >SDE Forge - Technical Skills Residential</a>
                   </li>
                 </ul>
               </li>
@@ -140,7 +148,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
                   onClick={close}
                 >
                   <svg className="nav-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span>Competency Framework</span>
                 </a>

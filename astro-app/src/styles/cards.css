@@ -37,13 +37,16 @@
 }
 
 /* --- Card typography --- */
-.card h2, .card h3, .card h4 {
+.card h2,
+.card h3,
+.card h4 {
   font-size: var(--text-competency);
   font-weight: 600;
   margin-bottom: var(--space-xs);
   margin-top: 0;
   color: var(--color-heading);
 }
+
 .card h3 {
   font-weight: 600;
 }
@@ -76,7 +79,7 @@
 }
 
 /* --- Card header — photo-sidebar grid layout --- */
-.card > .card-header {
+.card>.card-header {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--space-lg);
@@ -92,7 +95,9 @@
 }
 
 /* --- Card table rows --- */
-.table-row-clickable { cursor: pointer; }
+.table-row-clickable {
+  cursor: pointer;
+}
 
 /* --- Card photo (photo always on the right via grid) --- */
 .card-photo {
@@ -139,7 +144,7 @@
   padding: var(--space-lg);
   border-radius: 16px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   gap: var(--space-md);
   transition: all var(--transition-base);
   backdrop-filter: blur(6px);
@@ -233,9 +238,16 @@
   padding: var(--space-lg);
   border-radius: 16px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   gap: var(--space-md);
   transition: all var(--transition-base);
+}
+
+.row .project-card,
+.section-grid .project-card {
+  flex: none;
+  min-width: 0;
+  width: 100%;
 }
 
 .project-card:hover {
@@ -339,7 +351,7 @@
   padding: var(--space-lg);
   border-radius: 16px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   gap: var(--space-md);
   transition: all var(--transition-base);
 }
@@ -428,7 +440,7 @@
   padding: var(--space-lg);
   border-radius: 16px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   gap: var(--space-md);
   transition: all var(--transition-base);
   backdrop-filter: blur(6px);
@@ -599,6 +611,28 @@
   margin: 0;
 }
 
+.trainee-profile-layout,
+.team-profile-layout,
+.student-profile-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.trainee-details,
+.team-details,
+.student-details {
+  flex: 1;
+}
+
+.trainee-profile-layout .card-photo,
+.trainee-profile-layout .rtp-photo,
+.team-profile-layout .team-photo,
+.student-profile-layout .card-photo {
+  flex-shrink: 0;
+}
+
 .card-header-role {
   font-weight: 600;
   color: var(--color-deep-blue);
@@ -628,30 +662,130 @@
   display: block;
 }
 
-.retreat-card { 
+.retreat-card {
   margin-top: var(--space-lg);
 }
 
 .retreat-card .list-group {
-    list-style-type: disc; /* Adds the standard bullet point */
-    padding-left: 2rem;    /* Creates space for the bullets */
+  list-style-type: disc;
+  /* Adds the standard bullet point */
+  padding-left: 2rem;
+  /* Creates space for the bullets */
 }
 
 .retreat-card .list-group .list-group-item {
-    display: list-item;    /* Overrides Bootstrap's flex/block display */
+  display: list-item;
+  /* Overrides Bootstrap's flex/block display */
 }
 
-.retreat-card .card-body{ 
+.retreat-card .card-body {
   border-bottom: 1px solid var(--color-glass-border);
 }
 
 .retreat-card .card-body .card-title,
-.retreat-card .card-body:last-child { 
+.retreat-card .card-body:last-child {
   border-bottom: none;
 }
 
-.retreat-card li { 
+.retreat-card li {
   background-color: unset;
   font-size: 0.9375rem;
   border-bottom: none;
+}
+
+@media (max-width: 767.98px) {
+  .index-page .venue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .card,
+  .student-projects-page .card,
+  .rtp-placements-page .card,
+  .meet-the-team-page .card,
+  .index-page .project-card,
+  .index-page .rtp-card,
+  .index-page .lead-card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .student-projects-page .container-fluid,
+  .rtp-placements-page .container-fluid,
+  .meet-the-team-page .container-fluid {
+    padding-left: var(--space-sm) !important;
+    padding-right: var(--space-sm) !important;
+  }
+
+  .student-projects-page .card-body,
+  .student-projects-page .card-header,
+  .rtp-placements-page .card-body,
+  .rtp-placements-page .card-header,
+  .meet-the-team-page .card-body,
+  .meet-the-team-page .card-header,
+  .index-page .card-body,
+  .index-page .card-header,
+  .index-page .project-content,
+  .index-page .rtp-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .student-projects-page .card-header,
+  .rtp-placements-page .card-header,
+  .meet-the-team-page .card-header,
+  .index-page .card-header {
+    border-bottom: none;
+  }
+
+  .trainee-profile-layout,
+  .team-profile-layout,
+  .student-profile-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .trainee-profile-layout .card-photo,
+  .trainee-profile-layout .rtp-photo,
+  .team-profile-layout .team-photo,
+  .student-profile-layout .card-photo {
+    align-self: flex-start;
+  }
+
+  .trainee-institution .institution-label,
+  .team-affiliation .institution-label,
+  .student-institution .institution-label {
+    display: none;
+  }
+
+  .lead-card .team-photo,
+  .project-card .card-photo,
+  .rtp-card .rtp-photo {
+    width: 50%;
+    height: auto;
+  }
+
+
+  .section {
+    margin: var(--space-xl) var(--space-xs);
+  }
+
+  .section .card-body {
+    border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .team-card .team-photo {
+    width: 50%;
+    height: auto;
+  }
+
+  .section .list-group {
+    padding-left: var(--space-md);
+  }
 }

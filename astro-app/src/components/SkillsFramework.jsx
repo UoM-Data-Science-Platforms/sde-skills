@@ -128,7 +128,7 @@ export default function SkillsFramework() {
       // stickyHeight = absolute document Y of the scroll-area top (= sticky header + subnav height).
       // This stays constant regardless of current scroll position.
       const stickyHeight = scrollArea.getBoundingClientRect().top + window.scrollY;
-      const elAbsolute  = el.getBoundingClientRect().top + window.scrollY;
+      const elAbsolute = el.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: Math.max(0, elAbsolute - stickyHeight - offset),
         behavior: 'smooth',
@@ -196,18 +196,18 @@ export default function SkillsFramework() {
   React.useEffect(() => {
     if (!data) return;
     const params = new URLSearchParams(window.location.search);
-    const targetSub  = params.get('sub');
+    const targetSub = params.get('sub');
     const targetComp = params.get('comp');
     if (!targetSub) return;
-    const subdomains   = Object.entries(data.domain.subdomains ?? {});
+    const subdomains = Object.entries(data.domain.subdomains ?? {});
     const domainNumber = data.domain.index;
-    const subIdx       = subdomains.findIndex(([key]) => key === targetSub);
+    const subIdx = subdomains.findIndex(([key]) => key === targetSub);
     if (subIdx < 0) return;
     const subNumber = `${domainNumber}.${subIdx + 1}`;
     setStickySubdomain(subdomains[subIdx][1]?.name ?? '');
     setStickySubNumber(subNumber);
     if (targetComp) {
-      const comps   = Object.entries(subdomains[subIdx][1].competencies ?? {});
+      const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
       const compIdx = comps.findIndex(([key]) => key === targetComp);
       if (compIdx >= 0) {
         const compNumber = `${subNumber}.${compIdx + 1}`;
@@ -218,8 +218,8 @@ export default function SkillsFramework() {
     // Delay scroll until refs are populated after render
     setTimeout(() => {
       if (targetComp) {
-        const comps      = Object.entries(subdomains[subIdx][1].competencies ?? {});
-        const compIdx    = comps.findIndex(([key]) => key === targetComp);
+        const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
+        const compIdx = comps.findIndex(([key]) => key === targetComp);
         if (compIdx >= 0) scrollToElement(compRefs.current[`${subNumber}.${compIdx + 1}`]);
       } else {
         scrollToElement(subdomainRefs.current[subNumber]);
@@ -281,9 +281,18 @@ export default function SkillsFramework() {
   const handleScroll = () => {
     if (!sectionRefs.current.length || !scrollAreaRef.current) return;
 
-    // The top of the scroll area in viewport coords = bottom of the sticky header.
-    // An element triggers when its top edge crosses this boundary.
-    const threshold = scrollAreaRef.current.getBoundingClientRect().top + 23;
+    let threshold = 110;
+    const isDesktop = window.innerWidth >= 992;
+    if (isDesktop) {
+      // Desktop: top of scrollAreaRef is stable (below sticky header/nav)
+      threshold = scrollAreaRef.current.getBoundingClientRect().top + 23;
+    } else {
+      // Mobile: window scrolls, so get position of the sticky header/nav bottom
+      const stickyNav = frameworkRef.current?.querySelector('.sticky-nav');
+      if (stickyNav) {
+        threshold = stickyNav.getBoundingClientRect().bottom + 10;
+      }
+    }
 
     let foundSubdomain = '';
     let foundSubNumber = '';
@@ -385,7 +394,7 @@ export default function SkillsFramework() {
       </nav>
 
       {/* Scrollable content */}
-      <div className="scroll-area" ref={scrollAreaRef} onScroll={handleScroll}>
+      <div className="scroll-area p-2 pt-4" ref={scrollAreaRef} onScroll={handleScroll}>
         {data.domain.description && (
           <p className="domain-description">{data.domain.description}</p>
         )}

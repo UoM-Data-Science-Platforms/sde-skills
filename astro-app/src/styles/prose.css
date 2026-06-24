@@ -90,7 +90,7 @@
 }
 
 /* Italicise only the opening description paragraph */
-.prose--lead > p:first-of-type {
+.prose--lead>p:first-of-type {
   font-style: italic;
 }
 
@@ -107,14 +107,18 @@
 }
 
 /* Inline link */
+.btn-link,
 .link {
-  color: var(--color-domain-base);
   text-decoration: underline;
   cursor: pointer;
   transition: opacity var(--transition-fast);
+
+  color: inherit;
 }
 
+.btn-link:hover,
 .link:hover {
+  color: inherit;
   opacity: 0.8;
 }
 

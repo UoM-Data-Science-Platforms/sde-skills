@@ -7,7 +7,7 @@ export const rtps = [
     role: 'Research Technical Professional',
     photo: '/assets/images/justin.png',
     focus: 'GPU platform and hybrid cloud deployment with Microsoft Azure',
-    skills: ['Terraform', 'GitHub Actions', 'cloud infrastructure'],
+    skills: ['Terraform', 'GitHub Actions', 'cloud infrastructure', 'Microsoft Azure'],
     quote: '"The mix of technical training, meetings, and exposure to real project requirements has given me a clear sense of direction"',
   },
   {
@@ -19,7 +19,7 @@ export const rtps = [
     photo: '/assets/images/saurav.png',
     focus: 'Karectl, a Kubernetes-based Trusted Research Environment implementation',
     skills: ['Kubernetes', 'Terraform', 'Azure', 'secure infrastructure development'],
-    quote: '"Learning how tools and technologies such as Kubernetes, Terraform, Azure are applied in practice, which is far more valuable"',
+    quote: '"Learning how tools and technologies such as Kubernetes, Terraform, and Azure are applied in practice, which is far more valuable"',
   },
   {
     id: 'teddy',

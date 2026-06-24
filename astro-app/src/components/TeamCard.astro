@@ -19,54 +19,66 @@ const nameColor = member.institution ? INSTITUTION_COLORS[member.institution] : 
   </div>
 ) : variant === 'lead' ? (
   <article class="card lead-card glass--soft">
-    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site) -->
     <div class="card-header">
-      <div class="card-info">
+      <div class="card-info-header">
         <h3 class="card-title" style={nameColor ? { color: nameColor } : {}}>{member.name}</h3>
-        {member.affiliation && <div class="team-affiliation"><i>{member.affiliation}</i></div>}
-      </div>
-      <div class="team-photo">
-        <img src={photoUrl} alt={member.name} />
       </div>
     </div>
     
-    <!-- Row 2: Card Body (1 col: role and background) -->
     <div class="card-body">
-      {(member.siteLeadRole || member.role) && (
-        <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
-      )}
-      {(member.siteLeadBackground || member.background) && (
-        <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
-      )}
+      <div class="team-profile-layout">
+        <div class="team-photo">
+          <img src={photoUrl} alt={member.name} />
+        </div>
+        <div class="team-details">
+          {member.affiliation && (
+            <div class="mb-1 team-affiliation">
+              <span class="institution-label"><strong>Institution:</strong> </span><i>{member.affiliation}</i>
+            </div>
+          )}
+          {(member.siteLeadRole || member.role) && (
+            <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
+          )}
+          {(member.siteLeadBackground || member.background) && (
+            <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
+          )}
+        </div>
+      </div>
     </div>
   </article>
 ) : (
   <article class="card team-card glass--soft">
-    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site) -->
     <div class="card-header">
-      <div class="card-info">
+      <div class="card-info-header">
         <h3 class="card-title" style={nameColor ? { color: nameColor } : {}}>{member.name}</h3>
-        {member.affiliation && <div class="team-affiliation"><i>{member.affiliation}</i></div>}
-      </div>
-      <div class="team-photo">
-        <img src={photoUrl} alt={member.name} />
       </div>
     </div>
     
-    <!-- Row 2: Card Body (1 col: role, background, focus, notable) -->
     <div class="card-body">
-      {(member.siteLeadRole || member.role) && (
-        <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
-      )}
-      {(member.siteLeadBackground || member.background) && (
-        <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
-      )}
-      {member.focus && (
-        <p class="team-focus"><strong>Focus:</strong> {member.focus}</p>
-      )}
-      {member.notable && (
-        <p class="team-notable"><strong>Notable:</strong> {member.notable}</p>
-      )}
+      <div class="team-profile-layout">
+        <div class="team-photo">
+          <img src={photoUrl} alt={member.name} />
+        </div>
+        <div class="team-details">
+          {member.affiliation && (
+            <div class="mb-1 team-affiliation">
+              <span class="institution-label"><strong>Institution:</strong> </span><i>{member.affiliation}</i>
+            </div>
+          )}
+          {(member.siteLeadRole || member.role) && (
+            <p class="card-header-role">{(member.siteLeadRole || member.role)}</p>
+          )}
+          {(member.siteLeadBackground || member.background) && (
+            <p class="lead-background">{(member.siteLeadBackground || member.background)}</p>
+          )}
+          {member.focus && (
+            <p class="team-focus"><strong>Focus:</strong> {member.focus}</p>
+          )}
+          {member.notable && (
+            <p class="team-notable"><strong>Notable:</strong> {member.notable}</p>
+          )}
+        </div>
+      </div>
     </div>
   </article>
 )}

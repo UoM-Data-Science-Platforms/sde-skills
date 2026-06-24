@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Student Projects — SDE Team Development Hub" currentDomain="student-projects">
-  <div class="skills-framework">
+  <div class="student-projects-page ">
     <PageHeader title="Student Projects" />
     <StickyNavigation sections={sections} />
     <div class="scroll-area" id="scroll-area">
@@ -27,7 +27,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
         description="Our cohort of students are undertaking short projects supported by the project. See the table below for a summary, followed by a selection of reflective student case studies." 
       />
       <div class="container-fluid px-4 py-4">
-        <div class="table-responsive">
+        {/* Desktop Table */}
+        <div class="table-responsive d-none d-md-block">
           <table class="table table-hover">
             <thead class="table-light">
               <tr>
@@ -50,6 +51,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile List View */}
+        <div class="mobile-projects-list d-md-none">
+          {placementStudents.map(s => (
+            <div 
+              class={`mobile-project-item p-3 mb-3 rounded ${s.bio.length > 0 || s.summary.length > 0 ? 'table-row-clickable' : ''}`}
+              data-student={s.id}
+            >
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">{s.site}</span>
+                <span class="text-muted small">{s.dates}</span>
+              </div>
+              <h3 class="h6 mb-1 text-heading"><strong>{s.name}</strong></h3>
+              <div class="small text-muted mb-2">{s.course}</div>
+              <div class="small text-secondary mb-1">
+                <strong>Project:</strong> <i>{s.projectTitle}</i>
+              </div>
+              {(s.bio.length > 0 || s.summary.length > 0) && (
+                <div class="text-primary small mt-2 fw-semibold">
+                  Read student experience →
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
         <h2 id="case-studies">Student experiences</h2>
@@ -80,3 +106,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
     });
   });
 </script>
+
+<style>
+  .mobile-project-item {
+    background: var(--color-competency-card-bg);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid var(--color-glass-border);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+  }
+  
+  .mobile-project-item.table-row-clickable:hover {
+    border-color: var(--color-accent-cyan-soft);
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+</style>

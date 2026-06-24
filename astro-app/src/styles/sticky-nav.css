@@ -121,8 +121,14 @@
 @media (max-width: 767.98px) {
   .sticky-nav-top,
   .sticky-nav-sub {
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+  }
+  
+  .sticky-nav .nav-tabs .nav-link {
+    padding: var(--space-xs) var(--space-xs);
+    padding-bottom: var(--space-xs);
+    font-size: 0.8rem;
   }
 }
 

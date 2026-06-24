@@ -55,7 +55,7 @@
   cursor: pointer;
   white-space: nowrap;
   transition:
-    color        var(--transition-fast),
+    color var(--transition-fast),
     border-color var(--transition-fast);
 }
 
@@ -90,16 +90,22 @@
 .scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding: var(--space-xl);
   background-color: var(--color-glass-bg);
 }
 
-.scroll-area::-webkit-scrollbar       { width: 4px; }
-.scroll-area::-webkit-scrollbar-track { background: transparent; }
+.scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .scroll-area::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: var(--radius-pill);
 }
+
 .scroll-area::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
 }
@@ -110,18 +116,22 @@
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--color-nhs-blue) 45%, transparent) transparent;
 }
+
 .pill-scroll::-webkit-scrollbar {
   height: 6px;
 }
+
 .pill-scroll::-webkit-scrollbar-track {
   background: color-mix(in srgb, var(--color-text) 6%, transparent);
   border-radius: var(--radius-pill);
   margin: 0 var(--space-lg);
 }
+
 .pill-scroll::-webkit-scrollbar-thumb {
   background: color-mix(in srgb, var(--color-nhs-blue) 50%, transparent);
   border-radius: var(--radius-pill);
 }
+
 .pill-scroll::-webkit-scrollbar-thumb:hover {
   background: var(--color-nhs-blue);
 }
@@ -149,15 +159,16 @@
   background: color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
+
 /* Mobile: page scrolls, nav bars become sticky */
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .skills-framework {
     height: auto;
     overflow: visible;
   }
 
   .sticky-header {
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 100;
     /* left padding makes room for the 40px hamburger (left: 16px) + a gap */
@@ -165,20 +176,25 @@
   }
 
   .sticky-nav {
-    position: sticky;
-    top: 56px;
-    z-index: 99;
-    padding: 0 var(--space-sm);
+    position: static !important;
+    top: 56px !important;
+    z-index: 99 !important;
+    padding: 0 var(--space-sm) !important;
   }
 
   .scroll-area {
     overflow: visible;
-    padding: var(--space-md) var(--space-sm);
+    overflow-x: hidden;
   }
 
   /* Ensure scroll area content fills width on mobile */
-  .scroll-area > * {
+  .scroll-area>* {
     max-width: 100%;
+  }
+
+  .scroll-area>.wide-hero,
+  .scroll-area>.mini-hero {
+    max-width: none;
   }
 
   /* Offset scroll targets for sticky header + subnav so scrollIntoView lands below them */

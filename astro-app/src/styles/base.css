@@ -1,7 +1,11 @@
 /* =============================================
    BASE RESET
    ============================================= */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* Bootstrap overrides */
 .table-light {
@@ -12,11 +16,11 @@
 
 .nav-pills .nav-link,
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link,
+.nav-pills .show>.nav-link,
 .nav-pills .nav-link:hover,
 .nav-tabs .nav-link,
 .nav-tabs .nav-link.active,
-.nav-tabs .show > .nav-link,
+.nav-tabs .show>.nav-link,
 .nav-tabs .nav-link:hover {
   color: unset;
   background-color: transparent;
@@ -32,7 +36,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  
+
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
@@ -54,10 +58,25 @@ body {
 
 
 
-ul  { list-style: none; margin: 0; padding: 0; }
-a   { color: inherit; text-decoration: none; }
-p   { margin: 0; }
-img { max-width: 100%; display: block; }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
 
 button {
   font-family: var(--font-body);
@@ -69,17 +88,37 @@ button {
 /* =============================================
    TYPOGRAPHY HIERARCHY
    ============================================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-heading);
   line-height: 1.2;
   margin: 0;
 }
 
-h1 { font-size: var(--text-domain);      font-weight: 700; }
-h2 { font-size: var(--text-subdomain);   font-weight: 600; }
-h3 { font-size: var(--text-competency);  font-weight: 600; }
-h4 { font-size: var(--text-proficiency); font-weight: 600; }
+h1 {
+  font-size: var(--text-domain);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-subdomain);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--text-competency);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+}
 
 /* =============================================
    LAYOUT FOUNDATIONS
@@ -123,6 +162,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -173,6 +213,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 
 .mission-tile {
   flex: 1 1 200px;
@@ -246,23 +287,33 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 /* wide layout overrides */
-  .wide-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+.wide-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.wide-layout :global(.scroll-area) {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.wide-layout .scroll-area {
+  padding: 0;
+}
+
+.wide-layout :global(.scroll-area > *) {
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .mission-tile {
+    max-width: none;
   }
 
-  .wide-layout :global(.scroll-area) {
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
+  .scroll-area {
+    padding: 0 !important;
   }
-
-  .wide-layout .scroll-area {
-    padding: 0;
-  }
-
-  .wide-layout :global(.scroll-area > *) {
-    max-width: 100%;
-  }
+}

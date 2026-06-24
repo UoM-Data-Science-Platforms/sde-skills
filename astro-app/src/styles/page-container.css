@@ -7,7 +7,7 @@
   margin-bottom: var(--space-md);
 }
 
-.page-container > h2:first-child {
+.page-container>h2:first-child {
   margin-top: 0;
 }
 
@@ -32,7 +32,14 @@
   gap: var(--space-lg);
 }
 
-
+.rtp-placements-page,
+.student-projects-page,
+.project-page,
+.meet-the-team-page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
 
 .list-disc {
@@ -49,9 +56,10 @@
   font-weight: 600;
 }
 
-.nhs-blue{
+.nhs-blue {
   color: var(--color-nhs-blue) !important;
 }
+
 /* =============================================
    TABLE STYLING — overrides on top of Bootstrap's .table
    ============================================= */

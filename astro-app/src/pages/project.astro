@@ -12,14 +12,14 @@ const sections = [
 ---
 
 <Layout title="Project — SDE Team Development Hub" currentDomain="project">
-  <div class="skills-framework">
+  <div class="project-page">
     <PageHeader title="Project" />
     <StickyNavigation sections={sections} id="home-subnav" />
 
     <div class="scroll-area" id="scroll-area">
          <MiniHero title="About the project" id="project">
-            <p>The SDE Team Development Hub is a collaboration between like-minded individuals that aims to find better ways to develop and support Research Technical Professionals (RTPs) that underpin the creation of Secure Data Environments (SDEs).</p>
-            <p>The SDE Team Development Hub is funded by Health Data Research UK and brings together partners across the North West of England to build technical capacity in secure data environments.</p>
+            <p>The SDE Team Development Hub is a collaboration between like-minded individuals that aims to find better ways to develop and support Research Technical Professionals (RTPs), which underpin the creation of Secure Data Environments (SDEs).</p>
+            <p>The SDE Team Development Hub is <a class="link" href="{BASE_URL}/acknowledgements">funded by Engineering and Physical Sciences Research Council (EPSRC)</a> and brings together partners across the North West of England to build technical capacity in secure data environments.</p>
 
             <h2 id="competency-framework">We aim to achieve this by:</h2>            
          </MiniHero>
@@ -53,17 +53,5 @@ const sections = [
     flex-direction: column;
     min-height: 100%;
   }
-
-  /* Subnav styles now in sticky-nav.css */
-
-  .scroll-area {
-    flex: 1;
-    padding: var(--space-xl);
-  }
-
-  @media (max-width: 767.98px) {
-    .scroll-area {
-      padding: var(--space-md);
-    }
-  }
+  
 </style>
