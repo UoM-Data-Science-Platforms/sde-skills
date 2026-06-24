@@ -1,9 +1,10 @@
 .retreat-card {
     margin: var(--space-3xl) var(--space-xl);
-    scroll-margin-top: 80px; /* Replace 80px with the exact height of your sticky element */
+    scroll-margin-top: 80px;
+    /* Replace 80px with the exact height of your sticky element */
 }
 
-#subsection-tabs{
+#subsection-tabs {
     display: none;
 }
 
@@ -36,6 +37,7 @@
 
 .scroll-area {
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -45,6 +47,29 @@
 
 @media (max-width: 767.98px) {
     .venue-grid {
-        grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .retreat-page .card {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .retreat-card {
+        margin: var(--space-xl) var(--space-xs);
+    }
+
+    .retreat-card .card-body {
+        border-bottom: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .retreat-card .list-group {
+        padding-left: var(--space-md);
     }
 }

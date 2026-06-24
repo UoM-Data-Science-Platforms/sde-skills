@@ -7,12 +7,19 @@
    ============================================= */
 
 /* Custom scrollbar on the offcanvas panel */
-#sidebar-offcanvas::-webkit-scrollbar       { width: 4px; }
-#sidebar-offcanvas::-webkit-scrollbar-track { background: transparent; }
+#sidebar-offcanvas::-webkit-scrollbar {
+  width: 4px;
+}
+
+#sidebar-offcanvas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 #sidebar-offcanvas::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: var(--radius-pill);
 }
+
 #sidebar-offcanvas::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
 }
@@ -60,8 +67,8 @@
   font-weight: 500;
   color: var(--color-text-muted);
   transition:
-    background   var(--transition-fast),
-    color        var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
     border-color var(--transition-fast);
 }
 
@@ -166,7 +173,7 @@ a.nav-group-title {
   text-align: center;
   transition:
     background var(--transition-fast),
-    color      var(--transition-fast);
+    color var(--transition-fast);
 }
 
 .theme-toggle:hover {
@@ -235,21 +242,22 @@ html[data-theme="dark"] .theme-toggle:hover {
   display: flex;
   gap: 0.75rem;
   margin-top: auto;
-  padding: var(--space-md) var(--space-lg);
+  padding-left: 0.5em;
 }
 
 .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--color-surface);
   color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: color 0.2s;
   text-decoration: none;
+  padding: var(--space-xs);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -295,4 +303,34 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 html[data-theme="dark"] .sidebar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F0F6FC' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991.98px) {
+  .sidebar-brand {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .sidebar-nav {
+    padding: var(--space-sm) var(--space-xs);
+  }
+
+  .sidebar-nav .nav-link {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .nav-sub {
+    padding-left: var(--space-xs);
+    margin-left: var(--space-xs);
+  }
+
+  .sidebar-nav .nav-sub-link {
+    font-size: 0.8rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 0 0 0;
+  }
 }

@@ -7,9 +7,9 @@
   overflow-x: hidden;
 }
 
- :global(.main-content):has(.wide-layout) {
-    overflow-y: hidden;
-  }
+:global(.main-content):has(.wide-layout) {
+  overflow-y: hidden;
+}
 
 
 .team-leads {
@@ -53,15 +53,21 @@
     overrides 
   ============================================= */
 
-  .index-layout .mini-hero {  
-    padding: var(--space-3xl) var(--space-xl);
-    margin: 0;
-  }
-.scroll-area > .mini-hero {
+.index-layout .mini-hero {
+  padding: var(--space-3xl) var(--space-xl);
+  margin: 0;
+}
+
+.scroll-area>.mini-hero {
   margin: 0 !important;
 }
 
-  .index-layout .mini-hero-content h2 {
+.scroll-area>.wide-hero {
+  max-width: none;
+}
+
+
+.index-layout .mini-hero-content h2 {
   margin-bottom: var(--space-md);
 }
 
@@ -69,15 +75,45 @@
   margin: 0;
 }
 
-.mini-hero{
-  
-    scroll-margin-top: 100px; 
-}
-.section {
-    margin: var(--space-3xl) var(--space-xl);
-    scroll-margin-top: 20px; 
+.mini-hero {
+
+  scroll-margin-top: 100px;
 }
 
-.scroll-area  {
+.section {
+  margin: var(--space-3xl) var(--space-xl);
+  scroll-margin-top: 20px;
+}
+
+.scroll-area {
   overflow-x: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .index-page .venue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-page .card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .section {
+    margin: var(--space-xl) var(--space-xs);
+  }
+
+  .section .card-body {
+    border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section .list-group {
+    padding-left: var(--space-md);
+  }
 }

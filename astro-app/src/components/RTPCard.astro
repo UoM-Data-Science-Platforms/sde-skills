@@ -14,61 +14,69 @@ const institutionColor = r.institution ? INSTITUTION_COLORS[r.institution] : und
 
 {variant === 'featured' ? (
   <div class="rtp-card glass--soft">
-    <!-- Row 1: Card Header (2 cols: right has photo, left has name, site) -->
     <div class="card-header">
-      <div class="card-info">
+      <div class="card-info-header">
         <h3 style={institutionColor ? { color: institutionColor } : {}}>{r.name}</h3>
-        <p class="team-affiliation">{r.affiliation}</p>
       </div>
-      {photoUrl && (
-        <div class="rtp-photo">
-          <img src={photoUrl} alt={r.name} />
-        </div>
-      )}
     </div>
-    <!-- Row 2: Card Body (1 col: role, focus, and quote) -->
-    <div class="rtp-content">
-      <p class="team-role"><strong>Role:</strong> {r.role}</p>
-      <p class="rtp-focus"><strong>Focus:</strong> {r.focus}</p>
-      {r.quote && <p class="rtp-quote">{r.quote}</p>}
+    <div class="card-body">
+      <div class="trainee-profile-layout">
+        {photoUrl && (
+          <div class="rtp-photo">
+            <img src={photoUrl} alt={r.name} />
+          </div>
+        )}
+        <div class="trainee-details">
+          <p class="team-affiliation"><span class="institution-label"><strong>Institution:</strong> </span>{r.affiliation}</p>
+        </div>
+      </div>
+      <div class="rtp-content mt-3">
+        <p class="team-role"><strong>Role:</strong> {r.role}</p>
+        <p class="rtp-focus"><strong>Focus:</strong> {r.focus}</p>
+        {r.quote && <p class="rtp-quote">{r.quote}</p>}
+      </div>
     </div>
   </div>
 ) : (
   <article class="card glass--soft" id={`trainee-${r.id}`}>
     <div class="card-header">
-      <div class="card-info">
+      <div class="card-info-header">
         <h3 class="card-title" style={institutionColor ? { color: institutionColor } : {}}>{r.name}</h3>
-        <div class="mb-1"><strong>Institution:</strong> {r.affiliation}</div>
-        <div class="mb-1"><i>{r.focus}</i></div>
-        {r.skills && r.skills.length > 0 && (
-          <>
-            <div class="mb-1"><strong>Key skills:</strong></div>
-            <div class="d-flex flex-wrap gap-2">
-              {r.skills.map((skill) => (
-                <span 
-                  class="badge rounded-pill" 
-                  style={{ 
-                    borderColor: institutionColor, 
-                    background: institutionColor ? `color-mix(in srgb, ${institutionColor} 15%, transparent)` : 'transparent', 
-                    fontSize: '0.8125rem', 
-                    padding: '4px 12px' 
-                  }}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </>
-        )}
       </div>
-      {photoUrl && (
-        <div class="card-photo">
-          <img src={photoUrl} alt={r.name} />
-        </div>
-      )}
     </div>
     <div class="card-body">
-      <blockquote class="blockquote">
+      <div class="trainee-profile-layout">
+        {photoUrl && (
+          <div class="card-photo">
+            <img src={photoUrl} alt={r.name} />
+          </div>
+        )}
+        <div class="trainee-details">
+          <div class="mb-1 trainee-institution"><span class="institution-label"><strong>Institution:</strong> </span>{r.affiliation}</div>
+          <div class="mb-1 trainee-focus"><i>{r.focus}</i></div>
+          {r.skills && r.skills.length > 0 && (
+            <div class="trainee-skills-section">
+              <div class="mb-1"><strong>Key skills:</strong></div>
+              <div class="d-flex flex-wrap gap-2">
+                {r.skills.map((skill) => (
+                  <span 
+                    class="badge rounded-pill" 
+                    style={{ 
+                      borderColor: institutionColor, 
+                      background: institutionColor ? `color-mix(in srgb, ${institutionColor} 15%, transparent)` : 'transparent', 
+                      fontSize: '0.8125rem', 
+                      padding: '4px 12px' 
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      <blockquote class="blockquote mt-3">
         <p class="card-text">{r.quote}</p>
       </blockquote>
     </div>

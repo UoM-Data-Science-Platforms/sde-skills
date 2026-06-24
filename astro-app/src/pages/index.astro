@@ -51,7 +51,7 @@ const sections = [
       </div>
     </div>
     <div class="hero-visual col-12 col-lg-6">
-      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 940.64 496.83" width="940.64" height="496.83" aria-hidden="true" focusable="false">
+      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 920 496.83"  aria-hidden="true" focusable="false">
   <polygon fill="#3b66b0" points="510.8 32.81 418.73 32.81 372.69 112.55 418.73 192.28 510.8 192.28 556.84 112.55 510.8 32.81"/>
   <polygon fill="#5283c3" points="362.42 304.31 270.35 304.31 224.31 384.05 270.35 463.79 362.42 463.79 408.46 384.05 362.42 304.31"/>
   <polygon fill="#5283c3" points="509.8 211.5 417.73 211.5 371.69 291.24 417.73 370.98 509.8 370.98 555.84 291.24 509.8 211.5"/>
@@ -99,7 +99,7 @@ const sections = [
     </p>
     <div class="section-grid row g-4">
       {featuredStudents.map(s => (
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6 col-xxl-4">
           <StudentCard student={s} variant="compact" />
         </div>
       ))}
@@ -118,7 +118,7 @@ const sections = [
     </p>
     <div class="section-grid row g-4">
       {rtps.map(r => (
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6 col-xxl-4">
           <RTPCard trainee={r} variant="featured" />
         </div>
       ))}
@@ -137,7 +137,7 @@ const sections = [
     <h3 class="section-heading" id="site-leads">Site Leads</h3>
     <div class="team-leads row">
       {siteLeads.map(l => (
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6 col-xxl-4">
           <TeamCard member={l} variant="lead" />
         </div>
       ))}
