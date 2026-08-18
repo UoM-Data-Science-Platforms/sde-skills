@@ -37,7 +37,7 @@ domain:
               name: Entry Level
               skills:
               - Understands the importance of data integrity in secure environments
-              - Familiar with basic integrity verification methods (e.g., checksums)
+              - Familiar with basic integrity verification methods (e.g. checksums)
               - Can perform manual integrity checks under supervision
             mid:
               id: data-integrity-mid
@@ -280,7 +280,7 @@ domain:
               id: data-models-standardisation-entry
               name: Entry Level
               skills:
-              - Understands the purpose and basic structure of standardised data models (e.g., FHIR, OMOP)
+              - Understands the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
               - Aware of the need for platform support to enable use of these models
               - Can identify when a platform supports or does not support a given data model
             mid:

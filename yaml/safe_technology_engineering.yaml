@@ -67,7 +67,7 @@ domain:
               id: secure-coding-practices-entry
               name: Entry Level
               skills:
-              - Aware of common security vulnerabilities (e.g., OWASP Top 10)
+              - Aware of common security vulnerabilities (e.g. OWASP Top 10)
               - Can apply basic input validation and error handling
               - Uses secure coding guidelines provided by the team
             mid:
@@ -131,7 +131,7 @@ domain:
               name: Entry Level
               skills:
               - Understands microservices architecture principles
-              - Familiar with API concepts and documentation (e.g., OpenAPI/Swagger)
+              - Familiar with API concepts and documentation (e.g. OpenAPI/Swagger)
               - Can develop and use RESTful APIs following established patterns
             mid:
               id: microservices-api-design-mid
@@ -583,4 +583,4 @@ domain:
               skills:
               - Develops methodologies for advanced computing infrastructure and capacity planning
               - Establishes governance for secure multi-tenant HPC resource usage
-              - Leads initiatives to enhance computing capabilities and optimize resource utilisation
+              - Leads initiatives to enhance computing capabilities and optimise resource utilisation

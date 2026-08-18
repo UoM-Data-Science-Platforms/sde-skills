@@ -39,19 +39,9 @@ domain:
               - Implements output tracking and audit logs to support governance processes
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
-      name: Tools and platforms to support output checking
-      description: "### Workflow engines\nDeploy and administer workflow engines to help ensure consistency,\
-        \ reliability, and traceability of output checking processes. Create individual workflow that\
-        \ meet governance and legal requirements for project teams.\n\n=== \":material-battery-10: Entry\
-        \ Level\"\n\n    - is aware of workflow engines and the functionality they provide\n    - is aware\
-        \ of actors and stages in the disclosure review process\n    - can administer workflow engines\
-        \ to make changes to existing disclosure review workflows\n\n=== \":material-battery-50: Mid Level\"\
-        \n\n    - can assess suitability of workflow engines for achieving desired functionality\n   \
-        \ - can work with project stakeholder to design workflows that address local policy and governance/regulatory\
-        \ stipulations\n    - can administer workflow engines to implement disclosure review workflows\n\
-        \    - can develop and maintain workflow templates so maximize reuse across similar governance\
-        \ constraints\n\n=== \":material-battery-90: Senior Level\"\n\n    - Leads the technology strategy\
-        \ for business process management"
+      name: Tools and Platforms to Support Output Checking
+      description: Deploy and administer workflow engines, data airlocks, and secure code repositories
+        to help ensure consistency, reliability, and traceability of output checking processes.
       tools:
       - Camunda
       - Apache Airflow (basic admin)
@@ -59,7 +49,7 @@ domain:
       technologies:
       - custom workflow templates
       - Bonita
-      - Bizagi)
+      - Bizagi
       - strategic workflow architecture
       standards: []
       competencies:
@@ -67,25 +57,25 @@ domain:
           id: workflow-engines
           name: Workflow engines
           description: Deploy and administer workflow engines to help ensure consistency, reliability,
-            and traceability of output checking processes. Create individual workflow that meet governance
+            and traceability of output checking processes. Creates individual workflows that meet governance
             and legal requirements for project teams.
           levels:
             entry:
               id: workflow-engines-entry
               name: Entry Level
               skills:
-              - is aware of workflow engines and the functionality they provide
-              - is aware of actors and stages in the disclosure review process
-              - can administer workflow engines to make changes to existing disclosure review workflows
+              - Is aware of workflow engines and the functionality they provide
+              - Is aware of actors and stages in the disclosure review process
+              - Can administer workflow engines to make changes to existing disclosure review workflows
             mid:
               id: workflow-engines-mid
               name: Mid Level
               skills:
-              - can assess suitability of workflow engines for achieving desired functionality
-              - can work with project stakeholder to design workflows that address local policy and governance/regulatory
+              - Can assess suitability of workflow engines for achieving desired functionality
+              - Can work with project stakeholders to design workflows that address local policy and governance/regulatory
                 stipulations
-              - can administer workflow engines to implement disclosure review workflows
-              - can develop and maintain workflow templates so maximize reuse across similar governance
+              - Can administer workflow engines to implement disclosure review workflows
+              - Can develop and maintain workflow templates to maximise reuse across similar governance
                 constraints
             senior:
               id: workflow-engines-senior
@@ -96,36 +86,36 @@ domain:
           id: data-airlocks
           name: Data airlocks
           description: Install and administer data airlock applications, understand the roles and what
-            level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit,
+            level of access is required to achieve given tasks (e.g. approvals, requests, triage, audit,
             review etc.) within the airlock application, create user documentation and training materials,
-            contribute to on-going improvements to data airlocks to ensure they meet user needs as well
+            contribute to ongoing improvements to data airlocks to ensure they meet user needs as well
             as comply with standards and regulations.
           levels:
             entry:
               id: data-airlocks-entry
               name: Entry Level
               skills:
-              - is familiar with data airlocks
-              - is familiar with user roles in data airlocks
+              - Is familiar with data airlocks
+              - Is familiar with user roles in data airlocks
             mid:
               id: data-airlocks-mid
               name: Mid Level
               skills:
-              - can write user documentation relating to the operation of data airlocks
-              - can provide training to users relating to the operation of data airlocks
-              - can troubleshoot common user issues with data airlocks
+              - Can write user documentation relating to the operation of data airlocks
+              - Can provide training to users relating to the operation of data airlocks
+              - Can troubleshoot common user issues with data airlocks
             senior:
               id: data-airlocks-senior
               name: Senior Level
               skills:
-              - can influence design of data airlocks according to user requirements and changes in standards
+              - Can influence design of data airlocks according to user requirements and changes in standards
                 and governance
         code-repositories:
           id: code-repositories
           name: Code repositories
-          description: Install and configure code repository systems (e.g., Git) that allow source code
+          description: Install and configure code repository systems (e.g. Git) that allow source code
             to be imported and exported from SDEs in industry standard ways. Develop automated checks
-            that can perform static analysis to ensure source code doesn't contain passwords, API keys,
+            that can perform static analysis to ensure source code does not contain passwords, API keys,
             or other infrastructural secrets. Develop workflows for disclosure checking to ensure the
             source code does not contain any restricted data. Use advanced techniques to perform automated
             code reviews to assess further requirement for manual inspection.
@@ -134,23 +124,23 @@ domain:
               id: code-repositories-entry
               name: Entry Level
               skills:
-              - Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
+              - Familiar with code repositories and sharing platforms (e.g. Git, GitHub, GitLab)
             mid:
               id: code-repositories-mid
               name: Mid Level
               skills:
-              - Implements code publication workflows and processes (e.g., code reviews)
+              - Implements code publication workflows and processes (e.g. code reviews)
               - Can install and configure code repositories with correct access controls for data ingress
                 and egress
-              - Can develop automated pipelines that check for known security risk (e.g., using static
-                analysis techniques to check for passwords, ip addresses, or other sensitive infrastructural
+              - Can develop automated pipelines that check for known security risk (e.g. using static
+                analysis techniques to check for passwords, IP addresses, or other sensitive infrastructural
                 information)
             senior:
               id: code-repositories-senior
               name: Senior Level
               skills:
               - Establishes code publication frameworks and governance
-              - Leads initiatives to enhance code sharing while maintaining security  (e.g., creating
+              - Leads initiatives to enhance code sharing while maintaining security (e.g. creating
                 secure code repositories, developing sharing policies, designing automated pipelines to
                 review eligibility of code for release).
     statistical-disclosure-control:
@@ -185,8 +175,8 @@ domain:
               id: disclosure-risk-assessment-senior
               name: Senior Level
               skills:
-              - Leads initiatives to enhance disclosure risk management (e.g., implementing new tools
-                or techniques, anticipate introduction of new regulatory frameworks).
+              - Leads initiatives to enhance disclosure risk management (e.g. implementing new tools
+                or techniques, anticipating introduction of new regulatory frameworks).
         automated-disclosure-control:
           id: automated-disclosure-control
           name: Automated Disclosure Control
@@ -199,7 +189,7 @@ domain:
               id: automated-disclosure-control-entry
               name: Entry Level
               skills:
-              - Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
+              - Understands automated SDC tool concepts (e.g. rule-based systems, threshold settings)
               - Familiar with available SDC automation tools
             mid:
               id: automated-disclosure-control-mid
@@ -207,7 +197,7 @@ domain:
               skills:
               - Implements automated SDC solutions for common output types
               - Configures SDC rules and thresholds in automation systems
-              - Validates accuracy and effectiveness of automated controls (e.g., testing against known
+              - Validates accuracy and effectiveness of automated controls (e.g. testing against known
                 risks, benchmarking)
             senior:
               id: automated-disclosure-control-senior

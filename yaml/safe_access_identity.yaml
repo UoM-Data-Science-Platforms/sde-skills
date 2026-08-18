@@ -3,7 +3,7 @@ domain:
   main-color: color-nhs-blue
   id: safe-access-identity
   name: Safe Access & Identity
-  description: This domain covers all aspects of user authentication, authorization, and access control
+  description: This domain covers all aspects of user authentication, authorisation, and access control
     within Secure Data Environments, ensuring that only authorised users can access appropriate resources.
   source_file: safe_access_identity.md
   subdomains:
@@ -31,7 +31,7 @@ domain:
               id: authentication-systems-entry
               name: Entry Level
               skills:
-              - Understands basic authentication concepts and mechanisms (e.g. AD/Entra, kerberos, oauth2/OIDC)
+              - Understands basic authentication concepts and mechanisms (e.g. Active Directory / Microsoft Entra, Kerberos, OAuth 2.0 / OIDC)
               - Familiar with password best practice and multi-factor authentication
               - Can configure user accounts in identity systems under supervision
               - Can understand existing SDE security Matrix.
@@ -39,8 +39,7 @@ domain:
               id: authentication-systems-mid
               name: Mid Level
               skills:
-              - Implements and configure secure authentication systems (e.g SDE security matrix, microsoft
-                entra)
+              - Implements and configures secure authentication systems (e.g. SDE security matrix, Microsoft Entra ID)
               - Implements MFA solutions appropriate to security requirements
               - Troubleshoots authentication issues and security incidents
               - Can modify existing SDE security matrix
@@ -82,7 +81,7 @@ domain:
               skills:
               - Can identify and implement appropriate user lifecycle governance frameworks
               - Implements advanced identity governance and administration solutions
-              - Leads identity management modernization initiatives
+              - Leads identity management modernisation initiatives
               - Can lead new user provisioning specification implementation and support
         federated-identity-management:
           id: federated-identity-management
@@ -120,8 +119,8 @@ domain:
       description: Access Control ensures that only authorised individuals can access specific resources
         within secure data environments through structured permission systems. This subdomain covers role-based
         and attribute-based access models as well as least privilege implementation, providing robust
-        security frameworks that enforce authorization policies while balancing operational requirements
-        and minimizing access risks across research environments.
+        security frameworks that enforce authorisation policies while balancing operational requirements
+        and minimising access risks across research environments.
       tools: []
       technologies: []
       standards: []
@@ -129,8 +128,8 @@ domain:
         role-based-access-control:
           id: role-based-access-control
           name: Role-Based Access Control
-          description: Implements access permissions based on organizational roles within secure data
-            environments. Involves defining appropriate roles, designing organizational role structures,
+          description: Implements access permissions based on organisational roles within secure data
+            environments. Involves defining appropriate roles, designing organisational role structures,
             implementing management processes, and conducting reviews. Requires skills to develop enterprise
             frameworks and optimise role structures to minimise access risks while meeting business needs.
           levels:
@@ -141,7 +140,7 @@ domain:
               - Understands RBAC concepts and principles
               - Familiar with role definition and assignment processes
               - Can implement basic role assignments following established patterns
-              - Can understand existing Role definitions
+              - Can understand existing role definitions
             mid:
               id: role-based-access-control-mid
               name: Mid Level
@@ -149,7 +148,7 @@ domain:
               - Implements role structures appropriate to organisational needs
               - Implements role management and governance processes
               - Conducts role reviews and recommends improvements
-              - Can modify/troubleshoot existing Role definitions queries.
+              - Can modify/troubleshoot existing role definitions queries.
             senior:
               id: role-based-access-control-senior
               name: Senior Level
@@ -157,7 +156,7 @@ domain:
               - Develops enterprise RBAC frameworks and strategies
               - Implements advanced access governance and role mining
               - Leads initiatives to optimise role structures and reduce access risk
-              - Can lead new Role definitions implementation and support.
+              - Can lead new role definitions implementation and support.
         attribute-based-access-control:
           id: attribute-based-access-control
           name: Attribute-Based Access Control
@@ -186,7 +185,7 @@ domain:
               name: Senior Level
               skills:
               - Architects enterprise ABAC strategies and frameworks
-              - Develops advanced policy models for complex authorization scenarios
+              - Develops advanced policy models for complex authorisation scenarios
               - Leads initiatives to implement dynamic access control
         least-privilege-implementation:
           id: least-privilege-implementation
@@ -254,7 +253,7 @@ domain:
               skills:
               - Designs researcher onboarding workflows and documentation
               - Implements verification systems for researcher credentials
-              - optimises onboarding processes for efficiency and security
+              - Optimises onboarding processes for efficiency and security
             senior:
               id: researcher-onboarding-senior
               name: Senior Level
@@ -267,8 +266,8 @@ domain:
           name: Secure Research Workspaces
           description: Creates and maintains protected environments for researchers working with sensitive
             data. Involves designing secure environments tailored to research needs, implementing isolation
-            controls, troubleshooting issues, and optimizing user experience. Requires evaluating technologies
-            and leading modernization initiatives to enhance security while supporting research activities.
+            controls, troubleshooting issues, and optimising user experience. Requires evaluating technologies
+            and leading modernisation initiatives to enhance security while supporting research activities.
           levels:
             entry:
               id: secure-research-workspaces-entry
@@ -291,9 +290,9 @@ domain:
               id: secure-research-workspaces-senior
               name: Senior Level
               skills:
-              - leads development of workspace strategies
+              - Leads development of workspace strategies
               - Evaluates and selects secure workspace technologies
-              - Leads workspace modernization and security enhancement initiatives
+              - Leads workspace modernisation and security enhancement initiatives
               - Leads and support new/existing Research workspace
         secure-collaboration-tools:
           id: secure-collaboration-tools
@@ -311,7 +310,7 @@ domain:
               - Understands secure collaboration requirements in research environments
               - Familiar with collaboration tool security features
               - Can configure basic sharing and access controls
-              - Knowledge of any secret cloud service provider e.g azure kevaults
+              - Knowledge of any secret cloud service provider e.g. Azure Key Vault
               - Knowledge of simple collaborative platforms
             mid:
               id: secure-collaboration-tools-mid
