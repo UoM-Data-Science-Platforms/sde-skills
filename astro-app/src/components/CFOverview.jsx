@@ -374,7 +374,7 @@ export default function CFOverview() {
         <div ref={secRef('framework-structure')} className="subdomain-section" style={{ paddingBottom: 'var(--space-xl)' }}>
           <h2 className="subdomain-title is-visible" style={{ marginTop: 'var(--space-sm)' }} id="framework-structure">Framework Structure</h2>
           <p className="subdomain-description">
-            A three-tier hierarchy with three defined proficiency levels at each competency item.
+            A three-tier hierarchy with three defined proficiency levels for each competency item.
           </p>
 
           <div className="competency-card is-visible" style={{ display: 'flex', gap: 'var(--space-2xl)', flexWrap: 'wrap', alignItems: 'flex-start' }}>

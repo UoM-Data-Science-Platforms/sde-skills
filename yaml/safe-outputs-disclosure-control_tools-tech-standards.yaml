@@ -6,7 +6,7 @@ subdomains:
     items:
     - CSV
   tools-and-platforms-to-support-output-checking:
-    name: Tools and platforms to support output checking
+    name: Tools and Platforms to Support Output Checking
     items:
     - Camunda
     - Data airlocks

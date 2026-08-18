@@ -8,7 +8,8 @@ metadata:
 skills:
   authentication-systems-entry-001:
     id: authentication-systems-entry-001
-    text: Understands basic authentication concepts and mechanisms (e.g. AD/Entra, kerberos, oauth2/OIDC)
+    text: Understands basic authentication concepts and mechanisms (e.g. Active Directory / Microsoft Entra, Kerberos, OAuth
+      2.0 / OIDC)
     competency_id: authentication-systems
     level: entry
     level_name: Entry Level
@@ -40,7 +41,7 @@ skills:
     subdomain_id: identity-management
   authentication-systems-mid-001:
     id: authentication-systems-mid-001
-    text: Implements and configure secure authentication systems (e.g SDE security matrix, microsoft entra)
+    text: Implements and configures secure authentication systems (e.g. SDE security matrix, Microsoft Entra ID)
     competency_id: authentication-systems
     level: mid
     level_name: Mid Level
@@ -184,7 +185,7 @@ skills:
     subdomain_id: identity-management
   user-provisioning-lifecycle-senior-003:
     id: user-provisioning-lifecycle-senior-003
-    text: Leads identity management modernization initiatives
+    text: Leads identity management modernisation initiatives
     competency_id: user-provisioning-lifecycle
     level: senior
     level_name: Senior Level
@@ -296,7 +297,7 @@ skills:
     subdomain_id: access-control
   role-based-access-control-entry-004:
     id: role-based-access-control-entry-004
-    text: Can understand existing Role definitions
+    text: Can understand existing role definitions
     competency_id: role-based-access-control
     level: entry
     level_name: Entry Level
@@ -328,7 +329,7 @@ skills:
     subdomain_id: access-control
   role-based-access-control-mid-004:
     id: role-based-access-control-mid-004
-    text: Can modify/troubleshoot existing Role definitions queries.
+    text: Can modify/troubleshoot existing role definitions queries.
     competency_id: role-based-access-control
     level: mid
     level_name: Mid Level
@@ -360,7 +361,7 @@ skills:
     subdomain_id: access-control
   role-based-access-control-senior-004:
     id: role-based-access-control-senior-004
-    text: Can lead new Role definitions implementation and support.
+    text: Can lead new role definitions implementation and support.
     competency_id: role-based-access-control
     level: senior
     level_name: Senior Level
@@ -424,7 +425,7 @@ skills:
     subdomain_id: access-control
   attribute-based-access-control-senior-002:
     id: attribute-based-access-control-senior-002
-    text: Develops advanced policy models for complex authorization scenarios
+    text: Develops advanced policy models for complex authorisation scenarios
     competency_id: attribute-based-access-control
     level: senior
     level_name: Senior Level
@@ -576,7 +577,7 @@ skills:
     subdomain_id: secure-user-experience
   researcher-onboarding-mid-003:
     id: researcher-onboarding-mid-003
-    text: optimises onboarding processes for efficiency and security
+    text: Optimises onboarding processes for efficiency and security
     competency_id: researcher-onboarding
     level: mid
     level_name: Mid Level
@@ -673,7 +674,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-research-workspaces-senior-001:
     id: secure-research-workspaces-senior-001
-    text: leads development of workspace strategies
+    text: Leads development of workspace strategies
     competency_id: secure-research-workspaces
     level: senior
     level_name: Senior Level
@@ -689,7 +690,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-research-workspaces-senior-003:
     id: secure-research-workspaces-senior-003
-    text: Leads workspace modernization and security enhancement initiatives
+    text: Leads workspace modernisation and security enhancement initiatives
     competency_id: secure-research-workspaces
     level: senior
     level_name: Senior Level
@@ -729,7 +730,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-collaboration-tools-entry-004:
     id: secure-collaboration-tools-entry-004
-    text: Knowledge of any secret cloud service provider e.g azure kevaults
+    text: Knowledge of any secret cloud service provider e.g. Azure Key Vault
     competency_id: secure-collaboration-tools
     level: entry
     level_name: Entry Level
@@ -817,7 +818,7 @@ skills:
     subdomain_id: data-governance
   data-integrity-entry-002:
     id: data-integrity-entry-002
-    text: Familiar with basic integrity verification methods (e.g., checksums)
+    text: Familiar with basic integrity verification methods (e.g. checksums)
     competency_id: data-integrity
     level: entry
     level_name: Entry Level
@@ -1305,7 +1306,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-models-standardisation-entry-001:
     id: data-models-standardisation-entry-001
-    text: Understands the purpose and basic structure of standardised data models (e.g., FHIR, OMOP)
+    text: Understands the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
     competency_id: data-models-standardisation
     level: entry
     level_name: Entry Level
@@ -1757,7 +1758,7 @@ skills:
     subdomain_id: data-engineering-processing
   information-governance-entry-001:
     id: information-governance-entry-001
-    text: Understands basic information governance principles (e.g., data minimization, accountability)
+    text: Understands basic information governance principles (e.g. data minimisation, accountability)
     competency_id: information-governance
     level: entry
     level_name: Entry Level
@@ -1765,7 +1766,7 @@ skills:
     subdomain_id: regulatory-compliance
   information-governance-entry-002:
     id: information-governance-entry-002
-    text: Familiar with key information governance frameworks  (e.g., Caldicott Principles, ISO 27001)
+    text: Familiar with key information governance frameworks (e.g. Caldicott Principles, ISO 27001)
     competency_id: information-governance
     level: entry
     level_name: Entry Level
@@ -1789,7 +1790,7 @@ skills:
     subdomain_id: regulatory-compliance
   information-governance-mid-002:
     id: information-governance-mid-002
-    text: Conducts information governance assessments (e.g., data flow mapping, risk assessments)
+    text: Conducts information governance assessments (e.g. data flow mapping, risk assessments)
     competency_id: information-governance
     level: mid
     level_name: Mid Level
@@ -1821,7 +1822,7 @@ skills:
     subdomain_id: regulatory-compliance
   information-governance-senior-003:
     id: information-governance-senior-003
-    text: Leads information governance maturity initiatives (e.g., implementing maturity models)
+    text: Leads information governance maturity initiatives (e.g. implementing maturity models)
     competency_id: information-governance
     level: senior
     level_name: Senior Level
@@ -1845,7 +1846,7 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-entry-003:
     id: data-protection-compliance-entry-003
-    text: Can implement basic data protection controls (e.g., pseudonymization, access controls)
+    text: Can implement basic data protection controls (e.g. pseudonymisation, access controls)
     competency_id: data-protection-compliance
     level: entry
     level_name: Entry Level
@@ -1853,7 +1854,8 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-mid-001:
     id: data-protection-compliance-mid-001
-    text: Implements comprehensive data protection frameworks  (e.g., Data Protection Impact Assessments, privacy by design).
+    text: Implements comprehensive data protection frameworks (e.g. Data Protection Impact Assessments (DPIAs), privacy by
+      design).
     competency_id: data-protection-compliance
     level: mid
     level_name: Mid Level
@@ -1861,7 +1863,7 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-mid-002:
     id: data-protection-compliance-mid-002
-    text: Conducts data protection impact assessments
+    text: Conducts Data Protection Impact Assessments (DPIAs)
     competency_id: data-protection-compliance
     level: mid
     level_name: Mid Level
@@ -1893,7 +1895,7 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-senior-003:
     id: data-protection-compliance-senior-003
-    text: Leads data protection enhancement initiatives (e.g., organization-wide training, new privacy technologies).
+    text: Leads data protection enhancement initiatives (e.g. organisation-wide training, new privacy technologies).
     competency_id: data-protection-compliance
     level: senior
     level_name: Senior Level
@@ -1957,7 +1959,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-standards-compliance-senior-002:
     id: healthcare-standards-compliance-senior-002
-    text: Establishes healthcare compliance governance programs
+    text: Establishes healthcare compliance governance programmes
     competency_id: healthcare-standards-compliance
     level: senior
     level_name: Senior Level
@@ -1989,7 +1991,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-data-security-frameworks-entry-003:
     id: healthcare-data-security-frameworks-entry-003
-    text: Can follow established healthcare compliance procedures (e.g., incident reporting, access reviews)
+    text: Can follow established healthcare compliance procedures (e.g. incident reporting, access reviews)
     competency_id: healthcare-data-security-frameworks
     level: entry
     level_name: Entry Level
@@ -1997,7 +1999,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-data-security-frameworks-mid-001:
     id: healthcare-data-security-frameworks-mid-001
-    text: Implements healthcare compliance controls and processes (e.g., encryption, audit logging)
+    text: Implements healthcare compliance controls and processes (e.g. encryption, audit logging)
     competency_id: healthcare-data-security-frameworks
     level: mid
     level_name: Mid Level
@@ -2061,7 +2063,7 @@ skills:
     subdomain_id: regulatory-compliance
   ethics-research-approval-systems-entry-003:
     id: ethics-research-approval-systems-entry-003
-    text: Can assist with preparing submissions for ethical approval (e.g., drafting consent forms, compiling supporting documents)
+    text: Can assist with preparing submissions for ethical approval (e.g. drafting consent forms, compiling supporting documents)
     competency_id: ethics-research-approval-systems
     level: entry
     level_name: Entry Level
@@ -2069,7 +2071,7 @@ skills:
     subdomain_id: regulatory-compliance
   ethics-research-approval-systems-mid-001:
     id: ethics-research-approval-systems-mid-001
-    text: Implements systems for tracking ethical approvals and requirements (e.g., electronic tracking tools, spreadsheets)
+    text: Implements systems for tracking ethical approvals and requirements (e.g. electronic tracking tools, spreadsheets)
     competency_id: ethics-research-approval-systems
     level: mid
     level_name: Mid Level
@@ -2133,7 +2135,7 @@ skills:
     subdomain_id: security-management
   security-controls-implementation-entry-003:
     id: security-controls-implementation-entry-003
-    text: Can implement basic security controls following guidelines (e.g., password policies, firewall rules)
+    text: Can implement basic security controls following guidelines (e.g. password policies, firewall rules)
     competency_id: security-controls-implementation
     level: entry
     level_name: Entry Level
@@ -2157,7 +2159,7 @@ skills:
     subdomain_id: security-management
   security-controls-implementation-mid-003:
     id: security-controls-implementation-mid-003
-    text: Maps controls to specific compliance requirements (e.g., GDPR Article 32, ISO 27001 Annex A)
+    text: Maps controls to specific compliance requirements (e.g. GDPR Article 32, ISO 27001 Annex A)
     competency_id: security-controls-implementation
     level: mid
     level_name: Mid Level
@@ -2205,7 +2207,7 @@ skills:
     subdomain_id: security-management
   security-assessment-testing-entry-003:
     id: security-assessment-testing-entry-003
-    text: Can assist with security assessments following established procedures (e.g., running vulnerability scans, documenting
+    text: Can assist with security assessments following established procedures (e.g. running vulnerability scans, documenting
       findings)
     competency_id: security-assessment-testing
     level: entry
@@ -2230,7 +2232,7 @@ skills:
     subdomain_id: security-management
   security-assessment-testing-mid-003:
     id: security-assessment-testing-mid-003
-    text: Implements security testing programs and schedules
+    text: Implements security testing programmes and schedules
     competency_id: security-assessment-testing
     level: mid
     level_name: Mid Level
@@ -2422,7 +2424,7 @@ skills:
     subdomain_id: ethics-research-governance
   consent-management-entry-003:
     id: consent-management-entry-003
-    text: Can implement basic consent management procedures (e.g., verifying withdrawal requests)
+    text: Can implement basic consent management procedures (e.g. verifying withdrawal requests)
     competency_id: consent-management
     level: entry
     level_name: Entry Level
@@ -2646,7 +2648,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   compliance-monitoring-reporting-mid-001:
     id: compliance-monitoring-reporting-mid-001
-    text: Implements compliance monitoring programs and tools
+    text: Implements compliance monitoring programmes and tools
     competency_id: compliance-monitoring-reporting
     level: mid
     level_name: Mid Level
@@ -2758,7 +2760,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   certification-accreditation-senior-003:
     id: certification-accreditation-senior-003
-    text: Leads certification readiness and maintenance programs
+    text: Leads certification readiness and maintenance programmes
     competency_id: certification-accreditation
     level: senior
     level_name: Senior Level
@@ -2790,7 +2792,7 @@ skills:
     subdomain_id: output-checking
   workflow-engines-entry-001:
     id: workflow-engines-entry-001
-    text: is aware of workflow engines and the functionality they provide
+    text: Is aware of workflow engines and the functionality they provide
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2798,7 +2800,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-entry-002:
     id: workflow-engines-entry-002
-    text: is aware of actors and stages in the disclosure review process
+    text: Is aware of actors and stages in the disclosure review process
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2806,7 +2808,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-entry-003:
     id: workflow-engines-entry-003
-    text: can administer workflow engines to make changes to existing disclosure review workflows
+    text: Can administer workflow engines to make changes to existing disclosure review workflows
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2814,7 +2816,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-001:
     id: workflow-engines-mid-001
-    text: can assess suitability of workflow engines for achieving desired functionality
+    text: Can assess suitability of workflow engines for achieving desired functionality
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2822,7 +2824,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-002:
     id: workflow-engines-mid-002
-    text: can work with project stakeholder to design workflows that address local policy and governance/regulatory stipulations
+    text: Can work with project stakeholders to design workflows that address local policy and governance/regulatory stipulations
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2830,7 +2832,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-003:
     id: workflow-engines-mid-003
-    text: can administer workflow engines to implement disclosure review workflows
+    text: Can administer workflow engines to implement disclosure review workflows
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2838,7 +2840,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-004:
     id: workflow-engines-mid-004
-    text: can develop and maintain workflow templates so maximize reuse across similar governance constraints
+    text: Can develop and maintain workflow templates to maximise reuse across similar governance constraints
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2854,7 +2856,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-entry-001:
     id: data-airlocks-entry-001
-    text: is familiar with data airlocks
+    text: Is familiar with data airlocks
     competency_id: data-airlocks
     level: entry
     level_name: Entry Level
@@ -2862,7 +2864,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-entry-002:
     id: data-airlocks-entry-002
-    text: is familiar with user roles in data airlocks
+    text: Is familiar with user roles in data airlocks
     competency_id: data-airlocks
     level: entry
     level_name: Entry Level
@@ -2870,7 +2872,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-001:
     id: data-airlocks-mid-001
-    text: can write user documentation relating to the operation of data airlocks
+    text: Can write user documentation relating to the operation of data airlocks
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2878,7 +2880,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-002:
     id: data-airlocks-mid-002
-    text: can provide training to users relating to the operation of data airlocks
+    text: Can provide training to users relating to the operation of data airlocks
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2886,7 +2888,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-003:
     id: data-airlocks-mid-003
-    text: can troubleshoot common user issues with data airlocks
+    text: Can troubleshoot common user issues with data airlocks
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2894,7 +2896,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-senior-001:
     id: data-airlocks-senior-001
-    text: can influence design of data airlocks according to user requirements and changes in standards and governance
+    text: Can influence design of data airlocks according to user requirements and changes in standards and governance
     competency_id: data-airlocks
     level: senior
     level_name: Senior Level
@@ -2902,7 +2904,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-entry-001:
     id: code-repositories-entry-001
-    text: Familiar with code repositories and sharing platforms (e.g., Git, Github, GitLab)
+    text: Familiar with code repositories and sharing platforms (e.g. Git, GitHub, GitLab)
     competency_id: code-repositories
     level: entry
     level_name: Entry Level
@@ -2910,7 +2912,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-mid-001:
     id: code-repositories-mid-001
-    text: Implements code publication workflows and processes (e.g., code reviews)
+    text: Implements code publication workflows and processes (e.g. code reviews)
     competency_id: code-repositories
     level: mid
     level_name: Mid Level
@@ -2926,8 +2928,8 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-mid-003:
     id: code-repositories-mid-003
-    text: Can develop automated pipelines that check for known security risk (e.g., using static analysis techniques to check
-      for passwords, ip addresses, or other sensitive infrastructural information)
+    text: Can develop automated pipelines that check for known security risk (e.g. using static analysis techniques to check
+      for passwords, IP addresses, or other sensitive infrastructural information)
     competency_id: code-repositories
     level: mid
     level_name: Mid Level
@@ -2943,8 +2945,8 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-senior-002:
     id: code-repositories-senior-002
-    text: Leads initiatives to enhance code sharing while maintaining security  (e.g., creating secure code repositories,
-      developing sharing policies, designing automated pipelines to review eligibility of code for release).
+    text: Leads initiatives to enhance code sharing while maintaining security (e.g. creating secure code repositories, developing
+      sharing policies, designing automated pipelines to review eligibility of code for release).
     competency_id: code-repositories
     level: senior
     level_name: Senior Level
@@ -2976,7 +2978,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   disclosure-risk-assessment-senior-001:
     id: disclosure-risk-assessment-senior-001
-    text: Leads initiatives to enhance disclosure risk management (e.g., implementing new tools or techniques, anticipate
+    text: Leads initiatives to enhance disclosure risk management (e.g. implementing new tools or techniques, anticipating
       introduction of new regulatory frameworks).
     competency_id: disclosure-risk-assessment
     level: senior
@@ -2985,7 +2987,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   automated-disclosure-control-entry-001:
     id: automated-disclosure-control-entry-001
-    text: Understands automated SDC tool concepts (e.g., rule-based systems, threshold settings)
+    text: Understands automated SDC tool concepts (e.g. rule-based systems, threshold settings)
     competency_id: automated-disclosure-control
     level: entry
     level_name: Entry Level
@@ -3017,7 +3019,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   automated-disclosure-control-mid-003:
     id: automated-disclosure-control-mid-003
-    text: Validates accuracy and effectiveness of automated controls (e.g., testing against known risks, benchmarking)
+    text: Validates accuracy and effectiveness of automated controls (e.g. testing against known risks, benchmarking)
     competency_id: automated-disclosure-control
     level: mid
     level_name: Mid Level
@@ -3353,7 +3355,7 @@ skills:
     subdomain_id: project-management
   resource-cost-management-mid-002:
     id: resource-cost-management-mid-002
-    text: Develops cost monitoring and optimization strategies
+    text: Develops cost monitoring and optimisation strategies
     competency_id: resource-cost-management
     level: mid
     level_name: Mid Level
@@ -3369,7 +3371,7 @@ skills:
     subdomain_id: project-management
   resource-cost-management-senior-001:
     id: resource-cost-management-senior-001
-    text: Develops enterprise resource management and cost optimization strategies
+    text: Develops enterprise resource management and cost optimisation strategies
     competency_id: resource-cost-management
     level: senior
     level_name: Senior Level
@@ -3457,7 +3459,7 @@ skills:
     subdomain_id: service-management
   service-level-management-senior-003:
     id: service-level-management-senior-003
-    text: Leads negotiations for cross-organizational service levels
+    text: Leads negotiations for cross-organisational service levels
     competency_id: service-level-management
     level: senior
     level_name: Senior Level
@@ -3473,7 +3475,7 @@ skills:
     subdomain_id: service-management
   incident-problem-management-entry-002:
     id: incident-problem-management-entry-002
-    text: Familiar with incident classification and prioritization
+    text: Familiar with incident classification and prioritisation
     competency_id: incident-problem-management
     level: entry
     level_name: Entry Level
@@ -3673,7 +3675,7 @@ skills:
     subdomain_id: operational-excellence
   continuous-improvement-senior-003:
     id: continuous-improvement-senior-003
-    text: Leads transformational improvement programs
+    text: Leads transformational improvement programmes
     competency_id: continuous-improvement
     level: senior
     level_name: Senior Level
@@ -3745,7 +3747,7 @@ skills:
     subdomain_id: operational-excellence
   documentation-knowledge-management-senior-003:
     id: documentation-knowledge-management-senior-003
-    text: Leads initiatives to enhance organizational knowledge sharing
+    text: Leads initiatives to enhance organisational knowledge sharing
     competency_id: documentation-knowledge-management
     level: senior
     level_name: Senior Level
@@ -3849,7 +3851,7 @@ skills:
     subdomain_id: research-support-innovation
   researcher-training-support-mid-001:
     id: researcher-training-support-mid-001
-    text: Develops comprehensive researcher training programs
+    text: Develops comprehensive researcher training programmes
     competency_id: researcher-training-support
     level: mid
     level_name: Mid Level
@@ -4073,7 +4075,7 @@ skills:
     subdomain_id: research-support-innovation
   community-engagement-networking-mid-002:
     id: community-engagement-networking-mid-002
-    text: Represents the organization at community events and forums
+    text: Represents the organisation at community events and forums
     competency_id: community-engagement-networking
     level: mid
     level_name: Mid Level
@@ -4185,7 +4187,7 @@ skills:
     subdomain_id: software-engineering
   secure-coding-practices-entry-001:
     id: secure-coding-practices-entry-001
-    text: Aware of common security vulnerabilities (e.g., OWASP Top 10)
+    text: Aware of common security vulnerabilities (e.g. OWASP Top 10)
     competency_id: secure-coding-practices
     level: entry
     level_name: Entry Level
@@ -4337,7 +4339,7 @@ skills:
     subdomain_id: software-engineering
   microservices-api-design-entry-002:
     id: microservices-api-design-entry-002
-    text: Familiar with API concepts and documentation (e.g., OpenAPI/Swagger)
+    text: Familiar with API concepts and documentation (e.g. OpenAPI/Swagger)
     competency_id: microservices-api-design
     level: entry
     level_name: Entry Level
@@ -5329,7 +5331,7 @@ skills:
     subdomain_id: system-architecture
   high-performance-computing-senior-003:
     id: high-performance-computing-senior-003
-    text: Leads initiatives to enhance computing capabilities and optimize resource utilisation
+    text: Leads initiatives to enhance computing capabilities and optimise resource utilisation
     competency_id: high-performance-computing
     level: senior
     level_name: Senior Level
