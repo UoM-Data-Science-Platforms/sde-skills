@@ -40,8 +40,8 @@ domain:
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
       name: Tools and Platforms to Support Output Checking
-      description: Deploy and administer workflow engines, data airlocks, and secure code repositories
-        to help ensure consistency, reliability, and traceability of output checking processes.
+      description: Deploys and administers workflow engines, data airlocks, and secure code repositories
+        to ensure consistency, reliability, and traceability of output checking processes.
       tools:
       - Camunda
       - Apache Airflow (basic admin)
@@ -55,10 +55,10 @@ domain:
       competencies:
         workflow-engines:
           id: workflow-engines
-          name: Workflow engines
-          description: Deploy and administer workflow engines to help ensure consistency, reliability,
+          name: Workflow Engines
+          description: Deploys and administers workflow engines to ensure consistency, reliability,
             and traceability of output checking processes. Creates individual workflows that meet governance
-            and legal requirements for project teams.
+            and regulatory requirements for project teams.
           levels:
             entry:
               id: workflow-engines-entry
@@ -66,30 +66,29 @@ domain:
               skills:
               - Identifies workflow automation engines and describes their operational capabilities
               - Describes key roles, responsibilities, and stages in the disclosure review workflow
-              - Can administer workflow engines to make changes to existing disclosure review workflows
+              - Administers workflow engines to implement changes to existing disclosure review workflows
             mid:
               id: workflow-engines-mid
               name: Mid Level
               skills:
-              - Can assess suitability of workflow engines for achieving desired functionality
-              - Can work with project stakeholders to design workflows that address local policy and governance/regulatory
+              - Assesses suitability of workflow engines for achieving desired functionality
+              - Collaborates with project stakeholders to design workflows that address local policy and regulatory
                 stipulations
-              - Can administer workflow engines to implement disclosure review workflows
-              - Can develop and maintain workflow templates to maximise reuse across similar governance
+              - Administers workflow engines to implement disclosure review workflows
+              - Develops and maintains workflow templates to maximise reuse across similar governance
                 constraints
             senior:
               id: workflow-engines-senior
               name: Senior Level
               skills:
-              - Leads the technology strategy for business process management
+              - Leads the technology strategy for business process management and automated disclosure workflows
         data-airlocks:
           id: data-airlocks
-          name: Data airlocks
-          description: Install and administer data airlock applications, understand the roles and what
-            level of access is required to achieve given tasks (e.g. approvals, requests, triage, audit,
-            review etc.) within the airlock application, create user documentation and training materials,
-            contribute to ongoing improvements to data airlocks to ensure they meet user needs as well
-            as comply with standards and regulations.
+          name: Data Airlocks
+          description: Installs and administers data airlock applications, defines role-based access levels
+            required for operational tasks (e.g. approvals, requests, triage, audit, review), creates user
+            documentation and training materials, and contributes to ongoing improvements to data airlocks
+            to meet user needs and regulatory compliance.
           levels:
             entry:
               id: data-airlocks-entry
@@ -101,24 +100,22 @@ domain:
               id: data-airlocks-mid
               name: Mid Level
               skills:
-              - Can write user documentation relating to the operation of data airlocks
-              - Can provide training to users relating to the operation of data airlocks
-              - Can troubleshoot common user issues with data airlocks
+              - Produces user documentation and standard operating procedures for data airlocks
+              - Delivers training to researchers and review teams relating to data airlock operations
+              - Troubleshoots common operational and user access issues with data airlocks
             senior:
               id: data-airlocks-senior
               name: Senior Level
               skills:
-              - Can influence design of data airlocks according to user requirements and changes in standards
-                and governance
+              - Guides the architectural design and evolution of data airlocks according to user requirements,
+                emerging standards, and governance policies
         code-repositories:
           id: code-repositories
-          name: Code repositories
-          description: Install and configure code repository systems (e.g. Git) that allow source code
-            to be imported and exported from SDEs in industry standard ways. Develop automated checks
-            that can perform static analysis to ensure source code does not contain passwords, API keys,
-            or other infrastructural secrets. Develop workflows for disclosure checking to ensure the
-            source code does not contain any restricted data. Use advanced techniques to perform automated
-            code reviews to assess further requirement for manual inspection.
+          name: Code Repositories
+          description: Installs and configures code repository systems (e.g. Git) that allow source code
+            to be imported and exported from SDEs in industry standard ways. Develops automated checks and
+            static analysis pipelines to detect secrets, credentials, or restricted data in source code,
+            and applies automated review techniques to guide manual inspection.
           levels:
             entry:
               id: code-repositories-entry
@@ -129,20 +126,19 @@ domain:
               id: code-repositories-mid
               name: Mid Level
               skills:
-              - Implements code publication workflows and processes (e.g. code reviews)
-              - Can install and configure code repositories with correct access controls for data ingress
+              - Implements code publication workflows and processes (e.g. structured code reviews)
+              - Installs and configures code repositories with appropriate access controls for data ingress
                 and egress
-              - Can develop automated pipelines that check for known security risk (e.g. using static
-                analysis techniques to check for passwords, IP addresses, or other sensitive infrastructural
-                information)
+              - Develops automated pipelines using static analysis techniques to scan code for secrets,
+                credentials, IP addresses, and sensitive infrastructure details
             senior:
               id: code-repositories-senior
               name: Senior Level
               skills:
               - Establishes code publication frameworks and governance
-              - Leads initiatives to enhance code sharing while maintaining security (e.g. creating
-                secure code repositories, developing sharing policies, designing automated pipelines to
-                review eligibility of code for release).
+              - Leads initiatives to enhance secure code sharing (e.g. developing sharing policies,
+                creating secure repositories, and designing automated pipelines to review eligibility of
+                code for release)
     statistical-disclosure-control:
       id: statistical-disclosure-control
       name: Statistical Disclosure Control
