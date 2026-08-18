@@ -2807,7 +2807,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-entry-003:
     id: workflow-engines-entry-003
-    text: Can administer workflow engines to make changes to existing disclosure review workflows
+    text: Administers workflow engines to implement changes to existing disclosure review workflows
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2815,7 +2815,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-001:
     id: workflow-engines-mid-001
-    text: Can assess suitability of workflow engines for achieving desired functionality
+    text: Assesses suitability of workflow engines for achieving desired functionality
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2823,7 +2823,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-002:
     id: workflow-engines-mid-002
-    text: Can work with project stakeholders to design workflows that address local policy and governance/regulatory stipulations
+    text: Collaborates with project stakeholders to design workflows that address local policy and regulatory stipulations
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2831,7 +2831,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-003:
     id: workflow-engines-mid-003
-    text: Can administer workflow engines to implement disclosure review workflows
+    text: Administers workflow engines to implement disclosure review workflows
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2839,7 +2839,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-mid-004:
     id: workflow-engines-mid-004
-    text: Can develop and maintain workflow templates to maximise reuse across similar governance constraints
+    text: Develops and maintains workflow templates to maximise reuse across similar governance constraints
     competency_id: workflow-engines
     level: mid
     level_name: Mid Level
@@ -2847,7 +2847,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-senior-001:
     id: workflow-engines-senior-001
-    text: Leads the technology strategy for business process management
+    text: Leads the technology strategy for business process management and automated disclosure workflows
     competency_id: workflow-engines
     level: senior
     level_name: Senior Level
@@ -2871,7 +2871,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-001:
     id: data-airlocks-mid-001
-    text: Can write user documentation relating to the operation of data airlocks
+    text: Produces user documentation and standard operating procedures for data airlocks
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2879,7 +2879,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-002:
     id: data-airlocks-mid-002
-    text: Can provide training to users relating to the operation of data airlocks
+    text: Delivers training to researchers and review teams relating to data airlock operations
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2887,7 +2887,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-mid-003:
     id: data-airlocks-mid-003
-    text: Can troubleshoot common user issues with data airlocks
+    text: Troubleshoots common operational and user access issues with data airlocks
     competency_id: data-airlocks
     level: mid
     level_name: Mid Level
@@ -2895,7 +2895,8 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-senior-001:
     id: data-airlocks-senior-001
-    text: Can influence design of data airlocks according to user requirements and changes in standards and governance
+    text: Guides the architectural design and evolution of data airlocks according to user requirements, emerging standards,
+      and governance policies
     competency_id: data-airlocks
     level: senior
     level_name: Senior Level
@@ -2911,7 +2912,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-mid-001:
     id: code-repositories-mid-001
-    text: Implements code publication workflows and processes (e.g. code reviews)
+    text: Implements code publication workflows and processes (e.g. structured code reviews)
     competency_id: code-repositories
     level: mid
     level_name: Mid Level
@@ -2919,7 +2920,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-mid-002:
     id: code-repositories-mid-002
-    text: Can install and configure code repositories with correct access controls for data ingress and egress
+    text: Installs and configures code repositories with appropriate access controls for data ingress and egress
     competency_id: code-repositories
     level: mid
     level_name: Mid Level
@@ -2927,8 +2928,8 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-mid-003:
     id: code-repositories-mid-003
-    text: Can develop automated pipelines that check for known security risk (e.g. using static analysis techniques to check
-      for passwords, IP addresses, or other sensitive infrastructural information)
+    text: Develops automated pipelines using static analysis techniques to scan code for secrets, credentials, IP addresses,
+      and sensitive infrastructure details
     competency_id: code-repositories
     level: mid
     level_name: Mid Level
@@ -2944,8 +2945,8 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-senior-002:
     id: code-repositories-senior-002
-    text: Leads initiatives to enhance code sharing while maintaining security (e.g. creating secure code repositories, developing
-      sharing policies, designing automated pipelines to review eligibility of code for release).
+    text: Leads initiatives to enhance secure code sharing (e.g. developing sharing policies, creating secure repositories,
+      and designing automated pipelines to review eligibility of code for release)
     competency_id: code-repositories
     level: senior
     level_name: Senior Level
