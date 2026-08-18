@@ -4843,7 +4843,7 @@ skills:
     subdomain_id: system-architecture
   secure-environment-design-entry-002:
     id: secure-environment-design-entry-002
-    text: Familiar with defense-in-depth and least privilege concepts
+    text: Familiar with defence-in-depth and least privilege concepts
     competency_id: secure-environment-design
     level: entry
     level_name: Entry Level
