@@ -1,0 +1,19 @@
+domain:
+  name: Safe Access & Identity
+subdomains:
+  identity-management:
+    name: Identity Management
+    items:
+    - Microsoft Entra
+    - Provisioning tools
+    - SSO protocols (SAML
+  access-control:
+    name: Access Control
+    items:
+    - RBAC concepts
+    - ABAC concepts
+    - Privilege audit tools
+  secure-user-experience:
+    name: Secure User Experience
+    items:
+    - azure kevaults

@@ -1,0 +1,119 @@
+/* =============================================
+   HOME PAGE STYLES
+   Uses existing design tokens from theme.css
+   ============================================= */
+
+:global(main) {
+  overflow-x: hidden;
+}
+
+:global(.main-content):has(.wide-layout) {
+  overflow-y: hidden;
+}
+
+
+.team-leads {
+  margin-bottom: var(--space-3xl);
+  margin-top: var(--space-lg);
+}
+
+.team-member-thumbnail {
+  flex: 0 0 150px;
+  min-width: 150px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.team-member-thumbnail img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin-bottom: var(--space-md);
+  border: 2px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.team-member-thumbnail:hover img {
+  border-color: var(--color-deep-blue);
+  box-shadow: var(--shadow-md);
+  transform: scale(1.05);
+}
+
+.team-member-thumbnail p {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-heading);
+  margin: 0;
+}
+
+/* =============================================
+    overrides 
+  ============================================= */
+
+.index-layout .mini-hero {
+  padding: var(--space-3xl) var(--space-xl);
+  margin: 0;
+}
+
+.scroll-area>.mini-hero {
+  margin: 0 !important;
+}
+
+.scroll-area>.wide-hero {
+  max-width: none;
+}
+
+
+.index-layout .mini-hero-content h2 {
+  margin-bottom: var(--space-md);
+}
+
+.index-layout .mini-hero-content p {
+  margin: 0;
+}
+
+.mini-hero {
+
+  scroll-margin-top: 100px;
+}
+
+.section {
+  margin: var(--space-3xl) var(--space-xl);
+  scroll-margin-top: 20px;
+}
+
+.scroll-area {
+  overflow-x: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .index-page .venue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-page .card {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .section {
+    margin: var(--space-xl) var(--space-xs);
+  }
+
+  .section .card-body {
+    border-bottom: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section .list-group {
+    padding-left: var(--space-md);
+  }
+}

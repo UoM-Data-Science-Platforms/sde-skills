@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
+import StudentCard from '../components/StudentCard.astro';
+import MiniHero from '../components/MiniHero.astro';
+import { placementStudents } from '../data/students.js';
+
+const sections = [
+  { id: 'summary', label: 'Summary' },
+  { id: 'case-studies', label: 'Student experiences' },
+];
+
+const studentsWithBios = placementStudents.filter(s => s.bio.length > 0 || s.summary.length > 0);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+---
+
+<Layout title="Student Projects — SDE Team Development Hub" currentDomain="student-projects">
+  <div class="student-projects-page ">
+    <PageHeader title="Student Projects" />
+    <StickyNavigation sections={sections} />
+    <div class="scroll-area" id="scroll-area">
+      <MiniHero 
+        title="Student Projects Summary" 
+        id="summary" 
+        description="Our cohort of students are undertaking short projects supported by the project. See the table below for a summary, followed by a selection of reflective student case studies." 
+      />
+      <div class="container-fluid px-4 py-4">
+        {/* Desktop Table */}
+        <div class="table-responsive d-none d-md-block">
+          <table class="table table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Site</th>
+                <th>Course</th>
+                <th>Project title</th>
+                <th>Dates</th>
+                <th>Student name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {placementStudents.map(s => (
+                <tr class={s.bio.length > 0 || s.summary.length > 0 ? 'table-row-clickable' : ''} data-student={s.id}>
+                  <td>{s.site}</td>
+                  <td>{s.course}</td>
+                  <td>{s.projectTitle}</td>
+                  <td>{s.dates}</td>
+                  <td>{s.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile List View */}
+        <div class="mobile-projects-list d-md-none">
+          {placementStudents.map(s => (
+            <div 
+              class={`mobile-project-item p-3 mb-3 rounded ${s.bio.length > 0 || s.summary.length > 0 ? 'table-row-clickable' : ''}`}
+              data-student={s.id}
+            >
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis">{s.site}</span>
+                <span class="text-muted small">{s.dates}</span>
+              </div>
+              <h3 class="h6 mb-1 text-heading"><strong>{s.name}</strong></h3>
+              <div class="small text-muted mb-2">{s.course}</div>
+              <div class="small text-secondary mb-1">
+                <strong>Project:</strong> <i>{s.projectTitle}</i>
+              </div>
+              {(s.bio.length > 0 || s.summary.length > 0) && (
+                <div class="text-primary small mt-2 fw-semibold">
+                  Read student experience →
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <h2 id="case-studies">Student experiences</h2>
+
+        <div class="cards-grid">
+          {studentsWithBios.map(s => (
+            <StudentCard student={s} variant="detailed" />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+
+<script>
+  // Make table rows clickable to scroll to case study cards
+  document.querySelectorAll('.table-row-clickable').forEach(row => {
+    row.addEventListener('click', () => {
+      const studentId = row.dataset.student;
+      const card = document.getElementById(`student-${studentId}`);
+      if (card) {
+        const scrollArea = document.querySelector('.scroll-area');
+        if (scrollArea) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .mobile-project-item {
+    background: var(--color-competency-card-bg);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid var(--color-glass-border);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+  }
+  
+  .mobile-project-item.table-row-clickable:hover {
+    border-color: var(--color-accent-cyan-soft);
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+</style>

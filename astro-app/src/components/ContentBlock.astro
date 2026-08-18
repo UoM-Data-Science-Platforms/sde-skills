@@ -1,0 +1,58 @@
+---
+interface Props {
+  block: {
+    type: string;
+    value?: string;
+    class?: string;
+    id?: string;
+    items?: string[];
+    header?: string[];
+    rows?: string[][];
+  };
+}
+
+const { block } = Astro.props;
+
+if (!block) return null;
+---
+
+{block.type === 'title' && (
+  <h2 class={block.class} id={block.id}>{block.value}</h2>
+)}
+
+{block.type === 'text' && (
+  <p class={block.class} id={block.id}>{block.value}</p>
+)}
+
+{block.type === 'list' && (
+  <ul class={block.class} id={block.id}>
+    {block.items?.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+)}
+
+{block.type === 'image' && (
+  <img src={block.value} alt="" class={block.class} id={block.id} />
+)}
+
+{block.type === 'table' && (
+  <table class={block.class} id={block.id}>
+    <thead>
+      <tr>
+        {block.header?.map((headerCell) => (
+          <th>{headerCell}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {block.rows?.map((row) => (
+        <tr>
+          {row.map((cell) => (
+            <td>{cell}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+)}

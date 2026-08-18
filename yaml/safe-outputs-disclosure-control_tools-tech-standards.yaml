@@ -1,0 +1,24 @@
+domain:
+  name: Safe Outputs & Disclosure Control
+subdomains:
+  output-checking:
+    name: Output Checking
+    items:
+    - CSV
+  tools-and-platforms-to-support-output-checking:
+    name: Tools and platforms to support output checking
+    items:
+    - Camunda
+    - Data airlocks
+    - GitHub
+    - Git
+  statistical-disclosure-control:
+    name: Statistical Disclosure Control
+    items:
+    - Risk classification templates
+  accidental-disclosure:
+    name: Accidental disclosure
+    items: []
+  emergency-response:
+    name: Emergency response
+    items: []

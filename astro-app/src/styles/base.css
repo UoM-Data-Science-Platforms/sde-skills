@@ -1,7 +1,32 @@
 /* =============================================
    BASE RESET
    ============================================= */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Bootstrap overrides */
+.table-light {
+  --bs-table-bg: color-mix(in srgb, var(--color-heading) 8%, transparent);
+  --bs-table-color: var(--color-heading);
+  --bs-table-border-color: var(--color-border);
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.nav-pills .nav-link:hover,
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .show>.nav-link,
+.nav-tabs .nav-link:hover {
+  color: unset;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+}
 
 html {
   scroll-behavior: smooth;
@@ -11,18 +36,47 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-gradient);
+
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg-image);
+
+  /* Set exact matching sizes for the repeating patterns */
+  background-size: var(--bg-size);
+  background-repeat: var(--bg-repeat);
+  background-position: var(--bg-position);
+
+
+
 }
 
-ul  { list-style: none; margin: 0; padding: 0; }
-a   { color: inherit; text-decoration: none; }
-p   { margin: 0; }
-img { max-width: 100%; display: block; }
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
 
 button {
   font-family: var(--font-body);
@@ -34,17 +88,37 @@ button {
 /* =============================================
    TYPOGRAPHY HIERARCHY
    ============================================= */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
-  color: var(--color-text);
+  color: var(--color-heading);
   line-height: 1.2;
   margin: 0;
 }
 
-h1 { font-size: var(--text-domain);      font-weight: 700; }
-h2 { font-size: var(--text-subdomain);   font-weight: 600; }
-h3 { font-size: var(--text-competency);  font-weight: 600; }
-h4 { font-size: var(--text-proficiency); font-weight: 600; }
+h1 {
+  font-size: var(--text-domain);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-subdomain);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--text-competency);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--text-proficiency);
+  font-weight: 600;
+}
 
 /* =============================================
    LAYOUT FOUNDATIONS
@@ -65,7 +139,19 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: clip;
+}
+
+
+
+/* Mobile: sidebar becomes an offcanvas overlay, so no margin needed */
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-left: 0;
+    height: auto;
+    overflow: visible;
+  }
 }
 
 /* =============================================
@@ -76,6 +162,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -100,10 +187,10 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 
 /* Full blur — for nav bars and sticky headers */
 .glass {
-  background-color: rgba(52, 56, 65, 0.12);
+  background-color: var(--color-glass-bg);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
@@ -111,10 +198,11 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 .glass--soft {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.4px);
-  -webkit-backdrop-filter: blur(6.4px);
-  border: 1px solid rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid var(--color-glass-border);
 }
+
 
 /* =============================================
    MISSION GRID LAYOUT
@@ -125,6 +213,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 
 .mission-tile {
   flex: 1 1 200px;
@@ -176,7 +265,7 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 }
 
 /* Accent line inside tiles */
-.card__accent-line--tile {
+.card-accent-line--tile {
   width: 28px;
   height: 2px;
   border-radius: 1px;
@@ -195,4 +284,36 @@ h4 { font-size: var(--text-proficiency); font-weight: 600; }
 .step-dot--active {
   width: 28px;
   background: var(--color-accent);
+}
+
+/* wide layout overrides */
+.wide-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.wide-layout :global(.scroll-area) {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.wide-layout .scroll-area {
+  padding: 0;
+}
+
+.wide-layout :global(.scroll-area > *) {
+  max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .mission-tile {
+    max-width: none;
+  }
+
+  .scroll-area {
+    padding: 0 !important;
+  }
 }

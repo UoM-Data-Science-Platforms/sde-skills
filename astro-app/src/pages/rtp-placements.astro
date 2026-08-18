@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import RTPCard from '../components/RTPCard.astro';
+import MiniHero from '../components/MiniHero.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
+import { INSTITUTION_COLORS } from '../data/domains.js';
+import { rtps } from '../data/rtps.js';
+
+const sections = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'trainees', label: 'Trainees' },
+];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+---
+
+<Layout title="RTP Placements — SDE Team Development Hub" currentDomain="rtp-placements">
+  <div class="rtp-placements-page">
+    <PageHeader title="RTP Placements" />
+    <StickyNavigation sections={sections} />
+    <div class="scroll-area" id="scroll-area">
+      <MiniHero title="Research Technical Professional Training Programme" id="overview">
+        <p>The SDE Team Development Hub operates a Research Technical Professional (RTP) training scheme offering one-year placement opportunities at partner institutions. The programme aims to develop the next generation of technical professionals in research infrastructure.</p>
+        <p>Trainees receive structured mentoring, formal technical training, conference access, and professional certification support to build careers in research infrastructure and cloud engineering.</p>
+      </MiniHero>
+      <div class="container-fluid px-4 py-4">
+      
+
+    <h2 id="trainees">Current RTP Placements</h2>
+    <p>Three active trainees are currently enrolled:</p>
+
+    <div class="cards-grid">
+      {rtps.map((r) => (
+        <RTPCard trainee={r} variant="detailed" />
+      ))}
+    </div>
+    </div>
+  </div>
+</Layout>
+
+

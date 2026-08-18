@@ -6,14 +6,22 @@ on:
       - main
     paths:
       - 'astro-app/**'
-      - 'scripts/markdown_to_yaml.py'
-      - 'docs/competency_framework/**'
-      - 'docs/index.md'
-      - 'docs/about.md'
-      - 'docs/contributing.md'
-      - 'docs/assets/img/**'
+      - 'scripts/build_data.py'
+      - 'docs/competency_framework/framework_mapping.md'
+      - 'yaml/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
+    inputs:
+      app_root:
+        description: 'Optional review sub-path (e.g. "review", "pr-42"). Leave blank to deploy at the site root with an empty Astro base URL.'
+        required: false
+        default: ''
+        type: string
+      custom_domain:
+        description: 'Custom domain to publish for root GitHub Pages deploys.'
+        required: false
+        default: 'sdertp.org'
+        type: string
 
 permissions:
   contents: write
@@ -33,34 +41,43 @@ jobs:
       - name: Install Python dependencies
         run: uv sync --locked --all-extras --dev
 
-      - name: Generate YAML from markdown
-        run: |
-          uv run python3 -c "
-          import sys, os
-          sys.path.insert(0, 'scripts')
-          from markdown_to_yaml import convert_file_to_yaml
-          input_dir = 'docs/competency_framework'
-          output_dir = 'astro-app/public/data'
-          os.makedirs(output_dir, exist_ok=True)
-          for f in sorted(os.listdir(input_dir)):
-              if f.endswith('.md'):
-                  convert_file_to_yaml(os.path.join(input_dir, f), output_dir)
-          print('YAML generation complete')
-          "
+      - name: Build and merge YAML data
+        run: uv run python scripts/build_data.py
 
-      - name: Copy home page markdown
+      - name: Copy framework mapping markdown
         run: |
-          mkdir -p astro-app/data/assets/img
-          cp docs/index.md astro-app/data/index.md
-          cp docs/about.md astro-app/data/about.md
-          cp docs/contributing.md astro-app/data/contributing.md
-          cp docs/competency_framework/overview.md astro-app/data/cf-overview.md
+          mkdir -p astro-app/data
           cp docs/competency_framework/framework_mapping.md astro-app/data/cf-framework-mapping.md
-          cp docs/assets/img/* astro-app/data/assets/img/
+
+      - name: Compute deploy paths
+        id: deploy_paths
+        run: |
+          APP_ROOT="${{ github.event.inputs.app_root }}"
+          CUSTOM_DOMAIN="${{ github.event.inputs.custom_domain }}"
+          if [ -z "$CUSTOM_DOMAIN" ]; then
+            CUSTOM_DOMAIN="sdertp.org"
+          fi
+          APP_ROOT="${APP_ROOT#/}"
+          APP_ROOT="${APP_ROOT%/}"
+          APP_ROOT="${APP_ROOT#sde-skills/}"
+          if [ "$APP_ROOT" = "sde-skills" ]; then
+            APP_ROOT=""
+          fi
+          if [ -z "$APP_ROOT" ]; then
+            echo "ASTRO_BASE=" >> $GITHUB_ENV
+            echo "dest_dir=" >> $GITHUB_OUTPUT
+            echo "ASTRO_SITE=https://$CUSTOM_DOMAIN" >> $GITHUB_ENV
+            printf '%s\n' "$CUSTOM_DOMAIN" > astro-app/public/CNAME
+          else
+            echo "ASTRO_BASE=/sde-skills/$APP_ROOT" >> $GITHUB_ENV
+            echo "dest_dir=$APP_ROOT" >> $GITHUB_OUTPUT
+            echo "ASTRO_SITE=https://uom-data-science-platforms.github.io" >> $GITHUB_ENV
+            rm -f astro-app/public/CNAME
+          fi
 
       - name: Set Astro deploy config
         run: |
-          cat > astro-app/astro.config.mjs <<'EOF'
+          cat > astro-app/astro.config.mjs <<EOF
           import { defineConfig } from 'astro/config';
           import react from '@astrojs/react';
           import remarkMkdocsAttr from './src/plugins/remark-mkdocs-attr.js';
@@ -69,8 +86,8 @@ jobs:
             markdown: {
               remarkPlugins: [remarkMkdocsAttr]
             },
-            site: 'https://uom-data-science-platforms.github.io',
-            base: '/sde-skills',
+            site: '$ASTRO_SITE',
+            base: '$ASTRO_BASE',
           });
           EOF
 
@@ -92,9 +109,17 @@ jobs:
       - name: Add .nojekyll to dist
         run: touch astro-app/dist/.nojekyll
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages root
+        if: steps.deploy_paths.outputs.dest_dir == ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: astro-app/dist
-          destination_dir: .
+
+      - name: Deploy to GitHub Pages subdirectory
+        if: steps.deploy_paths.outputs.dest_dir != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: astro-app/dist
+          destination_dir: ${{ steps.deploy_paths.outputs.dest_dir }}

@@ -1,6 +1,9 @@
 ---
 import Sidebar from '../components/Sidebar.jsx';
+import SocialLinks from '../components/SocialLinks.astro';
+import Footer from '../components/Footer.astro';
 import { DOMAINS, PAGE_COLORS } from '../data/domains.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/theme.css';
 import '../styles/base.css';
 import '../styles/animations.css';
@@ -8,6 +11,13 @@ import '../styles/sidebar.css';
 import '../styles/page-nav.css';
 import '../styles/skills-framework.css';
 import '../styles/prose.css';
+import '../styles/page-container.css';
+import '../styles/sticky-nav.css';
+import '../styles/cards.css';
+import '../styles/hero.css';
+import '../styles/section.css';
+
+import '../styles/acknowledgements.css';
 
 interface Props {
   title: string;
@@ -24,7 +34,9 @@ const domainColor = PAGE_COLORS[currentDomain] ?? 'var(--color-purple)';
     <title>{title}</title>
     <!-- Inline: must run before first paint to prevent flash of unstyled theme -->
     <script is:inline>
-      document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.dataset.theme = saved;
+      document.documentElement.dataset.bsTheme = saved;
     </script>
     <script define:vars={{ domainColor }} is:inline>
       document.documentElement.style.setProperty('--color-domain-base', domainColor);
@@ -32,10 +44,15 @@ const domainColor = PAGE_COLORS[currentDomain] ?? 'var(--color-purple)';
   </head>
   <body>
     <div class="app-wrapper">
-      <Sidebar domains={DOMAINS} currentDomain={currentDomain} client:load />
+      <Sidebar domains={DOMAINS} currentDomain={currentDomain} client:load>
+        <SocialLinks />
+      </Sidebar>
       <main class="main-content">
         <slot />
       </main>
     </div>
+    <script>
+      import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+    </script>
   </body>
 </html>

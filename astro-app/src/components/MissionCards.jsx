@@ -50,28 +50,28 @@ export default function MissionCards() {
             style={{ position: 'sticky', top: stickyTop, height: cardHeight, zIndex: i + 1 }}
           >
             <div
-              className={`mission-card__inner${isPast ? ' is-past' : ''}`}
+              className={`mission-card-inner${isPast ? ' is-past' : ''}`}
               style={{ '--color-accent': COLORS[i] }}
             >
               {/* Colour bar along the top */}
-              <div className="card__top-bar" />
+              <div className="card-top-bar" />
 
-              <div className="mission-card__content">
+              <div className="mission-card-content">
                 {/* Ghost number */}
-                <div className="card__ghost-number">{step.number}</div>
+                <div className="card-ghost-number">{step.number}</div>
 
                 {/* Title */}
-                <h2 className="mission-card__title">{step.title}</h2>
+                <h2 className="mission-card-title">{step.title}</h2>
 
                 {/* Accent line */}
-                <div className="mission-card__accent-line" />
+                <div className="mission-card-accent-line" />
 
                 {/* Body */}
-                <p className="mission-card__body">{step.body}</p>
+                <p className="mission-card-body">{step.body}</p>
               </div>
 
               {/* Step counter bottom-right */}
-              <div className="card__step-counter">
+              <div className="card-step-counter">
                 {i + 1} / {STEPS.length}
               </div>
             </div>

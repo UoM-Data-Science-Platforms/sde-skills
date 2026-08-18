@@ -12,12 +12,14 @@
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
+
 .relevant-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
 }
+
 .relevant-label {
   font-size: 0.75rem;
   font-weight: 600;
@@ -27,15 +29,17 @@
   margin-right: 2px;
   flex-shrink: 0;
 }
+
 .relevant-chip {
   font-size: 0.8rem;
   padding: 2px 10px;
   border-radius: 999px;
-  background: var(--color-surface-raised, rgba(128,128,128,0.1));
+  background: var(--color-surface-raised, rgba(128, 128, 128, 0.1));
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   white-space: nowrap;
 }
+
 /* END HACK */
 
 /* Subdomain section — generous vertical rhythm */
@@ -53,7 +57,7 @@
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
   transition:
-    opacity   var(--transition-slow),
+    opacity var(--transition-slow),
     transform var(--transition-slow);
 }
 
@@ -89,6 +93,18 @@
   margin-bottom: var(--space-xl);
 }
 
+/* Tools, Technologies, and Standards at subdomain level */
+.subdomain-tech-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+
+}
+
 /* Competency card */
 .competency-card {
   border-radius: var(--radius-lg);
@@ -96,22 +112,23 @@
   margin-bottom: var(--space-md);
   /* All transitions in one declaration — merges hover + fade-up */
   transition:
-    opacity      var(--transition-slow),
-    transform    var(--transition-slow),
-    box-shadow   var(--transition-base),
+    opacity var(--transition-slow),
+    transform var(--transition-slow),
+    box-shadow var(--transition-base),
     border-color var(--transition-base);
   /* glass applied via .glass--soft utility class on the element */
   background: rgba(255, 255, 255, 0);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.4px);
-  -webkit-backdrop-filter: blur(6.4px);
-  border: 1px solid rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--color-glass-border);
+  cursor: default;
 }
 
 .competency-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(0, 169, 206, 0.25);
+  border-color: var(--color-accent-cyan-soft);
 }
 
 .competency-card h3 {
@@ -137,13 +154,75 @@
   margin-bottom: var(--space-lg);
 }
 
-/* --- Experience-level selector --- */
-.level-buttons {
+/* Tools, Technologies, and Standards section */
+.competency-tech-section {
   display: flex;
-  gap: var(--space-xs);
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) 0;
 }
 
+.tech-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tech-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  min-width: 60px;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-chip {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid;
+  white-space: nowrap;
+  font-weight: 500;
+  background: color-mix(in srgb, var(--color-heading) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-heading) 20%, transparent);
+  color: var(--color-heading);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.tech-chip:hover {
+  background: color-mix(in srgb, var(--color-heading) 15%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-heading) 35%, transparent);
+  color: var(--color-heading);
+}
+
+.tech-chip.standard {
+  background: color-mix(in srgb, rgb(34, 197, 94) 8%, var(--color-surface));
+  border-color: color-mix(in srgb, rgb(34, 197, 94) 20%, transparent);
+  color: rgb(34, 197, 94);
+}
+
+.tech-chip.standard:hover {
+  background: color-mix(in srgb, rgb(34, 197, 94) 15%, var(--color-surface));
+  border-color: color-mix(in srgb, rgb(34, 197, 94) 35%, transparent);
+}
+
+/* --- Experience-level selector --- */
 .level-btn {
   flex: 1;
   min-width: 80px;
@@ -155,10 +234,10 @@
   color: var(--color-text-muted);
   text-align: center;
   transition:
-    background   var(--transition-fast),
-    color        var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
     border-color var(--transition-fast),
-    box-shadow   var(--transition-fast);
+    box-shadow var(--transition-fast);
 }
 
 .level-btn:hover {
@@ -170,10 +249,10 @@
   border-color: var(--color-domain, var(--color-accent));
   color: var(--color-domain);
   font-size: calc(var(--text-small) * 1.05);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-body[data-theme="dark"] .level-btn.active {
+html[data-theme="dark"] .level-btn.active {
   background: var(--color-surface);
   color: var(--color-domain);
   font-weight: 600;
@@ -185,7 +264,7 @@ body[data-theme="dark"] .level-btn.active {
 }
 
 /* Mobile: allow buttons to wrap at two per row if needed */
-@media (max-width: 480px) {
+@media (max-width: 575.98px) {
   .level-btn {
     flex: 1 1 calc(50% - var(--space-xs));
   }
@@ -253,7 +332,7 @@ body[data-theme="dark"] .level-btn.active {
   line-height: 1.4;
   transition:
     background var(--transition-fast),
-    color      var(--transition-fast);
+    color var(--transition-fast);
 }
 
 .proficiency-btn:hover {
@@ -271,7 +350,7 @@ body[data-theme="dark"] .level-btn.active {
   border-bottom-right-radius: 0;
 }
 
-body[data-theme="dark"] .proficiency-btn.active {
+html[data-theme="dark"] .proficiency-btn.active {
   background: var(--color-surface);
   color: var(--color-domain);
   font-weight: 500;
@@ -306,95 +385,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   animation: detailIn var(--transition-base) ease both;
 }
 
-/* =============================================
-   COLLAPSIBLE SUBSECTIONS
-   ============================================= */
-
-/* Container */
-.collapsible {
-  border-top: 1px solid var(--color-border);
-}
-
-.collapsible:first-child {
-  border-top: none;
-}
-
-/* Header button */
-.collapsible-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: var(--space-sm) 0;
-  background: none;
-  border: none;
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  font-weight: 600;
-  color: var(--color-text);
-  cursor: pointer;
-  text-align: left;
-  user-select: none;
-  transition: color var(--transition-fast);
-}
-
-.collapsible-summary:hover {
-  color: var(--color-domain, var(--color-accent));
-}
-
-/* Chevron — CSS border trick, rotates on open */
-.collapsible-summary::after {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid var(--color-text-muted);
-  border-bottom: 2px solid var(--color-text-muted);
-  transform: rotate(45deg) translateY(-2px);
-  flex-shrink: 0;
-  transition: transform var(--transition-base), border-color var(--transition-fast);
-}
-
-.collapsible.is-open > .collapsible-summary::after {
-  transform: rotate(-135deg) translateY(-2px);
-  border-color: var(--color-domain, var(--color-accent));
-}
-
-/* Grid trick: animates height on both open AND close */
-.collapsible-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-slow);
-}
-
-.collapsible.is-open > .collapsible-content {
-  grid-template-rows: 1fr;
-}
-
-/* Inner wrapper must have overflow:hidden for grid trick to work */
-.collapsible-inner {
-  overflow: hidden;
-  min-height: 0;
-}
-
-/* Content typography inside sections */
-.collapsible-inner p,
-.collapsible-inner ul {
-  font-size: var(--text-small);
-  color: var(--color-text-muted);
-  line-height: 1.6;
-  margin: 0;
-  padding: var(--space-2xs) 0 var(--space-sm) var(--space-sm);
-}
-
-.collapsible-inner ul {
-  padding-left: var(--space-lg);
-}
-
-.collapsible-inner ul li {
-  list-style: disc;
-  margin-bottom: var(--space-2xs);
-}
 
 /* =============================================
    MOTION & SCROLL-SYNC
@@ -415,13 +405,25 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Stagger cards within a section for a subtle cascade */
-.competency-card:nth-child(2) { transition-delay: 40ms;  }
-.competency-card:nth-child(3) { transition-delay: 80ms;  }
-.competency-card:nth-child(4) { transition-delay: 120ms; }
-.competency-card:nth-child(5) { transition-delay: 160ms; }
+.competency-card:nth-child(2) {
+  transition-delay: 40ms;
+}
+
+.competency-card:nth-child(3) {
+  transition-delay: 80ms;
+}
+
+.competency-card:nth-child(4) {
+  transition-delay: 120ms;
+}
+
+.competency-card:nth-child(5) {
+  transition-delay: 160ms;
+}
 
 /* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
+
   .competency-card,
   .subdomain-title {
     opacity: 1;
@@ -439,10 +441,6 @@ body[data-theme="dark"] .proficiency-btn.active {
   transition-delay: 0ms;
 }
 
-/* Max readable width on very wide viewports */
-.scroll-area > * {
-  max-width: 960px;
-}
 
 /* Focus-visible styles — keyboard navigation */
 :focus-visible {
@@ -454,11 +452,6 @@ body[data-theme="dark"] .proficiency-btn.active {
 /* Suppress focus ring on mouse click (only show for keyboard) */
 :focus:not(:focus-visible) {
   outline: none;
-}
-
-/* Highlight the active collapsible section header */
-.collapsible.is-open > .collapsible-summary {
-  color: var(--color-domain, var(--color-accent));
 }
 
 /* Ensure last card in scroll area has bottom breathing room */
@@ -478,16 +471,18 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Coloured top strip on stacked cards */
-.card__top-bar {
+.card-top-bar {
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: var(--color-accent);
   border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 /* Large faded background number */
-.card__ghost-number {
+.card-ghost-number {
   font-size: clamp(5rem, 14vw, 9rem);
   font-weight: 900;
   line-height: 1;
@@ -499,12 +494,12 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Accent divider line */
-.card__accent-line {
+.card-accent-line {
   background: var(--color-accent);
 }
 
 /* Step counter badge */
-.card__step-counter {
+.card-step-counter {
   position: absolute;
   bottom: var(--space-lg);
   right: var(--space-lg);
@@ -516,7 +511,7 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Icon in grid tiles */
-.tile__icon {
+.tile-icon {
   width: 44px;
   height: 44px;
   margin-top: 0.25rem;
@@ -524,7 +519,7 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Number label in grid tiles */
-.tile__number {
+.tile-number {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.15em;
@@ -533,7 +528,7 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* MissionScroll — sticky panel and content */
-.mission-scroll__panel {
+.mission-scroll-panel {
   position: sticky;
   top: 0;
   display: flex;
@@ -543,20 +538,20 @@ body[data-theme="dark"] .proficiency-btn.active {
   overflow: hidden;
 }
 
-.mission-scroll__indicators {
+.mission-scroll-indicators {
   display: flex;
   gap: 8px;
   margin-bottom: 3rem;
 }
 
-.mission-scroll__content {
+.mission-scroll-content {
   text-align: center;
   max-width: 560px;
   padding: 0 var(--space-xl);
   animation: missionIn 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.mission-scroll__ghost-number {
+.mission-scroll-ghost-number {
   font-size: clamp(6rem, 18vw, 10rem);
   font-weight: 900;
   line-height: 1;
@@ -567,7 +562,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   user-select: none;
 }
 
-.mission-scroll__title {
+.mission-scroll-title {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 800;
   color: var(--color-heading);
@@ -575,7 +570,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   line-height: 1.2;
 }
 
-.mission-scroll__nudge {
+.mission-scroll-nudge {
   position: absolute;
   bottom: 2rem;
   display: flex;
@@ -590,7 +585,7 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Stacked mission card inner panel */
-.mission-card__inner {
+.mission-card-inner {
   height: 100%;
   border-radius: var(--radius-md) var(--radius-md) 0 0;
   background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
@@ -603,18 +598,18 @@ body[data-theme="dark"] .proficiency-btn.active {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
 }
 
-.mission-card__inner.is-past {
+.mission-card-inner.is-past {
   transform: scale(0.97);
   opacity: 0.6;
 }
 
-.mission-card__content {
+.mission-card-content {
   max-width: 560px;
   padding: 0 var(--space-xl);
   text-align: center;
 }
 
-.mission-card__title {
+.mission-card-title {
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--color-heading);
@@ -622,7 +617,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   line-height: 1.2;
 }
 
-.mission-card__accent-line {
+.mission-card-accent-line {
   width: 36px;
   height: 3px;
   border-radius: 2px;
@@ -631,7 +626,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   transition: background 0.4s ease;
 }
 
-.mission-card__body {
+.mission-card-body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-text-muted);
@@ -650,7 +645,7 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Labelled header bar — top of a flush card or sub-card */
-.card__label {
+.card-label {
   padding: var(--space-xs) var(--space-md);
   background: color-mix(in srgb, var(--color-domain-base) 6%, var(--color-surface));
   border-bottom: 1px solid var(--color-border);
@@ -662,14 +657,14 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Inner bordered sub-card (nested inside a flush card) */
-.card__sub {
+.card-sub {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--space-md);
 }
 
-.card__sub:last-child {
+.card-sub:last-child {
   margin-bottom: 0;
 }
 
@@ -684,7 +679,7 @@ body[data-theme="dark"] .proficiency-btn.active {
   align-items: baseline;
 }
 
-.step-row + .step-row {
+.step-row+.step-row {
   border-top: 1px solid var(--color-border);
 }
 
@@ -756,17 +751,6 @@ body[data-theme="dark"] .proficiency-btn.active {
    ACCORDION (card-flush + collapsible combo)
    ============================================= */
 
-/* Override collapsible-summary padding when inside a flush card */
-.card--flush > .collapsible-summary {
-  padding: var(--space-md) var(--space-lg);
-  gap: var(--space-sm);
-}
-
-/* Border between summary and collapsible content inside a flush card */
-.card--flush .collapsible-inner {
-  border-top: 1px solid var(--color-border);
-}
-
 /* Flex-1 text block inside accordion summary (pushes badge/chevron to right) */
 .accordion-text {
   flex: 1;
@@ -779,23 +763,10 @@ body[data-theme="dark"] .proficiency-btn.active {
 }
 
 /* Inner header row within a block step row */
-.step-row--block > .step-header {
+.step-row--block>.step-header {
   display: flex;
   gap: var(--space-md);
   align-items: baseline;
-}
-
-/* Padded body area with domain-tinted background — matches domain page pattern */
-.collapsible-body {
-  padding: var(--space-md) var(--space-lg);
-  background: color-mix(in srgb, var(--color-surface) 0%, var(--color-mix-base) 79%);
-}
-
-.collapsible-body > p:first-child {
-  margin: 0 0 var(--space-md);
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  font-style: italic;
 }
 
 .accordion-title {
@@ -826,18 +797,147 @@ body[data-theme="dark"] .proficiency-btn.active {
   flex-shrink: 0;
 }
 
-/* Two-column auto-fit grid */
-.pair-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+/* CFOverview color-mix presets — set --color-accent on the parent */
+.cf-bg-6 {
+  background: color-mix(in srgb, var(--color-accent) 6%, var(--color-surface));
 }
 
-/* CFOverview color-mix presets — set --color-accent on the parent */
-.cf-bg-6   { background: color-mix(in srgb, var(--color-accent)  6%, var(--color-surface)); }
-.cf-bg-8   { background: color-mix(in srgb, var(--color-accent)  8%, var(--color-surface)); }
-.cf-bg-12  { background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)); }
-.cf-border-20 { border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent); }
-.cf-border-35 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent); }
-.cf-border-40 { border: 1.5px solid color-mix(in srgb, var(--color-accent) 40%, transparent); }
+.cf-bg-8 {
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface));
+}
+
+.cf-bg-12 {
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface));
+}
+
+.cf-border-20 {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.cf-border-35 {
+  border: 1.5px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+.cf-border-40 {
+  border: 1.5px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+/* Training and Qualifications Lists */
+.training-list,
+.qualifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.training-card,
+.qualification-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.training-name,
+.qualification-name {
+  width: 100%;
+  padding: var(--space-md);
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training-name::after,
+.qualification-name::after {
+  content: '▼';
+  font-size: 0.7rem;
+  margin-left: var(--space-sm);
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+}
+
+.training-card:has(.training-name:focus),
+.qualification-card:has(.qualification-name:focus) {
+  outline: 2px solid var(--color-text);
+  outline-offset: -1px;
+}
+
+.training-name:hover,
+.qualification-name:hover {
+  background: var(--color-surface-raised);
+}
+
+.training-detail,
+.qualification-detail {
+  padding: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-raised);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.detail-field {
+  color: var(--color-text);
+}
+
+.detail-field strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--color-text-strong);
+}
+
+/* General padding for domain and subdomain descriptions */
+.domain-desc-text {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.subdomain-desc-text {
+  padding-top: var(--space-xxs);
+  padding-bottom: var(--space-xxs);
+}
+
+/* Mobile responsive styles for Framework Contents page cards */
+@media (max-width: 767.98px) {
+  .skills-framework .scroll-area {
+    padding: var(--space-md) var(--space-sm) !important;
+  }
+
+  .competency-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    margin-bottom: var(--space-lg) !important;
+  }
+
+  .domain-header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .subdomain-row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .subdomain-desc-text,
+  .competency-chips {
+    padding-left: 1.25rem !important;
+  }
+}

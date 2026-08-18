@@ -1,0 +1,144 @@
+/* =============================================
+   STICKY NAV — unified sticky section navigation
+   Consolidates: page-subnav (index), home-subnav (project/rtp),
+   sticky-subnav (page-nav), subdomain-tabs, competency-tabs.
+   Built on Bootstrap `nav nav-tabs`.
+   ============================================= */
+
+/* --- Nav wrapper with frosted glass --- */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-glass-border);
+  transition: box-shadow var(--transition-base), background var(--transition-base);
+}
+
+/* --- Stuck state (more opaque background) --- */
+.sticky-nav--stuck {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Primary tab row --- */
+.sticky-nav-top {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-deep-blue) var(--color-surface);
+  padding: var(--space-sm) var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sticky-nav-top::-webkit-scrollbar {
+  height: 6px;
+}
+
+.sticky-nav-top::-webkit-scrollbar-track {
+  background: var(--color-surface);
+  border-radius: 10px;
+}
+
+.sticky-nav-top::-webkit-scrollbar-thumb {
+  background: var(--color-deep-blue);
+  border-radius: 10px;
+}
+
+/* --- Secondary / subsection tab row --- */
+.sticky-nav-sub {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-deep-blue) var(--color-surface);
+  padding: var(--space-2xs) var(--space-xl);
+  min-height: 2rem;
+}
+
+.sticky-nav-sub::-webkit-scrollbar {
+  height: 6px;
+}
+
+.sticky-nav-sub::-webkit-scrollbar-track {
+  background: var(--color-surface);
+  border-radius: 10px;
+}
+
+.sticky-nav-sub::-webkit-scrollbar-thumb {
+  background: var(--color-deep-blue);
+  border-radius: 10px;
+}
+
+/* --- Override Bootstrap nav-tabs defaults inside sticky-nav --- */
+.sticky-nav .nav-tabs {
+  border-bottom: none;            /* We handle border on .sticky-nav-top */
+}
+
+.sticky-nav .nav-item {
+  flex-shrink: 0;
+}
+
+.sticky-nav .nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: var(--space-xs) var(--space-md);
+  padding-bottom: var(--space-sm);
+  transition:
+    color        var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.sticky-nav .nav-tabs .nav-link:hover {
+  color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+  border-bottom-color: color-mix(in srgb, var(--color-domain) 50%, var(--color-mix-base) 50%);
+}
+
+.sticky-nav .nav-tabs .nav-link.active {
+  color: var(--color-domain, var(--color-accent));
+  border-bottom-color: var(--color-domain, var(--color-accent));
+  background-color: transparent;
+}
+
+/* --- Responsive --- */
+@media (max-width: 767.98px) {
+  .sticky-nav-top,
+  .sticky-nav-sub {
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+  }
+  
+  .sticky-nav .nav-tabs .nav-link {
+    padding: var(--space-xs) var(--space-xs);
+    padding-bottom: var(--space-xs);
+    font-size: 0.8rem;
+  }
+}
+
+/* --- Dark mode --- */
+html[data-theme="dark"] .sticky-nav {
+  background: rgba(13, 17, 23, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .sticky-nav--stuck {
+  background: rgba(13, 17, 23, 0.85);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
