@@ -1,0 +1,79 @@
+.page-container {
+  padding: 0;
+}
+
+.page-container h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.page-container>h2:first-child {
+  margin-top: 0;
+}
+
+.page-container p {
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+}
+
+.page-container p:last-child {
+  margin-bottom: 0;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.rtp-placements-page,
+.student-projects-page,
+.project-page,
+.meet-the-team-page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.list-disc {
+  list-style-type: disc;
+  padding-left: var(--space-xl);
+}
+
+.list-disc li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.nhs-blue {
+  color: var(--color-nhs-blue) !important;
+}
+
+/* =============================================
+   TABLE STYLING — overrides on top of Bootstrap's .table
+   ============================================= */
+
+.table thead th {
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 600;
+  font-size: var(--text-small);
+  color: var(--color-heading);
+  letter-spacing: 0.02em;
+}
+
+.table tbody td {
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+}

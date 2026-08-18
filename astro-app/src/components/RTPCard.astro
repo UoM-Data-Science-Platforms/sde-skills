@@ -1,0 +1,84 @@
+---
+import { INSTITUTION_COLORS } from '../data/domains.js';
+
+interface Props {
+  trainee: any;
+  variant?: 'featured' | 'detailed';
+}
+
+const { trainee: r, variant = 'featured' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+const photoUrl = r.photo ? `${base}${r.photo.replace(/^\//, '')}` : null;
+const institutionColor = r.institution ? INSTITUTION_COLORS[r.institution] : undefined;
+---
+
+{variant === 'featured' ? (
+  <div class="rtp-card glass--soft">
+    <div class="card-header">
+      <div class="card-info-header">
+        <h3 style={institutionColor ? { color: institutionColor } : {}}>{r.name}</h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="trainee-profile-layout">
+        {photoUrl && (
+          <div class="rtp-photo">
+            <img src={photoUrl} alt={r.name} />
+          </div>
+        )}
+        <div class="trainee-details">
+          <p class="team-affiliation"><span class="institution-label"><strong>Institution:</strong> </span>{r.affiliation}</p>
+        </div>
+      </div>
+      <div class="rtp-content mt-3">
+        <p class="team-role"><strong>Role:</strong> {r.role}</p>
+        <p class="rtp-focus"><strong>Focus:</strong> {r.focus}</p>
+        {r.quote && <p class="rtp-quote">{r.quote}</p>}
+      </div>
+    </div>
+  </div>
+) : (
+  <article class="card glass--soft" id={`trainee-${r.id}`}>
+    <div class="card-header">
+      <div class="card-info-header">
+        <h3 class="card-title" style={institutionColor ? { color: institutionColor } : {}}>{r.name}</h3>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="trainee-profile-layout">
+        {photoUrl && (
+          <div class="card-photo">
+            <img src={photoUrl} alt={r.name} />
+          </div>
+        )}
+        <div class="trainee-details">
+          <div class="mb-1 trainee-institution"><span class="institution-label"><strong>Institution:</strong> </span>{r.affiliation}</div>
+          <div class="mb-1 trainee-focus"><i>{r.focus}</i></div>
+          {r.skills && r.skills.length > 0 && (
+            <div class="trainee-skills-section">
+              <div class="mb-1"><strong>Key skills:</strong></div>
+              <div class="d-flex flex-wrap gap-2">
+                {r.skills.map((skill) => (
+                  <span 
+                    class="badge rounded-pill" 
+                    style={{ 
+                      borderColor: institutionColor, 
+                      background: institutionColor ? `color-mix(in srgb, ${institutionColor} 15%, transparent)` : 'transparent', 
+                      fontSize: '0.8125rem', 
+                      padding: '4px 12px' 
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      <blockquote class="blockquote mt-3">
+        <p class="card-text">{r.quote}</p>
+      </blockquote>
+    </div>
+  </article>
+)}

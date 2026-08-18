@@ -1,0 +1,75 @@
+.retreat-card {
+    margin: var(--space-3xl) var(--space-xl);
+    scroll-margin-top: 80px;
+    /* Replace 80px with the exact height of your sticky element */
+}
+
+#subsection-tabs {
+    display: none;
+}
+
+.hero-panel {
+    width: 100%;
+    max-width: 32rem;
+    padding: var(--space-xl);
+}
+
+.venue-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+}
+
+.venue-grid strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: var(--text-body);
+}
+
+.retreat-page .label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: var(--text-small);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.scroll-area {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.agenda p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+    .venue-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .retreat-page .card {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: var(--space-md) var(--space-sm);
+    }
+
+    .retreat-card {
+        margin: var(--space-xl) var(--space-xs);
+    }
+
+    .retreat-card .card-body {
+        border-bottom: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .retreat-card .list-group {
+        padding-left: var(--space-md);
+    }
+}

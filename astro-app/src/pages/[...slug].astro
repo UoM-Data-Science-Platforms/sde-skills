@@ -1,6 +1,7 @@
 ---
 import SkillsFramework from '../components/SkillsFramework.jsx';
 import Layout from '../layouts/Layout.astro';
+import { DOMAINS } from '../data/domains.js';
 
 export async function getStaticPaths() {
   const paths = [
@@ -16,7 +17,9 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const domain = DOMAINS.find(d => d.id === slug);
+const pageTitle = domain ? `${domain.name} — SDE Team Development Hub` : `Skills Framework — SDE Team Development Hub`;
 ---
-<Layout title="Skills Framework" currentDomain={slug}>
+<Layout title={pageTitle} currentDomain={slug}>
   <SkillsFramework client:load />
 </Layout>

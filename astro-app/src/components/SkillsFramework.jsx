@@ -21,6 +21,63 @@ function CollapsibleSection({ title, defaultOpen = false, children }) {
   );
 }
 
+function TrainingCard({ training }) {
+  const [showDetail, setShowDetail] = React.useState(false);
+  return (
+    <div className="training-card">
+      <button
+        className="training-name"
+        onClick={() => setShowDetail(!showDetail)}
+      >
+        {training.name}
+      </button>
+      {showDetail && (
+        <div className="training-detail">
+          <div className="detail-field">
+            <strong>Format:</strong> {training.format}
+          </div>
+          <div className="detail-field">
+            <strong>Duration:</strong> {training.duration}
+          </div>
+          <div className="detail-field">
+            <strong>What:</strong> {training.description}
+          </div>
+          <div className="detail-field">
+            <strong>Why:</strong> {training.why}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function QualificationCard({ qualification }) {
+  const [showDetail, setShowDetail] = React.useState(false);
+  return (
+    <div className="qualification-card">
+      <button
+        className="qualification-name"
+        onClick={() => setShowDetail(!showDetail)}
+      >
+        {qualification.name}
+      </button>
+      {showDetail && (
+        <div className="qualification-detail">
+          <div className="detail-field">
+            <strong>Issued by:</strong> {qualification.issuer}
+          </div>
+          <div className="detail-field">
+            {qualification.description}
+          </div>
+          <div className="detail-field">
+            <strong>Career Impact:</strong> {qualification.career_impact}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function SkillsFramework() {
   const [data, setData] = React.useState(null);
   const [stickySubdomain, setStickySubdomain] = React.useState('');
@@ -71,7 +128,7 @@ export default function SkillsFramework() {
       // stickyHeight = absolute document Y of the scroll-area top (= sticky header + subnav height).
       // This stays constant regardless of current scroll position.
       const stickyHeight = scrollArea.getBoundingClientRect().top + window.scrollY;
-      const elAbsolute  = el.getBoundingClientRect().top + window.scrollY;
+      const elAbsolute = el.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: Math.max(0, elAbsolute - stickyHeight - offset),
         behavior: 'smooth',
@@ -100,6 +157,7 @@ export default function SkillsFramework() {
   React.useEffect(() => {
     const filename = getYamlFilename();
     const indexFile = `${base}data/skills_index.yaml`;
+
     fetch(filename)
       .then(res => {
         if (!res.ok) throw new Error(`Could not load ${filename}`);
@@ -138,18 +196,18 @@ export default function SkillsFramework() {
   React.useEffect(() => {
     if (!data) return;
     const params = new URLSearchParams(window.location.search);
-    const targetSub  = params.get('sub');
+    const targetSub = params.get('sub');
     const targetComp = params.get('comp');
     if (!targetSub) return;
-    const subdomains   = Object.entries(data.domain.subdomains ?? {});
+    const subdomains = Object.entries(data.domain.subdomains ?? {});
     const domainNumber = data.domain.index;
-    const subIdx       = subdomains.findIndex(([key]) => key === targetSub);
+    const subIdx = subdomains.findIndex(([key]) => key === targetSub);
     if (subIdx < 0) return;
     const subNumber = `${domainNumber}.${subIdx + 1}`;
     setStickySubdomain(subdomains[subIdx][1]?.name ?? '');
     setStickySubNumber(subNumber);
     if (targetComp) {
-      const comps   = Object.entries(subdomains[subIdx][1].competencies ?? {});
+      const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
       const compIdx = comps.findIndex(([key]) => key === targetComp);
       if (compIdx >= 0) {
         const compNumber = `${subNumber}.${compIdx + 1}`;
@@ -160,8 +218,8 @@ export default function SkillsFramework() {
     // Delay scroll until refs are populated after render
     setTimeout(() => {
       if (targetComp) {
-        const comps      = Object.entries(subdomains[subIdx][1].competencies ?? {});
-        const compIdx    = comps.findIndex(([key]) => key === targetComp);
+        const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
+        const compIdx = comps.findIndex(([key]) => key === targetComp);
         if (compIdx >= 0) scrollToElement(compRefs.current[`${subNumber}.${compIdx + 1}`]);
       } else {
         scrollToElement(subdomainRefs.current[subNumber]);
@@ -223,9 +281,18 @@ export default function SkillsFramework() {
   const handleScroll = () => {
     if (!sectionRefs.current.length || !scrollAreaRef.current) return;
 
-    // The top of the scroll area in viewport coords = bottom of the sticky header.
-    // An element triggers when its top edge crosses this boundary.
-    const threshold = scrollAreaRef.current.getBoundingClientRect().top + 23;
+    let threshold = 110;
+    const isDesktop = window.innerWidth >= 992;
+    if (isDesktop) {
+      // Desktop: top of scrollAreaRef is stable (below sticky header/nav)
+      threshold = scrollAreaRef.current.getBoundingClientRect().top + 23;
+    } else {
+      // Mobile: window scrolls, so get position of the sticky header/nav bottom
+      const stickyNav = frameworkRef.current?.querySelector('.sticky-nav');
+      if (stickyNav) {
+        threshold = stickyNav.getBoundingClientRect().bottom + 10;
+      }
+    }
 
     let foundSubdomain = '';
     let foundSubNumber = '';
@@ -286,22 +353,24 @@ export default function SkillsFramework() {
       </div>
 
       {/* Sticky subdomain / competency nav */}
-      <div className="sticky-subnav">
-        <div className="subdomain-tabs" ref={subdomainTabsRef}>
+      <nav className="sticky-nav" role="navigation" aria-label="Page sections">
+        <ul className="nav nav-tabs sticky-nav-top" ref={subdomainTabsRef} role="tablist">
           {subdomains.map(([subKey, subVal], idx) => {
             const subNumber = `${domainNumber}.${idx + 1}`;
             return (
-              <button
-                key={subKey}
-                className={`tab subdomain-tab${stickySubNumber === subNumber ? ' active' : ''}`}
-                onClick={() => scrollToElement(subdomainRefs.current[subNumber])}
-              >
-                {subNumber} {subVal.name}
-              </button>
+              <li key={subKey} className="nav-item" role="presentation">
+                <button
+                  className={`nav-link tab subdomain-tab${stickySubNumber === subNumber ? ' active' : ''}`}
+                  role="tab"
+                  onClick={() => scrollToElement(subdomainRefs.current[subNumber])}
+                >
+                  {subNumber} {subVal.name}
+                </button>
+              </li>
             );
           })}
-        </div>
-        <div className="competency-tabs" ref={competencyTabsRef}>
+        </ul>
+        <ul className="nav nav-tabs sticky-nav-sub" ref={competencyTabsRef} role="tablist">
           {subdomains
             .find(([, subVal], idx) => `${domainNumber}.${idx + 1}` === stickySubNumber)
             ?.[1].competencies &&
@@ -310,20 +379,22 @@ export default function SkillsFramework() {
             ).map(([compKey, compVal], idx) => {
               const compNumber = `${stickySubNumber}.${idx + 1}`;
               return (
-                <button
-                  key={compKey}
-                  className={`tab competency-tab${stickyCompNumber === compNumber ? ' active' : ''}`}
-                  onClick={() => scrollToElement(compRefs.current[compNumber])}
-                >
-                  {compNumber} {compVal.name || compVal.id}
-                </button>
+                <li key={compKey} className="nav-item" role="presentation">
+                  <button
+                    className={`nav-link tab competency-tab${stickyCompNumber === compNumber ? ' active' : ''}`}
+                    role="tab"
+                    onClick={() => scrollToElement(compRefs.current[compNumber])}
+                  >
+                    {compNumber} {compVal.name || compVal.id}
+                  </button>
+                </li>
               );
             })}
-        </div>
-      </div>
+        </ul>
+      </nav>
 
       {/* Scrollable content */}
-      <div className="scroll-area" ref={scrollAreaRef} onScroll={handleScroll}>
+      <div className="scroll-area p-2 pt-4" ref={scrollAreaRef} onScroll={handleScroll}>
         {data.domain.description && (
           <p className="domain-description">{data.domain.description}</p>
         )}
@@ -343,23 +414,17 @@ export default function SkillsFramework() {
                 <p className="subdomain-description">{subVal.description}</p>
               )}
 
-              {/* HACK: hardcoded relevant tools/technologies/standards prototype — remove when implementing properly */}
-                {false && (
-                  <div className="subdomain-relevant">
-                <div className="relevant-group">
-                  <span className="relevant-label">Tools</span>
-                  {['Git / GitHub', 'VS Code', 'SonarQube', 'Jira'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
+              {/* Tools, Technologies, and Standards at subdomain level */}
+              {subVal.items?.length > 0 && (
+                <div className="subdomain-tech-section glass--soft">
+                  <span className="tech-label">Tools, Technologies & Standards:</span>
+                  <div className="tech-chips">
+                    {subVal.items.map((item, idx) => (
+                      <span key={idx} className="badge tech-chip">{item}</span>
+                    ))}
+                  </div>
                 </div>
-                <div className="relevant-group">
-                  <span className="relevant-label">Technologies</span>
-                  {['Python', 'REST APIs', 'Docker', 'CI/CD Pipelines'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
-                </div>
-                <div className="relevant-group">
-                  <span className="relevant-label">Standards</span>
-                  {['OWASP Top 10', 'ISO/IEC 27001', 'NCSC Secure Dev'].map(t => <span key={t} className="relevant-chip">{t}</span>)}
-                </div>
-              </div>)}
-              {/* END HACK */}
+              )}
 
               {competencies.map(([compKey, compVal], compIdx) => {
                 const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;
@@ -388,11 +453,11 @@ export default function SkillsFramework() {
                     <p className="competency-description">{compVal.description}</p>
 
                     {/* Experience-level selector */}
-                    <div className="level-buttons">
+                    <div className="btn-group level-buttons" role="group" aria-label="Experience level">
                       {levels.map(([levelKey]) => (
                         <button
                           key={levelKey}
-                          className={`level-btn${selectedLevel === levelKey ? ' active' : ''}`}
+                          className={`btn level-btn${selectedLevel === levelKey ? ' active btn-primary' : ' btn-outline-primary'}`}
                           onClick={() => toggleLevel(compNumber, levelKey)}
                         >
                           {levelLabels[levelKey] || levelKey.charAt(0).toUpperCase() + levelKey.slice(1)}
@@ -419,10 +484,26 @@ export default function SkillsFramework() {
                             <div className="proficiency-detail">
                               <h4>{selectedLevelData.skills[activeProficiency[compNumber]]}</h4>
                               <CollapsibleSection title="Training Materials">
-                                <p>No training materials listed yet.</p>
+                                {selectedLevelData?.training_materials?.length > 0 ? (
+                                  <div className="training-list">
+                                    {selectedLevelData.training_materials.map((training, idx) => (
+                                      <TrainingCard key={idx} training={training} />
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p>No training materials for this level.</p>
+                                )}
                               </CollapsibleSection>
                               <CollapsibleSection title="Qualifications">
-                                <p>No qualifications listed yet.</p>
+                                {selectedLevelData?.qualifications?.length > 0 ? (
+                                  <div className="qualifications-list">
+                                    {selectedLevelData.qualifications.map((qual, idx) => (
+                                      <QualificationCard key={idx} qualification={qual} />
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p>No qualifications for this level.</p>
+                                )}
                               </CollapsibleSection>
                             </div>
                           ) : (

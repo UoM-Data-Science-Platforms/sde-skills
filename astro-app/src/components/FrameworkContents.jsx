@@ -8,15 +8,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 function domainLink(slug, subId, compId) {
   const params = new URLSearchParams();
-  if (subId)  params.set('sub',  subId);
+  if (subId) params.set('sub', subId);
   if (compId) params.set('comp', compId);
   const qs = params.toString();
   return `${base}${slug}/${qs ? '?' + qs : ''}`;
 }
 
 export default function FrameworkContents() {
-  const [domains, setDomains]     = useState([]);
-  const [loading, setLoading]     = useState(true);
+  const [domains, setDomains] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [activeSlug, setActiveSlug] = useState(null);
   const scrollRef = useRef(null);
 
@@ -49,7 +49,11 @@ export default function FrameworkContents() {
       setActiveSlug(active);
     };
     el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      el.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScroll);
+    };
   }, [domains]);
 
   const scrollTo = useCallback((slug) => {
@@ -70,20 +74,22 @@ export default function FrameworkContents() {
       <div className="sticky-header">
         <h1>Framework Contents</h1>
       </div>
-      <div className="sticky-subnav">
-        <div className="subdomain-tabs">
+      <nav className="sticky-nav" role="navigation" aria-label="Page sections">
+        <ul className="nav nav-tabs sticky-nav-top" role="tablist">
           {domains.map(({ slug, data }) => (
-            <button
-              key={slug}
-              className={`tab subdomain-tab${activeSlug === slug ? ' active' : ''}`}
-              style={{ '--color-domain': DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)' }}
-              onClick={() => scrollTo(slug)}
-            >
-              {data.domain.index}. {data.domain.name.replace(/^Safe /, '')}
-            </button>
+            <li key={slug} className="nav-item" role="presentation">
+              <button
+                className={`nav-link tab subdomain-tab${activeSlug === slug ? ' active' : ''}`}
+                style={{ '--color-domain': DOMAIN_COLORS[slug] ?? 'var(--color-domain-base)' }}
+                role="tab"
+                onClick={() => scrollTo(slug)}
+              >
+                {data.domain.index}. {data.domain.name.replace(/^Safe /, '')}
+              </button>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </nav>
       <div className="scroll-area" ref={scrollRef} style={{ padding: 'var(--space-xl)' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
           {domains.map(({ slug, data }) => (
@@ -107,10 +113,10 @@ function DomainSection({ slug, domain }) {
       style={{ padding: 0, overflow: 'hidden' }}
     >
       {/* Domain header */}
-      <div style={{ padding: 'var(--space-lg) var(--space-xl)', borderBottom: '1px solid var(--color-border)' }}>
+      <div className="domain-header" style={{ padding: 'var(--space-lg) var(--space-xl)', borderBottom: '1px solid var(--color-border)' }}>
         <a
           href={domainLink(slug)}
-          style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: domain.description ? 'var(--space-sm)' : 0 }}
+          style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: domain.description ? 'var(--space-xs)' : 0 }}
         >
           <span style={{ fontSize: '1.1rem', fontWeight: 800, color, minWidth: '1.8rem', flexShrink: 0 }}>
             {domain.index}
@@ -123,7 +129,7 @@ function DomainSection({ slug, domain }) {
           </span>
         </a>
         {domain.description && (
-          <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: 1.65 }}>
+          <p className="domain-desc-text" style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: 1.65, paddingTop: 'var(--space-xs)', paddingBottom: 'var(--space-xs)' }}>
             {domain.description}
           </p>
         )}
@@ -150,11 +156,11 @@ function SubdomainRow({ slug, subId, sub, color, number, divider }) {
   const competencies = Object.entries(sub.competencies ?? {});
   const desc = sub.description ?? '';
   const firstSentenceEnd = desc.search(/\.\s/);
-  const firstLine  = firstSentenceEnd > 0 ? desc.slice(0, firstSentenceEnd + 1) : desc;
-  const remainder  = firstSentenceEnd > 0 ? desc.slice(firstSentenceEnd + 1).trim() : '';
+  const firstLine = firstSentenceEnd > 0 ? desc.slice(0, firstSentenceEnd + 1) : desc;
+  const remainder = firstSentenceEnd > 0 ? desc.slice(firstSentenceEnd + 1).trim() : '';
 
   return (
-    <div style={{
+    <div className="subdomain-row" style={{
       borderTop: divider ? '1px solid var(--color-border)' : 'none',
       padding: 'var(--space-md) var(--space-xl)',
     }}>
@@ -175,7 +181,7 @@ function SubdomainRow({ slug, subId, sub, color, number, divider }) {
 
       {/* Subdomain description */}
       {desc && (
-        <p style={{ fontSize: '0.78rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: 1.6, margin: '0 0 var(--space-sm)', paddingLeft: '2.5rem' }}>
+        <p className="subdomain-desc-text" style={{ fontSize: '0.78rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: 1.6, margin: '0 0 var(--space-sm)', paddingLeft: '2.5rem', paddingTop: 'var(--space-xxs)', paddingBottom: 'var(--space-xxs)' }}>
           {firstLine}
           {!expanded && remainder && (
             <button onClick={() => setExpanded(true)} style={{ background: 'none', border: 'none', cursor: 'pointer', color, fontSize: '0.72rem', fontWeight: 600, padding: '0 0 0 4px' }}>
@@ -194,7 +200,7 @@ function SubdomainRow({ slug, subId, sub, color, number, divider }) {
       )}
 
       {/* Competency chips */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-xs)', paddingLeft: '2.5rem' }}>
+      <div className="competency-chips" style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-xs)', paddingLeft: '2.5rem' }}>
         {competencies.map(([compId, comp], compIdx) => (
           <a
             key={compId}

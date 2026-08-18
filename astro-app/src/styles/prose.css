@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .prose {
     padding: var(--space-xl) var(--space-md);
     height: auto;
@@ -90,7 +90,7 @@
 }
 
 /* Italicise only the opening description paragraph */
-.prose--lead > p:first-of-type {
+.prose--lead>p:first-of-type {
   font-style: italic;
 }
 
@@ -104,6 +104,22 @@
   font-size: var(--text-small);
   color: var(--color-text-muted);
   line-height: 1.6;
+}
+
+/* Inline link */
+.btn-link,
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+
+  color: inherit;
+}
+
+.btn-link:hover,
+.link:hover {
+  color: inherit;
+  opacity: 0.8;
 }
 
 /* NHS blue inline link */
