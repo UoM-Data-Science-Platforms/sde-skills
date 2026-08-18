@@ -415,16 +415,22 @@ export default function SkillsFramework() {
               )}
 
               {/* Tools, Technologies, and Standards at subdomain level */}
-              {subVal.items?.length > 0 && (
-                <div className="subdomain-tech-section glass--soft">
-                  <span className="tech-label">Tools, Technologies & Standards:</span>
-                  <div className="tech-chips">
-                    {subVal.items.map((item, idx) => (
-                      <span key={idx} className="badge tech-chip">{item}</span>
-                    ))}
+              {subVal.items?.length > 0 && (() => {
+                const techChips = subVal.items.flatMap(group =>
+                  typeof group === 'string' ? [group] : (group?.items || [])
+                );
+                if (techChips.length === 0) return null;
+                return (
+                  <div className="subdomain-tech-section glass--soft">
+                    <span className="tech-label">Tools, Technologies & Standards:</span>
+                    <div className="tech-chips">
+                      {techChips.map((item, idx) => (
+                        <span key={idx} className="badge tech-chip">{item}</span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
 
               {competencies.map(([compKey, compVal], compIdx) => {
                 const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;
