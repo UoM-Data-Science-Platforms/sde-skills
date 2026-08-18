@@ -1,3 +1,10 @@
+.page-container,
+.container-fluid {
+  max-width: var(--content-max-width, 1440px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-container {
   padding: 0;
 }

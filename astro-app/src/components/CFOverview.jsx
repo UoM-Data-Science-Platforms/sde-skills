@@ -29,21 +29,21 @@ const FIVE_SAFES_LOOKUP = {
 };
 
 const DOMAINS = [
-  { id: 'technology-engineering', name: 'Safe Technology & Engineering', desc: 'Technical implementation of secure systems' },
-  { id: 'data-management', name: 'Safe Data Management', desc: 'Handling, processing, and governing data' },
   { id: 'access-identity', name: 'Safe Access & Identity', desc: 'User authentication, authorisation, and access control' },
+  { id: 'data-management', name: 'Safe Data Management', desc: 'Handling, processing, and governing data' },
+  { id: 'governance-compliance', name: 'Safe Governance & Compliance', desc: 'Meeting regulatory and ethical requirements' },
   { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control', desc: 'Ensuring non-disclosive research outputs' },
   { id: 'projects-operations', name: 'Safe Projects & Operations', desc: 'Project management and operational excellence' },
-  { id: 'governance-compliance', name: 'Safe Governance & Compliance', desc: 'Meeting regulatory and ethical requirements' },
+  { id: 'technology-engineering', name: 'Safe Technology & Engineering', desc: 'Technical implementation of secure systems' },
 ];
 
 const FIVE_SAFES = [
-  { domain: 'Safe Technology & Engineering', principle: 'Safe Settings' },
-  { domain: 'Safe Data Management', principle: 'Safe Data' },
   { domain: 'Safe Access & Identity', principle: 'Safe People' },
+  { domain: 'Safe Data Management', principle: 'Safe Data' },
+  { domain: 'Safe Governance & Compliance', principle: 'Spans all five' },
   { domain: 'Safe Outputs & Disclosure Control', principle: 'Safe Outputs' },
   { domain: 'Safe Projects & Operations', principle: 'Safe Projects' },
-  { domain: 'Safe Governance & Compliance', principle: 'Spans all five' },
+  { domain: 'Safe Technology & Engineering', principle: 'Safe Settings' },
 ];
 
 

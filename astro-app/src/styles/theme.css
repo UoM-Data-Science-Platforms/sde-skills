@@ -40,6 +40,9 @@
     radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-pastel), transparent 100%),
     linear-gradient(45deg, white 99%);
 
+  /* Content container max-width on 4K/ultra-wide displays */
+  --content-max-width: 1440px;
+
   /* Typography */
   --font-heading: 'Poppins', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -49,8 +52,8 @@
   --text-subdomain:   clamp(1.75rem, 3vw, 2rem);       /* 28–32px */
   --text-competency:  clamp(1.375rem, 2vw, 1.5rem);    /* 22–24px */
   --text-proficiency: clamp(1.125rem, 1.5vw, 1.25rem); /* 18–20px */
-  --text-body:        clamp(1rem, 1.25vw, 1.125rem);   /* 16–18px */
-  --text-small:       0.875rem;
+  --text-body:        clamp(1.05rem, 1.25vw, 1.1875rem);   /* Enhanced readability */
+  --text-small:       0.9rem;
 
   /* Spacing scale */
   --space-2xs: 0.25rem;  /*  4px */

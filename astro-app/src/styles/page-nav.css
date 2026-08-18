@@ -93,6 +93,12 @@
   background-color: var(--color-glass-bg);
 }
 
+.scroll-area > *:not(.wide-hero) {
+  max-width: var(--content-max-width, 1440px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .scroll-area::-webkit-scrollbar {
   width: 4px;
 }
