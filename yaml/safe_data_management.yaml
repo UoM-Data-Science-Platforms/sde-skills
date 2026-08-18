@@ -36,8 +36,8 @@ domain:
               id: data-integrity-entry
               name: Entry Level
               skills:
-              - Understands the importance of data integrity in secure environments
-              - Familiar with basic integrity verification methods (e.g. checksums)
+              - Explains the importance of data integrity in secure environments
+              - Calculates and verifies data integrity using standard hashing tools (e.g. checksums)
               - Can perform manual integrity checks under supervision
             mid:
               id: data-integrity-mid
@@ -69,9 +69,9 @@ domain:
               id: data-cataloguing-discovery-entry
               name: Entry Level
               skills:
-              - Understands the purpose and structure of data catalogues
-              - Familiar with metadata standards and practices
-              - Familiar with common data cataloguing tools
+              - Describes the purpose and structure of data catalogues
+              - Applies metadata standards and documentation schemas to datasets
+              - Identifies and navigates common data cataloguing and discovery platforms
             mid:
               id: data-cataloguing-discovery-mid
               name: Mid Level
@@ -101,8 +101,8 @@ domain:
               id: data-classification-sensitivity-entry
               name: Entry Level
               skills:
-              - Understands basic data classification principles and sensitivity levels
-              - Familiar with common data types (PII, PHI, etc.) and their handling requirements
+              - Classifies data according to sensitivity levels and institutional classification schemes
+              - Identifies sensitive data categories (e.g. PII, PHI) and their handling constraints
               - Can apply classification labels following established guidelines
             mid:
               id: data-classification-sensitivity-mid
@@ -134,8 +134,8 @@ domain:
               id: data-lineage-provenance-entry
               name: Entry Level
               skills:
-              - Understands basic concepts of data tracking through systems
-              - Familiar with metadata documentation for data lineage
+              - Describes data lineage and tracking concepts across processing pipelines
+              - Documents dataset lineage and transformations using metadata schemas
               - Can document data sources and transformations
             mid:
               id: data-lineage-provenance-mid
@@ -166,8 +166,8 @@ domain:
               id: data-quality-management-entry
               name: Entry Level
               skills:
-              - Understands data quality dimensions (accuracy, completeness, etc.)
-              - Familiar with basic data validation techniques
+              - Identifies standard data quality dimensions (e.g. accuracy, completeness, consistency)
+              - Applies basic data validation checks and formatting rules
               - Can execute data quality checks following established procedures
             mid:
               id: data-quality-management-mid
@@ -213,9 +213,9 @@ domain:
               id: data-pipeline-development-entry
               name: Entry Level
               skills:
-              - Familiar with data pipeline concepts and components
+              - Identifies core data pipeline components (e.g. ETL/ELT, ingestion, staging)
               - Can develop simple ETL processes under supervision
-              - Understands data transformation and loading techniques
+              - Describes data transformation and loading techniques
             mid:
               id: data-pipeline-development-mid
               name: Mid Level
@@ -246,8 +246,8 @@ domain:
               id: data-storage-database-management-entry
               name: Entry Level
               skills:
-              - Understands various database types (relational, NoSQL, etc.)
-              - Familiar with basic SQL and database operations
+              - Distinguishes between various database paradigms (e.g. relational, document, graph)
+              - Executes basic SQL queries and data manipulation operations
               - Can perform database administration tasks under supervision
             mid:
               id: data-storage-database-management-mid
@@ -280,8 +280,8 @@ domain:
               id: data-models-standardisation-entry
               name: Entry Level
               skills:
-              - Understands the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
-              - Aware of the need for platform support to enable use of these models
+              - Describes the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
+              - Recognises platform and infrastructure dependencies required for standardised models
               - Can identify when a platform supports or does not support a given data model
             mid:
               id: data-models-standardisation-mid
@@ -314,8 +314,8 @@ domain:
               id: event-driven-data-processing-entry
               name: Entry Level
               skills:
-              - Understands event-driven architecture concepts for data processing
-              - Familiar with event streaming platforms (Kafka, etc.)
+              - Explains event-driven architecture concepts for data processing
+              - Identifies event streaming platforms (e.g. Apache Kafka) and their use cases
               - Can implement simple event producers and consumers
             mid:
               id: event-driven-data-processing-mid
@@ -347,9 +347,9 @@ domain:
               id: encryption-standards-implementation-entry
               name: Entry Level
               skills:
-              - Familiar with symmetric and asymmetric encryption methods (AES, RSA, etc.)
+              - Differentiates between symmetric and asymmetric encryption algorithms (e.g. AES, RSA)
               - Can follow predefined encryption standards and best practices
-              - Understands how encryption protects data at rest and in transit
+              - Explains how cryptographic controls protect data at rest and in transit
             mid:
               id: encryption-standards-implementation-mid
               name: Mid Level
@@ -382,9 +382,9 @@ domain:
               id: data-backups-entry
               name: Entry Level
               skills:
-              - Familiar with different backup types (full, incremental, differential) and their use cases
+              - Differentiates between backup strategies (full, incremental, differential) and use cases
               - Can adhere to predefined backup schedules and retention policies
-              - Understands how to restore data from backups in case of accidental deletion or corruption
+              - Executes standard data restoration procedures from backups during recovery scenarios
             mid:
               id: data-backups-mid
               name: Mid Level
@@ -416,9 +416,8 @@ domain:
               id: data-retention-disposal-entry
               name: Entry Level
               skills:
-              - Familiar with different storage types (databases, cloud storage, file systems) and data
-                retention concepts
-              - Can follow predefined data lifecycle rules and retention guidelines
+              - Differentiates between storage tiers (databases, cloud storage, file systems) and explains data retention concepts
+              - Can perform basic data archiving tasks
               - Assists in tracking data usage and retention timelines for audit and compliance checks
             mid:
               id: data-retention-disposal-mid
@@ -457,7 +456,7 @@ domain:
               id: data-migration-entry
               name: Entry Level
               skills:
-              - Understands the basic concepts and risks associated with data migration
+              - Identifies fundamental concepts and risks associated with data migration
               - Can assist with manual data migration tasks under supervision
               - Follows established procedures for data validation post-migration
             mid:

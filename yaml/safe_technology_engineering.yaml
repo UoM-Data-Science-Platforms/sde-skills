@@ -36,8 +36,8 @@ domain:
               id: software-development-lifecycle-entry
               name: Entry Level
               skills:
-              - Understands basic SDLC concepts and can follow established development processes
-              - Familiar with version control systems like Git for code management
+              - Explains basic SDLC concepts and follows established development processes
+              - Uses version control systems (e.g. Git) for code management and collaboration
               - Can implement simple bug fixes and feature enhancements under supervision
             mid:
               id: software-development-lifecycle-mid
@@ -67,7 +67,7 @@ domain:
               id: secure-coding-practices-entry
               name: Entry Level
               skills:
-              - Aware of common security vulnerabilities (e.g. OWASP Top 10)
+              - Identifies common web and software security vulnerabilities (e.g. OWASP Top 10)
               - Can apply basic input validation and error handling
               - Uses secure coding guidelines provided by the team
             mid:
@@ -99,7 +99,7 @@ domain:
               name: Entry Level
               skills:
               - Creates basic unit tests for code components
-              - Familiar with testing frameworks and continuous integration concepts
+              - Uses automated testing frameworks and continuous integration (CI) pipelines
               - Can execute test plans and document results
             mid:
               id: testing-quality-assurance-mid
@@ -130,8 +130,8 @@ domain:
               id: microservices-api-design-entry
               name: Entry Level
               skills:
-              - Understands microservices architecture principles
-              - Familiar with API concepts and documentation (e.g. OpenAPI/Swagger)
+              - Explains microservices architecture principles and design patterns
+              - Interprets API documentation and schemas (e.g. OpenAPI / Swagger)
               - Can develop and use RESTful APIs following established patterns
             mid:
               id: microservices-api-design-mid
@@ -161,7 +161,7 @@ domain:
               id: code-documentation-reusability-entry
               name: Entry Level
               skills:
-              - Understands the importance of code documentation and comments
+              - Explains the importance of code documentation and comments
               - Follows established documentation patterns for the codebase
               - Can write basic comments explaining code functionality
             mid:
@@ -193,9 +193,9 @@ domain:
               id: artefact-management-entry
               name: Entry Level
               skills:
-              - Understands basic concepts of container registries, package repositories, and helm charts
+              - Describes basic concepts of container registries, package repositories, and Helm charts
               - Can access and use artefact repositories following established procedures
-              - Familiar with vulnerability scanning concepts for software artefacts
+              - Identifies vulnerability scanning tools and practices for container images and dependencies
             mid:
               id: artefact-management-mid
               name: Mid Level
@@ -239,9 +239,9 @@ domain:
               id: cloud-infrastructure-management-entry
               name: Entry Level
               skills:
-              - Familiar with major cloud providers (AWS, Azure, GCP) and their core services
+              - Identifies major cloud service providers (AWS, Azure, GCP) and their core infrastructure offerings
               - Can provision and configure basic cloud resources following established patterns
-              - Understands infrastructure as code concepts
+              - Explains infrastructure as code (IaC) principles and workflows
             mid:
               id: cloud-infrastructure-management-mid
               name: Mid Level
@@ -270,8 +270,8 @@ domain:
               id: containerisation-orchestration-entry
               name: Entry Level
               skills:
-              - Understands container concepts and can build/run basic containers
-              - Familiar with Docker and container registries
+              - Builds and runs basic containers using standard containerisation tools
+              - Builds container images with Docker and manages images in container registries
               - Can deploy containerised applications following established patterns
             mid:
               id: containerisation-orchestration-mid
@@ -301,8 +301,8 @@ domain:
               id: network-architecture-entry
               name: Entry Level
               skills:
-              - Understands basic networking concepts (IP addressing, subnets, routing)
-              - Familiar with network security principles and firewall concepts
+              - Explains core networking concepts (e.g. IP addressing, subnets, routing, DNS)
+              - Explains network security controls, firewall rules, and security group configurations
               - Can configure simple network settings following established guidelines
             mid:
               id: network-architecture-mid
@@ -332,7 +332,7 @@ domain:
               id: encryption-key-management-entry
               name: Entry Level
               skills:
-              - Understands basic encryption concepts (at rest, in transit)
+              - Explains encryption fundamentals and protections for data at rest and in transit
               - Can apply encryption using standard tools and libraries
               - Follows procedures for handling encryption keys
             mid:
@@ -379,8 +379,8 @@ domain:
               id: secure-environment-design-entry
               name: Entry Level
               skills:
-              - Understands principles of secure environment design
-              - Familiar with defence-in-depth and least privilege concepts
+              - Explains core principles of secure environment design
+              - Applies defence-in-depth principles and least privilege access controls
               - Can document existing secure environments and their components
             mid:
               id: secure-environment-design-mid
@@ -410,8 +410,8 @@ domain:
               id: scalability-performance-entry
               name: Entry Level
               skills:
-              - Understands basic performance concepts and metrics
-              - Familiar with horizontal and vertical scaling approaches
+              - Identifies basic performance concepts, bottlenecks, and system metrics
+              - Differentiates between horizontal and vertical scaling techniques for distributed workloads
               - Can perform basic performance testing and identify bottlenecks
             mid:
               id: scalability-performance-mid
@@ -440,8 +440,8 @@ domain:
               id: enterprise-solution-development-entry
               name: Entry Level
               skills:
-              - Understands quality of service criteria for business-critical services
-              - Familiar with enterprise architecture concepts and patterns
+              - Identifies quality of service criteria for business-critical services
+              - Identifies enterprise architecture patterns and standard integration models
               - Can explain the trade-offs between different quality attributes (availability, reliability,
                 etc.)
             mid:
@@ -471,8 +471,8 @@ domain:
               id: component-based-architecture-entry
               name: Entry Level
               skills:
-              - Understands component-based design principles and benefits
-              - Familiar with component libraries and frameworks
+              - Explains component-based design principles and their benefits
+              - Selects and integrates reusable components from established software libraries
               - Can develop simple components following established patterns
             mid:
               id: component-based-architecture-mid
@@ -502,7 +502,7 @@ domain:
               id: vulnerability-patch-management-entry
               name: Entry Level
               skills:
-              - Understands basic vulnerability concepts and patching processes
+              - Describes vulnerability management lifecycles and standard patching processes
               - Can use vulnerability scanning tools under supervision
               - Applies security updates following established procedures
             mid:
@@ -534,7 +534,7 @@ domain:
               id: configuration-management-entry
               name: Entry Level
               skills:
-              - Understands configuration management concepts and tools
+              - Describes configuration management principles and versioning of system state
               - Can apply basic configuration changes using automation tools
               - Follows established configuration procedures
             mid:
@@ -566,9 +566,9 @@ domain:
               id: high-performance-computing-entry
               name: Entry Level
               skills:
-              - Understands basic concepts of HPC, GPU computing, and cluster architectures
+              - Describes fundamental concepts of HPC, GPU computing, and cluster architectures
               - Can configure access to shared compute resources following established procedures
-              - Familiar with job scheduling systems and resource allocation concepts
+              - Submits batch compute jobs and specifies resource allocations in workload schedulers (e.g. Slurm)
             mid:
               id: high-performance-computing-mid
               name: Mid Level

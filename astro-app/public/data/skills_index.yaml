@@ -8,8 +8,7 @@ metadata:
 skills:
   authentication-systems-entry-001:
     id: authentication-systems-entry-001
-    text: Understands basic authentication concepts and mechanisms (e.g. Active Directory / Microsoft Entra, Kerberos, OAuth
-      2.0 / OIDC)
+    text: Explains basic authentication concepts and mechanisms (e.g. Microsoft Entra ID, Kerberos, OAuth 2.0 / OIDC)
     competency_id: authentication-systems
     level: entry
     level_name: Entry Level
@@ -17,7 +16,7 @@ skills:
     subdomain_id: identity-management
   authentication-systems-entry-002:
     id: authentication-systems-entry-002
-    text: Familiar with password best practice and multi-factor authentication
+    text: Applies password best practices and configures multi-factor authentication (MFA)
     competency_id: authentication-systems
     level: entry
     level_name: Entry Level
@@ -105,7 +104,7 @@ skills:
     subdomain_id: identity-management
   user-provisioning-lifecycle-entry-001:
     id: user-provisioning-lifecycle-entry-001
-    text: Understands user account lifecycle stages
+    text: Describes user account lifecycle stages from provisioning to deprovisioning
     competency_id: user-provisioning-lifecycle
     level: entry
     level_name: Entry Level
@@ -113,7 +112,7 @@ skills:
     subdomain_id: identity-management
   user-provisioning-lifecycle-entry-002:
     id: user-provisioning-lifecycle-entry-002
-    text: Familiar with provisioning and deprovisioning processes
+    text: Follows standard user provisioning and deprovisioning procedures
     competency_id: user-provisioning-lifecycle
     level: entry
     level_name: Entry Level
@@ -201,7 +200,7 @@ skills:
     subdomain_id: identity-management
   federated-identity-management-entry-001:
     id: federated-identity-management-entry-001
-    text: Understands basic concepts of federated identity
+    text: Describes fundamental concepts of federated identity and single sign-on
     competency_id: federated-identity-management
     level: entry
     level_name: Entry Level
@@ -209,7 +208,7 @@ skills:
     subdomain_id: identity-management
   federated-identity-management-entry-002:
     id: federated-identity-management-entry-002
-    text: Familiar with SSO protocols (SAML, OAuth, OIDC)
+    text: Identifies standard SSO protocols including SAML, OAuth, and OIDC
     competency_id: federated-identity-management
     level: entry
     level_name: Entry Level
@@ -273,7 +272,7 @@ skills:
     subdomain_id: identity-management
   role-based-access-control-entry-001:
     id: role-based-access-control-entry-001
-    text: Understands RBAC concepts and principles
+    text: Explains role-based access control (RBAC) concepts and principles
     competency_id: role-based-access-control
     level: entry
     level_name: Entry Level
@@ -281,7 +280,7 @@ skills:
     subdomain_id: access-control
   role-based-access-control-entry-002:
     id: role-based-access-control-entry-002
-    text: Familiar with role definition and assignment processes
+    text: Assigns predefined roles and manages role permissions under guidance
     competency_id: role-based-access-control
     level: entry
     level_name: Entry Level
@@ -369,7 +368,7 @@ skills:
     subdomain_id: access-control
   attribute-based-access-control-entry-001:
     id: attribute-based-access-control-entry-001
-    text: Understands ABAC concepts and use cases
+    text: Explains attribute-based access control (ABAC) concepts and use cases
     competency_id: attribute-based-access-control
     level: entry
     level_name: Entry Level
@@ -377,7 +376,7 @@ skills:
     subdomain_id: access-control
   attribute-based-access-control-entry-002:
     id: attribute-based-access-control-entry-002
-    text: Familiar with policy definition and attribute types
+    text: Identifies attribute types and interprets access control policy definitions
     competency_id: attribute-based-access-control
     level: entry
     level_name: Entry Level
@@ -441,7 +440,7 @@ skills:
     subdomain_id: access-control
   least-privilege-implementation-entry-001:
     id: least-privilege-implementation-entry-001
-    text: Understands the principle of least privilege
+    text: Explains the principle of least privilege and its application
     competency_id: least-privilege-implementation
     level: entry
     level_name: Entry Level
@@ -449,7 +448,7 @@ skills:
     subdomain_id: access-control
   least-privilege-implementation-entry-002:
     id: least-privilege-implementation-entry-002
-    text: Familiar with privilege management concepts
+    text: Identifies privileged access management (PAM) controls and escalation workflows
     competency_id: least-privilege-implementation
     level: entry
     level_name: Entry Level
@@ -537,7 +536,7 @@ skills:
     subdomain_id: access-control
   researcher-onboarding-entry-001:
     id: researcher-onboarding-entry-001
-    text: Understands researcher onboarding requirements and processes
+    text: Describes researcher onboarding requirements and identity verification processes
     competency_id: researcher-onboarding
     level: entry
     level_name: Entry Level
@@ -545,7 +544,7 @@ skills:
     subdomain_id: secure-user-experience
   researcher-onboarding-entry-002:
     id: researcher-onboarding-entry-002
-    text: Familiar with training and certification verification
+    text: Verifies researcher training certificates and accreditation records
     competency_id: researcher-onboarding
     level: entry
     level_name: Entry Level
@@ -609,7 +608,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-research-workspaces-entry-001:
     id: secure-research-workspaces-entry-001
-    text: Understands secure workspace concepts and components
+    text: Describes secure workspace architecture, boundaries, and components
     competency_id: secure-research-workspaces
     level: entry
     level_name: Entry Level
@@ -617,7 +616,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-research-workspaces-entry-002:
     id: secure-research-workspaces-entry-002
-    text: Familiar with workspace provisioning processes
+    text: Assists with workspace provisioning and environment teardown workflows
     competency_id: secure-research-workspaces
     level: entry
     level_name: Entry Level
@@ -706,7 +705,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-collaboration-tools-entry-001:
     id: secure-collaboration-tools-entry-001
-    text: Understands secure collaboration requirements in research environments
+    text: Identifies secure collaboration requirements and risks in research environments
     competency_id: secure-collaboration-tools
     level: entry
     level_name: Entry Level
@@ -714,7 +713,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-collaboration-tools-entry-002:
     id: secure-collaboration-tools-entry-002
-    text: Familiar with collaboration tool security features
+    text: Configures security settings within approved collaboration platforms
     competency_id: secure-collaboration-tools
     level: entry
     level_name: Entry Level
@@ -730,7 +729,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-collaboration-tools-entry-004:
     id: secure-collaboration-tools-entry-004
-    text: Knowledge of any secret cloud service provider e.g. Azure Key Vault
+    text: Identifies cloud secret management services (e.g. Azure Key Vault) and their purpose
     competency_id: secure-collaboration-tools
     level: entry
     level_name: Entry Level
@@ -738,7 +737,7 @@ skills:
     subdomain_id: secure-user-experience
   secure-collaboration-tools-entry-005:
     id: secure-collaboration-tools-entry-005
-    text: Knowledge of simple collaborative platforms
+    text: Uses approved collaborative platforms in accordance with security policies
     competency_id: secure-collaboration-tools
     level: entry
     level_name: Entry Level
@@ -810,7 +809,7 @@ skills:
     subdomain_id: secure-user-experience
   data-integrity-entry-001:
     id: data-integrity-entry-001
-    text: Understands the importance of data integrity in secure environments
+    text: Explains the importance of data integrity in secure environments
     competency_id: data-integrity
     level: entry
     level_name: Entry Level
@@ -818,7 +817,7 @@ skills:
     subdomain_id: data-governance
   data-integrity-entry-002:
     id: data-integrity-entry-002
-    text: Familiar with basic integrity verification methods (e.g. checksums)
+    text: Calculates and verifies data integrity using standard hashing tools (e.g. checksums)
     competency_id: data-integrity
     level: entry
     level_name: Entry Level
@@ -882,7 +881,7 @@ skills:
     subdomain_id: data-governance
   data-cataloguing-discovery-entry-001:
     id: data-cataloguing-discovery-entry-001
-    text: Understands the purpose and structure of data catalogues
+    text: Describes the purpose and structure of data catalogues
     competency_id: data-cataloguing-discovery
     level: entry
     level_name: Entry Level
@@ -890,7 +889,7 @@ skills:
     subdomain_id: data-governance
   data-cataloguing-discovery-entry-002:
     id: data-cataloguing-discovery-entry-002
-    text: Familiar with metadata standards and practices
+    text: Applies metadata standards and documentation schemas to datasets
     competency_id: data-cataloguing-discovery
     level: entry
     level_name: Entry Level
@@ -898,7 +897,7 @@ skills:
     subdomain_id: data-governance
   data-cataloguing-discovery-entry-003:
     id: data-cataloguing-discovery-entry-003
-    text: Familiar with common data cataloguing tools
+    text: Identifies and navigates common data cataloguing and discovery platforms
     competency_id: data-cataloguing-discovery
     level: entry
     level_name: Entry Level
@@ -946,7 +945,7 @@ skills:
     subdomain_id: data-governance
   data-classification-sensitivity-entry-001:
     id: data-classification-sensitivity-entry-001
-    text: Understands basic data classification principles and sensitivity levels
+    text: Classifies data according to sensitivity levels and institutional classification schemes
     competency_id: data-classification-sensitivity
     level: entry
     level_name: Entry Level
@@ -954,7 +953,7 @@ skills:
     subdomain_id: data-governance
   data-classification-sensitivity-entry-002:
     id: data-classification-sensitivity-entry-002
-    text: Familiar with common data types (PII, PHI, etc.) and their handling requirements
+    text: Identifies sensitive data categories (e.g. PII, PHI) and their handling constraints
     competency_id: data-classification-sensitivity
     level: entry
     level_name: Entry Level
@@ -1018,7 +1017,7 @@ skills:
     subdomain_id: data-governance
   data-lineage-provenance-entry-001:
     id: data-lineage-provenance-entry-001
-    text: Understands basic concepts of data tracking through systems
+    text: Describes data lineage and tracking concepts across processing pipelines
     competency_id: data-lineage-provenance
     level: entry
     level_name: Entry Level
@@ -1026,7 +1025,7 @@ skills:
     subdomain_id: data-governance
   data-lineage-provenance-entry-002:
     id: data-lineage-provenance-entry-002
-    text: Familiar with metadata documentation for data lineage
+    text: Documents dataset lineage and transformations using metadata schemas
     competency_id: data-lineage-provenance
     level: entry
     level_name: Entry Level
@@ -1090,7 +1089,7 @@ skills:
     subdomain_id: data-governance
   data-quality-management-entry-001:
     id: data-quality-management-entry-001
-    text: Understands data quality dimensions (accuracy, completeness, etc.)
+    text: Identifies standard data quality dimensions (e.g. accuracy, completeness, consistency)
     competency_id: data-quality-management
     level: entry
     level_name: Entry Level
@@ -1098,7 +1097,7 @@ skills:
     subdomain_id: data-governance
   data-quality-management-entry-002:
     id: data-quality-management-entry-002
-    text: Familiar with basic data validation techniques
+    text: Applies basic data validation checks and formatting rules
     competency_id: data-quality-management
     level: entry
     level_name: Entry Level
@@ -1162,7 +1161,7 @@ skills:
     subdomain_id: data-governance
   data-pipeline-development-entry-001:
     id: data-pipeline-development-entry-001
-    text: Familiar with data pipeline concepts and components
+    text: Identifies core data pipeline components (e.g. ETL/ELT, ingestion, staging)
     competency_id: data-pipeline-development
     level: entry
     level_name: Entry Level
@@ -1178,7 +1177,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-pipeline-development-entry-003:
     id: data-pipeline-development-entry-003
-    text: Understands data transformation and loading techniques
+    text: Describes data transformation and loading techniques
     competency_id: data-pipeline-development
     level: entry
     level_name: Entry Level
@@ -1234,7 +1233,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-storage-database-management-entry-001:
     id: data-storage-database-management-entry-001
-    text: Understands various database types (relational, NoSQL, etc.)
+    text: Distinguishes between various database paradigms (e.g. relational, document, graph)
     competency_id: data-storage-database-management
     level: entry
     level_name: Entry Level
@@ -1242,7 +1241,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-storage-database-management-entry-002:
     id: data-storage-database-management-entry-002
-    text: Familiar with basic SQL and database operations
+    text: Executes basic SQL queries and data manipulation operations
     competency_id: data-storage-database-management
     level: entry
     level_name: Entry Level
@@ -1306,7 +1305,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-models-standardisation-entry-001:
     id: data-models-standardisation-entry-001
-    text: Understands the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
+    text: Describes the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
     competency_id: data-models-standardisation
     level: entry
     level_name: Entry Level
@@ -1314,7 +1313,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-models-standardisation-entry-002:
     id: data-models-standardisation-entry-002
-    text: Aware of the need for platform support to enable use of these models
+    text: Recognises platform and infrastructure dependencies required for standardised models
     competency_id: data-models-standardisation
     level: entry
     level_name: Entry Level
@@ -1378,7 +1377,7 @@ skills:
     subdomain_id: data-engineering-processing
   event-driven-data-processing-entry-001:
     id: event-driven-data-processing-entry-001
-    text: Understands event-driven architecture concepts for data processing
+    text: Explains event-driven architecture concepts for data processing
     competency_id: event-driven-data-processing
     level: entry
     level_name: Entry Level
@@ -1386,7 +1385,7 @@ skills:
     subdomain_id: data-engineering-processing
   event-driven-data-processing-entry-002:
     id: event-driven-data-processing-entry-002
-    text: Familiar with event streaming platforms (Kafka, etc.)
+    text: Identifies event streaming platforms (e.g. Apache Kafka) and their use cases
     competency_id: event-driven-data-processing
     level: entry
     level_name: Entry Level
@@ -1450,7 +1449,7 @@ skills:
     subdomain_id: data-engineering-processing
   encryption-standards-implementation-entry-001:
     id: encryption-standards-implementation-entry-001
-    text: Familiar with symmetric and asymmetric encryption methods (AES, RSA, etc.)
+    text: Differentiates between symmetric and asymmetric encryption algorithms (e.g. AES, RSA)
     competency_id: encryption-standards-implementation
     level: entry
     level_name: Entry Level
@@ -1466,7 +1465,7 @@ skills:
     subdomain_id: data-engineering-processing
   encryption-standards-implementation-entry-003:
     id: encryption-standards-implementation-entry-003
-    text: Understands how encryption protects data at rest and in transit
+    text: Explains how cryptographic controls protect data at rest and in transit
     competency_id: encryption-standards-implementation
     level: entry
     level_name: Entry Level
@@ -1522,7 +1521,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-backups-entry-001:
     id: data-backups-entry-001
-    text: Familiar with different backup types (full, incremental, differential) and their use cases
+    text: Differentiates between backup strategies (full, incremental, differential) and use cases
     competency_id: data-backups
     level: entry
     level_name: Entry Level
@@ -1538,7 +1537,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-backups-entry-003:
     id: data-backups-entry-003
-    text: Understands how to restore data from backups in case of accidental deletion or corruption
+    text: Executes standard data restoration procedures from backups during recovery scenarios
     competency_id: data-backups
     level: entry
     level_name: Entry Level
@@ -1594,7 +1593,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-retention-disposal-entry-001:
     id: data-retention-disposal-entry-001
-    text: Familiar with different storage types (databases, cloud storage, file systems) and data retention concepts
+    text: Differentiates between storage tiers (databases, cloud storage, file systems) and explains data retention concepts
     competency_id: data-retention-disposal
     level: entry
     level_name: Entry Level
@@ -1602,7 +1601,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-retention-disposal-entry-002:
     id: data-retention-disposal-entry-002
-    text: Can follow predefined data lifecycle rules and retention guidelines
+    text: Can perform basic data archiving tasks
     competency_id: data-retention-disposal
     level: entry
     level_name: Entry Level
@@ -1670,7 +1669,7 @@ skills:
     subdomain_id: data-engineering-processing
   data-migration-entry-001:
     id: data-migration-entry-001
-    text: Understands the basic concepts and risks associated with data migration
+    text: Identifies fundamental concepts and risks associated with data migration
     competency_id: data-migration
     level: entry
     level_name: Entry Level
@@ -1758,7 +1757,7 @@ skills:
     subdomain_id: data-engineering-processing
   information-governance-entry-001:
     id: information-governance-entry-001
-    text: Understands basic information governance principles (e.g. data minimisation, accountability)
+    text: Explains basic information governance principles (e.g. data minimisation, accountability)
     competency_id: information-governance
     level: entry
     level_name: Entry Level
@@ -1766,7 +1765,7 @@ skills:
     subdomain_id: regulatory-compliance
   information-governance-entry-002:
     id: information-governance-entry-002
-    text: Familiar with key information governance frameworks (e.g. Caldicott Principles, ISO 27001)
+    text: Identifies key information governance frameworks (e.g. Caldicott Principles, ISO 27001)
     competency_id: information-governance
     level: entry
     level_name: Entry Level
@@ -1830,7 +1829,7 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-entry-001:
     id: data-protection-compliance-entry-001
-    text: Understands relevant data protection regulations (GDPR, etc.)
+    text: Identifies relevant data protection regulations (e.g. UK GDPR, DPA 2018)
     competency_id: data-protection-compliance
     level: entry
     level_name: Entry Level
@@ -1838,7 +1837,7 @@ skills:
     subdomain_id: regulatory-compliance
   data-protection-compliance-entry-002:
     id: data-protection-compliance-entry-002
-    text: Familiar with data subject rights and consent requirements
+    text: Describes data subject rights and regulatory consent obligations
     competency_id: data-protection-compliance
     level: entry
     level_name: Entry Level
@@ -1903,7 +1902,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-standards-compliance-entry-001:
     id: healthcare-standards-compliance-entry-001
-    text: Understands relevant healthcare standards (DSPT, NHS DTAC, etc.)
+    text: Identifies relevant healthcare standards (e.g. DSPT, NHS DTAC) and their requirements
     competency_id: healthcare-standards-compliance
     level: entry
     level_name: Entry Level
@@ -1911,7 +1910,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-standards-compliance-entry-002:
     id: healthcare-standards-compliance-entry-002
-    text: Familiar with healthcare compliance requirements
+    text: Describes healthcare compliance requirements and operational standards
     competency_id: healthcare-standards-compliance
     level: entry
     level_name: Entry Level
@@ -1975,7 +1974,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-data-security-frameworks-entry-001:
     id: healthcare-data-security-frameworks-entry-001
-    text: Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
+    text: Identifies basic healthcare data security frameworks (e.g. DSPT, NHS DTAC)
     competency_id: healthcare-data-security-frameworks
     level: entry
     level_name: Entry Level
@@ -1983,7 +1982,7 @@ skills:
     subdomain_id: regulatory-compliance
   healthcare-data-security-frameworks-entry-002:
     id: healthcare-data-security-frameworks-entry-002
-    text: Familiar with healthcare-specific compliance requirements
+    text: Outlines healthcare-specific compliance obligations and information governance controls
     competency_id: healthcare-data-security-frameworks
     level: entry
     level_name: Entry Level
@@ -2047,7 +2046,7 @@ skills:
     subdomain_id: regulatory-compliance
   ethics-research-approval-systems-entry-001:
     id: ethics-research-approval-systems-entry-001
-    text: Understands ethical review requirements and research approval processes
+    text: Outlines ethical review requirements and research approval workflows
     competency_id: ethics-research-approval-systems
     level: entry
     level_name: Entry Level
@@ -2055,7 +2054,7 @@ skills:
     subdomain_id: regulatory-compliance
   ethics-research-approval-systems-entry-002:
     id: ethics-research-approval-systems-entry-002
-    text: Familiar with ethics and IRAS documentation requirements
+    text: Prepares standard ethical review submissions and IRAS documentation
     competency_id: ethics-research-approval-systems
     level: entry
     level_name: Entry Level
@@ -2119,7 +2118,7 @@ skills:
     subdomain_id: regulatory-compliance
   security-controls-implementation-entry-001:
     id: security-controls-implementation-entry-001
-    text: Understands security control concepts and categories
+    text: Classifies security control types, categories, and functions
     competency_id: security-controls-implementation
     level: entry
     level_name: Entry Level
@@ -2127,7 +2126,7 @@ skills:
     subdomain_id: security-management
   security-controls-implementation-entry-002:
     id: security-controls-implementation-entry-002
-    text: Familiar with common security controls and their purpose
+    text: Identifies common security controls and explains their risk reduction purpose
     competency_id: security-controls-implementation
     level: entry
     level_name: Entry Level
@@ -2191,7 +2190,7 @@ skills:
     subdomain_id: security-management
   security-assessment-testing-entry-001:
     id: security-assessment-testing-entry-001
-    text: Understands security assessment concepts and methodologies
+    text: Describes security assessment methodologies and testing approaches
     competency_id: security-assessment-testing
     level: entry
     level_name: Entry Level
@@ -2199,7 +2198,7 @@ skills:
     subdomain_id: security-management
   security-assessment-testing-entry-002:
     id: security-assessment-testing-entry-002
-    text: Familiar with vulnerability scanning and penetration testing
+    text: Distinguishes between vulnerability scanning, vulnerability assessments, and penetration testing
     competency_id: security-assessment-testing
     level: entry
     level_name: Entry Level
@@ -2264,7 +2263,7 @@ skills:
     subdomain_id: security-management
   incident-response-management-entry-001:
     id: incident-response-management-entry-001
-    text: Understands incident response concepts and procedures
+    text: Outlines incident response phases, escalation procedures, and reporting
     competency_id: incident-response-management
     level: entry
     level_name: Entry Level
@@ -2272,7 +2271,7 @@ skills:
     subdomain_id: security-management
   incident-response-management-entry-002:
     id: incident-response-management-entry-002
-    text: Familiar with incident classification and reporting
+    text: Classifies security incidents according to severity thresholds and reporting criteria
     competency_id: incident-response-management
     level: entry
     level_name: Entry Level
@@ -2336,7 +2335,7 @@ skills:
     subdomain_id: security-management
   research-ethics-compliance-entry-001:
     id: research-ethics-compliance-entry-001
-    text: Understands basic research ethics principles
+    text: Explains basic research ethics principles and governance expectations
     competency_id: research-ethics-compliance
     level: entry
     level_name: Entry Level
@@ -2344,7 +2343,7 @@ skills:
     subdomain_id: ethics-research-governance
   research-ethics-compliance-entry-002:
     id: research-ethics-compliance-entry-002
-    text: Familiar with research ethics approval processes
+    text: Follows institutional research ethics approval and governance workflows
     competency_id: research-ethics-compliance
     level: entry
     level_name: Entry Level
@@ -2408,7 +2407,7 @@ skills:
     subdomain_id: ethics-research-governance
   consent-management-entry-001:
     id: consent-management-entry-001
-    text: Understands consent concepts and requirements
+    text: Describes participant consent concepts and regulatory requirements
     competency_id: consent-management
     level: entry
     level_name: Entry Level
@@ -2416,7 +2415,7 @@ skills:
     subdomain_id: ethics-research-governance
   consent-management-entry-002:
     id: consent-management-entry-002
-    text: Familiar with consent documentation and verification
+    text: Verifies participant consent forms and documentation against study protocols
     competency_id: consent-management
     level: entry
     level_name: Entry Level
@@ -2480,7 +2479,7 @@ skills:
     subdomain_id: ethics-research-governance
   ethical-review-processes-entry-001:
     id: ethical-review-processes-entry-001
-    text: Understands ethical review requirements and processes
+    text: Outlines ethical review requirements and standard submission processes
     competency_id: ethical-review-processes
     level: entry
     level_name: Entry Level
@@ -2488,7 +2487,7 @@ skills:
     subdomain_id: ethics-research-governance
   ethical-review-processes-entry-002:
     id: ethical-review-processes-entry-002
-    text: Familiar with ethical review documentation
+    text: Prepares and reviews documentation required for ethical committee submissions
     competency_id: ethical-review-processes
     level: entry
     level_name: Entry Level
@@ -2552,7 +2551,7 @@ skills:
     subdomain_id: ethics-research-governance
   audit-trail-implementation-entry-001:
     id: audit-trail-implementation-entry-001
-    text: Understands audit logging concepts and requirements
+    text: Explains audit logging concepts, security requirements, and retention needs
     competency_id: audit-trail-implementation
     level: entry
     level_name: Entry Level
@@ -2560,7 +2559,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   audit-trail-implementation-entry-002:
     id: audit-trail-implementation-entry-002
-    text: Familiar with audit log contents and formats
+    text: Inspects audit log records and identifies standard event fields and formats
     competency_id: audit-trail-implementation
     level: entry
     level_name: Entry Level
@@ -2624,7 +2623,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   compliance-monitoring-reporting-entry-001:
     id: compliance-monitoring-reporting-entry-001
-    text: Understands compliance monitoring concepts
+    text: Describes compliance monitoring concepts and reporting workflows
     competency_id: compliance-monitoring-reporting
     level: entry
     level_name: Entry Level
@@ -2632,7 +2631,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   compliance-monitoring-reporting-entry-002:
     id: compliance-monitoring-reporting-entry-002
-    text: Familiar with compliance reporting requirements
+    text: Compiles routine compliance evidence and generates standard audit reports
     competency_id: compliance-monitoring-reporting
     level: entry
     level_name: Entry Level
@@ -2696,7 +2695,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   certification-accreditation-entry-001:
     id: certification-accreditation-entry-001
-    text: Understands certification and accreditation concepts
+    text: Describes certification and accreditation frameworks (e.g. ISO 27001)
     competency_id: certification-accreditation
     level: entry
     level_name: Entry Level
@@ -2704,7 +2703,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   certification-accreditation-entry-002:
     id: certification-accreditation-entry-002
-    text: Familiar with common certifications (ISO27001, etc.)
+    text: Identifies key industry security certifications and standards (e.g. ISO 27001, Cyber Essentials)
     competency_id: certification-accreditation
     level: entry
     level_name: Entry Level
@@ -2768,7 +2767,7 @@ skills:
     subdomain_id: audit-compliance-monitoring
   output-review-processes-entry-001:
     id: output-review-processes-entry-001
-    text: Understands output review requirements and processes
+    text: Describes output review requirements, thresholds, and governance processes
     competency_id: output-review-processes
     level: entry
     level_name: Entry Level
@@ -2776,7 +2775,7 @@ skills:
     subdomain_id: output-checking
   output-review-processes-entry-002:
     id: output-review-processes-entry-002
-    text: Familiar with common output formats and their risks
+    text: Identifies common research output formats and their associated disclosure risks
     competency_id: output-review-processes
     level: entry
     level_name: Entry Level
@@ -2792,7 +2791,7 @@ skills:
     subdomain_id: output-checking
   workflow-engines-entry-001:
     id: workflow-engines-entry-001
-    text: Is aware of workflow engines and the functionality they provide
+    text: Identifies workflow automation engines and describes their operational capabilities
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2800,7 +2799,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   workflow-engines-entry-002:
     id: workflow-engines-entry-002
-    text: Is aware of actors and stages in the disclosure review process
+    text: Describes key roles, responsibilities, and stages in the disclosure review workflow
     competency_id: workflow-engines
     level: entry
     level_name: Entry Level
@@ -2856,7 +2855,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-entry-001:
     id: data-airlocks-entry-001
-    text: Is familiar with data airlocks
+    text: Explains the purpose, architecture, and operational rules of data airlocks
     competency_id: data-airlocks
     level: entry
     level_name: Entry Level
@@ -2864,7 +2863,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   data-airlocks-entry-002:
     id: data-airlocks-entry-002
-    text: Is familiar with user roles in data airlocks
+    text: Identifies user roles and access permissions within data airlock systems
     competency_id: data-airlocks
     level: entry
     level_name: Entry Level
@@ -2904,7 +2903,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   code-repositories-entry-001:
     id: code-repositories-entry-001
-    text: Familiar with code repositories and sharing platforms (e.g. Git, GitHub, GitLab)
+    text: Utilises code repositories and version control platforms (e.g. Git, GitHub, GitLab)
     competency_id: code-repositories
     level: entry
     level_name: Entry Level
@@ -2954,7 +2953,7 @@ skills:
     subdomain_id: tools-and-platforms-to-support-output-checking
   disclosure-risk-assessment-entry-001:
     id: disclosure-risk-assessment-entry-001
-    text: Understands basic disclosure risk concepts (re-identification risks, data sensitivity levels)
+    text: Explains basic disclosure risk concepts (e.g. re-identification risks, data sensitivity levels)
     competency_id: disclosure-risk-assessment
     level: entry
     level_name: Entry Level
@@ -2962,7 +2961,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   disclosure-risk-assessment-entry-002:
     id: disclosure-risk-assessment-entry-002
-    text: Familiar with common types of disclosure risks (identity, attribute)
+    text: Differentiates between identity disclosure, attribute disclosure, and inferential disclosure
     competency_id: disclosure-risk-assessment
     level: entry
     level_name: Entry Level
@@ -2987,7 +2986,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   automated-disclosure-control-entry-001:
     id: automated-disclosure-control-entry-001
-    text: Understands automated SDC tool concepts (e.g. rule-based systems, threshold settings)
+    text: Explains automated SDC tool concepts (e.g. rule-based systems, threshold settings)
     competency_id: automated-disclosure-control
     level: entry
     level_name: Entry Level
@@ -2995,7 +2994,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   automated-disclosure-control-entry-002:
     id: automated-disclosure-control-entry-002
-    text: Familiar with available SDC automation tools
+    text: Identifies available statistical disclosure control (SDC) tools and packages
     competency_id: automated-disclosure-control
     level: entry
     level_name: Entry Level
@@ -3035,7 +3034,7 @@ skills:
     subdomain_id: statistical-disclosure-control
   sde-project-planning-entry-001:
     id: sde-project-planning-entry-001
-    text: Understands basic project management concepts for SDEs
+    text: Explains basic project management principles for SDEs
     competency_id: sde-project-planning
     level: entry
     level_name: Entry Level
@@ -3043,7 +3042,7 @@ skills:
     subdomain_id: project-management
   sde-project-planning-entry-002:
     id: sde-project-planning-entry-002
-    text: Familiar with project documentation and tracking tools
+    text: Utilises project tracking tools and maintains project documentation
     competency_id: sde-project-planning
     level: entry
     level_name: Entry Level
@@ -3107,7 +3106,7 @@ skills:
     subdomain_id: project-management
   research-project-facilitation-entry-001:
     id: research-project-facilitation-entry-001
-    text: Understands research project requirements within SDEs
+    text: Identifies research project requirements and constraints within SDEs
     competency_id: research-project-facilitation
     level: entry
     level_name: Entry Level
@@ -3115,7 +3114,7 @@ skills:
     subdomain_id: project-management
   research-project-facilitation-entry-002:
     id: research-project-facilitation-entry-002
-    text: Familiar with research workflows and processes
+    text: Describes typical academic research lifecycles and computational workflows
     competency_id: research-project-facilitation
     level: entry
     level_name: Entry Level
@@ -3179,7 +3178,7 @@ skills:
     subdomain_id: project-management
   agile-delivery-methods-entry-001:
     id: agile-delivery-methods-entry-001
-    text: Understands agile concepts and methodologies
+    text: Explains agile principles and delivery methodologies
     competency_id: agile-delivery-methods
     level: entry
     level_name: Entry Level
@@ -3187,7 +3186,7 @@ skills:
     subdomain_id: project-management
   agile-delivery-methods-entry-002:
     id: agile-delivery-methods-entry-002
-    text: Familiar with agile ceremonies and artifacts
+    text: Participates in standard agile ceremonies and maintains sprint artifacts
     competency_id: agile-delivery-methods
     level: entry
     level_name: Entry Level
@@ -3251,7 +3250,7 @@ skills:
     subdomain_id: project-management
   procurement-vendor-management-entry-001:
     id: procurement-vendor-management-entry-001
-    text: Understands basic procurement processes and requirements
+    text: Identifies standard procurement processes and institutional requirements
     competency_id: procurement-vendor-management
     level: entry
     level_name: Entry Level
@@ -3259,7 +3258,7 @@ skills:
     subdomain_id: project-management
   procurement-vendor-management-entry-002:
     id: procurement-vendor-management-entry-002
-    text: Familiar with vendor management concepts and documentation
+    text: Reviews vendor contracts, service agreements, and performance documentation
     competency_id: procurement-vendor-management
     level: entry
     level_name: Entry Level
@@ -3323,7 +3322,7 @@ skills:
     subdomain_id: project-management
   resource-cost-management-entry-001:
     id: resource-cost-management-entry-001
-    text: Understands resource allocation and cost management principles
+    text: Explains resource allocation and cloud cost management principles
     competency_id: resource-cost-management
     level: entry
     level_name: Entry Level
@@ -3331,7 +3330,7 @@ skills:
     subdomain_id: project-management
   resource-cost-management-entry-002:
     id: resource-cost-management-entry-002
-    text: Familiar with cloud cost monitoring tools and techniques
+    text: Monitors cloud infrastructure expenditure using cost dashboards and billing alerts
     competency_id: resource-cost-management
     level: entry
     level_name: Entry Level
@@ -3395,7 +3394,7 @@ skills:
     subdomain_id: project-management
   service-level-management-entry-001:
     id: service-level-management-entry-001
-    text: Understands service level concepts and metrics
+    text: Defines service level concepts, indicators, and metrics
     competency_id: service-level-management
     level: entry
     level_name: Entry Level
@@ -3403,7 +3402,7 @@ skills:
     subdomain_id: service-management
   service-level-management-entry-002:
     id: service-level-management-entry-002
-    text: Familiar with SLA documentation and monitoring
+    text: Interprets service level agreements (SLAs) and monitors key performance indicators
     competency_id: service-level-management
     level: entry
     level_name: Entry Level
@@ -3467,7 +3466,7 @@ skills:
     subdomain_id: service-management
   incident-problem-management-entry-001:
     id: incident-problem-management-entry-001
-    text: Understands incident and problem management concepts
+    text: Explains incident and problem management concepts and lifecycles
     competency_id: incident-problem-management
     level: entry
     level_name: Entry Level
@@ -3475,7 +3474,7 @@ skills:
     subdomain_id: service-management
   incident-problem-management-entry-002:
     id: incident-problem-management-entry-002
-    text: Familiar with incident classification and prioritisation
+    text: Classifies and prioritises operational incidents based on impact and urgency
     competency_id: incident-problem-management
     level: entry
     level_name: Entry Level
@@ -3539,7 +3538,7 @@ skills:
     subdomain_id: service-management
   change-release-management-entry-001:
     id: change-release-management-entry-001
-    text: Understands change management concepts and processes
+    text: Explains change management concepts and standard approval workflows
     competency_id: change-release-management
     level: entry
     level_name: Entry Level
@@ -3547,7 +3546,7 @@ skills:
     subdomain_id: service-management
   change-release-management-entry-002:
     id: change-release-management-entry-002
-    text: Familiar with change documentation and approval workflows
+    text: Submits change request documentation and follows release approval workflows
     competency_id: change-release-management
     level: entry
     level_name: Entry Level
@@ -3611,7 +3610,7 @@ skills:
     subdomain_id: service-management
   continuous-improvement-entry-001:
     id: continuous-improvement-entry-001
-    text: Understands continuous improvement concepts
+    text: Explains continuous improvement principles and methodologies
     competency_id: continuous-improvement
     level: entry
     level_name: Entry Level
@@ -3619,7 +3618,7 @@ skills:
     subdomain_id: operational-excellence
   continuous-improvement-entry-002:
     id: continuous-improvement-entry-002
-    text: Familiar with improvement methodologies (Lean, Six Sigma)
+    text: Identifies core principles of continuous improvement methodologies (e.g. Lean, Plan-Do-Check-Act)
     competency_id: continuous-improvement
     level: entry
     level_name: Entry Level
@@ -3683,7 +3682,7 @@ skills:
     subdomain_id: operational-excellence
   documentation-knowledge-management-entry-001:
     id: documentation-knowledge-management-entry-001
-    text: Understands documentation requirements and standards
+    text: Identifies technical documentation requirements and standards
     competency_id: documentation-knowledge-management
     level: entry
     level_name: Entry Level
@@ -3691,7 +3690,7 @@ skills:
     subdomain_id: operational-excellence
   documentation-knowledge-management-entry-002:
     id: documentation-knowledge-management-entry-002
-    text: Familiar with knowledge management systems and practices
+    text: Maintains structured documentation within team knowledge bases and wikis
     competency_id: documentation-knowledge-management
     level: entry
     level_name: Entry Level
@@ -3755,7 +3754,7 @@ skills:
     subdomain_id: operational-excellence
   monitoring-observability-entry-001:
     id: monitoring-observability-entry-001
-    text: Understands monitoring concepts and tools
+    text: Explains system monitoring concepts, metrics, and alerting mechanisms
     competency_id: monitoring-observability
     level: entry
     level_name: Entry Level
@@ -3763,7 +3762,7 @@ skills:
     subdomain_id: operational-excellence
   monitoring-observability-entry-002:
     id: monitoring-observability-entry-002
-    text: Familiar with metrics, logs, and alerts
+    text: Interprets telemetry data including operational metrics, system logs, and alerts
     competency_id: monitoring-observability
     level: entry
     level_name: Entry Level
@@ -3827,7 +3826,7 @@ skills:
     subdomain_id: operational-excellence
   researcher-training-support-entry-001:
     id: researcher-training-support-entry-001
-    text: Understands researcher needs and support requirements
+    text: Identifies researcher needs and support requirements within SDEs
     competency_id: researcher-training-support
     level: entry
     level_name: Entry Level
@@ -3835,7 +3834,7 @@ skills:
     subdomain_id: research-support-innovation
   researcher-training-support-entry-002:
     id: researcher-training-support-entry-002
-    text: Familiar with SDE training materials and documentation
+    text: Navigates and delivers standard SDE user training materials and guidance documentation
     competency_id: researcher-training-support
     level: entry
     level_name: Entry Level
@@ -3899,7 +3898,7 @@ skills:
     subdomain_id: research-support-innovation
   tre-tools-capabilities-entry-001:
     id: tre-tools-capabilities-entry-001
-    text: Understands common TRE tools and capabilities
+    text: Identifies common TRE tools and explains their core capabilities
     competency_id: tre-tools-capabilities
     level: entry
     level_name: Entry Level
@@ -3907,7 +3906,7 @@ skills:
     subdomain_id: research-support-innovation
   tre-tools-capabilities-entry-002:
     id: tre-tools-capabilities-entry-002
-    text: Familiar with researcher tool requirements
+    text: Identifies common researcher software, package dependencies, and tooling requirements
     competency_id: tre-tools-capabilities
     level: entry
     level_name: Entry Level
@@ -3971,7 +3970,7 @@ skills:
     subdomain_id: research-support-innovation
   future-tre-innovation-entry-001:
     id: future-tre-innovation-entry-001
-    text: Understands emerging trends in secure research environments
+    text: Identifies emerging trends and innovations in secure research environments
     competency_id: future-tre-innovation
     level: entry
     level_name: Entry Level
@@ -3979,7 +3978,7 @@ skills:
     subdomain_id: research-support-innovation
   future-tre-innovation-entry-002:
     id: future-tre-innovation-entry-002
-    text: Familiar with innovation processes and evaluation
+    text: Evaluates novel TRE technologies and assesses their suitability for research environments
     competency_id: future-tre-innovation
     level: entry
     level_name: Entry Level
@@ -4043,7 +4042,7 @@ skills:
     subdomain_id: research-support-innovation
   community-engagement-networking-entry-001:
     id: community-engagement-networking-entry-001
-    text: Understands the importance of community engagement for SDEs
+    text: Explains the importance of community engagement for SDEs
     competency_id: community-engagement-networking
     level: entry
     level_name: Entry Level
@@ -4051,7 +4050,7 @@ skills:
     subdomain_id: research-support-innovation
   community-engagement-networking-entry-002:
     id: community-engagement-networking-entry-002
-    text: Familiar with relevant SDE communities and networks
+    text: Engages with national and international SDE / TRE practitioner communities (e.g. UK TRE Community)
     competency_id: community-engagement-networking
     level: entry
     level_name: Entry Level
@@ -4115,7 +4114,7 @@ skills:
     subdomain_id: research-support-innovation
   software-development-lifecycle-entry-001:
     id: software-development-lifecycle-entry-001
-    text: Understands basic SDLC concepts and can follow established development processes
+    text: Explains basic SDLC concepts and follows established development processes
     competency_id: software-development-lifecycle
     level: entry
     level_name: Entry Level
@@ -4123,7 +4122,7 @@ skills:
     subdomain_id: software-engineering
   software-development-lifecycle-entry-002:
     id: software-development-lifecycle-entry-002
-    text: Familiar with version control systems like Git for code management
+    text: Uses version control systems (e.g. Git) for code management and collaboration
     competency_id: software-development-lifecycle
     level: entry
     level_name: Entry Level
@@ -4187,7 +4186,7 @@ skills:
     subdomain_id: software-engineering
   secure-coding-practices-entry-001:
     id: secure-coding-practices-entry-001
-    text: Aware of common security vulnerabilities (e.g. OWASP Top 10)
+    text: Identifies common web and software security vulnerabilities (e.g. OWASP Top 10)
     competency_id: secure-coding-practices
     level: entry
     level_name: Entry Level
@@ -4267,7 +4266,7 @@ skills:
     subdomain_id: software-engineering
   testing-quality-assurance-entry-002:
     id: testing-quality-assurance-entry-002
-    text: Familiar with testing frameworks and continuous integration concepts
+    text: Uses automated testing frameworks and continuous integration (CI) pipelines
     competency_id: testing-quality-assurance
     level: entry
     level_name: Entry Level
@@ -4331,7 +4330,7 @@ skills:
     subdomain_id: software-engineering
   microservices-api-design-entry-001:
     id: microservices-api-design-entry-001
-    text: Understands microservices architecture principles
+    text: Explains microservices architecture principles and design patterns
     competency_id: microservices-api-design
     level: entry
     level_name: Entry Level
@@ -4339,7 +4338,7 @@ skills:
     subdomain_id: software-engineering
   microservices-api-design-entry-002:
     id: microservices-api-design-entry-002
-    text: Familiar with API concepts and documentation (e.g. OpenAPI/Swagger)
+    text: Interprets API documentation and schemas (e.g. OpenAPI / Swagger)
     competency_id: microservices-api-design
     level: entry
     level_name: Entry Level
@@ -4403,7 +4402,7 @@ skills:
     subdomain_id: software-engineering
   code-documentation-reusability-entry-001:
     id: code-documentation-reusability-entry-001
-    text: Understands the importance of code documentation and comments
+    text: Explains the importance of code documentation and comments
     competency_id: code-documentation-reusability
     level: entry
     level_name: Entry Level
@@ -4475,7 +4474,7 @@ skills:
     subdomain_id: software-engineering
   artefact-management-entry-001:
     id: artefact-management-entry-001
-    text: Understands basic concepts of container registries, package repositories, and helm charts
+    text: Describes basic concepts of container registries, package repositories, and Helm charts
     competency_id: artefact-management
     level: entry
     level_name: Entry Level
@@ -4491,7 +4490,7 @@ skills:
     subdomain_id: software-engineering
   artefact-management-entry-003:
     id: artefact-management-entry-003
-    text: Familiar with vulnerability scanning concepts for software artefacts
+    text: Identifies vulnerability scanning tools and practices for container images and dependencies
     competency_id: artefact-management
     level: entry
     level_name: Entry Level
@@ -4547,7 +4546,7 @@ skills:
     subdomain_id: software-engineering
   cloud-infrastructure-management-entry-001:
     id: cloud-infrastructure-management-entry-001
-    text: Familiar with major cloud providers (AWS, Azure, GCP) and their core services
+    text: Identifies major cloud service providers (AWS, Azure, GCP) and their core infrastructure offerings
     competency_id: cloud-infrastructure-management
     level: entry
     level_name: Entry Level
@@ -4563,7 +4562,7 @@ skills:
     subdomain_id: infrastructure-deployment
   cloud-infrastructure-management-entry-003:
     id: cloud-infrastructure-management-entry-003
-    text: Understands infrastructure as code concepts
+    text: Explains infrastructure as code (IaC) principles and workflows
     competency_id: cloud-infrastructure-management
     level: entry
     level_name: Entry Level
@@ -4619,7 +4618,7 @@ skills:
     subdomain_id: infrastructure-deployment
   containerisation-orchestration-entry-001:
     id: containerisation-orchestration-entry-001
-    text: Understands container concepts and can build/run basic containers
+    text: Builds and runs basic containers using standard containerisation tools
     competency_id: containerisation-orchestration
     level: entry
     level_name: Entry Level
@@ -4627,7 +4626,7 @@ skills:
     subdomain_id: infrastructure-deployment
   containerisation-orchestration-entry-002:
     id: containerisation-orchestration-entry-002
-    text: Familiar with Docker and container registries
+    text: Builds container images with Docker and manages images in container registries
     competency_id: containerisation-orchestration
     level: entry
     level_name: Entry Level
@@ -4691,7 +4690,7 @@ skills:
     subdomain_id: infrastructure-deployment
   network-architecture-entry-001:
     id: network-architecture-entry-001
-    text: Understands basic networking concepts (IP addressing, subnets, routing)
+    text: Explains core networking concepts (e.g. IP addressing, subnets, routing, DNS)
     competency_id: network-architecture
     level: entry
     level_name: Entry Level
@@ -4699,7 +4698,7 @@ skills:
     subdomain_id: infrastructure-deployment
   network-architecture-entry-002:
     id: network-architecture-entry-002
-    text: Familiar with network security principles and firewall concepts
+    text: Explains network security controls, firewall rules, and security group configurations
     competency_id: network-architecture
     level: entry
     level_name: Entry Level
@@ -4763,7 +4762,7 @@ skills:
     subdomain_id: infrastructure-deployment
   encryption-key-management-entry-001:
     id: encryption-key-management-entry-001
-    text: Understands basic encryption concepts (at rest, in transit)
+    text: Explains encryption fundamentals and protections for data at rest and in transit
     competency_id: encryption-key-management
     level: entry
     level_name: Entry Level
@@ -4835,7 +4834,7 @@ skills:
     subdomain_id: infrastructure-deployment
   secure-environment-design-entry-001:
     id: secure-environment-design-entry-001
-    text: Understands principles of secure environment design
+    text: Explains core principles of secure environment design
     competency_id: secure-environment-design
     level: entry
     level_name: Entry Level
@@ -4843,7 +4842,7 @@ skills:
     subdomain_id: system-architecture
   secure-environment-design-entry-002:
     id: secure-environment-design-entry-002
-    text: Familiar with defence-in-depth and least privilege concepts
+    text: Applies defence-in-depth principles and least privilege access controls
     competency_id: secure-environment-design
     level: entry
     level_name: Entry Level
@@ -4907,7 +4906,7 @@ skills:
     subdomain_id: system-architecture
   scalability-performance-entry-001:
     id: scalability-performance-entry-001
-    text: Understands basic performance concepts and metrics
+    text: Identifies basic performance concepts, bottlenecks, and system metrics
     competency_id: scalability-performance
     level: entry
     level_name: Entry Level
@@ -4915,7 +4914,7 @@ skills:
     subdomain_id: system-architecture
   scalability-performance-entry-002:
     id: scalability-performance-entry-002
-    text: Familiar with horizontal and vertical scaling approaches
+    text: Differentiates between horizontal and vertical scaling techniques for distributed workloads
     competency_id: scalability-performance
     level: entry
     level_name: Entry Level
@@ -4979,7 +4978,7 @@ skills:
     subdomain_id: system-architecture
   enterprise-solution-development-entry-001:
     id: enterprise-solution-development-entry-001
-    text: Understands quality of service criteria for business-critical services
+    text: Identifies quality of service criteria for business-critical services
     competency_id: enterprise-solution-development
     level: entry
     level_name: Entry Level
@@ -4987,7 +4986,7 @@ skills:
     subdomain_id: system-architecture
   enterprise-solution-development-entry-002:
     id: enterprise-solution-development-entry-002
-    text: Familiar with enterprise architecture concepts and patterns
+    text: Identifies enterprise architecture patterns and standard integration models
     competency_id: enterprise-solution-development
     level: entry
     level_name: Entry Level
@@ -5051,7 +5050,7 @@ skills:
     subdomain_id: system-architecture
   component-based-architecture-entry-001:
     id: component-based-architecture-entry-001
-    text: Understands component-based design principles and benefits
+    text: Explains component-based design principles and their benefits
     competency_id: component-based-architecture
     level: entry
     level_name: Entry Level
@@ -5059,7 +5058,7 @@ skills:
     subdomain_id: system-architecture
   component-based-architecture-entry-002:
     id: component-based-architecture-entry-002
-    text: Familiar with component libraries and frameworks
+    text: Selects and integrates reusable components from established software libraries
     competency_id: component-based-architecture
     level: entry
     level_name: Entry Level
@@ -5123,7 +5122,7 @@ skills:
     subdomain_id: system-architecture
   vulnerability-patch-management-entry-001:
     id: vulnerability-patch-management-entry-001
-    text: Understands basic vulnerability concepts and patching processes
+    text: Describes vulnerability management lifecycles and standard patching processes
     competency_id: vulnerability-patch-management
     level: entry
     level_name: Entry Level
@@ -5195,7 +5194,7 @@ skills:
     subdomain_id: system-architecture
   configuration-management-entry-001:
     id: configuration-management-entry-001
-    text: Understands configuration management concepts and tools
+    text: Describes configuration management principles and versioning of system state
     competency_id: configuration-management
     level: entry
     level_name: Entry Level
@@ -5267,7 +5266,7 @@ skills:
     subdomain_id: system-architecture
   high-performance-computing-entry-001:
     id: high-performance-computing-entry-001
-    text: Understands basic concepts of HPC, GPU computing, and cluster architectures
+    text: Describes fundamental concepts of HPC, GPU computing, and cluster architectures
     competency_id: high-performance-computing
     level: entry
     level_name: Entry Level
@@ -5283,7 +5282,7 @@ skills:
     subdomain_id: system-architecture
   high-performance-computing-entry-003:
     id: high-performance-computing-entry-003
-    text: Familiar with job scheduling systems and resource allocation concepts
+    text: Submits batch compute jobs and specifies resource allocations in workload schedulers (e.g. Slurm)
     competency_id: high-performance-computing
     level: entry
     level_name: Entry Level
