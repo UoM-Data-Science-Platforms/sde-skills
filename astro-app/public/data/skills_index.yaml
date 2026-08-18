@@ -3,8 +3,8 @@ metadata:
   generated_from: domain yaml files
   total_domains: 6
   total_subdomains: 21
-  total_competencies: 74
-  total_skills: 665
+  total_competencies: 76
+  total_skills: 681
 skills:
   authentication-systems-entry-001:
     id: authentication-systems-entry-001
@@ -3032,6 +3032,135 @@ skills:
     level_name: Senior Level
     domain_id: safe-outputs-disclosure-control
     subdomain_id: statistical-disclosure-control
+  accidental-disclosure-management-entry-001:
+    id: accidental-disclosure-management-entry-001
+    text: Follows standard incident reporting procedures upon discovering a suspected accidental disclosure
+    competency_id: accidental-disclosure-management
+    level: entry
+    level_name: Entry Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-entry-002:
+    id: accidental-disclosure-management-entry-002
+    text: Assists under direction with collecting relevant audit logs, session records, and exported artefacts
+    competency_id: accidental-disclosure-management
+    level: entry
+    level_name: Entry Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-mid-001:
+    id: accidental-disclosure-management-mid-001
+    text: Investigates suspected disclosure events by analysing audit logs, egress records, and exported artefacts
+    competency_id: accidental-disclosure-management
+    level: mid
+    level_name: Mid Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-mid-002:
+    id: accidental-disclosure-management-mid-002
+    text: Implements immediate containment actions to halt unauthorised distribution of disclosive outputs
+    competency_id: accidental-disclosure-management
+    level: mid
+    level_name: Mid Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-mid-003:
+    id: accidental-disclosure-management-mid-003
+    text: Communicates technical findings and impact assessments clearly to governance and response teams
+    competency_id: accidental-disclosure-management
+    level: mid
+    level_name: Mid Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-senior-001:
+    id: accidental-disclosure-management-senior-001
+    text: Leads technical investigations of complex disclosure incidents across multi-tenant environments
+    competency_id: accidental-disclosure-management
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-senior-002:
+    id: accidental-disclosure-management-senior-002
+    text: Develops immediate and long-term remediation strategies to prevent recurrence of disclosure vulnerabilities
+    competency_id: accidental-disclosure-management
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  accidental-disclosure-management-senior-003:
+    id: accidental-disclosure-management-senior-003
+    text: Liaises across organisational, legal, and regulatory stakeholders during incident investigations
+    competency_id: accidental-disclosure-management
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: accidental-disclosure
+  emergency-response-protocols-entry-001:
+    id: emergency-response-protocols-entry-001
+    text: Works under direction to acquire logs and other facts relating to potential data breaches
+    competency_id: emergency-response-protocols
+    level: entry
+    level_name: Entry Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-entry-002:
+    id: emergency-response-protocols-entry-002
+    text: Adheres to evidence preservation and chain of custody guidelines during investigations
+    competency_id: emergency-response-protocols
+    level: entry
+    level_name: Entry Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-mid-001:
+    id: emergency-response-protocols-mid-001
+    text: Reviews and assesses logs and other facts relating to data breaches to evaluate scope of exposure
+    competency_id: emergency-response-protocols
+    level: mid
+    level_name: Mid Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-mid-002:
+    id: emergency-response-protocols-mid-002
+    text: Communicates technical findings and impact assessments appropriately to diverse audiences
+    competency_id: emergency-response-protocols
+    level: mid
+    level_name: Mid Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-senior-001:
+    id: emergency-response-protocols-senior-001
+    text: Represents the infrastructure team when designing emergency response plans (in accordance with governance, regulatory,
+      and legal requirements) to address suspected data breaches
+    competency_id: emergency-response-protocols
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-senior-002:
+    id: emergency-response-protocols-senior-002
+    text: Liaises across organisational units to coordinate facts and actions relating to a data breach
+    competency_id: emergency-response-protocols
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-senior-003:
+    id: emergency-response-protocols-senior-003
+    text: Designs short-term mitigations to prevent further disclosure
+    competency_id: emergency-response-protocols
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
+  emergency-response-protocols-senior-004:
+    id: emergency-response-protocols-senior-004
+    text: Designs long-term mitigations against confirmed data leaks
+    competency_id: emergency-response-protocols
+    level: senior
+    level_name: Senior Level
+    domain_id: safe-outputs-disclosure-control
+    subdomain_id: emergency-response
   sde-project-planning-entry-001:
     id: sde-project-planning-entry-001
     text: Explains basic project management principles for SDEs
