@@ -149,7 +149,10 @@ domain:
       description: Implementing automated systems that enforce consistent application of disclosure controls
         across varied research outputs while maintaining statistical validity.
       tools: []
-      technologies: []
+      technologies:
+      - sdcMicro
+      - threshold configuration interfaces
+      - benchmarking tools
       standards: []
       competencies:
         disclosure-risk-assessment:
@@ -205,29 +208,75 @@ domain:
               - Leads initiatives to enhance automated SDC capabilities
     accidental-disclosure:
       id: accidental-disclosure
-      name: Accidental disclosure
-      description: ''
-      tools: []
-      technologies: []
-      standards: []
-      competencies: {}
-    emergency-response:
-      id: emergency-response
-      name: Emergency response
-      description: "The infrastructure team should be prepared for emergency response when a suspected\
-        \ data leak is reported.\n\n=== \":material-battery-10: Entry Level\"\n\n    - can work under\
-        \ direction to acquire logs and other facts relating to a potential data breaches\n\n=== \":material-battery-50:\
-        \ Mid Level\"\n\n    - can review and assess logs and other facts relating to data breaches and\
-        \ communicate findings appropriately to diverse audiences\n\n=== \":material-battery-90: Senior\
-        \ Level\"\n\n    - can represent the infrastructure team when designing emergency response plans\
-        \ (in accordance with necessary governance, regulatory, and legal requirements) to  address suspected\
-        \ data breach\n    - can liaise across organisational units facts relating to a data breach\n\
-        \    - can design short term mitigations to prevent further disclosure\n    - can design long\
-        \ term mitigations against confirmed data leaks"
+      name: Accidental Disclosure
+      description: Establishes protocols, investigation procedures, and immediate containment measures
+        when an accidental disclosure or unauthorised output export is suspected or identified.
       tools: []
       technologies:
-      - sdcMicro)
-      - threshold configuration interfaces
-      - benchmarking tools
+      - incident report templates
+      - output quarantine protocols
       standards: []
-      competencies: {}
+      competencies:
+        accidental-disclosure-management:
+          id: accidental-disclosure-management
+          name: Accidental Disclosure Management
+          description: Detects, assesses, and handles accidental disclosure events to mitigate confidentiality
+            risks and prevent unauthorised dissemination of sensitive information.
+          levels:
+            entry:
+              id: accidental-disclosure-management-entry
+              name: Entry Level
+              skills:
+              - Follows standard incident reporting procedures upon discovering a suspected accidental disclosure
+              - Assists under direction with collecting relevant audit logs, session records, and exported artefacts
+            mid:
+              id: accidental-disclosure-management-mid
+              name: Mid Level
+              skills:
+              - Investigates suspected disclosure events by analysing audit logs, egress records, and exported artefacts
+              - Implements immediate containment actions to halt unauthorised distribution of disclosive outputs
+              - Communicates technical findings and impact assessments clearly to governance and response teams
+            senior:
+              id: accidental-disclosure-management-senior
+              name: Senior Level
+              skills:
+              - Leads technical investigations of complex disclosure incidents across multi-tenant environments
+              - Develops immediate and long-term remediation strategies to prevent recurrence of disclosure vulnerabilities
+              - Liaises across organisational, legal, and regulatory stakeholders during incident investigations
+    emergency-response:
+      id: emergency-response
+      name: Emergency Response
+      description: Prepares and executes rapid response procedures for suspected data breaches, data
+        leaks, and critical security incidents in research environments.
+      tools: []
+      technologies:
+      - emergency response playbooks
+      - forensic log analysis tools
+      standards: []
+      competencies:
+        emergency-response-protocols:
+          id: emergency-response-protocols
+          name: Emergency Response Protocols
+          description: Coordinates emergency response actions, forensics acquisition, and cross-team
+            containment during confirmed or suspected data breaches.
+          levels:
+            entry:
+              id: emergency-response-protocols-entry
+              name: Entry Level
+              skills:
+              - Works under direction to acquire logs and other facts relating to potential data breaches
+              - Adheres to evidence preservation and chain of custody guidelines during investigations
+            mid:
+              id: emergency-response-protocols-mid
+              name: Mid Level
+              skills:
+              - Reviews and assesses logs and other facts relating to data breaches to evaluate scope of exposure
+              - Communicates technical findings and impact assessments appropriately to diverse audiences
+            senior:
+              id: emergency-response-protocols-senior
+              name: Senior Level
+              skills:
+              - Represents the infrastructure team when designing emergency response plans (in accordance with governance, regulatory, and legal requirements) to address suspected data breaches
+              - Liaises across organisational units to coordinate facts and actions relating to a data breach
+              - Designs short-term mitigations to prevent further disclosure
+              - Designs long-term mitigations against confirmed data leaks

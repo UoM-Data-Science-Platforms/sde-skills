@@ -17,8 +17,8 @@ subdomains:
     items:
     - Risk classification templates
   accidental-disclosure:
-    name: Accidental disclosure
+    name: Accidental Disclosure
     items: []
   emergency-response:
-    name: Emergency response
+    name: Emergency Response
     items: []
