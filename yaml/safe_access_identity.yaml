@@ -31,8 +31,8 @@ domain:
               id: authentication-systems-entry
               name: Entry Level
               skills:
-              - Understands basic authentication concepts and mechanisms (e.g. Active Directory / Microsoft Entra, Kerberos, OAuth 2.0 / OIDC)
-              - Familiar with password best practice and multi-factor authentication
+              - Explains basic authentication concepts and mechanisms (e.g. Microsoft Entra ID, Kerberos, OAuth 2.0 / OIDC)
+              - Applies password best practices and configures multi-factor authentication (MFA)
               - Can configure user accounts in identity systems under supervision
               - Can understand existing SDE security Matrix.
             mid:
@@ -63,8 +63,8 @@ domain:
               id: user-provisioning-lifecycle-entry
               name: Entry Level
               skills:
-              - Understands user account lifecycle stages
-              - Familiar with provisioning and deprovisioning processes
+              - Describes user account lifecycle stages from provisioning to deprovisioning
+              - Follows standard user provisioning and deprovisioning procedures
               - Can execute account management tasks following established procedures
               - Understand existing user provisioning specification.
             mid:
@@ -95,8 +95,8 @@ domain:
               id: federated-identity-management-entry
               name: Entry Level
               skills:
-              - Understands basic concepts of federated identity
-              - Familiar with SSO protocols (SAML, OAuth, OIDC)
+              - Describes fundamental concepts of federated identity and single sign-on
+              - Identifies standard SSO protocols including SAML, OAuth, and OIDC
               - Can configure simple federated identity integrations
             mid:
               id: federated-identity-management-mid
@@ -137,8 +137,8 @@ domain:
               id: role-based-access-control-entry
               name: Entry Level
               skills:
-              - Understands RBAC concepts and principles
-              - Familiar with role definition and assignment processes
+              - Explains role-based access control (RBAC) concepts and principles
+              - Assigns predefined roles and manages role permissions under guidance
               - Can implement basic role assignments following established patterns
               - Can understand existing role definitions
             mid:
@@ -170,8 +170,8 @@ domain:
               id: attribute-based-access-control-entry
               name: Entry Level
               skills:
-              - Understands ABAC concepts and use cases
-              - Familiar with policy definition and attribute types
+              - Explains attribute-based access control (ABAC) concepts and use cases
+              - Identifies attribute types and interprets access control policy definitions
               - Can implement simple attribute-based policies
             mid:
               id: attribute-based-access-control-mid
@@ -200,8 +200,8 @@ domain:
               id: least-privilege-implementation-entry
               name: Entry Level
               skills:
-              - Understands the principle of least privilege
-              - Familiar with privilege management concepts
+              - Explains the principle of least privilege and its application
+              - Identifies privileged access management (PAM) controls and escalation workflows
               - Can identify excessive permissions in simple scenarios
               - Understand existing role-level security
             mid:
@@ -244,8 +244,8 @@ domain:
               id: researcher-onboarding-entry
               name: Entry Level
               skills:
-              - Understands researcher onboarding requirements and processes
-              - Familiar with training and certification verification
+              - Describes researcher onboarding requirements and identity verification processes
+              - Verifies researcher training certificates and accreditation records
               - Can execute onboarding steps following established procedures
             mid:
               id: researcher-onboarding-mid
@@ -273,8 +273,8 @@ domain:
               id: secure-research-workspaces-entry
               name: Entry Level
               skills:
-              - Understands secure workspace concepts and components
-              - Familiar with workspace provisioning processes
+              - Describes secure workspace architecture, boundaries, and components
+              - Assists with workspace provisioning and environment teardown workflows
               - Can configure basic workspace settings following templates
               - Understand current Research workspace
             mid:
@@ -307,11 +307,11 @@ domain:
               id: secure-collaboration-tools-entry
               name: Entry Level
               skills:
-              - Understands secure collaboration requirements in research environments
-              - Familiar with collaboration tool security features
+              - Identifies secure collaboration requirements and risks in research environments
+              - Configures security settings within approved collaboration platforms
               - Can configure basic sharing and access controls
-              - Knowledge of any secret cloud service provider e.g. Azure Key Vault
-              - Knowledge of simple collaborative platforms
+              - Identifies cloud secret management services (e.g. Azure Key Vault) and their purpose
+              - Uses approved collaborative platforms in accordance with security policies
             mid:
               id: secure-collaboration-tools-mid
               name: Mid Level

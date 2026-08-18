@@ -30,8 +30,8 @@ domain:
               id: output-review-processes-entry
               name: Entry Level
               skills:
-              - Understands output review requirements and processes
-              - Familiar with common output formats and their risks
+              - Describes output review requirements, thresholds, and governance processes
+              - Identifies common research output formats and their associated disclosure risks
             mid:
               id: output-review-processes-mid
               name: Mid Level
@@ -64,8 +64,8 @@ domain:
               id: workflow-engines-entry
               name: Entry Level
               skills:
-              - Is aware of workflow engines and the functionality they provide
-              - Is aware of actors and stages in the disclosure review process
+              - Identifies workflow automation engines and describes their operational capabilities
+              - Describes key roles, responsibilities, and stages in the disclosure review workflow
               - Can administer workflow engines to make changes to existing disclosure review workflows
             mid:
               id: workflow-engines-mid
@@ -95,8 +95,8 @@ domain:
               id: data-airlocks-entry
               name: Entry Level
               skills:
-              - Is familiar with data airlocks
-              - Is familiar with user roles in data airlocks
+              - Explains the purpose, architecture, and operational rules of data airlocks
+              - Identifies user roles and access permissions within data airlock systems
             mid:
               id: data-airlocks-mid
               name: Mid Level
@@ -124,7 +124,7 @@ domain:
               id: code-repositories-entry
               name: Entry Level
               skills:
-              - Familiar with code repositories and sharing platforms (e.g. Git, GitHub, GitLab)
+              - Utilises code repositories and version control platforms (e.g. Git, GitHub, GitLab)
             mid:
               id: code-repositories-mid
               name: Mid Level
@@ -163,9 +163,8 @@ domain:
               id: disclosure-risk-assessment-entry
               name: Entry Level
               skills:
-              - Understands basic disclosure risk concepts (re-identification risks, data sensitivity
-                levels)
-              - Familiar with common types of disclosure risks (identity, attribute)
+              - Explains basic disclosure risk concepts (e.g. re-identification risks, data sensitivity levels)
+              - Differentiates between identity disclosure, attribute disclosure, and inferential disclosure
             mid:
               id: disclosure-risk-assessment-mid
               name: Mid Level
@@ -189,8 +188,8 @@ domain:
               id: automated-disclosure-control-entry
               name: Entry Level
               skills:
-              - Understands automated SDC tool concepts (e.g. rule-based systems, threshold settings)
-              - Familiar with available SDC automation tools
+              - Explains automated SDC tool concepts (e.g. rule-based systems, threshold settings)
+              - Identifies available statistical disclosure control (SDC) tools and packages
             mid:
               id: automated-disclosure-control-mid
               name: Mid Level
