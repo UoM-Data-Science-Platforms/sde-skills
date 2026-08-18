@@ -4,16 +4,20 @@ subdomains:
   data-governance:
     name: Data Governance
     items:
-    - Checksums
-    - Excel validation templates
+    - source: community
+      items:
+      - Checksums
+      - Excel validation templates
   data-engineering-and-processing:
     name: Data Engineering & Processing
     items:
-    - Airflow
-    - Python
-    - SQLite
-    - FHIR/OMOP documentation
-    - HashiCorp Vault
-    - AES/RSA
-    - Windows Backup
-    - AWS DMS
+    - source: community
+      items:
+      - Airflow
+      - Python
+      - SQLite
+      - FHIR/OMOP documentation
+      - HashiCorp Vault
+      - AES/RSA
+      - Windows Backup
+      - AWS DMS

@@ -4,16 +4,22 @@ subdomains:
   identity-management:
     name: Identity Management
     items:
-    - Microsoft Entra
-    - Provisioning tools
-    - SSO protocols (SAML
+    - source: community
+      items:
+      - Microsoft Entra ID
+      - Provisioning tools
+      - SSO protocols (SAML, OAuth, OIDC)
   access-control:
     name: Access Control
     items:
-    - RBAC concepts
-    - ABAC concepts
-    - Privilege audit tools
+    - source: community
+      items:
+      - RBAC concepts
+      - ABAC concepts
+      - Privilege audit tools
   secure-user-experience:
     name: Secure User Experience
     items:
-    - azure kevaults
+    - source: community
+      items:
+      - Azure Key Vault

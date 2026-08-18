@@ -4,21 +4,38 @@ subdomains:
   output-checking:
     name: Output Checking
     items:
-    - CSV
+    - source: community
+      items:
+      - CSV
   tools-and-platforms-to-support-output-checking:
     name: Tools and Platforms to Support Output Checking
     items:
-    - Camunda
-    - Data airlocks
-    - GitHub
-    - Git
+    - source: community
+      items:
+      - Camunda
+      - Data airlocks
+      - GitHub
+      - Git
   statistical-disclosure-control:
     name: Statistical Disclosure Control
     items:
-    - Risk classification templates
+    - source: community
+      items:
+      - Risk classification templates
+      - sdcMicro
+      - Threshold configuration interfaces
+      - Benchmarking tools
   accidental-disclosure:
     name: Accidental Disclosure
-    items: []
+    items:
+    - source: community
+      items:
+      - Incident report templates
+      - Quarantine protocols
   emergency-response:
     name: Emergency Response
-    items: []
+    items:
+    - source: community
+      items:
+      - Emergency response playbooks
+      - Forensic log analysis tools

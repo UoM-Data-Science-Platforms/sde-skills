@@ -4,34 +4,40 @@ subdomains:
   software-engineering:
     name: Software Engineering
     items:
-    - GitHub
-    - Git
-    - Postman
-    - JUnit
-    - REST
-    - Markdown
-    - Docker Hub
+    - source: community
+      items:
+      - GitHub
+      - Git
+      - Postman
+      - JUnit
+      - REST
+      - Markdown
+      - Docker Hub
   infrastructure-and-deployment:
     name: Infrastructure & Deployment
     items:
-    - AWS Console
-    - Azure Portal
-    - Google Cloud Console 
-    - Terraform
-    - Kubernetes
-    - Azure CLI
-    - AWS CLI
-    - Google Cloud SDK
-    - CloudFormation
-    - Docker CLI
-    - TLS/SSL
+    - source: community
+      items:
+      - AWS Console
+      - Azure Portal
+      - Google Cloud Console
+      - Terraform
+      - Kubernetes
+      - Azure CLI
+      - AWS CLI
+      - Google Cloud SDK
+      - CloudFormation
+      - Docker CLI
+      - TLS/SSL
   system-architecture:
     name: System Architecture
     items:
-    - Apache JMeter
-    - UML
-    - React
-    - Nessus
-    - Ansible
-    - shell scripts
-    - SLURM
+    - source: community
+      items:
+      - Apache JMeter
+      - UML
+      - React
+      - Nessus
+      - Ansible
+      - Shell scripts
+      - SLURM
