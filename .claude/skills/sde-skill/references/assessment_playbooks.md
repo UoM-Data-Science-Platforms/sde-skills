@@ -39,7 +39,8 @@ target role/level, and what to develop next.
    state that choice in the report's assumptions.
 2. Read the CV fully. Extract skills, tools, responsibilities, and
    achievements *with the evidence attached* (which role, what they did).
-3. Load the in-scope domain YAML files. For each relevant competency,
+3. Load the in-scope files from `references/domains/`. For each relevant
+   competency,
    compare the CV evidence against the entry/mid/senior skill statements
    and assign the highest level with real support, with a D/I rating.
    Match meaning, not keywords; credit equivalent tools and transferable
@@ -51,8 +52,8 @@ target role/level, and what to develop next.
 5. Report using the template below. For the development plan, quote the
    skill statements of the *next* level up as concrete objectives, and
    suggest realistic routes (courses, certifications, stretch tasks,
-   shadowing) — the `*_tools-tech-standards.yaml` files suggest concrete
-   technologies worth hands-on practice.
+   shadowing) — the example tools/technologies/standards lists in the
+   domain files suggest concrete technologies worth hands-on practice.
 
 **Template:**
 

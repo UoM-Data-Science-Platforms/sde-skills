@@ -1,11 +1,13 @@
 <!-- AUTO-GENERATED FILE - do not edit by hand.
+     Source of truth: yaml/
      Regenerate with: python scripts/build_skill_references.py -->
+
 
 # SDE Competency Framework - Index
 
 Compact map of the full framework: every domain, subdomain, and competency
-with its identifier. Use this to decide which domain YAML files (in
-`references/yaml/`) to load for detail; each competency there defines
+with its identifier. Use this to decide which domain reference files (in
+`references/domains/`) to load for detail; each competency there defines
 entry, mid, and senior level skill statements.
 
 6 domains / 21 subdomains / 74 competencies. Levels everywhere: entry, mid, senior.
@@ -14,7 +16,7 @@ entry, mid, and senior level skill statements.
 
 This domain covers all aspects of user authentication, authorization, and access control within Secure Data Environments, ensuring that only authorised users can access appropriate resources.
 
-Detail: `references/yaml/safe_access_identity.yaml` | Example tools & standards: `references/yaml/safe-access-identity_tools-tech-standards.yaml`
+Detail: `references/domains/safe-access-identity.md`
 
 ### Identity Management (`identity-management`)
 
@@ -23,7 +25,6 @@ Identity Management encompasses the systems and processes that govern user digit
 - **Authentication Systems** (`authentication-systems`): Implements and maintains secure user verification mechanisms within research environments.
 - **User Provisioning & Lifecycle** (`user-provisioning-lifecycle`): Manages the complete lifecycle of user accounts from creation to deactivation within secure environments.
 - **Federated Identity Management** (`federated-identity-management`): Enables secure authentication across organisational boundaries through single sign-on protocols like SAML, OAuth, and OIDC.
-- *Example tools/standards:* Microsoft Entra, Provisioning tools, SSO protocols (SAML
 
 ### Access Control (`access-control`)
 
@@ -32,7 +33,6 @@ Access Control ensures that only authorised individuals can access specific reso
 - **Role-Based Access Control** (`role-based-access-control`): Implements access permissions based on organizational roles within secure data environments.
 - **Attribute-Based Access Control** (`attribute-based-access-control`): Implements dynamic, context-aware access control using attributes rather than roles.
 - **Least Privilege Implementation** (`least-privilege-implementation`): Ensures users and systems have only the minimum access privileges needed for their functions.
-- *Example tools/standards:* RBAC concepts, ABAC concepts, Privilege audit tools
 
 ### Secure User Experience (`secure-user-experience`)
 
@@ -41,13 +41,12 @@ Secure User Experience focuses on designing and maintaining protected research e
 - **Researcher Onboarding** (`researcher-onboarding`): Designs and implements secure processes for integrating researchers into data environments.
 - **Secure Research Workspaces** (`secure-research-workspaces`): Creates and maintains protected environments for researchers working with sensitive data.
 - **Secure Collaboration Tools** (`secure-collaboration-tools`): Implements platforms enabling researchers to securely share and collaborate on sensitive data.
-- *Example tools/standards:* azure kevaults
 
 ## Domain 2: Safe Data Management (`safe-data-management`)
 
 This domain covers all aspects of data handling, processing, governance, and engineering within Secure Data Environments, focusing on ensuring data is managed securely and effectively throughout its lifecycle.
 
-Detail: `references/yaml/safe_data_management.yaml` | Example tools & standards: `references/yaml/safe-data-management_tools-tech-standards.yaml`
+Detail: `references/domains/safe-data-management.md`
 
 ### Data Governance (`data-governance`)
 
@@ -58,7 +57,6 @@ Data Governance establishes frameworks and processes for ensuring data quality, 
 - **Data Classification & Sensitivity** (`data-classification-sensitivity`): Implements frameworks for categorising data based on sensitivity and security requirements.
 - **Data Lineage & Provenance** (`data-lineage-provenance`): Tracks and documents the origins, movements, and transformations of data throughout systems.
 - **Data Quality Management** (`data-quality-management`): Ensures the accuracy, completeness, and reliability of data within secure environments.
-- *Example tools/standards:* Checksums, Excel validation templates
 
 ### Data Engineering & Processing (`data-engineering-processing`)
 
@@ -77,7 +75,7 @@ Data Engineering & Processing focuses on building and maintaining secure systems
 
 This domain covers the regulatory, ethical, and compliance aspects of operating Secure Data Environments, ensuring systems meet legal requirements and maintain appropriate controls.
 
-Detail: `references/yaml/safe_governance_compliance.yaml` | Example tools & standards: `references/yaml/safe-governance-compliance_tools-tech-standards.yaml`
+Detail: `references/domains/safe-governance-compliance.md`
 
 ### Regulatory Compliance (`regulatory-compliance`)
 
@@ -96,7 +94,6 @@ Security Management establishes and maintains protections for data assets and sy
 - **Security Controls Implementation** (`security-controls-implementation`): Deploys technical, administrative, and physical safeguards to protect data and systems.
 - **Security Assessment & Testing** (`security-assessment-testing`): Evaluates the effectiveness of security controls through testing and analysis.
 - **Incident Response Management** (`incident-response-management`): Prepares for and manages security incidents effectively to minimise impact.
-- *Example tools/standards:* Firewall rules, Nessus, OpenVAS, Splunk
 
 ### Ethics & Research Governance (`ethics-research-governance`)
 
@@ -118,14 +115,13 @@ Audit & Compliance Monitoring ensures continuous verification of regulatory adhe
 
 This domain covers the technical controls that help to protect projects from accidental or intentional disclosure, as well as providing tooling to support disclosure review operations of project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.
 
-Detail: `references/yaml/safe_outputs_disclosure_control.yaml` | Example tools & standards: `references/yaml/safe-outputs-disclosure-control_tools-tech-standards.yaml`
+Detail: `references/domains/safe-outputs-disclosure-control.md`
 
 ### Output Checking (`output-checking`)
 
 This subdomain focuses on providing output checkers with tools that facilitate structured review processes for different output formats, and developing decision support systems that ensure consistent application of disclosure control rules while maintaining appropriate governance and traceability.
 
 - **Output Review Processes** (`output-review-processes`): Involves understanding review requirements for different output formats, designing workflows, implementing tracking and governance processes.
-- *Example tools/standards:* CSV
 
 ### Tools and platforms to support output checking (`tools-and-platforms-to-support-output-checking`)
 
@@ -134,7 +130,6 @@ This subdomain focuses on providing output checkers with tools that facilitate s
 - **Workflow engines** (`workflow-engines`): Deploy and administer workflow engines to help ensure consistency, reliability, and traceability of output checking processes.
 - **Data airlocks** (`data-airlocks`): Install and administer data airlock applications, understand the roles and what level of access is required to achieve given tasks (e.g., approvals, requests, triage, audit, review etc.) within the airlock application, create user documentation and training materials, contribute to on-going improvements to data airlocks to ensure they meet user needs as well as comply with standards and regulations.
 - **Code repositories** (`code-repositories`): Install and configure code repository systems (e.g., Git) that allow source code to be imported and exported from SDEs in industry standard ways.
-- *Example tools/standards:* Camunda, Data airlocks, GitHub, Git
 
 ### Statistical Disclosure Control (`statistical-disclosure-control`)
 
@@ -142,7 +137,6 @@ Implementing automated systems that enforce consistent application of disclosure
 
 - **Disclosure Risk Assessment** (`disclosure-risk-assessment`): Implementing tools to facilitate reviewing research outputs for potential privacy violations and re-identification risks.
 - **Automated Disclosure Control** (`automated-disclosure-control`): Implements systems that automatically apply disclosure controls to research outputs.
-- *Example tools/standards:* Risk classification templates
 
 ### Accidental disclosure (`accidental-disclosure`)
 
@@ -158,7 +152,7 @@ The infrastructure team should be prepared for emergency response when a suspect
 
 This domain covers the management of secure data environment projects, operational excellence, and the delivery of services to research communities.
 
-Detail: `references/yaml/safe_projects_operations.yaml` | Example tools & standards: `references/yaml/safe-projects-operations_tools-tech-standards.yaml`
+Detail: `references/domains/safe-projects-operations.md`
 
 ### Project Management (`project-management`)
 
@@ -169,7 +163,6 @@ Project Management oversees the planning and delivery of secure data environment
 - **Agile Delivery Methods** (`agile-delivery-methods`): Applies iterative and incremental approaches to SDE development and operations.
 - **Procurement & Vendor Management** (`procurement-vendor-management`): Acquires and manages external resources and services for secure data environments.
 - **Resource & Cost Management** (`resource-cost-management`): Allocates and optimises resources within secure data environments to maximise value.
-- *Example tools/standards:* Trello, Microsoft Planner, SharePoint, LabArchives, Miro, Scrum boards
 
 ### Service Management (`service-management`)
 
@@ -178,7 +171,6 @@ Service Management ensures the reliable delivery of secure data environment serv
 - **Service Level Management** (`service-level-management`): Defines, measures, and maintains service quality for SDE users.
 - **Incident & Problem Management** (`incident-problem-management`): Responds to and resolves service disruptions while preventing recurrence.
 - **Change & Release Management** (`change-release-management`): Controls modifications to SDE infrastructure, applications, and services.
-- *Example tools/standards:* basic ticketing systems, Service now, Freshservice, GitHub Actions
 
 ### Operational Excellence (`operational-excellence`)
 
@@ -187,7 +179,6 @@ Operational Excellence establishes consistent, high-quality service delivery wit
 - **Continuous Improvement** (`continuous-improvement`): Systematically enhances SDE processes, services, and capabilities.
 - **Documentation & Knowledge Management** (`documentation-knowledge-management`): Creates, maintains, and shares operational knowledge within the SDE.
 - **Monitoring & Observability** (`monitoring-observability`): Tracks system health, performance, and security in the SDE.
-- *Example tools/standards:* Lean Six Sigma, Google Docs, OneNote, Azure Monitor, CloudWatch
 
 ### Research Support & Innovation (`research-support-innovation`)
 
@@ -202,7 +193,7 @@ Research Support & Innovation enhances researcher effectiveness within secure da
 
 This domain covers the technical implementation and maintenance of secure systems, focusing on the infrastructure, development, and engineering aspects of Secure Data Environments.
 
-Detail: `references/yaml/safe_technology_engineering.yaml` | Example tools & standards: `references/yaml/safe-technology-engineering_tools-tech-standards.yaml`
+Detail: `references/domains/safe-technology-engineering.md`
 
 ### Software Engineering (`software-engineering`)
 
@@ -214,7 +205,6 @@ Software Engineering applies structured approaches to developing and maintaining
 - **Microservices & API Design** (`microservices-api-design`): Develops loosely coupled, independently deployable services that communicate via APIs.
 - **Code Documentation & Reusability** (`code-documentation-reusability`): Creates understandable, maintainable, and reusable code.
 - **Artefact Management** (`artefact-management`): Securely stores, distributes, and controls access to software artefacts including container images, helm charts, and package repositories.
-- *Example tools/standards:* GitHub, Git, Postman, JUnit, REST, Markdown, Docker Hub
 
 ### Infrastructure & Deployment (`infrastructure-deployment`)
 
@@ -236,4 +226,3 @@ System Architecture establishes the foundational design principles for secure, s
 - **Vulnerability & Patch Management** (`vulnerability-patch-management`): Identifies, assesses, and remediates security vulnerabilities across systems and infrastructure.
 - **Configuration Management** (`configuration-management`): Deploys and maintains infrastructure and applications in consistent, secure, and compliant states.
 - **High Performance Computing** (`high-performance-computing`): Provisions, configures, and securely manages high-performance computing resources and specialised hardware accelerators.
-- *Example tools/standards:* Apache JMeter, UML, React, Nessus, Ansible, shell scripts, SLURM

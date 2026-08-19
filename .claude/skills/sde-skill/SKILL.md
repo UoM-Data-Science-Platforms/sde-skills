@@ -52,48 +52,40 @@ The full framework is large, so don't load everything up front:
    one-line descriptions. This is usually enough to triage which domains
    matter for the task and to answer broad "what's in the framework"
    questions.
-2. **Load only the relevant domain YAML files** from `references/yaml/`
-   (e.g. `safe_data_management.yaml`) when you need the full competency
+2. **Load only the relevant domain files** from `references/domains/`
+   (e.g. `safe-data-management.md`) when you need the full competency
    descriptions and the entry/mid/senior skill statements. Load a domain
    file when you're actually assessing someone or something against its
    competencies — the index alone is too thin for grading levels.
-3. Each domain also has a `*_tools-tech-standards.yaml` companion listing
-   **example** tools, technologies, and standards per subdomain. These are
-   illustrative, community-contributed examples — treat experience with an
-   equivalent tool (e.g. GitLab CI instead of a listed CI tool) as fully
-   satisfying the same competency signal.
-4. **`references/framework_mapping.md`** maps the domains to the Five
+3. **`references/framework_mapping.md`** maps the domains to the Five
    Safes principles and the SATRE specification components. Load it when
    the user asks about Five Safes, SATRE, or how the framework relates to
    established standards.
 
-Note: the files under `references/yaml/` and `framework_mapping.md` are
-symlinks into the repository's `yaml/` and `docs/` folders — the single
-source of truth. `framework_index.md` is generated; regenerate it with
-`python scripts/build_skill_references.py` after YAML changes.
+Note: everything except `assessment_playbooks.md` is auto-generated from
+the repository's `yaml/` files and mapping doc — the single source of
+truth. Never edit generated files; after the YAML changes, regenerate
+with `python scripts/build_skill_references.py`.
 
-### Reading the domain YAML
+### Reading a domain reference
 
-Each domain file has this shape:
+Each `references/domains/<domain-id>.md` file follows this structure:
+kebab-case ids appear in backticks next to every name.
 
-```yaml
-domain:
-  id: safe-data-management        # kebab-case ids at every level
-  name: Safe Data Management
-  description: ...
-  subdomains:
-    <subdomain-id>:
-      name: ...
-      description: ...
-      competencies:
-        <competency-id>:
-          name: ...
-          description: ...       # multi-sentence prose
-          levels:
-            entry: {name: Entry Level, skills: [...]}   # skill statements
-            mid:   {name: Mid Level, skills: [...]}
-            senior: {name: Senior Level, skills: [...]}
+```markdown
+# Domain <n>: <Domain Name> (`<domain-id>`)
+## <Subdomain Name> (`<subdomain-id>`)
+*Example tools/technologies/standards:* ...
+### <Competency Name> (`<competency-id>`)
+<description>
+**Entry Level:** / **Mid Level:** / **Senior Level:**
+- <skill statement>
 ```
+
+The tools/technologies/standards lists are illustrative,
+community-contributed examples — treat experience with an equivalent tool
+(e.g. GitLab CI instead of a listed CI tool) as fully satisfying the same
+competency signal.
 
 Interpret levels as **cumulative**: someone operating at senior level in a
 competency is assumed to also cover the entry and mid statements. Entry ≈
