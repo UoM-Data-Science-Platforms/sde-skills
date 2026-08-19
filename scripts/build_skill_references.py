@@ -2,7 +2,7 @@
 """
 Build script for the sde-skill agent skill references.
 
-Generates the reference files for .claude/skills/sde-skill/references/
+Generates the reference files for skills/sde-skill/references/
 from the single source of truth — the YAML files in yaml/ and the mapping
 document in docs/competency_framework/:
 
@@ -30,7 +30,7 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 YAML_DIR = REPO_ROOT / "yaml"
 MAPPING_SRC = REPO_ROOT / "docs" / "competency_framework" / "framework_mapping.md"
-REFERENCES_DIR = REPO_ROOT / ".claude" / "skills" / "sde-skill" / "references"
+REFERENCES_DIR = REPO_ROOT / "skills" / "sde-skill" / "references"
 
 BANNER = (
     "<!-- AUTO-GENERATED FILE - do not edit by hand.\n"
