@@ -37,7 +37,7 @@ model, with a sixth cross-cutting governance domain:
 | # | Domain (id) | Covers |
 |---|---|---|
 | 1 | Safe Access & Identity (`safe-access-identity`) | Authentication, authorisation, access control, secure UX |
-| 2 | Safe Data Management (`safe-data-management`) | Data governance, engineering, processing, quality, de-identification |
+| 2 | Safe Data Management (`safe-data-management`) | Data governance, engineering, processing, quality |
 | 3 | Safe Governance & Compliance (`safe-governance-compliance`) | Information governance, security controls, audit, incident response |
 | 4 | Safe Outputs & Disclosure Control (`safe-outputs-disclosure-control`) | Statistical disclosure control, output checking, synthetic data |
 | 5 | Safe Projects & Operations (`safe-projects-operations`) | Project facilitation, service management, researcher support, training |
@@ -165,8 +165,12 @@ assessment.** In brief:
   so results are traceable and comparable across assessments.
 - **The framework is a living document**: a few subdomains exist without
   competencies fleshed out yet (e.g. `accidental-disclosure`,
-  `emergency-response`). If a task touches one, use the subdomain
-  description qualitatively and say the framework doesn't yet define
-  levels there.
+  `emergency-response`), and some competencies are missing one or more
+  levels. If a task touches one, use the descriptions qualitatively and
+  say the framework doesn't yet define levels there. Note also that
+  de-identification/pseudonymisation work maps to Domain 3
+  (`data-protection-compliance`) and Domain 4 disclosure-control
+  competencies — there is no dedicated de-identification competency in
+  Safe Data Management.
 - **State limitations**: this is a community framework oriented to UK
   SDE/TRE practice; it informs judgement, it doesn't replace it.

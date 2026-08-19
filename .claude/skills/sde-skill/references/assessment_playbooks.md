@@ -33,7 +33,10 @@ target role/level, and what to develop next.
    - *SDE service / operations manager*: Safe Projects & Operations deep;
      broad mid-level across the rest.
    These are starting points, not rules — let the user's actual JD or
-   career goal override them.
+   career goal override them. Within a "deep" domain, not every
+   competency needs the same target: set the role's core competencies at
+   the target level and peripheral ones a level below (or entry), and
+   state that choice in the report's assumptions.
 2. Read the CV fully. Extract skills, tools, responsibilities, and
    achievements *with the evidence attached* (which role, what they did).
 3. Load the in-scope domain YAML files. For each relevant competency,
