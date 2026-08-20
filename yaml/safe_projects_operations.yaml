@@ -3,18 +3,20 @@ domain:
   main-color: color-deep-blue
   id: safe-projects-operations
   name: Safe Projects & Operations
-  description: This domain covers the management of secure data environment projects, operational excellence,
-    and the delivery of services to research communities.
+  description: This domain covers the management of secure data environment projects,
+    operational excellence, and the delivery of services to research communities.
   source_file: safe_projects_operations.md
   subdomains:
     project-management:
       id: project-management
       name: Project Management
-      description: Project Management oversees the planning and delivery of secure data environment initiatives.
-        This subdomain encompasses structured planning of SDE projects with appropriate methodologies,
-        supporting researchers through effective facilitation of technical needs, implementing agile delivery
-        methods adapted for secure environments, managing procurement and vendor relationships, and optimising
-        resource allocation with effective cost management to ensure successful project outcomes.
+      description: Project Management oversees the planning and delivery of secure
+        data environment initiatives. This subdomain encompasses structured planning
+        of SDE projects with appropriate methodologies, supporting researchers through
+        effective facilitation of technical needs, implementing agile delivery methods
+        adapted for secure environments, managing procurement and vendor relationships,
+        and optimising resource allocation with effective cost management to ensure
+        successful project outcomes.
       tools: []
       technologies: []
       standards: []
@@ -22,10 +24,11 @@ domain:
         sde-project-planning:
           id: sde-project-planning
           name: SDE Project Planning
-          description: Plans and executes projects related to secure data environments. Involves understanding
-            project management concepts, using documentation and tracking tools, developing comprehensive
-            plans, managing resources and timelines, identifying risks, establishing methodologies, and
-            leading strategic planning for SDE capabilities across the organisation.
+          description: Plans and executes projects related to secure data environments.
+            Involves understanding project management concepts, using documentation
+            and tracking tools, developing comprehensive plans, managing resources
+            and timelines, identifying risks, establishing methodologies, and leading
+            strategic planning for SDE capabilities across the organisation.
           levels:
             entry:
               id: sde-project-planning-entry
@@ -34,6 +37,18 @@ domain:
               - Explains basic project management principles for SDEs
               - Utilises project tracking tools and maintains project documentation
               - Can assist with SDE project planning activities
+              core_concepts:
+              - topic: Health Data SDE Lifecycles
+                concepts:
+                - Project Initiation
+                - IG Approvals
+                - Data Provisioning
+                search_terms:
+                - NHS SDE project lifecycle
+                - Health data research project management
+                why: Understanding how research projects flow through an SDE is fundamental.
+              qualifications:
+              - PRINCE2 Foundation
             mid:
               id: sde-project-planning-mid
               name: Mid Level
@@ -41,6 +56,18 @@ domain:
               - Develops comprehensive SDE project plans
               - Manages resources and timelines for SDE projects
               - Identifies and mitigates project risks
+              core_concepts:
+              - topic: SDE Project Resource Planning
+                concepts:
+                - Cost tracking
+                - Researcher onboarding
+                - Data extraction timelines
+                search_terms:
+                - SDE capacity planning
+                - Secure data environment resource management
+                why: Need to manage expectations for IG and data engineering bottlenecks.
+              qualifications:
+              - PRINCE2 Practitioner
             senior:
               id: sde-project-planning-senior
               name: Senior Level
@@ -48,13 +75,26 @@ domain:
               - Establishes SDE project management methodologies
               - Oversees complex, multi-stakeholder SDE initiatives
               - Leads strategic planning for SDE capabilities
+              core_concepts:
+              - topic: Strategic SDE Portfolio Management
+                concepts:
+                - Multi-tenant project planning
+                - Data governance roadmap
+                - Funding alignment
+                search_terms:
+                - Health data research portfolio management
+                - NHS TRE strategy
+                why: Senior leaders must balance multiple concurrent research initiatives.
+              qualifications:
+              - MSP Practitioner
         research-project-facilitation:
           id: research-project-facilitation
           name: Research Project Facilitation
-          description: Supports researchers in utilising secure data environments effectively. Involves
-            understanding research requirements, workflows and processes, assisting with basic SDE usage,
-            coordinating complex projects, implementing technical solutions, ensuring compliance, developing
-            support frameworks, and leading initiatives to enhance research capabilities.
+          description: Supports researchers in utilising secure data environments
+            effectively. Involves understanding research requirements, workflows and
+            processes, assisting with basic SDE usage, coordinating complex projects,
+            implementing technical solutions, ensuring compliance, developing support
+            frameworks, and leading initiatives to enhance research capabilities.
           levels:
             entry:
               id: research-project-facilitation-entry
@@ -63,6 +103,18 @@ domain:
               - Identifies research project requirements and constraints within SDEs
               - Describes typical academic research lifecycles and computational workflows
               - Can assist researchers with basic SDE usage
+              core_concepts:
+              - topic: Researcher Workflow Basics
+                concepts:
+                - Jupyter/RStudio basics
+                - Data access requests
+                - Output checking prep
+                search_terms:
+                - TRE researcher support
+                - SDE workflow assistance
+                why: Entry-level support requires understanding how researchers use
+                  the environment.
+              qualifications: []
             mid:
               id: research-project-facilitation-mid
               name: Mid Level
@@ -70,6 +122,18 @@ domain:
               - Coordinates complex research projects in SDEs
               - Implements technical solutions for research needs
               - Ensures research activities comply with SDE requirements
+              core_concepts:
+              - topic: Complex SDE Workflows
+                concepts:
+                - Federated analysis setup
+                - Custom package management
+                - Pipeline automation
+                search_terms:
+                - Health data pipeline facilitation
+                - SDE researcher enablement
+                why: Mid-level staff help build complex analytical pipelines within
+                  secure boundaries.
+              qualifications: []
             senior:
               id: research-project-facilitation-senior
               name: Senior Level
@@ -77,14 +141,27 @@ domain:
               - Develops frameworks for supporting diverse research needs
               - Establishes researcher engagement and support strategies
               - Leads initiatives to enhance research capabilities in SDEs
+              core_concepts:
+              - topic: Research Enablement Strategy
+                concepts:
+                - Standardized research frameworks
+                - Institutional engagement
+                - Service design for research
+                search_terms:
+                - SDE research service design
+                - Health research infrastructure strategy
+                why: Seniors design the overall researcher experience and support
+                  model.
+              qualifications: []
         agile-delivery-methods:
           id: agile-delivery-methods
           name: Agile Delivery Methods
-          description: Applies iterative and incremental approaches to SDE development and operations.
-            Involves understanding agile concepts, participating in ceremonies, implementing practices
-            appropriate to secure environments, managing teams and processes, adapting approaches for
-            security needs, establishing delivery frameworks, and leading agile transformation while maintaining
-            compliance.
+          description: Applies iterative and incremental approaches to SDE development
+            and operations. Involves understanding agile concepts, participating in
+            ceremonies, implementing practices appropriate to secure environments,
+            managing teams and processes, adapting approaches for security needs,
+            establishing delivery frameworks, and leading agile transformation while
+            maintaining compliance.
           levels:
             entry:
               id: agile-delivery-methods-entry
@@ -93,6 +170,18 @@ domain:
               - Explains agile principles and delivery methodologies
               - Participates in standard agile ceremonies and maintains sprint artifacts
               - Can participate effectively in agile teams
+              core_concepts:
+              - topic: Agile Basics in Secure Env
+                concepts:
+                - Scrum/Kanban
+                - Ticket tracking for IG
+                - Sprint planning
+                search_terms:
+                - Agile in secure environments
+                - Healthcare IT agile delivery
+                why: Agile must be adapted to accommodate strict IG and security gates.
+              qualifications:
+              - Scrum Master I (PSM I)
             mid:
               id: agile-delivery-methods-mid
               name: Mid Level
@@ -100,6 +189,19 @@ domain:
               - Implements agile practices appropriate to SDE development
               - Manages agile teams and processes
               - Adapts agile approaches for security and compliance needs
+              core_concepts:
+              - topic: Adapting Agile to IG
+                concepts:
+                - Security compliance in sprints
+                - DevSecOps alignment
+                - Delivery tracking
+                search_terms:
+                - DevSecOps healthcare
+                - Agile compliance NHS
+                why: Mid-level must integrate continuous delivery with slow-moving
+                  compliance checks.
+              qualifications:
+              - Certified Scrum Professional (CSP)
             senior:
               id: agile-delivery-methods-senior
               name: Senior Level
@@ -107,13 +209,27 @@ domain:
               - Establishes agile delivery frameworks for secure environments
               - Develops agile governance models that maintain compliance
               - Leads agile transformation initiatives
+              core_concepts:
+              - topic: SDE Agile Governance
+                concepts:
+                - Scaled Agile Framework (SAFe)
+                - Agile transformation
+                - Governance integration
+                search_terms:
+                - Scaled agile healthcare infrastructure
+                - Agile transformation TRE
+                why: Senior leaders embed agile delivery into the overall SDE governance
+                  framework.
+              qualifications:
+              - SAFe Agilist
         procurement-vendor-management:
           id: procurement-vendor-management
           name: Procurement & Vendor Management
-          description: Acquires and manages external resources and services for secure data environments.
-            Involves understanding procurement processes, assisting with activities, managing procurement
-            for resources and services, negotiating with vendors, ensuring compliance with policies, developing
-            strategies, establishing governance, and leading strategic vendor relationships.
+          description: Acquires and manages external resources and services for secure
+            data environments. Involves understanding procurement processes, assisting
+            with activities, managing procurement for resources and services, negotiating
+            with vendors, ensuring compliance with policies, developing strategies,
+            establishing governance, and leading strategic vendor relationships.
           levels:
             entry:
               id: procurement-vendor-management-entry
@@ -122,6 +238,17 @@ domain:
               - Identifies standard procurement processes and institutional requirements
               - Reviews vendor contracts, service agreements, and performance documentation
               - Can assist with procurement activities following established procedures
+              core_concepts:
+              - topic: SDE Procurement Basics
+                concepts:
+                - Cloud vendor basics
+                - Software licensing
+                - Purchasing workflows
+                search_terms:
+                - NHS IT procurement
+                - Cloud resource purchasing
+                why: Understanding how resources are requested and bought.
+              qualifications: []
             mid:
               id: procurement-vendor-management-mid
               name: Mid Level
@@ -129,6 +256,18 @@ domain:
               - Manages procurement processes for SDE resources and services
               - Negotiates with vendors and evaluates service offerings
               - Ensures compliance with procurement policies and regulations
+              core_concepts:
+              - topic: Health IT Vendor Management
+                concepts:
+                - DSP Toolkit compliance for vendors
+                - SLA negotiation
+                - Data processor agreements
+                search_terms:
+                - NHS data processor agreements
+                - Vendor management health IT
+                why: Vendors operating in SDEs must meet strict health data standards.
+              qualifications:
+              - CIPS Level 4
             senior:
               id: procurement-vendor-management-senior
               name: Senior Level
@@ -136,21 +275,48 @@ domain:
               - Develops procurement strategies and vendor management frameworks
               - Establishes procurement governance and oversight mechanisms
               - Leads strategic vendor relationships and partnership initiatives
+              core_concepts:
+              - topic: Strategic Procurement
+                concepts:
+                - Multi-cloud vendor strategy
+                - Commercial frameworks (G-Cloud)
+                - Long-term partnerships
+                search_terms:
+                - NHS commercial frameworks
+                - Strategic cloud procurement health
+                why: Requires strategic alignment with national health data infrastructure
+                  funding.
+              qualifications:
+              - CIPS Level 6
         resource-cost-management:
           id: resource-cost-management
           name: Resource & Cost Management
-          description: Allocates and optimises resources within secure data environments to maximise value.
-            Involves understanding resource allocation principles, monitoring cloud costs, generating
-            usage reports, implementing management processes, developing optimisation strategies, creating
-            costing models, establishing financial governance, and enhancing resource efficiency.
+          description: Allocates and optimises resources within secure data environments
+            to maximise value. Involves understanding resource allocation principles,
+            monitoring cloud costs, generating usage reports, implementing management
+            processes, developing optimisation strategies, creating costing models,
+            establishing financial governance, and enhancing resource efficiency.
           levels:
             entry:
               id: resource-cost-management-entry
               name: Entry Level
               skills:
               - Explains resource allocation and cloud cost management principles
-              - Monitors cloud infrastructure expenditure using cost dashboards and billing alerts
+              - Monitors cloud infrastructure expenditure using cost dashboards and
+                billing alerts
               - Can generate basic resource usage reports and cost analyses
+              core_concepts:
+              - topic: Cloud Cost Basics
+                concepts:
+                - Billing alerts
+                - Tagging resources
+                - Usage monitoring
+                search_terms:
+                - FinOps basics
+                - Cloud cost monitoring
+                why: SDEs can rack up huge cloud bills; basic monitoring is essential.
+              qualifications:
+              - AWS/Azure Cloud Practitioner
             mid:
               id: resource-cost-management-mid
               name: Mid Level
@@ -158,6 +324,19 @@ domain:
               - Implements comprehensive resource management processes
               - Develops cost monitoring and optimisation strategies
               - Creates and maintains costing models for SDE operations
+              core_concepts:
+              - topic: SDE Cost Optimization
+                concepts:
+                - Compute optimization
+                - Chargeback models for researchers
+                - Storage lifecycle management
+                search_terms:
+                - Health data chargeback models
+                - SDE FinOps optimization
+                why: Need to assign costs to specific research grants or projects
+                  accurately.
+              qualifications:
+              - FinOps Certified Practitioner
             senior:
               id: resource-cost-management-senior
               name: Senior Level
@@ -165,15 +344,29 @@ domain:
               - Develops enterprise resource management and cost optimisation strategies
               - Establishes financial governance frameworks for SDE operations
               - Leads initiatives to enhance resource efficiency and cost-effectiveness
+              core_concepts:
+              - topic: Financial Strategy for SDEs
+                concepts:
+                - Enterprise FinOps
+                - Funding models
+                - Cost-benefit analysis of infrastructure
+                search_terms:
+                - SDE financial sustainability
+                - Enterprise FinOps healthcare
+                why: Long-term sustainability of the SDE depends on robust financial
+                  strategy.
+              qualifications:
+              - FinOps Certified Professional
     service-management:
       id: service-management
       name: Service Management
-      description: Service Management ensures the reliable delivery of secure data environment services
-        to research users. This subdomain focuses on defining and maintaining appropriate service quality
-        through structured service level agreements, implementing effective incident and problem management
-        processes that minimise disruptions and prevent recurrences, and controlling changes to infrastructure
-        and applications through governance frameworks that balance security requirements with operational
-        flexibility.
+      description: Service Management ensures the reliable delivery of secure data
+        environment services to research users. This subdomain focuses on defining
+        and maintaining appropriate service quality through structured service level
+        agreements, implementing effective incident and problem management processes
+        that minimise disruptions and prevent recurrences, and controlling changes
+        to infrastructure and applications through governance frameworks that balance
+        security requirements with operational flexibility.
       tools: []
       technologies: []
       standards: []
@@ -181,18 +374,32 @@ domain:
         service-level-management:
           id: service-level-management
           name: Service Level Management
-          description: Defines, measures, and maintains service quality for SDE users. Involves understanding
-            service level concepts and metrics, tracking performance, developing agreements and objectives,
-            implementing monitoring and reporting, analysing issues, establishing governance frameworks,
-            developing improvement strategies, and leading cross-organisational service level negotiations.
+          description: Defines, measures, and maintains service quality for SDE users.
+            Involves understanding service level concepts and metrics, tracking performance,
+            developing agreements and objectives, implementing monitoring and reporting,
+            analysing issues, establishing governance frameworks, developing improvement
+            strategies, and leading cross-organisational service level negotiations.
           levels:
             entry:
               id: service-level-management-entry
               name: Entry Level
               skills:
               - Defines service level concepts, indicators, and metrics
-              - Interprets service level agreements (SLAs) and monitors key performance indicators
+              - Interprets service level agreements (SLAs) and monitors key performance
+                indicators
               - Can track and report on basic service levels
+              core_concepts:
+              - topic: SLA Basics
+                concepts:
+                - Uptime monitoring
+                - Incident response times
+                - Basic reporting
+                search_terms:
+                - ITIL SLA basics
+                - Service level monitoring
+                why: Tracking basic metrics against commitments.
+              qualifications:
+              - ITIL 4 Foundation
             mid:
               id: service-level-management-mid
               name: Mid Level
@@ -200,6 +407,18 @@ domain:
               - Develops service level agreements and objectives
               - Implements service level monitoring and reporting
               - Analyses service performance and addresses issues
+              core_concepts:
+              - topic: SDE Service Levels
+                concepts:
+                - Output checking SLAs
+                - Workspace provisioning times
+                - Performance analytics
+                search_terms:
+                - SDE service level agreements
+                - TRE operational metrics
+                why: Specific SLAs for SDEs involve manual IG tasks like output checking.
+              qualifications:
+              - ITIL 4 Specialist
             senior:
               id: service-level-management-senior
               name: Senior Level
@@ -207,21 +426,47 @@ domain:
               - Establishes service level frameworks and governance
               - Develops service improvement strategies
               - Leads negotiations for cross-organisational service levels
+              core_concepts:
+              - topic: Service Level Governance
+                concepts:
+                - Cross-organizational SLAs
+                - Strategic service improvement
+                - Customer experience (CX)
+                search_terms:
+                - Healthcare IT service governance
+                - TRE service excellence
+                why: Negotiating SLAs between hospitals, universities, and data providers.
+              qualifications:
+              - ITIL 4 Strategic Leader
         incident-problem-management:
           id: incident-problem-management
           name: Incident & Problem Management
-          description: Responds to and resolves service disruptions while preventing recurrence. Involves
-            understanding incident concepts, classifying and documenting issues, implementing management
-            processes, leading response activities, conducting root cause analysis, establishing frameworks,
-            developing strategies to reduce frequency and impact, and leading service resilience initiatives.
+          description: Responds to and resolves service disruptions while preventing
+            recurrence. Involves understanding incident concepts, classifying and
+            documenting issues, implementing management processes, leading response
+            activities, conducting root cause analysis, establishing frameworks, developing
+            strategies to reduce frequency and impact, and leading service resilience
+            initiatives.
           levels:
             entry:
               id: incident-problem-management-entry
               name: Entry Level
               skills:
               - Explains incident and problem management concepts and lifecycles
-              - Classifies and prioritises operational incidents based on impact and urgency
+              - Classifies and prioritises operational incidents based on impact and
+                urgency
               - Can document and track incidents following established processes
+              core_concepts:
+              - topic: Incident Logging
+                concepts:
+                - Ticketing systems
+                - Triage
+                - Impact assessment
+                search_terms:
+                - ITSM incident logging
+                - Helpdesk basics
+                why: First-line response to user issues or system alerts.
+              qualifications: []
             mid:
               id: incident-problem-management-mid
               name: Mid Level
@@ -229,6 +474,18 @@ domain:
               - Implements incident and problem management processes
               - Leads incident response and resolution activities
               - Conducts root cause analysis and develops permanent fixes
+              core_concepts:
+              - topic: SDE Incident Resolution
+                concepts:
+                - Data breach response
+                - Root cause analysis
+                - System recovery
+                search_terms:
+                - Health data breach response
+                - SDE root cause analysis
+                why: Incidents in SDEs can have severe legal/IG implications (e.g.,
+                  data leaks).
+              qualifications: []
             senior:
               id: incident-problem-management-senior
               name: Senior Level
@@ -236,21 +493,45 @@ domain:
               - Establishes incident and problem management frameworks
               - Develops strategies to reduce incident frequency and impact
               - Leads service resilience and reliability initiatives
+              core_concepts:
+              - topic: Resilience Strategy
+                concepts:
+                - Major incident management
+                - Problem management frameworks
+                - Proactive mitigation
+                search_terms:
+                - SDE major incident management
+                - Cyber resilience healthcare
+                why: Designing systems and processes that prevent major incidents.
+              qualifications: []
         change-release-management:
           id: change-release-management
           name: Change & Release Management
-          description: Controls modifications to SDE infrastructure, applications, and services. Involves
-            understanding change management concepts, following procedures, designing processes, evaluating
-            impacts, coordinating implementation, ensuring security and compliance, establishing governance
-            frameworks, and leading initiatives to balance change agility with necessary controls.
+          description: Controls modifications to SDE infrastructure, applications,
+            and services. Involves understanding change management concepts, following
+            procedures, designing processes, evaluating impacts, coordinating implementation,
+            ensuring security and compliance, establishing governance frameworks,
+            and leading initiatives to balance change agility with necessary controls.
           levels:
             entry:
               id: change-release-management-entry
               name: Entry Level
               skills:
               - Explains change management concepts and standard approval workflows
-              - Submits change request documentation and follows release approval workflows
+              - Submits change request documentation and follows release approval
+                workflows
               - Can implement changes following established procedures
+              core_concepts:
+              - topic: Change Requests
+                concepts:
+                - CAB processes
+                - Documentation
+                - Release deployment
+                search_terms:
+                - ITIL change management
+                - Software release basics
+                why: Following strict procedures for any environment modification.
+              qualifications: []
             mid:
               id: change-release-management-mid
               name: Mid Level
@@ -258,6 +539,18 @@ domain:
               - Designs change and release management processes
               - Evaluates change impacts and coordinates implementations
               - Ensures changes maintain security and compliance
+              core_concepts:
+              - topic: SDE Release Coordination
+                concepts:
+                - Zero-downtime deployments
+                - Security testing in releases
+                - Impact evaluation
+                search_terms:
+                - Secure environment change management
+                - Healthcare IT releases
+                why: Changes must not compromise the secure boundary or interrupt
+                  long-running analyses.
+              qualifications: []
             senior:
               id: change-release-management-senior
               name: Senior Level
@@ -265,15 +558,27 @@ domain:
               - Establishes change governance frameworks and policies
               - Develops strategies for balancing change agility and control
               - Leads change management improvement initiatives
+              core_concepts:
+              - topic: Change Governance
+                concepts:
+                - Automated change controls
+                - Policy definition
+                - Strategic agility
+                search_terms:
+                - Enterprise change governance
+                - DevSecOps release strategy
+                why: Balancing the need for rapid updates with strict compliance mandates.
+              qualifications: []
     operational-excellence:
       id: operational-excellence
       name: Operational Excellence
-      description: Operational Excellence establishes consistent, high-quality service delivery within
-        secure data environments. This subdomain encompasses systematic continuous improvement of processes
-        and services using methodologies like Lean and Six Sigma, comprehensive documentation and knowledge
-        management that preserves operational expertise, and robust monitoring and observability practices
-        that provide insight into system health, performance, and security status while enabling proactive
-        management of the environment.
+      description: Operational Excellence establishes consistent, high-quality service
+        delivery within secure data environments. This subdomain encompasses systematic
+        continuous improvement of processes and services using methodologies like
+        Lean and Six Sigma, comprehensive documentation and knowledge management that
+        preserves operational expertise, and robust monitoring and observability practices
+        that provide insight into system health, performance, and security status
+        while enabling proactive management of the environment.
       tools: []
       technologies: []
       standards: []
@@ -281,18 +586,32 @@ domain:
         continuous-improvement:
           id: continuous-improvement
           name: Continuous Improvement
-          description: Systematically enhances SDE processes, services, and capabilities. Involves understanding
-            improvement concepts, identifying opportunities, implementing initiatives, applying methodologies
-            like Lean and Six Sigma, measuring outcomes, establishing improvement cultures, developing
-            enterprise strategies, and leading transformational programmes across the organisation.
+          description: Systematically enhances SDE processes, services, and capabilities.
+            Involves understanding improvement concepts, identifying opportunities,
+            implementing initiatives, applying methodologies like Lean and Six Sigma,
+            measuring outcomes, establishing improvement cultures, developing enterprise
+            strategies, and leading transformational programmes across the organisation.
           levels:
             entry:
               id: continuous-improvement-entry
               name: Entry Level
               skills:
               - Explains continuous improvement principles and methodologies
-              - Identifies core principles of continuous improvement methodologies (e.g. Lean, Plan-Do-Check-Act)
+              - Identifies core principles of continuous improvement methodologies
+                (e.g. Lean, Plan-Do-Check-Act)
               - Can identify opportunities for process improvement
+              core_concepts:
+              - topic: Improvement Basics
+                concepts:
+                - PDCA cycle
+                - Lean concepts
+                - Identifying bottlenecks
+                search_terms:
+                - Continuous improvement IT
+                - Lean methodology basics
+                why: Recognizing inefficiencies in daily work.
+              qualifications:
+              - Lean Six Sigma Yellow Belt
             mid:
               id: continuous-improvement-mid
               name: Mid Level
@@ -300,6 +619,19 @@ domain:
               - Implements continuous improvement initiatives
               - Applies appropriate methodologies to enhance processes
               - Measures and reports on improvement outcomes
+              core_concepts:
+              - topic: Process Optimization
+                concepts:
+                - Value stream mapping
+                - Automating manual checks
+                - Metrics-driven improvement
+                search_terms:
+                - SDE process optimization
+                - Healthcare IT Lean
+                why: Applying methodologies to streamline complex workflows like data
+                  ingress.
+              qualifications:
+              - Lean Six Sigma Green Belt
             senior:
               id: continuous-improvement-senior
               name: Senior Level
@@ -307,21 +639,48 @@ domain:
               - Establishes continuous improvement frameworks and culture
               - Develops enterprise improvement strategies
               - Leads transformational improvement programmes
+              core_concepts:
+              - topic: Enterprise Improvement
+                concepts:
+                - Cultural transformation
+                - Strategic KPI alignment
+                - Innovation frameworks
+                search_terms:
+                - Continuous improvement culture
+                - Enterprise transformation healthcare
+                why: Driving a culture of efficiency and quality across the entire
+                  SDE service.
+              qualifications:
+              - Lean Six Sigma Black Belt
         documentation-knowledge-management:
           id: documentation-knowledge-management
           name: Documentation & Knowledge Management
-          description: Creates, maintains, and shares operational knowledge within the SDE. Involves understanding
-            documentation requirements, using knowledge management systems, creating basic documentation,
-            implementing comprehensive strategies, developing knowledge bases, ensuring security compliance,
-            establishing governance standards, and enhancing organisational knowledge sharing.
+          description: Creates, maintains, and shares operational knowledge within
+            the SDE. Involves understanding documentation requirements, using knowledge
+            management systems, creating basic documentation, implementing comprehensive
+            strategies, developing knowledge bases, ensuring security compliance,
+            establishing governance standards, and enhancing organisational knowledge
+            sharing.
           levels:
             entry:
               id: documentation-knowledge-management-entry
               name: Entry Level
               skills:
               - Identifies technical documentation requirements and standards
-              - Maintains structured documentation within team knowledge bases and wikis
+              - Maintains structured documentation within team knowledge bases and
+                wikis
               - Can create and maintain basic documentation
+              core_concepts:
+              - topic: Documentation Maintenance
+                concepts:
+                - Wiki updates
+                - Markdown
+                - Standard Operating Procedures (SOPs)
+                search_terms:
+                - Technical documentation basics
+                - IT SOP maintenance
+                why: Keeping operational knowledge accurate and accessible.
+              qualifications: []
             mid:
               id: documentation-knowledge-management-mid
               name: Mid Level
@@ -329,6 +688,18 @@ domain:
               - Implements comprehensive documentation strategies
               - Develops knowledge bases and sharing mechanisms
               - Ensures documentation meets security and compliance needs
+              core_concepts:
+              - topic: SDE Knowledge Base
+                concepts:
+                - Information architecture
+                - Secure documentation handling
+                - Runbook creation
+                search_terms:
+                - Knowledge management IT
+                - SDE runbooks
+                why: Structuring knowledge so complex SDE operations are repeatable
+                  and secure.
+              qualifications: []
             senior:
               id: documentation-knowledge-management-senior
               name: Senior Level
@@ -336,21 +707,46 @@ domain:
               - Establishes documentation governance and standards
               - Develops enterprise knowledge management strategies
               - Leads initiatives to enhance organisational knowledge sharing
+              core_concepts:
+              - topic: Knowledge Strategy
+                concepts:
+                - Enterprise knowledge management
+                - Documentation governance
+                - Knowledge sharing culture
+                search_terms:
+                - Enterprise knowledge strategy
+                - IT documentation governance
+                why: Ensuring the organization retains expertise and standardizes
+                  procedures.
+              qualifications: []
         monitoring-observability:
           id: monitoring-observability
           name: Monitoring & Observability
-          description: Tracks system health, performance, and security in the SDE. Involves understanding
-            monitoring concepts and tools, using metrics and logs, implementing comprehensive strategies,
-            designing dashboards and alerts for complex systems, analysing data, establishing enterprise
-            frameworks, and leading initiatives to enhance operational visibility across the environment.
+          description: Tracks system health, performance, and security in the SDE.
+            Involves understanding monitoring concepts and tools, using metrics and
+            logs, implementing comprehensive strategies, designing dashboards and
+            alerts for complex systems, analysing data, establishing enterprise frameworks,
+            and leading initiatives to enhance operational visibility across the environment.
           levels:
             entry:
               id: monitoring-observability-entry
               name: Entry Level
               skills:
               - Explains system monitoring concepts, metrics, and alerting mechanisms
-              - Interprets telemetry data including operational metrics, system logs, and alerts
+              - Interprets telemetry data including operational metrics, system logs,
+                and alerts
               - Can use monitoring tools to track system health
+              core_concepts:
+              - topic: Monitoring Basics
+                concepts:
+                - Log reading
+                - Basic metrics
+                - Alert acknowledgment
+                search_terms:
+                - System monitoring basics
+                - IT alerting
+                why: First line of defense for system health.
+              qualifications: []
             mid:
               id: monitoring-observability-mid
               name: Mid Level
@@ -358,6 +754,18 @@ domain:
               - Implements comprehensive monitoring strategies
               - Designs dashboards and alerting for complex systems
               - Analyses monitoring data to optimise performance
+              core_concepts:
+              - topic: SDE Observability
+                concepts:
+                - Security Information and Event Management (SIEM)
+                - Audit logging
+                - Dashboard design
+                search_terms:
+                - SDE audit logging
+                - Healthcare SIEM dashboard
+                why: Deep visibility is required for both performance and proving
+                  security compliance.
+              qualifications: []
             senior:
               id: monitoring-observability-senior
               name: Senior Level
@@ -365,15 +773,28 @@ domain:
               - Establishes enterprise monitoring frameworks
               - Develops observability strategies across systems
               - Leads initiatives to enhance operational visibility
+              core_concepts:
+              - topic: Enterprise Observability
+                concepts:
+                - Distributed tracing
+                - Observability strategy
+                - Proactive threat hunting
+                search_terms:
+                - Enterprise observability strategy
+                - Proactive system monitoring
+                why: Architecting a comprehensive view of complex, multi-layered secure
+                  systems.
+              qualifications: []
     research-support-innovation:
       id: research-support-innovation
       name: Research Support & Innovation
-      description: Research Support & Innovation enhances researcher effectiveness within secure data
-        environments. This subdomain focuses on enabling researchers through comprehensive training and
-        support programmes, providing specialised tools and capabilities that meet research requirements
-        while maintaining security, exploring and implementing innovative technologies that advance secure
-        research capabilities, and engaging with the wider community through active participation and
-        knowledge sharing across the secure data environment ecosystem.
+      description: Research Support & Innovation enhances researcher effectiveness
+        within secure data environments. This subdomain focuses on enabling researchers
+        through comprehensive training and support programmes, providing specialised
+        tools and capabilities that meet research requirements while maintaining security,
+        exploring and implementing innovative technologies that advance secure research
+        capabilities, and engaging with the wider community through active participation
+        and knowledge sharing across the secure data environment ecosystem.
       tools: []
       technologies: []
       standards: []
@@ -381,18 +802,31 @@ domain:
         researcher-training-support:
           id: researcher-training-support
           name: Researcher Training & Support
-          description: Enables researchers to effectively use secure data environments. Involves understanding
-            researcher needs, providing basic support, developing training programmes, implementing support
-            processes, addressing complex issues, establishing engagement strategies, developing innovative
-            enablement approaches, and leading initiatives to enhance the researcher experience.
+          description: Enables researchers to effectively use secure data environments.
+            Involves understanding researcher needs, providing basic support, developing
+            training programmes, implementing support processes, addressing complex
+            issues, establishing engagement strategies, developing innovative enablement
+            approaches, and leading initiatives to enhance the researcher experience.
           levels:
             entry:
               id: researcher-training-support-entry
               name: Entry Level
               skills:
               - Identifies researcher needs and support requirements within SDEs
-              - Navigates and delivers standard SDE user training materials and guidance documentation
+              - Navigates and delivers standard SDE user training materials and guidance
+                documentation
               - Can provide basic support to researchers
+              core_concepts:
+              - topic: Basic Support
+                concepts:
+                - Password resets
+                - Basic navigation
+                - FAQ guidance
+                search_terms:
+                - IT support basics
+                - Researcher helpdesk
+                why: Addressing common, simple user issues.
+              qualifications: []
             mid:
               id: researcher-training-support-mid
               name: Mid Level
@@ -400,6 +834,18 @@ domain:
               - Develops comprehensive researcher training programmes
               - Implements support processes and knowledge bases
               - Addresses complex researcher issues and requirements
+              core_concepts:
+              - topic: SDE Training Development
+                concepts:
+                - Curriculum design
+                - Safe software usage
+                - Data literacy
+                search_terms:
+                - TRE researcher training
+                - Health data science training
+                why: Creating materials that teach researchers how to operate safely
+                  in an SDE.
+              qualifications: []
             senior:
               id: researcher-training-support-senior
               name: Senior Level
@@ -407,21 +853,46 @@ domain:
               - Establishes researcher engagement and support strategies
               - Develops innovative approaches to researcher enablement
               - Leads initiatives to enhance researcher experience
+              core_concepts:
+              - topic: Enablement Strategy
+                concepts:
+                - Community of practice
+                - Strategic engagement
+                - Innovative learning methods
+                search_terms:
+                - Researcher enablement strategy
+                - SDE community of practice
+                why: Building a holistic ecosystem that empowers researchers to be
+                  productive.
+              qualifications: []
         tre-tools-capabilities:
           id: tre-tools-capabilities
           name: TRE Tools & Capabilities
-          description: Provides and manages tools for research in secure environments. Involves understanding
-            common tools and requirements, configuring environments, evaluating and implementing research
-            tools, designing workspaces, ensuring security and compliance, developing implementation strategies,
-            establishing governance, and leading initiatives to enhance capabilities.
+          description: Provides and manages tools for research in secure environments.
+            Involves understanding common tools and requirements, configuring environments,
+            evaluating and implementing research tools, designing workspaces, ensuring
+            security and compliance, developing implementation strategies, establishing
+            governance, and leading initiatives to enhance capabilities.
           levels:
             entry:
               id: tre-tools-capabilities-entry
               name: Entry Level
               skills:
               - Identifies common TRE tools and explains their core capabilities
-              - Identifies common researcher software, package dependencies, and tooling requirements
+              - Identifies common researcher software, package dependencies, and tooling
+                requirements
               - Can configure basic researcher environments
+              core_concepts:
+              - topic: Tool Basics
+                concepts:
+                - R, Python, STATA
+                - Workspace provisioning
+                - Package installation
+                search_terms:
+                - Health data science tools
+                - TRE software provisioning
+                why: Setting up the basic environments researchers request.
+              qualifications: []
             mid:
               id: tre-tools-capabilities-mid
               name: Mid Level
@@ -429,6 +900,18 @@ domain:
               - Evaluates and implements tools for research needs
               - Designs researcher environments and workspaces
               - Ensures tools meet security and compliance requirements
+              core_concepts:
+              - topic: SDE Tooling Implementation
+                concepts:
+                - Secure containerization
+                - Vulnerability scanning of packages
+                - Tool evaluation
+                search_terms:
+                - Secure data science environments
+                - TRE tooling integration
+                why: Safely integrating new analytical tools into the restrictive
+                  SDE boundary.
+              qualifications: []
             senior:
               id: tre-tools-capabilities-senior
               name: Senior Level
@@ -436,21 +919,46 @@ domain:
               - Develops strategies for tool evaluation and implementation
               - Establishes tool governance and lifecycle management
               - Leads initiatives to enhance TRE capabilities
+              core_concepts:
+              - topic: Capability Strategy
+                concepts:
+                - Platform engineering
+                - Tool lifecycle governance
+                - Advanced compute (GPUs)
+                search_terms:
+                - TRE platform strategy
+                - Advanced analytics infrastructure healthcare
+                why: Planning the future technological capabilities of the environment.
+              qualifications: []
         future-tre-innovation:
           id: future-tre-innovation
           name: Future TRE Innovation
-          description: Explores and implements new technologies and approaches for secure research. Involves
-            understanding emerging trends, researching new technologies, evaluating for TRE application,
-            implementing proof-of-concept projects, developing roadmaps and strategies, establishing innovation
-            frameworks, leading horizon scanning, and developing strategic partnerships for advancement.
+          description: Explores and implements new technologies and approaches for
+            secure research. Involves understanding emerging trends, researching new
+            technologies, evaluating for TRE application, implementing proof-of-concept
+            projects, developing roadmaps and strategies, establishing innovation
+            frameworks, leading horizon scanning, and developing strategic partnerships
+            for advancement.
           levels:
             entry:
               id: future-tre-innovation-entry
               name: Entry Level
               skills:
               - Identifies emerging trends and innovations in secure research environments
-              - Evaluates novel TRE technologies and assesses their suitability for research environments
+              - Evaluates novel TRE technologies and assesses their suitability for
+                research environments
               - Can research new technologies and approaches
+              core_concepts:
+              - topic: Trend Tracking
+                concepts:
+                - Industry news
+                - Basic research
+                - Tech radar
+                search_terms:
+                - Future of TREs
+                - Health IT trends
+                why: Staying aware of how the landscape is changing.
+              qualifications: []
             mid:
               id: future-tre-innovation-mid
               name: Mid Level
@@ -458,6 +966,18 @@ domain:
               - Evaluates emerging technologies for TRE application
               - Implements proof-of-concept projects and pilots
               - Develops innovation roadmaps and strategies
+              core_concepts:
+              - topic: PoC Implementation
+                concepts:
+                - Federated learning concepts
+                - Synthetic data generation
+                - Privacy-enhancing technologies (PETs)
+                search_terms:
+                - Privacy enhancing technologies healthcare
+                - Synthetic data TRE
+                why: Testing new methods that can improve research without compromising
+                  security.
+              qualifications: []
             senior:
               id: future-tre-innovation-senior
               name: Senior Level
@@ -465,22 +985,46 @@ domain:
               - Establishes innovation frameworks and governance
               - Leads horizon scanning for future TRE technologies
               - Develops strategic partnerships for TRE advancement
+              core_concepts:
+              - topic: Innovation Strategy
+                concepts:
+                - Strategic partnerships
+                - Horizon scanning
+                - Funding for innovation
+                search_terms:
+                - SDE innovation strategy
+                - Healthcare data partnerships
+                why: Directing the organization's efforts toward cutting-edge research
+                  enablement.
+              qualifications: []
         community-engagement-networking:
           id: community-engagement-networking
           name: Community Engagement & Networking
-          description: Participates in and contributes to the wider secure data environment community.
-            Involves understanding the importance of engagement, participating in events and discussions,
-            actively contributing to communities, representing the organisation, building professional
-            networks, leading engagement strategies, organising events, and developing strategic partnerships
-            across the community.
+          description: Participates in and contributes to the wider secure data environment
+            community. Involves understanding the importance of engagement, participating
+            in events and discussions, actively contributing to communities, representing
+            the organisation, building professional networks, leading engagement strategies,
+            organising events, and developing strategic partnerships across the community.
           levels:
             entry:
               id: community-engagement-networking-entry
               name: Entry Level
               skills:
               - Explains the importance of community engagement for SDEs
-              - Engages with national and international SDE / TRE practitioner communities (e.g. UK TRE Community)
+              - Engages with national and international SDE / TRE practitioner communities
+                (e.g. UK TRE Community)
               - Can participate in community events and discussions
+              core_concepts:
+              - topic: Community Participation
+                concepts:
+                - Attending forums
+                - Reading newsletters
+                - Basic networking
+                search_terms:
+                - UK TRE community
+                - Health data science networks
+                why: Learning from others in the field.
+              qualifications: []
             mid:
               id: community-engagement-networking-mid
               name: Mid Level
@@ -488,6 +1032,17 @@ domain:
               - Actively contributes to SDE communities and knowledge sharing
               - Represents the organisation at community events and forums
               - Builds and maintains professional networks in the SDE ecosystem
+              core_concepts:
+              - topic: Active Contribution
+                concepts:
+                - Presenting at conferences
+                - Open source contribution
+                - Working groups
+                search_terms:
+                - TRE working groups
+                - Health data open source
+                why: Sharing solutions and collaborating on common SDE challenges.
+              qualifications: []
             senior:
               id: community-engagement-networking-senior
               name: Senior Level
@@ -495,3 +1050,15 @@ domain:
               - Leads community engagement strategies and initiatives
               - Organises community events and knowledge sharing forums
               - Develops strategic partnerships across the SDE community
+              core_concepts:
+              - topic: Community Leadership
+                concepts:
+                - Strategic alliances
+                - Organizing national events
+                - Influencing policy
+                search_terms:
+                - National health data policy
+                - SDE strategic alliances
+                why: Shaping the future of the entire SDE ecosystem at a national/international
+                  level.
+              qualifications: []

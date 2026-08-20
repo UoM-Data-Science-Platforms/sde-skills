@@ -3,20 +3,21 @@ domain:
   main-color: color-deep-blue
   id: safe-data-management
   name: Safe Data Management
-  description: This domain covers all aspects of data handling, processing, governance, and engineering
-    within Secure Data Environments, focusing on ensuring data is managed securely and effectively throughout
-    its lifecycle.
+  description: This domain covers all aspects of data handling, processing, governance,
+    and engineering within Secure Data Environments, focusing on ensuring data is
+    managed securely and effectively throughout its lifecycle.
   source_file: safe_data_management.md
   subdomains:
     data-governance:
       id: data-governance
       name: Data Governance
-      description: 'Data Governance establishes frameworks and processes for ensuring data quality, security,
-        and proper management throughout its lifecycle.
+      description: 'Data Governance establishes frameworks and processes for ensuring
+        data quality, security, and proper management throughout its lifecycle.
 
-        This subdomain encompasses classification of sensitive data, tracking data lineage and provenance,
-        and implementing quality management practices that maintain data integrity, accuracy, and compliance
-        with organisational policies while providing visibility into data origins and transformations.'
+        This subdomain encompasses classification of sensitive data, tracking data
+        lineage and provenance, and implementing quality management practices that
+        maintain data integrity, accuracy, and compliance with organisational policies
+        while providing visibility into data origins and transformations.'
       tools: []
       technologies: []
       standards: []
@@ -24,21 +25,37 @@ domain:
         data-integrity:
           id: data-integrity
           name: Data Integrity
-          description: 'Ensures that data remains accurate, consistent, and unaltered throughout its lifecycle.
+          description: 'Ensures that data remains accurate, consistent, and unaltered
+            throughout its lifecycle.
 
-            Involves implementing mechanisms such as checksums, hash validation, and digital signatures
-            to detect and prevent unauthorised modification or corruption.
+            Involves implementing mechanisms such as checksums, hash validation, and
+            digital signatures to detect and prevent unauthorised modification or
+            corruption.
 
-            Requires regular integrity checks, monitoring, and alerting, as well as procedures for remediation
-            in the event of integrity violations.'
+            Requires regular integrity checks, monitoring, and alerting, as well as
+            procedures for remediation in the event of integrity violations.'
           levels:
             entry:
               id: data-integrity-entry
               name: Entry Level
               skills:
               - Explains the importance of data integrity in secure environments
-              - Calculates and verifies data integrity using standard hashing tools (e.g. checksums)
+              - Calculates and verifies data integrity using standard hashing tools
+                (e.g. checksums)
               - Can perform manual integrity checks under supervision
+              core_concepts:
+              - topic: Hash Functions in Health Data
+                concepts:
+                - SHA-256
+                - Checksum validation
+                - Data immutability
+                search_terms:
+                - health data checksum validation
+                - SHA-256 for EHR integrity
+                why: Ensures that medical records and genomic datasets are not altered
+                  during extraction and staging.
+              qualifications:
+              - CompTIA Data+
             mid:
               id: data-integrity-mid
               name: Mid Level
@@ -46,6 +63,20 @@ domain:
               - Implements automated data integrity verification processes
               - Monitors and responds to integrity check failures
               - Integrates integrity validation into data pipelines and storage workflows
+              core_concepts:
+              - topic: Automated Integrity Pipelines
+                concepts:
+                - Pipeline validation
+                - Continuous monitoring
+                - Automated anomaly detection
+                search_terms:
+                - automated data integrity validation healthcare
+                - data pipeline anomaly detection SDE
+                why: SDEs require automated checksum and schema checks to handle the
+                  large volume of clinical and research data securely.
+              qualifications:
+              - AWS Certified Data Analytics - Specialty
+              - 'DP-203: Data Engineering on Microsoft Azure'
             senior:
               id: data-integrity-senior
               name: Senior Level
@@ -53,15 +84,31 @@ domain:
               - Designs and oversees enterprise-wide data integrity strategies
               - Establishes policies and procedures for ongoing integrity assurance
               - Leads incident response for data integrity breaches
+              core_concepts:
+              - topic: Enterprise Health Data Integrity Strategy
+                concepts:
+                - Zero Trust Data Architecture
+                - Enterprise incident response
+                - Immutable auditing
+                search_terms:
+                - zero trust health data architecture
+                - immutable storage for EHR SDE
+                why: Senior leaders must define policies that ensure cryptographic
+                  integrity of patient cohorts across national Secure Data Environments.
+              qualifications:
+              - CISSP
+              - CISM
+              - CDMP (Certified Data Management Professional)
         data-cataloguing-discovery:
           id: data-cataloguing-discovery
           name: Data Cataloguing & Discovery
-          description: 'Creates and maintains systems that enable researchers to find and understand available
-            datasets in line with FAIR (Findable, Accessible, Interoperable, and Reusable) principles.
+          description: 'Creates and maintains systems that enable researchers to find
+            and understand available datasets in line with FAIR (Findable, Accessible,
+            Interoperable, and Reusable) principles.
 
-            Involves documenting datasets with appropriate metadata, implementing catalogue systems, developing
-            metadata standards, ensuring catalogue accuracy and usability, and architecting enterprise
-            discovery solutions.
+            Involves documenting datasets with appropriate metadata, implementing
+            catalogue systems, developing metadata standards, ensuring catalogue accuracy
+            and usability, and architecting enterprise discovery solutions.
 
             Requires establishing governance frameworks and enhancing data reusability.'
           levels:
@@ -72,12 +119,37 @@ domain:
               - Describes the purpose and structure of data catalogues
               - Applies metadata standards and documentation schemas to datasets
               - Identifies and navigates common data cataloguing and discovery platforms
+              core_concepts:
+              - topic: Metadata Basics for Health Data
+                concepts:
+                - Metadata schemas
+                - Data dictionaries
+                - FAIR principles overview
+                search_terms:
+                - health data dictionaries
+                - FAIR principles clinical data
+                why: Understanding basic metadata is essential for finding variables
+                  like ICD-10 codes or demographics in SDE catalogues.
+              qualifications: []
             mid:
               id: data-cataloguing-discovery-mid
               name: Mid Level
               skills:
               - Implements and maintains data catalogue systems
               - Develops metadata standards and collection processes
+              core_concepts:
+              - topic: Health Data Catalogue Implementation
+                concepts:
+                - Data catalogue platforms (e.g., Collibra, Alation)
+                - Automated metadata extraction
+                - Semantic interoperability
+                search_terms:
+                - healthcare data catalog implementation
+                - clinical metadata management SDE
+                why: Mid-level practitioners build out the platforms that researchers
+                  use to discover specific disease cohorts in the SDE.
+              qualifications:
+              - CDMP (Certified Data Management Professional) - Associate
             senior:
               id: data-cataloguing-discovery-senior
               name: Senior Level
@@ -85,25 +157,55 @@ domain:
               - Architects enterprise-wide data catalogue implementations
               - Establishes governance frameworks for metadata management
               - Leads initiatives to enhance data discovery and reuse
+              core_concepts:
+              - topic: Enterprise FAIR Strategy
+                concepts:
+                - Federated cataloguing
+                - Enterprise ontology governance
+                - Cross-SDE interoperability
+                search_terms:
+                - federated health data discovery
+                - national SDE ontology governance
+                why: Architecting enterprise discovery solutions enables cross-institutional
+                  medical research while respecting local governance.
+              qualifications:
+              - CDMP (Certified Data Management Professional) - Master
         data-classification-sensitivity:
           id: data-classification-sensitivity
           name: Data Classification & Sensitivity
-          description: 'Implements frameworks for categorising data based on sensitivity and security
-            requirements.
+          description: 'Implements frameworks for categorising data based on sensitivity
+            and security requirements.
 
-            Involves understanding different data types, applying appropriate classification labels, designing
-            handling procedures, conducting reviews, and developing organisational policies.
+            Involves understanding different data types, applying appropriate classification
+            labels, designing handling procedures, conducting reviews, and developing
+            organisational policies.
 
-            Requires implementing classification systems and leading risk assessment initiatives across
-            the organisation.'
+            Requires implementing classification systems and leading risk assessment
+            initiatives across the organisation.'
           levels:
             entry:
               id: data-classification-sensitivity-entry
               name: Entry Level
               skills:
-              - Classifies data according to sensitivity levels and institutional classification schemes
-              - Identifies sensitive data categories (e.g. PII, PHI) and their handling constraints
+              - Classifies data according to sensitivity levels and institutional
+                classification schemes
+              - Identifies sensitive data categories (e.g. PII, PHI) and their handling
+                constraints
               - Can apply classification labels following established guidelines
+              core_concepts:
+              - topic: Identifying Sensitive Health Data
+                concepts:
+                - PII
+                - PHI
+                - De-identification basics
+                - Data classification labels
+                search_terms:
+                - PHI vs PII healthcare
+                - health data classification basics
+                why: Entry-level staff must accurately apply tags to distinguish between
+                  direct identifiers and pseudonymised clinical data.
+              qualifications:
+              - IAPP CIPP/E (basics)
             mid:
               id: data-classification-sensitivity-mid
               name: Mid Level
@@ -111,6 +213,19 @@ domain:
               - Implements data classification schemes and sensitivity management
               - Designs data handling procedures appropriate to classification levels
               - Conducts data classification reviews and recommends improvements
+              core_concepts:
+              - topic: Classification Schemes & Handling
+                concepts:
+                - Automated data discovery
+                - Sensitivity tagging
+                - Handling procedures by tier
+                search_terms:
+                - automated PHI discovery tools
+                - tier-based health data handling
+                why: Mid-level engineers configure tools to scan data lakes for unclassified
+                  sensitive data, ensuring SDE compliance.
+              qualifications:
+              - IAPP CIPM
             senior:
               id: data-classification-sensitivity-senior
               name: Senior Level
@@ -118,17 +233,33 @@ domain:
               - Develops organisational data classification frameworks and policies
               - Implements classification and data discovery systems
               - Leads data sensitivity governance and risk assessment initiatives
+              core_concepts:
+              - topic: Organizational Sensitivity Frameworks
+                concepts:
+                - Information Governance (IG) frameworks
+                - Risk assessment
+                - Data Protection Impact Assessments (DPIA)
+                search_terms:
+                - health data information governance framework
+                - DPIA for secure data environments
+                why: Senior leaders develop the overarching classification rules and
+                  risk frameworks that dictate how SDEs segregate and protect genomic
+                  vs. episodic data.
+              qualifications:
+              - CISM
+              - CRISC
         data-lineage-provenance:
           id: data-lineage-provenance
           name: Data Lineage & Provenance
-          description: 'Tracks and documents the origins, movements, and transformations of data throughout
-            systems.
+          description: 'Tracks and documents the origins, movements, and transformations
+            of data throughout systems.
 
-            Involves maintaining metadata documentation, implementing lineage tools, verifying data provenance,
-            analysing quality issues, and architecting enterprise-wide systems.
+            Involves maintaining metadata documentation, implementing lineage tools,
+            verifying data provenance, analysing quality issues, and architecting
+            enterprise-wide systems.
 
-            Requires developing governance frameworks that maintain visibility of sensitive data across
-            multiple systems.'
+            Requires developing governance frameworks that maintain visibility of
+            sensitive data across multiple systems.'
           levels:
             entry:
               id: data-lineage-provenance-entry
@@ -137,6 +268,18 @@ domain:
               - Describes data lineage and tracking concepts across processing pipelines
               - Documents dataset lineage and transformations using metadata schemas
               - Can document data sources and transformations
+              core_concepts:
+              - topic: Understanding Data Origins
+                concepts:
+                - Source documentation
+                - Basic transformation tracking
+                - Data flow mapping
+                search_terms:
+                - data provenance basics healthcare
+                - mapping clinical data flows
+                why: Researchers must know if the data came from a GP practice or
+                  a hospital to understand its clinical context.
+              qualifications: []
             mid:
               id: data-lineage-provenance-mid
               name: Mid Level
@@ -144,31 +287,75 @@ domain:
               - Implements data lineage tools and frameworks
               - Designs processes to maintain and verify data provenance
               - Analyses data lineage to identify quality or security issues
+              core_concepts:
+              - topic: Lineage Tooling Integration
+                concepts:
+                - Data lineage tools (e.g., Apache Atlas, dbt)
+                - ETL provenance tracking
+                - Impact analysis
+                search_terms:
+                - dbt lineage healthcare data
+                - Apache Atlas for clinical data provenance
+                why: Implementing automated lineage tracking helps debug pipeline
+                  errors affecting cohort generation in the SDE.
+              qualifications:
+              - CDMP (Certified Data Management Professional)
             senior:
               id: data-lineage-provenance-senior
               name: Senior Level
               skills:
               - Architects enterprise-wide data lineage and provenance systems
-              - Develops governance frameworks that maintain provenance of sensitive data
+              - Develops governance frameworks that maintain provenance of sensitive
+                data
               - Leads initiatives to improve cross-system data lineage visibility
+              core_concepts:
+              - topic: Cross-System Provenance Governance
+                concepts:
+                - Enterprise lineage architecture
+                - Regulatory traceability
+                - End-to-end data lifecycle visibility
+                search_terms:
+                - end-to-end lineage secure data environments
+                - regulatory traceability health data
+                why: Regulators require absolute proof of how patient data is derived,
+                  altered, and anonymized before being shared with researchers.
+              qualifications:
+              - CDMP - Master
+              - TOGAF
         data-quality-management:
           id: data-quality-management
           name: Data Quality Management
-          description: 'Ensures the accuracy, completeness, and reliability of data within secure environments.
+          description: 'Ensures the accuracy, completeness, and reliability of data
+            within secure environments.
 
-            Involves understanding quality dimensions, performing validation, designing quality frameworks,
-            developing metrics, implementing automated validation, and establishing enterprise-wide strategies.
+            Involves understanding quality dimensions, performing validation, designing
+            quality frameworks, developing metrics, implementing automated validation,
+            and establishing enterprise-wide strategies.
 
-            Requires leading quality improvement initiatives and developing advanced measurement and remediation
-            approaches.'
+            Requires leading quality improvement initiatives and developing advanced
+            measurement and remediation approaches.'
           levels:
             entry:
               id: data-quality-management-entry
               name: Entry Level
               skills:
-              - Identifies standard data quality dimensions (e.g. accuracy, completeness, consistency)
+              - Identifies standard data quality dimensions (e.g. accuracy, completeness,
+                consistency)
               - Applies basic data validation checks and formatting rules
               - Can execute data quality checks following established procedures
+              core_concepts:
+              - topic: Clinical Data Quality Checks
+                concepts:
+                - Data completeness
+                - Formatting validation
+                - Outlier detection basics
+                search_terms:
+                - clinical data quality dimensions
+                - basic EHR data validation
+                why: Executing basic checks ensures missing values (e.g., missing
+                  BMI) don't silently corrupt downstream research.
+              qualifications:
+              - CompTIA Data+
             mid:
               id: data-quality-management-mid
               name: Mid Level
@@ -176,6 +363,19 @@ domain:
               - Designs and implements data quality frameworks and controls
               - Develops data quality metrics and monitoring processes
               - Implements data quality validation pipelines
+              core_concepts:
+              - topic: Automated Quality Pipelines
+                concepts:
+                - Data quality frameworks (e.g., Great Expectations)
+                - Quality metrics monitoring
+                - Data profiling
+                search_terms:
+                - Great Expectations healthcare data
+                - automated data profiling SDE
+                why: Automated rules ensure that incoming datasets meet stringent
+                  SDE requirements before being exposed to analysts.
+              qualifications:
+              - AWS Certified Data Analytics
             senior:
               id: data-quality-management-senior
               name: Senior Level
@@ -183,16 +383,31 @@ domain:
               - Establishes enterprise data quality management policies
               - Leads data quality improvement initiatives across the organisation
               - Develops advanced data quality measurement and remediation approaches
+              core_concepts:
+              - topic: Enterprise Quality Strategy
+                concepts:
+                - Data quality governance
+                - Advanced remediation approaches
+                - Continuous quality improvement (CQI)
+                search_terms:
+                - enterprise health data quality strategy
+                - CQI for clinical data warehouses
+                why: Senior leaders establish policies enforcing minimum quality thresholds
+                  for data ingestion into national health data lakes.
+              qualifications:
+              - CDMP - Master
+              - Six Sigma (Green/Black Belt for process improvement)
     data-engineering-processing:
       id: data-engineering-processing
       name: Data Engineering & Processing
-      description: 'Data Engineering & Processing focuses on building and maintaining secure systems that
-        extract, transform, store, and process sensitive data.
+      description: 'Data Engineering & Processing focuses on building and maintaining
+        secure systems that extract, transform, store, and process sensitive data.
 
-        This subdomain covers the development of secure data pipelines, management of database systems,
-        implementation of structured data models and healthcare standards, and processing methodologies
-        that ensure data is securely handled throughout workflows while maintaining appropriate levels
-        of performance and reliability.'
+        This subdomain covers the development of secure data pipelines, management
+        of database systems, implementation of structured data models and healthcare
+        standards, and processing methodologies that ensure data is securely handled
+        throughout workflows while maintaining appropriate levels of performance and
+        reliability.'
       tools: []
       technologies: []
       standards: []
@@ -200,22 +415,38 @@ domain:
         data-pipeline-development:
           id: data-pipeline-development
           name: Data Pipeline Development
-          description: 'Builds and maintains processes that extract, transform, and load data securely
-            between systems.
+          description: 'Builds and maintains processes that extract, transform, and
+            load data securely between systems.
 
-            Involves developing ETL processes, designing secure pipelines for various data types, implementing
-            error handling, monitoring data flows, and optimising performance.
+            Involves developing ETL processes, designing secure pipelines for various
+            data types, implementing error handling, monitoring data flows, and optimising
+            performance.
 
-            Requires architecting complex systems at enterprise scale and establishing best practices
-            for secure data processing.'
+            Requires architecting complex systems at enterprise scale and establishing
+            best practices for secure data processing.'
           levels:
             entry:
               id: data-pipeline-development-entry
               name: Entry Level
               skills:
-              - Identifies core data pipeline components (e.g. ETL/ELT, ingestion, staging)
+              - Identifies core data pipeline components (e.g. ETL/ELT, ingestion,
+                staging)
               - Can develop simple ETL processes under supervision
               - Describes data transformation and loading techniques
+              core_concepts:
+              - topic: Basic ETL/ELT for Health Data
+                concepts:
+                - ETL vs ELT
+                - Data extraction methods
+                - Simple transformations
+                search_terms:
+                - healthcare ETL basics
+                - simple data pipeline for EHR
+                why: Understanding basic extraction allows entry-level staff to move
+                  simple flat files into SDE staging areas.
+              qualifications:
+              - AWS Certified Cloud Practitioner
+              - 'Microsoft Certified: Azure Data Fundamentals'
             mid:
               id: data-pipeline-development-mid
               name: Mid Level
@@ -223,6 +454,20 @@ domain:
               - Designs and implements secure data pipelines for various data types
               - Develops error handling and monitoring for data flows
               - Optimises pipeline performance and resource usage
+              core_concepts:
+              - topic: Secure Pipeline Orchestration
+                concepts:
+                - Apache Airflow / Dagster
+                - Secure data transformation
+                - Pipeline monitoring and alerting
+                search_terms:
+                - secure Apache Airflow healthcare
+                - orchestrating clinical data pipelines SDE
+                why: Mid-level engineers build the robust, fault-tolerant pipelines
+                  that securely pseudonymise and load vast amounts of patient data.
+              qualifications:
+              - AWS Certified Data Analytics
+              - GCP Professional Data Engineer
             senior:
               id: data-pipeline-development-senior
               name: Senior Level
@@ -230,25 +475,54 @@ domain:
               - Architects complex data pipeline systems at enterprise scale
               - Establishes best practices and patterns for secure data processing
               - Leads pipeline modernisation and optimisation initiatives
+              core_concepts:
+              - topic: Enterprise Scale Data Architectures
+                concepts:
+                - Data Mesh / Data Fabric in healthcare
+                - Pipeline modernization
+                - Zero-trust ETL architecture
+                search_terms:
+                - healthcare data mesh architecture
+                - zero-trust data pipeline SDE
+                why: Architects design highly scalable, secure processing architectures
+                  that handle complex multimodal health data (imaging, genomics, EHR).
+              qualifications:
+              - AWS Certified Solutions Architect - Professional
+              - GCP Professional Cloud Architect
         data-storage-database-management:
           id: data-storage-database-management
           name: Data Storage & Database Management
-          description: 'Designs and maintains secure database systems for storing and retrieving sensitive
-            data.
+          description: 'Designs and maintains secure database systems for storing
+            and retrieving sensitive data.
 
-            Involves understanding database types, performing SQL operations, designing secure schemas,
-            implementing access policies, optimising performance, and architecting enterprise storage
-            solutions.
+            Involves understanding database types, performing SQL operations, designing
+            secure schemas, implementing access policies, optimising performance,
+            and architecting enterprise storage solutions.
 
-            Requires developing governance frameworks and leading database modernisation initiatives.'
+            Requires developing governance frameworks and leading database modernisation
+            initiatives.'
           levels:
             entry:
               id: data-storage-database-management-entry
               name: Entry Level
               skills:
-              - Distinguishes between various database paradigms (e.g. relational, document, graph)
+              - Distinguishes between various database paradigms (e.g. relational,
+                document, graph)
               - Executes basic SQL queries and data manipulation operations
               - Can perform database administration tasks under supervision
+              core_concepts:
+              - topic: Health Database Fundamentals
+                concepts:
+                - Relational vs NoSQL
+                - Basic SQL queries
+                - Data retrieval
+                search_terms:
+                - SQL for healthcare data
+                - relational databases for clinical research
+                why: Essential for querying patient cohorts and managing standard
+                  relational clinical data stores.
+              qualifications:
+              - 'Microsoft Certified: Azure Data Fundamentals'
             mid:
               id: data-storage-database-management-mid
               name: Mid Level
@@ -256,6 +530,20 @@ domain:
               - Designs database schemas for security and performance
               - Implements database security controls and access policies
               - Optimises database performance and troubleshoots issues
+              core_concepts:
+              - topic: Secure Schema Design & Optimization
+                concepts:
+                - Database security controls
+                - Performance tuning
+                - Row-level/Column-level security
+                search_terms:
+                - row-level security healthcare database
+                - optimizing SQL for large EHR datasets
+                why: Mid-level administrators implement fine-grained access controls
+                  ensuring researchers only see data they are approved for.
+              qualifications:
+              - AWS Certified Database - Specialty
+              - Oracle/Microsoft DBA Certifications
             senior:
               id: data-storage-database-management-senior
               name: Senior Level
@@ -263,34 +551,79 @@ domain:
               - Architects enterprise data storage solutions across platforms
               - Develops database governance and security frameworks
               - Leads database modernisation and migration initiatives
+              core_concepts:
+              - topic: Enterprise Health Storage Solutions
+                concepts:
+                - Multi-cloud database architecture
+                - Database governance frameworks
+                - Data lakehouse architectures (e.g., Databricks, Snowflake)
+                search_terms:
+                - healthcare data lakehouse architecture
+                - enterprise storage governance SDE
+                why: Senior experts select and govern the massive storage platforms
+                  required for national-scale SDEs, balancing performance, security,
+                  and cost.
+              qualifications:
+              - TOGAF
+              - AWS Certified Solutions Architect - Professional
         data-models-standardisation:
           id: data-models-standardisation
           name: Data Models & Standardisation
-          description: 'Enables the secure and effective use of standardised data models such as FHIR
-            and OMOP within secure data environments.
+          description: 'Enables the secure and effective use of standardised data
+            models such as FHIR and OMOP within secure data environments.
 
-            Involves understanding platform and integration requirements, assessing platform capabilities,
-            supporting configuration and adaptation for model adoption, and ensuring compliance with relevant
-            standards.
+            Involves understanding platform and integration requirements, assessing
+            platform capabilities, supporting configuration and adaptation for model
+            adoption, and ensuring compliance with relevant standards.
 
-            Requires developing approaches to enhance interoperability, security, and governance for standardised
-            data models across platforms.'
+            Requires developing approaches to enhance interoperability, security,
+            and governance for standardised data models across platforms.'
           levels:
             entry:
               id: data-models-standardisation-entry
               name: Entry Level
               skills:
-              - Describes the purpose and basic structure of standardised data models (e.g. FHIR, OMOP)
-              - Recognises platform and infrastructure dependencies required for standardised models
-              - Can identify when a platform supports or does not support a given data model
+              - Describes the purpose and basic structure of standardised data models
+                (e.g. FHIR, OMOP)
+              - Recognises platform and infrastructure dependencies required for standardised
+                models
+              - Can identify when a platform supports or does not support a given
+                data model
+              core_concepts:
+              - topic: Introduction to Healthcare Standards
+                concepts:
+                - FHIR basics
+                - OMOP CDM overview
+                - Clinical coding systems (SNOMED, ICD-10)
+                search_terms:
+                - what is FHIR healthcare
+                - OMOP common data model basics
+                why: Staff must recognize standard formats to properly organize and
+                  query standardized clinical records.
+              qualifications:
+              - HL7 FHIR Fundamentals (Course)
             mid:
               id: data-models-standardisation-mid
               name: Mid Level
               skills:
               - Assesses platform capabilities for supporting standardised data models
-              - Identifies integration requirements and dependencies for enabling models like FHIR and
-                OMOP
-              - Supports configuration or adaptation of platforms to facilitate use of these models
+              - Identifies integration requirements and dependencies for enabling
+                models like FHIR and OMOP
+              - Supports configuration or adaptation of platforms to facilitate use
+                of these models
+              core_concepts:
+              - topic: Standardization Integration
+                concepts:
+                - ETL to OMOP
+                - FHIR server configuration
+                - Mapping clinical terminologies
+                search_terms:
+                - mapping EHR to OMOP CDM
+                - configuring FHIR server in secure environment
+                why: Mid-level data engineers write the complex transformation logic
+                  mapping raw EHR data into standardized models like OMOP.
+              qualifications:
+              - HL7 FHIR Proficiency Certificate
             senior:
               id: data-models-standardisation-senior
               name: Senior Level
@@ -298,25 +631,55 @@ domain:
               - Develops enterprise data modelling approaches
               - Establishes processes for maintaining and evolving data models
               - Leads initiatives to harmonise data models across systems
+              core_concepts:
+              - topic: Enterprise Interoperability Strategy
+                concepts:
+                - National data harmonization
+                - Cross-system semantic interoperability
+                - Enterprise ontology management
+                search_terms:
+                - national health data harmonization strategy
+                - cross-SDE semantic interoperability
+                why: Architects design the overarching strategy allowing different
+                  regional SDEs to securely exchange and federate queries using standard
+                  models.
+              qualifications:
+              - HL7 Certified CDA Specialist
+              - CDMP - Master
         event-driven-data-processing:
           id: event-driven-data-processing
           name: Event-Driven Data Processing
-          description: 'Implements systems that process data in real-time based on events and triggers.
+          description: 'Implements systems that process data in real-time based on
+            events and triggers.
 
-            Involves understanding event-driven architecture, working with streaming platforms like Kafka,
-            implementing event producers and consumers, designing specialised pipelines, and ensuring
-            data quality.
+            Involves understanding event-driven architecture, working with streaming
+            platforms like Kafka, implementing event producers and consumers, designing
+            specialised pipelines, and ensuring data quality.
 
-            Requires architecting enterprise-scale, high-throughput, reliable event-driven processing
-            systems.'
+            Requires architecting enterprise-scale, high-throughput, reliable event-driven
+            processing systems.'
           levels:
             entry:
               id: event-driven-data-processing-entry
               name: Entry Level
               skills:
               - Explains event-driven architecture concepts for data processing
-              - Identifies event streaming platforms (e.g. Apache Kafka) and their use cases
+              - Identifies event streaming platforms (e.g. Apache Kafka) and their
+                use cases
               - Can implement simple event producers and consumers
+              core_concepts:
+              - topic: Real-time Processing Basics
+                concepts:
+                - Publish-Subscribe models
+                - Apache Kafka basics
+                - Event producers/consumers
+                search_terms:
+                - event driven architecture healthcare
+                - Apache Kafka for health data
+                why: Entry-level understanding is required to work with real-time
+                  feeds like HL7 v2 messages or IoT medical device streams.
+              qualifications:
+              - Confluent Certified Developer (basics)
             mid:
               id: event-driven-data-processing-mid
               name: Mid Level
@@ -324,6 +687,19 @@ domain:
               - Designs event-driven data pipelines for specific domains
               - Implements event schemas and data quality controls
               - Develops specialised processing for domains like NLP or analytics
+              core_concepts:
+              - topic: Streaming Pipelines for Health Data
+                concepts:
+                - Stream processing (e.g., Apache Flink, Spark Streaming)
+                - Event schema registries
+                - Real-time anomaly detection
+                search_terms:
+                - real-time clinical data streaming
+                - Kafka schema registry for FHIR
+                why: Mid-level engineers build the streaming pipelines that process
+                  real-time hospital admissions or wearable data into the SDE.
+              qualifications:
+              - Confluent Certified Developer for Apache Kafka
             senior:
               id: event-driven-data-processing-senior
               name: Senior Level
@@ -331,126 +707,284 @@ domain:
               - Architects enterprise event-driven data systems
               - Designs high-throughput, reliable event processing systems
               - Leads innovation in event-based analytical systems
+              core_concepts:
+              - topic: High-Throughput Enterprise Event Systems
+                concepts:
+                - Resilient event architectures
+                - Enterprise integration patterns
+                - Real-time analytics at scale
+                search_terms:
+                - high-throughput event driven architecture healthcare
+                - resilient streaming systems SDE
+                why: Seniors architect the backbone for real-time national biosurveillance
+                  and population health monitoring platforms.
+              qualifications:
+              - AWS Certified Data Analytics
+              - GCP Professional Data Engineer
         encryption-standards-implementation:
           id: encryption-standards-implementation
           name: Encryption Standards & Implementation
-          description: 'Implements cryptographic solutions to protect sensitive data throughout its lifecycle
-            in secure environments.
+          description: 'Implements cryptographic solutions to protect sensitive data
+            throughout its lifecycle in secure environments.
 
-            Involves understanding encryption methods, configuring cryptographic systems, managing encryption
-            keys, and ensuring compliance with security standards.
+            Involves understanding encryption methods, configuring cryptographic systems,
+            managing encryption keys, and ensuring compliance with security standards.
 
-            Requires designing enterprise encryption frameworks, implementing advanced cryptographic techniques,
-            and establishing organisational policies that maintain data confidentiality and integrity.'
+            Requires designing enterprise encryption frameworks, implementing advanced
+            cryptographic techniques, and establishing organisational policies that
+            maintain data confidentiality and integrity.'
           levels:
             entry:
               id: encryption-standards-implementation-entry
               name: Entry Level
               skills:
-              - Differentiates between symmetric and asymmetric encryption algorithms (e.g. AES, RSA)
+              - Differentiates between symmetric and asymmetric encryption algorithms
+                (e.g. AES, RSA)
               - Can follow predefined encryption standards and best practices
               - Explains how cryptographic controls protect data at rest and in transit
+              core_concepts:
+              - topic: Cryptographic Fundamentals
+                concepts:
+                - Symmetric vs Asymmetric encryption
+                - TLS/SSL
+                - Data at rest vs Data in transit
+                search_terms:
+                - healthcare data encryption basics
+                - TLS for medical data transmission
+                why: Understanding basic encryption is essential to avoid transmitting
+                  sensitive health data in plaintext.
+              qualifications:
+              - CompTIA Security+
             mid:
               id: encryption-standards-implementation-mid
               name: Mid Level
               skills:
-              - Configures and deploys encryption technologies in storage and communication systems
+              - Configures and deploys encryption technologies in storage and communication
+                systems
               - Implements secure key generation, storage, and rotation practices
-              - Ensures encryption implementations align with regulatory standards (GDPR, HIPAA, FIPS)
+              - Ensures encryption implementations align with regulatory standards
+                (GDPR, HIPAA, FIPS)
+              core_concepts:
+              - topic: Applied Cryptography in SDEs
+                concepts:
+                - KMS (Key Management Service)
+                - Transparent Data Encryption (TDE)
+                - Certificate management
+                search_terms:
+                - AWS KMS for healthcare data
+                - database TDE setup SDE
+                why: Mid-level practitioners implement and rotate the keys that encrypt
+                  the SDE's massive data stores.
+              qualifications:
+              - AWS Certified Security - Specialty
+              - Microsoft Cybersecurity Architect
             senior:
               id: encryption-standards-implementation-senior
               name: Senior Level
               skills:
               - Designs enterprise encryption frameworks and security architectures
-              - Implements advanced cryptographic techniques (post-quantum cryptography, zero-knowledge
-                proofs, homomorphic encryption)
-              - Establishes encryption policies and oversees compliance across the organisation
+              - Implements advanced cryptographic techniques (post-quantum cryptography,
+                zero-knowledge proofs, homomorphic encryption)
+              - Establishes encryption policies and oversees compliance across the
+                organisation
+              core_concepts:
+              - topic: Advanced Privacy-Preserving Technologies
+                concepts:
+                - Homomorphic encryption
+                - Post-quantum cryptography
+                - Enterprise PKI strategy
+                search_terms:
+                - homomorphic encryption in healthcare research
+                - enterprise PKI strategy secure data environments
+                why: Senior experts evaluate cutting-edge techniques like homomorphic
+                  encryption to allow computation on encrypted data without ever decrypting
+                  it in the SDE.
+              qualifications:
+              - CISSP-ISSAP
+              - GIAC Defensible Security Architecture (GDSA)
         data-backups:
           id: data-backups
           name: Data Backups
-          description: 'Ensures data availability and recoverability through systematic backup and restoration
-            processes.
+          description: 'Ensures data availability and recoverability through systematic
+            backup and restoration processes.
 
-            Involves understanding backup plans, implementing automated backup systems, managing retention
-            policies, and designing recovery procedures.
+            Involves understanding backup plans, implementing automated backup systems,
+            managing retention policies, and designing recovery procedures.
 
-            Requires architecting resilient backup infrastructures, establishing security protocols, and
-            developing enterprise-wide policies that minimise data loss and downtime while maintaining
-            compliance with regulatory requirements.'
+            Requires architecting resilient backup infrastructures, establishing security
+            protocols, and developing enterprise-wide policies that minimise data
+            loss and downtime while maintaining compliance with regulatory requirements.'
           levels:
             entry:
               id: data-backups-entry
               name: Entry Level
               skills:
-              - Differentiates between backup strategies (full, incremental, differential) and use cases
+              - Differentiates between backup strategies (full, incremental, differential)
+                and use cases
               - Can adhere to predefined backup schedules and retention policies
-              - Executes standard data restoration procedures from backups during recovery scenarios
+              - Executes standard data restoration procedures from backups during
+                recovery scenarios
+              core_concepts:
+              - topic: Backup Fundamentals
+                concepts:
+                - Full, incremental, differential backups
+                - Backup scheduling
+                - Basic restoration procedures
+                search_terms:
+                - healthcare data backup strategies
+                - incremental vs differential backup
+                why: Ensures junior staff can follow protocols to safely back up small
+                  project datasets within the SDE.
+              qualifications:
+              - CompTIA Server+
             mid:
               id: data-backups-mid
               name: Mid Level
               skills:
-              - Configures and optimises backup plans for different environments (on-premises, cloud,
-                hybrid)
-              - Implements scripts and tools to streamline backup operations and reduce manual intervention
-              - Ensures backups meet regulatory requirements and conducts regular integrity checks
+              - Configures and optimises backup plans for different environments (on-premises,
+                cloud, hybrid)
+              - Implements scripts and tools to streamline backup operations and reduce
+                manual intervention
+              - Ensures backups meet regulatory requirements and conducts regular
+                integrity checks
+              core_concepts:
+              - topic: Automated Backup & Recovery Operations
+                concepts:
+                - Automated backup scripting
+                - Disaster recovery testing
+                - Cross-region replication
+                search_terms:
+                - automated disaster recovery healthcare databases
+                - cross-region replication AWS healthcare
+                why: Engineers configure automated systems to continuously back up
+                  critical clinical databases, meeting RPO and RTO targets.
+              qualifications:
+              - AWS Certified SysOps Administrator
+              - Azure Administrator Associate
             senior:
               id: data-backups-senior
               name: Senior Level
               skills:
               - Designs scalable, resilient backup architectures for large-scale systems
-              - Leads the development of recovery plans to minimise downtime and data loss
-              - Establishes policies for backup security, encryption, and compliance with industry standards
+              - Leads the development of recovery plans to minimise downtime and data
+                loss
+              - Establishes policies for backup security, encryption, and compliance
+                with industry standards
+              core_concepts:
+              - topic: Enterprise Resilience Architecture
+                concepts:
+                - Enterprise Business Continuity Planning (BCP)
+                - Air-gapped backups
+                - Ransomware recovery strategies
+                search_terms:
+                - air-gapped backup healthcare data
+                - ransomware recovery strategy SDE
+                why: Senior architects design multi-tiered, air-gapped backup strategies
+                  to protect national health data assets from catastrophic loss or
+                  ransomware.
+              qualifications:
+              - CISSP
+              - Certified Business Continuity Professional (CBCP)
         data-retention-disposal:
           id: data-retention-disposal
           name: Data Retention & Disposal
-          description: 'Manages the secure lifecycle of data from creation to disposal, ensuring compliance
-            with regulatory requirements and organisational policies.
+          description: 'Manages the secure lifecycle of data from creation to disposal,
+            ensuring compliance with regulatory requirements and organisational policies.
 
-            Involves understanding storage types and data lifecycles, implementing retention strategies,
-            designing secure disposal processes, and establishing governance frameworks.
+            Involves understanding storage types and data lifecycles, implementing
+            retention strategies, designing secure disposal processes, and establishing
+            governance frameworks.
 
-            Requires developing enterprise-wide policies that balance performance, cost, and compliance
-            while maintaining data accessibility and security throughout the retention period.'
+            Requires developing enterprise-wide policies that balance performance,
+            cost, and compliance while maintaining data accessibility and security
+            throughout the retention period.'
           levels:
             entry:
               id: data-retention-disposal-entry
               name: Entry Level
               skills:
-              - Differentiates between storage tiers (databases, cloud storage, file systems) and explains data retention concepts
+              - Differentiates between storage tiers (databases, cloud storage, file
+                systems) and explains data retention concepts
               - Can perform basic data archiving tasks
-              - Assists in tracking data usage and retention timelines for audit and compliance checks
+              - Assists in tracking data usage and retention timelines for audit and
+                compliance checks
+              core_concepts:
+              - topic: Data Lifecycle Basics
+                concepts:
+                - Storage tiers
+                - Archiving concepts
+                - Basic data tracking
+                search_terms:
+                - healthcare data retention periods
+                - basic data archiving SDE
+                why: Junior staff assist in moving aging project data to cheaper storage
+                  tiers as project lifecycles end.
+              qualifications:
+              - IAPP CIPP/E (basics)
             mid:
               id: data-retention-disposal-mid
               name: Mid Level
               skills:
-              - Implements data lifecycle approaches that balance retention requirements with storage
-                efficiency
-              - Applies data access policies, encryption, and secure storage practices to protect retained
-                data from unauthorised access
-              - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
+              - Implements data lifecycle approaches that balance retention requirements
+                with storage efficiency
+              - Applies data access policies, encryption, and secure storage practices
+                to protect retained data from unauthorised access
+              - Conducts data usage audits and ensures adherence to regulatory standards
+                (GDPR, HIPAA)
+              core_concepts:
+              - topic: Retention Enforcement & Secure Deletion
+                concepts:
+                - Automated lifecycle policies
+                - Cryptographic erasure
+                - Compliance auditing (GDPR, HIPAA)
+                search_terms:
+                - cryptographic erasure healthcare data
+                - AWS S3 lifecycle policies GDPR
+                why: Mid-level practitioners implement automated rules to securely
+                  destroy workspace data once a researcher's SDE access expires.
+              qualifications:
+              - CDMP
+              - AWS Certified Security - Specialty
             senior:
               id: data-retention-disposal-senior
               name: Senior Level
               skills:
-              - Defines and implements enterprise data retention policies including archival and secure
-                disposal strategies to comply with regulatory requirements
-              - Architects scalable storage solutions balancing performance, cost, and compliance requirements
-                ensuring long-term data accessibility without unnecessary overhead
-              - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific
-                standards) to ensure data retention practices align with security, privacy, and governance
-                requirements.
+              - Defines and implements enterprise data retention policies including
+                archival and secure disposal strategies to comply with regulatory
+                requirements
+              - Architects scalable storage solutions balancing performance, cost,
+                and compliance requirements ensuring long-term data accessibility
+                without unnecessary overhead
+              - Has deep understanding of legal and regulatory frameworks (such as
+                GDPR, HIPAA, or industry-specific standards) to ensure data retention
+                practices align with security, privacy, and governance requirements.
+              core_concepts:
+              - topic: Enterprise Governance & Legal Compliance
+                concepts:
+                - Organizational retention frameworks
+                - Legal holds
+                - Scalable cost-optimized storage strategies
+                search_terms:
+                - enterprise health data retention framework
+                - legal hold procedures secure data environments
+                why: Seniors dictate the organizational policies aligning cloud storage
+                  costs with complex legal obligations regarding patient data retention.
+              qualifications:
+              - CISM
+              - CIPP/E
+              - CIPM
         data-migration:
           id: data-migration
           name: Data Migration
-          description: 'Ensures the secure, reliable, and efficient transfer of data between systems,
-            storage solutions, or environments.
+          description: 'Ensures the secure, reliable, and efficient transfer of data
+            between systems, storage solutions, or environments.
 
-            Involves planning and executing migrations to minimise downtime and data loss, validating
-            data integrity before and after migration, and ensuring compliance with security and regulatory
-            requirements.
+            Involves planning and executing migrations to minimise downtime and data
+            loss, validating data integrity before and after migration, and ensuring
+            compliance with security and regulatory requirements.
 
-            Requires implementing automated migration workflows, monitoring migration processes, and remediating
-            issues as they arise.'
+            Requires implementing automated migration workflows, monitoring migration
+            processes, and remediating issues as they arise.'
           levels:
             entry:
               id: data-migration-entry
@@ -459,6 +993,19 @@ domain:
               - Identifies fundamental concepts and risks associated with data migration
               - Can assist with manual data migration tasks under supervision
               - Follows established procedures for data validation post-migration
+              core_concepts:
+              - topic: Migration Concepts & Validations
+                concepts:
+                - Migration risks
+                - Manual data transfer
+                - Post-migration validation checks
+                search_terms:
+                - health data migration risks
+                - post-migration data validation
+                why: Entry-level personnel assist in verifying that row counts and
+                  basic checksums match after moving a dataset to a new SDE workspace.
+              qualifications:
+              - CompTIA Data+
             mid:
               id: data-migration-mid
               name: Mid Level
@@ -467,11 +1014,42 @@ domain:
               - Implements automated migration workflows and tools
               - Validates data integrity and completeness before and after migration
               - Monitors migration processes and resolves common issues
+              core_concepts:
+              - topic: Automated Migration Execution
+                concepts:
+                - Migration automation tools (e.g., AWS DMS)
+                - Downtime minimization techniques
+                - Data sync and reconciliation
+                search_terms:
+                - AWS Database Migration Service healthcare
+                - zero downtime clinical database migration
+                why: Mid-level engineers plan and execute the secure transfer of legacy
+                  hospital databases into modern cloud SDE infrastructures.
+              qualifications:
+              - AWS Certified Database - Specialty
+              - Azure Data Engineer Associate
             senior:
               id: data-migration-senior
               name: Senior Level
               skills:
               - Designs enterprise-wide data migration approaches and policies
               - Leads complex or large-scale migration projects with minimal downtime
-              - Ensures compliance with security and regulatory requirements during migration
-              - Develops and oversees remediation plans for migration failures or data discrepancies
+              - Ensures compliance with security and regulatory requirements during
+                migration
+              - Develops and oversees remediation plans for migration failures or
+                data discrepancies
+              core_concepts:
+              - topic: Large-Scale Enterprise Migration Strategy
+                concepts:
+                - Enterprise migration roadmaps
+                - Risk mitigation and rollback planning
+                - Regulatory compliance during transit
+                search_terms:
+                - enterprise health system cloud migration roadmap
+                - secure migration strategy SDE
+                why: Leaders architect complex, multi-year migration strategies moving
+                  national-scale health repositories between environments without
+                  compromising security.
+              qualifications:
+              - AWS Certified Solutions Architect - Professional
+              - TOGAF
