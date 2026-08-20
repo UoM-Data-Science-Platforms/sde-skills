@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import yaml from 'js-yaml';
 
 function CollapsibleSection({ title, defaultOpen = false, children }) {
@@ -74,6 +75,102 @@ function QualificationCard({ qualification }) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+function TechChip({ item }) {
+  const [showPopup, setShowPopup] = React.useState(false);
+  const [coords, setCoords] = React.useState({ top: 0, left: 0 });
+  const wrapperRef = React.useRef(null);
+  const { name, role, sources } = item || {};
+  
+  if (!name) return null;
+
+  const handleMouseEnter = () => {
+    if (wrapperRef.current) {
+      const rect = wrapperRef.current.getBoundingClientRect();
+      setCoords({
+        top: rect.top - 8,
+        left: rect.left + rect.width / 2
+      });
+    }
+    setShowPopup(true);
+  };
+
+  const popupContent = showPopup && typeof document !== 'undefined' ? createPortal(
+    <div 
+      className="tech-hover-card" 
+      style={{
+        position: 'fixed',
+        bottom: window.innerHeight - coords.top,
+        left: coords.left,
+        transform: 'translateX(-50%)',
+        backgroundColor: '#ffffff',
+        border: '1px solid #e0e0e0',
+        borderRadius: '8px',
+        padding: '16px',
+        width: 'max-content',
+        maxWidth: '380px',
+        boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+        zIndex: 999999,
+        fontSize: '0.85rem',
+        lineHeight: 1.5,
+        color: '#333',
+        textAlign: 'left',
+        pointerEvents: 'none'
+      }}
+    >
+      <div style={{ fontWeight: 'bold', fontSize: '1.05rem', marginBottom: '6px', color: '#1a1a1a' }}>
+        {name}
+      </div>
+      <div style={{ fontStyle: 'italic', marginBottom: '12px', color: '#555', paddingBottom: '8px', borderBottom: '1px solid #eee' }}>
+        {role}
+      </div>
+      {sources?.community && (
+        <div style={{ marginBottom: '6px', color: '#2e7d32', fontWeight: '600' }}>
+          ⭐ Identified in community events
+        </div>
+      )}
+      {sources?.standards?.count > 0 && (
+        <div style={{ marginBottom: '6px' }}>
+          <strong>Industry Standards:</strong> {sources.standards.count}/7
+          <span style={{ color: '#666' }}> ({sources.standards.mentions.slice(0,3).join(', ')})</span>
+        </div>
+      )}
+      {sources?.projects?.count > 0 && (
+        <div style={{ marginBottom: '6px' }}>
+          <strong>DARE UK Projects:</strong> {sources.projects.count}/7
+          <span style={{ color: '#666' }}> ({sources.projects.mentions.slice(0,3).join(', ')})</span>
+        </div>
+      )}
+      {sources?.jobs?.total > 0 && (
+        <div style={{ marginBottom: '6px' }}>
+          <strong>Job Postings:</strong> {sources.jobs.total}/100
+          <span style={{ color: '#666' }}> (Entry: {sources.jobs.entry}, Mid: {sources.jobs.mid}, Snr: {sources.jobs.senior})</span>
+        </div>
+      )}
+      {sources?.radars?.score && sources.radars.score !== '0/4' && (
+        <div>
+          <strong>Tech Radars:</strong> {sources.radars.score}
+          <span style={{ color: '#666' }}> ({sources.radars.status})</span>
+        </div>
+      )}
+    </div>,
+    document.body
+  ) : null;
+
+  return (
+    <div 
+      className="tech-chip-wrapper" 
+      ref={wrapperRef}
+      style={{ display: 'inline-block' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={() => setShowPopup(false)}
+    >
+      <span className="badge tech-chip" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+        {name} {sources?.community && '⭐'}
+      </span>
+      {popupContent}
     </div>
   );
 }
@@ -415,22 +512,16 @@ export default function SkillsFramework() {
               )}
 
               {/* Tools, Technologies, and Standards at subdomain level */}
-              {subVal.items?.length > 0 && (() => {
-                const techChips = subVal.items.flatMap(group =>
-                  typeof group === 'string' ? [group] : (group?.items || [])
-                );
-                if (techChips.length === 0) return null;
-                return (
+              {subVal.items?.length > 0 && (
                   <div className="subdomain-tech-section glass--soft">
                     <span className="tech-label">Tools, Technologies & Standards:</span>
-                    <div className="tech-chips">
-                      {techChips.map((item, idx) => (
-                        <span key={idx} className="badge tech-chip">{item}</span>
+                    <div className="tech-chips" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '8px' }}>
+                      {subVal.items.map((item, idx) => (
+                        <TechChip key={idx} item={item} />
                       ))}
                     </div>
                   </div>
-                );
-              })()}
+              )}
 
               {competencies.map(([compKey, compVal], compIdx) => {
                 const compNumber = `${domainNumber}.${subIdx + 1}.${compIdx + 1}`;

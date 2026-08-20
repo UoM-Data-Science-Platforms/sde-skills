@@ -4,22 +4,425 @@ subdomains:
   identity-management:
     name: Identity Management
     items:
-    - source: community
-      items:
-      - Microsoft Entra ID
-      - Provisioning tools
-      - SSO protocols (SAML, OAuth, OIDC)
+    - name: FreeIPA / Red Hat IdM
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Keycloak
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+        projects:
+          count: 1
+          mentions:
+          - SATRE Driver Project
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Microsoft Entra ID
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 5
+          entry: 1
+          mid: 1
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: OAuth 2.0 / OIDC
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Provisioning tools
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: SAML 2.0
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: SCIM (RFC 7644)
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - DARE UK FAB
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: SSO protocols (SAML, OAuth, OIDC)
+      role: Manages authentication, researcher identity lifecycles, single sign-on
+        (SSO), and account federation across institutional boundaries.
+      sources:
+        community: true
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   access-control:
     name: Access Control
     items:
-    - source: community
-      items:
-      - RBAC concepts
-      - ABAC concepts
-      - Privilege audit tools
+    - name: Attribute-Based Access Control (ABAC)
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - DARE UK FAB
+          - NIST SP 800-162
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Microsoft Entra PIM / CyberArk
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Open Policy Agent (OPA)
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 2/4
+          status: Graduated / Adopt (Declarative Policy Engine)
+    - name: Privilege audit tools
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Role-Based Access Control (RBAC)
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 4
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Teleport / Boundary
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 1
+          mentions:
+          - TELEPORT Driver Project
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Zero Trust Architecture
+      role: Enforces least-privilege authorization, zero-trust boundary evaluation,
+        and privileged administrative access control.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 5
+          entry: 0
+          mid: 1
+          senior: 4
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   secure-user-experience:
     name: Secure User Experience
     items:
-    - source: community
-      items:
-      - Azure Key Vault
+    - name: Apache Guacamole
+      role: Provides isolated, clientless remote desktop environments and secure cryptographic
+        credential stores to prevent local data leakage.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 1
+          mentions:
+          - SATRE Driver Project
+        jobs:
+          total: 1
+          entry: 0
+          mid: 1
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Azure Key Vault
+      role: Provides isolated, clientless remote desktop environments and secure cryptographic
+        credential stores to prevent local data leakage.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 0
+          senior: 2
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: FIDO2 / WebAuthn
+      role: Provides isolated, clientless remote desktop environments and secure cryptographic
+        credential stores to prevent local data leakage.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: HashiCorp Vault
+      role: Provides isolated, clientless remote desktop environments and secure cryptographic
+        credential stores to prevent local data leakage.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 0
+          senior: 2
+        radars:
+          score: 2/4
+          status: Adopt (Standard Secrets Engine)
+    - name: Zero Trust Network Access (ZTNA)
+      role: Provides isolated, clientless remote desktop environments and secure cryptographic
+        credential stores to prevent local data leakage.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 5
+          entry: 0
+          mid: 1
+          senior: 4
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language

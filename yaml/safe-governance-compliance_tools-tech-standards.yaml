@@ -4,25 +4,467 @@ subdomains:
   regulatory-compliance:
     name: Regulatory Compliance
     items:
-    - source: community
-      items: []
+    - name: Caldicott Principles
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 7
+          entry: 0
+          mid: 2
+          senior: 5
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Cyber Essentials Plus
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: ISO/IEC 27001:2022
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - ISO/IEC 27001
+          - SATRE Specification
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: NHS Data Security & Protection Toolkit (DSPT)
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NHS DSPT / DTAC
+          - NHS England SDE
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: NHS Digital Technology Assessment Criteria (DTAC)
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS DSPT / DTAC
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: UK GDPR / DPA 2018
+      role: Aligns organizational data processing with UK data protection legislation,
+        NHS health standards, and accredited ISMS frameworks.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   security-management:
     name: Security Management
     items:
-    - source: community
-      items:
-      - Firewall rules
-      - Nessus
-      - OpenVAS
-      - Splunk
+    - name: Aqua Trivy / Clair
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Adopt (Vulnerability & SBOM Scanner)
+    - name: Falco
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 0
+          senior: 2
+        radars:
+          score: 2/4
+          status: Graduated / Trial (eBPF Runtime Security)
+    - name: Firewall rules
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 0
+          mid: 2
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Splunk
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions: &id001
+          - NHS DSPT / DTAC
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Tenable Nessus / OpenVAS
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - NHS DSPT / DTAC
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Wazuh / OSSEC
+      role: Conducts vulnerability management, runtime container security monitoring,
+        and continuous threat mitigation.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 1
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
   ethics-and-research-governance:
     name: Ethics & Research Governance
     items:
-    - source: community
-      items: []
+    - name: Data Sharing Agreements (DSA)
+      role: Governs project onboarding approvals, research protocol ethical reviews,
+        and data access committee (DAC) oversight.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Five Safes Framework
+      role: Governs project onboarding approvals, research protocol ethical reviews,
+        and data access committee (DAC) oversight.
+      sources:
+        community: false
+        standards:
+          count: 4
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+          - ONS SDC
+          - NHS England SDE
+        projects:
+          count: 3
+          mentions:
+          - SATRE Driver Project
+          - TRE-FX Driver Project
+          - TREvolution
+        jobs:
+          total: 6
+          entry: 0
+          mid: 4
+          senior: 2
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Integrated Research Application System (IRAS)
+      role: Governs project onboarding approvals, research protocol ethical reviews,
+        and data access committee (DAC) oversight.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Research Ethics Committees (REC)
+      role: Governs project onboarding approvals, research protocol ethical reviews,
+        and data access committee (DAC) oversight.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   audit-and-compliance-monitoring:
     name: Audit & Compliance Monitoring
     items:
-    - source: community
-      items:
-      - Syslog
+    - name: Access Control Audits
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Elastic Stack (ELK)
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: IT Health Check (ITHC)
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Splunk Enterprise Security
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions: *id001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Syslog
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: true
+        standards:
+          count: 3
+          mentions: &id002
+          - SATRE Specification
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+        projects:
+          count: 1
+          mentions: &id003
+          - SATRE Driver Project
+        jobs:
+          total: 15
+          entry: 3
+          mid: 8
+          senior: 4
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Syslog (RFC 5424)
+      role: Collects, aggregates, and protects immutable audit trails, access records,
+        and event logs for compliance reporting.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions: *id002
+        projects:
+          count: 1
+          mentions: *id003
+        jobs:
+          total: 15
+          entry: 3
+          mid: 8
+          senior: 4
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language

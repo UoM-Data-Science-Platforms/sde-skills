@@ -4,38 +4,645 @@ subdomains:
   output-checking:
     name: Output Checking
     items:
-    - source: community
-      items:
-      - CSV
+    - name: Cell Suppression
+      role: Inspects research outputs, tables, and graphs against non-disclosure rules
+        before release from the secure environment.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: CSV
+      role: Inspects research outputs, tables, and graphs against non-disclosure rules
+        before release from the secure environment.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Dominance Metrics
+      role: Inspects research outputs, tables, and graphs against non-disclosure rules
+        before release from the secure environment.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: ONS SDC Threshold Guidance (Rule of 10)
+      role: Inspects research outputs, tables, and graphs against non-disclosure rules
+        before release from the secure environment.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - ONS SDC
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Tabular Review Guidelines
+      role: Inspects research outputs, tables, and graphs against non-disclosure rules
+        before release from the secure environment.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   tools-and-platforms-to-support-output-checking:
     name: Tools and Platforms to Support Output Checking
     items:
-    - source: community
-      items:
-      - Camunda
-      - Data airlocks
-      - GitHub
-      - Git
+    - name: Camunda
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: true
+        standards:
+          count: 1
+          mentions: &id001
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Camunda BPM
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions: *id001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Data airlocks
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: true
+        standards:
+          count: 3
+          mentions: &id003
+          - SATRE Specification
+          - ONS SDC
+          - DARE UK FAB
+        projects:
+          count: 3
+          mentions: &id004
+          - SATRE Driver Project
+          - SACRO Driver Project
+          - TREvolution Theme 2
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Git
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NHS DSPT / DTAC
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 1/4
+          status: Adopt (Airlock Secret Scanner)
+    - name: Git / GitLab / GitHub
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions: &id002
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 1/4
+          status: '#1 Universal Version Control Standard (94%)'
+    - name: GitHub
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions: *id002
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 2/4
+          status: '#1 CI/CD Platform (48% market share)'
+    - name: Gitleaks / Trufflehog
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 1/4
+          status: Adopt (Airlock Secret Scanner)
+    - name: MIRACUM / TRE Data Airlocks
+      role: Provides workflow orchestrators, airlock staging areas, and automated
+        secret scanners to streamline egress governance.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions: *id003
+        projects:
+          count: 3
+          mentions: *id004
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   statistical-disclosure-control:
     name: Statistical Disclosure Control
     items:
-    - source: community
-      items:
-      - Risk classification templates
-      - sdcMicro
-      - Threshold configuration interfaces
-      - Benchmarking tools
+    - name: ACRO (Python / R)
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - SACRO Driver Project
+          - TREvolution Theme 2
+        jobs:
+          total: 49
+          entry: 9
+          mid: 21
+          senior: 19
+        radars:
+          score: 2/4
+          status: '#1 Most Popular Language for Data & AI (85%+)'
+    - name: ARX Data Anonymizer
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - ONS SDC
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Adopt (Benchmark Tabular Anonymization)
+    - name: Benchmarking tools
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Differential Privacy (ε, δ)
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 3
+          mentions:
+          - GRAIMatter Sprint Exemplar
+          - Bitfount Driver
+          - SACRO Driver Project
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Diffprivlib (IBM)
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NIST SP 800-226
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 2/4
+          status: Adopt (Privacy-Preserving Machine Learning)
+    - name: GRAIMatter AI Disclosure Guidelines
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - GRAIMatter Sprint Exemplar
+          - TREvolution Theme 2
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: OpenDP
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NIST SP 800-226
+          - ONS SDC
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Adopt (Gold Standard Differential Privacy)
+    - name: Risk classification templates
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: sdcMicro
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - ONS SDC
+          - DARE UK FAB
+        projects:
+          count: 2
+          mentions:
+          - SACRO Driver Project
+          - TREvolution Theme 2
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 2/4
+          status: Adopt (National Statistical Standard)
+    - name: Threshold configuration interfaces
+      role: Applies mathematical privacy frameworks, microdata perturbation, and disclosure
+        risk profiling.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   accidental-disclosure:
     name: Accidental Disclosure
     items:
-    - source: community
-      items:
-      - Incident report templates
-      - Quarantine protocols
+    - name: Data Airlock Quarantine
+      role: Implements containment, quarantine, and damage-limitation workflows when
+        potential disclosive material is detected.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - SATRE Driver Project
+          - SACRO Driver Project
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Incident report templates
+      role: Implements containment, quarantine, and damage-limitation workflows when
+        potential disclosive material is detected.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: NIST SP 800-61 (Incident Handling)
+      role: Implements containment, quarantine, and damage-limitation workflows when
+        potential disclosive material is detected.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NIST SP 800-61
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Quarantine protocols
+      role: Implements containment, quarantine, and damage-limitation workflows when
+        potential disclosive material is detected.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   emergency-response:
     name: Emergency Response
     items:
-    - source: community
-      items:
-      - Emergency response playbooks
-      - Forensic log analysis tools
+    - name: Break-Glass Access Revocation
+      role: Executes statutory regulatory breach notifications (ICO 72h), forensic
+        log analyses, and immediate platform isolation.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Emergency response playbooks
+      role: Executes statutory regulatory breach notifications (ICO 72h), forensic
+        log analyses, and immediate platform isolation.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Forensic log analysis tools
+      role: Executes statutory regulatory breach notifications (ICO 72h), forensic
+        log analyses, and immediate platform isolation.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: ICO 72-Hour Breach Notification (UK GDPR)
+      role: Executes statutory regulatory breach notifications (ICO 72h), forensic
+        log analyses, and immediate platform isolation.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NHS England SDE
+          - NHS DSPT / DTAC
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language

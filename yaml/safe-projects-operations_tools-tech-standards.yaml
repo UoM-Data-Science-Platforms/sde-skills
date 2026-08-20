@@ -4,39 +4,581 @@ subdomains:
   project-management:
     name: Project Management
     items:
-    - source: community
-      items:
-      - Trello
-      - Microsoft Planner
-      - SharePoint
-      - LabArchives
-      - Miro
-      - Scrum boards
+    - name: Agile / Scrum
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Jira Software / Confluence
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 6
+          entry: 4
+          mid: 2
+          senior: 0
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: LabArchives
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Microsoft Planner
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Miro
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Scrum boards
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: SharePoint
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Trello
+      role: Tracks research project delivery milestones, sprint task boards, and stakeholder
+        engagement.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   service-management:
     name: Service Management
     items:
-    - source: community
-      items:
-      - Basic ticketing systems
-      - ServiceNow
-      - Freshservice
-      - GitHub Actions
+    - name: Basic ticketing systems
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Freshservice
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: GitHub Actions
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 2/4
+          status: '#1 CI/CD Platform (48% market share)'
+    - name: ITIL 4 Foundation
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - ISO/IEC 27001
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 1
+          mid: 0
+          senior: 2
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Service now
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS DSPT / DTAC
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: ServiceNow ITSM
+      role: Maintains formal IT service level agreements (SLAs), incident ticket queues,
+        and change control lifecycles.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS DSPT / DTAC
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   operational-excellence:
     name: Operational Excellence
     items:
-    - source: community
-      items:
-      - Lean Six Sigma
-      - Google Docs
-      - OneNote
-      - Azure Monitor
-      - CloudWatch
+    - name: Azure Monitor
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: CloudWatch
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 1
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Google Docs
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Lean Six Sigma
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: OneNote
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: OpenTelemetry (OTel)
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+        projects:
+          count: 2
+          mentions:
+          - SATRE Driver Project
+          - TREvolution Theme 1
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 3/4
+          status: Adopt / Graduated (Universal Observability Standard)
+    - name: PagerDuty
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Adopt (Incident Escalation Standard)
+    - name: Prometheus & Grafana
+      role: Monitors platform capacity, operational telemetry, cost utilization, and
+        continuous process improvements.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 4
+          entry: 0
+          mid: 2
+          senior: 2
+        radars:
+          score: 3/4
+          status: Graduated / Adopt (#1 Cloud Monitoring Engine)
   research-support-and-innovation:
     name: Research Support & Innovation
     items:
-    - source: community
-      items:
-      - Moodle
-      - RStudio
-      - Feedly
-      - LinkedIn
+    - name: Feedly
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: JupyterLab
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: LinkedIn
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Moodle
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: RStudio
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: UK TRE Community
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - DARE UK FAB
+          - SATRE Specification
+        projects:
+          count: 1
+          mentions:
+          - DARE UK Community Forum
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: User Training Modules
+      role: Delivers researcher training materials, analytical desktop environments,
+        and national community collaboration.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
