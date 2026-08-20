@@ -22,7 +22,7 @@ function CollapsibleSection({ title, defaultOpen = false, children }) {
   );
 }
 
-function TrainingCard({ training }) {
+function ConceptCard({ concept }) {
   const [showDetail, setShowDetail] = React.useState(false);
   return (
     <div className="training-card">
@@ -30,21 +30,23 @@ function TrainingCard({ training }) {
         className="training-name"
         onClick={() => setShowDetail(!showDetail)}
       >
-        {training.name}
+        {concept.topic}
       </button>
       {showDetail && (
         <div className="training-detail">
           <div className="detail-field">
-            <strong>Format:</strong> {training.format}
+            <strong>Core Concepts:</strong> {concept.concepts}
           </div>
-          <div className="detail-field">
-            <strong>Duration:</strong> {training.duration}
+          <div className="detail-field" style={{ marginTop: '8px' }}>
+            <strong>Search Terms:</strong> 
+            <ul style={{ margin: '4px 0', paddingLeft: '20px' }}>
+              {concept.search_terms?.map((term, i) => (
+                <li key={i} style={{ fontStyle: 'italic' }}>"{term}"</li>
+              ))}
+            </ul>
           </div>
-          <div className="detail-field">
-            <strong>What:</strong> {training.description}
-          </div>
-          <div className="detail-field">
-            <strong>Why:</strong> {training.why}
+          <div className="detail-field" style={{ marginTop: '8px' }}>
+            <strong>Why:</strong> {concept.why}
           </div>
         </div>
       )}
@@ -562,51 +564,46 @@ export default function SkillsFramework() {
                       ))}
                     </div>
 
-                    {/* Two-column proficiency panel */}
+                    {/* Unified proficiency panel */}
                     {selectedLevel && selectedLevelData && (
-                      <div className="proficiency-panel">
-                        <div className="proficiency-list">
-                          {selectedLevelData.skills?.map((skill, sIdx) => (
-                            <button
-                              key={sIdx}
-                              className={`proficiency-btn${activeProficiency[compNumber] === sIdx ? ' active' : ''}`}
-                              onClick={() => selectProficiency(compNumber, sIdx)}
-                            >
-                              {skill}
-                            </button>
-                          ))}
+                      <div className="proficiency-panel" style={{ display: 'block', padding: '16px 0' }}>
+                        <div className="proficiency-list-plain" style={{ marginBottom: '24px' }}>
+                          <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                            {selectedLevelData.skills?.map((skill, sIdx) => (
+                              <li key={sIdx} style={{ marginBottom: '8px' }}>
+                                {skill}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
-                        <div className="proficiency-display">
-                          {activeProficiency[compNumber] != null ? (
-                            <div className="proficiency-detail">
-                              <h4>{selectedLevelData.skills[activeProficiency[compNumber]]}</h4>
-                              <CollapsibleSection title="Training Materials">
-                                {selectedLevelData?.training_materials?.length > 0 ? (
-                                  <div className="training-list">
-                                    {selectedLevelData.training_materials.map((training, idx) => (
-                                      <TrainingCard key={idx} training={training} />
-                                    ))}
-                                  </div>
-                                ) : (
-                                  <p>No training materials for this level.</p>
-                                )}
-                              </CollapsibleSection>
-                              <CollapsibleSection title="Qualifications">
-                                {selectedLevelData?.qualifications?.length > 0 ? (
-                                  <div className="qualifications-list">
-                                    {selectedLevelData.qualifications.map((qual, idx) => (
-                                      <QualificationCard key={idx} qualification={qual} />
-                                    ))}
-                                  </div>
-                                ) : (
-                                  <p>No qualifications for this level.</p>
-                                )}
-                              </CollapsibleSection>
+                        
+                          <div className="proficiency-detail" style={{ borderTop: '1px solid var(--border-color, #e5e7eb)', paddingTop: '20px' }}>
+                            <div style={{ marginBottom: '24px' }}>
+                              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '12px', color: 'var(--primary-color)' }}>Core Concepts & Self-Study</h4>
+                              {selectedLevelData?.core_concepts?.length > 0 ? (
+                                <div className="training-list">
+                                  {selectedLevelData.core_concepts.map((concept, idx) => (
+                                    <ConceptCard key={idx} concept={concept} />
+                                  ))}
+                                </div>
+                              ) : (
+                                <p className="text-muted">No concepts listed for this level.</p>
+                              )}
                             </div>
-                          ) : (
-                            <p className="proficiency-placeholder">Select a proficiency to view details</p>
-                          )}
-                        </div>
+                            
+                            <div>
+                              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '12px', color: 'var(--primary-color)' }}>Qualifications</h4>
+                              {selectedLevelData?.qualifications?.length > 0 ? (
+                                <div className="qualifications-list">
+                                  {selectedLevelData.qualifications.map((qual, idx) => (
+                                    <QualificationCard key={idx} qualification={qual} />
+                                  ))}
+                                </div>
+                              ) : (
+                                <p className="text-muted">No qualifications listed for this level.</p>
+                              )}
+                            </div>
+                          </div>
                       </div>
                     )}
                   </div>

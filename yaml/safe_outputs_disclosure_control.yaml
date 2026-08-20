@@ -3,19 +3,19 @@ domain:
   main-color: color-nhs-blue
   id: safe-outputs-disclosure-control
   name: Safe Outputs & Disclosure Control
-  description: This domain covers the technical controls that help to protect projects from accidental
-    or intentional disclosure, as well as providing tooling to support disclosure review operations of
-    project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose
-    sensitive information.
+  description: This domain covers the technical controls that help to protect projects
+    from accidental or intentional disclosure, as well as providing tooling to support
+    disclosure review operations of project teams to ensure that research outputs
+    from Secure Data Environments do not inadvertently disclose sensitive information.
   source_file: safe_outputs_disclosure_control.md
   subdomains:
     output-checking:
       id: output-checking
       name: Output Checking
-      description: This subdomain focuses on providing output checkers with tools that facilitate structured
-        review processes for different output formats, and developing decision support systems that ensure
-        consistent application of disclosure control rules while maintaining appropriate governance and
-        traceability.
+      description: This subdomain focuses on providing output checkers with tools
+        that facilitate structured review processes for different output formats,
+        and developing decision support systems that ensure consistent application
+        of disclosure control rules while maintaining appropriate governance and traceability.
       tools: []
       technologies: []
       standards: []
@@ -23,25 +23,50 @@ domain:
         output-review-processes:
           id: output-review-processes
           name: Output Review Processes
-          description: Involves understanding review requirements for different output formats, designing
-            workflows, implementing tracking and governance processes.
+          description: Involves understanding review requirements for different output
+            formats, designing workflows, implementing tracking and governance processes.
           levels:
             entry:
               id: output-review-processes-entry
               name: Entry Level
               skills:
               - Describes output review requirements, thresholds, and governance processes
-              - Identifies common research output formats and their associated disclosure risks
+              - Identifies common research output formats and their associated disclosure
+                risks
+              core_concepts:
+              - topic: SDE Output Governance
+                concepts:
+                - Five Safes Framework
+                - Output Checking Rules
+                search_terms:
+                - NHS SDE output governance
+                - Five safes output checking
+                why: Essential for understanding the governance framework around data
+                  outputs in health data environments.
+              qualifications: []
             mid:
               id: output-review-processes-mid
               name: Mid Level
               skills:
               - Implements output tracking and audit logs to support governance processes
+              core_concepts:
+              - topic: Audit and Tracking Systems
+                concepts:
+                - Audit Logs
+                - Workflow Tracking
+                - Provenance
+                search_terms:
+                - Health data output tracking
+                - SDE audit logging
+                why: Required to maintain defensible audit trails of what data leaves
+                  the SDE.
+              qualifications: []
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
       name: Tools and Platforms to Support Output Checking
-      description: Deploys and administers workflow engines, data airlocks, and secure code repositories
-        to ensure consistency, reliability, and traceability of output checking processes.
+      description: Deploys and administers workflow engines, data airlocks, and secure
+        code repositories to ensure consistency, reliability, and traceability of
+        output checking processes.
       tools:
       - Camunda
       - Apache Airflow (basic admin)
@@ -56,94 +81,210 @@ domain:
         workflow-engines:
           id: workflow-engines
           name: Workflow Engines
-          description: Deploys and administers workflow engines to ensure consistency, reliability,
-            and traceability of output checking processes. Creates individual workflows that meet governance
-            and regulatory requirements for project teams.
+          description: Deploys and administers workflow engines to ensure consistency,
+            reliability, and traceability of output checking processes. Creates individual
+            workflows that meet governance and regulatory requirements for project
+            teams.
           levels:
             entry:
               id: workflow-engines-entry
               name: Entry Level
               skills:
-              - Identifies workflow automation engines and describes their operational capabilities
-              - Describes key roles, responsibilities, and stages in the disclosure review workflow
-              - Administers workflow engines to implement changes to existing disclosure review workflows
+              - Identifies workflow automation engines and describes their operational
+                capabilities
+              - Describes key roles, responsibilities, and stages in the disclosure
+                review workflow
+              - Administers workflow engines to implement changes to existing disclosure
+                review workflows
+              core_concepts:
+              - topic: Workflow Automation Basics
+                concepts:
+                - BPMN
+                - Disclosure Review Stages
+                search_terms:
+                - BPMN workflow engine
+                - Airflow basic admin
+                why: Basic operation of tools that automate the approval pipelines.
+              qualifications: []
             mid:
               id: workflow-engines-mid
               name: Mid Level
               skills:
               - Assesses suitability of workflow engines for achieving desired functionality
-              - Collaborates with project stakeholders to design workflows that address local policy and regulatory
-                stipulations
+              - Collaborates with project stakeholders to design workflows that address
+                local policy and regulatory stipulations
               - Administers workflow engines to implement disclosure review workflows
-              - Develops and maintains workflow templates to maximise reuse across similar governance
-                constraints
+              - Develops and maintains workflow templates to maximise reuse across
+                similar governance constraints
+              core_concepts:
+              - topic: Regulatory Workflow Design
+                concepts:
+                - Policy-as-Code
+                - Compliance Workflows
+                search_terms:
+                - Camunda compliance workflows
+                - Automated disclosure review pipelines
+                why: Designing workflows that translate governance rules into enforceable
+                  automated processes.
+              qualifications:
+              - Camunda Certified Professional
             senior:
               id: workflow-engines-senior
               name: Senior Level
               skills:
-              - Leads the technology strategy for business process management and automated disclosure workflows
+              - Leads the technology strategy for business process management and
+                automated disclosure workflows
+              core_concepts:
+              - topic: Enterprise Workflow Strategy
+                concepts:
+                - BPM Strategy
+                - Scalable Governance Architecture
+                search_terms:
+                - Enterprise BPM architecture
+                - Strategic workflow automation
+                why: Leading the overall process architecture for multi-tenant SDEs.
+              qualifications: []
         data-airlocks:
           id: data-airlocks
           name: Data Airlocks
-          description: Installs and administers data airlock applications, defines role-based access levels
-            required for operational tasks (e.g. approvals, requests, triage, audit, review), creates user
-            documentation and training materials, and contributes to ongoing improvements to data airlocks
-            to meet user needs and regulatory compliance.
+          description: Installs and administers data airlock applications, defines
+            role-based access levels required for operational tasks (e.g. approvals,
+            requests, triage, audit, review), creates user documentation and training
+            materials, and contributes to ongoing improvements to data airlocks to
+            meet user needs and regulatory compliance.
           levels:
             entry:
               id: data-airlocks-entry
               name: Entry Level
               skills:
-              - Explains the purpose, architecture, and operational rules of data airlocks
+              - Explains the purpose, architecture, and operational rules of data
+                airlocks
               - Identifies user roles and access permissions within data airlock systems
+              core_concepts:
+              - topic: Airlock Operations
+                concepts:
+                - Data Ingress/Egress
+                - Role-based Access
+                search_terms:
+                - Data airlock operation
+                - SDE ingress egress
+                why: Understanding how data flows safely into and out of secure environments.
+              qualifications: []
             mid:
               id: data-airlocks-mid
               name: Mid Level
               skills:
-              - Produces user documentation and standard operating procedures for data airlocks
-              - Delivers training to researchers and review teams relating to data airlock operations
-              - Troubleshoots common operational and user access issues with data airlocks
+              - Produces user documentation and standard operating procedures for
+                data airlocks
+              - Delivers training to researchers and review teams relating to data
+                airlock operations
+              - Troubleshoots common operational and user access issues with data
+                airlocks
+              core_concepts:
+              - topic: Airlock Administration & Support
+                concepts:
+                - SOP Development
+                - User Training
+                - Troubleshooting
+                search_terms:
+                - Data airlock administration
+                - SDE user access troubleshooting
+                why: Supporting researchers and reviewers in using secure transfer
+                  systems.
+              qualifications: []
             senior:
               id: data-airlocks-senior
               name: Senior Level
               skills:
-              - Guides the architectural design and evolution of data airlocks according to user requirements,
-                emerging standards, and governance policies
+              - Guides the architectural design and evolution of data airlocks according
+                to user requirements, emerging standards, and governance policies
+              core_concepts:
+              - topic: Airlock Architecture
+                concepts:
+                - Secure System Design
+                - Zero Trust Transfer
+                search_terms:
+                - Data airlock architecture
+                - Secure enclave data transfer design
+                why: Designing robust, secure, and user-friendly airlock solutions.
+              qualifications:
+              - CISSP
+              - AWS Certified Security - Specialty
         code-repositories:
           id: code-repositories
           name: Code Repositories
-          description: Installs and configures code repository systems (e.g. Git) that allow source code
-            to be imported and exported from SDEs in industry standard ways. Develops automated checks and
-            static analysis pipelines to detect secrets, credentials, or restricted data in source code,
-            and applies automated review techniques to guide manual inspection.
+          description: Installs and configures code repository systems (e.g. Git)
+            that allow source code to be imported and exported from SDEs in industry
+            standard ways. Develops automated checks and static analysis pipelines
+            to detect secrets, credentials, or restricted data in source code, and
+            applies automated review techniques to guide manual inspection.
           levels:
             entry:
               id: code-repositories-entry
               name: Entry Level
               skills:
-              - Utilises code repositories and version control platforms (e.g. Git, GitHub, GitLab)
+              - Utilises code repositories and version control platforms (e.g. Git,
+                GitHub, GitLab)
+              core_concepts:
+              - topic: Version Control Basics
+                concepts:
+                - Git
+                - Code Export
+                search_terms:
+                - Git basic usage
+                - Version control in SDE
+                why: Fundamentals of tracking code changes and preparing scripts for
+                  review.
+              qualifications: []
             mid:
               id: code-repositories-mid
               name: Mid Level
               skills:
-              - Implements code publication workflows and processes (e.g. structured code reviews)
-              - Installs and configures code repositories with appropriate access controls for data ingress
-                and egress
-              - Develops automated pipelines using static analysis techniques to scan code for secrets,
-                credentials, IP addresses, and sensitive infrastructure details
+              - Implements code publication workflows and processes (e.g. structured
+                code reviews)
+              - Installs and configures code repositories with appropriate access
+                controls for data ingress and egress
+              - Develops automated pipelines using static analysis techniques to scan
+                code for secrets, credentials, IP addresses, and sensitive infrastructure
+                details
+              core_concepts:
+              - topic: Automated Code Scanning
+                concepts:
+                - Static Analysis
+                - Secret Detection
+                - Code Publication Workflows
+                search_terms:
+                - GitLab secret detection
+                - Static code analysis credentials
+                why: Preventing accidental export of API keys, PHI, or sensitive infrastructure
+                  details in code.
+              qualifications:
+              - GitLab Certified Security Specialist
             senior:
               id: code-repositories-senior
               name: Senior Level
               skills:
               - Establishes code publication frameworks and governance
-              - Leads initiatives to enhance secure code sharing (e.g. developing sharing policies,
-                creating secure repositories, and designing automated pipelines to review eligibility of
-                code for release)
+              - Leads initiatives to enhance secure code sharing (e.g. developing
+                sharing policies, creating secure repositories, and designing automated
+                pipelines to review eligibility of code for release)
+              core_concepts:
+              - topic: Secure Code Governance
+                concepts:
+                - Sharing Policies
+                - Open Source Release Governance
+                search_terms:
+                - Secure code sharing frameworks
+                - SDE open source governance
+                why: Establishing organizational standards for safely sharing analytical
+                  code.
+              qualifications: []
     statistical-disclosure-control:
       id: statistical-disclosure-control
       name: Statistical Disclosure Control
-      description: Implementing automated systems that enforce consistent application of disclosure controls
-        across varied research outputs while maintaining statistical validity.
+      description: Implementing automated systems that enforce consistent application
+        of disclosure controls across varied research outputs while maintaining statistical
+        validity.
       tools: []
       technologies:
       - sdcMicro
@@ -154,59 +295,139 @@ domain:
         disclosure-risk-assessment:
           id: disclosure-risk-assessment
           name: Disclosure Risk Assessment
-          description: Implementing tools to facilitate reviewing research outputs for potential privacy
-            violations and re-identification risks. Has an awareness of different types of disclosure
-            risks (identity and attribute), recommending appropriate controls.
+          description: Implementing tools to facilitate reviewing research outputs
+            for potential privacy violations and re-identification risks. Has an awareness
+            of different types of disclosure risks (identity and attribute), recommending
+            appropriate controls.
           levels:
             entry:
               id: disclosure-risk-assessment-entry
               name: Entry Level
               skills:
-              - Explains basic disclosure risk concepts (e.g. re-identification risks, data sensitivity levels)
-              - Differentiates between identity disclosure, attribute disclosure, and inferential disclosure
+              - Explains basic disclosure risk concepts (e.g. re-identification risks,
+                data sensitivity levels)
+              - Differentiates between identity disclosure, attribute disclosure,
+                and inferential disclosure
+              core_concepts:
+              - topic: Disclosure Basics
+                concepts:
+                - Identity Disclosure
+                - Attribute Disclosure
+                - Inferential Disclosure
+                search_terms:
+                - Statistical disclosure control basics
+                - Re-identification risk health data
+                why: Foundational knowledge required to recognize privacy risks in
+                  research outputs.
+              qualifications: []
             mid:
               id: disclosure-risk-assessment-mid
               name: Mid Level
               skills:
               - Recommends appropriate controls based on risk assessment
+              core_concepts:
+              - topic: Risk Mitigation
+                concepts:
+                - Cell Suppression
+                - Perturbation
+                - K-anonymity
+                search_terms:
+                - Applying statistical disclosure controls
+                - K-anonymity mitigation
+                why: Recommending mathematical or procedural controls to reduce identified
+                  risks.
+              qualifications: []
             senior:
               id: disclosure-risk-assessment-senior
               name: Senior Level
               skills:
-              - Leads initiatives to enhance disclosure risk management (e.g. implementing new tools
-                or techniques, anticipating introduction of new regulatory frameworks).
+              - Leads initiatives to enhance disclosure risk management (e.g. implementing
+                new tools or techniques, anticipating introduction of new regulatory
+                frameworks).
+              core_concepts:
+              - topic: Advanced Risk Management
+                concepts:
+                - Regulatory Alignment
+                - Novel Privacy Attacks
+                search_terms:
+                - Privacy preserving techniques strategy
+                - Health data disclosure risk frameworks
+                why: Anticipating future regulatory changes and sophisticated re-identification
+                  attacks.
+              qualifications:
+              - CIPP/E
+              - CIPM
         automated-disclosure-control:
           id: automated-disclosure-control
           name: Automated Disclosure Control
-          description: Implements systems that automatically apply disclosure controls to research outputs.
-            Involves automated tools and solutions for common output types, configuring rules and thresholds,
-            validating effectiveness, architecting enterprise strategies, and developing advanced algorithms
+          description: Implements systems that automatically apply disclosure controls
+            to research outputs. Involves automated tools and solutions for common
+            output types, configuring rules and thresholds, validating effectiveness,
+            architecting enterprise strategies, and developing advanced algorithms
             to enhance automated disclosure control capabilities.
           levels:
             entry:
               id: automated-disclosure-control-entry
               name: Entry Level
               skills:
-              - Explains automated SDC tool concepts (e.g. rule-based systems, threshold settings)
-              - Identifies available statistical disclosure control (SDC) tools and packages
+              - Explains automated SDC tool concepts (e.g. rule-based systems, threshold
+                settings)
+              - Identifies available statistical disclosure control (SDC) tools and
+                packages
+              core_concepts:
+              - topic: SDC Tools Overview
+                concepts:
+                - Rule-based Systems
+                - Threshold Settings
+                - sdcMicro
+                search_terms:
+                - sdcMicro overview
+                - Automated SDC tools
+                why: Familiarity with the software used to enforce disclosure rules
+                  programmatically.
+              qualifications: []
             mid:
               id: automated-disclosure-control-mid
               name: Mid Level
               skills:
               - Implements automated SDC solutions for common output types
               - Configures SDC rules and thresholds in automation systems
-              - Validates accuracy and effectiveness of automated controls (e.g. testing against known
-                risks, benchmarking)
+              - Validates accuracy and effectiveness of automated controls (e.g. testing
+                against known risks, benchmarking)
+              core_concepts:
+              - topic: SDC Implementation & Validation
+                concepts:
+                - Threshold Configuration
+                - Benchmarking
+                - Utility vs Privacy
+                search_terms:
+                - Configuring SDC thresholds
+                - Benchmarking SDC tools
+                why: Translating statistical theory into configured software rules
+                  and proving their effectiveness.
+              qualifications: []
             senior:
               id: automated-disclosure-control-senior
               name: Senior Level
               skills:
               - Leads initiatives to enhance automated SDC capabilities
+              core_concepts:
+              - topic: Advanced Automation
+                concepts:
+                - Algorithm Development
+                - Enterprise SDC Architecture
+                search_terms:
+                - Advanced statistical disclosure control algorithms
+                - Automated SDC architecture
+                why: Driving innovation in automated disclosure control to support
+                  complex or unstructured output types.
+              qualifications: []
     accidental-disclosure:
       id: accidental-disclosure
       name: Accidental Disclosure
-      description: Establishes protocols, investigation procedures, and immediate containment measures
-        when an accidental disclosure or unauthorised output export is suspected or identified.
+      description: Establishes protocols, investigation procedures, and immediate
+        containment measures when an accidental disclosure or unauthorised output
+        export is suspected or identified.
       tools: []
       technologies:
       - incident report templates
@@ -216,34 +437,81 @@ domain:
         accidental-disclosure-management:
           id: accidental-disclosure-management
           name: Accidental Disclosure Management
-          description: Detects, assesses, and handles accidental disclosure events to mitigate confidentiality
-            risks and prevent unauthorised dissemination of sensitive information.
+          description: Detects, assesses, and handles accidental disclosure events
+            to mitigate confidentiality risks and prevent unauthorised dissemination
+            of sensitive information.
           levels:
             entry:
               id: accidental-disclosure-management-entry
               name: Entry Level
               skills:
-              - Follows standard incident reporting procedures upon discovering a suspected accidental disclosure
-              - Assists under direction with collecting relevant audit logs, session records, and exported artefacts
+              - Follows standard incident reporting procedures upon discovering a
+                suspected accidental disclosure
+              - Assists under direction with collecting relevant audit logs, session
+                records, and exported artefacts
+              core_concepts:
+              - topic: Incident Reporting
+                concepts:
+                - Incident Escalation
+                - Evidence Collection
+                search_terms:
+                - Data breach reporting SDE
+                - Accidental disclosure escalation
+                why: Knowing what to do and what not to touch when a suspected disclosure
+                  occurs.
+              qualifications: []
             mid:
               id: accidental-disclosure-management-mid
               name: Mid Level
               skills:
-              - Investigates suspected disclosure events by analysing audit logs, egress records, and exported artefacts
-              - Implements immediate containment actions to halt unauthorised distribution of disclosive outputs
-              - Communicates technical findings and impact assessments clearly to governance and response teams
+              - Investigates suspected disclosure events by analysing audit logs,
+                egress records, and exported artefacts
+              - Implements immediate containment actions to halt unauthorised distribution
+                of disclosive outputs
+              - Communicates technical findings and impact assessments clearly to
+                governance and response teams
+              core_concepts:
+              - topic: Incident Containment & Investigation
+                concepts:
+                - Log Analysis
+                - Containment Actions
+                - Impact Assessment
+                search_terms:
+                - Data egress log analysis
+                - Quarantine disclosive outputs
+                why: Quickly stopping ongoing leaks and figuring out what happened
+                  through technical artifacts.
+              qualifications:
+              - CompTIA Cybersecurity Analyst (CySA+)
             senior:
               id: accidental-disclosure-management-senior
               name: Senior Level
               skills:
-              - Leads technical investigations of complex disclosure incidents across multi-tenant environments
-              - Develops immediate and long-term remediation strategies to prevent recurrence of disclosure vulnerabilities
-              - Liaises across organisational, legal, and regulatory stakeholders during incident investigations
+              - Leads technical investigations of complex disclosure incidents across
+                multi-tenant environments
+              - Develops immediate and long-term remediation strategies to prevent
+                recurrence of disclosure vulnerabilities
+              - Liaises across organisational, legal, and regulatory stakeholders
+                during incident investigations
+              core_concepts:
+              - topic: Complex Incident Leadership
+                concepts:
+                - Multi-tenant Investigations
+                - Remediation Strategy
+                - Stakeholder Liaison
+                search_terms:
+                - Enterprise data breach remediation
+                - Multi-tenant SDE forensics
+                why: Managing major incidents that cross organizational boundaries
+                  and require strategic fixes.
+              qualifications:
+              - CISM
+              - CISSP
     emergency-response:
       id: emergency-response
       name: Emergency Response
-      description: Prepares and executes rapid response procedures for suspected data breaches, data
-        leaks, and critical security incidents in research environments.
+      description: Prepares and executes rapid response procedures for suspected data
+        breaches, data leaks, and critical security incidents in research environments.
       tools: []
       technologies:
       - emergency response playbooks
@@ -253,26 +521,68 @@ domain:
         emergency-response-protocols:
           id: emergency-response-protocols
           name: Emergency Response Protocols
-          description: Coordinates emergency response actions, forensics acquisition, and cross-team
-            containment during confirmed or suspected data breaches.
+          description: Coordinates emergency response actions, forensics acquisition,
+            and cross-team containment during confirmed or suspected data breaches.
           levels:
             entry:
               id: emergency-response-protocols-entry
               name: Entry Level
               skills:
-              - Works under direction to acquire logs and other facts relating to potential data breaches
-              - Adheres to evidence preservation and chain of custody guidelines during investigations
+              - Works under direction to acquire logs and other facts relating to
+                potential data breaches
+              - Adheres to evidence preservation and chain of custody guidelines during
+                investigations
+              core_concepts:
+              - topic: Forensic Basics
+                concepts:
+                - Chain of Custody
+                - Evidence Preservation
+                search_terms:
+                - Digital forensics chain of custody
+                - Evidence preservation SDE
+                why: Ensuring technical evidence of a breach remains legally defensible.
+              qualifications: []
             mid:
               id: emergency-response-protocols-mid
               name: Mid Level
               skills:
-              - Reviews and assesses logs and other facts relating to data breaches to evaluate scope of exposure
-              - Communicates technical findings and impact assessments appropriately to diverse audiences
+              - Reviews and assesses logs and other facts relating to data breaches
+                to evaluate scope of exposure
+              - Communicates technical findings and impact assessments appropriately
+                to diverse audiences
+              core_concepts:
+              - topic: Exposure Evaluation
+                concepts:
+                - Scope Assessment
+                - Forensic Log Analysis
+                search_terms:
+                - Data breach exposure assessment
+                - Forensic analysis of egress logs
+                why: Determining the true size and scope of a data leak.
+              qualifications:
+              - GIAC Certified Incident Handler (GCIH)
             senior:
               id: emergency-response-protocols-senior
               name: Senior Level
               skills:
-              - Represents the infrastructure team when designing emergency response plans (in accordance with governance, regulatory, and legal requirements) to address suspected data breaches
-              - Liaises across organisational units to coordinate facts and actions relating to a data breach
+              - Represents the infrastructure team when designing emergency response
+                plans (in accordance with governance, regulatory, and legal requirements)
+                to address suspected data breaches
+              - Liaises across organisational units to coordinate facts and actions
+                relating to a data breach
               - Designs short-term mitigations to prevent further disclosure
               - Designs long-term mitigations against confirmed data leaks
+              core_concepts:
+              - topic: Emergency Response Design
+                concepts:
+                - Response Playbooks
+                - Regulatory Compliance
+                - Long-term Mitigation
+                search_terms:
+                - Data breach response plan design
+                - SDE emergency playbook
+                why: Designing the organizational capability to withstand and respond
+                  to severe breaches.
+              qualifications:
+              - GIAC Response and Industrial Defense (GRID)
+              - CISSP
