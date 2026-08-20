@@ -4,20 +4,478 @@ subdomains:
   data-governance:
     name: Data Governance
     items:
-    - source: community
-      items:
-      - Checksums
-      - Excel validation templates
+    - name: Checksums
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: true
+        standards:
+          count: 3
+          mentions: &id001
+          - SATRE Specification
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 6
+          entry: 1
+          mid: 3
+          senior: 2
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Data Dictionaries
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Excel validation templates
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 10
+          entry: 8
+          mid: 2
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: FAIR Data Principles
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - DARE UK FAB
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Great Expectations
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 0
+          mid: 1
+          senior: 2
+        radars:
+          score: 1/4
+          status: Trial (Automated Data Quality Testing)
+    - name: HDR UK Gateway Metadata Schema
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: OpenMetadata / Apache Atlas
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: SHA-256 Checksums
+      role: Ensures data discoverability, metadata cataloguing, data quality profiling,
+        and end-to-end provenance integrity.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions: *id001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 6
+          entry: 1
+          mid: 3
+          senior: 2
+        radars:
+          score: 0/4
+          status: Not in target radars
   data-engineering-and-processing:
     name: Data Engineering & Processing
     items:
-    - source: community
-      items:
-      - Airflow
-      - Python
-      - SQLite
-      - FHIR/OMOP documentation
-      - HashiCorp Vault
-      - AES/RSA
-      - Windows Backup
-      - AWS DMS
+    - name: AES-256-GCM / TLS 1.3
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 4
+          mentions:
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+          - SATRE Specification
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: AES/RSA
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Apache Airflow
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 0
+          senior: 2
+        radars:
+          score: 2/4
+          status: '#1 Most Used Data Orchestrator'
+    - name: Apache Iceberg / Delta Lake
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Adopt / Trial (Open Table Standard)
+    - name: AWS DMS
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 8
+          entry: 0
+          mid: 2
+          senior: 6
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: dbt (data build tool)
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 4
+          entry: 0
+          mid: 2
+          senior: 2
+        radars:
+          score: 2/4
+          status: Adopt (Industry Standard Transformation Tool)
+    - name: DuckDB / Trino
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - DARE UK FAB
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Adopt (Fast Analytics & Federated SQL)
+    - name: FHIR/OMOP documentation
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - DARE UK FAB
+        projects:
+          count: 2
+          mentions:
+          - CO-CONNECT / Hutch Project
+          - TREvolution Theme 3
+        jobs:
+          total: 1
+          entry: 0
+          mid: 1
+          senior: 0
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: HashiCorp Vault
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 0
+          senior: 2
+        radars:
+          score: 2/4
+          status: Adopt (Standard Secrets Engine)
+    - name: HL7 FHIR
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 4
+          entry: 0
+          mid: 0
+          senior: 4
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: OMOP Common Data Model
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NHS England SDE
+          - DARE UK FAB
+        projects:
+          count: 2
+          mentions:
+          - CO-CONNECT / Hutch Project
+          - TREvolution Theme 3
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Python
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - SACRO Driver Project
+          - TREvolution Theme 2
+        jobs:
+          total: 49
+          entry: 9
+          mid: 21
+          senior: 19
+        radars:
+          score: 2/4
+          status: '#1 Most Popular Language for Data & AI (85%+)'
+    - name: SQL (PostgreSQL / MSSQL / Synapse)
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 19
+          entry: 4
+          mid: 5
+          senior: 10
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: SQLite
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 19
+          entry: 4
+          mid: 5
+          senior: 10
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Windows Backup
+      role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization,
+        secure analytical stores, and encrypted data transfers.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars

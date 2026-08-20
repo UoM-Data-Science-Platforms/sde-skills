@@ -4,40 +4,987 @@ subdomains:
   software-engineering:
     name: Software Engineering
     items:
-    - source: community
-      items:
-      - GitHub
-      - Git
-      - Postman
-      - JUnit
-      - REST
-      - Markdown
-      - Docker Hub
+    - name: C++
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 1
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Docker Hub
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions: &id001
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 3
+          mentions: &id002
+          - SATRE Driver Project
+          - TRE-FX Driver Project
+          - CO-CONNECT / Hutch
+        jobs:
+          total: 28
+          entry: 3
+          mid: 13
+          senior: 12
+        radars:
+          score: 3/4
+          status: 'Adopt / #1 Most Used Container Tool (78%)'
+    - name: Git
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NHS DSPT / DTAC
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 1/4
+          status: Adopt (Airlock Secret Scanner)
+    - name: GitHub
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 35
+          entry: 9
+          mid: 15
+          senior: 11
+        radars:
+          score: 2/4
+          status: '#1 CI/CD Platform (48% market share)'
+    - name: JUnit
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 1/4
+          status: '#1 Java Testing Standard'
+    - name: Markdown
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: OpenAPI / Swagger (OAS 3.1)
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+          - NHS England SDE
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 2/4
+          status: Adopt (Global REST Contract Standard)
+    - name: OWASP Top 10
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - ISO/IEC 27001
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 1
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Postman
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 1/4
+          status: '#1 API Testing Tool'
+    - name: PyTest
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 7
+          entry: 1
+          mid: 2
+          senior: 4
+        radars:
+          score: 2/4
+          status: '#1 Python Testing Framework (82% adoption)'
+    - name: Python
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - SACRO Driver Project
+          - TREvolution Theme 2
+        jobs:
+          total: 49
+          entry: 9
+          mid: 21
+          senior: 19
+        radars:
+          score: 2/4
+          status: '#1 Most Popular Language for Data & AI (85%+)'
+    - name: R
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 2
+          mentions:
+          - SATRE Driver Project
+          - TREvolution Theme 1
+        jobs:
+          total: 10
+          entry: 0
+          mid: 4
+          senior: 6
+        radars:
+          score: 3/4
+          status: Graduated / Adopt (#1 Container Orchestrator)
+    - name: REST
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 5
+          entry: 0
+          mid: 3
+          senior: 2
+        radars:
+          score: 1/4
+          status: '#1 Web API Protocol'
+    - name: SBOM (CycloneDX / SPDX)
+      role: Enforces rigorous research software engineering (RSE) practices, automated
+        testing, secure coding, and API standards.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
   infrastructure-and-deployment:
     name: Infrastructure & Deployment
     items:
-    - source: community
-      items:
-      - AWS Console
-      - Azure Portal
-      - Google Cloud Console
-      - Terraform
-      - Kubernetes
-      - Azure CLI
-      - AWS CLI
-      - Google Cloud SDK
-      - CloudFormation
-      - Docker CLI
-      - TLS/SSL
+    - name: AWS CLI
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 8
+          entry: 0
+          mid: 2
+          senior: 6
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: AWS Console
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 8
+          entry: 0
+          mid: 2
+          senior: 6
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Azure CLI
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Azure Portal
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: CloudFormation
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Docker
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions: *id001
+        projects:
+          count: 3
+          mentions: *id002
+        jobs:
+          total: 28
+          entry: 3
+          mid: 13
+          senior: 12
+        radars:
+          score: 3/4
+          status: 'Adopt / #1 Most Used Container Tool (78%)'
+    - name: Docker CLI
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions: *id001
+        projects:
+          count: 3
+          mentions: *id002
+        jobs:
+          total: 28
+          entry: 3
+          mid: 13
+          senior: 12
+        radars:
+          score: 3/4
+          status: 'Adopt / #1 Most Used Container Tool (78%)'
+    - name: Google Cloud Console
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Google Cloud SDK
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Harbor
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 1/4
+          status: Graduated (Secure Container Registry)
+    - name: Helm
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions:
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Graduated / Adopt (K8s Package Manager)
+    - name: Kubernetes
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 10
+          entry: 0
+          mid: 4
+          senior: 6
+        radars:
+          score: 3/4
+          status: Graduated / Adopt (#1 Container Orchestrator)
+    - name: Linux
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 20
+          entry: 4
+          mid: 10
+          senior: 6
+        radars:
+          score: 1/4
+          status: '#1 Cloud & Server OS (88%)'
+    - name: OpenTofu
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 2
+          mentions:
+          - SATRE Driver Project
+          - TREvolution Theme 1
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 2/4
+          status: Adopt / Trial (Open Source IaC Standard)
+    - name: Podman
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 2/4
+          status: Trial / Adopt (Rootless Container Runtime)
+    - name: Terraform
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 2
+          mentions:
+          - SATRE Driver Project
+          - TREvolution Theme 1
+        jobs:
+          total: 15
+          entry: 1
+          mid: 5
+          senior: 9
+        radars:
+          score: 2/4
+          status: '#1 Most Used IaC Tool (35% adoption)'
+    - name: TLS/SSL
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 4
+          entry: 0
+          mid: 2
+          senior: 2
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: VMware ESXi
+      role: Manages declarative infrastructure automation, container registries, and
+        scalable compute clusters.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 0
+          mid: 1
+          senior: 2
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
   system-architecture:
     name: System Architecture
     items:
-    - source: community
-      items:
-      - Apache JMeter
-      - UML
-      - React
-      - Nessus
-      - Ansible
-      - Shell scripts
-      - SLURM
+    - name: Ansible
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 2
+          mentions:
+          - SATRE Specification
+          - NCSC Cyber Principles
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 6
+          entry: 1
+          mid: 2
+          senior: 3
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Apache JMeter
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Ceph Storage
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 3
+          entry: 0
+          mid: 2
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Five Safes RO-Crate
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - SATRE Specification
+          - DARE UK FAB
+          - ONS SDC
+        projects:
+          count: 2
+          mentions:
+          - TRE-FX Driver Project
+          - TREvolution Theme 3
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: GA4GH TES & WES APIs
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - TRE-FX Driver Project
+          - TREvolution Theme 3
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: NCSC Cyber Security Design Principles
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - SATRE Specification
+          - NHS DSPT / DTAC
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 1
+          entry: 0
+          mid: 0
+          senior: 1
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Nessus
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 3
+          mentions:
+          - NCSC Cyber Principles
+          - NHS DSPT / DTAC
+          - ISO/IEC 27001
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: Nextflow
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - DARE UK FAB
+          - SATRE Specification
+        projects:
+          count: 2
+          mentions:
+          - TRE-FX Driver Project
+          - TREvolution Theme 3
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: React
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Shell scripts
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Singularity / Apptainer
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 2
+          mentions:
+          - TRE-FX Driver Project
+          - SATRE Driver Project
+        jobs:
+          total: 12
+          entry: 1
+          mid: 8
+          senior: 3
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: SLURM
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 1
+          mentions: &id003
+          - SATRE Specification
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 9
+          entry: 1
+          mid: 3
+          senior: 5
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Slurm Workload Manager
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 1
+          mentions: *id003
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 9
+          entry: 1
+          mid: 3
+          senior: 5
+        radars:
+          score: 1/4
+          status: Core Statistical Computing Language
+    - name: Snakemake
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 2
+          mentions:
+          - DARE UK FAB
+          - SATRE Specification
+        projects:
+          count: 2
+          mentions:
+          - TRE-FX Driver Project
+          - TREvolution Theme 3
+        jobs:
+          total: 2
+          entry: 0
+          mid: 1
+          senior: 1
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: UML
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: true
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 0
+          mentions: []
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
+    - name: WfExS-backend
+      role: Delivers high-performance scientific batch computing, scalable bioinformatics
+        workflows, and server hardening.
+      sources:
+        community: false
+        standards:
+          count: 0
+          mentions: []
+        projects:
+          count: 1
+          mentions:
+          - TRE-FX Driver Project
+        jobs:
+          total: 0
+          entry: 0
+          mid: 0
+          senior: 0
+        radars:
+          score: 0/4
+          status: Not in target radars
