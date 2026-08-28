@@ -1,0 +1,555 @@
+domain:
+  name: Safe Projects & Operations
+  subdomains:
+    project-management:
+      name: Project Management
+      competencies:
+        sde-project-planning:
+          name: SDE Project Planning
+          levels:
+            entry:
+              core_concepts:
+              - topic: Health Data SDE Lifecycles
+                concepts:
+                - Project Initiation
+                - IG Approvals
+                - Data Provisioning
+                search_terms:
+                - NHS SDE project lifecycle
+                - Health data research project management
+                why: Understanding how research projects flow through an SDE is fundamental.
+            mid:
+              core_concepts:
+              - topic: SDE Project Resource Planning
+                concepts:
+                - Cost tracking
+                - Researcher onboarding
+                - Data extraction timelines
+                search_terms:
+                - SDE capacity planning
+                - Secure data environment resource management
+                why: Need to manage expectations for IG and data engineering bottlenecks.
+            senior:
+              core_concepts:
+              - topic: Strategic SDE Portfolio Management
+                concepts:
+                - Multi-tenant project planning
+                - Data governance roadmap
+                - Funding alignment
+                search_terms:
+                - Health data research portfolio management
+                - NHS TRE strategy
+                why: Senior leaders must balance multiple concurrent research initiatives.
+        research-project-facilitation:
+          name: Research Project Facilitation
+          levels:
+            entry:
+              core_concepts:
+              - topic: Researcher Workflow Basics
+                concepts:
+                - Jupyter/RStudio basics
+                - Data access requests
+                - Output checking prep
+                search_terms:
+                - TRE researcher support
+                - SDE workflow assistance
+                why: Entry-level support requires understanding how researchers use the environment.
+            mid:
+              core_concepts:
+              - topic: Complex SDE Workflows
+                concepts:
+                - Federated analysis setup
+                - Custom package management
+                - Pipeline automation
+                search_terms:
+                - Health data pipeline facilitation
+                - SDE researcher enablement
+                why: Mid-level staff help build complex analytical pipelines within secure boundaries.
+            senior:
+              core_concepts:
+              - topic: Research Enablement Strategy
+                concepts:
+                - Standardized research frameworks
+                - Institutional engagement
+                - Service design for research
+                search_terms:
+                - SDE research service design
+                - Health research infrastructure strategy
+                why: Seniors design the overall researcher experience and support model.
+        agile-delivery-methods:
+          name: Agile Delivery Methods
+          levels:
+            entry:
+              core_concepts:
+              - topic: Agile Basics in Secure Env
+                concepts:
+                - Scrum/Kanban
+                - Ticket tracking for IG
+                - Sprint planning
+                search_terms:
+                - Agile in secure environments
+                - Healthcare IT agile delivery
+                why: Agile must be adapted to accommodate strict IG and security gates.
+            mid:
+              core_concepts:
+              - topic: Adapting Agile to IG
+                concepts:
+                - Security compliance in sprints
+                - DevSecOps alignment
+                - Delivery tracking
+                search_terms:
+                - DevSecOps healthcare
+                - Agile compliance NHS
+                why: Mid-level must integrate continuous delivery with slow-moving compliance checks.
+            senior:
+              core_concepts:
+              - topic: SDE Agile Governance
+                concepts:
+                - Scaled Agile Framework (SAFe)
+                - Agile transformation
+                - Governance integration
+                search_terms:
+                - Scaled agile healthcare infrastructure
+                - Agile transformation TRE
+                why: Senior leaders embed agile delivery into the overall SDE governance framework.
+        procurement-vendor-management:
+          name: Procurement & Vendor Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: SDE Procurement Basics
+                concepts:
+                - Cloud vendor basics
+                - Software licensing
+                - Purchasing workflows
+                search_terms:
+                - NHS IT procurement
+                - Cloud resource purchasing
+                why: Understanding how resources are requested and bought.
+            mid:
+              core_concepts:
+              - topic: Health IT Vendor Management
+                concepts:
+                - DSP Toolkit compliance for vendors
+                - SLA negotiation
+                - Data processor agreements
+                search_terms:
+                - NHS data processor agreements
+                - Vendor management health IT
+                why: Vendors operating in SDEs must meet strict health data standards.
+            senior:
+              core_concepts:
+              - topic: Strategic Procurement
+                concepts:
+                - Multi-cloud vendor strategy
+                - Commercial frameworks (G-Cloud)
+                - Long-term partnerships
+                search_terms:
+                - NHS commercial frameworks
+                - Strategic cloud procurement health
+                why: Requires strategic alignment with national health data infrastructure funding.
+        resource-cost-management:
+          name: Resource & Cost Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Cloud Cost Basics
+                concepts:
+                - Billing alerts
+                - Tagging resources
+                - Usage monitoring
+                search_terms:
+                - FinOps basics
+                - Cloud cost monitoring
+                why: SDEs can rack up huge cloud bills; basic monitoring is essential.
+            mid:
+              core_concepts:
+              - topic: SDE Cost Optimization
+                concepts:
+                - Compute optimization
+                - Chargeback models for researchers
+                - Storage lifecycle management
+                search_terms:
+                - Health data chargeback models
+                - SDE FinOps optimization
+                why: Need to assign costs to specific research grants or projects accurately.
+            senior:
+              core_concepts:
+              - topic: Financial Strategy for SDEs
+                concepts:
+                - Enterprise FinOps
+                - Funding models
+                - Cost-benefit analysis of infrastructure
+                search_terms:
+                - SDE financial sustainability
+                - Enterprise FinOps healthcare
+                why: Long-term sustainability of the SDE depends on robust financial strategy.
+    service-management:
+      name: Service Management
+      competencies:
+        service-level-management:
+          name: Service Level Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: SLA Basics
+                concepts:
+                - Uptime monitoring
+                - Incident response times
+                - Basic reporting
+                search_terms:
+                - ITIL SLA basics
+                - Service level monitoring
+                why: Tracking basic metrics against commitments.
+            mid:
+              core_concepts:
+              - topic: SDE Service Levels
+                concepts:
+                - Output checking SLAs
+                - Workspace provisioning times
+                - Performance analytics
+                search_terms:
+                - SDE service level agreements
+                - TRE operational metrics
+                why: Specific SLAs for SDEs involve manual IG tasks like output checking.
+            senior:
+              core_concepts:
+              - topic: Service Level Governance
+                concepts:
+                - Cross-organizational SLAs
+                - Strategic service improvement
+                - Customer experience (CX)
+                search_terms:
+                - Healthcare IT service governance
+                - TRE service excellence
+                why: Negotiating SLAs between hospitals, universities, and data providers.
+        incident-problem-management:
+          name: Incident & Problem Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Incident Logging
+                concepts:
+                - Ticketing systems
+                - Triage
+                - Impact assessment
+                search_terms:
+                - ITSM incident logging
+                - Helpdesk basics
+                why: First-line response to user issues or system alerts.
+            mid:
+              core_concepts:
+              - topic: SDE Incident Resolution
+                concepts:
+                - Data breach response
+                - Root cause analysis
+                - System recovery
+                search_terms:
+                - Health data breach response
+                - SDE root cause analysis
+                why: Incidents in SDEs can have severe legal/IG implications (e.g., data leaks).
+            senior:
+              core_concepts:
+              - topic: Resilience Strategy
+                concepts:
+                - Major incident management
+                - Problem management frameworks
+                - Proactive mitigation
+                search_terms:
+                - SDE major incident management
+                - Cyber resilience healthcare
+                why: Designing systems and processes that prevent major incidents.
+        change-release-management:
+          name: Change & Release Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Change Requests
+                concepts:
+                - CAB processes
+                - Documentation
+                - Release deployment
+                search_terms:
+                - ITIL change management
+                - Software release basics
+                why: Following strict procedures for any environment modification.
+            mid:
+              core_concepts:
+              - topic: SDE Release Coordination
+                concepts:
+                - Zero-downtime deployments
+                - Security testing in releases
+                - Impact evaluation
+                search_terms:
+                - Secure environment change management
+                - Healthcare IT releases
+                why: Changes must not compromise the secure boundary or interrupt long-running analyses.
+            senior:
+              core_concepts:
+              - topic: Change Governance
+                concepts:
+                - Automated change controls
+                - Policy definition
+                - Strategic agility
+                search_terms:
+                - Enterprise change governance
+                - DevSecOps release strategy
+                why: Balancing the need for rapid updates with strict compliance mandates.
+    operational-excellence:
+      name: Operational Excellence
+      competencies:
+        continuous-improvement:
+          name: Continuous Improvement
+          levels:
+            entry:
+              core_concepts:
+              - topic: Improvement Basics
+                concepts:
+                - PDCA cycle
+                - Lean concepts
+                - Identifying bottlenecks
+                search_terms:
+                - Continuous improvement IT
+                - Lean methodology basics
+                why: Recognizing inefficiencies in daily work.
+            mid:
+              core_concepts:
+              - topic: Process Optimization
+                concepts:
+                - Value stream mapping
+                - Automating manual checks
+                - Metrics-driven improvement
+                search_terms:
+                - SDE process optimization
+                - Healthcare IT Lean
+                why: Applying methodologies to streamline complex workflows like data ingress.
+            senior:
+              core_concepts:
+              - topic: Enterprise Improvement
+                concepts:
+                - Cultural transformation
+                - Strategic KPI alignment
+                - Innovation frameworks
+                search_terms:
+                - Continuous improvement culture
+                - Enterprise transformation healthcare
+                why: Driving a culture of efficiency and quality across the entire SDE service.
+        documentation-knowledge-management:
+          name: Documentation & Knowledge Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Documentation Maintenance
+                concepts:
+                - Wiki updates
+                - Markdown
+                - Standard Operating Procedures (SOPs)
+                search_terms:
+                - Technical documentation basics
+                - IT SOP maintenance
+                why: Keeping operational knowledge accurate and accessible.
+            mid:
+              core_concepts:
+              - topic: SDE Knowledge Base
+                concepts:
+                - Information architecture
+                - Secure documentation handling
+                - Runbook creation
+                search_terms:
+                - Knowledge management IT
+                - SDE runbooks
+                why: Structuring knowledge so complex SDE operations are repeatable and secure.
+            senior:
+              core_concepts:
+              - topic: Knowledge Strategy
+                concepts:
+                - Enterprise knowledge management
+                - Documentation governance
+                - Knowledge sharing culture
+                search_terms:
+                - Enterprise knowledge strategy
+                - IT documentation governance
+                why: Ensuring the organization retains expertise and standardizes procedures.
+        monitoring-observability:
+          name: Monitoring & Observability
+          levels:
+            entry:
+              core_concepts:
+              - topic: Monitoring Basics
+                concepts:
+                - Log reading
+                - Basic metrics
+                - Alert acknowledgment
+                search_terms:
+                - System monitoring basics
+                - IT alerting
+                why: First line of defense for system health.
+            mid:
+              core_concepts:
+              - topic: SDE Observability
+                concepts:
+                - Security Information and Event Management (SIEM)
+                - Audit logging
+                - Dashboard design
+                search_terms:
+                - SDE audit logging
+                - Healthcare SIEM dashboard
+                why: Deep visibility is required for both performance and proving security compliance.
+            senior:
+              core_concepts:
+              - topic: Enterprise Observability
+                concepts:
+                - Distributed tracing
+                - Observability strategy
+                - Proactive threat hunting
+                search_terms:
+                - Enterprise observability strategy
+                - Proactive system monitoring
+                why: Architecting a comprehensive view of complex, multi-layered secure systems.
+    research-support-innovation:
+      name: Research Support & Innovation
+      competencies:
+        researcher-training-support:
+          name: Researcher Training & Support
+          levels:
+            entry:
+              core_concepts:
+              - topic: Basic Support
+                concepts:
+                - Password resets
+                - Basic navigation
+                - FAQ guidance
+                search_terms:
+                - IT support basics
+                - Researcher helpdesk
+                why: Addressing common, simple user issues.
+            mid:
+              core_concepts:
+              - topic: SDE Training Development
+                concepts:
+                - Curriculum design
+                - Safe software usage
+                - Data literacy
+                search_terms:
+                - TRE researcher training
+                - Health data science training
+                why: Creating materials that teach researchers how to operate safely in an SDE.
+            senior:
+              core_concepts:
+              - topic: Enablement Strategy
+                concepts:
+                - Community of practice
+                - Strategic engagement
+                - Innovative learning methods
+                search_terms:
+                - Researcher enablement strategy
+                - SDE community of practice
+                why: Building a holistic ecosystem that empowers researchers to be productive.
+        tre-tools-capabilities:
+          name: TRE Tools & Capabilities
+          levels:
+            entry:
+              core_concepts:
+              - topic: Tool Basics
+                concepts:
+                - R, Python, STATA
+                - Workspace provisioning
+                - Package installation
+                search_terms:
+                - Health data science tools
+                - TRE software provisioning
+                why: Setting up the basic environments researchers request.
+            mid:
+              core_concepts:
+              - topic: SDE Tooling Implementation
+                concepts:
+                - Secure containerization
+                - Vulnerability scanning of packages
+                - Tool evaluation
+                search_terms:
+                - Secure data science environments
+                - TRE tooling integration
+                why: Safely integrating new analytical tools into the restrictive SDE boundary.
+            senior:
+              core_concepts:
+              - topic: Capability Strategy
+                concepts:
+                - Platform engineering
+                - Tool lifecycle governance
+                - Advanced compute (GPUs)
+                search_terms:
+                - TRE platform strategy
+                - Advanced analytics infrastructure healthcare
+                why: Planning the future technological capabilities of the environment.
+        future-tre-innovation:
+          name: Future TRE Innovation
+          levels:
+            entry:
+              core_concepts:
+              - topic: Trend Tracking
+                concepts:
+                - Industry news
+                - Basic research
+                - Tech radar
+                search_terms:
+                - Future of TREs
+                - Health IT trends
+                why: Staying aware of how the landscape is changing.
+            mid:
+              core_concepts:
+              - topic: PoC Implementation
+                concepts:
+                - Federated learning concepts
+                - Synthetic data generation
+                - Privacy-enhancing technologies (PETs)
+                search_terms:
+                - Privacy enhancing technologies healthcare
+                - Synthetic data TRE
+                why: Testing new methods that can improve research without compromising security.
+            senior:
+              core_concepts:
+              - topic: Innovation Strategy
+                concepts:
+                - Strategic partnerships
+                - Horizon scanning
+                - Funding for innovation
+                search_terms:
+                - SDE innovation strategy
+                - Healthcare data partnerships
+                why: Directing the organization's efforts toward cutting-edge research enablement.
+        community-engagement-networking:
+          name: Community Engagement & Networking
+          levels:
+            entry:
+              core_concepts:
+              - topic: Community Participation
+                concepts:
+                - Attending forums
+                - Reading newsletters
+                - Basic networking
+                search_terms:
+                - UK TRE community
+                - Health data science networks
+                why: Learning from others in the field.
+            mid:
+              core_concepts:
+              - topic: Active Contribution
+                concepts:
+                - Presenting at conferences
+                - Open source contribution
+                - Working groups
+                search_terms:
+                - TRE working groups
+                - Health data open source
+                why: Sharing solutions and collaborating on common SDE challenges.
+            senior:
+              core_concepts:
+              - topic: Community Leadership
+                concepts:
+                - Strategic alliances
+                - Organizing national events
+                - Influencing policy
+                search_terms:
+                - National health data policy
+                - SDE strategic alliances
+                why: Shaping the future of the entire SDE ecosystem at a national/international level.

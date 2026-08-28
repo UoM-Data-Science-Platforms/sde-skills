@@ -1,0 +1,177 @@
+domain:
+  name: "Safe Access & Identity"
+  subdomains:
+    identity-management:
+      name: "Identity Management"
+      competencies:
+        authentication-systems:
+          name: "Authentication Systems"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Security+ (Exam)"
+                  career_impact: "Validates foundational knowledge of identity and access management principles essential for SDE entry roles."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) (Exam)"
+                  career_impact: "Provides baseline understanding of Entra ID, widely used in NHS SDE authentication."
+            mid:
+              qualifications:
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Identity and Access Administrator Associate (SC-300) (Exam)"
+                  career_impact: "Crucial for configuring Entra ID, MFA, and Conditional Access policies for researcher environments."
+                - issuer: "Okta"
+                  description: "Okta Certified Professional (Exam)"
+                  career_impact: "Relevant for TREs utilizing Okta for centralized authentication and SSO federation."
+            senior:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CISSP (Exam)"
+                  career_impact: "Essential for architects designing enterprise authentication strategy and Zero Trust architectures across national SDE networks."
+                - issuer: "Microsoft"
+                  description: "Microsoft Cybersecurity Architect Expert (SC-100) (Exam)"
+                  career_impact: "Required to design highly secure, compliant identity frameworks for sensitive health data."
+        user-provisioning-lifecycle:
+          name: "User Provisioning & Lifecycle"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA IT Fundamentals+ (Exam)"
+                  career_impact: "Basic understanding of user account lifecycles and IT operations."
+            mid:
+              qualifications:
+                - issuer: "SailPoint"
+                  description: "SailPoint Certified IdentityIQ Engineer (Exam)"
+                  career_impact: "Validates ability to automate complex researcher provisioning and de-provisioning workflows."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Administrator Associate (AZ-104) (Exam)"
+                  career_impact: "Covers robust user management and governance within Azure environments."
+            senior:
+              qualifications:
+                - issuer: "Identity Management Institute"
+                  description: "Certified Identity and Access Manager (CIAM) (Exam)"
+                  career_impact: "Advanced certification for leading identity governance and modernisation initiatives in healthcare."
+        federated-identity-management:
+          name: "Federated Identity Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Ping Identity"
+                  description: "Ping Identity Certified Professional (Exam)"
+                  career_impact: "Practical skills for configuring SAML/OIDC federation between university identity providers and the SDE."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Security - Specialty (Exam)"
+                  career_impact: "Includes advanced federation topics (Cognito, AWS SSO) for cross-organizational data sharing boundaries."
+                - issuer: "ISC2"
+                  description: "CISSP-ISSAP (Information Systems Security Architecture Professional) (Exam)"
+                  career_impact: "Deep architectural focus on complex identity federation across trust boundaries."
+    access-control:
+      name: "Access Control"
+      competencies:
+        role-based-access-control:
+          name: "Role-Based Access Control"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Cloud Practitioner (Exam)"
+                  career_impact: "Introduces basic AWS IAM and role concepts."
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified SysOps Administrator - Associate (Exam)"
+                  career_impact: "Hands-on implementation of IAM policies, roles, and boundaries for research environments."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)"
+                  career_impact: "Deep dive into Azure RBAC to secure sensitive healthcare datasets."
+            senior:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CISM (Certified Information Security Manager) (Exam)"
+                  career_impact: "Governing enterprise RBAC strategies and reducing access risk."
+        attribute-based-access-control:
+          name: "Attribute-Based Access Control"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "HashiCorp"
+                  description: "HashiCorp Certified: Vault Associate (Exam)"
+                  career_impact: "Relevant for implementing dynamic, attribute-driven secrets and access management."
+            senior:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CCSP (Certified Cloud Security Professional) (Exam)"
+                  career_impact: "Designing advanced policy models and dynamic access controls in multi-tenant cloud environments."
+        least-privilege-implementation:
+          name: "Least Privilege Implementation"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Information Security Fundamentals (GISF) (Exam)"
+                  career_impact: "Strong emphasis on the principle of least privilege from day one."
+            mid:
+              qualifications:
+                - issuer: "CyberArk"
+                  description: "CyberArk Defender & Sentry (Exam)"
+                  career_impact: "Implementing privileged access management (PAM) and just-in-time access for SDE administrators."
+            senior:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Defensible Security Architecture (GDSA) (Exam)"
+                  career_impact: "Architecting zero-trust networks that enforce least privilege by default."
+    secure-user-experience:
+      name: "Secure User Experience"
+      competencies:
+        researcher-onboarding:
+          name: "Researcher Onboarding"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Foundation (Exam)"
+                  career_impact: "Understanding standard service desk procedures for onboarding researchers smoothly."
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        secure-research-workspaces:
+          name: "Secure Research Workspaces"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Microsoft"
+                  description: "Microsoft 365 Certified: Endpoint Administrator Associate (Exam)"
+                  career_impact: "Managing secure VDI and endpoint compliance for accessing the SDE."
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Advanced Networking - Specialty (Exam)"
+                  career_impact: "Securing AWS Workspaces and AppStream environments for isolated data analysis."
+                - issuer: "Citrix"
+                  description: "Citrix Certified Professional - Virtualization (CCP-V) (Exam)"
+                  career_impact: "Deploying and managing secure virtual desktop infrastructure often used in healthcare TREs."
+            senior:
+              qualifications:
+                - issuer: "VMware"
+                  description: "VMware Certified Design Expert (VCDX) (Exam)"
+                  career_impact: "Designing enterprise-grade, highly secure virtualized workspace environments."
+        secure-collaboration-tools:
+          name: "Secure Collaboration Tools"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Microsoft"
+                  description: "Microsoft Teams Administrator Associate (Exam)"
+                  career_impact: "Configuring secure collaboration boundaries and data loss prevention for researchers."
+            senior:
+              qualifications: []

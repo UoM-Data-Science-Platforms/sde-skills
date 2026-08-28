@@ -2,8 +2,8 @@ metadata:
   version: '1.0'
   generated_from: domain yaml files
   total_domains: 6
-  total_subdomains: 21
-  total_competencies: 76
+  total_subdomains: 30
+  total_competencies: 90
   total_skills: 681
 skills:
   authentication-systems-entry-001:

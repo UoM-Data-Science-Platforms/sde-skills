@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Build script that merges tools/technologies/standards into main domain YAML files
+Build script that merges supplemental yamls (tools, qualifications, etc.) into main domain YAML files
 and dynamically compiles skills_index.yaml.
 
-Takes the separate tools-tech-standards YAML files and inlines them into the
-appropriate subdomain objects in the main domain YAML files, then outputs to
+Takes the separate supplemental YAML files and inlines them into the
+appropriate objects in the main domain YAML files, then outputs to
 astro-app/public/data/. It also compiles all skills into a unified skills_index.yaml
 serving the index page.
 
@@ -14,6 +14,7 @@ Usage:
 
 import os
 import yaml
+import copy
 from pathlib import Path
 
 
@@ -37,26 +38,17 @@ def save_yaml(filepath, data):
         )
 
 
-def merge_yaml_data(domain_yaml, merge_yaml):
-    """Merge tools/technologies/standards items into domain_yaml at subdomain level."""
-    merged = domain_yaml.copy()
-
-    # Access the domain object
-    if 'domain' in merged and 'subdomains' in merged['domain']:
-        domain_subdomains = merged['domain']['subdomains']
-
-        # Access merge_yaml structure
-        if 'subdomains' in merge_yaml:
-            merge_subdomains = merge_yaml['subdomains']
-
-            # For each subdomain in the main domain YAML
-            for subdomain_id, subdomain_data in domain_subdomains.items():
-                # Find matching subdomain in merge_yaml
-                if subdomain_id in merge_subdomains:
-                    merge_sub = merge_subdomains[subdomain_id]
-                    if 'items' in merge_sub:
-                        subdomain_data['items'] = merge_sub['items']
-
+def deep_merge(dict1, dict2):
+    """Recursively deep merge dict2 into dict1."""
+    if not isinstance(dict1, dict) or not isinstance(dict2, dict):
+        return dict2
+    
+    merged = copy.deepcopy(dict1)
+    for k, v in dict2.items():
+        if k in merged and isinstance(merged[k], dict) and isinstance(v, dict):
+            merged[k] = deep_merge(merged[k], v)
+        else:
+            merged[k] = copy.deepcopy(v)
     return merged
 
 
@@ -119,38 +111,42 @@ def main():
     local_yaml_dir = Path('yaml')
     output_dir = Path('astro-app/public/data')
 
-    # Domain mappings: main YAML filename -> tools-tech-standards YAML filename
-    domain_files = [
-        ('safe_access_identity.yaml', 'safe-access-identity_tools-tech-standards.yaml'),
-        ('safe_data_management.yaml', 'safe-data-management_tools-tech-standards.yaml'),
-        ('safe_governance_compliance.yaml', 'safe-governance-compliance_tools-tech-standards.yaml'),
-        ('safe_outputs_disclosure_control.yaml', 'safe-outputs-disclosure-control_tools-tech-standards.yaml'),
-        ('safe_projects_operations.yaml', 'safe-projects-operations_tools-tech-standards.yaml'),
-        ('safe_technology_engineering.yaml', 'safe-technology-engineering_tools-tech-standards.yaml'),
+    main_domain_files = [
+        'safe_access_identity.yaml',
+        'safe_data_management.yaml',
+        'safe_governance_compliance.yaml',
+        'safe_outputs_disclosure_control.yaml',
+        'safe_projects_operations.yaml',
+        'safe_technology_engineering.yaml',
     ]
 
     print(f"Loading YAML files from {local_yaml_dir}...")
     compiled_domains = []
 
-    for domain_file, tech_file in domain_files:
+    for domain_file in main_domain_files:
         domain_path = local_yaml_dir / domain_file
-        tech_path = local_yaml_dir / tech_file
 
         if not domain_path.exists():
             print(f"[SKIP] {domain_file}: file not found")
             continue
 
         print(f"\nProcessing {domain_file}...")
-        domain_data = load_yaml(domain_path)
-        merged_data = domain_data
+        merged_data = load_yaml(domain_path)
 
-        # Merge tools/tech/standards if available
-        if tech_path.exists():
-            tech_data = load_yaml(tech_path)
-            merged_data = merge_yaml_data(merged_data, tech_data)
-            print(f"  [OK] Merged tools/technologies/standards")
-        else:
-            print(f"  [SKIP] {tech_file} not found")
+        # Merge all supplemental files matching this domain (.yaml and .yml)
+        prefix = domain_file.replace('.yaml', '').replace('_', '-') + '_'
+        supp_files = list(local_yaml_dir.glob(f"{prefix}*.yaml")) + list(local_yaml_dir.glob(f"{prefix}*.yml"))
+        
+        for supp_path in supp_files:
+            print(f"  [MERGE] Found supplemental file: {supp_path.name}")
+            tech_data = load_yaml(supp_path)
+            
+            if 'subdomains' in tech_data and 'domain' in merged_data and 'subdomains' in merged_data['domain']:
+                if 'domain' not in tech_data or 'subdomains' not in tech_data.get('domain', {}):
+                    tech_data.setdefault('domain', {})
+                    tech_data['domain']['subdomains'] = tech_data.pop('subdomains')
+                    
+            merged_data = deep_merge(merged_data, tech_data)
 
         # Add to collection for skills_index.yaml compiling
         compiled_domains.append(merged_data)
@@ -158,7 +154,7 @@ def main():
         # Save domain to output directory
         output_path = output_dir / domain_file
         save_yaml(output_path, merged_data)
-        print(f"  [OK] Saved domain to {output_path}")
+        print(f"  [OK] Saved merged domain to {output_path}")
 
     # Compile and save skills_index.yaml
     if compiled_domains:

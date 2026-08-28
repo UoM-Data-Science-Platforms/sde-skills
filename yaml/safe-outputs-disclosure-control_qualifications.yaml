@@ -1,0 +1,60 @@
+domain:
+  name: "Safe Outputs & Disclosure Control"
+  subdomains:
+    output-checking:
+      name: "Output Checking"
+      competencies:
+        output-review-processes:
+          name: "Output Review Processes"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "ONS / UKSA"
+                  description: "Safe Researcher Training (SRT) (Course)"
+                  career_impact: "Fundamental requirement for understanding statistical disclosure control principles."
+            mid:
+              qualifications:
+                - issuer: "ONS"
+                  description: "Advanced Statistical Disclosure Control (SDC) Training (Course)"
+                  career_impact: "Deep understanding of preventing re-identification in complex datasets."
+            senior:
+              qualifications: []
+    tools-and-platforms-to-support-output-checking:
+      name: "Tools and Platforms to Support Output Checking"
+      competencies:
+        workflow-engines:
+          name: "Workflow Engines"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "ServiceNow"
+                  description: "ServiceNow Certified System Administrator (Exam)"
+                  career_impact: "Automating the approval and checking workflow processes."
+            senior:
+              qualifications: []
+        data-airlocks:
+          name: "Data Airlocks"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Security - Specialty (Exam)"
+                  career_impact: "Implementing secure network boundaries and automated data export controls."
+            senior:
+              qualifications: []
+        code-repositories:
+          name: "Code Repositories"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "GitLab"
+                  description: "GitLab Certified Associate (Exam)"
+                  career_impact: "Managing researcher code exports and version control safely."
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
