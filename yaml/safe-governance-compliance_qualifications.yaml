@@ -1,0 +1,225 @@
+domain:
+  name: "Safe Governance & Compliance"
+  subdomains:
+    regulatory-compliance:
+      name: "Regulatory Compliance"
+      competencies:
+        information-governance:
+          name: "Information Governance"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "NHS"
+                  description: "NHS Data Security Awareness Training (Course)"
+                  career_impact: "Mandatory foundation for anyone interacting with UK health data environments."
+            mid:
+              qualifications:
+                - issuer: "BCS"
+                  description: "BCS Foundation Certificate in Information Security Management Principles (CISMP) (Exam)"
+                  career_impact: "Strong UK-centric framework for managing information security and governance."
+            senior:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CGEIT (Certified in the Governance of Enterprise IT) (Exam)"
+                  career_impact: "Executive-level governance framework management for national platforms."
+        data-protection-compliance:
+          name: "Data Protection Compliance"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "IAPP Certified Information Privacy Professional/Europe (CIPP/E) (Exam)"
+                  career_impact: "Essential baseline understanding of UK GDPR and DPA 2018."
+            mid:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "IAPP Certified Information Privacy Manager (CIPM) (Exam)"
+                  career_impact: "Operationalizing privacy programs within the SDE."
+            senior:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "Fellow of Information Privacy (FIP) (Designation)"
+                  career_impact: "Recognized leader in data privacy strategy for highly sensitive domains."
+        healthcare-standards-compliance:
+          name: "Healthcare Standards Compliance"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "NHS"
+                  description: "NHS Digital DSPT (Data Security and Protection Toolkit) Administrator (Practical)"
+                  career_impact: "Directly applicable to ensuring the SDE meets mandatory NHS security requirements."
+            senior:
+              qualifications:
+                - issuer: "PECB / BSI"
+                  description: "ISO 27799:2016 Lead Implementer (Exam)"
+                  career_impact: "Specialized ISO standard for health informatics security management."
+        healthcare-data-security-frameworks:
+          name: "Healthcare Data Security Frameworks"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Various"
+                  description: "ISO/IEC 27001 Lead Implementer (Exam)"
+                  career_impact: "Implementing the core Information Security Management System (ISMS) required for almost all TREs."
+            senior:
+              qualifications:
+                - issuer: "Various"
+                  description: "ISO/IEC 27001 Lead Auditor (Exam)"
+                  career_impact: "Validating and auditing the enterprise-wide security framework compliance."
+        ethics-research-approval-systems:
+          name: "Ethics & Research Approval Systems"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "HRA"
+                  description: "IRB / REC Administration Certification (Course)"
+                  career_impact: "Understanding the Health Research Authority (HRA) approval workflows."
+            senior:
+              qualifications: []
+    security-management:
+      name: "Security Management"
+      competencies:
+        security-controls-implementation:
+          name: "Security Controls Implementation"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Security+ (Exam)"
+                  career_impact: "Implementing basic technical controls."
+            mid:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Security Essentials (GSEC) (Exam)"
+                  career_impact: "Hands-on implementation of comprehensive defense-in-depth controls."
+            senior:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CISSP (Exam)"
+                  career_impact: "Designing the enterprise-wide security control framework."
+        security-assessment-testing:
+          name: "Security Assessment & Testing"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA PenTest+ (Exam)"
+                  career_impact: "Fundamentals of vulnerability scanning and basic penetration testing."
+            mid:
+              qualifications:
+                - issuer: "OffSec"
+                  description: "OSCP (Offensive Security Certified Professional) (Practical Exam)"
+                  career_impact: "Rigorous, hands-on vulnerability assessment for critical SDE infrastructure."
+                - issuer: "CREST"
+                  description: "CREST Practitioner Security Analyst (CPSA) (Exam)"
+                  career_impact: "UK-recognized standard for infrastructure testing."
+            senior:
+              qualifications:
+                - issuer: "CREST"
+                  description: "CREST Certified Infrastructure Tester (CCT Inf) (Practical Exam)"
+                  career_impact: "Leading advanced red-team exercises against SDE perimeters."
+        incident-response-management:
+          name: "Incident Response Management"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA CySA+ (Cybersecurity Analyst) (Exam)"
+                  career_impact: "Triage and basic incident analysis."
+            mid:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Certified Incident Handler (GCIH) (Exam)"
+                  career_impact: "Managing the complete incident response lifecycle during a breach attempt."
+            senior:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CISM (Certified Information Security Manager) (Exam)"
+                  career_impact: "Governing the enterprise incident response strategy and external reporting (ICO, NHS England)."
+    ethics-research-governance:
+      name: "Ethics & Research Governance"
+      competencies:
+        research-ethics-compliance:
+          name: "Research Ethics Compliance"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "NIHR"
+                  description: "Good Clinical Practice (GCP) Certification (Course)"
+                  career_impact: "Mandatory standard for understanding ethics in clinical research."
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        consent-management:
+          name: "Consent Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "CIPP/E (Exam)"
+                  career_impact: "Navigating complex lawful bases for processing health data under GDPR."
+            senior:
+              qualifications: []
+        ethical-review-processes:
+          name: "Ethical Review Processes"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+    audit-compliance-monitoring:
+      name: "Audit & Compliance Monitoring"
+      competencies:
+        audit-trail-implementation:
+          name: "Audit Trail Implementation"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Splunk"
+                  description: "Splunk Core Certified Power User (Exam)"
+                  career_impact: "Building robust audit logging and monitoring dashboards."
+            senior:
+              qualifications: []
+        compliance-monitoring-reporting:
+          name: "Compliance Monitoring & Reporting"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CISA (Certified Information Systems Auditor) (Exam)"
+                  career_impact: "Standard for assessing and reporting on IT compliance."
+            senior:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CRISC (Certified in Risk and Information Systems Control) (Exam)"
+                  career_impact: "Enterprise risk monitoring and IT control framework reporting."
+        certification-accreditation:
+          name: "Certification & Accreditation"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Various"
+                  description: "ISO 27001 Internal Auditor (Exam)"
+                  career_impact: "Maintaining internal readiness for formal accreditations (DSPT, ISO27001)."
+            senior:
+              qualifications:
+                - issuer: "Various"
+                  description: "ISO 27001 Lead Auditor (Exam)"
+                  career_impact: "Leading the formal accreditation process with external bodies."

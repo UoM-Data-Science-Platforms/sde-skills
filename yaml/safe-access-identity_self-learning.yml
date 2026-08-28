@@ -1,0 +1,348 @@
+domain:
+  name: Safe Access & Identity
+  subdomains:
+    identity-management:
+      name: Identity Management
+      competencies:
+        authentication-systems:
+          name: Authentication Systems
+          levels:
+            entry:
+              core_concepts:
+              - topic: SDE Authentication Fundamentals
+                concepts:
+                - MFA
+                - Entra ID
+                - Kerberos
+                - OAuth 2.0 / OIDC
+                - SDE Security Matrix
+                search_terms:
+                - Azure Entra ID health data authentication
+                - MFA configuration NHS SDE
+                - OIDC for clinical apps
+                why: Understanding basic authentication is critical to preventing unauthorized access to health data.
+            mid:
+              core_concepts:
+              - topic: SDE Authentication Implementation & Troubleshooting
+                concepts:
+                - Authentication protocols integration
+                - SDE Security Matrix modification
+                - Incident troubleshooting
+                search_terms:
+                - Implementing MFA in NHS Secure Data Environment
+                - Troubleshooting Entra ID for healthcare
+                why: Mid-level engineers must deploy and maintain secure auth flows that comply with health data regulations.
+            senior:
+              core_concepts:
+              - topic: Enterprise Authentication Strategy
+                concepts:
+                - Auth technology evaluation
+                - Identity transformation
+                - Zero Trust in SDE
+                search_terms:
+                - Zero trust architecture health data SDE
+                - Enterprise authentication strategy NHS
+                why: Seniors architect authentication frameworks that protect millions of patient records against advanced
+                  threats.
+        user-provisioning-lifecycle:
+          name: User Provisioning & Lifecycle
+          levels:
+            entry:
+              core_concepts:
+              - topic: Account Lifecycle Management
+                concepts:
+                - Provisioning/Deprovisioning
+                - Account management procedures
+                - User provisioning spec
+                search_terms:
+                - JML process NHS SDE
+                - Account lifecycle management healthcare
+                why: Accurate provisioning ensures researchers only have access when approved and immediately lose access
+                  upon project completion.
+            mid:
+              core_concepts:
+              - topic: Automated Lifecycle & Compliance
+                concepts:
+                - Automated provisioning
+                - Compliance enforcement
+                - Troubleshooting queries
+                search_terms:
+                - Automating user provisioning Azure AD SDE
+                - RBAC compliance healthcare data
+                why: Automation reduces human error in granting access to sensitive health data.
+            senior:
+              core_concepts:
+              - topic: Identity Governance & Modernisation
+                concepts:
+                - Identity governance frameworks (IGA)
+                - Lifecycle governance
+                - Modernisation initiatives
+                search_terms:
+                - IGA framework implementation healthcare
+                - Identity governance NHS SDE
+                why: Robust governance is required to meet statutory requirements like the NHS DSPT (Data Security and Protection
+                  Toolkit).
+        federated-identity-management:
+          name: Federated Identity Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Federation Basics
+                concepts:
+                - SSO protocols
+                - SAML
+                - OAuth
+                - OIDC
+                search_terms:
+                - SAML vs OAuth healthcare apps
+                - SSO integration SDE
+                why: Understanding SSO is vital for federating identities across various NHS trusts and research bodies.
+            mid:
+              core_concepts:
+              - topic: Federation Implementation
+                concepts:
+                - Multi-IdP management
+                - SSO troubleshooting
+                - Cross-system integration
+                search_terms:
+                - Configuring SAML for multiple IdPs healthcare
+                - Troubleshooting OIDC federation NHS
+                why: Enables seamless but secure access for researchers collaborating across different institutions.
+            senior:
+              core_concepts:
+              - topic: Enterprise Federation Architecture
+                concepts:
+                - Complex federation architecture
+                - Federation governance
+                - Cross-organisational security frameworks
+                search_terms:
+                - Architecting national healthcare identity federation
+                - Cross-organisational IAM governance
+                why: Large-scale health data research requires secure, scalable federation across national and international
+                  boundaries.
+    access-control:
+      name: Access Control
+      competencies:
+        role-based-access-control:
+          name: Role-Based Access Control
+          levels:
+            entry:
+              core_concepts:
+              - topic: RBAC Fundamentals
+                concepts:
+                - Predefined roles
+                - Role permissions
+                - Basic assignments
+                search_terms:
+                - RBAC basics Azure NHS
+                - Role assignment Secure Data Environment
+                why: RBAC ensures researchers only see data relevant to their specific approved study.
+            mid:
+              core_concepts:
+              - topic: RBAC Implementation & Governance
+                concepts:
+                - Role structures
+                - Role reviews
+                - Governance processes
+                search_terms:
+                - Implementing RBAC for health data platforms
+                - Role governance SDE
+                why: Continuous review of roles prevents privilege creep in sensitive environments.
+            senior:
+              core_concepts:
+              - topic: Enterprise RBAC Strategy
+                concepts:
+                - Enterprise RBAC frameworks
+                - Role mining
+                - Access risk reduction
+                search_terms:
+                - Enterprise RBAC strategy healthcare
+                - Role mining for NHS data platforms
+                why: Strategic RBAC minimizes blast radius in the event of a breach and ensures regulatory compliance.
+        attribute-based-access-control:
+          name: Attribute-Based Access Control
+          levels:
+            entry:
+              core_concepts:
+              - topic: ABAC Basics
+                concepts:
+                - Dynamic access control
+                - Attribute types
+                - Simple policy implementation
+                search_terms:
+                - ABAC vs RBAC healthcare
+                - Implementing simple ABAC policies
+                why: ABAC allows granular access control based on context (e.g., location, time) which is critical for health
+                  data access.
+            mid:
+              core_concepts:
+              - topic: Complex ABAC Policies
+                concepts:
+                - Context-aware policies
+                - Policy enforcement
+                - Control evaluation
+                search_terms:
+                - Designing ABAC policies for Secure Data Environments
+                - Context-aware access healthcare
+                why: Mid-level implementation of ABAC secures data sets dynamically based on researcher accreditation status
+                  and project.
+            senior:
+              core_concepts:
+              - topic: Enterprise ABAC Architecture
+                concepts:
+                - Enterprise ABAC frameworks
+                - Advanced policy models
+                - Dynamic access management
+                search_terms:
+                - Enterprise ABAC architecture NHS
+                - Dynamic access control scale SDE
+                why: Senior architects use ABAC to solve complex, multi-jurisdictional health data sharing requirements.
+        least-privilege-implementation:
+          name: Least Privilege Implementation
+          levels:
+            entry:
+              core_concepts:
+              - topic: PoLP & PAM Basics
+                concepts:
+                - Principle of Least Privilege
+                - Privileged Access Management (PAM)
+                - Role-level security basics
+                search_terms:
+                - Least privilege healthcare data
+                - PAM basics Azure
+                why: Restricting access to only what is necessary is a fundamental tenet of protecting patient data.
+            mid:
+              core_concepts:
+              - topic: Privilege Management & Reviews
+                concepts:
+                - Privilege reviews
+                - Right-sizing
+                - Privilege attestation
+                search_terms:
+                - Privilege attestation SDE
+                - Right-sizing permissions health data
+                why: Regular attestation ensures permissions haven't expanded beyond approved research boundaries.
+            senior:
+              core_concepts:
+              - topic: Enterprise Privilege Strategy
+                concepts:
+                - Privilege discovery tools
+                - Privilege governance
+                - Role-level security audit
+                search_terms:
+                - Enterprise PAM strategy healthcare
+                - Privilege discovery NHS SDE
+                why: Strategic management of highly privileged accounts mitigates the highest risks to the SDE.
+    secure-user-experience:
+      name: Secure User Experience
+      competencies:
+        researcher-onboarding:
+          name: Researcher Onboarding
+          levels:
+            entry:
+              core_concepts:
+              - topic: Onboarding Verification
+                concepts:
+                - Identity verification
+                - Training certification check
+                - Onboarding procedures
+                search_terms:
+                - Researcher onboarding process SDE
+                - Identity verification healthcare researchers
+                why: Verifying researcher identity and IG training (e.g. ONS Safe Researcher) is the first line of defense.
+            mid:
+              core_concepts:
+              - topic: Onboarding Workflow Optimization
+                concepts:
+                - Workflow design
+                - Credential verification systems
+                - Process optimization
+                search_terms:
+                - Automating researcher onboarding NHS
+                - Credential verification systems SDE
+                why: Efficient workflows reduce delays for clinical trials while maintaining strict security checks.
+            senior:
+              core_concepts:
+              - topic: Cross-Organizational Onboarding Strategy
+                concepts:
+                - Enterprise researcher governance
+                - Cross-organisational strategies
+                - Experience enhancement
+                search_terms:
+                - Cross-organisational governance health research
+                - Enterprise researcher onboarding SDE
+                why: Seniors must balance stringent security requirements with a seamless experience for world-class researchers.
+        secure-research-workspaces:
+          name: Secure Research Workspaces
+          levels:
+            entry:
+              core_concepts:
+              - topic: Workspace Fundamentals
+                concepts:
+                - Workspace architecture
+                - Environment provisioning
+                - Workspace templates
+                search_terms:
+                - TRE architecture basics
+                - Secure research workspace provisioning
+                why: Understanding the boundaries of a Trusted Research Environment (TRE) is crucial for data containment.
+            mid:
+              core_concepts:
+              - topic: Workspace Management & Support
+                concepts:
+                - Workspace isolation
+                - Software installation
+                - Online services whitelisting
+                search_terms:
+                - Network isolation TRE
+                - Whitelisting services Secure Data Environment
+                why: Mid-level engineers ensure workspaces have the necessary data science tools without compromising egress
+                  security.
+            senior:
+              core_concepts:
+              - topic: Workspace Architecture & Modernization
+                concepts:
+                - Workspace strategy
+                - Technology evaluation
+                - Security enhancement
+                search_terms:
+                - TRE modernization NHS
+                - Secure workspace architecture health data
+                why: Senior engineers design the next generation of TREs that can handle massive genomic datasets securely.
+        secure-collaboration-tools:
+          name: Secure Collaboration Tools
+          levels:
+            entry:
+              core_concepts:
+              - topic: Collaboration Security Basics
+                concepts:
+                - Security settings configuration
+                - Sharing controls
+                - Cloud secret management (Azure Key Vault)
+                search_terms:
+                - Secure collaboration health data
+                - Azure Key Vault basics SDE
+                why: Basic sharing controls prevent accidental leakage of sensitive patient cohorts.
+            mid:
+              core_concepts:
+              - topic: Collaboration Platforms & Secrets
+                concepts:
+                - Data sharing controls
+                - Tool evaluation
+                - Secrets management
+                search_terms:
+                - Evaluating collaboration tools for NHS compliance
+                - Managing secrets in healthcare cloud
+                why: Proper integration ensures researchers can collaborate on code and results without exposing the underlying
+                  data.
+            senior:
+              core_concepts:
+              - topic: Enterprise Collaboration Strategy
+                concepts:
+                - Cross-environment collaboration
+                - Information sharing governance
+                - Task management leadership
+                search_terms:
+                - Cross-environment secure collaboration NHS
+                - Information sharing governance TRE
+                why: Seniors establish the policies and platforms that enable multi-center international health studies securely.

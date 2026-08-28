@@ -1,0 +1,156 @@
+domain:
+  name: "Safe Technology & Engineering"
+  subdomains:
+    infrastructure-cloud:
+      name: "Infrastructure & Cloud"
+      competencies:
+        cloud-architecture:
+          name: "Cloud Architecture"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "AWS / Microsoft"
+                  description: "AWS Certified Cloud Practitioner / Azure Fundamentals (Exam)"
+                  career_impact: "Baseline cloud knowledge."
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing robust, secure cloud environments for TREs."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Administrator Associate (Exam)"
+                  career_impact: "Managing Azure-based SDE infrastructure."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Professional (Exam)"
+                  career_impact: "Architecting complex, multi-account landing zones for sensitive data."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Solutions Architect Expert (Exam)"
+                  career_impact: "Enterprise architecture for national-scale Azure SDEs."
+                - issuer: "The Open Group"
+                  description: "TOGAF 9 Certification (Exam)"
+                  career_impact: "Standardizing enterprise architecture across federated platforms."
+        infrastructure-as-code-iac:
+          name: "Infrastructure as Code (IaC)"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "HashiCorp"
+                  description: "HashiCorp Certified: Terraform Associate (Exam)"
+                  career_impact: "De facto standard for provisioning secure, repeatable SDE infrastructure."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified DevOps Engineer - Professional (Exam)"
+                  career_impact: "Automating governance and compliance through code."
+        containerisation-orchestration:
+          name: "Containerisation & Orchestration"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Docker"
+                  description: "Docker Certified Associate (DCA) (Exam)"
+                  career_impact: "Foundational container knowledge for packaging research applications safely."
+            mid:
+              qualifications:
+                - issuer: "CNCF"
+                  description: "Certified Kubernetes Administrator (CKA) (Practical Exam)"
+                  career_impact: "Managing secure K8s clusters for running analytical workloads."
+            senior:
+              qualifications:
+                - issuer: "CNCF"
+                  description: "Certified Kubernetes Security Specialist (CKS) (Practical Exam)"
+                  career_impact: "Securing containerized health workloads against advanced threats."
+    networking-security:
+      name: "Networking & Security"
+      competencies:
+        network-design-segmentation:
+          name: "Network Design & Segmentation"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Network+ (Exam)"
+                  career_impact: "Basic networking concepts."
+            mid:
+              qualifications:
+                - issuer: "Cisco"
+                  description: "Cisco Certified Network Associate (CCNA) (Exam)"
+                  career_impact: "Core routing, switching, and VLAN segmentation."
+                - issuer: "AWS"
+                  description: "AWS Certified Advanced Networking - Specialty (Exam)"
+                  career_impact: "Designing complex VPCs, Transit Gateways, and secure hybrid connectivity."
+            senior:
+              qualifications:
+                - issuer: "Cisco"
+                  description: "Cisco Certified Network Professional (CCNP) Enterprise (Exam)"
+                  career_impact: "Enterprise network architecture for hospital/SDE connectivity."
+        firewall-perimeter-security:
+          name: "Firewall & Perimeter Security"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Palo Alto Networks"
+                  description: "Palo Alto Networks Certified Network Security Administrator (PCNSA) (Exam)"
+                  career_impact: "Managing Next-Gen Firewalls protecting SDE perimeters."
+            senior:
+              qualifications:
+                - issuer: "Palo Alto Networks"
+                  description: "Palo Alto Networks Certified Network Security Engineer (PCNSE) (Exam)"
+                  career_impact: "Advanced threat prevention and perimeter architecture."
+    software-engineering:
+      name: "Software Engineering"
+      competencies:
+        secure-software-development-life-cycle-ssdlc:
+          name: "Secure Software Development Life Cycle (SSDLC)"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CSSLP (Certified Secure Software Lifecycle Professional) (Exam)"
+                  career_impact: "Understanding secure coding practices from day one."
+            mid:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Secure Software Programmer (GSSP) (Exam)"
+                  career_impact: "Writing secure code for SDE portals and APIs."
+            senior:
+              qualifications:
+                - issuer: "EC-Council"
+                  description: "CASE (Certified Application Security Engineer) (Exam)"
+                  career_impact: "Leading secure application architecture and DevSecOps integration."
+        ci-cd-pipelines:
+          name: "CI/CD Pipelines"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "GitLab"
+                  description: "GitLab Certified CI/CD Specialist (Exam)"
+                  career_impact: "Building automated security testing (SAST/DAST) into deployment pipelines."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified DevOps Engineer - Professional (Exam)"
+                  career_impact: "Enterprise CI/CD strategy and automation."
+        api-development-integration:
+          name: "API Development & Integration"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Postman"
+                  description: "Postman API Professional (Exam)"
+                  career_impact: "Developing and testing secure APIs for interoperability."
+            senior:
+              qualifications:
+                - issuer: "MuleSoft"
+                  description: "MuleSoft Certified Platform Architect (Exam)"
+                  career_impact: "Architecting complex API networks and integration platforms (e.g., HL7 FHIR integration)."

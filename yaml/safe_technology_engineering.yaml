@@ -19,9 +19,6 @@ domain:
         common vulnerabilities, implementing comprehensive testing and quality assurance
         processes, and creating well-documented, reusable code that enhances maintainability
         while enabling knowledge sharing across development teams.'
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         software-development-lifecycle:
           id: software-development-lifecycle
@@ -42,15 +39,6 @@ domain:
               - Explains basic SDLC concepts and follows established development processes
               - Uses version control systems (e.g. Git) for code management and collaboration
               - Can implement simple bug fixes and feature enhancements under supervision
-              core_concepts:
-              - topic: SDE Version Control
-                concepts: Git fundamentals, branch management in regulated environments
-                search_terms:
-                - git workflows for health data
-                - reproducible analytical pipelines (RAP)
-                why: Ensures traceability of code changes accessing sensitive health
-                  data.
-              qualifications: []
             mid:
               id: software-development-lifecycle-mid
               name: Mid Level
@@ -59,14 +47,6 @@ domain:
                 context
               - Independently manages code repositories and review processes
               - Designs and implements features with security and scalability in mind
-              core_concepts:
-              - topic: Secure CI/CD
-                concepts: Automated testing, secure code review processes
-                search_terms:
-                - CI/CD for secure data environments
-                - github actions self-hosted runners
-                why: Prevents unauthorized code changes from entering the secure boundary.
-              qualifications: []
             senior:
               id: software-development-lifecycle-senior
               name: Senior Level
@@ -74,15 +54,6 @@ domain:
               - Establishes SDLC best practices and processes for the organisation
               - Leads architectural decisions and ensures secure coding standards
               - Mentors team members on software engineering excellence
-              core_concepts:
-              - topic: Organizational SDLC Governance
-                concepts: Auditability, change management, compliance with NHS DSPT
-                search_terms:
-                - NHS Data Security and Protection Toolkit SDLC
-                - auditable SDLC processes
-                why: Provides the highest level of assurance that analytical software
-                  meets national health data standards.
-              qualifications: []
         secure-coding-practices:
           id: secure-coding-practices
           name: Secure Coding Practices
@@ -102,14 +73,6 @@ domain:
                 OWASP Top 10)
               - Can apply basic input validation and error handling
               - Uses secure coding guidelines provided by the team
-              core_concepts:
-              - topic: Basic Vulnerability Awareness
-                concepts: OWASP Top 10, input validation
-                search_terms:
-                - OWASP Top 10 healthcare
-                - input validation Python
-                why: Prevents injection attacks that could exfiltrate patient data.
-              qualifications: []
             mid:
               id: secure-coding-practices-mid
               name: Mid Level
@@ -118,15 +81,6 @@ domain:
               - Implements secure authentication, authorisation, and data protection
                 mechanisms
               - Conducts code reviews with a focus on security aspects
-              core_concepts:
-              - topic: Data Protection in Code
-                concepts: Data pseudonymization, encryption in transit/rest in code
-                search_terms:
-                - pseudonymization techniques python
-                - secure data handling practices
-                why: Protects personally identifiable information (PII) at the application
-                  layer.
-              qualifications: []
             senior:
               id: secure-coding-practices-senior
               name: Senior Level
@@ -134,17 +88,6 @@ domain:
               - Develops security standards and coding guidelines for the organisation
               - Evaluates and selects appropriate security libraries and frameworks
               - Implements advanced security patterns for high-risk components
-              core_concepts:
-              - topic: Enterprise Security Standards
-                concepts: Zero-trust architecture in code, threat modeling
-                search_terms:
-                - threat modeling health applications
-                - zero trust application design
-                why: Ensures the entire application ecosystem is resilient to advanced
-                  threats.
-              qualifications:
-              - name: Certified Secure Software Lifecycle Professional (CSSLP)
-                issuer: ISC2
         testing-quality-assurance:
           id: testing-quality-assurance
           name: Testing & Quality Assurance
@@ -164,14 +107,6 @@ domain:
               - Uses automated testing frameworks and continuous integration (CI)
                 pipelines
               - Can execute test plans and document results
-              core_concepts:
-              - topic: Basic Unit Testing
-                concepts: Test-driven development basics, pytest
-                search_terms:
-                - pytest basics
-                - unit testing analytical code
-                why: Ensures basic functionality of scripts handling health data.
-              qualifications: []
             mid:
               id: testing-quality-assurance-mid
               name: Mid Level
@@ -180,15 +115,6 @@ domain:
                 security testing
               - Implements automated testing pipelines and monitors code coverage
               - Analyses test results to improve code quality
-              core_concepts:
-              - topic: Integration & Security Testing
-                concepts: DAST/SAST integration, mocking sensitive data
-                search_terms:
-                - SAST in healthcare pipelines
-                - mocking patient data for tests
-                why: Validates that systems interact securely without exposing real
-                  data.
-              qualifications: []
             senior:
               id: testing-quality-assurance-senior
               name: Senior Level
@@ -196,16 +122,6 @@ domain:
               - Establishes QA processes and standards across projects
               - Implements advanced testing methodologies for complex systems
               - Drives quality metrics and continuous improvement initiatives
-              core_concepts:
-              - topic: QA Strategy & Compliance
-                concepts: Quality metrics, ISO 13485 (Software as Medical Device)
-                  awareness
-                search_terms:
-                - ISO 13485 software validation
-                - QA metrics for SDEs
-                why: Establishes institutional trust in the software deployed within
-                  the SDE.
-              qualifications: []
         microservices-api-design:
           id: microservices-api-design
           name: Microservices & API Design
@@ -224,14 +140,6 @@ domain:
               - Explains microservices architecture principles and design patterns
               - Interprets API documentation and schemas (e.g. OpenAPI / Swagger)
               - Can develop and use RESTful APIs following established patterns
-              core_concepts:
-              - topic: API Fundamentals
-                concepts: RESTful concepts, API schemas
-                search_terms:
-                - OpenAPI specification
-                - REST API basics
-                why: Foundational knowledge for interacting with SDE services.
-              qualifications: []
             mid:
               id: microservices-api-design-mid
               name: Mid Level
@@ -239,14 +147,6 @@ domain:
               - Designs microservice architectures with appropriate boundaries
               - Implements secure API gateways and authorisation mechanisms
               - Develops API versioning standards and documentation standards
-              core_concepts:
-              - topic: Secure API Implementation
-                concepts: OAuth2, JWT, API Gateways
-                search_terms:
-                - OAuth2 for healthcare APIs
-                - securing REST APIs with JWT
-                why: Ensures only authorized researchers can query data endpoints.
-              qualifications: []
             senior:
               id: microservices-api-design-senior
               name: Senior Level
@@ -254,15 +154,6 @@ domain:
               - Architects API frameworks and governance models
               - Establishes microservices best practices and standards
               - Leads API security initiatives and evaluates API management solutions
-              core_concepts:
-              - topic: API Governance
-                concepts: Service mesh, rate limiting, audit logging
-                search_terms:
-                - API governance in healthcare
-                - service mesh security
-                why: Provides systemic control and auditability across all internal
-                  microservices.
-              qualifications: []
         code-documentation-reusability:
           id: code-documentation-reusability
           name: Code Documentation & Reusability
@@ -281,14 +172,6 @@ domain:
               - Explains the importance of code documentation and comments
               - Follows established documentation patterns for the codebase
               - Can write basic comments explaining code functionality
-              core_concepts:
-              - topic: Code Readability
-                concepts: Docstrings, basic Markdown
-                search_terms:
-                - Python docstrings standard
-                - writing good READMEs
-                why: Allows peers to understand analytical methods applied to data.
-              qualifications: []
             mid:
               id: code-documentation-reusability-mid
               name: Mid Level
@@ -296,15 +179,6 @@ domain:
               - Creates comprehensive documentation that explains both how and why
               - Designs code for reusability with appropriate abstraction
               - Implements self-documenting code principles and clear naming conventions
-              core_concepts:
-              - topic: Technical Documentation
-                concepts: Architecture Decision Records (ADRs), self-documenting code
-                search_terms:
-                - How to write ADRs
-                - self-documenting code principles
-                why: Maintains a history of security and architecture decisions in
-                  the SDE.
-              qualifications: []
             senior:
               id: code-documentation-reusability-senior
               name: Senior Level
@@ -312,14 +186,6 @@ domain:
               - Establishes documentation standards and best practices for the organisation
               - Develops methodologies for code reuse across projects and teams
               - Creates knowledge sharing policies and mentors others in documentation
-              core_concepts:
-              - topic: Knowledge Management Strategy
-                concepts: InnerSource, documentation frameworks (e.g., Diátaxis)
-                search_terms:
-                - Diátaxis documentation framework
-                - InnerSource in regulated environments
-                why: Promotes secure code reuse across different health research projects.
-              qualifications: []
         artefact-management:
           id: artefact-management
           name: Artefact Management
@@ -340,14 +206,6 @@ domain:
               - Can access and use artefact repositories following established procedures
               - Identifies vulnerability scanning tools and practices for container
                 images and dependencies
-              core_concepts:
-              - topic: Artefact Basics
-                concepts: Container registries, package managers
-                search_terms:
-                - Docker registry basics
-                - Python pip private registry
-                why: Enables retrieval of approved software packages.
-              qualifications: []
             mid:
               id: artefact-management-mid
               name: Mid Level
@@ -356,15 +214,6 @@ domain:
               - Controls access to artefacts and scans for malicious packages and
                 vulnerabilities
               - Manages helm chart repositories and software library distributions
-              core_concepts:
-              - topic: Secure Artefact Distribution
-                concepts: Vulnerability scanning (Trivy), signed images
-                search_terms:
-                - container vulnerability scanning
-                - signing docker images cosign
-                why: Prevents supply chain attacks from introducing malicious code
-                  into the SDE.
-              qualifications: []
             senior:
               id: artefact-management-senior
               name: Senior Level
@@ -372,15 +221,6 @@ domain:
               - Develops strategies for artefact management and governance
               - Establishes automated scanning and compliance processes for all artefacts
               - Leads initiatives to enhance artefact security and supply chain integrity
-              core_concepts:
-              - topic: Supply Chain Security
-                concepts: Software Bill of Materials (SBOM), SLSA framework
-                search_terms:
-                - SLSA framework healthcare
-                - SBOM generation and management
-                why: Ensures end-to-end cryptographic verification of all software
-                  entering the environment.
-              qualifications: []
     infrastructure-deployment:
       id: infrastructure-deployment
       name: Infrastructure & Deployment
@@ -393,9 +233,6 @@ domain:
         network architectures with proper segmentation and access controls that collectively
         provide the technical infrastructure needed for protected data processing
         and analysis.'
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         cloud-infrastructure-management:
           id: cloud-infrastructure-management
@@ -418,16 +255,6 @@ domain:
               - Can provision and configure basic cloud resources following established
                 patterns
               - Explains infrastructure as code (IaC) principles and workflows
-              core_concepts:
-              - topic: Cloud Fundamentals
-                concepts: Basic AWS/Azure/GCP resources, IAM basics
-                search_terms:
-                - Cloud IAM basics
-                - Azure fundamental concepts
-                why: Basic understanding of where health data resides.
-              qualifications:
-              - name: AWS Certified Cloud Practitioner
-                issuer: AWS
             mid:
               id: cloud-infrastructure-management-mid
               name: Mid Level
@@ -437,17 +264,6 @@ domain:
               - Proficient with infrastructure as code tools (Terraform, CloudFormation,
                 etc.)
               - Implements monitoring and scaling solutions for cloud resources
-              core_concepts:
-              - topic: Infrastructure as Code (IaC)
-                concepts: Terraform, declarative provisioning, state management
-                search_terms:
-                - Terraform state management best practices
-                - IaC for secure environments
-                why: Ensures environments are reproducible and configuration changes
-                  are audited.
-              qualifications:
-              - name: 'HashiCorp Certified: Terraform Associate'
-                issuer: HashiCorp
             senior:
               id: cloud-infrastructure-management-senior
               name: Senior Level
@@ -456,17 +272,6 @@ domain:
                 and security
               - Develops cloud governance frameworks and cost optimisation approaches
               - Leads cloud transformation initiatives and capacity planning
-              core_concepts:
-              - topic: Enterprise Cloud Architecture
-                concepts: Multi-account strategies, landing zones, FinOps
-                search_terms:
-                - AWS Landing Zone healthcare
-                - cloud governance frameworks
-                why: Provides isolated, scalable, and cost-effective tenant environments
-                  for different research projects.
-              qualifications:
-              - name: AWS Certified Solutions Architect - Professional
-                issuer: AWS
         containerisation-orchestration:
           id: containerisation-orchestration
           name: Containerisation & Orchestration
@@ -485,14 +290,6 @@ domain:
               - Builds container images with Docker and manages images in container
                 registries
               - Can deploy containerised applications following established patterns
-              core_concepts:
-              - topic: Containerization Fundamentals
-                concepts: Container isolation (namespaces/cgroups), images vs containers
-                search_terms:
-                - How container namespaces and cgroups work
-                - Docker basics
-                why: Crucial for securely isolating and scaling researcher workloads.
-              qualifications: []
             mid:
               id: containerisation-orchestration-mid
               name: Mid Level
@@ -500,17 +297,6 @@ domain:
               - Designs container-based architectures and multi-container applications
               - Implements container orchestration using Kubernetes or similar platforms
               - Creates and manages CI/CD pipelines for containerised applications
-              core_concepts:
-              - topic: Kubernetes Orchestration
-                concepts: Pods, deployments, RBAC in K8s
-                search_terms:
-                - Kubernetes RBAC best practices
-                - K8s network policies
-                why: Manages complex analytical workloads while enforcing network
-                  boundaries.
-              qualifications:
-              - name: Certified Kubernetes Administrator (CKA)
-                issuer: CNCF
             senior:
               id: containerisation-orchestration-senior
               name: Senior Level
@@ -519,17 +305,6 @@ domain:
               - Implements advanced Kubernetes features for security, scaling, and
                 resilience
               - Establishes container security scanning and compliance processes
-              core_concepts:
-              - topic: Advanced K8s Security
-                concepts: Pod Security Standards, OPA Gatekeeper
-                search_terms:
-                - OPA Gatekeeper Kubernetes
-                - Kubernetes cluster security hardening
-                why: Hardens the orchestration layer against container escape and
-                  lateral movement.
-              qualifications:
-              - name: Certified Kubernetes Security Specialist (CKS)
-                issuer: CNCF
         network-architecture:
           id: network-architecture
           name: Network Architecture
@@ -550,14 +325,6 @@ domain:
               - Explains network security controls, firewall rules, and security group
                 configurations
               - Can configure simple network settings following established guidelines
-              core_concepts:
-              - topic: Network Basics
-                concepts: IP addressing, subnets, basic firewalls
-                search_terms:
-                - CIDR notation basics
-                - Network security groups
-                why: Understanding how data travels within the environment.
-              qualifications: []
             mid:
               id: network-architecture-mid
               name: Mid Level
@@ -565,14 +332,6 @@ domain:
               - Designs secure network architectures with appropriate segmentation
               - Implements VPCs, network security groups, and access controls
               - Troubleshoots network-related issues and performance bottlenecks
-              core_concepts:
-              - topic: Secure Network Segmentation
-                concepts: VPCs, PrivateLink, egress controls
-                search_terms:
-                - AWS PrivateLink healthcare
-                - egress filtering for SDEs
-                why: Prevents unauthorized data exfiltration to the internet.
-              qualifications: []
             senior:
               id: network-architecture-senior
               name: Senior Level
@@ -580,17 +339,6 @@ domain:
               - Architects complex network solutions for multi-environment deployments
               - Develops network security policies and implements defense-in-depth
               - Leads network transformation initiatives and capacity planning
-              core_concepts:
-              - topic: Advanced Network Security
-                concepts: Zero Trust Network Access (ZTNA), IDS/IPS integration
-                search_terms:
-                - ZTNA implementation architecture
-                - network defense in depth
-                why: Protects the SDE boundary and intra-environment traffic against
-                  sophisticated threats.
-              qualifications:
-              - name: Cisco Certified Network Professional (CCNP) Security
-                issuer: Cisco
         encryption-key-management:
           id: encryption-key-management
           name: Encryption & Key Management
@@ -610,14 +358,6 @@ domain:
                 and in transit
               - Can apply encryption using standard tools and libraries
               - Follows procedures for handling encryption keys
-              core_concepts:
-              - topic: Encryption Fundamentals
-                concepts: Symmetric vs Asymmetric, TLS basics
-                search_terms:
-                - Data at rest vs transit
-                - TLS 1.3 basics
-                why: Core understanding of how sensitive data is kept confidential.
-              qualifications: []
             mid:
               id: encryption-key-management-mid
               name: Mid Level
@@ -625,15 +365,6 @@ domain:
               - Implements encryption for data at rest and in transit
               - Selects and configures secure encryption algorithms
               - Manages encryption keys using secure key management systems
-              core_concepts:
-              - topic: Applied Key Management
-                concepts: KMS, secret managers, key rotation
-                search_terms:
-                - AWS KMS key rotation
-                - managing secrets in CI/CD
-                why: Ensures cryptographic keys are not hardcoded and are managed
-                  securely.
-              qualifications: []
             senior:
               id: encryption-key-management-senior
               name: Senior Level
@@ -641,15 +372,6 @@ domain:
               - Develops enterprise encryption and key management frameworks
               - Establishes governance for key lifecycle and access controls
               - Leads initiatives to enhance encryption and key management practices
-              core_concepts:
-              - topic: Enterprise Cryptography
-                concepts: HSM (Hardware Security Modules), BYOK (Bring Your Own Key)
-                search_terms:
-                - HSM for healthcare data
-                - BYOK architectures in cloud
-                why: Meets the highest compliance requirements for patient data sovereignty
-                  and control.
-              qualifications: []
     system-architecture:
       id: system-architecture
       name: System Architecture
@@ -662,9 +384,6 @@ domain:
         under varying workloads, creating robust solutions that meet critical requirements,
         and adopting component-based software engineering (CBSE) practices that promote
         reusability and maintainability.'
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         secure-environment-design:
           id: secure-environment-design
@@ -685,14 +404,6 @@ domain:
               - Explains core principles of secure environment design
               - Applies defence-in-depth principles and least privilege access controls
               - Can document existing secure environments and their components
-              core_concepts:
-              - topic: Five Safes Framework
-                concepts: Safe settings, safe data, safe people
-                search_terms:
-                - Five Safes framework ONS
-                - TRE design principles
-                why: The foundational policy framework for UK Secure Data Environments.
-              qualifications: []
             mid:
               id: secure-environment-design-mid
               name: Mid Level
@@ -700,14 +411,6 @@ domain:
               - Designs secure environments incorporating appropriate controls
               - Implements security patterns such as zero trust architecture
               - Evaluates security implications of architectural decisions
-              core_concepts:
-              - topic: Trusted Research Environments
-                concepts: Air-gapping, VDI (Virtual Desktop Infrastructure) for research
-                search_terms:
-                - VDI for secure research
-                - NHS TRE architecture
-                why: Translates policy into technical boundary controls.
-              qualifications: []
             senior:
               id: secure-environment-design-senior
               name: Senior Level
@@ -715,16 +418,6 @@ domain:
               - Architects secure data environments
               - Develops architectural principles and standards for secure environments
               - Leads security architecture reviews and remediation efforts
-              core_concepts:
-              - topic: SATRE Specification
-                concepts: Standardised Architecture for Trusted Research Environments
-                search_terms:
-                - SATRE specification TRE
-                - architecting SDE for NHS DSPT
-                why: Drives national standardization and compliance across SDE implementations.
-              qualifications:
-              - name: Certified Information Systems Security Professional (CISSP)
-                issuer: ISC2
         scalability-performance:
           id: scalability-performance
           name: Scalability & Performance
@@ -745,14 +438,6 @@ domain:
               - Differentiates between horizontal and vertical scaling techniques
                 for distributed workloads
               - Can perform basic performance testing and identify bottlenecks
-              core_concepts:
-              - topic: Performance Basics
-                concepts: Resource monitoring, vertical vs horizontal scaling
-                search_terms:
-                - cloud resource monitoring basics
-                - horizontal vs vertical scaling
-                why: Helps researchers size their compute environments appropriately.
-              qualifications: []
             mid:
               id: scalability-performance-mid
               name: Mid Level
@@ -760,15 +445,6 @@ domain:
               - Designs scalable architectures for varying workloads
               - Implements caching techniques and performance optimisations
               - Conducts load testing and performance analysis
-              core_concepts:
-              - topic: Data Processing Scalability
-                concepts: Caching, distributed processing (Spark, Dask)
-                search_terms:
-                - optimizing PySpark performance
-                - Dask for healthcare data
-                why: Enables efficient processing of large genomic or longitudinal
-                  health datasets.
-              qualifications: []
             senior:
               id: scalability-performance-senior
               name: Senior Level
@@ -776,15 +452,6 @@ domain:
               - Architects high-performance systems for demanding workloads
               - Develops capacity planning and scaling methodologies
               - Leads performance optimisation initiatives across systems
-              core_concepts:
-              - topic: Enterprise Capacity Planning
-                concepts: Cost-performance optimization, highly available architectures
-                search_terms:
-                - capacity planning for cloud scale
-                - FinOps in research environments
-                why: Ensures the SDE can support institutional demands without cost
-                  overruns.
-              qualifications: []
         enterprise-solution-development:
           id: enterprise-solution-development
           name: Enterprise Solution Development
@@ -804,14 +471,6 @@ domain:
                 models
               - Can explain the trade-offs between different quality attributes (availability,
                 reliability, etc.)
-              core_concepts:
-              - topic: System Requirements
-                concepts: Availability, reliability, fault tolerance basics
-                search_terms:
-                - system reliability basics
-                - understanding SLA and SLO
-                why: Awareness that research platforms must be stable and accessible.
-              qualifications: []
             mid:
               id: enterprise-solution-development-mid
               name: Mid Level
@@ -819,14 +478,6 @@ domain:
               - Designs solutions that meet enterprise quality of service requirements
               - Implements patterns for reliability, resilience, and scalability
               - Makes informed recommendations regarding QoS priorities and trade-offs
-              core_concepts:
-              - topic: Resilient Design
-                concepts: Multi-AZ deployments, backup and recovery strategies
-                search_terms:
-                - disaster recovery in healthcare IT
-                - multi-AZ architecture AWS
-                why: Protects against data loss and minimizes downtime for researchers.
-              qualifications: []
             senior:
               id: enterprise-solution-development-senior
               name: Senior Level
@@ -836,16 +487,6 @@ domain:
               - Develops reference architectures for enterprise solutions
               - Leads initiatives to enhance the quality and reliability of enterprise
                 systems
-              core_concepts:
-              - topic: Enterprise Architecture
-                concepts: TOGAF concepts, aligning IT with research strategy
-                search_terms:
-                - enterprise architecture in healthcare
-                - TOGAF basics
-                why: Aligns the SDE technical roadmap with national health data strategies.
-              qualifications:
-              - name: TOGAF 9 Certification
-                issuer: The Open Group
         component-based-architecture:
           id: component-based-architecture
           name: Component-Based Architecture
@@ -864,14 +505,6 @@ domain:
               - Selects and integrates reusable components from established software
                 libraries
               - Can develop simple components following established patterns
-              core_concepts:
-              - topic: Modularity
-                concepts: DRY principle, code modularity
-                search_terms:
-                - DRY principle in coding
-                - benefits of modular architecture
-                why: Reduces duplication in analytical scripts.
-              qualifications: []
             mid:
               id: component-based-architecture-mid
               name: Mid Level
@@ -879,15 +512,6 @@ domain:
               - Designs modular, reusable components with well-defined interfaces
               - Implements component composition approaches for complex systems
               - Optimises components for maintainability and testability
-              core_concepts:
-              - topic: Reusable Infrastructure
-                concepts: Terraform modules, Helm charts
-                search_terms:
-                - writing reusable Terraform modules
-                - Helm chart best practices
-                why: Standardizes deployments of analytical workspaces (e.g., Jupyter,
-                  RStudio).
-              qualifications: []
             senior:
               id: component-based-architecture-senior
               name: Senior Level
@@ -895,14 +519,6 @@ domain:
               - Leads on enterprise component architecture design
               - Establishes component design standards and best practices
               - Leads initiatives to enhance component reuse and maintainability
-              core_concepts:
-              - topic: Platform Engineering
-                concepts: Internal Developer Platforms (IDP), golden paths
-                search_terms:
-                - Platform engineering for research
-                - golden paths in software engineering
-                why: Provides researchers with self-service, secure-by-default capabilities.
-              qualifications: []
         vulnerability-patch-management:
           id: vulnerability-patch-management
           name: Vulnerability & Patch Management
@@ -922,14 +538,6 @@ domain:
                 processes
               - Can use vulnerability scanning tools under supervision
               - Applies security updates following established procedures
-              core_concepts:
-              - topic: Patching Basics
-                concepts: CVEs, OS updates
-                search_terms:
-                - what is a CVE
-                - importance of OS patching
-                why: Understanding why environments undergo maintenance.
-              qualifications: []
             mid:
               id: vulnerability-patch-management-mid
               name: Mid Level
@@ -937,15 +545,6 @@ domain:
               - Implements vulnerability scanning and patch management processes
               - Triages and remediates vulnerabilities based on risk
               - Automates patch deployment and monitors compliance
-              core_concepts:
-              - topic: Automated Remediation
-                concepts: Vulnerability scanning tools (Nessus, Qualys), automated
-                  patching
-                search_terms:
-                - automated patching strategies cloud
-                - Nessus vulnerability scanning
-                why: Ensures the SDE infrastructure remains secure against known exploits.
-              qualifications: []
             senior:
               id: vulnerability-patch-management-senior
               name: Senior Level
@@ -953,14 +552,6 @@ domain:
               - Develops vulnerability management initiatives
               - Establishes automated patching frameworks and governance
               - Leads vulnerability and patch management maturity initiatives
-              core_concepts:
-              - topic: Risk & Compliance Governance
-                concepts: Risk acceptance frameworks, SLA for critical patches
-                search_terms:
-                - vulnerability management SLA
-                - risk acceptance in healthcare IT
-                why: Balances the need for absolute security with research continuity.
-              qualifications: []
         configuration-management:
           id: configuration-management
           name: Configuration Management
@@ -981,14 +572,6 @@ domain:
                 state
               - Can apply basic configuration changes using automation tools
               - Follows established configuration procedures
-              core_concepts:
-              - topic: Configuration Basics
-                concepts: Environment variables, config files
-                search_terms:
-                - managing environment variables securely
-                - 12 factor app config
-                why: Keeps secrets and settings out of source code.
-              qualifications: []
             mid:
               id: configuration-management-mid
               name: Mid Level
@@ -996,14 +579,6 @@ domain:
               - Implements configuration management tools and processes
               - Regularly verifies configuration compliance
               - Automates remediation of non-compliant configurations
-              core_concepts:
-              - topic: Configuration Drift Management
-                concepts: Ansible, Chef, desired state configuration
-                search_terms:
-                - managing configuration drift
-                - Ansible for server configuration
-                why: Maintains consistency and compliance across SDE virtual machines.
-              qualifications: []
             senior:
               id: configuration-management-senior
               name: Senior Level
@@ -1011,15 +586,6 @@ domain:
               - Develops configuration management frameworks and standards
               - Establishes processes for rapid replacement of non-compliant systems
               - Leads configuration management improvement initiatives
-              core_concepts:
-              - topic: Immutable Infrastructure
-                concepts: Packer, GitOps (ArgoCD, Flux)
-                search_terms:
-                - GitOps with ArgoCD
-                - immutable infrastructure benefits
-                why: Eliminates configuration drift and ensures high auditability
-                  of the SDE.
-              qualifications: []
         high-performance-computing:
           id: high-performance-computing
           name: High Performance Computing
@@ -1042,14 +608,6 @@ domain:
                 procedures
               - Submits batch compute jobs and specifies resource allocations in workload
                 schedulers (e.g. Slurm)
-              core_concepts:
-              - topic: HPC Basics
-                concepts: Slurm workload manager, batch processing
-                search_terms:
-                - Slurm job submission basics
-                - HPC batch processing
-                why: Enables researchers to run compute-intensive tasks.
-              qualifications: []
             mid:
               id: high-performance-computing-mid
               name: Mid Level
@@ -1057,14 +615,6 @@ domain:
               - Implements secure management of advanced compute resources and accelerators
               - Integrates with existing university HPC infrastructure and capacity
               - Ensures proper segregation of users and data in shared computing environments
-              core_concepts:
-              - topic: Specialized Workloads
-                concepts: GPU optimization, parallel filesystems (Lustre, GPFS)
-                search_terms:
-                - optimizing GPU workloads AI
-                - Lustre filesystem basics
-                why: Supports advanced machine learning models on health data.
-              qualifications: []
             senior:
               id: high-performance-computing-senior
               name: Senior Level
@@ -1074,12 +624,3 @@ domain:
               - Establishes governance for secure multi-tenant HPC resource usage
               - Leads initiatives to enhance computing capabilities and optimise resource
                 utilisation
-              core_concepts:
-              - topic: Secure Multi-tenant HPC
-                concepts: HPC network segregation, confidential computing (TEE)
-                search_terms:
-                - Trusted Execution Environments HPC
-                - securing multi-tenant HPC clusters
-                why: Ensures that extremely sensitive ML workloads remain isolated
-                  on shared hardware.
-              qualifications: []

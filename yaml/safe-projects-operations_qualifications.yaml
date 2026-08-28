@@ -1,0 +1,126 @@
+domain:
+  name: "Safe Projects & Operations"
+  subdomains:
+    service-management:
+      name: "Service Management"
+      competencies:
+        itil-service-management:
+          name: "ITIL & Service Management"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Foundation (Exam)"
+                  career_impact: "Universal standard for IT service management."
+            mid:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Managing Professional (Exam)"
+                  career_impact: "Managing high-availability services for researchers."
+            senior:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Strategic Leader (Exam)"
+                  career_impact: "Aligning SDE IT services with broader healthcare strategies."
+        incident-problem-management:
+          name: "Incident & Problem Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Kepner-Tregoe"
+                  description: "Kepner-Tregoe Foundation (Course)"
+                  career_impact: "Advanced problem-solving methodologies for complex SDE outages."
+            senior:
+              qualifications: []
+        change-release-management:
+          name: "Change & Release Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Specialist: High-velocity IT (Exam)"
+                  career_impact: "Managing rapid releases in a highly secure, regulated environment."
+            senior:
+              qualifications: []
+    project-delivery-management:
+      name: "Project & Delivery Management"
+      competencies:
+        agile-delivery-methods:
+          name: "Agile Delivery Methods"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Scrum Alliance"
+                  description: "Certified ScrumMaster (CSM) (Exam)"
+                  career_impact: "Standard framework for agile team delivery."
+            mid:
+              qualifications:
+                - issuer: "PMI"
+                  description: "PMI Agile Certified Practitioner (PMI-ACP) (Exam)"
+                  career_impact: "Advanced agile delivery in complex health data environments."
+            senior:
+              qualifications:
+                - issuer: "Scaled Agile"
+                  description: "SAFe 6 Agilist (Exam)"
+                  career_impact: "Scaling agile practices across national federated SDE programs."
+        risk-management:
+          name: "Risk Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "PMI"
+                  description: "PMI Risk Management Professional (PMI-RMP) (Exam)"
+                  career_impact: "Identifying and mitigating project delivery risks in sensitive environments."
+            senior:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "MoR (Management of Risk) Practitioner (Exam)"
+                  career_impact: "UK Government standard for enterprise risk management."
+        stakeholder-engagement:
+          name: "Stakeholder Engagement"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications:
+                - issuer: "APMG"
+                  description: "APMG Change Management Practitioner (Exam)"
+                  career_impact: "Managing complex stakeholder relationships (NHS, researchers, public)."
+    finops-resource-management:
+      name: "FinOps & Resource Management"
+      competencies:
+        cloud-cost-optimisation:
+          name: "Cloud Cost Optimisation"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "FinOps Foundation"
+                  description: "FinOps Certified Practitioner (Exam)"
+                  career_impact: "Industry standard for managing cloud spend in large-scale SDEs."
+            senior:
+              qualifications:
+                - issuer: "FinOps Foundation"
+                  description: "FinOps Certified Professional (Exam)"
+                  career_impact: "Leading FinOps strategies across multi-cloud national SDE infrastructure."
+        capacity-planning:
+          name: "Capacity Planning"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing scalable infrastructure to meet researcher compute demands."
+            senior:
+              qualifications: []

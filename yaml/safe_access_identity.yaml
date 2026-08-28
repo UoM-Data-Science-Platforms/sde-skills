@@ -18,9 +18,6 @@ domain:
         that only properly authenticated users can access sensitive research data
         while maintaining security, operational efficiency, and compliance with organisational
         policies.
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         authentication-systems:
           id: authentication-systems
@@ -42,23 +39,6 @@ domain:
                 (MFA)
               - Can configure user accounts in identity systems under supervision
               - Can understand existing SDE security Matrix.
-              core_concepts:
-              - topic: SDE Authentication Fundamentals
-                concepts:
-                - MFA
-                - Entra ID
-                - Kerberos
-                - OAuth 2.0 / OIDC
-                - SDE Security Matrix
-                search_terms:
-                - Azure Entra ID health data authentication
-                - MFA configuration NHS SDE
-                - OIDC for clinical apps
-                why: Understanding basic authentication is critical to preventing
-                  unauthorized access to health data.
-              qualifications:
-              - CompTIA Security+
-              - 'Microsoft Certified: Security, Compliance, and Identity Fundamentals'
             mid:
               id: authentication-systems-mid
               name: Mid Level
@@ -68,19 +48,6 @@ domain:
               - Implements MFA solutions appropriate to security requirements
               - Troubleshoots authentication issues and security incidents
               - Can modify existing SDE security matrix
-              core_concepts:
-              - topic: SDE Authentication Implementation & Troubleshooting
-                concepts:
-                - Authentication protocols integration
-                - SDE Security Matrix modification
-                - Incident troubleshooting
-                search_terms:
-                - Implementing MFA in NHS Secure Data Environment
-                - Troubleshooting Entra ID for healthcare
-                why: Mid-level engineers must deploy and maintain secure auth flows
-                  that comply with health data regulations.
-              qualifications:
-              - 'Microsoft Certified: Identity and Access Administrator Associate'
             senior:
               id: authentication-systems-senior
               name: Senior Level
@@ -90,20 +57,6 @@ domain:
                 needs
               - Leads identity system transformations and security enhancements
               - Lead and provide support for existing Security Matrix.
-              core_concepts:
-              - topic: Enterprise Authentication Strategy
-                concepts:
-                - Auth technology evaluation
-                - Identity transformation
-                - Zero Trust in SDE
-                search_terms:
-                - Zero trust architecture health data SDE
-                - Enterprise authentication strategy NHS
-                why: Seniors architect authentication frameworks that protect millions
-                  of patient records against advanced threats.
-              qualifications:
-              - CISSP
-              - Microsoft Cybersecurity Architect Expert
         user-provisioning-lifecycle:
           id: user-provisioning-lifecycle
           name: User Provisioning & Lifecycle
@@ -121,18 +74,6 @@ domain:
               - Follows standard user provisioning and deprovisioning procedures
               - Can execute account management tasks following established procedures
               - Understand existing user provisioning specification.
-              core_concepts:
-              - topic: Account Lifecycle Management
-                concepts:
-                - Provisioning/Deprovisioning
-                - Account management procedures
-                - User provisioning spec
-                search_terms:
-                - JML process NHS SDE
-                - Account lifecycle management healthcare
-                why: Accurate provisioning ensures researchers only have access when
-                  approved and immediately lose access upon project completion.
-              qualifications: []
             mid:
               id: user-provisioning-lifecycle-mid
               name: Mid Level
@@ -141,18 +82,6 @@ domain:
               - Develops automation for provisioning and deprovisioning
               - Ensures compliance with account management policies
               - Can modify/troubleshoot existing user provisioning specification queries
-              core_concepts:
-              - topic: Automated Lifecycle & Compliance
-                concepts:
-                - Automated provisioning
-                - Compliance enforcement
-                - Troubleshooting queries
-                search_terms:
-                - Automating user provisioning Azure AD SDE
-                - RBAC compliance healthcare data
-                why: Automation reduces human error in granting access to sensitive
-                  health data.
-              qualifications: []
             senior:
               id: user-provisioning-lifecycle-senior
               name: Senior Level
@@ -161,20 +90,6 @@ domain:
               - Implements advanced identity governance and administration solutions
               - Leads identity management modernisation initiatives
               - Can lead new user provisioning specification implementation and support
-              core_concepts:
-              - topic: Identity Governance & Modernisation
-                concepts:
-                - Identity governance frameworks (IGA)
-                - Lifecycle governance
-                - Modernisation initiatives
-                search_terms:
-                - IGA framework implementation healthcare
-                - Identity governance NHS SDE
-                why: Robust governance is required to meet statutory requirements
-                  like the NHS DSPT (Data Security and Protection Toolkit).
-              qualifications:
-              - CIAM
-              - CISSP
         federated-identity-management:
           id: federated-identity-management
           name: Federated Identity Management
@@ -192,19 +107,6 @@ domain:
               - Describes fundamental concepts of federated identity and single sign-on
               - Identifies standard SSO protocols including SAML, OAuth, and OIDC
               - Can configure simple federated identity integrations
-              core_concepts:
-              - topic: Federation Basics
-                concepts:
-                - SSO protocols
-                - SAML
-                - OAuth
-                - OIDC
-                search_terms:
-                - SAML vs OAuth healthcare apps
-                - SSO integration SDE
-                why: Understanding SSO is vital for federating identities across various
-                  NHS trusts and research bodies.
-              qualifications: []
             mid:
               id: federated-identity-management-mid
               name: Mid Level
@@ -212,18 +114,6 @@ domain:
               - Implements federated identity solutions across systems
               - Configures and manages federation with multiple identity providers
               - Troubleshoots federation issues and security concerns
-              core_concepts:
-              - topic: Federation Implementation
-                concepts:
-                - Multi-IdP management
-                - SSO troubleshooting
-                - Cross-system integration
-                search_terms:
-                - Configuring SAML for multiple IdPs healthcare
-                - Troubleshooting OIDC federation NHS
-                why: Enables seamless but secure access for researchers collaborating
-                  across different institutions.
-              qualifications: []
             senior:
               id: federated-identity-management-senior
               name: Senior Level
@@ -233,19 +123,6 @@ domain:
               - Develops federation governance and security frameworks
               - Leads initiatives to enhance identity federation capabilities across
                 healthcare organisations and research institutions
-              core_concepts:
-              - topic: Enterprise Federation Architecture
-                concepts:
-                - Complex federation architecture
-                - Federation governance
-                - Cross-organisational security frameworks
-                search_terms:
-                - Architecting national healthcare identity federation
-                - Cross-organisational IAM governance
-                why: Large-scale health data research requires secure, scalable federation
-                  across national and international boundaries.
-              qualifications:
-              - CISSP-ISSAP
     access-control:
       id: access-control
       name: Access Control
@@ -255,9 +132,6 @@ domain:
         as well as least privilege implementation, providing robust security frameworks
         that enforce authorisation policies while balancing operational requirements
         and minimising access risks across research environments.
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         role-based-access-control:
           id: role-based-access-control
@@ -277,18 +151,6 @@ domain:
               - Assigns predefined roles and manages role permissions under guidance
               - Can implement basic role assignments following established patterns
               - Can understand existing role definitions
-              core_concepts:
-              - topic: RBAC Fundamentals
-                concepts:
-                - Predefined roles
-                - Role permissions
-                - Basic assignments
-                search_terms:
-                - RBAC basics Azure NHS
-                - Role assignment Secure Data Environment
-                why: RBAC ensures researchers only see data relevant to their specific
-                  approved study.
-              qualifications: []
             mid:
               id: role-based-access-control-mid
               name: Mid Level
@@ -297,18 +159,6 @@ domain:
               - Implements role management and governance processes
               - Conducts role reviews and recommends improvements
               - Can modify/troubleshoot existing role definitions queries.
-              core_concepts:
-              - topic: RBAC Implementation & Governance
-                concepts:
-                - Role structures
-                - Role reviews
-                - Governance processes
-                search_terms:
-                - Implementing RBAC for health data platforms
-                - Role governance SDE
-                why: Continuous review of roles prevents privilege creep in sensitive
-                  environments.
-              qualifications: []
             senior:
               id: role-based-access-control-senior
               name: Senior Level
@@ -317,19 +167,6 @@ domain:
               - Implements advanced access governance and role mining
               - Leads initiatives to optimise role structures and reduce access risk
               - Can lead new role definitions implementation and support.
-              core_concepts:
-              - topic: Enterprise RBAC Strategy
-                concepts:
-                - Enterprise RBAC frameworks
-                - Role mining
-                - Access risk reduction
-                search_terms:
-                - Enterprise RBAC strategy healthcare
-                - Role mining for NHS data platforms
-                why: Strategic RBAC minimizes blast radius in the event of a breach
-                  and ensures regulatory compliance.
-              qualifications:
-              - CISM
         attribute-based-access-control:
           id: attribute-based-access-control
           name: Attribute-Based Access Control
@@ -347,18 +184,6 @@ domain:
               - Explains attribute-based access control (ABAC) concepts and use cases
               - Identifies attribute types and interprets access control policy definitions
               - Can implement simple attribute-based policies
-              core_concepts:
-              - topic: ABAC Basics
-                concepts:
-                - Dynamic access control
-                - Attribute types
-                - Simple policy implementation
-                search_terms:
-                - ABAC vs RBAC healthcare
-                - Implementing simple ABAC policies
-                why: ABAC allows granular access control based on context (e.g., location,
-                  time) which is critical for health data access.
-              qualifications: []
             mid:
               id: attribute-based-access-control-mid
               name: Mid Level
@@ -366,18 +191,6 @@ domain:
               - Designs complex ABAC policies for different contexts
               - Implements attribute management and policy enforcement
               - Evaluates effectiveness of attribute-based controls
-              core_concepts:
-              - topic: Complex ABAC Policies
-                concepts:
-                - Context-aware policies
-                - Policy enforcement
-                - Control evaluation
-                search_terms:
-                - Designing ABAC policies for Secure Data Environments
-                - Context-aware access healthcare
-                why: Mid-level implementation of ABAC secures data sets dynamically
-                  based on researcher accreditation status and project.
-              qualifications: []
             senior:
               id: attribute-based-access-control-senior
               name: Senior Level
@@ -385,18 +198,6 @@ domain:
               - Architects enterprise ABAC strategies and frameworks
               - Develops advanced policy models for complex authorisation scenarios
               - Leads initiatives to implement dynamic access control
-              core_concepts:
-              - topic: Enterprise ABAC Architecture
-                concepts:
-                - Enterprise ABAC frameworks
-                - Advanced policy models
-                - Dynamic access management
-                search_terms:
-                - Enterprise ABAC architecture NHS
-                - Dynamic access control scale SDE
-                why: Senior architects use ABAC to solve complex, multi-jurisdictional
-                  health data sharing requirements.
-              qualifications: []
         least-privilege-implementation:
           id: least-privilege-implementation
           name: Least Privilege Implementation
@@ -416,18 +217,6 @@ domain:
                 workflows
               - Can identify excessive permissions in simple scenarios
               - Understand existing role-level security
-              core_concepts:
-              - topic: PoLP & PAM Basics
-                concepts:
-                - Principle of Least Privilege
-                - Privileged Access Management (PAM)
-                - Role-level security basics
-                search_terms:
-                - Least privilege healthcare data
-                - PAM basics Azure
-                why: Restricting access to only what is necessary is a fundamental
-                  tenet of protecting patient data.
-              qualifications: []
             mid:
               id: least-privilege-implementation-mid
               name: Mid Level
@@ -436,18 +225,6 @@ domain:
               - Conducts privilege reviews and recommends right-sizing
               - Designs processes for regular privilege attestation
               - Support existing role-level security policy
-              core_concepts:
-              - topic: Privilege Management & Reviews
-                concepts:
-                - Privilege reviews
-                - Right-sizing
-                - Privilege attestation
-                search_terms:
-                - Privilege attestation SDE
-                - Right-sizing permissions health data
-                why: Regular attestation ensures permissions haven't expanded beyond
-                  approved research boundaries.
-              qualifications: []
             senior:
               id: least-privilege-implementation-senior
               name: Senior Level
@@ -456,18 +233,6 @@ domain:
               - Implements advanced tools for privilege discovery and management
               - Leads initiatives to mature privilege governance practices
               - Leads audit, implementation involving role-level security.
-              core_concepts:
-              - topic: Enterprise Privilege Strategy
-                concepts:
-                - Privilege discovery tools
-                - Privilege governance
-                - Role-level security audit
-                search_terms:
-                - Enterprise PAM strategy healthcare
-                - Privilege discovery NHS SDE
-                why: Strategic management of highly privileged accounts mitigates
-                  the highest risks to the SDE.
-              qualifications: []
     secure-user-experience:
       id: secure-user-experience
       name: Secure User Experience
@@ -477,9 +242,6 @@ domain:
         implementation, and secure collaboration platforms, enabling efficient work
         with sensitive healthcare data while ensuring appropriate controls that maintain
         compliance, data protection, and positive user experiences.
-      tools: []
-      technologies: []
-      standards: []
       competencies:
         researcher-onboarding:
           id: researcher-onboarding
@@ -498,18 +260,6 @@ domain:
                 processes
               - Verifies researcher training certificates and accreditation records
               - Can execute onboarding steps following established procedures
-              core_concepts:
-              - topic: Onboarding Verification
-                concepts:
-                - Identity verification
-                - Training certification check
-                - Onboarding procedures
-                search_terms:
-                - Researcher onboarding process SDE
-                - Identity verification healthcare researchers
-                why: Verifying researcher identity and IG training (e.g. ONS Safe
-                  Researcher) is the first line of defense.
-              qualifications: []
             mid:
               id: researcher-onboarding-mid
               name: Mid Level
@@ -517,18 +267,6 @@ domain:
               - Designs researcher onboarding workflows and documentation
               - Implements verification systems for researcher credentials
               - Optimises onboarding processes for efficiency and security
-              core_concepts:
-              - topic: Onboarding Workflow Optimization
-                concepts:
-                - Workflow design
-                - Credential verification systems
-                - Process optimization
-                search_terms:
-                - Automating researcher onboarding NHS
-                - Credential verification systems SDE
-                why: Efficient workflows reduce delays for clinical trials while maintaining
-                  strict security checks.
-              qualifications: []
             senior:
               id: researcher-onboarding-senior
               name: Senior Level
@@ -536,18 +274,6 @@ domain:
               - Establishes enterprise researcher governance frameworks
               - Develops cross-organisational onboarding strategies
               - Leads initiatives to enhance researcher experience and security
-              core_concepts:
-              - topic: Cross-Organizational Onboarding Strategy
-                concepts:
-                - Enterprise researcher governance
-                - Cross-organisational strategies
-                - Experience enhancement
-                search_terms:
-                - Cross-organisational governance health research
-                - Enterprise researcher onboarding SDE
-                why: Seniors must balance stringent security requirements with a seamless
-                  experience for world-class researchers.
-              qualifications: []
         secure-research-workspaces:
           id: secure-research-workspaces
           name: Secure Research Workspaces
@@ -566,18 +292,6 @@ domain:
               - Assists with workspace provisioning and environment teardown workflows
               - Can configure basic workspace settings following templates
               - Understand current Research workspace
-              core_concepts:
-              - topic: Workspace Fundamentals
-                concepts:
-                - Workspace architecture
-                - Environment provisioning
-                - Workspace templates
-                search_terms:
-                - TRE architecture basics
-                - Secure research workspace provisioning
-                why: Understanding the boundaries of a Trusted Research Environment
-                  (TRE) is crucial for data containment.
-              qualifications: []
             mid:
               id: secure-research-workspaces-mid
               name: Mid Level
@@ -588,18 +302,6 @@ domain:
               - Support existing current Research workspace including installing new
                 software and applications, configuring existing applications, online
                 services whitelisting
-              core_concepts:
-              - topic: Workspace Management & Support
-                concepts:
-                - Workspace isolation
-                - Software installation
-                - Online services whitelisting
-                search_terms:
-                - Network isolation TRE
-                - Whitelisting services Secure Data Environment
-                why: Mid-level engineers ensure workspaces have the necessary data
-                  science tools without compromising egress security.
-              qualifications: []
             senior:
               id: secure-research-workspaces-senior
               name: Senior Level
@@ -608,18 +310,6 @@ domain:
               - Evaluates and selects secure workspace technologies
               - Leads workspace modernisation and security enhancement initiatives
               - Leads and support new/existing Research workspace
-              core_concepts:
-              - topic: Workspace Architecture & Modernization
-                concepts:
-                - Workspace strategy
-                - Technology evaluation
-                - Security enhancement
-                search_terms:
-                - TRE modernization NHS
-                - Secure workspace architecture health data
-                why: Senior engineers design the next generation of TREs that can
-                  handle massive genomic datasets securely.
-              qualifications: []
         secure-collaboration-tools:
           id: secure-collaboration-tools
           name: Secure Collaboration Tools
@@ -642,18 +332,6 @@ domain:
                 and their purpose
               - Uses approved collaborative platforms in accordance with security
                 policies
-              core_concepts:
-              - topic: Collaboration Security Basics
-                concepts:
-                - Security settings configuration
-                - Sharing controls
-                - Cloud secret management (Azure Key Vault)
-                search_terms:
-                - Secure collaboration health data
-                - Azure Key Vault basics SDE
-                why: Basic sharing controls prevent accidental leakage of sensitive
-                  patient cohorts.
-              qualifications: []
             mid:
               id: secure-collaboration-tools-mid
               name: Mid Level
@@ -662,18 +340,6 @@ domain:
               - Designs security controls for data sharing and communication
               - Evaluates collaboration tools for security and compliance
               - Support/create/maintain secrets using cloud services.
-              core_concepts:
-              - topic: Collaboration Platforms & Secrets
-                concepts:
-                - Data sharing controls
-                - Tool evaluation
-                - Secrets management
-                search_terms:
-                - Evaluating collaboration tools for NHS compliance
-                - Managing secrets in healthcare cloud
-                why: Proper integration ensures researchers can collaborate on code
-                  and results without exposing the underlying data.
-              qualifications: []
             senior:
               id: secure-collaboration-tools-senior
               name: Senior Level
@@ -683,15 +349,3 @@ domain:
               - Leads initiatives to enhance collaboration capabilities while maintaining
                 security
               - Leads task/communication management on collaborative platforms.
-              core_concepts:
-              - topic: Enterprise Collaboration Strategy
-                concepts:
-                - Cross-environment collaboration
-                - Information sharing governance
-                - Task management leadership
-                search_terms:
-                - Cross-environment secure collaboration NHS
-                - Information sharing governance TRE
-                why: Seniors establish the policies and platforms that enable multi-center
-                  international health studies securely.
-              qualifications: []

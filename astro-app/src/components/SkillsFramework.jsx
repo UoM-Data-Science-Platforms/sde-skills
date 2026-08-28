@@ -22,93 +22,73 @@ function CollapsibleSection({ title, defaultOpen = false, children }) {
   );
 }
 
-function ConceptCard({ concept }) {
-  const [showDetail, setShowDetail] = React.useState(false);
-  return (
-    <div className="training-card">
-      <button
-        className="training-name"
-        onClick={() => setShowDetail(!showDetail)}
-      >
-        {concept.topic}
-      </button>
-      {showDetail && (
-        <div className="training-detail">
-          <div className="detail-field">
-            <strong>Core Concepts:</strong> {concept.concepts}
-          </div>
-          <div className="detail-field" style={{ marginTop: '8px' }}>
-            <strong>Search Terms:</strong> 
-            <ul style={{ margin: '4px 0', paddingLeft: '20px' }}>
-              {concept.search_terms?.map((term, i) => (
-                <li key={i} style={{ fontStyle: 'italic' }}>"{term}"</li>
-              ))}
-            </ul>
-          </div>
-          <div className="detail-field" style={{ marginTop: '8px' }}>
-            <strong>Why:</strong> {concept.why}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
 
-function QualificationCard({ qualification }) {
-  const [showDetail, setShowDetail] = React.useState(false);
-  return (
-    <div className="qualification-card">
-      <button
-        className="qualification-name"
-        onClick={() => setShowDetail(!showDetail)}
-      >
-        {qualification.name}
-      </button>
-      {showDetail && (
-        <div className="qualification-detail">
-          <div className="detail-field">
-            <strong>Issued by:</strong> {qualification.issuer}
-          </div>
-          <div className="detail-field">
-            {qualification.description}
-          </div>
-          <div className="detail-field">
-            <strong>Career Impact:</strong> {qualification.career_impact}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+
+
 function TechChip({ item }) {
   const [showPopup, setShowPopup] = React.useState(false);
+  const [isPinned, setIsPinned] = React.useState(false);
   const [coords, setCoords] = React.useState({ top: 0, left: 0 });
   const wrapperRef = React.useRef(null);
+  const popupRef = React.useRef(null);
+  const hideTimeoutRef = React.useRef(null);
   const { name, role, sources } = item || {};
-  
+
   if (!name) return null;
 
+  React.useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (isPinned) {
+        if (wrapperRef.current && wrapperRef.current.contains(e.target)) return;
+        if (popupRef.current && popupRef.current.contains(e.target)) return;
+        setIsPinned(false);
+        setShowPopup(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isPinned]);
+
   const handleMouseEnter = () => {
-    if (wrapperRef.current) {
-      const rect = wrapperRef.current.getBoundingClientRect();
-      setCoords({
-        top: rect.top - 8,
-        left: rect.left + rect.width / 2
-      });
+    if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
+    if (!showPopup) {
+      if (wrapperRef.current) {
+        const rect = wrapperRef.current.getBoundingClientRect();
+        setCoords({
+          top: rect.top - 8,
+          left: rect.left + rect.width / 2
+        });
+      }
+      setShowPopup(true);
     }
+  };
+
+  const handleMouseLeave = () => {
+    if (isPinned) return;
+    hideTimeoutRef.current = setTimeout(() => {
+      setShowPopup(false);
+    }, 200);
+  };
+
+  const handleClick = (e) => {
+    e.stopPropagation();
+    setIsPinned(true);
     setShowPopup(true);
   };
 
   const popupContent = showPopup && typeof document !== 'undefined' ? createPortal(
-    <div 
-      className="tech-hover-card" 
+    <div
+      ref={popupRef}
+      className="tech-hover-card"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         position: 'fixed',
         bottom: window.innerHeight - coords.top,
         left: coords.left,
         transform: 'translateX(-50%)',
         backgroundColor: '#ffffff',
-        border: '1px solid #e0e0e0',
+        border: isPinned ? '2px solid #005eb8' : '1px solid #e0e0e0',
         borderRadius: '8px',
         padding: '16px',
         width: 'max-content',
@@ -119,11 +99,11 @@ function TechChip({ item }) {
         lineHeight: 1.5,
         color: '#333',
         textAlign: 'left',
-        pointerEvents: 'none'
+        pointerEvents: 'auto'
       }}
     >
       <div style={{ fontWeight: 'bold', fontSize: '1.05rem', marginBottom: '6px', color: '#1a1a1a' }}>
-        {name}
+        {name} {isPinned && <span style={{ fontSize: '0.8rem', color: '#005eb8', float: 'right', fontWeight: 'normal' }}>📌</span>}
       </div>
       <div style={{ fontStyle: 'italic', marginBottom: '12px', color: '#555', paddingBottom: '8px', borderBottom: '1px solid #eee' }}>
         {role}
@@ -136,13 +116,13 @@ function TechChip({ item }) {
       {sources?.standards?.count > 0 && (
         <div style={{ marginBottom: '6px' }}>
           <strong>Industry Standards:</strong> {sources.standards.count}/7
-          <span style={{ color: '#666' }}> ({sources.standards.mentions.slice(0,3).join(', ')})</span>
+          <span style={{ color: '#666' }}> ({sources.standards.mentions.slice(0, 3).join(', ')})</span>
         </div>
       )}
       {sources?.projects?.count > 0 && (
         <div style={{ marginBottom: '6px' }}>
           <strong>DARE UK Projects:</strong> {sources.projects.count}/7
-          <span style={{ color: '#666' }}> ({sources.projects.mentions.slice(0,3).join(', ')})</span>
+          <span style={{ color: '#666' }}> ({sources.projects.mentions.slice(0, 3).join(', ')})</span>
         </div>
       )}
       {sources?.jobs?.total > 0 && (
@@ -162,12 +142,13 @@ function TechChip({ item }) {
   ) : null;
 
   return (
-    <div 
-      className="tech-chip-wrapper" 
+    <div
+      className="tech-chip-wrapper"
       ref={wrapperRef}
       style={{ display: 'inline-block' }}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={() => setShowPopup(false)}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <span className="badge tech-chip" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
         {name} {sources?.community && '⭐'}
@@ -515,14 +496,14 @@ export default function SkillsFramework() {
 
               {/* Tools, Technologies, and Standards at subdomain level */}
               {subVal.items?.length > 0 && (
-                  <div className="subdomain-tech-section glass--soft">
-                    <span className="tech-label">Tools, Technologies & Standards:</span>
-                    <div className="tech-chips" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '8px' }}>
-                      {subVal.items.map((item, idx) => (
-                        <TechChip key={idx} item={item} />
-                      ))}
-                    </div>
+                <div className="subdomain-tech-section glass--soft">
+                  <span className="tech-label">Tools, Technologies & Standards:</span>
+                  <div className="tech-chips" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '8px' }}>
+                    {subVal.items.map((item, idx) => (
+                      <TechChip key={idx} item={item} />
+                    ))}
                   </div>
+                </div>
               )}
 
               {competencies.map(([compKey, compVal], compIdx) => {
@@ -564,47 +545,60 @@ export default function SkillsFramework() {
                       ))}
                     </div>
 
-                    {/* Unified proficiency panel */}
                     {selectedLevel && selectedLevelData && (
-                      <div className="proficiency-panel" style={{ display: 'block', padding: '16px 0' }}>
-                        <div className="proficiency-list-plain" style={{ marginBottom: '24px' }}>
-                          <ul style={{ paddingLeft: '20px', margin: 0 }}>
-                            {selectedLevelData.skills?.map((skill, sIdx) => (
-                              <li key={sIdx} style={{ marginBottom: '8px' }}>
-                                {skill}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
-                          <div className="proficiency-detail" style={{ borderTop: '1px solid var(--border-color, #e5e7eb)', paddingTop: '20px' }}>
-                            <div style={{ marginBottom: '24px' }}>
-                              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '12px', color: 'var(--primary-color)' }}>Core Concepts & Self-Study</h4>
-                              {selectedLevelData?.core_concepts?.length > 0 ? (
-                                <div className="training-list">
-                                  {selectedLevelData.core_concepts.map((concept, idx) => (
-                                    <ConceptCard key={idx} concept={concept} />
-                                  ))}
-                                </div>
-                              ) : (
-                                <p className="text-muted">No concepts listed for this level.</p>
-                              )}
-                            </div>
-                            
-                            <div>
-                              <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '12px', color: 'var(--primary-color)' }}>Qualifications</h4>
-                              {selectedLevelData?.qualifications?.length > 0 ? (
-                                <div className="qualifications-list">
-                                  {selectedLevelData.qualifications.map((qual, idx) => (
-                                    <QualificationCard key={idx} qualification={qual} />
-                                  ))}
-                                </div>
-                              ) : (
-                                <p className="text-muted">No qualifications listed for this level.</p>
-                              )}
-                            </div>
+                      <div>
+                        <div className="proficiency-panel" style={{ display: 'block', padding: '16px 0' }}>
+                          <div className="proficiency-list-plain" style={{ marginBottom: '24px' }}>
+                            <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                              <li><h3>Key competencies</h3></li>
+                              {selectedLevelData.skills?.map((skill, sIdx) => (
+                                <li key={sIdx} style={{ marginBottom: '8px' }}>
+                                  {skill}
+                                </li>
+                              ))}
+                            </ul>
                           </div>
+                        </div>
+                        <div className="proficiency-panel" style={{ display: 'block', padding: '16px 0' }}>
+                          <div className="proficiency-list-plain" style={{ marginBottom: '24px' }}>
+                            {selectedLevelData?.core_concepts?.length > 0 ? (
+                              <ul key={refIdx++} style={{ paddingLeft: '20px', margin: 0 }}>
+                                <li><h3>Self-learning</h3></li>
+                                {selectedLevelData.core_concepts.map((concept, idx) => (
+                                  <ul key={idx}>
+                                    <li> {concept.why}</li>
+                                    <li><strong>Core Concepts:</strong> {concept.concepts.join(', ')}</li>
+                                    <ul>
+                                      <li><strong>Search terms for self-learning:</strong></li>
+                                      {concept.search_terms?.map((term, i) => (
+                                        <li key={i} style={{ fontStyle: 'italic' }}>"{term}"</li>
+                                      ))}
+                                    </ul>
+
+                                  </ul>
+                                ))}
+                              </ul>
+                            ) : (
+                              <li>No self-learning pathsways listed for this level.</li>
+                            )}
+                            {selectedLevelData?.qualifications?.length > 0 ? (
+                              <ul key={refIdx++} style={{ paddingLeft: '20px', margin: 0 }}>
+                                <li><h3>Qualifications</h3></li>
+                                {selectedLevelData.qualifications.map((qual, idx) => (
+                                  <ul key={idx}>
+                                    <li> {qual.description}</li>
+                                    <li><strong>Issued by:</strong> {qual.issuer}</li>
+                                    <li><strong>Career Impact:</strong> {qual.career_impact}</li>
+                                  </ul>
+                                ))}
+                              </ul>
+                            ) : (
+                              <li>No qualifications listed for this level.</li>
+                            )}
+                          </div>
+                        </div>
                       </div>
+
                     )}
                   </div>
                 );

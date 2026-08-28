@@ -1,0 +1,213 @@
+domain:
+  name: "Safe Data Management"
+  subdomains:
+    data-governance:
+      name: "Data Governance"
+      competencies:
+        data-integrity:
+          name: "Data Integrity"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Data+ (Exam)"
+                  career_impact: "Foundational understanding of data quality and integrity principles."
+            mid:
+              qualifications:
+                - issuer: "DAMA International"
+                  description: "CDMP (Certified Data Management Professional) - Associate (Exam)"
+                  career_impact: "Industry standard for data governance, including integrity and quality management."
+            senior:
+              qualifications:
+                - issuer: "ISACA"
+                  description: "CISA (Certified Information Systems Auditor) (Exam)"
+                  career_impact: "Auditing systems to ensure robust data integrity controls are in place for clinical data."
+        data-cataloguing-discovery:
+          name: "Data Cataloguing & Discovery"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Collibra"
+                  description: "Collibra Ranger Certification (Exam/Practical)"
+                  career_impact: "Specialized certification for implementing data catalogs commonly used in large health data initiatives."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Enterprise Data Analyst Associate (Exam)"
+                  career_impact: "Using Microsoft Purview for data discovery and cataloguing."
+            senior:
+              qualifications:
+                - issuer: "DAMA International"
+                  description: "CDMP (Certified Data Management Professional) - Master (Exam)"
+                  career_impact: "Leading enterprise data architecture and metadata management strategies."
+        data-classification-sensitivity:
+          name: "Data Classification & Sensitivity"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "IAPP Certified Information Privacy Technologist (CIPT) (Exam)"
+                  career_impact: "Understanding how to apply technology to classify and protect sensitive personal data."
+            mid:
+              qualifications:
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Information Protection Administrator Associate (SC-400) (Exam)"
+                  career_impact: "Implementing sensitivity labels and DLP policies for healthcare data."
+            senior:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CISSP (Exam)"
+                  career_impact: "Developing overarching data classification frameworks aligned with NHS DSPT."
+        data-lineage-provenance:
+          name: "Data Lineage & Provenance"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "dbt Labs"
+                  description: "dbt Certification (Exam)"
+                  career_impact: "Managing data transformations and establishing clear lineage in modern data stacks."
+            senior:
+              qualifications: []
+        data-quality-management:
+          name: "Data Quality Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "DAMA International"
+                  description: "CDMP Data Quality Specialist (Exam)"
+                  career_impact: "Focused expertise on establishing and monitoring data quality metrics."
+            senior:
+              qualifications:
+                - issuer: "ASQ"
+                  description: "Six Sigma Green/Black Belt (Project/Exam)"
+                  career_impact: "Process improvement methodologies to systematically enhance healthcare data quality at scale."
+    data-engineering-processing:
+      name: "Data Engineering & Processing"
+      competencies:
+        data-pipeline-development:
+          name: "Data Pipeline Development"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Data Fundamentals (DP-900) (Exam)"
+                  career_impact: "Basic concepts of data workloads and ETL pipelines."
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Data Engineer - Associate (Exam)"
+                  career_impact: "Building secure, scalable data ingestion and transformation pipelines using Glue and EMR."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Data Engineer Associate (DP-203) (Exam)"
+                  career_impact: "Implementing data solutions using Azure Synapse and Data Factory for TREs."
+            senior:
+              qualifications:
+                - issuer: "Databricks"
+                  description: "Databricks Certified Data Engineer Professional (Exam)"
+                  career_impact: "Advanced pipeline architecture, optimization, and security on Databricks platforms."
+        data-storage-database-management:
+          name: "Data Storage & Database Management"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Database - Specialty (Exam)"
+                  career_impact: "Foundational and advanced knowledge of purpose-built cloud databases."
+            mid:
+              qualifications:
+                - issuer: "Snowflake"
+                  description: "Snowflake SnowPro Core Certification (Exam)"
+                  career_impact: "Managing secure data warehousing solutions often adopted by regional SDEs."
+            senior:
+              qualifications:
+                - issuer: "Oracle"
+                  description: "Oracle Certified Master (Lab)"
+                  career_impact: "Expert-level administration for legacy/complex healthcare databases."
+        data-models-standardisation:
+          name: "Data Models & Standardisation"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "OHDSI"
+                  description: "OMOP CDM Certification / OHDSI Training (Course/Certificate)"
+                  career_impact: "Crucial for standardizing health data into the OMOP Common Data Model for observational research."
+                - issuer: "HL7"
+                  description: "HL7 FHIR Proficiency Certificate (Exam)"
+                  career_impact: "Standardizing health interoperability and data exchange."
+            senior:
+              qualifications:
+                - issuer: "DAMA International"
+                  description: "CDMP Data Modeling and Design Specialist (Exam)"
+                  career_impact: "Designing enterprise-wide conceptual and logical data models for unified health platforms."
+        event-driven-data-processing:
+          name: "Event-Driven Data Processing"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Confluent"
+                  description: "Confluent Certified Developer for Apache Kafka (Exam)"
+                  career_impact: "Building secure, real-time data streaming pipelines for live health alerts."
+            senior:
+              qualifications: []
+        encryption-standards-implementation:
+          name: "Encryption Standards & Implementation"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Security+ (Exam)"
+                  career_impact: "Basic understanding of PKI, encryption at rest, and in transit."
+            mid:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Certified Enterprise Defender (GCED) (Exam)"
+                  career_impact: "Implementing advanced encryption controls and key management systems."
+            senior:
+              qualifications:
+                - issuer: "Various"
+                  description: "Certified Cryptographic Specialist (Exam)"
+                  career_impact: "Designing advanced cryptographic controls, including confidential computing/enclaves for ultra-sensitive data."
+        data-backups:
+          name: "Data Backups"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Veeam"
+                  description: "Veeam Certified Engineer (VMCE) (Exam)"
+                  career_impact: "Implementing robust, immutable backup strategies to protect against ransomware."
+            senior:
+              qualifications: []
+        data-retention-disposal:
+          name: "Data Retention & Disposal"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "IAPP"
+                  description: "CIPP/E (Certified Information Privacy Professional/Europe) (Exam)"
+                  career_impact: "Understanding legal requirements (GDPR) for data retention and right to erasure."
+            senior:
+              qualifications: []
+        data-migration:
+          name: "Data Migration"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Planning and executing secure data migrations using AWS DataSync/Snowball."
+            senior:
+              qualifications: []

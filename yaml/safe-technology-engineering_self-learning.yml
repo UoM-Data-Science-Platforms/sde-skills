@@ -1,0 +1,471 @@
+domain:
+  name: Safe Technology & Engineering
+  subdomains:
+    software-engineering:
+      name: Software Engineering
+      competencies:
+        software-development-lifecycle:
+          name: Software Development Lifecycle
+          levels:
+            entry:
+              core_concepts:
+              - topic: SDE Version Control
+                concepts: Git fundamentals, branch management in regulated environments
+                search_terms:
+                - git workflows for health data
+                - reproducible analytical pipelines (RAP)
+                why: Ensures traceability of code changes accessing sensitive health data.
+            mid:
+              core_concepts:
+              - topic: Secure CI/CD
+                concepts: Automated testing, secure code review processes
+                search_terms:
+                - CI/CD for secure data environments
+                - github actions self-hosted runners
+                why: Prevents unauthorized code changes from entering the secure boundary.
+            senior:
+              core_concepts:
+              - topic: Organizational SDLC Governance
+                concepts: Auditability, change management, compliance with NHS DSPT
+                search_terms:
+                - NHS Data Security and Protection Toolkit SDLC
+                - auditable SDLC processes
+                why: Provides the highest level of assurance that analytical software meets national health data standards.
+        secure-coding-practices:
+          name: Secure Coding Practices
+          levels:
+            entry:
+              core_concepts:
+              - topic: Basic Vulnerability Awareness
+                concepts: OWASP Top 10, input validation
+                search_terms:
+                - OWASP Top 10 healthcare
+                - input validation Python
+                why: Prevents injection attacks that could exfiltrate patient data.
+            mid:
+              core_concepts:
+              - topic: Data Protection in Code
+                concepts: Data pseudonymization, encryption in transit/rest in code
+                search_terms:
+                - pseudonymization techniques python
+                - secure data handling practices
+                why: Protects personally identifiable information (PII) at the application layer.
+            senior:
+              core_concepts:
+              - topic: Enterprise Security Standards
+                concepts: Zero-trust architecture in code, threat modeling
+                search_terms:
+                - threat modeling health applications
+                - zero trust application design
+                why: Ensures the entire application ecosystem is resilient to advanced threats.
+        testing-quality-assurance:
+          name: Testing & Quality Assurance
+          levels:
+            entry:
+              core_concepts:
+              - topic: Basic Unit Testing
+                concepts: Test-driven development basics, pytest
+                search_terms:
+                - pytest basics
+                - unit testing analytical code
+                why: Ensures basic functionality of scripts handling health data.
+            mid:
+              core_concepts:
+              - topic: Integration & Security Testing
+                concepts: DAST/SAST integration, mocking sensitive data
+                search_terms:
+                - SAST in healthcare pipelines
+                - mocking patient data for tests
+                why: Validates that systems interact securely without exposing real data.
+            senior:
+              core_concepts:
+              - topic: QA Strategy & Compliance
+                concepts: Quality metrics, ISO 13485 (Software as Medical Device) awareness
+                search_terms:
+                - ISO 13485 software validation
+                - QA metrics for SDEs
+                why: Establishes institutional trust in the software deployed within the SDE.
+        microservices-api-design:
+          name: Microservices & API Design
+          levels:
+            entry:
+              core_concepts:
+              - topic: API Fundamentals
+                concepts: RESTful concepts, API schemas
+                search_terms:
+                - OpenAPI specification
+                - REST API basics
+                why: Foundational knowledge for interacting with SDE services.
+            mid:
+              core_concepts:
+              - topic: Secure API Implementation
+                concepts: OAuth2, JWT, API Gateways
+                search_terms:
+                - OAuth2 for healthcare APIs
+                - securing REST APIs with JWT
+                why: Ensures only authorized researchers can query data endpoints.
+            senior:
+              core_concepts:
+              - topic: API Governance
+                concepts: Service mesh, rate limiting, audit logging
+                search_terms:
+                - API governance in healthcare
+                - service mesh security
+                why: Provides systemic control and auditability across all internal microservices.
+        code-documentation-reusability:
+          name: Code Documentation & Reusability
+          levels:
+            entry:
+              core_concepts:
+              - topic: Code Readability
+                concepts: Docstrings, basic Markdown
+                search_terms:
+                - Python docstrings standard
+                - writing good READMEs
+                why: Allows peers to understand analytical methods applied to data.
+            mid:
+              core_concepts:
+              - topic: Technical Documentation
+                concepts: Architecture Decision Records (ADRs), self-documenting code
+                search_terms:
+                - How to write ADRs
+                - self-documenting code principles
+                why: Maintains a history of security and architecture decisions in the SDE.
+            senior:
+              core_concepts:
+              - topic: Knowledge Management Strategy
+                concepts: InnerSource, documentation frameworks (e.g., Diátaxis)
+                search_terms:
+                - Diátaxis documentation framework
+                - InnerSource in regulated environments
+                why: Promotes secure code reuse across different health research projects.
+        artefact-management:
+          name: Artefact Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Artefact Basics
+                concepts: Container registries, package managers
+                search_terms:
+                - Docker registry basics
+                - Python pip private registry
+                why: Enables retrieval of approved software packages.
+            mid:
+              core_concepts:
+              - topic: Secure Artefact Distribution
+                concepts: Vulnerability scanning (Trivy), signed images
+                search_terms:
+                - container vulnerability scanning
+                - signing docker images cosign
+                why: Prevents supply chain attacks from introducing malicious code into the SDE.
+            senior:
+              core_concepts:
+              - topic: Supply Chain Security
+                concepts: Software Bill of Materials (SBOM), SLSA framework
+                search_terms:
+                - SLSA framework healthcare
+                - SBOM generation and management
+                why: Ensures end-to-end cryptographic verification of all software entering the environment.
+    infrastructure-deployment:
+      name: Infrastructure & Deployment
+      competencies:
+        cloud-infrastructure-management:
+          name: Cloud Infrastructure Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Cloud Fundamentals
+                concepts: Basic AWS/Azure/GCP resources, IAM basics
+                search_terms:
+                - Cloud IAM basics
+                - Azure fundamental concepts
+                why: Basic understanding of where health data resides.
+            mid:
+              core_concepts:
+              - topic: Infrastructure as Code (IaC)
+                concepts: Terraform, declarative provisioning, state management
+                search_terms:
+                - Terraform state management best practices
+                - IaC for secure environments
+                why: Ensures environments are reproducible and configuration changes are audited.
+            senior:
+              core_concepts:
+              - topic: Enterprise Cloud Architecture
+                concepts: Multi-account strategies, landing zones, FinOps
+                search_terms:
+                - AWS Landing Zone healthcare
+                - cloud governance frameworks
+                why: Provides isolated, scalable, and cost-effective tenant environments for different research projects.
+        containerisation-orchestration:
+          name: Containerisation & Orchestration
+          levels:
+            entry:
+              core_concepts:
+              - topic: Containerization Fundamentals
+                concepts: Container isolation (namespaces/cgroups), images vs containers
+                search_terms:
+                - How container namespaces and cgroups work
+                - Docker basics
+                why: Crucial for securely isolating and scaling researcher workloads.
+            mid:
+              core_concepts:
+              - topic: Kubernetes Orchestration
+                concepts: Pods, deployments, RBAC in K8s
+                search_terms:
+                - Kubernetes RBAC best practices
+                - K8s network policies
+                why: Manages complex analytical workloads while enforcing network boundaries.
+            senior:
+              core_concepts:
+              - topic: Advanced K8s Security
+                concepts: Pod Security Standards, OPA Gatekeeper
+                search_terms:
+                - OPA Gatekeeper Kubernetes
+                - Kubernetes cluster security hardening
+                why: Hardens the orchestration layer against container escape and lateral movement.
+        network-architecture:
+          name: Network Architecture
+          levels:
+            entry:
+              core_concepts:
+              - topic: Network Basics
+                concepts: IP addressing, subnets, basic firewalls
+                search_terms:
+                - CIDR notation basics
+                - Network security groups
+                why: Understanding how data travels within the environment.
+            mid:
+              core_concepts:
+              - topic: Secure Network Segmentation
+                concepts: VPCs, PrivateLink, egress controls
+                search_terms:
+                - AWS PrivateLink healthcare
+                - egress filtering for SDEs
+                why: Prevents unauthorized data exfiltration to the internet.
+            senior:
+              core_concepts:
+              - topic: Advanced Network Security
+                concepts: Zero Trust Network Access (ZTNA), IDS/IPS integration
+                search_terms:
+                - ZTNA implementation architecture
+                - network defense in depth
+                why: Protects the SDE boundary and intra-environment traffic against sophisticated threats.
+        encryption-key-management:
+          name: Encryption & Key Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Encryption Fundamentals
+                concepts: Symmetric vs Asymmetric, TLS basics
+                search_terms:
+                - Data at rest vs transit
+                - TLS 1.3 basics
+                why: Core understanding of how sensitive data is kept confidential.
+            mid:
+              core_concepts:
+              - topic: Applied Key Management
+                concepts: KMS, secret managers, key rotation
+                search_terms:
+                - AWS KMS key rotation
+                - managing secrets in CI/CD
+                why: Ensures cryptographic keys are not hardcoded and are managed securely.
+            senior:
+              core_concepts:
+              - topic: Enterprise Cryptography
+                concepts: HSM (Hardware Security Modules), BYOK (Bring Your Own Key)
+                search_terms:
+                - HSM for healthcare data
+                - BYOK architectures in cloud
+                why: Meets the highest compliance requirements for patient data sovereignty and control.
+    system-architecture:
+      name: System Architecture
+      competencies:
+        secure-environment-design:
+          name: Secure Environment Design
+          levels:
+            entry:
+              core_concepts:
+              - topic: Five Safes Framework
+                concepts: Safe settings, safe data, safe people
+                search_terms:
+                - Five Safes framework ONS
+                - TRE design principles
+                why: The foundational policy framework for UK Secure Data Environments.
+            mid:
+              core_concepts:
+              - topic: Trusted Research Environments
+                concepts: Air-gapping, VDI (Virtual Desktop Infrastructure) for research
+                search_terms:
+                - VDI for secure research
+                - NHS TRE architecture
+                why: Translates policy into technical boundary controls.
+            senior:
+              core_concepts:
+              - topic: SATRE Specification
+                concepts: Standardised Architecture for Trusted Research Environments
+                search_terms:
+                - SATRE specification TRE
+                - architecting SDE for NHS DSPT
+                why: Drives national standardization and compliance across SDE implementations.
+        scalability-performance:
+          name: Scalability & Performance
+          levels:
+            entry:
+              core_concepts:
+              - topic: Performance Basics
+                concepts: Resource monitoring, vertical vs horizontal scaling
+                search_terms:
+                - cloud resource monitoring basics
+                - horizontal vs vertical scaling
+                why: Helps researchers size their compute environments appropriately.
+            mid:
+              core_concepts:
+              - topic: Data Processing Scalability
+                concepts: Caching, distributed processing (Spark, Dask)
+                search_terms:
+                - optimizing PySpark performance
+                - Dask for healthcare data
+                why: Enables efficient processing of large genomic or longitudinal health datasets.
+            senior:
+              core_concepts:
+              - topic: Enterprise Capacity Planning
+                concepts: Cost-performance optimization, highly available architectures
+                search_terms:
+                - capacity planning for cloud scale
+                - FinOps in research environments
+                why: Ensures the SDE can support institutional demands without cost overruns.
+        enterprise-solution-development:
+          name: Enterprise Solution Development
+          levels:
+            entry:
+              core_concepts:
+              - topic: System Requirements
+                concepts: Availability, reliability, fault tolerance basics
+                search_terms:
+                - system reliability basics
+                - understanding SLA and SLO
+                why: Awareness that research platforms must be stable and accessible.
+            mid:
+              core_concepts:
+              - topic: Resilient Design
+                concepts: Multi-AZ deployments, backup and recovery strategies
+                search_terms:
+                - disaster recovery in healthcare IT
+                - multi-AZ architecture AWS
+                why: Protects against data loss and minimizes downtime for researchers.
+            senior:
+              core_concepts:
+              - topic: Enterprise Architecture
+                concepts: TOGAF concepts, aligning IT with research strategy
+                search_terms:
+                - enterprise architecture in healthcare
+                - TOGAF basics
+                why: Aligns the SDE technical roadmap with national health data strategies.
+        component-based-architecture:
+          name: Component-Based Architecture
+          levels:
+            entry:
+              core_concepts:
+              - topic: Modularity
+                concepts: DRY principle, code modularity
+                search_terms:
+                - DRY principle in coding
+                - benefits of modular architecture
+                why: Reduces duplication in analytical scripts.
+            mid:
+              core_concepts:
+              - topic: Reusable Infrastructure
+                concepts: Terraform modules, Helm charts
+                search_terms:
+                - writing reusable Terraform modules
+                - Helm chart best practices
+                why: Standardizes deployments of analytical workspaces (e.g., Jupyter, RStudio).
+            senior:
+              core_concepts:
+              - topic: Platform Engineering
+                concepts: Internal Developer Platforms (IDP), golden paths
+                search_terms:
+                - Platform engineering for research
+                - golden paths in software engineering
+                why: Provides researchers with self-service, secure-by-default capabilities.
+        vulnerability-patch-management:
+          name: Vulnerability & Patch Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Patching Basics
+                concepts: CVEs, OS updates
+                search_terms:
+                - what is a CVE
+                - importance of OS patching
+                why: Understanding why environments undergo maintenance.
+            mid:
+              core_concepts:
+              - topic: Automated Remediation
+                concepts: Vulnerability scanning tools (Nessus, Qualys), automated patching
+                search_terms:
+                - automated patching strategies cloud
+                - Nessus vulnerability scanning
+                why: Ensures the SDE infrastructure remains secure against known exploits.
+            senior:
+              core_concepts:
+              - topic: Risk & Compliance Governance
+                concepts: Risk acceptance frameworks, SLA for critical patches
+                search_terms:
+                - vulnerability management SLA
+                - risk acceptance in healthcare IT
+                why: Balances the need for absolute security with research continuity.
+        configuration-management:
+          name: Configuration Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Configuration Basics
+                concepts: Environment variables, config files
+                search_terms:
+                - managing environment variables securely
+                - 12 factor app config
+                why: Keeps secrets and settings out of source code.
+            mid:
+              core_concepts:
+              - topic: Configuration Drift Management
+                concepts: Ansible, Chef, desired state configuration
+                search_terms:
+                - managing configuration drift
+                - Ansible for server configuration
+                why: Maintains consistency and compliance across SDE virtual machines.
+            senior:
+              core_concepts:
+              - topic: Immutable Infrastructure
+                concepts: Packer, GitOps (ArgoCD, Flux)
+                search_terms:
+                - GitOps with ArgoCD
+                - immutable infrastructure benefits
+                why: Eliminates configuration drift and ensures high auditability of the SDE.
+        high-performance-computing:
+          name: High Performance Computing
+          levels:
+            entry:
+              core_concepts:
+              - topic: HPC Basics
+                concepts: Slurm workload manager, batch processing
+                search_terms:
+                - Slurm job submission basics
+                - HPC batch processing
+                why: Enables researchers to run compute-intensive tasks.
+            mid:
+              core_concepts:
+              - topic: Specialized Workloads
+                concepts: GPU optimization, parallel filesystems (Lustre, GPFS)
+                search_terms:
+                - optimizing GPU workloads AI
+                - Lustre filesystem basics
+                why: Supports advanced machine learning models on health data.
+            senior:
+              core_concepts:
+              - topic: Secure Multi-tenant HPC
+                concepts: HPC network segregation, confidential computing (TEE)
+                search_terms:
+                - Trusted Execution Environments HPC
+                - securing multi-tenant HPC clusters
+                why: Ensures that extremely sensitive ML workloads remain isolated on shared hardware.

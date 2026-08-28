@@ -1,0 +1,507 @@
+domain:
+  name: Safe Data Management
+  subdomains:
+    data-governance:
+      name: Data Governance
+      competencies:
+        data-integrity:
+          name: Data Integrity
+          levels:
+            entry:
+              core_concepts:
+              - topic: Hash Functions in Health Data
+                concepts:
+                - SHA-256
+                - Checksum validation
+                - Data immutability
+                search_terms:
+                - health data checksum validation
+                - SHA-256 for EHR integrity
+                why: Ensures that medical records and genomic datasets are not altered during extraction and staging.
+            mid:
+              core_concepts:
+              - topic: Automated Integrity Pipelines
+                concepts:
+                - Pipeline validation
+                - Continuous monitoring
+                - Automated anomaly detection
+                search_terms:
+                - automated data integrity validation healthcare
+                - data pipeline anomaly detection SDE
+                why: SDEs require automated checksum and schema checks to handle the large volume of clinical and research
+                  data securely.
+            senior:
+              core_concepts:
+              - topic: Enterprise Health Data Integrity Strategy
+                concepts:
+                - Zero Trust Data Architecture
+                - Enterprise incident response
+                - Immutable auditing
+                search_terms:
+                - zero trust health data architecture
+                - immutable storage for EHR SDE
+                why: Senior leaders must define policies that ensure cryptographic integrity of patient cohorts across national
+                  Secure Data Environments.
+        data-cataloguing-discovery:
+          name: Data Cataloguing & Discovery
+          levels:
+            entry:
+              core_concepts:
+              - topic: Metadata Basics for Health Data
+                concepts:
+                - Metadata schemas
+                - Data dictionaries
+                - FAIR principles overview
+                search_terms:
+                - health data dictionaries
+                - FAIR principles clinical data
+                why: Understanding basic metadata is essential for finding variables like ICD-10 codes or demographics in
+                  SDE catalogues.
+            mid:
+              core_concepts:
+              - topic: Health Data Catalogue Implementation
+                concepts:
+                - Data catalogue platforms (e.g., Collibra, Alation)
+                - Automated metadata extraction
+                - Semantic interoperability
+                search_terms:
+                - healthcare data catalog implementation
+                - clinical metadata management SDE
+                why: Mid-level practitioners build out the platforms that researchers use to discover specific disease cohorts
+                  in the SDE.
+            senior:
+              core_concepts:
+              - topic: Enterprise FAIR Strategy
+                concepts:
+                - Federated cataloguing
+                - Enterprise ontology governance
+                - Cross-SDE interoperability
+                search_terms:
+                - federated health data discovery
+                - national SDE ontology governance
+                why: Architecting enterprise discovery solutions enables cross-institutional medical research while respecting
+                  local governance.
+        data-classification-sensitivity:
+          name: Data Classification & Sensitivity
+          levels:
+            entry:
+              core_concepts:
+              - topic: Identifying Sensitive Health Data
+                concepts:
+                - PII
+                - PHI
+                - De-identification basics
+                - Data classification labels
+                search_terms:
+                - PHI vs PII healthcare
+                - health data classification basics
+                why: Entry-level staff must accurately apply tags to distinguish between direct identifiers and pseudonymised
+                  clinical data.
+            mid:
+              core_concepts:
+              - topic: Classification Schemes & Handling
+                concepts:
+                - Automated data discovery
+                - Sensitivity tagging
+                - Handling procedures by tier
+                search_terms:
+                - automated PHI discovery tools
+                - tier-based health data handling
+                why: Mid-level engineers configure tools to scan data lakes for unclassified sensitive data, ensuring SDE
+                  compliance.
+            senior:
+              core_concepts:
+              - topic: Organizational Sensitivity Frameworks
+                concepts:
+                - Information Governance (IG) frameworks
+                - Risk assessment
+                - Data Protection Impact Assessments (DPIA)
+                search_terms:
+                - health data information governance framework
+                - DPIA for secure data environments
+                why: Senior leaders develop the overarching classification rules and risk frameworks that dictate how SDEs
+                  segregate and protect genomic vs. episodic data.
+        data-lineage-provenance:
+          name: Data Lineage & Provenance
+          levels:
+            entry:
+              core_concepts:
+              - topic: Understanding Data Origins
+                concepts:
+                - Source documentation
+                - Basic transformation tracking
+                - Data flow mapping
+                search_terms:
+                - data provenance basics healthcare
+                - mapping clinical data flows
+                why: Researchers must know if the data came from a GP practice or a hospital to understand its clinical context.
+            mid:
+              core_concepts:
+              - topic: Lineage Tooling Integration
+                concepts:
+                - Data lineage tools (e.g., Apache Atlas, dbt)
+                - ETL provenance tracking
+                - Impact analysis
+                search_terms:
+                - dbt lineage healthcare data
+                - Apache Atlas for clinical data provenance
+                why: Implementing automated lineage tracking helps debug pipeline errors affecting cohort generation in the
+                  SDE.
+            senior:
+              core_concepts:
+              - topic: Cross-System Provenance Governance
+                concepts:
+                - Enterprise lineage architecture
+                - Regulatory traceability
+                - End-to-end data lifecycle visibility
+                search_terms:
+                - end-to-end lineage secure data environments
+                - regulatory traceability health data
+                why: Regulators require absolute proof of how patient data is derived, altered, and anonymized before being
+                  shared with researchers.
+        data-quality-management:
+          name: Data Quality Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Clinical Data Quality Checks
+                concepts:
+                - Data completeness
+                - Formatting validation
+                - Outlier detection basics
+                search_terms:
+                - clinical data quality dimensions
+                - basic EHR data validation
+                why: Executing basic checks ensures missing values (e.g., missing BMI) don't silently corrupt downstream research.
+            mid:
+              core_concepts:
+              - topic: Automated Quality Pipelines
+                concepts:
+                - Data quality frameworks (e.g., Great Expectations)
+                - Quality metrics monitoring
+                - Data profiling
+                search_terms:
+                - Great Expectations healthcare data
+                - automated data profiling SDE
+                why: Automated rules ensure that incoming datasets meet stringent SDE requirements before being exposed to
+                  analysts.
+            senior:
+              core_concepts:
+              - topic: Enterprise Quality Strategy
+                concepts:
+                - Data quality governance
+                - Advanced remediation approaches
+                - Continuous quality improvement (CQI)
+                search_terms:
+                - enterprise health data quality strategy
+                - CQI for clinical data warehouses
+                why: Senior leaders establish policies enforcing minimum quality thresholds for data ingestion into national
+                  health data lakes.
+    data-engineering-processing:
+      name: Data Engineering & Processing
+      competencies:
+        data-pipeline-development:
+          name: Data Pipeline Development
+          levels:
+            entry:
+              core_concepts:
+              - topic: Basic ETL/ELT for Health Data
+                concepts:
+                - ETL vs ELT
+                - Data extraction methods
+                - Simple transformations
+                search_terms:
+                - healthcare ETL basics
+                - simple data pipeline for EHR
+                why: Understanding basic extraction allows entry-level staff to move simple flat files into SDE staging areas.
+            mid:
+              core_concepts:
+              - topic: Secure Pipeline Orchestration
+                concepts:
+                - Apache Airflow / Dagster
+                - Secure data transformation
+                - Pipeline monitoring and alerting
+                search_terms:
+                - secure Apache Airflow healthcare
+                - orchestrating clinical data pipelines SDE
+                why: Mid-level engineers build the robust, fault-tolerant pipelines that securely pseudonymise and load vast
+                  amounts of patient data.
+            senior:
+              core_concepts:
+              - topic: Enterprise Scale Data Architectures
+                concepts:
+                - Data Mesh / Data Fabric in healthcare
+                - Pipeline modernization
+                - Zero-trust ETL architecture
+                search_terms:
+                - healthcare data mesh architecture
+                - zero-trust data pipeline SDE
+                why: Architects design highly scalable, secure processing architectures that handle complex multimodal health
+                  data (imaging, genomics, EHR).
+        data-storage-database-management:
+          name: Data Storage & Database Management
+          levels:
+            entry:
+              core_concepts:
+              - topic: Health Database Fundamentals
+                concepts:
+                - Relational vs NoSQL
+                - Basic SQL queries
+                - Data retrieval
+                search_terms:
+                - SQL for healthcare data
+                - relational databases for clinical research
+                why: Essential for querying patient cohorts and managing standard relational clinical data stores.
+            mid:
+              core_concepts:
+              - topic: Secure Schema Design & Optimization
+                concepts:
+                - Database security controls
+                - Performance tuning
+                - Row-level/Column-level security
+                search_terms:
+                - row-level security healthcare database
+                - optimizing SQL for large EHR datasets
+                why: Mid-level administrators implement fine-grained access controls ensuring researchers only see data they
+                  are approved for.
+            senior:
+              core_concepts:
+              - topic: Enterprise Health Storage Solutions
+                concepts:
+                - Multi-cloud database architecture
+                - Database governance frameworks
+                - Data lakehouse architectures (e.g., Databricks, Snowflake)
+                search_terms:
+                - healthcare data lakehouse architecture
+                - enterprise storage governance SDE
+                why: Senior experts select and govern the massive storage platforms required for national-scale SDEs, balancing
+                  performance, security, and cost.
+        data-models-standardisation:
+          name: Data Models & Standardisation
+          levels:
+            entry:
+              core_concepts:
+              - topic: Introduction to Healthcare Standards
+                concepts:
+                - FHIR basics
+                - OMOP CDM overview
+                - Clinical coding systems (SNOMED, ICD-10)
+                search_terms:
+                - what is FHIR healthcare
+                - OMOP common data model basics
+                why: Staff must recognize standard formats to properly organize and query standardized clinical records.
+            mid:
+              core_concepts:
+              - topic: Standardization Integration
+                concepts:
+                - ETL to OMOP
+                - FHIR server configuration
+                - Mapping clinical terminologies
+                search_terms:
+                - mapping EHR to OMOP CDM
+                - configuring FHIR server in secure environment
+                why: Mid-level data engineers write the complex transformation logic mapping raw EHR data into standardized
+                  models like OMOP.
+            senior:
+              core_concepts:
+              - topic: Enterprise Interoperability Strategy
+                concepts:
+                - National data harmonization
+                - Cross-system semantic interoperability
+                - Enterprise ontology management
+                search_terms:
+                - national health data harmonization strategy
+                - cross-SDE semantic interoperability
+                why: Architects design the overarching strategy allowing different regional SDEs to securely exchange and
+                  federate queries using standard models.
+        event-driven-data-processing:
+          name: Event-Driven Data Processing
+          levels:
+            entry:
+              core_concepts:
+              - topic: Real-time Processing Basics
+                concepts:
+                - Publish-Subscribe models
+                - Apache Kafka basics
+                - Event producers/consumers
+                search_terms:
+                - event driven architecture healthcare
+                - Apache Kafka for health data
+                why: Entry-level understanding is required to work with real-time feeds like HL7 v2 messages or IoT medical
+                  device streams.
+            mid:
+              core_concepts:
+              - topic: Streaming Pipelines for Health Data
+                concepts:
+                - Stream processing (e.g., Apache Flink, Spark Streaming)
+                - Event schema registries
+                - Real-time anomaly detection
+                search_terms:
+                - real-time clinical data streaming
+                - Kafka schema registry for FHIR
+                why: Mid-level engineers build the streaming pipelines that process real-time hospital admissions or wearable
+                  data into the SDE.
+            senior:
+              core_concepts:
+              - topic: High-Throughput Enterprise Event Systems
+                concepts:
+                - Resilient event architectures
+                - Enterprise integration patterns
+                - Real-time analytics at scale
+                search_terms:
+                - high-throughput event driven architecture healthcare
+                - resilient streaming systems SDE
+                why: Seniors architect the backbone for real-time national biosurveillance and population health monitoring
+                  platforms.
+        encryption-standards-implementation:
+          name: Encryption Standards & Implementation
+          levels:
+            entry:
+              core_concepts:
+              - topic: Cryptographic Fundamentals
+                concepts:
+                - Symmetric vs Asymmetric encryption
+                - TLS/SSL
+                - Data at rest vs Data in transit
+                search_terms:
+                - healthcare data encryption basics
+                - TLS for medical data transmission
+                why: Understanding basic encryption is essential to avoid transmitting sensitive health data in plaintext.
+            mid:
+              core_concepts:
+              - topic: Applied Cryptography in SDEs
+                concepts:
+                - KMS (Key Management Service)
+                - Transparent Data Encryption (TDE)
+                - Certificate management
+                search_terms:
+                - AWS KMS for healthcare data
+                - database TDE setup SDE
+                why: Mid-level practitioners implement and rotate the keys that encrypt the SDE's massive data stores.
+            senior:
+              core_concepts:
+              - topic: Advanced Privacy-Preserving Technologies
+                concepts:
+                - Homomorphic encryption
+                - Post-quantum cryptography
+                - Enterprise PKI strategy
+                search_terms:
+                - homomorphic encryption in healthcare research
+                - enterprise PKI strategy secure data environments
+                why: Senior experts evaluate cutting-edge techniques like homomorphic encryption to allow computation on encrypted
+                  data without ever decrypting it in the SDE.
+        data-backups:
+          name: Data Backups
+          levels:
+            entry:
+              core_concepts:
+              - topic: Backup Fundamentals
+                concepts:
+                - Full, incremental, differential backups
+                - Backup scheduling
+                - Basic restoration procedures
+                search_terms:
+                - healthcare data backup strategies
+                - incremental vs differential backup
+                why: Ensures junior staff can follow protocols to safely back up small project datasets within the SDE.
+            mid:
+              core_concepts:
+              - topic: Automated Backup & Recovery Operations
+                concepts:
+                - Automated backup scripting
+                - Disaster recovery testing
+                - Cross-region replication
+                search_terms:
+                - automated disaster recovery healthcare databases
+                - cross-region replication AWS healthcare
+                why: Engineers configure automated systems to continuously back up critical clinical databases, meeting RPO
+                  and RTO targets.
+            senior:
+              core_concepts:
+              - topic: Enterprise Resilience Architecture
+                concepts:
+                - Enterprise Business Continuity Planning (BCP)
+                - Air-gapped backups
+                - Ransomware recovery strategies
+                search_terms:
+                - air-gapped backup healthcare data
+                - ransomware recovery strategy SDE
+                why: Senior architects design multi-tiered, air-gapped backup strategies to protect national health data assets
+                  from catastrophic loss or ransomware.
+        data-retention-disposal:
+          name: Data Retention & Disposal
+          levels:
+            entry:
+              core_concepts:
+              - topic: Data Lifecycle Basics
+                concepts:
+                - Storage tiers
+                - Archiving concepts
+                - Basic data tracking
+                search_terms:
+                - healthcare data retention periods
+                - basic data archiving SDE
+                why: Junior staff assist in moving aging project data to cheaper storage tiers as project lifecycles end.
+            mid:
+              core_concepts:
+              - topic: Retention Enforcement & Secure Deletion
+                concepts:
+                - Automated lifecycle policies
+                - Cryptographic erasure
+                - Compliance auditing (GDPR, HIPAA)
+                search_terms:
+                - cryptographic erasure healthcare data
+                - AWS S3 lifecycle policies GDPR
+                why: Mid-level practitioners implement automated rules to securely destroy workspace data once a researcher's
+                  SDE access expires.
+            senior:
+              core_concepts:
+              - topic: Enterprise Governance & Legal Compliance
+                concepts:
+                - Organizational retention frameworks
+                - Legal holds
+                - Scalable cost-optimized storage strategies
+                search_terms:
+                - enterprise health data retention framework
+                - legal hold procedures secure data environments
+                why: Seniors dictate the organizational policies aligning cloud storage costs with complex legal obligations
+                  regarding patient data retention.
+        data-migration:
+          name: Data Migration
+          levels:
+            entry:
+              core_concepts:
+              - topic: Migration Concepts & Validations
+                concepts:
+                - Migration risks
+                - Manual data transfer
+                - Post-migration validation checks
+                search_terms:
+                - health data migration risks
+                - post-migration data validation
+                why: Entry-level personnel assist in verifying that row counts and basic checksums match after moving a dataset
+                  to a new SDE workspace.
+            mid:
+              core_concepts:
+              - topic: Automated Migration Execution
+                concepts:
+                - Migration automation tools (e.g., AWS DMS)
+                - Downtime minimization techniques
+                - Data sync and reconciliation
+                search_terms:
+                - AWS Database Migration Service healthcare
+                - zero downtime clinical database migration
+                why: Mid-level engineers plan and execute the secure transfer of legacy hospital databases into modern cloud
+                  SDE infrastructures.
+            senior:
+              core_concepts:
+              - topic: Large-Scale Enterprise Migration Strategy
+                concepts:
+                - Enterprise migration roadmaps
+                - Risk mitigation and rollback planning
+                - Regulatory compliance during transit
+                search_terms:
+                - enterprise health system cloud migration roadmap
+                - secure migration strategy SDE
+                why: Leaders architect complex, multi-year migration strategies moving national-scale health repositories
+                  between environments without compromising security.
