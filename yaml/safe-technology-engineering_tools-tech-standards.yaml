@@ -292,7 +292,7 @@ subdomains:
         radars:
           score: 0/4
           status: Not in target radars
-  infrastructure-and-deployment:
+  infrastructure-deployment:
     name: Infrastructure & Deployment
     items:
     - name: AWS CLI

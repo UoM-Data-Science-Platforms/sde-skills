@@ -52,64 +52,12 @@ def deep_merge(dict1, dict2):
     return merged
 
 
-def generate_skills_index(domain_data_list):
-    """Compile a unified skills_index.yaml containing all skills across all domains."""
-    skills_map = {}
-    total_subdomains = 0
-    total_competencies = 0
-    total_skills = 0
-
-    # Sort domain files to have a deterministic order of generation (e.g. by index or filename)
-    sorted_domains = sorted(
-        domain_data_list,
-        key=lambda d: d.get('domain', {}).get('index', 0)
-    )
-
-    for domain_data in sorted_domains:
-        domain = domain_data.get('domain', {})
-        domain_id = domain.get('id', '')
-        subdomains = domain.get('subdomains', {})
-        total_subdomains += len(subdomains)
-
-        for subdomain_id, subdomain_data in subdomains.items():
-            competencies = subdomain_data.get('competencies', {})
-            total_competencies += len(competencies)
-
-            for competency_id, competency_data in competencies.items():
-                levels = competency_data.get('levels', {})
-                for level_id, level_data in levels.items():
-                    level_name = level_data.get('name', '')
-                    skills = level_data.get('skills', [])
-                    for idx, skill_text in enumerate(skills):
-                        skill_id = f"{competency_id}-{level_id}-{idx+1:03d}"
-                        skills_map[skill_id] = {
-                            'id': skill_id,
-                            'text': skill_text,
-                            'competency_id': competency_id,
-                            'level': level_id,
-                            'level_name': level_name,
-                            'domain_id': domain_id,
-                            'subdomain_id': subdomain_id
-                        }
-                        total_skills += 1
-
-    return {
-        'metadata': {
-            'version': '1.0',
-            'generated_from': 'domain yaml files',
-            'total_domains': len(domain_data_list),
-            'total_subdomains': total_subdomains,
-            'total_competencies': total_competencies,
-            'total_skills': total_skills
-        },
-        'skills': skills_map
-    }
-
 
 def main():
     """Main build process."""
     local_yaml_dir = Path('yaml')
     output_dir = Path('astro-app/public/data')
+    src_data_dir = Path('astro-app/src/data')
 
     main_domain_files = [
         'safe_access_identity.yaml',
@@ -121,7 +69,8 @@ def main():
     ]
 
     print(f"Loading YAML files from {local_yaml_dir}...")
-    compiled_domains = []
+    
+    all_domains = {}
 
     for domain_file in main_domain_files:
         domain_path = local_yaml_dir / domain_file
@@ -148,26 +97,91 @@ def main():
                     
             merged_data = deep_merge(merged_data, tech_data)
 
-        # Add to collection for skills_index.yaml compiling
-        compiled_domains.append(merged_data)
+
 
         # Save domain to output directory
         output_path = output_dir / domain_file
         save_yaml(output_path, merged_data)
         print(f"  [OK] Saved merged domain to {output_path}")
+        
+        if 'domain' in merged_data:
+            all_domains[merged_data['domain']['id']] = merged_data['domain']
 
-    # Compile and save skills_index.yaml
-    if compiled_domains:
-        print("\nCompiling skills_index.yaml...")
-        skills_index_data = generate_skills_index(compiled_domains)
-        skills_index_path = output_dir / 'skills_index.yaml'
-        save_yaml(skills_index_path, skills_index_data)
-        print(f"  [OK] Saved skills index to {skills_index_path}")
-        print(f"  [INFO] Compiled {skills_index_data['metadata']['total_skills']} skills across "
-              f"{skills_index_data['metadata']['total_domains']} domains.")
 
+    print("\nProcessing SATRE Mappings...")
+    satre_path = local_yaml_dir / 'satre_mapping.yaml'
+    if satre_path.exists():
+        satre_data = load_yaml(satre_path)
+        warnings_count = 0
+        
+        for pillar in satre_data.get('pillars', []):
+            for comp in pillar.get('components', []):
+                if 'mappings' not in comp or not comp['mappings']:
+                    continue
+                # mappings is {domain_id: {subdomain_id: [competency_ids]}}
+                for d_id, s_map in list(comp['mappings'].items()):
+                    if d_id not in all_domains:
+                        print(f"  [WARNING] SATRE {comp['id']}: Domain '{d_id}' not found in framework.")
+                        warnings_count += 1
+                        continue
+                    
+                    for s_id, competencies in list(s_map.items()):
+                        if s_id not in all_domains[d_id].get('subdomains', {}):
+                            print(f"  [WARNING] SATRE {comp['id']}: Subdomain '{s_id}' not found in domain '{d_id}'.")
+                            warnings_count += 1
+                            continue
+                        
+                        valid_comps = all_domains[d_id]['subdomains'][s_id].get('competencies', {})
+                        for c_id in competencies:
+                            if c_id not in valid_comps:
+                                print(f"  [WARNING] SATRE {comp['id']}: Competency '{c_id}' not found in subdomain '{s_id}'.")
+                                warnings_count += 1
+        
+        import json
+        
+        # Hardcode domain metadata for frontend since it's UI specific
+        domain_metadata = {
+            'ste': {'color': 'var(--color-nhs-blue)', 'span': 4},
+            'sdm': {'color': 'var(--color-purple)', 'span': 4},
+            'sai': {'color': 'var(--color-deep-blue)', 'span': 3},
+            'sod': {'color': 'var(--color-deep-blue)', 'span': 3},
+            'spo': {'color': 'var(--color-purple)', 'span': 3},
+            'sgc': {'color': 'var(--color-nhs-blue)', 'span': 4},
+        }
+        
+        out_domains = []
+        out_subdomains = []
+        
+        for d_id, d_data in all_domains.items():
+            meta = domain_metadata.get(d_id, {'color': 'var(--color-text)', 'span': 3})
+            out_domains.append({
+                'id': d_id,
+                'name': d_data.get('name', d_id),
+                'color': meta['color'],
+                'span': meta['span']
+            })
+            
+            for s_id, s_data in d_data.get('subdomains', {}).items():
+                out_subdomains.append({
+                    'id': s_id,
+                    'domain': d_data.get('name', d_id),
+                    'domainId': d_id,
+                    'name': s_data.get('name', s_id),
+                    'color': meta['color']
+                })
+        
+        satre_data['domains'] = out_domains
+        satre_data['subdomains'] = out_subdomains
+
+        src_data_dir.mkdir(parents=True, exist_ok=True)
+        json_path = src_data_dir / 'satre_mapping.json'
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(satre_data, f, indent=2)
+        print(f"  [OK] Saved SATRE mapping to {json_path}")
+        if warnings_count > 0:
+            print(f"  [WARN] Found {warnings_count} broken/missing mappings in satre_mapping.yaml")
+    
     print("\n[OK] Build complete! Data files ready in astro-app/public/data/")
-
 
 if __name__ == '__main__':
     main()

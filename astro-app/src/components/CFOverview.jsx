@@ -9,12 +9,12 @@ const DOMAIN_SUB_IDS = Object.fromEntries(
 
 // Map CFOverview domain IDs -> SATRE domain IDs
 const DOMAIN_SATRE_ID = {
-  'technology-engineering': 'ste',
-  'data-management': 'sdm',
-  'access-identity': 'sai',
-  'outputs-disclosure-control': 'sod',
-  'projects-operations': 'spo',
-  'governance-compliance': 'sgc',
+  'technology-engineering': 'safe-technology-engineering',
+  'data-management': 'safe-data-management',
+  'access-identity': 'safe-access-identity',
+  'outputs-disclosure-control': 'safe-outputs-disclosure-control',
+  'projects-operations': 'safe-projects-operations',
+  'governance-compliance': 'safe-governance-compliance',
 };
 
 const TOTAL_SATRE_COMPONENTS = SATRE_PILLARS.reduce((n, p) => n + p.components.length, 0);
@@ -300,7 +300,7 @@ export default function CFOverview() {
             {comp.name}
           </td>
           {SATRE_DOMAINS.map(d => {
-            const count = DOMAIN_SUB_IDS[d.id].filter(sid => comp.mappings[sid]).length;
+            const count = comp.mappings && comp.mappings[d.id] ? Object.keys(comp.mappings[d.id]).length : 0;
             const level = count === 0 ? 'none' : count === 1 ? 'low' : count >= 3 ? 'high' : 'medium';
             return (
               <td key={d.id} style={{ padding: 4, textAlign: 'center', borderLeft: '1px solid var(--color-border)', verticalAlign: 'middle' }}>
@@ -474,13 +474,12 @@ export default function CFOverview() {
               const c = DOMAIN_COLORS[d.id];
               const satreId = DOMAIN_SATRE_ID[d.id];
               const subdomains = SUBDOMAINS.filter(s => s.domainId === satreId);
-              const subIds = new Set(subdomains.map(s => s.id));
               const fiveSafe = FIVE_SAFES_LOOKUP[d.name];
 
               // Per-pillar: how many components does this domain address
               const pillarHits = SATRE_PILLARS.map(p => ({
                 name: p.name,
-                addressed: p.components.filter(comp => Object.keys(comp.mappings).some(k => subIds.has(k))).length,
+                addressed: p.components.filter(comp => comp.mappings && comp.mappings[satreId] && Object.keys(comp.mappings[satreId]).length > 0).length,
                 total: p.components.length,
               }));
               const satreCount = pillarHits.reduce((n, p) => n + p.addressed, 0);
