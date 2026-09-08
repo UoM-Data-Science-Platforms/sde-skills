@@ -1,0 +1,69 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+type: object
+properties:
+  domain:
+    type: object
+    properties:
+      subdomains:
+        $ref: "#/definitions/subdomainsMap"
+  subdomains:
+    $ref: "#/definitions/subdomainsMap"
+
+definitions:
+  subdomainsMap:
+    type: object
+    patternProperties:
+      "^.*$":
+        type: object
+        properties:
+          items:
+            type: array
+            items:
+              type: object
+              properties:
+                sources:
+                  type: object
+                  properties:
+                    standards:
+                      type: object
+                      properties:
+                        mentions:
+                          type: array
+                          items:
+                            type: string
+                    projects:
+                      type: object
+                      properties:
+                        mentions:
+                          type: array
+                          items:
+                            type: string
+          competencies:
+            type: object
+            patternProperties:
+              "^.*$":
+                type: object
+                properties:
+                  levels:
+                    type: object
+                    patternProperties:
+                      "^(entry|mid|senior)$":
+                        type: object
+                        properties:
+                          skills:
+                            type: array
+                            items:
+                              type: string
+                          core_concepts:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                concepts:
+                                  type: array
+                                  items:
+                                    type: string
+                                search_terms:
+                                  type: array
+                                  items:
+                                    type: string

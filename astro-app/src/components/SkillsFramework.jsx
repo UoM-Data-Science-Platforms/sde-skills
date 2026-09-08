@@ -116,13 +116,13 @@ function TechChip({ item }) {
       {sources?.standards?.count > 0 && (
         <div style={{ marginBottom: '6px' }}>
           <strong>Industry Standards:</strong> {sources.standards.count}/7
-          <span style={{ color: '#666' }}> ({sources.standards.mentions.slice(0, 3).join(', ')})</span>
+          <span style={{ color: '#666' }}> ({Array.isArray(sources.standards.mentions) ? sources.standards.mentions.slice(0, 3).join(', ') : sources.standards.mentions})</span>
         </div>
       )}
       {sources?.projects?.count > 0 && (
         <div style={{ marginBottom: '6px' }}>
           <strong>DARE UK Projects:</strong> {sources.projects.count}/7
-          <span style={{ color: '#666' }}> ({sources.projects.mentions.slice(0, 3).join(', ')})</span>
+          <span style={{ color: '#666' }}> ({Array.isArray(sources.projects.mentions) ? sources.projects.mentions.slice(0, 3).join(', ') : sources.projects.mentions})</span>
         </div>
       )}
       {sources?.jobs?.total > 0 && (
@@ -225,18 +225,17 @@ export default function SkillsFramework() {
 
   const getYamlFilename = () => {
     const dataBase = `${base}data/`;
-    if (typeof window === 'undefined') return `${dataBase}skills_index.yaml`;
+    if (typeof window === 'undefined') return `${dataBase}safe_access_identity.yaml`;
     const basePath = base.replace(/\/$/, '');
     const fullPath = window.location.pathname.replace(/\/$/, '');
     const slug = fullPath.startsWith(basePath) ? fullPath.slice(basePath.length).replace(/^\//, '') : fullPath.slice(1);
-    if (!slug || slug === 'skills-index') return `${dataBase}skills_index.yaml`;
+    if (!slug) return `${dataBase}safe_access_identity.yaml`;
     const name = slug.replace(/-/g, '_');
     return `${dataBase}safe_${name}.yaml`;
   };
 
   React.useEffect(() => {
     const filename = getYamlFilename();
-    const indexFile = `${base}data/skills_index.yaml`;
 
     fetch(filename)
       .then(res => {
@@ -246,11 +245,6 @@ export default function SkillsFramework() {
       .then(text => setData(yaml.load(text)))
       .catch(err => {
         console.error(err);
-        if (filename !== indexFile) {
-          fetch(indexFile)
-            .then(res => res.text())
-            .then(text => setData(yaml.load(text)));
-        }
       });
   }, []);
 
@@ -551,11 +545,11 @@ export default function SkillsFramework() {
                           <div className="proficiency-list-plain" style={{ marginBottom: '24px' }}>
                             <ul style={{ paddingLeft: '20px', margin: 0 }}>
                               <li><h3>Key competencies</h3></li>
-                              {selectedLevelData.skills?.map((skill, sIdx) => (
+                              {Array.isArray(selectedLevelData.skills) ? selectedLevelData.skills.map((skill, sIdx) => (
                                 <li key={sIdx} style={{ marginBottom: '8px' }}>
                                   {skill}
                                 </li>
-                              ))}
+                              )) : (selectedLevelData.skills ? <li style={{ marginBottom: '8px' }}>{selectedLevelData.skills}</li> : null)}
                             </ul>
                           </div>
                         </div>
@@ -567,12 +561,12 @@ export default function SkillsFramework() {
                                 {selectedLevelData.core_concepts.map((concept, idx) => (
                                   <ul key={idx}>
                                     <li> {concept.why}</li>
-                                    <li><strong>Core Concepts:</strong> {concept.concepts.join(', ')}</li>
+                                    <li><strong>Core Concepts:</strong> {Array.isArray(concept.concepts) ? concept.concepts.join(', ') : concept.concepts}</li>
                                     <ul>
                                       <li><strong>Search terms for self-learning:</strong></li>
-                                      {concept.search_terms?.map((term, i) => (
+                                      {Array.isArray(concept.search_terms) ? concept.search_terms.map((term, i) => (
                                         <li key={i} style={{ fontStyle: 'italic' }}>"{term}"</li>
-                                      ))}
+                                      )) : (concept.search_terms ? <li style={{ fontStyle: 'italic' }}>"{concept.search_terms}"</li> : null)}
                                     </ul>
 
                                   </ul>
@@ -585,10 +579,13 @@ export default function SkillsFramework() {
                               <ul key={refIdx++} style={{ paddingLeft: '20px', margin: 0 }}>
                                 <li><h3>Qualifications</h3></li>
                                 {selectedLevelData.qualifications.map((qual, idx) => (
-                                  <ul key={idx}>
-                                    <li> {qual.description}</li>
+                                  <ul key={idx} style={{ paddingLeft: '0', listStyleType: 'none', marginBottom: '10px' }}>
+                                    <li><strong>{qual.name || qual.description}</strong></li>
                                     <li><strong>Issued by:</strong> {qual.issuer}</li>
                                     <li><strong>Career Impact:</strong> {qual.career_impact}</li>
+                                    {idx < selectedLevelData.qualifications.length - 1 && (
+                                      <hr style={{ margin: '10px 0', border: 'none', borderTop: '1px solid var(--color-border)' }} />
+                                    )}
                                   </ul>
                                 ))}
                               </ul>

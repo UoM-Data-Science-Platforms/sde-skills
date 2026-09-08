@@ -443,7 +443,7 @@ subdomains:
         radars:
           score: 3/4
           status: Graduated / Adopt (#1 Cloud Monitoring Engine)
-  research-support-and-innovation:
+  research-support-innovation:
     name: Research Support & Innovation
     items:
     - name: Feedly

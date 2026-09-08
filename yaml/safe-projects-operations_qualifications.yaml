@@ -4,8 +4,8 @@ domain:
     service-management:
       name: "Service Management"
       competencies:
-        itil-service-management:
-          name: "ITIL & Service Management"
+        service-level-management:
+          name: "Service Level Management"
           levels:
             entry:
               qualifications:
@@ -25,29 +25,21 @@ domain:
         incident-problem-management:
           name: "Incident & Problem Management"
           levels:
-            entry:
-              qualifications: []
             mid:
               qualifications:
                 - issuer: "Kepner-Tregoe"
                   description: "Kepner-Tregoe Foundation (Course)"
                   career_impact: "Advanced problem-solving methodologies for complex SDE outages."
-            senior:
-              qualifications: []
         change-release-management:
           name: "Change & Release Management"
           levels:
-            entry:
-              qualifications: []
             mid:
               qualifications:
                 - issuer: "Axelos"
                   description: "ITIL 4 Specialist: High-velocity IT (Exam)"
                   career_impact: "Managing rapid releases in a highly secure, regulated environment."
-            senior:
-              qualifications: []
-    project-delivery-management:
-      name: "Project & Delivery Management"
+    project-management:
+      name: "Project Management"
       competencies:
         agile-delivery-methods:
           name: "Agile Delivery Methods"
@@ -67,11 +59,9 @@ domain:
                 - issuer: "Scaled Agile"
                   description: "SAFe 6 Agilist (Exam)"
                   career_impact: "Scaling agile practices across national federated SDE programs."
-        risk-management:
-          name: "Risk Management"
+        sde-project-planning:
+          name: "SDE Project Planning"
           levels:
-            entry:
-              qualifications: []
             mid:
               qualifications:
                 - issuer: "PMI"
@@ -82,45 +72,27 @@ domain:
                 - issuer: "Axelos"
                   description: "MoR (Management of Risk) Practitioner (Exam)"
                   career_impact: "UK Government standard for enterprise risk management."
-        stakeholder-engagement:
-          name: "Stakeholder Engagement"
+        research-project-facilitation:
+          name: "Research Project Facilitation"
           levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications: []
             senior:
               qualifications:
                 - issuer: "APMG"
                   description: "APMG Change Management Practitioner (Exam)"
                   career_impact: "Managing complex stakeholder relationships (NHS, researchers, public)."
-    finops-resource-management:
-      name: "FinOps & Resource Management"
-      competencies:
-        cloud-cost-optimisation:
-          name: "Cloud Cost Optimisation"
+        resource-cost-management:
+          name: "Resource & Cost Management"
           levels:
-            entry:
-              qualifications: []
             mid:
               qualifications:
                 - issuer: "FinOps Foundation"
                   description: "FinOps Certified Practitioner (Exam)"
                   career_impact: "Industry standard for managing cloud spend in large-scale SDEs."
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing scalable infrastructure to meet researcher compute demands."
             senior:
               qualifications:
                 - issuer: "FinOps Foundation"
                   description: "FinOps Certified Professional (Exam)"
                   career_impact: "Leading FinOps strategies across multi-cloud national SDE infrastructure."
-        capacity-planning:
-          name: "Capacity Planning"
-          levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications:
-                - issuer: "AWS"
-                  description: "AWS Certified Solutions Architect - Associate (Exam)"
-                  career_impact: "Designing scalable infrastructure to meet researcher compute demands."
-            senior:
-              qualifications: []

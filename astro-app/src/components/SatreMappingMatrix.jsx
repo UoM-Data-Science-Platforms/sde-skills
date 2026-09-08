@@ -93,7 +93,14 @@ function SubdomainCard({ subdomainId, competencies, expanded, onToggle }) {
 // ── Component detail panel (level 3) ────────────────────────────────────────
 
 function ComponentDetail({ component, openSubs, onToggleSub }) {
-  const entries = Object.entries(component.mappings)
+  const flatMappings = {};
+  if (component.mappings) {
+    Object.values(component.mappings).forEach(domainMap => {
+      Object.assign(flatMappings, domainMap);
+    });
+  }
+
+  const entries = Object.entries(flatMappings)
     .sort(([a], [b]) => (SUBDOMAIN_INDEX[a] ?? 99) - (SUBDOMAIN_INDEX[b] ?? 99));
 
   return (
@@ -225,7 +232,10 @@ export default function SatreMappingMatrix() {
 
           {/* X cells */}
           {SUBDOMAINS.map((sub, si) => {
-            const comps = component.mappings[sub.id] ?? [];
+            let comps = [];
+            if (component.mappings && component.mappings[sub.domainId]) {
+              comps = component.mappings[sub.domainId][sub.id] ?? [];
+            }
             const filled = comps.length > 0;
             const borderLeft = si > 0 && SUBDOMAINS[si - 1].domainId !== sub.domainId
               ? '2px solid var(--color-surface)'
