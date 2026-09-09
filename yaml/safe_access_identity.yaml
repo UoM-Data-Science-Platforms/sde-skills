@@ -38,7 +38,7 @@ domain:
               - Applies password best practices and configures multi-factor authentication
                 (MFA)
               - Can configure user accounts in identity systems under supervision
-              - Can understand existing SDE security Matrix.
+              - Can understand existing SDE security Matrix
             mid:
               id: authentication-systems-mid
               name: Mid Level
@@ -52,11 +52,11 @@ domain:
               id: authentication-systems-senior
               name: Senior Level
               skills:
-              - Consult on enterprise authentication strategies.
+              - Consult on enterprise authentication strategies
               - Evaluates and selects authentication technologies aligned with security
                 needs
               - Leads identity system transformations and security enhancements
-              - Lead and provide support for existing Security Matrix.
+              - Lead and provide support for existing Security Matrix
         user-provisioning-lifecycle:
           id: user-provisioning-lifecycle
           name: User Provisioning & Lifecycle
@@ -73,7 +73,7 @@ domain:
               - Describes user account lifecycle stages from provisioning to deprovisioning
               - Follows standard user provisioning and deprovisioning procedures
               - Can execute account management tasks following established procedures
-              - Understand existing user provisioning specification.
+              - Understand existing user provisioning specification
             mid:
               id: user-provisioning-lifecycle-mid
               name: Mid Level
@@ -158,7 +158,7 @@ domain:
               - Implements role structures appropriate to organisational needs
               - Implements role management and governance processes
               - Conducts role reviews and recommends improvements
-              - Can modify/troubleshoot existing role definitions queries.
+              - Can modify/troubleshoot existing role definitions queries
             senior:
               id: role-based-access-control-senior
               name: Senior Level
@@ -166,7 +166,7 @@ domain:
               - Develops enterprise RBAC frameworks and strategies
               - Implements advanced access governance and role mining
               - Leads initiatives to optimise role structures and reduce access risk
-              - Can lead new role definitions implementation and support.
+              - Can lead new role definitions implementation and support
         attribute-based-access-control:
           id: attribute-based-access-control
           name: Attribute-Based Access Control
@@ -232,7 +232,7 @@ domain:
               - Develops enterprise privilege management strategies
               - Implements advanced tools for privilege discovery and management
               - Leads initiatives to mature privilege governance practices
-              - Leads audit, implementation involving role-level security.
+              - Leads audit, implementation involving role-level security
     secure-user-experience:
       id: secure-user-experience
       name: Secure User Experience
@@ -339,7 +339,7 @@ domain:
               - Implements secure collaboration platforms and integrations
               - Designs security controls for data sharing and communication
               - Evaluates collaboration tools for security and compliance
-              - Support/create/maintain secrets using cloud services.
+              - Support/create/maintain secrets using cloud services
             senior:
               id: secure-collaboration-tools-senior
               name: Senior Level
@@ -348,4 +348,4 @@ domain:
               - Implements governance frameworks for secure information sharing
               - Leads initiatives to enhance collaboration capabilities while maintaining
                 security
-              - Leads task/communication management on collaborative platforms.
+              - Leads task/communication management on collaborative platforms

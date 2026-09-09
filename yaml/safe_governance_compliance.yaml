@@ -76,7 +76,7 @@ domain:
               name: Mid Level
               skills:
               - Implements comprehensive data protection frameworks (e.g. Data Protection
-                Impact Assessments (DPIAs), privacy by design).
+                Impact Assessments (DPIAs), privacy by design)
               - Conducts Data Protection Impact Assessments (DPIAs)
               - Ensures systems comply with data protection requirements
             senior:
@@ -86,7 +86,7 @@ domain:
               - Develops enterprise data protection strategies
               - Establishes data protection governance and oversight
               - Leads data protection enhancement initiatives (e.g. organisation-wide
-                training, new privacy technologies).
+                training, new privacy technologies)
         healthcare-standards-compliance:
           id: healthcare-standards-compliance
           name: Healthcare Standards Compliance

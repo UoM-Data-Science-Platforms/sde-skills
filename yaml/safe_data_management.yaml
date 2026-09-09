@@ -474,7 +474,7 @@ domain:
                 without unnecessary overhead
               - Has deep understanding of legal and regulatory frameworks (such as
                 GDPR, HIPAA, or industry-specific standards) to ensure data retention
-                practices align with security, privacy, and governance requirements.
+                practices align with security, privacy, and governance requirements
         data-migration:
           id: data-migration
           name: Data Migration
