@@ -176,7 +176,7 @@ domain:
               skills:
               - Leads initiatives to enhance disclosure risk management (e.g. implementing
                 new tools or techniques, anticipating introduction of new regulatory
-                frameworks).
+                frameworks)
         automated-disclosure-control:
           id: automated-disclosure-control
           name: Automated Disclosure Control
