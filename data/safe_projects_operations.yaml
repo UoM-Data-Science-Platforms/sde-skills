@@ -48,6 +48,10 @@ domain:
               - Develops comprehensive SDE project plans
               - Manages resources and timelines for SDE projects
               - Identifies and mitigates project risks
+              qualifications:
+              - issuer: PMI
+                description: PMI Risk Management Professional (PMI-RMP) (Exam)
+                career_impact: Identifying and mitigating project delivery risks in sensitive environments.
               core_concepts:
               - topic: SDE Project Resource Planning
                 concepts:
@@ -65,6 +69,10 @@ domain:
               - Establishes SDE project management methodologies
               - Oversees complex, multi-stakeholder SDE initiatives
               - Leads strategic planning for SDE capabilities
+              qualifications:
+              - issuer: Axelos
+                description: MoR (Management of Risk) Practitioner (Exam)
+                career_impact: UK Government standard for enterprise risk management.
               core_concepts:
               - topic: Strategic SDE Portfolio Management
                 concepts:
@@ -124,6 +132,10 @@ domain:
               - Develops frameworks for supporting diverse research needs
               - Establishes researcher engagement and support strategies
               - Leads initiatives to enhance research capabilities in SDEs
+              qualifications:
+              - issuer: APMG
+                description: APMG Change Management Practitioner (Exam)
+                career_impact: Managing complex stakeholder relationships (NHS, researchers, public).
               core_concepts:
               - topic: Research Enablement Strategy
                 concepts:
@@ -149,6 +161,10 @@ domain:
               - Explains agile principles and delivery methodologies
               - Participates in standard agile ceremonies and maintains sprint artifacts
               - Can participate effectively in agile teams
+              qualifications:
+              - issuer: Scrum Alliance
+                description: Certified ScrumMaster (CSM) (Exam)
+                career_impact: Standard framework for agile team delivery.
               core_concepts:
               - topic: Agile Basics in Secure Env
                 concepts:
@@ -166,6 +182,10 @@ domain:
               - Implements agile practices appropriate to SDE development
               - Manages agile teams and processes
               - Adapts agile approaches for security and compliance needs
+              qualifications:
+              - issuer: PMI
+                description: PMI Agile Certified Practitioner (PMI-ACP) (Exam)
+                career_impact: Advanced agile delivery in complex health data environments.
               core_concepts:
               - topic: Adapting Agile to IG
                 concepts:
@@ -183,6 +203,10 @@ domain:
               - Establishes agile delivery frameworks for secure environments
               - Develops agile governance models that maintain compliance
               - Leads agile transformation initiatives
+              qualifications:
+              - issuer: Scaled Agile
+                description: SAFe 6 Agilist (Exam)
+                career_impact: Scaling agile practices across national federated SDE programs.
               core_concepts:
               - topic: SDE Agile Governance
                 concepts:
@@ -284,6 +308,13 @@ domain:
               - Implements comprehensive resource management processes
               - Develops cost monitoring and optimisation strategies
               - Creates and maintains costing models for SDE operations
+              qualifications:
+              - issuer: FinOps Foundation
+                description: FinOps Certified Practitioner (Exam)
+                career_impact: Industry standard for managing cloud spend in large-scale SDEs.
+              - issuer: AWS
+                description: AWS Certified Solutions Architect - Associate (Exam)
+                career_impact: Designing scalable infrastructure to meet researcher compute demands.
               core_concepts:
               - topic: SDE Cost Optimization
                 concepts:
@@ -301,6 +332,10 @@ domain:
               - Develops enterprise resource management and cost optimisation strategies
               - Establishes financial governance frameworks for SDE operations
               - Leads initiatives to enhance resource efficiency and cost-effectiveness
+              qualifications:
+              - issuer: FinOps Foundation
+                description: FinOps Certified Professional (Exam)
+                career_impact: Leading FinOps strategies across multi-cloud national SDE infrastructure.
               core_concepts:
               - topic: Financial Strategy for SDEs
                 concepts:
@@ -481,6 +516,10 @@ domain:
               - Defines service level concepts, indicators, and metrics
               - Interprets service level agreements (SLAs) and monitors key performance indicators
               - Can track and report on basic service levels
+              qualifications:
+              - issuer: Axelos
+                description: ITIL 4 Foundation (Exam)
+                career_impact: Universal standard for IT service management.
               core_concepts:
               - topic: SLA Basics
                 concepts:
@@ -498,6 +537,10 @@ domain:
               - Develops service level agreements and objectives
               - Implements service level monitoring and reporting
               - Analyses service performance and addresses issues
+              qualifications:
+              - issuer: Axelos
+                description: ITIL 4 Managing Professional (Exam)
+                career_impact: Managing high-availability services for researchers.
               core_concepts:
               - topic: SDE Service Levels
                 concepts:
@@ -515,6 +558,10 @@ domain:
               - Establishes service level frameworks and governance
               - Develops service improvement strategies
               - Leads negotiations for cross-organisational service levels
+              qualifications:
+              - issuer: Axelos
+                description: ITIL 4 Strategic Leader (Exam)
+                career_impact: Aligning SDE IT services with broader healthcare strategies.
               core_concepts:
               - topic: Service Level Governance
                 concepts:
@@ -540,7 +587,6 @@ domain:
               - Explains incident and problem management concepts and lifecycles
               - Classifies and prioritises operational incidents based on impact and urgency
               - Can document and track incidents following established processes
-              qualifications: []
               core_concepts:
               - topic: Incident Logging
                 concepts:
@@ -579,7 +625,6 @@ domain:
               - Establishes incident and problem management frameworks
               - Develops strategies to reduce incident frequency and impact
               - Leads service resilience and reliability initiatives
-              qualifications: []
               core_concepts:
               - topic: Resilience Strategy
                 concepts:
@@ -605,7 +650,6 @@ domain:
               - Explains change management concepts and standard approval workflows
               - Submits change request documentation and follows release approval workflows
               - Can implement changes following established procedures
-              qualifications: []
               core_concepts:
               - topic: Change Requests
                 concepts:
@@ -644,7 +688,6 @@ domain:
               - Establishes change governance frameworks and policies
               - Develops strategies for balancing change agility and control
               - Leads change management improvement initiatives
-              qualifications: []
               core_concepts:
               - topic: Change Governance
                 concepts:
@@ -655,24 +698,6 @@ domain:
                 - Enterprise change governance
                 - DevSecOps release strategy
                 why: Balancing the need for rapid updates with strict compliance mandates.
-        itil-service-management:
-          name: ITIL & Service Management
-          levels:
-            entry:
-              qualifications:
-              - issuer: Axelos
-                description: ITIL 4 Foundation (Exam)
-                career_impact: Universal standard for IT service management.
-            mid:
-              qualifications:
-              - issuer: Axelos
-                description: ITIL 4 Managing Professional (Exam)
-                career_impact: Managing high-availability services for researchers.
-            senior:
-              qualifications:
-              - issuer: Axelos
-                description: ITIL 4 Strategic Leader (Exam)
-                career_impact: Aligning SDE IT services with broader healthcare strategies.
       items:
       - name: Basic ticketing systems
         role: Maintains formal IT service level agreements (SLAs), incident ticket queues, and change control lifecycles.
@@ -1372,86 +1397,6 @@ domain:
                 - National health data policy
                 - SDE strategic alliances
                 why: Shaping the future of the entire SDE ecosystem at a national/international level.
-    project-delivery-management:
-      name: Project & Delivery Management
-      competencies:
-        agile-delivery-methods:
-          name: Agile Delivery Methods
-          levels:
-            entry:
-              qualifications:
-              - issuer: Scrum Alliance
-                description: Certified ScrumMaster (CSM) (Exam)
-                career_impact: Standard framework for agile team delivery.
-            mid:
-              qualifications:
-              - issuer: PMI
-                description: PMI Agile Certified Practitioner (PMI-ACP) (Exam)
-                career_impact: Advanced agile delivery in complex health data environments.
-            senior:
-              qualifications:
-              - issuer: Scaled Agile
-                description: SAFe 6 Agilist (Exam)
-                career_impact: Scaling agile practices across national federated SDE programs.
-        risk-management:
-          name: Risk Management
-          levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications:
-              - issuer: PMI
-                description: PMI Risk Management Professional (PMI-RMP) (Exam)
-                career_impact: Identifying and mitigating project delivery risks in sensitive environments.
-            senior:
-              qualifications:
-              - issuer: Axelos
-                description: MoR (Management of Risk) Practitioner (Exam)
-                career_impact: UK Government standard for enterprise risk management.
-        stakeholder-engagement:
-          name: Stakeholder Engagement
-          levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications: []
-            senior:
-              qualifications:
-              - issuer: APMG
-                description: APMG Change Management Practitioner (Exam)
-                career_impact: Managing complex stakeholder relationships (NHS, researchers, public).
-    finops-resource-management:
-      name: FinOps & Resource Management
-      competencies:
-        cloud-cost-optimisation:
-          name: Cloud Cost Optimisation
-          levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications:
-              - issuer: FinOps Foundation
-                description: FinOps Certified Practitioner (Exam)
-                career_impact: Industry standard for managing cloud spend in large-scale SDEs.
-            senior:
-              qualifications:
-              - issuer: FinOps Foundation
-                description: FinOps Certified Professional (Exam)
-                career_impact: Leading FinOps strategies across multi-cloud national SDE infrastructure.
-        capacity-planning:
-          name: Capacity Planning
-          levels:
-            entry:
-              qualifications: []
-            mid:
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Solutions Architect - Associate (Exam)
-                career_impact: Designing scalable infrastructure to meet researcher compute demands.
-            senior:
-              qualifications: []
-    research-support-and-innovation:
-      name: Research Support & Innovation
       items:
       - name: Feedly
         role: Delivers researcher training materials, analytical desktop environments, and national community collaboration.

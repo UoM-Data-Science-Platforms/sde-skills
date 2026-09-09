@@ -1058,6 +1058,88 @@ domain:
                 - Governance of ethical reviews health data
                 why: Senior leaders optimize the review lifecycle, removing bottlenecks while ensuring uncompromised ethical
                   standards for data access.
+      items:
+      - name: Data Sharing Agreements (DSA)
+        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
+        sources:
+          community: false
+          standards:
+            count: 0
+            mentions: []
+          projects:
+            count: 0
+            mentions: []
+          jobs:
+            total: 12
+            entry: 1
+            mid: 8
+            senior: 3
+          radars:
+            score: 1/4
+            status: Core Statistical Computing Language
+      - name: Five Safes Framework
+        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
+        sources:
+          community: false
+          standards:
+            count: 4
+            mentions:
+            - SATRE Specification
+            - DARE UK FAB
+            - ONS SDC
+            - NHS England SDE
+          projects:
+            count: 3
+            mentions:
+            - SATRE Driver Project
+            - TRE-FX Driver Project
+            - TREvolution
+          jobs:
+            total: 6
+            entry: 0
+            mid: 4
+            senior: 2
+          radars:
+            score: 1/4
+            status: Core Statistical Computing Language
+      - name: Integrated Research Application System (IRAS)
+        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
+        sources:
+          community: false
+          standards:
+            count: 2
+            mentions:
+            - NHS England SDE
+            - NHS DSPT / DTAC
+          projects:
+            count: 0
+            mentions: []
+          jobs:
+            total: 12
+            entry: 1
+            mid: 8
+            senior: 3
+          radars:
+            score: 1/4
+            status: Core Statistical Computing Language
+      - name: Research Ethics Committees (REC)
+        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
+        sources:
+          community: false
+          standards:
+            count: 0
+            mentions: []
+          projects:
+            count: 0
+            mentions: []
+          jobs:
+            total: 12
+            entry: 1
+            mid: 8
+            senior: 3
+          radars:
+            score: 1/4
+            status: Core Statistical Computing Language
     audit-compliance-monitoring:
       id: audit-compliance-monitoring
       name: Audit & Compliance Monitoring
@@ -1274,92 +1356,6 @@ domain:
                 - Maintaining healthcare accreditations long-term
                 why: Senior leaders dictate which certifications provide strategic value to the SDE and establish the permanent
                   programs to support them.
-    ethics-and-research-governance:
-      name: Ethics & Research Governance
-      items:
-      - name: Data Sharing Agreements (DSA)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Five Safes Framework
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 4
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-            - ONS SDC
-            - NHS England SDE
-          projects:
-            count: 3
-            mentions:
-            - SATRE Driver Project
-            - TRE-FX Driver Project
-            - TREvolution
-          jobs:
-            total: 6
-            entry: 0
-            mid: 4
-            senior: 2
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Integrated Research Application System (IRAS)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NHS England SDE
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Research Ethics Committees (REC)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-    audit-and-compliance-monitoring:
-      name: Audit & Compliance Monitoring
       items:
       - name: Access Control Audits
         role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.

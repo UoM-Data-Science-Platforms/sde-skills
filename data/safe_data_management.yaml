@@ -1148,8 +1148,6 @@ domain:
                 - secure migration strategy SDE
                 why: Leaders architect complex, multi-year migration strategies moving national-scale health repositories
                   between environments without compromising security.
-    data-engineering-and-processing:
-      name: Data Engineering & Processing
       items:
       - name: AES-256-GCM / TLS 1.3
         role: Implements scalable ETL/ELT pipelines, clinical ontology harmonization, secure analytical stores, and encrypted
