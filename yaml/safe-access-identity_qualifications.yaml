@@ -58,15 +58,18 @@ domain:
             entry:
               qualifications: []
             mid:
-              qualifications:
-                - issuer: "Ping Identity"
-                  description: "Ping Identity Certified Professional (Exam)"
-                  career_impact: "Practical skills for configuring SAML/OIDC federation between university identity providers and the SDE."
+              qualifications: []
             senior:
               qualifications:
                 - issuer: "AWS"
                   description: "AWS Certified Security - Specialty (Exam)"
                   career_impact: "Includes advanced federation topics (Cognito, AWS SSO) for cross-organizational data sharing boundaries."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)"
+                  career_impact: "Covers Azure AD / Entra ID identity federation, enterprise application integration, and SSO."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Security Engineer (Exam)"
+                  career_impact: "Validates expertise in Cloud IAM, Workload Identity Federation, and secure identity mapping."
                 - issuer: "ISC2"
                   description: "CISSP-ISSAP (Information Systems Security Architecture Professional) (Exam)"
                   career_impact: "Deep architectural focus on complex identity federation across trust boundaries."
@@ -81,6 +84,12 @@ domain:
                 - issuer: "AWS"
                   description: "AWS Certified Cloud Practitioner (Exam)"
                   career_impact: "Introduces basic AWS IAM and role concepts."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Fundamentals (AZ-900) (Exam)"
+                  career_impact: "Introduces foundational Azure cloud concepts, core services, and RBAC fundamentals."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Digital Leader (Exam)"
+                  career_impact: "Introduces core Google Cloud concepts, Cloud IAM roles, and resource management hierarchy."
             mid:
               qualifications:
                 - issuer: "AWS"
@@ -89,6 +98,9 @@ domain:
                 - issuer: "Microsoft"
                   description: "Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)"
                   career_impact: "Deep dive into Azure RBAC to secure sensitive healthcare datasets."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Security Engineer (Exam)"
+                  career_impact: "Hands-on implementation of GCP IAM roles, custom roles, and service account access boundaries."
             senior:
               qualifications:
                 - issuer: "ISACA"
@@ -100,10 +112,7 @@ domain:
             entry:
               qualifications: []
             mid:
-              qualifications:
-                - issuer: "HashiCorp"
-                  description: "HashiCorp Certified: Vault Associate (Exam)"
-                  career_impact: "Relevant for implementing dynamic, attribute-driven secrets and access management."
+              qualifications: []
             senior:
               qualifications:
                 - issuer: "ISC2"
@@ -155,11 +164,20 @@ domain:
                 - issuer: "AWS"
                   description: "AWS Certified Advanced Networking - Specialty (Exam)"
                   career_impact: "Securing AWS Workspaces and AppStream environments for isolated data analysis."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Network Engineer (Exam)"
+                  career_impact: "Designing and securing Google Cloud VPC network topologies and secure access perimeters."
                 - issuer: "Citrix"
                   description: "Citrix Certified Professional - Virtualization (CCP-V) (Exam)"
                   career_impact: "Deploying and managing secure virtual desktop infrastructure often used in healthcare TREs."
+                - issuer: "VMware"
+                  description: "VMware Certified Professional - Desktop and Mobility (VCP-DTM) (Exam)"
+                  career_impact: "Administering and optimizing Horizon virtual desktops and app delivery for secure research environments."
             senior:
               qualifications:
+                - issuer: "Citrix"
+                  description: "Citrix Certified Expert - Virtualization (CCE-V) (Exam)"
+                  career_impact: "Architecting high-availability, enterprise-scale virtual workspace solutions for sensitive health data."
                 - issuer: "VMware"
                   description: "VMware Certified Design Expert (VCDX) (Exam)"
                   career_impact: "Designing enterprise-grade, highly secure virtualized workspace environments."
