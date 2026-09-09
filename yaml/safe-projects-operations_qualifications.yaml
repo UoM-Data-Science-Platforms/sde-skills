@@ -55,10 +55,7 @@ domain:
                   description: "PMI Agile Certified Practitioner (PMI-ACP) (Exam)"
                   career_impact: "Advanced agile delivery in complex health data environments."
             senior:
-              qualifications:
-                - issuer: "Scaled Agile"
-                  description: "SAFe 6 Agilist (Exam)"
-                  career_impact: "Scaling agile practices across national federated SDE programs."
+              qualifications: []
         sde-project-planning:
           name: "SDE Project Planning"
           levels:
@@ -76,10 +73,7 @@ domain:
           name: "Research Project Facilitation"
           levels:
             senior:
-              qualifications:
-                - issuer: "APMG"
-                  description: "APMG Change Management Practitioner (Exam)"
-                  career_impact: "Managing complex stakeholder relationships (NHS, researchers, public)."
+              qualifications: []
         resource-cost-management:
           name: "Resource & Cost Management"
           levels:

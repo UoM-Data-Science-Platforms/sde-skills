@@ -36,7 +36,13 @@ domain:
               qualifications:
                 - issuer: "AWS"
                   description: "AWS Certified DevOps Engineer - Professional (Exam)"
-                  career_impact: "Enterprise CI/CD strategy and automation."
+                  career_impact: "Enterprise CI/CD strategy and automation on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: DevOps Engineer Expert (AZ-400) (Exam)"
+                  career_impact: "Enterprise CI/CD strategy, automated testing, and release management on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud DevOps Engineer (Exam)"
+                  career_impact: "Enterprise CI/CD strategy, continuous delivery, and reliability engineering on GCP."
         microservices-api-design:
           name: "Microservices & API Design"
           levels:
@@ -48,11 +54,7 @@ domain:
                   description: "Postman API Professional (Exam)"
                   career_impact: "Developing and testing secure APIs for interoperability."
             senior:
-              qualifications:
-                - issuer: "MuleSoft"
-                  description: "MuleSoft Certified Platform Architect (Exam)"
-                  career_impact: "Architecting complex API networks and integration platforms (e.g., HL7 FHIR integration)."
-
+              qualifications: []
     infrastructure-deployment:
       name: "Infrastructure & Deployment"
       competencies:
@@ -61,25 +63,37 @@ domain:
           levels:
             entry:
               qualifications:
-                - issuer: "AWS / Microsoft"
-                  description: "AWS Certified Cloud Practitioner / Azure Fundamentals (Exam)"
-                  career_impact: "Baseline cloud knowledge."
+                - issuer: "AWS"
+                  description: "AWS Certified Cloud Practitioner (Exam)"
+                  career_impact: "Baseline cloud knowledge on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Fundamentals (AZ-900) (Exam)"
+                  career_impact: "Baseline cloud knowledge on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Digital Leader (Exam)"
+                  career_impact: "Baseline cloud knowledge on Google Cloud."
             mid:
               qualifications:
                 - issuer: "AWS"
                   description: "AWS Certified Solutions Architect - Associate (Exam)"
-                  career_impact: "Designing robust, secure cloud environments for TREs."
+                  career_impact: "Designing robust, secure cloud environments for TREs on AWS."
                 - issuer: "Microsoft"
-                  description: "Microsoft Certified: Azure Administrator Associate (Exam)"
+                  description: "Microsoft Certified: Azure Administrator Associate (AZ-104) (Exam)"
                   career_impact: "Managing Azure-based SDE infrastructure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Associate Cloud Engineer (Exam)"
+                  career_impact: "Deploying and managing Google Cloud-based SDE infrastructure."
             senior:
               qualifications:
                 - issuer: "AWS"
                   description: "AWS Certified Solutions Architect - Professional (Exam)"
-                  career_impact: "Architecting complex, multi-account landing zones for sensitive data."
+                  career_impact: "Architecting complex, multi-account landing zones for sensitive data on AWS."
                 - issuer: "Microsoft"
                   description: "Microsoft Certified: Azure Solutions Architect Expert (Exam)"
                   career_impact: "Enterprise architecture for national-scale Azure SDEs."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Architect (Exam)"
+                  career_impact: "Enterprise architecture and secure landing zone design on Google Cloud."
                 - issuer: "The Open Group"
                   description: "TOGAF 9 Certification (Exam)"
                   career_impact: "Standardizing enterprise architecture across federated platforms."
@@ -116,7 +130,13 @@ domain:
                   career_impact: "Core routing, switching, and VLAN segmentation."
                 - issuer: "AWS"
                   description: "AWS Certified Advanced Networking - Specialty (Exam)"
-                  career_impact: "Designing complex VPCs, Transit Gateways, and secure hybrid connectivity."
+                  career_impact: "Designing complex VPCs, Transit Gateways, and secure hybrid connectivity on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Network Engineer Associate (AZ-700) (Exam)"
+                  career_impact: "Designing and implementing hybrid networking, ExpressRoute, and virtual WAN on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Network Engineer (Exam)"
+                  career_impact: "Designing and managing GCP VPC network topologies, Cloud Interconnect, and hybrid connectivity."
             senior:
               qualifications:
                 - issuer: "Cisco"
@@ -132,15 +152,9 @@ domain:
             entry:
               qualifications: []
             mid:
-              qualifications:
-                - issuer: "Palo Alto Networks"
-                  description: "Palo Alto Networks Certified Network Security Administrator (PCNSA) (Exam)"
-                  career_impact: "Managing Next-Gen Firewalls protecting SDE perimeters."
+              qualifications: []  
             senior:
-              qualifications:
-                - issuer: "Palo Alto Networks"
-                  description: "Palo Alto Networks Certified Network Security Engineer (PCNSE) (Exam)"
-                  career_impact: "Advanced threat prevention and perimeter architecture."
+              qualifications: []
         configuration-management:
           name: "Configuration Management"
           levels:
@@ -155,4 +169,10 @@ domain:
               qualifications:
                 - issuer: "AWS"
                   description: "AWS Certified DevOps Engineer - Professional (Exam)"
-                  career_impact: "Automating governance and compliance through code."
+                  career_impact: "Automating governance and compliance through code on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: DevOps Engineer Expert (AZ-400) (Exam)"
+                  career_impact: "Automating infrastructure deployment, compliance, and governance on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud DevOps Engineer (Exam)"
+                  career_impact: "Automating infrastructure delivery, monitoring, and compliance on Google Cloud."

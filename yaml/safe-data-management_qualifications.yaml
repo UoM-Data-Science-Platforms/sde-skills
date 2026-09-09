@@ -93,9 +93,15 @@ domain:
           levels:
             entry:
               qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Cloud Practitioner (Exam)"
+                  career_impact: "Basic concepts of AWS data services and cloud data workloads."
                 - issuer: "Microsoft"
                   description: "Microsoft Certified: Azure Data Fundamentals (DP-900) (Exam)"
                   career_impact: "Basic concepts of data workloads and ETL pipelines."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Digital Leader (Exam)"
+                  career_impact: "Foundational understanding of GCP data products and cloud data processing concepts."
             mid:
               qualifications:
                 - issuer: "AWS"
@@ -104,6 +110,9 @@ domain:
                 - issuer: "Microsoft"
                   description: "Microsoft Certified: Azure Data Engineer Associate (DP-203) (Exam)"
                   career_impact: "Implementing data solutions using Azure Synapse and Data Factory for TREs."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Data Engineer (Exam)"
+                  career_impact: "Designing and building data processing systems using BigQuery, Dataflow, and Dataproc."
             senior:
               qualifications:
                 - issuer: "Databricks"
@@ -117,8 +126,23 @@ domain:
                 - issuer: "AWS"
                   description: "AWS Certified Database - Specialty (Exam)"
                   career_impact: "Foundational and advanced knowledge of purpose-built cloud databases."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Data Fundamentals (DP-900) (Exam)"
+                  career_impact: "Understanding relational and non-relational database offerings in Microsoft Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Associate Cloud Engineer (Exam)"
+                  career_impact: "Deploying and managing GCP storage (Cloud Storage, Cloud SQL, Bigtable)."
             mid:
               qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing scalable cloud storage and database architecture on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Database Administrator Associate (DP-300) (Exam)"
+                  career_impact: "Managing operational databases and secure cloud storage in Azure environments."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Database Engineer (Exam)"
+                  career_impact: "Designing, building, and managing GCP database solutions for enterprise workloads."
                 - issuer: "Snowflake"
                   description: "Snowflake SnowPro Core Certification (Exam)"
                   career_impact: "Managing secure data warehousing solutions often adopted by regional SDEs."
@@ -181,10 +205,7 @@ domain:
             entry:
               qualifications: []
             mid:
-              qualifications:
-                - issuer: "Veeam"
-                  description: "Veeam Certified Engineer (VMCE) (Exam)"
-                  career_impact: "Implementing robust, immutable backup strategies to protect against ransomware."
+              qualifications: []
             senior:
               qualifications: []
         data-retention-disposal:
@@ -209,5 +230,11 @@ domain:
                 - issuer: "AWS"
                   description: "AWS Certified Solutions Architect - Associate (Exam)"
                   career_impact: "Planning and executing secure data migrations using AWS DataSync/Snowball."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Administrator Associate (AZ-104) (Exam)"
+                  career_impact: "Planning and executing cloud data migrations using Azure Data Box and Azure Storage Migration Service."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Architect (Exam)"
+                  career_impact: "Designing and managing secure data migration strategies using Transfer Appliance and Storage Transfer Service."
             senior:
               qualifications: []

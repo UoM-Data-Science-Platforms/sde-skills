@@ -28,10 +28,7 @@ domain:
             entry:
               qualifications: []
             mid:
-              qualifications:
-                - issuer: "ServiceNow"
-                  description: "ServiceNow Certified System Administrator (Exam)"
-                  career_impact: "Automating the approval and checking workflow processes."
+              qualifications: []
             senior:
               qualifications: []
         data-airlocks:
@@ -44,6 +41,12 @@ domain:
                 - issuer: "AWS"
                   description: "AWS Certified Security - Specialty (Exam)"
                   career_impact: "Implementing secure network boundaries and automated data export controls."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)"
+                  career_impact: "Configuring secure data perimeter, storage access controls, and automated egress protection."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Security Engineer (Exam)"
+                  career_impact: "Implementing VPC Service Controls and secure egress perimeters for data airlocks."
             senior:
               qualifications: []
         code-repositories:
