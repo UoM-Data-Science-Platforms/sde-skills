@@ -17,6 +17,9 @@ domain:
         coding practices that protect against common vulnerabilities, implementing comprehensive testing and quality assurance
         processes, and creating well-documented, reusable code that enhances maintainability while enabling knowledge sharing
         across development teams.'
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         software-development-lifecycle:
           id: software-development-lifecycle
@@ -31,18 +34,9 @@ domain:
               id: software-development-lifecycle-entry
               name: Entry Level
               skills:
-              - Explains basic SDLC concepts and follows established development processes
-              - Uses version control systems (e.g. Git) for code management and collaboration
+              - Understands basic SDLC concepts and can follow established development processes
+              - Familiar with version control systems like Git for code management
               - Can implement simple bug fixes and feature enhancements under supervision
-              core_concepts:
-              - topic: SDE Version Control
-                concepts:
-                - Git fundamentals
-                - branch management in regulated environments
-                search_terms:
-                - git workflows for health data
-                - reproducible analytical pipelines (RAP)
-                why: Ensures traceability of code changes accessing sensitive health data.
             mid:
               id: software-development-lifecycle-mid
               name: Mid Level
@@ -50,15 +44,6 @@ domain:
               - Proficient in applying SDLC methodologies appropriate to the project context
               - Independently manages code repositories and review processes
               - Designs and implements features with security and scalability in mind
-              core_concepts:
-              - topic: Secure CI/CD
-                concepts:
-                - Automated testing
-                - secure code review processes
-                search_terms:
-                - CI/CD for secure data environments
-                - github actions self-hosted runners
-                why: Prevents unauthorized code changes from entering the secure boundary.
             senior:
               id: software-development-lifecycle-senior
               name: Senior Level
@@ -66,16 +51,6 @@ domain:
               - Establishes SDLC best practices and processes for the organisation
               - Leads architectural decisions and ensures secure coding standards
               - Mentors team members on software engineering excellence
-              core_concepts:
-              - topic: Organizational SDLC Governance
-                concepts:
-                - Auditability
-                - change management
-                - compliance with NHS DSPT
-                search_terms:
-                - NHS Data Security and Protection Toolkit SDLC
-                - auditable SDLC processes
-                why: Provides the highest level of assurance that analytical software meets national health data standards.
         secure-coding-practices:
           id: secure-coding-practices
           name: Secure Coding Practices
@@ -89,22 +64,9 @@ domain:
               id: secure-coding-practices-entry
               name: Entry Level
               skills:
-              - Identifies common web and software security vulnerabilities (e.g. OWASP Top 10)
+              - Aware of common security vulnerabilities (e.g., OWASP Top 10)
               - Can apply basic input validation and error handling
               - Uses secure coding guidelines provided by the team
-              qualifications:
-              - issuer: ISC2
-                description: CSSLP (Certified Secure Software Lifecycle Professional) (Exam)
-                career_impact: Understanding secure coding practices from day one.
-              core_concepts:
-              - topic: Basic Vulnerability Awareness
-                concepts:
-                - OWASP Top 10
-                - input validation
-                search_terms:
-                - OWASP Top 10 healthcare
-                - input validation Python
-                why: Prevents injection attacks that could exfiltrate patient data.
             mid:
               id: secure-coding-practices-mid
               name: Mid Level
@@ -112,19 +74,6 @@ domain:
               - Proactively identifies and mitigates security vulnerabilities in code
               - Implements secure authentication, authorisation, and data protection mechanisms
               - Conducts code reviews with a focus on security aspects
-              qualifications:
-              - issuer: GIAC
-                description: GIAC Secure Software Programmer (GSSP) (Exam)
-                career_impact: Writing secure code for SDE portals and APIs.
-              core_concepts:
-              - topic: Data Protection in Code
-                concepts:
-                - Data pseudonymization
-                - encryption in transit/rest in code
-                search_terms:
-                - pseudonymization techniques python
-                - secure data handling practices
-                why: Protects personally identifiable information (PII) at the application layer.
             senior:
               id: secure-coding-practices-senior
               name: Senior Level
@@ -132,19 +81,6 @@ domain:
               - Develops security standards and coding guidelines for the organisation
               - Evaluates and selects appropriate security libraries and frameworks
               - Implements advanced security patterns for high-risk components
-              qualifications:
-              - issuer: EC-Council
-                description: CASE (Certified Application Security Engineer) (Exam)
-                career_impact: Leading secure application architecture and DevSecOps integration.
-              core_concepts:
-              - topic: Enterprise Security Standards
-                concepts:
-                - Zero-trust architecture in code
-                - threat modeling
-                search_terms:
-                - threat modeling health applications
-                - zero trust application design
-                why: Ensures the entire application ecosystem is resilient to advanced threats.
         testing-quality-assurance:
           id: testing-quality-assurance
           name: Testing & Quality Assurance
@@ -159,18 +95,8 @@ domain:
               name: Entry Level
               skills:
               - Creates basic unit tests for code components
-              - Uses automated testing frameworks and continuous integration (CI) pipelines
+              - Familiar with testing frameworks and continuous integration concepts
               - Can execute test plans and document results
-              qualifications: []
-              core_concepts:
-              - topic: Basic Unit Testing
-                concepts:
-                - Test-driven development basics
-                - pytest
-                search_terms:
-                - pytest basics
-                - unit testing analytical code
-                why: Ensures basic functionality of scripts handling health data.
             mid:
               id: testing-quality-assurance-mid
               name: Mid Level
@@ -178,19 +104,6 @@ domain:
               - Designs comprehensive test plans including unit, integration, and security testing
               - Implements automated testing pipelines and monitors code coverage
               - Analyses test results to improve code quality
-              qualifications:
-              - issuer: GitLab
-                description: GitLab Certified CI/CD Specialist (Exam)
-                career_impact: Building automated security testing (SAST/DAST) into deployment pipelines.
-              core_concepts:
-              - topic: Integration & Security Testing
-                concepts:
-                - DAST/SAST integration
-                - mocking sensitive data
-                search_terms:
-                - SAST in healthcare pipelines
-                - mocking patient data for tests
-                why: Validates that systems interact securely without exposing real data.
             senior:
               id: testing-quality-assurance-senior
               name: Senior Level
@@ -198,19 +111,6 @@ domain:
               - Establishes QA processes and standards across projects
               - Implements advanced testing methodologies for complex systems
               - Drives quality metrics and continuous improvement initiatives
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified DevOps Engineer - Professional (Exam)
-                career_impact: Enterprise CI/CD strategy and automation.
-              core_concepts:
-              - topic: QA Strategy & Compliance
-                concepts:
-                - Quality metrics
-                - ISO 13485 (Software as Medical Device) awareness
-                search_terms:
-                - ISO 13485 software validation
-                - QA metrics for SDEs
-                why: Establishes institutional trust in the software deployed within the SDE.
         microservices-api-design:
           id: microservices-api-design
           name: Microservices & API Design
@@ -224,19 +124,9 @@ domain:
               id: microservices-api-design-entry
               name: Entry Level
               skills:
-              - Explains microservices architecture principles and design patterns
-              - Interprets API documentation and schemas (e.g. OpenAPI / Swagger)
+              - Understands microservices architecture principles
+              - Familiar with API concepts and documentation (e.g., OpenAPI/Swagger)
               - Can develop and use RESTful APIs following established patterns
-              qualifications: []
-              core_concepts:
-              - topic: API Fundamentals
-                concepts:
-                - RESTful concepts
-                - API schemas
-                search_terms:
-                - OpenAPI specification
-                - REST API basics
-                why: Foundational knowledge for interacting with SDE services.
             mid:
               id: microservices-api-design-mid
               name: Mid Level
@@ -244,20 +134,6 @@ domain:
               - Designs microservice architectures with appropriate boundaries
               - Implements secure API gateways and authorisation mechanisms
               - Develops API versioning standards and documentation standards
-              qualifications:
-              - issuer: Postman
-                description: Postman API Professional (Exam)
-                career_impact: Developing and testing secure APIs for interoperability.
-              core_concepts:
-              - topic: Secure API Implementation
-                concepts:
-                - OAuth2
-                - JWT
-                - API Gateways
-                search_terms:
-                - OAuth2 for healthcare APIs
-                - securing REST APIs with JWT
-                why: Ensures only authorized researchers can query data endpoints.
             senior:
               id: microservices-api-design-senior
               name: Senior Level
@@ -265,20 +141,6 @@ domain:
               - Architects API frameworks and governance models
               - Establishes microservices best practices and standards
               - Leads API security initiatives and evaluates API management solutions
-              qualifications:
-              - issuer: MuleSoft
-                description: MuleSoft Certified Platform Architect (Exam)
-                career_impact: Architecting complex API networks and integration platforms (e.g., HL7 FHIR integration).
-              core_concepts:
-              - topic: API Governance
-                concepts:
-                - Service mesh
-                - rate limiting
-                - audit logging
-                search_terms:
-                - API governance in healthcare
-                - service mesh security
-                why: Provides systemic control and auditability across all internal microservices.
         code-documentation-reusability:
           id: code-documentation-reusability
           name: Code Documentation & Reusability
@@ -292,18 +154,9 @@ domain:
               id: code-documentation-reusability-entry
               name: Entry Level
               skills:
-              - Explains the importance of code documentation and comments
+              - Understands the importance of code documentation and comments
               - Follows established documentation patterns for the codebase
               - Can write basic comments explaining code functionality
-              core_concepts:
-              - topic: Code Readability
-                concepts:
-                - Docstrings
-                - basic Markdown
-                search_terms:
-                - Python docstrings standard
-                - writing good READMEs
-                why: Allows peers to understand analytical methods applied to data.
             mid:
               id: code-documentation-reusability-mid
               name: Mid Level
@@ -311,15 +164,6 @@ domain:
               - Creates comprehensive documentation that explains both how and why
               - Designs code for reusability with appropriate abstraction
               - Implements self-documenting code principles and clear naming conventions
-              core_concepts:
-              - topic: Technical Documentation
-                concepts:
-                - Architecture Decision Records (ADRs)
-                - self-documenting code
-                search_terms:
-                - How to write ADRs
-                - self-documenting code principles
-                why: Maintains a history of security and architecture decisions in the SDE.
             senior:
               id: code-documentation-reusability-senior
               name: Senior Level
@@ -327,16 +171,6 @@ domain:
               - Establishes documentation standards and best practices for the organisation
               - Develops methodologies for code reuse across projects and teams
               - Creates knowledge sharing policies and mentors others in documentation
-              core_concepts:
-              - topic: Knowledge Management Strategy
-                concepts:
-                - InnerSource
-                - documentation frameworks (e.g.
-                - Diátaxis)
-                search_terms:
-                - Diátaxis documentation framework
-                - InnerSource in regulated environments
-                why: Promotes secure code reuse across different health research projects.
         artefact-management:
           id: artefact-management
           name: Artefact Management
@@ -351,18 +185,9 @@ domain:
               id: artefact-management-entry
               name: Entry Level
               skills:
-              - Describes basic concepts of container registries, package repositories, and Helm charts
+              - Understands basic concepts of container registries, package repositories, and helm charts
               - Can access and use artefact repositories following established procedures
-              - Identifies vulnerability scanning tools and practices for container images and dependencies
-              core_concepts:
-              - topic: Artefact Basics
-                concepts:
-                - Container registries
-                - package managers
-                search_terms:
-                - Docker registry basics
-                - Python pip private registry
-                why: Enables retrieval of approved software packages.
+              - Familiar with vulnerability scanning concepts for software artefacts
             mid:
               id: artefact-management-mid
               name: Mid Level
@@ -370,15 +195,6 @@ domain:
               - Implements secure container registries and package repository management
               - Controls access to artefacts and scans for malicious packages and vulnerabilities
               - Manages helm chart repositories and software library distributions
-              core_concepts:
-              - topic: Secure Artefact Distribution
-                concepts:
-                - Vulnerability scanning (Trivy)
-                - signed images
-                search_terms:
-                - container vulnerability scanning
-                - signing docker images cosign
-                why: Prevents supply chain attacks from introducing malicious code into the SDE.
             senior:
               id: artefact-management-senior
               name: Senior Level
@@ -386,290 +202,14 @@ domain:
               - Develops strategies for artefact management and governance
               - Establishes automated scanning and compliance processes for all artefacts
               - Leads initiatives to enhance artefact security and supply chain integrity
-              core_concepts:
-              - topic: Supply Chain Security
-                concepts:
-                - Software Bill of Materials (SBOM)
-                - SLSA framework
-                search_terms:
-                - SLSA framework healthcare
-                - SBOM generation and management
-                why: Ensures end-to-end cryptographic verification of all software entering the environment.
       items:
-      - name: C++
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 3
-            entry: 1
-            mid: 1
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Docker Hub
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 3
-            mentions:
-            - SATRE Driver Project
-            - TRE-FX Driver Project
-            - CO-CONNECT / Hutch
-          jobs:
-            total: 28
-            entry: 3
-            mid: 13
-            senior: 12
-          radars:
-            score: 3/4
-            status: 'Adopt / #1 Most Used Container Tool (78%)'
-      - name: Git
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - NHS DSPT / DTAC
-            - NHS England SDE
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 35
-            entry: 9
-            mid: 15
-            senior: 11
-          radars:
-            score: 1/4
-            status: Adopt (Airlock Secret Scanner)
-      - name: GitHub
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 35
-            entry: 9
-            mid: 15
-            senior: 11
-          radars:
-            score: 2/4
-            status: '#1 CI/CD Platform (48% market share)'
-      - name: JUnit
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 1/4
-            status: '#1 Java Testing Standard'
-      - name: Markdown
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: OpenAPI / Swagger (OAS 3.1)
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-            - NHS England SDE
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 2/4
-            status: Adopt (Global REST Contract Standard)
-      - name: OWASP Top 10
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - ISO/IEC 27001
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 1
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Postman
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 1/4
-            status: '#1 API Testing Tool'
-      - name: PyTest
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 7
-            entry: 1
-            mid: 2
-            senior: 4
-          radars:
-            score: 2/4
-            status: '#1 Python Testing Framework (82% adoption)'
-      - name: Python
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 2
-            mentions:
-            - SACRO Driver Project
-            - TREvolution Theme 2
-          jobs:
-            total: 49
-            entry: 9
-            mid: 21
-            senior: 19
-          radars:
-            score: 2/4
-            status: '#1 Most Popular Language for Data & AI (85%+)'
-      - name: R
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 2
-            mentions:
-            - SATRE Driver Project
-            - TREvolution Theme 1
-          jobs:
-            total: 10
-            entry: 0
-            mid: 4
-            senior: 6
-          radars:
-            score: 3/4
-            status: Graduated / Adopt (#1 Container Orchestrator)
-      - name: REST
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 5
-            entry: 0
-            mid: 3
-            senior: 2
-          radars:
-            score: 1/4
-            status: '#1 Web API Protocol'
-      - name: SBOM (CycloneDX / SPDX)
-        role: Enforces rigorous research software engineering (RSE) practices, automated testing, secure coding, and API standards.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
+      - GitHub
+      - Git
+      - Postman
+      - JUnit
+      - REST
+      - Markdown
+      - Docker Hub
     infrastructure-deployment:
       id: infrastructure-deployment
       name: Infrastructure & Deployment
@@ -679,6 +219,9 @@ domain:
         containerisation and orchestration technologies that enable portable, isolated application environments, and creating
         secure network architectures with proper segmentation and access controls that collectively provide the technical
         infrastructure needed for protected data processing and analysis.'
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         cloud-infrastructure-management:
           id: cloud-infrastructure-management
@@ -693,22 +236,9 @@ domain:
               id: cloud-infrastructure-management-entry
               name: Entry Level
               skills:
-              - Identifies major cloud service providers (AWS, Azure, GCP) and their core infrastructure offerings
+              - Familiar with major cloud providers (AWS, Azure, GCP) and their core services
               - Can provision and configure basic cloud resources following established patterns
-              - Explains infrastructure as code (IaC) principles and workflows
-              qualifications:
-              - issuer: AWS / Microsoft
-                description: AWS Certified Cloud Practitioner / Azure Fundamentals (Exam)
-                career_impact: Baseline cloud knowledge.
-              core_concepts:
-              - topic: Cloud Fundamentals
-                concepts:
-                - Basic AWS/Azure/GCP resources
-                - IAM basics
-                search_terms:
-                - Cloud IAM basics
-                - Azure fundamental concepts
-                why: Basic understanding of where health data resides.
+              - Understands infrastructure as code concepts
             mid:
               id: cloud-infrastructure-management-mid
               name: Mid Level
@@ -716,23 +246,6 @@ domain:
               - Designs and implements cloud architectures following security best practices
               - Proficient with infrastructure as code tools (Terraform, CloudFormation, etc.)
               - Implements monitoring and scaling solutions for cloud resources
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Solutions Architect - Associate (Exam)
-                career_impact: Designing robust, secure cloud environments for TREs.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Administrator Associate (Exam)'
-                career_impact: Managing Azure-based SDE infrastructure.
-              core_concepts:
-              - topic: Infrastructure as Code (IaC)
-                concepts:
-                - Terraform
-                - declarative provisioning
-                - state management
-                search_terms:
-                - Terraform state management best practices
-                - IaC for secure environments
-                why: Ensures environments are reproducible and configuration changes are audited.
             senior:
               id: cloud-infrastructure-management-senior
               name: Senior Level
@@ -740,26 +253,6 @@ domain:
               - Architects enterprise-scale cloud solutions with high availability and security
               - Develops cloud governance frameworks and cost optimisation approaches
               - Leads cloud transformation initiatives and capacity planning
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Solutions Architect - Professional (Exam)
-                career_impact: Architecting complex, multi-account landing zones for sensitive data.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Solutions Architect Expert (Exam)'
-                career_impact: Enterprise architecture for national-scale Azure SDEs.
-              - issuer: The Open Group
-                description: TOGAF 9 Certification (Exam)
-                career_impact: Standardizing enterprise architecture across federated platforms.
-              core_concepts:
-              - topic: Enterprise Cloud Architecture
-                concepts:
-                - Multi-account strategies
-                - landing zones
-                - FinOps
-                search_terms:
-                - AWS Landing Zone healthcare
-                - cloud governance frameworks
-                why: Provides isolated, scalable, and cost-effective tenant environments for different research projects.
         containerisation-orchestration:
           id: containerisation-orchestration
           name: Containerisation & Orchestration
@@ -773,22 +266,9 @@ domain:
               id: containerisation-orchestration-entry
               name: Entry Level
               skills:
-              - Builds and runs basic containers using standard containerisation tools
-              - Builds container images with Docker and manages images in container registries
+              - Understands container concepts and can build/run basic containers
+              - Familiar with Docker and container registries
               - Can deploy containerised applications following established patterns
-              qualifications:
-              - issuer: Docker
-                description: Docker Certified Associate (DCA) (Exam)
-                career_impact: Foundational container knowledge for packaging research applications safely.
-              core_concepts:
-              - topic: Containerization Fundamentals
-                concepts:
-                - Container isolation (namespaces/cgroups)
-                - images vs containers
-                search_terms:
-                - How container namespaces and cgroups work
-                - Docker basics
-                why: Crucial for securely isolating and scaling researcher workloads.
             mid:
               id: containerisation-orchestration-mid
               name: Mid Level
@@ -796,20 +276,6 @@ domain:
               - Designs container-based architectures and multi-container applications
               - Implements container orchestration using Kubernetes or similar platforms
               - Creates and manages CI/CD pipelines for containerised applications
-              qualifications:
-              - issuer: CNCF
-                description: Certified Kubernetes Administrator (CKA) (Practical Exam)
-                career_impact: Managing secure K8s clusters for running analytical workloads.
-              core_concepts:
-              - topic: Kubernetes Orchestration
-                concepts:
-                - Pods
-                - deployments
-                - RBAC in K8s
-                search_terms:
-                - Kubernetes RBAC best practices
-                - K8s network policies
-                why: Manages complex analytical workloads while enforcing network boundaries.
             senior:
               id: containerisation-orchestration-senior
               name: Senior Level
@@ -817,19 +283,6 @@ domain:
               - Designs enterprise-scale container orchestration strategy
               - Implements advanced Kubernetes features for security, scaling, and resilience
               - Establishes container security scanning and compliance processes
-              qualifications:
-              - issuer: CNCF
-                description: Certified Kubernetes Security Specialist (CKS) (Practical Exam)
-                career_impact: Securing containerized health workloads against advanced threats.
-              core_concepts:
-              - topic: Advanced K8s Security
-                concepts:
-                - Pod Security Standards
-                - OPA Gatekeeper
-                search_terms:
-                - OPA Gatekeeper Kubernetes
-                - Kubernetes cluster security hardening
-                why: Hardens the orchestration layer against container escape and lateral movement.
         network-architecture:
           id: network-architecture
           name: Network Architecture
@@ -843,23 +296,9 @@ domain:
               id: network-architecture-entry
               name: Entry Level
               skills:
-              - Explains core networking concepts (e.g. IP addressing, subnets, routing, DNS)
-              - Explains network security controls, firewall rules, and security group configurations
+              - Understands basic networking concepts (IP addressing, subnets, routing)
+              - Familiar with network security principles and firewall concepts
               - Can configure simple network settings following established guidelines
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA Network+ (Exam)
-                career_impact: Basic networking concepts.
-              core_concepts:
-              - topic: Network Basics
-                concepts:
-                - IP addressing
-                - subnets
-                - basic firewalls
-                search_terms:
-                - CIDR notation basics
-                - Network security groups
-                why: Understanding how data travels within the environment.
             mid:
               id: network-architecture-mid
               name: Mid Level
@@ -867,23 +306,6 @@ domain:
               - Designs secure network architectures with appropriate segmentation
               - Implements VPCs, network security groups, and access controls
               - Troubleshoots network-related issues and performance bottlenecks
-              qualifications:
-              - issuer: Cisco
-                description: Cisco Certified Network Associate (CCNA) (Exam)
-                career_impact: Core routing, switching, and VLAN segmentation.
-              - issuer: AWS
-                description: AWS Certified Advanced Networking - Specialty (Exam)
-                career_impact: Designing complex VPCs, Transit Gateways, and secure hybrid connectivity.
-              core_concepts:
-              - topic: Secure Network Segmentation
-                concepts:
-                - VPCs
-                - PrivateLink
-                - egress controls
-                search_terms:
-                - AWS PrivateLink healthcare
-                - egress filtering for SDEs
-                why: Prevents unauthorized data exfiltration to the internet.
             senior:
               id: network-architecture-senior
               name: Senior Level
@@ -891,19 +313,6 @@ domain:
               - Architects complex network solutions for multi-environment deployments
               - Develops network security policies and implements defense-in-depth
               - Leads network transformation initiatives and capacity planning
-              qualifications:
-              - issuer: Cisco
-                description: Cisco Certified Network Professional (CCNP) Enterprise (Exam)
-                career_impact: Enterprise network architecture for hospital/SDE connectivity.
-              core_concepts:
-              - topic: Advanced Network Security
-                concepts:
-                - Zero Trust Network Access (ZTNA)
-                - IDS/IPS integration
-                search_terms:
-                - ZTNA implementation architecture
-                - network defense in depth
-                why: Protects the SDE boundary and intra-environment traffic against sophisticated threats.
         encryption-key-management:
           id: encryption-key-management
           name: Encryption & Key Management
@@ -917,18 +326,9 @@ domain:
               id: encryption-key-management-entry
               name: Entry Level
               skills:
-              - Explains encryption fundamentals and protections for data at rest and in transit
+              - Understands basic encryption concepts (at rest, in transit)
               - Can apply encryption using standard tools and libraries
               - Follows procedures for handling encryption keys
-              core_concepts:
-              - topic: Encryption Fundamentals
-                concepts:
-                - Symmetric vs Asymmetric
-                - TLS basics
-                search_terms:
-                - Data at rest vs transit
-                - TLS 1.3 basics
-                why: Core understanding of how sensitive data is kept confidential.
             mid:
               id: encryption-key-management-mid
               name: Mid Level
@@ -936,16 +336,6 @@ domain:
               - Implements encryption for data at rest and in transit
               - Selects and configures secure encryption algorithms
               - Manages encryption keys using secure key management systems
-              core_concepts:
-              - topic: Applied Key Management
-                concepts:
-                - KMS
-                - secret managers
-                - key rotation
-                search_terms:
-                - AWS KMS key rotation
-                - managing secrets in CI/CD
-                why: Ensures cryptographic keys are not hardcoded and are managed securely.
             senior:
               id: encryption-key-management-senior
               name: Senior Level
@@ -953,379 +343,27 @@ domain:
               - Develops enterprise encryption and key management frameworks
               - Establishes governance for key lifecycle and access controls
               - Leads initiatives to enhance encryption and key management practices
-              core_concepts:
-              - topic: Enterprise Cryptography
-                concepts:
-                - HSM (Hardware Security Modules)
-                - BYOK (Bring Your Own Key)
-                search_terms:
-                - HSM for healthcare data
-                - BYOK architectures in cloud
-                why: Meets the highest compliance requirements for patient data sovereignty and control.
-      items:
-      - name: AWS CLI
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 8
-            entry: 0
-            mid: 2
-            senior: 6
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: AWS Console
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 8
-            entry: 0
-            mid: 2
-            senior: 6
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Azure CLI
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Azure Portal
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: CloudFormation
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Docker
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions: &id001
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 3
-            mentions: &id002
-            - SATRE Driver Project
-            - TRE-FX Driver Project
-            - CO-CONNECT / Hutch
-          jobs:
-            total: 28
-            entry: 3
-            mid: 13
-            senior: 12
-          radars:
-            score: 3/4
-            status: 'Adopt / #1 Most Used Container Tool (78%)'
-      - name: Docker CLI
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions: *id001
-          projects:
-            count: 3
-            mentions: *id002
-          jobs:
-            total: 28
-            entry: 3
-            mid: 13
-            senior: 12
-          radars:
-            score: 3/4
-            status: 'Adopt / #1 Most Used Container Tool (78%)'
-      - name: Google Cloud Console
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Google Cloud SDK
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Harbor
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 1/4
-            status: Graduated (Secure Container Registry)
-      - name: Helm
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 2/4
-            status: Graduated / Adopt (K8s Package Manager)
-      - name: Kubernetes
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 10
-            entry: 0
-            mid: 4
-            senior: 6
-          radars:
-            score: 3/4
-            status: Graduated / Adopt (#1 Container Orchestrator)
-      - name: Linux
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 20
-            entry: 4
-            mid: 10
-            senior: 6
-          radars:
-            score: 1/4
-            status: '#1 Cloud & Server OS (88%)'
-      - name: OpenTofu
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 2
-            mentions:
-            - SATRE Driver Project
-            - TREvolution Theme 1
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 2/4
-            status: Adopt / Trial (Open Source IaC Standard)
-      - name: Podman
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 2/4
-            status: Trial / Adopt (Rootless Container Runtime)
-      - name: Terraform
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 2
-            mentions:
-            - SATRE Driver Project
-            - TREvolution Theme 1
-          jobs:
-            total: 15
-            entry: 1
-            mid: 5
-            senior: 9
-          radars:
-            score: 2/4
-            status: '#1 Most Used IaC Tool (35% adoption)'
-      - name: TLS/SSL
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 4
-            entry: 0
-            mid: 2
-            senior: 2
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: VMware ESXi
-        role: Manages declarative infrastructure automation, container registries, and scalable compute clusters.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 3
-            entry: 0
-            mid: 1
-            senior: 2
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
     system-architecture:
       id: system-architecture
       name: System Architecture
       description: 'System Architecture establishes the foundational design principles for secure, scalable, and maintainable
         research environments.
 
-        This subdomain encompasses creating secure environment designs with defence-in-depth approaches, developing microservices
-        and API architectures that enable modular and flexible systems, implementing approaches for scalability and performance
-        under varying workloads, creating robust solutions that meet critical requirements, and adopting component-based software
-        engineering (CBSE) practices that promote reusability and maintainability.'
+        This subdomain encompasses creating secure environment designs with [defense-in-depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))
+        approaches, developing microservices and API architectures that enable modular and flexible systems, implementing
+        approaches for scalability and performance under varying workloads, creating robust solutions that meet critical requirements,
+        and adopting [component-based software engineering (CBSE)](https://en.wikipedia.org/wiki/Component-based_software_engineering)
+        practices that promote reusability and maintainability.'
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         secure-environment-design:
           id: secure-environment-design
           name: Secure Environment Design
           description: 'Creates system designs that prioritise data security and privacy, compliance with 5-safes and SATRE.
 
-            Involves understanding principles of secure design, applying defence-in-depth and least privilege concepts, documenting
+            Involves understanding principles of secure design, applying defense-in-depth and least privilege concepts, documenting
             environments, implementing appropriate controls, evaluating security implications, architecting secure analytics
             environments, developing standards, and leading security architecture reviews and remediation.'
           levels:
@@ -1333,20 +371,9 @@ domain:
               id: secure-environment-design-entry
               name: Entry Level
               skills:
-              - Explains core principles of secure environment design
-              - Applies defence-in-depth principles and least privilege access controls
+              - Understands principles of secure environment design
+              - Familiar with defense-in-depth and least privilege concepts
               - Can document existing secure environments and their components
-              qualifications: []
-              core_concepts:
-              - topic: Five Safes Framework
-                concepts:
-                - Safe settings
-                - safe data
-                - safe people
-                search_terms:
-                - Five Safes framework ONS
-                - TRE design principles
-                why: The foundational policy framework for UK Secure Data Environments.
             mid:
               id: secure-environment-design-mid
               name: Mid Level
@@ -1354,19 +381,6 @@ domain:
               - Designs secure environments incorporating appropriate controls
               - Implements security patterns such as zero trust architecture
               - Evaluates security implications of architectural decisions
-              qualifications:
-              - issuer: Palo Alto Networks
-                description: Palo Alto Networks Certified Network Security Administrator (PCNSA) (Exam)
-                career_impact: Managing Next-Gen Firewalls protecting SDE perimeters.
-              core_concepts:
-              - topic: Trusted Research Environments
-                concepts:
-                - Air-gapping
-                - VDI (Virtual Desktop Infrastructure) for research
-                search_terms:
-                - VDI for secure research
-                - NHS TRE architecture
-                why: Translates policy into technical boundary controls.
             senior:
               id: secure-environment-design-senior
               name: Senior Level
@@ -1374,18 +388,6 @@ domain:
               - Architects secure data environments
               - Develops architectural principles and standards for secure environments
               - Leads security architecture reviews and remediation efforts
-              qualifications:
-              - issuer: Palo Alto Networks
-                description: Palo Alto Networks Certified Network Security Engineer (PCNSE) (Exam)
-                career_impact: Advanced threat prevention and perimeter architecture.
-              core_concepts:
-              - topic: SATRE Specification
-                concepts:
-                - Standardised Architecture for Trusted Research Environments
-                search_terms:
-                - SATRE specification TRE
-                - architecting SDE for NHS DSPT
-                why: Drives national standardization and compliance across SDE implementations.
         scalability-performance:
           id: scalability-performance
           name: Scalability & Performance
@@ -1399,18 +401,9 @@ domain:
               id: scalability-performance-entry
               name: Entry Level
               skills:
-              - Identifies basic performance concepts, bottlenecks, and system metrics
-              - Differentiates between horizontal and vertical scaling techniques for distributed workloads
+              - Understands basic performance concepts and metrics
+              - Familiar with horizontal and vertical scaling approaches
               - Can perform basic performance testing and identify bottlenecks
-              core_concepts:
-              - topic: Performance Basics
-                concepts:
-                - Resource monitoring
-                - vertical vs horizontal scaling
-                search_terms:
-                - cloud resource monitoring basics
-                - horizontal vs vertical scaling
-                why: Helps researchers size their compute environments appropriately.
             mid:
               id: scalability-performance-mid
               name: Mid Level
@@ -1418,16 +411,6 @@ domain:
               - Designs scalable architectures for varying workloads
               - Implements caching techniques and performance optimisations
               - Conducts load testing and performance analysis
-              core_concepts:
-              - topic: Data Processing Scalability
-                concepts:
-                - Caching
-                - distributed processing (Spark
-                - Dask)
-                search_terms:
-                - optimizing PySpark performance
-                - Dask for healthcare data
-                why: Enables efficient processing of large genomic or longitudinal health datasets.
             senior:
               id: scalability-performance-senior
               name: Senior Level
@@ -1435,15 +418,6 @@ domain:
               - Architects high-performance systems for demanding workloads
               - Develops capacity planning and scaling methodologies
               - Leads performance optimisation initiatives across systems
-              core_concepts:
-              - topic: Enterprise Capacity Planning
-                concepts:
-                - Cost-performance optimization
-                - highly available architectures
-                search_terms:
-                - capacity planning for cloud scale
-                - FinOps in research environments
-                why: Ensures the SDE can support institutional demands without cost overruns.
         enterprise-solution-development:
           id: enterprise-solution-development
           name: Enterprise Solution Development
@@ -1457,19 +431,9 @@ domain:
               id: enterprise-solution-development-entry
               name: Entry Level
               skills:
-              - Identifies quality of service criteria for business-critical services
-              - Identifies enterprise architecture patterns and standard integration models
+              - Understands quality of service criteria for business-critical services
+              - Familiar with enterprise architecture concepts and patterns
               - Can explain the trade-offs between different quality attributes (availability, reliability, etc.)
-              core_concepts:
-              - topic: System Requirements
-                concepts:
-                - Availability
-                - reliability
-                - fault tolerance basics
-                search_terms:
-                - system reliability basics
-                - understanding SLA and SLO
-                why: Awareness that research platforms must be stable and accessible.
             mid:
               id: enterprise-solution-development-mid
               name: Mid Level
@@ -1477,15 +441,6 @@ domain:
               - Designs solutions that meet enterprise quality of service requirements
               - Implements patterns for reliability, resilience, and scalability
               - Makes informed recommendations regarding QoS priorities and trade-offs
-              core_concepts:
-              - topic: Resilient Design
-                concepts:
-                - Multi-AZ deployments
-                - backup and recovery strategies
-                search_terms:
-                - disaster recovery in healthcare IT
-                - multi-AZ architecture AWS
-                why: Protects against data loss and minimizes downtime for researchers.
             senior:
               id: enterprise-solution-development-senior
               name: Senior Level
@@ -1493,15 +448,6 @@ domain:
               - Architects large-scale solutions balancing QoS attributes with organisational constraints
               - Develops reference architectures for enterprise solutions
               - Leads initiatives to enhance the quality and reliability of enterprise systems
-              core_concepts:
-              - topic: Enterprise Architecture
-                concepts:
-                - TOGAF concepts
-                - aligning IT with research strategy
-                search_terms:
-                - enterprise architecture in healthcare
-                - TOGAF basics
-                why: Aligns the SDE technical roadmap with national health data strategies.
         component-based-architecture:
           id: component-based-architecture
           name: Component-Based Architecture
@@ -1515,18 +461,9 @@ domain:
               id: component-based-architecture-entry
               name: Entry Level
               skills:
-              - Explains component-based design principles and their benefits
-              - Selects and integrates reusable components from established software libraries
+              - Understands component-based design principles and benefits
+              - Familiar with component libraries and frameworks
               - Can develop simple components following established patterns
-              core_concepts:
-              - topic: Modularity
-                concepts:
-                - DRY principle
-                - code modularity
-                search_terms:
-                - DRY principle in coding
-                - benefits of modular architecture
-                why: Reduces duplication in analytical scripts.
             mid:
               id: component-based-architecture-mid
               name: Mid Level
@@ -1534,15 +471,6 @@ domain:
               - Designs modular, reusable components with well-defined interfaces
               - Implements component composition approaches for complex systems
               - Optimises components for maintainability and testability
-              core_concepts:
-              - topic: Reusable Infrastructure
-                concepts:
-                - Terraform modules
-                - Helm charts
-                search_terms:
-                - writing reusable Terraform modules
-                - Helm chart best practices
-                why: Standardizes deployments of analytical workspaces (e.g., Jupyter, RStudio).
             senior:
               id: component-based-architecture-senior
               name: Senior Level
@@ -1550,15 +478,6 @@ domain:
               - Leads on enterprise component architecture design
               - Establishes component design standards and best practices
               - Leads initiatives to enhance component reuse and maintainability
-              core_concepts:
-              - topic: Platform Engineering
-                concepts:
-                - Internal Developer Platforms (IDP)
-                - golden paths
-                search_terms:
-                - Platform engineering for research
-                - golden paths in software engineering
-                why: Provides researchers with self-service, secure-by-default capabilities.
         vulnerability-patch-management:
           id: vulnerability-patch-management
           name: Vulnerability & Patch Management
@@ -1572,18 +491,9 @@ domain:
               id: vulnerability-patch-management-entry
               name: Entry Level
               skills:
-              - Describes vulnerability management lifecycles and standard patching processes
+              - Understands basic vulnerability concepts and patching processes
               - Can use vulnerability scanning tools under supervision
               - Applies security updates following established procedures
-              core_concepts:
-              - topic: Patching Basics
-                concepts:
-                - CVEs
-                - OS updates
-                search_terms:
-                - what is a CVE
-                - importance of OS patching
-                why: Understanding why environments undergo maintenance.
             mid:
               id: vulnerability-patch-management-mid
               name: Mid Level
@@ -1591,16 +501,6 @@ domain:
               - Implements vulnerability scanning and patch management processes
               - Triages and remediates vulnerabilities based on risk
               - Automates patch deployment and monitors compliance
-              core_concepts:
-              - topic: Automated Remediation
-                concepts:
-                - Vulnerability scanning tools (Nessus
-                - Qualys)
-                - automated patching
-                search_terms:
-                - automated patching strategies cloud
-                - Nessus vulnerability scanning
-                why: Ensures the SDE infrastructure remains secure against known exploits.
             senior:
               id: vulnerability-patch-management-senior
               name: Senior Level
@@ -1608,15 +508,6 @@ domain:
               - Develops vulnerability management initiatives
               - Establishes automated patching frameworks and governance
               - Leads vulnerability and patch management maturity initiatives
-              core_concepts:
-              - topic: Risk & Compliance Governance
-                concepts:
-                - Risk acceptance frameworks
-                - SLA for critical patches
-                search_terms:
-                - vulnerability management SLA
-                - risk acceptance in healthcare IT
-                why: Balances the need for absolute security with research continuity.
         configuration-management:
           id: configuration-management
           name: Configuration Management
@@ -1630,19 +521,9 @@ domain:
               id: configuration-management-entry
               name: Entry Level
               skills:
-              - Describes configuration management principles and versioning of system state
+              - Understands configuration management concepts and tools
               - Can apply basic configuration changes using automation tools
               - Follows established configuration procedures
-              qualifications: []
-              core_concepts:
-              - topic: Configuration Basics
-                concepts:
-                - Environment variables
-                - config files
-                search_terms:
-                - managing environment variables securely
-                - 12 factor app config
-                why: Keeps secrets and settings out of source code.
             mid:
               id: configuration-management-mid
               name: Mid Level
@@ -1650,20 +531,6 @@ domain:
               - Implements configuration management tools and processes
               - Regularly verifies configuration compliance
               - Automates remediation of non-compliant configurations
-              qualifications:
-              - issuer: HashiCorp
-                description: 'HashiCorp Certified: Terraform Associate (Exam)'
-                career_impact: De facto standard for provisioning secure, repeatable SDE infrastructure.
-              core_concepts:
-              - topic: Configuration Drift Management
-                concepts:
-                - Ansible
-                - Chef
-                - desired state configuration
-                search_terms:
-                - managing configuration drift
-                - Ansible for server configuration
-                why: Maintains consistency and compliance across SDE virtual machines.
             senior:
               id: configuration-management-senior
               name: Senior Level
@@ -1671,20 +538,6 @@ domain:
               - Develops configuration management frameworks and standards
               - Establishes processes for rapid replacement of non-compliant systems
               - Leads configuration management improvement initiatives
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified DevOps Engineer - Professional (Exam)
-                career_impact: Automating governance and compliance through code.
-              core_concepts:
-              - topic: Immutable Infrastructure
-                concepts:
-                - Packer
-                - GitOps (ArgoCD
-                - Flux)
-                search_terms:
-                - GitOps with ArgoCD
-                - immutable infrastructure benefits
-                why: Eliminates configuration drift and ensures high auditability of the SDE.
         high-performance-computing:
           id: high-performance-computing
           name: High Performance Computing
@@ -1699,18 +552,9 @@ domain:
               id: high-performance-computing-entry
               name: Entry Level
               skills:
-              - Describes fundamental concepts of HPC, GPU computing, and cluster architectures
+              - Understands basic concepts of HPC, GPU computing, and cluster architectures
               - Can configure access to shared compute resources following established procedures
-              - Submits batch compute jobs and specifies resource allocations in workload schedulers (e.g. Slurm)
-              core_concepts:
-              - topic: HPC Basics
-                concepts:
-                - Slurm workload manager
-                - batch processing
-                search_terms:
-                - Slurm job submission basics
-                - HPC batch processing
-                why: Enables researchers to run compute-intensive tasks.
+              - Familiar with job scheduling systems and resource allocation concepts
             mid:
               id: high-performance-computing-mid
               name: Mid Level
@@ -1718,345 +562,18 @@ domain:
               - Implements secure management of advanced compute resources and accelerators
               - Integrates with existing university HPC infrastructure and capacity
               - Ensures proper segregation of users and data in shared computing environments
-              core_concepts:
-              - topic: Specialized Workloads
-                concepts:
-                - GPU optimization
-                - parallel filesystems (Lustre
-                - GPFS)
-                search_terms:
-                - optimizing GPU workloads AI
-                - Lustre filesystem basics
-                why: Supports advanced machine learning models on health data.
             senior:
               id: high-performance-computing-senior
               name: Senior Level
               skills:
               - Develops methodologies for advanced computing infrastructure and capacity planning
               - Establishes governance for secure multi-tenant HPC resource usage
-              - Leads initiatives to enhance computing capabilities and optimise resource utilisation
-              core_concepts:
-              - topic: Secure Multi-tenant HPC
-                concepts:
-                - HPC network segregation
-                - confidential computing (TEE)
-                search_terms:
-                - Trusted Execution Environments HPC
-                - securing multi-tenant HPC clusters
-                why: Ensures that extremely sensitive ML workloads remain isolated on shared hardware.
+              - Leads initiatives to enhance computing capabilities and optimize resource utilisation
       items:
-      - name: Ansible
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 6
-            entry: 1
-            mid: 2
-            senior: 3
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Apache JMeter
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Ceph Storage
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 3
-            entry: 0
-            mid: 2
-            senior: 1
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Five Safes RO-Crate
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-            - ONS SDC
-          projects:
-            count: 2
-            mentions:
-            - TRE-FX Driver Project
-            - TREvolution Theme 3
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: GA4GH TES & WES APIs
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 2
-            mentions:
-            - TRE-FX Driver Project
-            - TREvolution Theme 3
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: NCSC Cyber Security Design Principles
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Nessus
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - NHS DSPT / DTAC
-            - ISO/IEC 27001
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 2
-            entry: 0
-            mid: 1
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Nextflow
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - DARE UK FAB
-            - SATRE Specification
-          projects:
-            count: 2
-            mentions:
-            - TRE-FX Driver Project
-            - TREvolution Theme 3
-          jobs:
-            total: 2
-            entry: 0
-            mid: 1
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: React
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Shell scripts
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Singularity / Apptainer
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 2
-            mentions:
-            - TRE-FX Driver Project
-            - SATRE Driver Project
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: SLURM
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 1
-            mentions: &id003
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 9
-            entry: 1
-            mid: 3
-            senior: 5
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Slurm Workload Manager
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions: *id003
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 9
-            entry: 1
-            mid: 3
-            senior: 5
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Snakemake
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - DARE UK FAB
-            - SATRE Specification
-          projects:
-            count: 2
-            mentions:
-            - TRE-FX Driver Project
-            - TREvolution Theme 3
-          jobs:
-            total: 2
-            entry: 0
-            mid: 1
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: UML
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: WfExS-backend
-        role: Delivers high-performance scientific batch computing, scalable bioinformatics workflows, and server hardening.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 1
-            mentions:
-            - TRE-FX Driver Project
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
+      - Apache JMeter
+      - UML
+      - React
+      - Nessus
+      - Ansible
+      - shell scripts
+      - SLURM
