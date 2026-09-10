@@ -47,7 +47,8 @@ model, with a sixth cross-cutting governance domain:
 
 All framework data is loaded directly from the website endpoint `${{data_url}}<filename>.yaml`.
 
-- **Master Skills Index**: `${{data_url}}skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Master Skills Index**: `${{agent_url}}skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Assessment Playbooks**: `${{agent_url}}assessment_playbooks.md` — guidance on how to assess roles against the framework.
 - **Domain YAML Files**: Fetch individual domain files for complete descriptions, competencies, levels, qualifications, and core concepts:
   - `${{data_url}}safe_access_identity.yaml`
   - `${{data_url}}safe_data_management.yaml`

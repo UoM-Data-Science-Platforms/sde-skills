@@ -125,15 +125,35 @@ PLAYBOOKS_SRC = REPO_ROOT / "skills" / "sde-skill" / "assessment_playbooks.md"
 def main():
     parser = argparse.ArgumentParser(description="Build sde-skill reference files.")
     parser.add_argument(
-        "--data-url",
-        default="https://sdertp.org/data/",
+        "--base-url",
+        default="https://sdertp.org/",
         help="Base URL where data files are hosted (default: https://sdertp.org/data/)",
+    )
+    parser.add_argument(
+        "--data-path",
+        default="data",
+        help="Base URL where data files are hosted (default: https://sdertp.org/data/)",
+    )
+    parser.add_argument(
+        "--agent-path",
+        default="data/sde-skill",
+        help="Path to the agent (default: sde-skill)",
     )
     args = parser.parse_args()
 
-    data_url = args.data_url
-    if not data_url.endswith("/"):
-        data_url += "/"
+    base_url = args.base_url
+    if not base_url.endswith("/"):
+        base_url += "/"
+    
+    data_path = args.data_path
+    if not data_path.endswith("/"):
+        data_path += "/"
+    data_url = base_url + data_path
+
+    agent_path = args.agent_path
+    if not agent_path.endswith("/"):
+        agent_path += "/"
+    agent_url = base_url + agent_path
 
     domains = load_domains()
     REFERENCES_DIR.mkdir(parents=True, exist_ok=True)
@@ -151,13 +171,13 @@ def main():
     print(f"Wrote {mapping_out.relative_to(REPO_ROOT)}")
 
     if SKILL_SRC.exists():
-        skill_content = SKILL_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url)
+        skill_content = SKILL_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url).replace("${{agent_url}}", agent_url)
         skill_out = REFERENCES_DIR / "SKILL.md"
         skill_out.write_text(skill_content, encoding="utf-8")
         print(f"Wrote {skill_out.relative_to(REPO_ROOT)}")
 
     if PLAYBOOKS_SRC.exists():
-        playbooks_content = PLAYBOOKS_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url)
+        playbooks_content = PLAYBOOKS_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url).replace("${{agent_url}}", agent_url)
         playbooks_out = REFERENCES_DIR / "assessment_playbooks.md"
         playbooks_out.write_text(playbooks_content, encoding="utf-8")
         print(f"Wrote {playbooks_out.relative_to(REPO_ROOT)}")
