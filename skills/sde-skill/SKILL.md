@@ -43,55 +43,43 @@ model, with a sixth cross-cutting governance domain:
 | 5 | Safe Projects & Operations (`safe-projects-operations`) | Project facilitation, service management, researcher support, training |
 | 6 | Safe Technology & Engineering (`safe-technology-engineering`) | Infrastructure, cloud, software engineering, architecture |
 
-## References — load them progressively
+## Data Sources — Fetching Framework Data
 
-The full framework is large, so don't load everything up front:
+All framework data is loaded directly from the website endpoint `${{data_url}}<filename>.yaml`.
 
-1. **Always start with `references/framework_index.md`** — a compact,
-   auto-generated map of every domain, subdomain, and competency with
-   one-line descriptions. This is usually enough to triage which domains
-   matter for the task and to answer broad "what's in the framework"
-   questions.
-2. **Load only the relevant domain files** from `references/domains/`
-   (e.g. `safe-data-management.md`) when you need the full competency
-   descriptions and the entry/mid/senior skill statements. Load a domain
-   file when you're actually assessing someone or something against its
-   competencies — the index alone is too thin for grading levels.
-3. **`references/framework_mapping.md`** maps the domains to the Five
-   Safes principles and the SATRE specification components. Load it when
-   the user asks about Five Safes, SATRE, or how the framework relates to
-   established standards.
+- **Master Skills Index**: `${{data_url}}skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Domain YAML Files**: Fetch individual domain files for complete descriptions, competencies, levels, qualifications, and core concepts:
+  - `${{data_url}}safe_access_identity.yaml`
+  - `${{data_url}}safe_data_management.yaml`
+  - `${{data_url}}safe_governance_compliance.yaml`
+  - `${{data_url}}safe_outputs_disclosure_control.yaml`
+  - `${{data_url}}safe_projects_operations.yaml`
+  - `${{data_url}}safe_technology_engineering.yaml`
 
-Note: everything except `assessment_playbooks.md` is auto-generated from
-the repository's `yaml/` files and mapping doc — the single source of
-truth. Never edit generated files; after the YAML changes, regenerate
-with `python scripts/build_skill_references.py`.
+### YAML Data Schema
 
-### Reading a domain reference
+When fetching data from `${{data_url}}`, the files follow two structured formats:
 
-Each `references/domains/<domain-id>.md` file follows this structure:
-kebab-case ids appear in backticks next to every name.
+1. **Domain Data Files** (`safe_<domain_name>.yaml`):
+   - **`domain`**: Header containing `id`, `name`, `index`, `description`, `main-color`.
+   - **`subdomains`**: Dictionary of subdomains (keyed by `subdomain_id`), each with `id`, `name`, `description`, optional `items` (example tools/tech), and a `competencies` map.
+   - **`competencies`**: Keyed by `competency_id`, containing `id`, `name`, `description`, and `levels` (`entry`, `mid`, `senior`).
+   - **`levels`**: Each level defines `id`, `name`, `skills` (list of statement strings), and optional `qualifications` and `core_concepts`.
 
-```markdown
-# Domain <n>: <Domain Name> (`<domain-id>`)
-## <Subdomain Name> (`<subdomain-id>`)
-*Example tools/technologies/standards:* ...
-### <Competency Name> (`<competency-id>`)
-<description>
-**Entry Level:** / **Mid Level:** / **Senior Level:**
-- <skill statement>
-```
+2. **Master Skills Index File** (`skills_index.yaml`):
+   - **`metadata`**: Contains framework counts (`total_domains`, `total_subdomains`, `total_competencies`, `total_skills`, `version`).
+   - **`skills`**: Dictionary mapping unique skill IDs (e.g. `authentication-systems-entry-001`) to skill records:
+     - `id`: Unique identifier string.
+     - `text`: Clear skill description statement.
+     - `domain_id`: Associated domain (e.g. `safe-access-identity`).
+     - `subdomain_id`: Associated subdomain.
+     - `competency_id`: Associated competency.
+     - `level`: `entry` | `mid` | `senior`.
+     - `level_name`: Display name (e.g. `Entry Level`).
 
-The tools/technologies/standards lists are illustrative,
-community-contributed examples — treat experience with an equivalent tool
-(e.g. GitLab CI instead of a listed CI tool) as fully satisfying the same
-competency signal.
+The `items` listed under subdomains (tools/technologies/standards) are illustrative, community-contributed examples — treat experience with an equivalent tool (e.g. GitLab CI instead of a listed CI tool) as fully satisfying the same competency signal.
 
-Interpret levels as **cumulative**: someone operating at senior level in a
-competency is assumed to also cover the entry and mid statements. Entry ≈
-works with supervision / foundational understanding; mid ≈ implements and
-operates independently; senior ≈ designs strategy, sets policy, leads
-others.
+Interpret levels as **cumulative**: someone operating at senior level in a competency is assumed to also cover the entry and mid statements. Entry ≈ works with supervision / foundational understanding; mid ≈ implements and operates independently; senior ≈ designs strategy, sets policy, leads others.
 
 ## Before assessing: ask clarifying questions
 
@@ -119,23 +107,13 @@ can't or won't specify, proceed with stated assumptions and say so.
 
 ## Workflows
 
-Detailed step-by-step playbooks and output templates live in
-`references/assessment_playbooks.md`. **Read it before producing a CV gap
-analysis, JD alignment report, career development plan, or team capability
-assessment.** In brief:
+In brief:
 
-- **CV / skills gap analysis**: extract evidenced skills from the CV → map
-  each to competency ids at a justified level → compare against the target
-  role/level → report strengths, gaps, and development suggestions.
-- **JD alignment check**: extract the JD's requirements → map to
-  competencies → report coverage per domain, flag unmapped requirements
-  and framework competencies the JD is missing for that kind of role.
-- **JD drafting**: pick role-relevant competencies and levels, turn their
-  skill statements into requirements (essential vs desirable).
-- **Career development**: locate current position per competency, pick the
-  target, and use the next level's skill statements as concrete objectives.
-- **General questions**: answer from the index; quote descriptions and
-  skill statements from the YAML when precision matters.
+- **CV / skills gap analysis**: extract evidenced skills from the CV → map each to competency ids at a justified level → compare against the target role/level → report strengths, gaps, and development suggestions.
+- **JD alignment check**: extract the JD's requirements → map to competencies → report coverage per domain, flag unmapped requirements and framework competencies the JD is missing for that kind of role.
+- **JD drafting**: pick role-relevant competencies and levels, turn their skill statements into requirements (essential vs desirable).
+- **Career development**: locate current position per competency, pick the target, and use the next level's skill statements as concrete objectives.
+- **General questions**: answer using data fetched from the website YAML endpoints (`${{data_url}}`).
 
 ## Assessment principles
 
