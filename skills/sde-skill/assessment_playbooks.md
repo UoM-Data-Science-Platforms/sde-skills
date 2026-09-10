@@ -21,7 +21,7 @@ target role/level, and what to develop next.
 
 1. Establish target role and level (ask if unclear — see SKILL.md). From
    the role, pick the in-scope domains and, within them, the relevant
-   competencies using `${{data_url}}sde-skill/framework_index.md`. Typical shapes:
+   competencies using `${{agent_url}}framework_index.md`. Typical shapes:
    - *Data wrangler / data engineer*: Safe Data Management deep; Outputs +
      Governance mid; Technology working knowledge.
    - *TRE operator / platform engineer*: Safe Technology & Engineering +
