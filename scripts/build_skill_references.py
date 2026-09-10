@@ -22,6 +22,7 @@ whenever the YAML files or the mapping doc change:
     python scripts/build_skill_references.py
 """
 
+import argparse
 import re
 from pathlib import Path
 
@@ -30,7 +31,7 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parent.parent
 YAML_DIR = REPO_ROOT / "yaml"
 MAPPING_SRC = REPO_ROOT / "docs" / "competency_framework" / "framework_mapping.md"
-REFERENCES_DIR = REPO_ROOT / "skills" / "sde-skill" / "references"
+REFERENCES_DIR = REPO_ROOT / "astro-app" / "public" / "data" / "sde-skill"
 
 BANNER = (
     "<!-- AUTO-GENERATED FILE - do not edit by hand.\n"
@@ -38,13 +39,20 @@ BANNER = (
     "     Regenerate with: python scripts/build_skill_references.py -->\n\n"
 )
 
-INDEX_INTRO = """\
+INDEX_INTRO_TEMPLATE = """\
 # SDE Competency Framework - Index
 
 Compact map of the full framework: every domain, subdomain, and competency
-with its identifier. Use this to decide which domain reference files (in
-`references/domains/`) to load for detail; each competency there defines
-entry, mid, and senior level skill statements.
+with its identifier. Use this to decide which domain YAML file to fetch for detail:
+
+- Safe Access & Identity (`safe-access-identity`): `{data_url}safe_access_identity.yaml`
+- Safe Data Management (`safe-data-management`): `{data_url}safe_data_management.yaml`
+- Safe Governance & Compliance (`safe-governance-compliance`): `{data_url}safe_governance_compliance.yaml`
+- Safe Outputs & Disclosure Control (`safe-outputs-disclosure-control`): `{data_url}safe_outputs_disclosure_control.yaml`
+- Safe Projects & Operations (`safe-projects-operations`): `{data_url}safe_projects_operations.yaml`
+- Safe Technology & Engineering (`safe-technology-engineering`): `{data_url}safe_technology_engineering.yaml`
+
+Each competency defines entry, mid, and senior level skill statements.
 """
 
 
@@ -73,8 +81,9 @@ def load_domains():
     return domains
 
 
-def render_index(domains):
-    lines = [BANNER.format(source="yaml/"), INDEX_INTRO]
+def render_index(domains, data_url):
+    intro = INDEX_INTRO_TEMPLATE.format(data_url=data_url)
+    lines = [BANNER.format(source="yaml/"), intro]
     n_sub = sum(len(d["subdomains"]) for _, d, _ in domains)
     n_comp = sum(
         len(s.get("competencies", {}))
@@ -86,14 +95,14 @@ def render_index(domains):
         "Levels everywhere: entry, mid, senior.\n"
     )
 
-    for _, domain, _ in domains:
+    for filename, domain, _ in domains:
         lines.append(
             f"## Domain {domain['index']}: {domain['name']} (`{domain['id']}`)"
         )
         lines.append("")
         lines.append(first_sentence(domain.get("description")))
         lines.append("")
-        lines.append(f"Detail: `references/domains/{domain['id']}.md`")
+        lines.append(f"Detail YAML URL: `{data_url}{filename}`")
         lines.append("")
         for sub_id, sub in domain["subdomains"].items():
             lines.append(f"### {sub['name']} (`{sub_id}`)")
@@ -109,58 +118,29 @@ def render_index(domains):
     return "\n".join(lines).rstrip() + "\n"
 
 
-def render_domain(filename, domain, tools):
-    lines = [BANNER.format(source=f"yaml/{filename}")]
-    lines.append(f"# Domain {domain['index']}: {domain['name']} (`{domain['id']}`)")
-    lines.append("")
-    lines.append(domain.get("description", "").strip())
-    lines.append("")
-    for sub_id, sub in domain["subdomains"].items():
-        lines.append(f"## {sub['name']} (`{sub_id}`)")
-        lines.append("")
-        lines.append(sub.get("description", "").strip())
-        lines.append("")
-        items = tools.get(sub_id, {}).get("items", [])
-        if items:
-            lines.append(f"*Example tools/technologies/standards:* {', '.join(items)}")
-            lines.append("")
-        competencies = sub.get("competencies", {})
-        if not competencies:
-            lines.append(
-                "*No competencies defined yet for this subdomain — use the "
-                "description above qualitatively.*"
-            )
-            lines.append("")
-        for comp_id, comp in competencies.items():
-            lines.append(f"### {comp['name']} (`{comp_id}`)")
-            lines.append("")
-            lines.append(comp.get("description", "").strip())
-            lines.append("")
-            for level_id in ("entry", "mid", "senior"):
-                level = comp.get("levels", {}).get(level_id)
-                if not level:
-                    continue
-                lines.append(f"**{level.get('name', level_id.title())}:**")
-                lines.append("")
-                for skill in level.get("skills", []):
-                    lines.append(f"- {skill}")
-                lines.append("")
-    return "\n".join(lines).rstrip() + "\n"
+SKILL_SRC = REPO_ROOT / "skills" / "sde-skill" / "SKILL.md"
+PLAYBOOKS_SRC = REPO_ROOT / "skills" / "sde-skill" / "assessment_playbooks.md"
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Build sde-skill reference files.")
+    parser.add_argument(
+        "--data-url",
+        default="https://sdertp.org/data/",
+        help="Base URL where data files are hosted (default: https://sdertp.org/data/)",
+    )
+    args = parser.parse_args()
+
+    data_url = args.data_url
+    if not data_url.endswith("/"):
+        data_url += "/"
+
     domains = load_domains()
-    domains_dir = REFERENCES_DIR / "domains"
-    domains_dir.mkdir(parents=True, exist_ok=True)
+    REFERENCES_DIR.mkdir(parents=True, exist_ok=True)
 
     index_path = REFERENCES_DIR / "framework_index.md"
-    index_path.write_text(render_index(domains), encoding="utf-8")
+    index_path.write_text(render_index(domains, data_url), encoding="utf-8")
     print(f"Wrote {index_path.relative_to(REPO_ROOT)}")
-
-    for filename, domain, tools in domains:
-        out = domains_dir / f"{domain['id']}.md"
-        out.write_text(render_domain(filename, domain, tools), encoding="utf-8")
-        print(f"Wrote {out.relative_to(REPO_ROOT)}")
 
     mapping_out = REFERENCES_DIR / "framework_mapping.md"
     mapping_out.write_text(
@@ -169,6 +149,18 @@ def main():
         encoding="utf-8",
     )
     print(f"Wrote {mapping_out.relative_to(REPO_ROOT)}")
+
+    if SKILL_SRC.exists():
+        skill_content = SKILL_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url)
+        skill_out = REFERENCES_DIR / "SKILL.md"
+        skill_out.write_text(skill_content, encoding="utf-8")
+        print(f"Wrote {skill_out.relative_to(REPO_ROOT)}")
+
+    if PLAYBOOKS_SRC.exists():
+        playbooks_content = PLAYBOOKS_SRC.read_text(encoding="utf-8").replace("${{data_url}}", data_url)
+        playbooks_out = REFERENCES_DIR / "assessment_playbooks.md"
+        playbooks_out.write_text(playbooks_content, encoding="utf-8")
+        print(f"Wrote {playbooks_out.relative_to(REPO_ROOT)}")
 
 
 if __name__ == "__main__":
