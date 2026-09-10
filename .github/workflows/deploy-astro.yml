@@ -7,7 +7,9 @@ on:
     paths:
       - 'astro-app/**'
       - 'scripts/build_data.py'
+      - 'scripts/build_skill_references.py'
       - 'docs/competency_framework/framework_mapping.md'
+      - 'skills/sde-skill/**'
       - 'yaml/**'
       - '.github/workflows/deploy-astro.yml'
   workflow_dispatch:
@@ -43,6 +45,11 @@ jobs:
 
       - name: Build and merge YAML data
         run: uv run python scripts/build_data.py
+
+      - name: Build skill references
+        run: |
+          mkdir -p astro-app/public/data/sde-skill
+          uv run python scripts/build_skill_references.py --data-url ${{ vars.DATA_URL_BASE }}
 
       - name: Copy framework mapping markdown
         run: |
