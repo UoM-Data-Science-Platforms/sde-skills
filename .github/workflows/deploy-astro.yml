@@ -49,7 +49,7 @@ jobs:
       - name: Build skill references
         run: |
           mkdir -p astro-app/public/data/sde-skill
-          uv run python scripts/build_skill_references.py --data-url ${{ vars.DATA_URL_BASE }}
+          uv run python scripts/build_skill_references.py --data-url "${{ vars.DATA_URL_BASE }}/sde-skill"
 
       - name: Copy framework mapping markdown
         run: |
