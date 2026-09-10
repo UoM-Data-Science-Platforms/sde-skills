@@ -21,7 +21,7 @@ target role/level, and what to develop next.
 
 1. Establish target role and level (ask if unclear — see SKILL.md). From
    the role, pick the in-scope domains and, within them, the relevant
-   competencies using `/sde-skill/sde-skill/framework_index.md`. Typical shapes:
+   competencies using `sdertp.org/data/sde-skill/framework_index.md`. Typical shapes:
    - *Data wrangler / data engineer*: Safe Data Management deep; Outputs +
      Governance mid; Technology working knowledge.
    - *TRE operator / platform engineer*: Safe Technology & Engineering +
@@ -39,13 +39,13 @@ target role/level, and what to develop next.
    state that choice in the report's assumptions.
 2. Read the CV fully. Extract skills, tools, responsibilities, and
    achievements *with the evidence attached* (which role, what they did).
-3. Fetch the in-scope domain YAML file(s) directly from `/sde-skill/`:
-   - **Safe Access & Identity**: `/sde-skill/safe_access_identity.yaml`
-   - **Safe Data Management**: `/sde-skill/safe_data_management.yaml`
-   - **Safe Governance & Compliance**: `/sde-skill/safe_governance_compliance.yaml`
-   - **Safe Outputs & Disclosure Control**: `/sde-skill/safe_outputs_disclosure_control.yaml`
-   - **Safe Projects & Operations**: `/sde-skill/safe_projects_operations.yaml`
-   - **Safe Technology & Engineering**: `/sde-skill/safe_technology_engineering.yaml`
+3. Fetch the in-scope domain YAML file(s) directly from `sdertp.org/data/`:
+   - **Safe Access & Identity**: `sdertp.org/data/safe_access_identity.yaml`
+   - **Safe Data Management**: `sdertp.org/data/safe_data_management.yaml`
+   - **Safe Governance & Compliance**: `sdertp.org/data/safe_governance_compliance.yaml`
+   - **Safe Outputs & Disclosure Control**: `sdertp.org/data/safe_outputs_disclosure_control.yaml`
+   - **Safe Projects & Operations**: `sdertp.org/data/safe_projects_operations.yaml`
+   - **Safe Technology & Engineering**: `sdertp.org/data/safe_technology_engineering.yaml`
    
    For each relevant competency in the fetched domain data, compare the CV evidence against the entry/mid/senior skill statements and assign the highest level with real support, with a D/I rating. Match meaning, not keywords; credit equivalent tools and transferable sector experience. Seniority needs scope evidence (led, designed, owned), not just years.
 4. Compare against the target level per competency to classify: strength

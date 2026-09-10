@@ -45,20 +45,21 @@ model, with a sixth cross-cutting governance domain:
 
 ## Data Sources — Fetching Framework Data
 
-All framework data is loaded directly from the website endpoint `/sde-skill/<filename>.yaml`.
+All framework data is loaded directly from the website endpoint `sdertp.org/data/<filename>.yaml`.
 
-- **Master Skills Index**: `/sde-skill/skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Master Skills Index**: `sdertp.org/data/sde-skill/skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Assessment Playbooks**: `sdertp.org/data/sde-skill/assessment_playbooks.md` — guidance on how to assess roles against the framework.
 - **Domain YAML Files**: Fetch individual domain files for complete descriptions, competencies, levels, qualifications, and core concepts:
-  - `/sde-skill/safe_access_identity.yaml`
-  - `/sde-skill/safe_data_management.yaml`
-  - `/sde-skill/safe_governance_compliance.yaml`
-  - `/sde-skill/safe_outputs_disclosure_control.yaml`
-  - `/sde-skill/safe_projects_operations.yaml`
-  - `/sde-skill/safe_technology_engineering.yaml`
+  - `sdertp.org/data/safe_access_identity.yaml`
+  - `sdertp.org/data/safe_data_management.yaml`
+  - `sdertp.org/data/safe_governance_compliance.yaml`
+  - `sdertp.org/data/safe_outputs_disclosure_control.yaml`
+  - `sdertp.org/data/safe_projects_operations.yaml`
+  - `sdertp.org/data/safe_technology_engineering.yaml`
 
 ### YAML Data Schema
 
-When fetching data from `/sde-skill/`, the files follow two structured formats:
+When fetching data from `sdertp.org/data/`, the files follow two structured formats:
 
 1. **Domain Data Files** (`safe_<domain_name>.yaml`):
    - **`domain`**: Header containing `id`, `name`, `index`, `description`, `main-color`.
@@ -113,7 +114,7 @@ In brief:
 - **JD alignment check**: extract the JD's requirements → map to competencies → report coverage per domain, flag unmapped requirements and framework competencies the JD is missing for that kind of role.
 - **JD drafting**: pick role-relevant competencies and levels, turn their skill statements into requirements (essential vs desirable).
 - **Career development**: locate current position per competency, pick the target, and use the next level's skill statements as concrete objectives.
-- **General questions**: answer using data fetched from the website YAML endpoints (`/sde-skill/`).
+- **General questions**: answer using data fetched from the website YAML endpoints (`sdertp.org/data/`).
 
 ## Assessment principles
 

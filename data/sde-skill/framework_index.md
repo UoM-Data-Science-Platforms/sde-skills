@@ -8,12 +8,12 @@
 Compact map of the full framework: every domain, subdomain, and competency
 with its identifier. Use this to decide which domain YAML file to fetch for detail:
 
-- Safe Access & Identity (`safe-access-identity`): `/sde-skill/safe_access_identity.yaml`
-- Safe Data Management (`safe-data-management`): `/sde-skill/safe_data_management.yaml`
-- Safe Governance & Compliance (`safe-governance-compliance`): `/sde-skill/safe_governance_compliance.yaml`
-- Safe Outputs & Disclosure Control (`safe-outputs-disclosure-control`): `/sde-skill/safe_outputs_disclosure_control.yaml`
-- Safe Projects & Operations (`safe-projects-operations`): `/sde-skill/safe_projects_operations.yaml`
-- Safe Technology & Engineering (`safe-technology-engineering`): `/sde-skill/safe_technology_engineering.yaml`
+- Safe Access & Identity (`safe-access-identity`): `sdertp.org/data/safe_access_identity.yaml`
+- Safe Data Management (`safe-data-management`): `sdertp.org/data/safe_data_management.yaml`
+- Safe Governance & Compliance (`safe-governance-compliance`): `sdertp.org/data/safe_governance_compliance.yaml`
+- Safe Outputs & Disclosure Control (`safe-outputs-disclosure-control`): `sdertp.org/data/safe_outputs_disclosure_control.yaml`
+- Safe Projects & Operations (`safe-projects-operations`): `sdertp.org/data/safe_projects_operations.yaml`
+- Safe Technology & Engineering (`safe-technology-engineering`): `sdertp.org/data/safe_technology_engineering.yaml`
 
 Each competency defines entry, mid, and senior level skill statements.
 
@@ -23,7 +23,7 @@ Each competency defines entry, mid, and senior level skill statements.
 
 This domain covers all aspects of user authentication, authorisation, and access control within Secure Data Environments, ensuring that only authorised users can access appropriate resources.
 
-Detail YAML URL: `/sde-skill/safe_access_identity.yaml`
+Detail YAML URL: `sdertp.org/data/safe_access_identity.yaml`
 
 ### Identity Management (`identity-management`)
 
@@ -53,7 +53,7 @@ Secure User Experience focuses on designing and maintaining protected research e
 
 This domain covers all aspects of data handling, processing, governance, and engineering within Secure Data Environments, focusing on ensuring data is managed securely and effectively throughout its lifecycle.
 
-Detail YAML URL: `/sde-skill/safe_data_management.yaml`
+Detail YAML URL: `sdertp.org/data/safe_data_management.yaml`
 
 ### Data Governance (`data-governance`)
 
@@ -82,7 +82,7 @@ Data Engineering & Processing focuses on building and maintaining secure systems
 
 This domain covers the regulatory, ethical, and compliance aspects of operating Secure Data Environments, ensuring systems meet legal requirements and maintain appropriate controls.
 
-Detail YAML URL: `/sde-skill/safe_governance_compliance.yaml`
+Detail YAML URL: `sdertp.org/data/safe_governance_compliance.yaml`
 
 ### Regulatory Compliance (`regulatory-compliance`)
 
@@ -122,7 +122,7 @@ Audit & Compliance Monitoring ensures continuous verification of regulatory adhe
 
 This domain covers the technical controls that help to protect projects from accidental or intentional disclosure, as well as providing tooling to support disclosure review operations of project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.
 
-Detail YAML URL: `/sde-skill/safe_outputs_disclosure_control.yaml`
+Detail YAML URL: `sdertp.org/data/safe_outputs_disclosure_control.yaml`
 
 ### Output Checking (`output-checking`)
 
@@ -161,7 +161,7 @@ Prepares and executes rapid response procedures for suspected data breaches, dat
 
 This domain covers the management of secure data environment projects, operational excellence, and the delivery of services to research communities.
 
-Detail YAML URL: `/sde-skill/safe_projects_operations.yaml`
+Detail YAML URL: `sdertp.org/data/safe_projects_operations.yaml`
 
 ### Project Management (`project-management`)
 
@@ -202,7 +202,7 @@ Research Support & Innovation enhances researcher effectiveness within secure da
 
 This domain covers the technical implementation and maintenance of secure systems, focusing on the infrastructure, development, and engineering aspects of Secure Data Environments.
 
-Detail YAML URL: `/sde-skill/safe_technology_engineering.yaml`
+Detail YAML URL: `sdertp.org/data/safe_technology_engineering.yaml`
 
 ### Software Engineering (`software-engineering`)
 
