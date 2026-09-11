@@ -47,8 +47,9 @@ model, with a sixth cross-cutting governance domain:
 
 All framework data is loaded directly from the website endpoint `https://sdertp.org/data/<filename>.yaml`.
 
-- **Master Skills Index**: `https://sdertp.org/data/sde-skill/skills_index.yaml` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Master Skills Index**: `https://sdertp.org/data/sde-skill/framework_index.md` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
 - **Assessment Playbooks**: `https://sdertp.org/data/sde-skill/assessment_playbooks.md` — guidance on how to assess roles against the framework.
+- **Framework mapping**: `https://sdertp.org/data/sde-skill/framework_mapping.md` — guidance on how the framework maps to Five Safes and SATRE.
 - **Domain YAML Files**: Fetch individual domain files for complete descriptions, competencies, levels, qualifications, and core concepts:
   - `https://sdertp.org/data/safe_access_identity.yaml`
   - `https://sdertp.org/data/safe_data_management.yaml`
