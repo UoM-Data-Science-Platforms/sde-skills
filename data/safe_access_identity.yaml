@@ -3,7 +3,7 @@ domain:
   main-color: color-nhs-blue
   id: safe-access-identity
   name: Safe Access & Identity
-  description: This domain covers all aspects of user authentication, authorisation, and access control within Secure Data
+  description: This domain covers all aspects of user authentication, authorization, and access control within Secure Data
     Environments, ensuring that only authorised users can access appropriate resources.
   source_file: safe_access_identity.md
   subdomains:
@@ -14,6 +14,9 @@ domain:
         data environments. This subdomain covers the complete lifecycle of authentication credentials, from verification mechanisms
         and account provisioning to cross-organisational federation, ensuring that only properly authenticated users can access
         sensitive research data while maintaining security, operational efficiency, and compliance with organisational policies.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         authentication-systems:
           id: authentication-systems
@@ -27,83 +30,26 @@ domain:
               id: authentication-systems-entry
               name: Entry Level
               skills:
-              - Explains basic authentication concepts and mechanisms (e.g. Microsoft Entra ID, Kerberos, OAuth 2.0 / OIDC)
-              - Applies password best practices and configures multi-factor authentication (MFA)
+              - Understands basic authentication concepts and mechanisms (e.g. AD/Entra, kerberos, oauth2/OIDC)
+              - Familiar with password best practice and multi-factor authentication
               - Can configure user accounts in identity systems under supervision
-              - Can understand existing SDE security Matrix
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA Security+ (Exam)
-                career_impact: Validates foundational knowledge of identity and access management principles essential for
-                  SDE entry roles.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900) (Exam)'
-                career_impact: Provides baseline understanding of Entra ID, widely used in NHS SDE authentication.
-              core_concepts:
-              - topic: SDE Authentication Fundamentals
-                concepts:
-                - MFA
-                - Entra ID
-                - Kerberos
-                - OAuth 2.0 / OIDC
-                - SDE Security Matrix
-                search_terms:
-                - Azure Entra ID health data authentication
-                - MFA configuration NHS SDE
-                - OIDC for clinical apps
-                why: Understanding basic authentication is critical to preventing unauthorized access to health data.
+              - Can understand existing SDE security Matrix.
             mid:
               id: authentication-systems-mid
               name: Mid Level
               skills:
-              - Implements and configures secure authentication systems (e.g. SDE security matrix, Microsoft Entra ID)
+              - Implements and configure secure authentication systems (e.g SDE security matrix, microsoft entra)
               - Implements MFA solutions appropriate to security requirements
               - Troubleshoots authentication issues and security incidents
               - Can modify existing SDE security matrix
-              qualifications:
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Identity and Access Administrator Associate (SC-300) (Exam)'
-                career_impact: Crucial for configuring Entra ID, MFA, and Conditional Access policies for researcher environments.
-              - issuer: Okta
-                description: Okta Certified Professional (Exam)
-                career_impact: Relevant for TREs utilizing Okta for centralized authentication and SSO federation.
-              core_concepts:
-              - topic: SDE Authentication Implementation & Troubleshooting
-                concepts:
-                - Authentication protocols integration
-                - SDE Security Matrix modification
-                - Incident troubleshooting
-                search_terms:
-                - Implementing MFA in NHS Secure Data Environment
-                - Troubleshooting Entra ID for healthcare
-                why: Mid-level engineers must deploy and maintain secure auth flows that comply with health data regulations.
             senior:
               id: authentication-systems-senior
               name: Senior Level
               skills:
-              - Consult on enterprise authentication strategies
+              - Consult on enterprise authentication strategies.
               - Evaluates and selects authentication technologies aligned with security needs
               - Leads identity system transformations and security enhancements
-              - Lead and provide support for existing Security Matrix
-              qualifications:
-              - issuer: ISC2
-                description: CISSP (Exam)
-                career_impact: Essential for architects designing enterprise authentication strategy and Zero Trust architectures
-                  across national SDE networks.
-              - issuer: Microsoft
-                description: Microsoft Cybersecurity Architect Expert (SC-100) (Exam)
-                career_impact: Required to design highly secure, compliant identity frameworks for sensitive health data.
-              core_concepts:
-              - topic: Enterprise Authentication Strategy
-                concepts:
-                - Auth technology evaluation
-                - Identity transformation
-                - Zero Trust in SDE
-                search_terms:
-                - Zero trust architecture health data SDE
-                - Enterprise authentication strategy NHS
-                why: Seniors architect authentication frameworks that protect millions of patient records against advanced
-                  threats.
+              - Lead and provide support for existing Security Matrix.
         user-provisioning-lifecycle:
           id: user-provisioning-lifecycle
           name: User Provisioning & Lifecycle
@@ -115,25 +61,10 @@ domain:
               id: user-provisioning-lifecycle-entry
               name: Entry Level
               skills:
-              - Describes user account lifecycle stages from provisioning to deprovisioning
-              - Follows standard user provisioning and deprovisioning procedures
+              - Understands user account lifecycle stages
+              - Familiar with provisioning and deprovisioning processes
               - Can execute account management tasks following established procedures
-              - Understand existing user provisioning specification
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA IT Fundamentals+ (Exam)
-                career_impact: Basic understanding of user account lifecycles and IT operations.
-              core_concepts:
-              - topic: Account Lifecycle Management
-                concepts:
-                - Provisioning/Deprovisioning
-                - Account management procedures
-                - User provisioning spec
-                search_terms:
-                - JML process NHS SDE
-                - Account lifecycle management healthcare
-                why: Accurate provisioning ensures researchers only have access when approved and immediately lose access
-                  upon project completion.
+              - Understand existing user provisioning specification.
             mid:
               id: user-provisioning-lifecycle-mid
               name: Mid Level
@@ -142,46 +73,14 @@ domain:
               - Develops automation for provisioning and deprovisioning
               - Ensures compliance with account management policies
               - Can modify/troubleshoot existing user provisioning specification queries
-              qualifications:
-              - issuer: SailPoint
-                description: SailPoint Certified IdentityIQ Engineer (Exam)
-                career_impact: Validates ability to automate complex researcher provisioning and de-provisioning workflows.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Administrator Associate (AZ-104) (Exam)'
-                career_impact: Covers robust user management and governance within Azure environments.
-              core_concepts:
-              - topic: Automated Lifecycle & Compliance
-                concepts:
-                - Automated provisioning
-                - Compliance enforcement
-                - Troubleshooting queries
-                search_terms:
-                - Automating user provisioning Azure AD SDE
-                - RBAC compliance healthcare data
-                why: Automation reduces human error in granting access to sensitive health data.
             senior:
               id: user-provisioning-lifecycle-senior
               name: Senior Level
               skills:
               - Can identify and implement appropriate user lifecycle governance frameworks
               - Implements advanced identity governance and administration solutions
-              - Leads identity management modernisation initiatives
+              - Leads identity management modernization initiatives
               - Can lead new user provisioning specification implementation and support
-              qualifications:
-              - issuer: Identity Management Institute
-                description: Certified Identity and Access Manager (CIAM) (Exam)
-                career_impact: Advanced certification for leading identity governance and modernisation initiatives in healthcare.
-              core_concepts:
-              - topic: Identity Governance & Modernisation
-                concepts:
-                - Identity governance frameworks (IGA)
-                - Lifecycle governance
-                - Modernisation initiatives
-                search_terms:
-                - IGA framework implementation healthcare
-                - Identity governance NHS SDE
-                why: Robust governance is required to meet statutory requirements like the NHS DSPT (Data Security and Protection
-                  Toolkit).
         federated-identity-management:
           id: federated-identity-management
           name: Federated Identity Management
@@ -194,21 +93,9 @@ domain:
               id: federated-identity-management-entry
               name: Entry Level
               skills:
-              - Describes fundamental concepts of federated identity and single sign-on
-              - Identifies standard SSO protocols including SAML, OAuth, and OIDC
+              - Understands basic concepts of federated identity
+              - Familiar with SSO protocols (SAML, OAuth, OIDC)
               - Can configure simple federated identity integrations
-              qualifications: []
-              core_concepts:
-              - topic: Federation Basics
-                concepts:
-                - SSO protocols
-                - SAML
-                - OAuth
-                - OIDC
-                search_terms:
-                - SAML vs OAuth healthcare apps
-                - SSO integration SDE
-                why: Understanding SSO is vital for federating identities across various NHS trusts and research bodies.
             mid:
               id: federated-identity-management-mid
               name: Mid Level
@@ -216,17 +103,6 @@ domain:
               - Implements federated identity solutions across systems
               - Configures and manages federation with multiple identity providers
               - Troubleshoots federation issues and security concerns
-              qualifications: []
-              core_concepts:
-              - topic: Federation Implementation
-                concepts:
-                - Multi-IdP management
-                - SSO troubleshooting
-                - Cross-system integration
-                search_terms:
-                - Configuring SAML for multiple IdPs healthcare
-                - Troubleshooting OIDC federation NHS
-                why: Enables seamless but secure access for researchers collaborating across different institutions.
             senior:
               id: federated-identity-management-senior
               name: Senior Level
@@ -235,209 +111,26 @@ domain:
               - Develops federation governance and security frameworks
               - Leads initiatives to enhance identity federation capabilities across healthcare organisations and research
                 institutions
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Security - Specialty (Exam)
-                career_impact: Includes advanced federation topics (Cognito, AWS SSO) for cross-organizational data sharing
-                  boundaries.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)'
-                career_impact: Covers Azure AD / Entra ID identity federation, enterprise application integration, and SSO.
-              - issuer: Google Cloud
-                description: Google Cloud Professional Cloud Security Engineer (Exam)
-                career_impact: Validates expertise in Cloud IAM, Workload Identity Federation, and secure identity mapping.
-              - issuer: ISC2
-                description: CISSP-ISSAP (Information Systems Security Architecture Professional) (Exam)
-                career_impact: Deep architectural focus on complex identity federation across trust boundaries.
-              core_concepts:
-              - topic: Enterprise Federation Architecture
-                concepts:
-                - Complex federation architecture
-                - Federation governance
-                - Cross-organisational security frameworks
-                search_terms:
-                - Architecting national healthcare identity federation
-                - Cross-organisational IAM governance
-                why: Large-scale health data research requires secure, scalable federation across national and international
-                  boundaries.
       items:
-      - name: FreeIPA / Red Hat IdM
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Keycloak
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-          projects:
-            count: 1
-            mentions:
-            - SATRE Driver Project
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Microsoft Entra ID
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - NHS England SDE
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 5
-            entry: 1
-            mid: 1
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: OAuth 2.0 / OIDC
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Provisioning tools
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: SAML 2.0
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: SCIM (RFC 7644)
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - DARE UK FAB
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: SSO protocols (SAML, OAuth, OIDC)
-        role: Manages authentication, researcher identity lifecycles, single sign-on (SSO), and account federation across
-          institutional boundaries.
-        sources:
-          community: true
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
+      - Microsoft Entra
+      - Provisioning tools
+      - SSO protocols (SAML
     access-control:
       id: access-control
       name: Access Control
       description: Access Control ensures that only authorised individuals can access specific resources within secure data
         environments through structured permission systems. This subdomain covers role-based and attribute-based access models
-        as well as least privilege implementation, providing robust security frameworks that enforce authorisation policies
-        while balancing operational requirements and minimising access risks across research environments.
+        as well as least privilege implementation, providing robust security frameworks that enforce authorization policies
+        while balancing operational requirements and minimizing access risks across research environments.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         role-based-access-control:
           id: role-based-access-control
           name: Role-Based Access Control
-          description: Implements access permissions based on organisational roles within secure data environments. Involves
-            defining appropriate roles, designing organisational role structures, implementing management processes, and conducting
+          description: Implements access permissions based on organizational roles within secure data environments. Involves
+            defining appropriate roles, designing organizational role structures, implementing management processes, and conducting
             reviews. Requires skills to develop enterprise frameworks and optimise role structures to minimise access risks
             while meeting business needs.
           levels:
@@ -445,30 +138,10 @@ domain:
               id: role-based-access-control-entry
               name: Entry Level
               skills:
-              - Explains role-based access control (RBAC) concepts and principles
-              - Assigns predefined roles and manages role permissions under guidance
+              - Understands RBAC concepts and principles
+              - Familiar with role definition and assignment processes
               - Can implement basic role assignments following established patterns
-              - Can understand existing role definitions
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Cloud Practitioner (Exam)
-                career_impact: Introduces basic AWS IAM and role concepts.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Fundamentals (AZ-900) (Exam)'
-                career_impact: Introduces foundational Azure cloud concepts, core services, and RBAC fundamentals.
-              - issuer: Google Cloud
-                description: Google Cloud Digital Leader (Exam)
-                career_impact: Introduces core Google Cloud concepts, Cloud IAM roles, and resource management hierarchy.
-              core_concepts:
-              - topic: RBAC Fundamentals
-                concepts:
-                - Predefined roles
-                - Role permissions
-                - Basic assignments
-                search_terms:
-                - RBAC basics Azure NHS
-                - Role assignment Secure Data Environment
-                why: RBAC ensures researchers only see data relevant to their specific approved study.
+              - Can understand existing Role definitions
             mid:
               id: role-based-access-control-mid
               name: Mid Level
@@ -476,27 +149,7 @@ domain:
               - Implements role structures appropriate to organisational needs
               - Implements role management and governance processes
               - Conducts role reviews and recommends improvements
-              - Can modify/troubleshoot existing role definitions queries
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified SysOps Administrator - Associate (Exam)
-                career_impact: Hands-on implementation of IAM policies, roles, and boundaries for research environments.
-              - issuer: Microsoft
-                description: 'Microsoft Certified: Azure Security Engineer Associate (AZ-500) (Exam)'
-                career_impact: Deep dive into Azure RBAC to secure sensitive healthcare datasets.
-              - issuer: Google Cloud
-                description: Google Cloud Professional Cloud Security Engineer (Exam)
-                career_impact: Hands-on implementation of GCP IAM roles, custom roles, and service account access boundaries.
-              core_concepts:
-              - topic: RBAC Implementation & Governance
-                concepts:
-                - Role structures
-                - Role reviews
-                - Governance processes
-                search_terms:
-                - Implementing RBAC for health data platforms
-                - Role governance SDE
-                why: Continuous review of roles prevents privilege creep in sensitive environments.
+              - Can modify/troubleshoot existing Role definitions queries.
             senior:
               id: role-based-access-control-senior
               name: Senior Level
@@ -504,21 +157,7 @@ domain:
               - Develops enterprise RBAC frameworks and strategies
               - Implements advanced access governance and role mining
               - Leads initiatives to optimise role structures and reduce access risk
-              - Can lead new role definitions implementation and support
-              qualifications:
-              - issuer: ISACA
-                description: CISM (Certified Information Security Manager) (Exam)
-                career_impact: Governing enterprise RBAC strategies and reducing access risk.
-              core_concepts:
-              - topic: Enterprise RBAC Strategy
-                concepts:
-                - Enterprise RBAC frameworks
-                - Role mining
-                - Access risk reduction
-                search_terms:
-                - Enterprise RBAC strategy healthcare
-                - Role mining for NHS data platforms
-                why: Strategic RBAC minimizes blast radius in the event of a breach and ensures regulatory compliance.
+              - Can lead new Role definitions implementation and support.
         attribute-based-access-control:
           id: attribute-based-access-control
           name: Attribute-Based Access Control
@@ -531,21 +170,9 @@ domain:
               id: attribute-based-access-control-entry
               name: Entry Level
               skills:
-              - Explains attribute-based access control (ABAC) concepts and use cases
-              - Identifies attribute types and interprets access control policy definitions
+              - Understands ABAC concepts and use cases
+              - Familiar with policy definition and attribute types
               - Can implement simple attribute-based policies
-              qualifications: []
-              core_concepts:
-              - topic: ABAC Basics
-                concepts:
-                - Dynamic access control
-                - Attribute types
-                - Simple policy implementation
-                search_terms:
-                - ABAC vs RBAC healthcare
-                - Implementing simple ABAC policies
-                why: ABAC allows granular access control based on context (e.g., location, time) which is critical for health
-                  data access.
             mid:
               id: attribute-based-access-control-mid
               name: Mid Level
@@ -553,39 +180,13 @@ domain:
               - Designs complex ABAC policies for different contexts
               - Implements attribute management and policy enforcement
               - Evaluates effectiveness of attribute-based controls
-              qualifications: []
-              core_concepts:
-              - topic: Complex ABAC Policies
-                concepts:
-                - Context-aware policies
-                - Policy enforcement
-                - Control evaluation
-                search_terms:
-                - Designing ABAC policies for Secure Data Environments
-                - Context-aware access healthcare
-                why: Mid-level implementation of ABAC secures data sets dynamically based on researcher accreditation status
-                  and project.
             senior:
               id: attribute-based-access-control-senior
               name: Senior Level
               skills:
               - Architects enterprise ABAC strategies and frameworks
-              - Develops advanced policy models for complex authorisation scenarios
+              - Develops advanced policy models for complex authorization scenarios
               - Leads initiatives to implement dynamic access control
-              qualifications:
-              - issuer: ISC2
-                description: CCSP (Certified Cloud Security Professional) (Exam)
-                career_impact: Designing advanced policy models and dynamic access controls in multi-tenant cloud environments.
-              core_concepts:
-              - topic: Enterprise ABAC Architecture
-                concepts:
-                - Enterprise ABAC frameworks
-                - Advanced policy models
-                - Dynamic access management
-                search_terms:
-                - Enterprise ABAC architecture NHS
-                - Dynamic access control scale SDE
-                why: Senior architects use ABAC to solve complex, multi-jurisdictional health data sharing requirements.
         least-privilege-implementation:
           id: least-privilege-implementation
           name: Least Privilege Implementation
@@ -598,24 +199,10 @@ domain:
               id: least-privilege-implementation-entry
               name: Entry Level
               skills:
-              - Explains the principle of least privilege and its application
-              - Identifies privileged access management (PAM) controls and escalation workflows
+              - Understands the principle of least privilege
+              - Familiar with privilege management concepts
               - Can identify excessive permissions in simple scenarios
               - Understand existing role-level security
-              qualifications:
-              - issuer: GIAC
-                description: GIAC Information Security Fundamentals (GISF) (Exam)
-                career_impact: Strong emphasis on the principle of least privilege from day one.
-              core_concepts:
-              - topic: PoLP & PAM Basics
-                concepts:
-                - Principle of Least Privilege
-                - Privileged Access Management (PAM)
-                - Role-level security basics
-                search_terms:
-                - Least privilege healthcare data
-                - PAM basics Azure
-                why: Restricting access to only what is necessary is a fundamental tenet of protecting patient data.
             mid:
               id: least-privilege-implementation-mid
               name: Mid Level
@@ -624,20 +211,6 @@ domain:
               - Conducts privilege reviews and recommends right-sizing
               - Designs processes for regular privilege attestation
               - Support existing role-level security policy
-              qualifications:
-              - issuer: CyberArk
-                description: CyberArk Defender & Sentry (Exam)
-                career_impact: Implementing privileged access management (PAM) and just-in-time access for SDE administrators.
-              core_concepts:
-              - topic: Privilege Management & Reviews
-                concepts:
-                - Privilege reviews
-                - Right-sizing
-                - Privilege attestation
-                search_terms:
-                - Privilege attestation SDE
-                - Right-sizing permissions health data
-                why: Regular attestation ensures permissions haven't expanded beyond approved research boundaries.
             senior:
               id: least-privilege-implementation-senior
               name: Senior Level
@@ -645,168 +218,11 @@ domain:
               - Develops enterprise privilege management strategies
               - Implements advanced tools for privilege discovery and management
               - Leads initiatives to mature privilege governance practices
-              - Leads audit, implementation involving role-level security
-              qualifications:
-              - issuer: GIAC
-                description: GIAC Defensible Security Architecture (GDSA) (Exam)
-                career_impact: Architecting zero-trust networks that enforce least privilege by default.
-              core_concepts:
-              - topic: Enterprise Privilege Strategy
-                concepts:
-                - Privilege discovery tools
-                - Privilege governance
-                - Role-level security audit
-                search_terms:
-                - Enterprise PAM strategy healthcare
-                - Privilege discovery NHS SDE
-                why: Strategic management of highly privileged accounts mitigates the highest risks to the SDE.
+              - Leads audit, implementation involving role-level security.
       items:
-      - name: Attribute-Based Access Control (ABAC)
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - DARE UK FAB
-            - NIST SP 800-162
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Microsoft Entra PIM / CyberArk
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Open Policy Agent (OPA)
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 2/4
-            status: Graduated / Adopt (Declarative Policy Engine)
-      - name: Privilege audit tools
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: true
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Role-Based Access Control (RBAC)
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 4
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-            - ISO/IEC 27001
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Teleport / Boundary
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 1
-            mentions:
-            - TELEPORT Driver Project
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Zero Trust Architecture
-        role: Enforces least-privilege authorization, zero-trust boundary evaluation, and privileged administrative access
-          control.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-            - NHS England SDE
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 5
-            entry: 0
-            mid: 1
-            senior: 4
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
+      - RBAC concepts
+      - ABAC concepts
+      - Privilege audit tools
     secure-user-experience:
       id: secure-user-experience
       name: Secure User Experience
@@ -814,6 +230,9 @@ domain:
         robust security measures with usability. This subdomain encompasses researcher onboarding processes, protected workspace
         implementation, and secure collaboration platforms, enabling efficient work with sensitive healthcare data while ensuring
         appropriate controls that maintain compliance, data protection, and positive user experiences.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         researcher-onboarding:
           id: researcher-onboarding
@@ -827,41 +246,16 @@ domain:
               id: researcher-onboarding-entry
               name: Entry Level
               skills:
-              - Describes researcher onboarding requirements and identity verification processes
-              - Verifies researcher training certificates and accreditation records
+              - Understands researcher onboarding requirements and processes
+              - Familiar with training and certification verification
               - Can execute onboarding steps following established procedures
-              qualifications:
-              - issuer: Axelos
-                description: ITIL 4 Foundation (Exam)
-                career_impact: Understanding standard service desk procedures for onboarding researchers smoothly.
-              core_concepts:
-              - topic: Onboarding Verification
-                concepts:
-                - Identity verification
-                - Training certification check
-                - Onboarding procedures
-                search_terms:
-                - Researcher onboarding process SDE
-                - Identity verification healthcare researchers
-                why: Verifying researcher identity and IG training (e.g. ONS Safe Researcher) is the first line of defense.
             mid:
               id: researcher-onboarding-mid
               name: Mid Level
               skills:
               - Designs researcher onboarding workflows and documentation
               - Implements verification systems for researcher credentials
-              - Optimises onboarding processes for efficiency and security
-              qualifications: []
-              core_concepts:
-              - topic: Onboarding Workflow Optimization
-                concepts:
-                - Workflow design
-                - Credential verification systems
-                - Process optimization
-                search_terms:
-                - Automating researcher onboarding NHS
-                - Credential verification systems SDE
-                why: Efficient workflows reduce delays for clinical trials while maintaining strict security checks.
+              - optimises onboarding processes for efficiency and security
             senior:
               id: researcher-onboarding-senior
               name: Senior Level
@@ -869,47 +263,22 @@ domain:
               - Establishes enterprise researcher governance frameworks
               - Develops cross-organisational onboarding strategies
               - Leads initiatives to enhance researcher experience and security
-              qualifications: []
-              core_concepts:
-              - topic: Cross-Organizational Onboarding Strategy
-                concepts:
-                - Enterprise researcher governance
-                - Cross-organisational strategies
-                - Experience enhancement
-                search_terms:
-                - Cross-organisational governance health research
-                - Enterprise researcher onboarding SDE
-                why: Seniors must balance stringent security requirements with a seamless experience for world-class researchers.
         secure-research-workspaces:
           id: secure-research-workspaces
           name: Secure Research Workspaces
           description: Creates and maintains protected environments for researchers working with sensitive data. Involves
             designing secure environments tailored to research needs, implementing isolation controls, troubleshooting issues,
-            and optimising user experience. Requires evaluating technologies and leading modernisation initiatives to enhance
+            and optimizing user experience. Requires evaluating technologies and leading modernization initiatives to enhance
             security while supporting research activities.
           levels:
             entry:
               id: secure-research-workspaces-entry
               name: Entry Level
               skills:
-              - Describes secure workspace architecture, boundaries, and components
-              - Assists with workspace provisioning and environment teardown workflows
+              - Understands secure workspace concepts and components
+              - Familiar with workspace provisioning processes
               - Can configure basic workspace settings following templates
               - Understand current Research workspace
-              qualifications:
-              - issuer: Microsoft
-                description: 'Microsoft 365 Certified: Endpoint Administrator Associate (Exam)'
-                career_impact: Managing secure VDI and endpoint compliance for accessing the SDE.
-              core_concepts:
-              - topic: Workspace Fundamentals
-                concepts:
-                - Workspace architecture
-                - Environment provisioning
-                - Workspace templates
-                search_terms:
-                - TRE architecture basics
-                - Secure research workspace provisioning
-                why: Understanding the boundaries of a Trusted Research Environment (TRE) is crucial for data containment.
             mid:
               id: secure-research-workspaces-mid
               name: Mid Level
@@ -919,57 +288,14 @@ domain:
               - Troubleshoots workspace issues and optimises user experience
               - Support existing current Research workspace including installing new software and applications, configuring
                 existing applications, online services whitelisting
-              qualifications:
-              - issuer: AWS
-                description: AWS Certified Advanced Networking - Specialty (Exam)
-                career_impact: Securing AWS Workspaces and AppStream environments for isolated data analysis.
-              - issuer: Google Cloud
-                description: Google Cloud Professional Cloud Network Engineer (Exam)
-                career_impact: Designing and securing Google Cloud VPC network topologies and secure access perimeters.
-              - issuer: Citrix
-                description: Citrix Certified Professional - Virtualization (CCP-V) (Exam)
-                career_impact: Deploying and managing secure virtual desktop infrastructure often used in healthcare TREs.
-              - issuer: VMware
-                description: VMware Certified Professional - Desktop and Mobility (VCP-DTM) (Exam)
-                career_impact: Administering and optimizing Horizon virtual desktops and app delivery for secure research
-                  environments.
-              core_concepts:
-              - topic: Workspace Management & Support
-                concepts:
-                - Workspace isolation
-                - Software installation
-                - Online services whitelisting
-                search_terms:
-                - Network isolation TRE
-                - Whitelisting services Secure Data Environment
-                why: Mid-level engineers ensure workspaces have the necessary data science tools without compromising egress
-                  security.
             senior:
               id: secure-research-workspaces-senior
               name: Senior Level
               skills:
-              - Leads development of workspace strategies
+              - leads development of workspace strategies
               - Evaluates and selects secure workspace technologies
-              - Leads workspace modernisation and security enhancement initiatives
+              - Leads workspace modernization and security enhancement initiatives
               - Leads and support new/existing Research workspace
-              qualifications:
-              - issuer: Citrix
-                description: Citrix Certified Expert - Virtualization (CCE-V) (Exam)
-                career_impact: Architecting high-availability, enterprise-scale virtual workspace solutions for sensitive
-                  health data.
-              - issuer: VMware
-                description: VMware Certified Design Expert (VCDX) (Exam)
-                career_impact: Designing enterprise-grade, highly secure virtualized workspace environments.
-              core_concepts:
-              - topic: Workspace Architecture & Modernization
-                concepts:
-                - Workspace strategy
-                - Technology evaluation
-                - Security enhancement
-                search_terms:
-                - TRE modernization NHS
-                - Secure workspace architecture health data
-                why: Senior engineers design the next generation of TREs that can handle massive genomic datasets securely.
         secure-collaboration-tools:
           id: secure-collaboration-tools
           name: Secure Collaboration Tools
@@ -982,22 +308,11 @@ domain:
               id: secure-collaboration-tools-entry
               name: Entry Level
               skills:
-              - Identifies secure collaboration requirements and risks in research environments
-              - Configures security settings within approved collaboration platforms
+              - Understands secure collaboration requirements in research environments
+              - Familiar with collaboration tool security features
               - Can configure basic sharing and access controls
-              - Identifies cloud secret management services (e.g. Azure Key Vault) and their purpose
-              - Uses approved collaborative platforms in accordance with security policies
-              qualifications: []
-              core_concepts:
-              - topic: Collaboration Security Basics
-                concepts:
-                - Security settings configuration
-                - Sharing controls
-                - Cloud secret management (Azure Key Vault)
-                search_terms:
-                - Secure collaboration health data
-                - Azure Key Vault basics SDE
-                why: Basic sharing controls prevent accidental leakage of sensitive patient cohorts.
+              - Knowledge of any secret cloud service provider e.g azure kevaults
+              - Knowledge of simple collaborative platforms
             mid:
               id: secure-collaboration-tools-mid
               name: Mid Level
@@ -1005,22 +320,7 @@ domain:
               - Implements secure collaboration platforms and integrations
               - Designs security controls for data sharing and communication
               - Evaluates collaboration tools for security and compliance
-              - Support/create/maintain secrets using cloud services
-              qualifications:
-              - issuer: Microsoft
-                description: Microsoft Teams Administrator Associate (Exam)
-                career_impact: Configuring secure collaboration boundaries and data loss prevention for researchers.
-              core_concepts:
-              - topic: Collaboration Platforms & Secrets
-                concepts:
-                - Data sharing controls
-                - Tool evaluation
-                - Secrets management
-                search_terms:
-                - Evaluating collaboration tools for NHS compliance
-                - Managing secrets in healthcare cloud
-                why: Proper integration ensures researchers can collaborate on code and results without exposing the underlying
-                  data.
+              - Support/create/maintain secrets using cloud services.
             senior:
               id: secure-collaboration-tools-senior
               name: Senior Level
@@ -1028,122 +328,6 @@ domain:
               - Develops secure collaboration strategies across research environments
               - Implements governance frameworks for secure information sharing
               - Leads initiatives to enhance collaboration capabilities while maintaining security
-              - Leads task/communication management on collaborative platforms
-              qualifications: []
-              core_concepts:
-              - topic: Enterprise Collaboration Strategy
-                concepts:
-                - Cross-environment collaboration
-                - Information sharing governance
-                - Task management leadership
-                search_terms:
-                - Cross-environment secure collaboration NHS
-                - Information sharing governance TRE
-                why: Seniors establish the policies and platforms that enable multi-center international health studies securely.
+              - Leads task/communication management on collaborative platforms.
       items:
-      - name: Apache Guacamole
-        role: Provides isolated, clientless remote desktop environments and secure cryptographic credential stores to prevent
-          local data leakage.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 1
-            mentions:
-            - SATRE Driver Project
-          jobs:
-            total: 1
-            entry: 0
-            mid: 1
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Azure Key Vault
-        role: Provides isolated, clientless remote desktop environments and secure cryptographic credential stores to prevent
-          local data leakage.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NHS England SDE
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 2
-            entry: 0
-            mid: 0
-            senior: 2
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: FIDO2 / WebAuthn
-        role: Provides isolated, clientless remote desktop environments and secure cryptographic credential stores to prevent
-          local data leakage.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: HashiCorp Vault
-        role: Provides isolated, clientless remote desktop environments and secure cryptographic credential stores to prevent
-          local data leakage.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 2
-            entry: 0
-            mid: 0
-            senior: 2
-          radars:
-            score: 2/4
-            status: Adopt (Standard Secrets Engine)
-      - name: Zero Trust Network Access (ZTNA)
-        role: Provides isolated, clientless remote desktop environments and secure cryptographic credential stores to prevent
-          local data leakage.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 5
-            entry: 0
-            mid: 1
-            senior: 4
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
+      - azure kevaults

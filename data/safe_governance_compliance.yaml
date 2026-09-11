@@ -15,181 +15,82 @@ domain:
         with laws like GDPR, adherence to healthcare-specific standards such as DSPT and NHS DTAC, implementation of specialised
         security frameworks, and management of ethics and research approval systems that collectively maintain legal and regulatory
         adherence across all aspects of data handling.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         information-governance:
           id: information-governance
           name: Information Governance
           description: Establishes and maintains frameworks for managing information assets securely and compliantly. Involves
             implementing governance controls, conducting assessments, ensuring system compliance, developing enterprise strategies,
-            establishing oversight mechanisms, and leading maturity initiatives that align with organisational requirements
+            establishing oversight mechanisms, and leading maturity initiatives that align with organizational requirements
             and industry standards.
           levels:
             entry:
               id: information-governance-entry
               name: Entry Level
               skills:
-              - Explains basic information governance principles (e.g. data minimisation, accountability)
-              - Identifies key information governance frameworks (e.g. Caldicott Principles, ISO 27001)
+              - Understands basic information governance principles (e.g., data minimization, accountability)
+              - Familiar with key information governance frameworks  (e.g., Caldicott Principles, ISO 27001)
               - Can follow established information governance procedures
-              qualifications:
-              - issuer: NHS
-                description: NHS Data Security Awareness Training (Course)
-                career_impact: Mandatory foundation for anyone interacting with UK health data environments.
-              core_concepts:
-              - topic: Basic Health Info Governance
-                concepts:
-                - Caldicott Principles
-                - Data Minimisation
-                - Accountability
-                search_terms:
-                - NHS Caldicott Principles
-                - Information Governance basic principles healthcare
-                why: Understanding the fundamental rules for handling patient data ensures that basic IG procedures are followed
-                  in an SDE.
             mid:
               id: information-governance-mid
               name: Mid Level
               skills:
               - Implements information governance controls and processes
-              - Conducts information governance assessments (e.g. data flow mapping, risk assessments)
+              - Conducts information governance assessments (e.g., data flow mapping, risk assessments)
               - Ensures systems comply with governance requirements
-              qualifications:
-              - issuer: BCS
-                description: BCS Foundation Certificate in Information Security Management Principles (CISMP) (Exam)
-                career_impact: Strong UK-centric framework for managing information security and governance.
-              core_concepts:
-              - topic: IG Risk & Assessments in SDEs
-                concepts:
-                - Data Flow Mapping
-                - IG Risk Assessments
-                - NHS IG Toolkit/DSPT
-                search_terms:
-                - NHS Data Security and Protection Toolkit
-                - Data flow mapping healthcare SDE
-                why: Mid-level practitioners must implement controls and assess the risks associated with moving and storing
-                  sensitive health data.
             senior:
               id: information-governance-senior
               name: Senior Level
               skills:
               - Develops enterprise information governance strategies
               - Establishes governance frameworks and oversight mechanisms
-              - Leads information governance maturity initiatives (e.g. implementing maturity models)
-              qualifications:
-              - issuer: ISACA
-                description: CGEIT (Certified in the Governance of Enterprise IT) (Exam)
-                career_impact: Executive-level governance framework management for national platforms.
-              core_concepts:
-              - topic: Enterprise IG Strategy for Health Data
-                concepts:
-                - Maturity Models
-                - Enterprise IG Frameworks
-                - Oversight Mechanisms
-                search_terms:
-                - Information Governance maturity model healthcare
-                - Enterprise IG framework NHS
-                why: Senior leaders need to design the overarching strategy and oversight for safe data handling across complex
-                  federated SDEs.
+              - Leads information governance maturity initiatives (e.g., implementing maturity models)
         data-protection-compliance:
           id: data-protection-compliance
           name: Data Protection Compliance
           description: Ensures adherence to data protection laws and regulations such as GDPR. Involves understanding subject
             rights and consent requirements, implementing protection controls, conducting impact assessments, developing comprehensive
-            frameworks, establishing governance oversight, and leading enhancement initiatives across the organisation.
+            frameworks, establishing governance oversight, and leading enhancement initiatives across the organization.
           levels:
             entry:
               id: data-protection-compliance-entry
               name: Entry Level
               skills:
-              - Identifies relevant data protection regulations (e.g. UK GDPR, DPA 2018)
-              - Describes data subject rights and regulatory consent obligations
-              - Can implement basic data protection controls (e.g. pseudonymisation, access controls)
-              qualifications:
-              - issuer: IAPP
-                description: IAPP Certified Information Privacy Professional/Europe (CIPP/E) (Exam)
-                career_impact: Essential baseline understanding of UK GDPR and DPA 2018.
-              core_concepts:
-              - topic: Foundations of GDPR and DPA 2018
-                concepts:
-                - UK GDPR
-                - DPA 2018
-                - Data Subject Rights
-                - Pseudonymisation
-                search_terms:
-                - UK GDPR health data
-                - Pseudonymisation SDE techniques
-                why: Entry-level personnel must recognize regulatory obligations and apply basic privacy controls to health
-                  data.
+              - Understands relevant data protection regulations (GDPR, etc.)
+              - Familiar with data subject rights and consent requirements
+              - Can implement basic data protection controls (e.g., pseudonymization, access controls)
             mid:
               id: data-protection-compliance-mid
               name: Mid Level
               skills:
-              - Implements comprehensive data protection frameworks (e.g. Data Protection Impact Assessments (DPIAs), privacy
-                by design)
-              - Conducts Data Protection Impact Assessments (DPIAs)
+              - Implements comprehensive data protection frameworks  (e.g., Data Protection Impact Assessments, privacy by
+                design).
+              - Conducts data protection impact assessments
               - Ensures systems comply with data protection requirements
-              qualifications:
-              - issuer: IAPP
-                description: IAPP Certified Information Privacy Manager (CIPM) (Exam)
-                career_impact: Operationalizing privacy programs within the SDE.
-              core_concepts:
-              - topic: Implementing DPIAs in Healthcare
-                concepts:
-                - Data Protection Impact Assessments (DPIA)
-                - Privacy by Design
-                - Health Data Consent Models
-                search_terms:
-                - DPIA template NHS
-                - Privacy by design healthcare SDE
-                why: Mid-level roles require hands-on creation of DPIAs to evaluate privacy risks before new SDE tools are
-                  deployed.
             senior:
               id: data-protection-compliance-senior
               name: Senior Level
               skills:
               - Develops enterprise data protection strategies
               - Establishes data protection governance and oversight
-              - Leads data protection enhancement initiatives (e.g. organisation-wide training, new privacy technologies)
-              qualifications:
-              - issuer: IAPP
-                description: Fellow of Information Privacy (FIP) (Designation)
-                career_impact: Recognized leader in data privacy strategy for highly sensitive domains.
-              core_concepts:
-              - topic: Strategic Data Protection Governance
-                concepts:
-                - Privacy Enhancing Technologies (PETs)
-                - Enterprise Data Protection Strategy
-                - Regulatory Liaison
-                search_terms:
-                - PETs in Secure Data Environments
-                - Data protection strategy NHS
-                why: Senior practitioners must lead organization-wide enhancement initiatives and introduce advanced privacy
-                  technologies to protect health records.
+              - Leads data protection enhancement initiatives (e.g., organization-wide training, new privacy technologies).
         healthcare-standards-compliance:
           id: healthcare-standards-compliance
           name: Healthcare Standards Compliance
           description: Ensures adherence to healthcare-specific regulatory standards such as DSPT and NHS DTAC. Involves implementing
             compliance frameworks, conducting assessments, ensuring systems meet regulatory requirements, developing enterprise
-            strategies, establishing governance programmes, and leading standards compliance initiatives.
+            strategies, establishing governance programs, and leading standards compliance initiatives.
           levels:
             entry:
               id: healthcare-standards-compliance-entry
               name: Entry Level
               skills:
-              - Identifies relevant healthcare standards (e.g. DSPT, NHS DTAC) and their requirements
-              - Describes healthcare compliance requirements and operational standards
+              - Understands relevant healthcare standards (DSPT, NHS DTAC, etc.)
+              - Familiar with healthcare compliance requirements
               - Can implement basic healthcare compliance controls
-              qualifications: []
-              core_concepts:
-              - topic: Introduction to DSPT and DTAC
-                concepts:
-                - DSPT (Data Security and Protection Toolkit)
-                - NHS DTAC
-                search_terms:
-                - NHS DSPT requirements
-                - Digital Technology Assessment Criteria NHS
-                why: Provides the required baseline knowledge to operate within the stringent compliance boundaries of the
-                  NHS.
             mid:
               id: healthcare-standards-compliance-mid
               name: Mid Level
@@ -197,43 +98,13 @@ domain:
               - Implements healthcare standards compliance frameworks
               - Conducts healthcare compliance assessments
               - Ensures systems meet healthcare regulatory requirements
-              qualifications:
-              - issuer: NHS
-                description: NHS Digital DSPT (Data Security and Protection Toolkit) Administrator (Practical)
-                career_impact: Directly applicable to ensuring the SDE meets mandatory NHS security requirements.
-              core_concepts:
-              - topic: Healthcare Standards Assessment
-                concepts:
-                - Compliance Frameworks
-                - Regulatory Assessments
-                - DSPT Evidence Gathering
-                search_terms:
-                - Conducting DSPT assessment
-                - NHS DTAC compliance process
-                why: Required to actively evaluate and ensure SDE tools and platforms meet strict UK healthcare technology
-                  standards.
             senior:
               id: healthcare-standards-compliance-senior
               name: Senior Level
               skills:
               - Develops enterprise healthcare compliance strategies
-              - Establishes healthcare compliance governance programmes
+              - Establishes healthcare compliance governance programs
               - Leads healthcare standards compliance initiatives
-              qualifications:
-              - issuer: PECB / BSI
-                description: ISO 27799:2016 Lead Implementer (Exam)
-                career_impact: Specialized ISO standard for health informatics security management.
-              core_concepts:
-              - topic: Enterprise Healthcare Compliance Strategy
-                concepts:
-                - Governance Programmes
-                - Cross-system Interoperability Compliance
-                - Strategic Alignment
-                search_terms:
-                - Enterprise NHS compliance strategy
-                - SDE cross-border health standards
-                why: Senior leaders develop and maintain the overarching compliance strategies that integrate complex SDEs
-                  into the broader healthcare ecosystem.
         healthcare-data-security-frameworks:
           id: healthcare-data-security-frameworks
           name: Healthcare Data Security Frameworks
@@ -246,44 +117,16 @@ domain:
               id: healthcare-data-security-frameworks-entry
               name: Entry Level
               skills:
-              - Identifies basic healthcare data security frameworks (e.g. DSPT, NHS DTAC)
-              - Outlines healthcare-specific compliance obligations and information governance controls
-              - Can follow established healthcare compliance procedures (e.g. incident reporting, access reviews)
-              qualifications: []
-              core_concepts:
-              - topic: Basic SDE Security Frameworks
-                concepts:
-                - DSPT Baseline
-                - Incident Reporting Protocols
-                - Access Reviews
-                search_terms:
-                - NHS incident reporting data security
-                - Access review process SDE
-                why: Understanding basic healthcare security controls and compliance procedures is essential for day-to-day
-                  operations in an SDE.
+              - Understands basic healthcare data security frameworks (DSPT, NHS DTAC)
+              - Familiar with healthcare-specific compliance requirements
+              - Can follow established healthcare compliance procedures (e.g., incident reporting, access reviews)
             mid:
               id: healthcare-data-security-frameworks-mid
               name: Mid Level
               skills:
-              - Implements healthcare compliance controls and processes (e.g. encryption, audit logging)
+              - Implements healthcare compliance controls and processes (e.g., encryption, audit logging)
               - Conducts healthcare compliance assessments
               - Ensures systems meet healthcare regulatory requirements
-              qualifications:
-              - issuer: Various
-                description: ISO/IEC 27001 Lead Implementer (Exam)
-                career_impact: Implementing the core Information Security Management System (ISMS) required for almost all
-                  TREs.
-              core_concepts:
-              - topic: Implementing SDE Controls
-                concepts:
-                - Encryption in Transit/Rest
-                - Audit Logging Strategies
-                - Compliance Validation
-                search_terms:
-                - Healthcare data encryption standards
-                - Audit logging best practices SDE
-                why: Ensures that the technical controls required by health frameworks (like DSPT) are correctly engineered
-                  and maintained.
             senior:
               id: healthcare-data-security-frameworks-senior
               name: Senior Level
@@ -291,21 +134,6 @@ domain:
               - Develops healthcare compliance strategies and frameworks
               - Establishes healthcare compliance governance and oversight
               - Leads healthcare standards compliance initiatives
-              qualifications:
-              - issuer: Various
-                description: ISO/IEC 27001 Lead Auditor (Exam)
-                career_impact: Validating and auditing the enterprise-wide security framework compliance.
-              core_concepts:
-              - topic: Advanced Health Data Security Strategies
-                concepts:
-                - Framework Architecture
-                - Governance Oversight
-                - Security Maturity Programs
-                search_terms:
-                - Designing secure data environments NHS
-                - Healthcare security maturity framework
-                why: Crucial for establishing the architectural and governance mechanisms that ensure the entire SDE remains
-                  secure and compliant over time.
         ethics-research-approval-systems:
           id: ethics-research-approval-systems
           name: Ethics & Research Approval Systems
@@ -318,44 +146,17 @@ domain:
               id: ethics-research-approval-systems-entry
               name: Entry Level
               skills:
-              - Outlines ethical review requirements and research approval workflows
-              - Prepares standard ethical review submissions and IRAS documentation
-              - Can assist with preparing submissions for ethical approval (e.g. drafting consent forms, compiling supporting
+              - Understands ethical review requirements and research approval processes
+              - Familiar with ethics and IRAS documentation requirements
+              - Can assist with preparing submissions for ethical approval (e.g., drafting consent forms, compiling supporting
                 documents)
-              qualifications: []
-              core_concepts:
-              - topic: Research Approval Basics
-                concepts:
-                - IRAS Documentation
-                - Ethical Review Requirements
-                - Consent Form Drafting
-                search_terms:
-                - Integrated Research Application System (IRAS) basics
-                - NHS research ethics consent form
-                why: Entry staff need to understand how researchers request access to data and how to process initial ethical
-                  documentation.
             mid:
               id: ethics-research-approval-systems-mid
               name: Mid Level
               skills:
-              - Implements systems for tracking ethical approvals and requirements (e.g. electronic tracking tools, spreadsheets)
+              - Implements systems for tracking ethical approvals and requirements (e.g., electronic tracking tools, spreadsheets)
               - Ensures research activities comply with ethical approvals
               - Conducts ethics compliance reviews and assessments
-              qualifications:
-              - issuer: HRA
-                description: IRB / REC Administration Certification (Course)
-                career_impact: Understanding the Health Research Authority (HRA) approval workflows.
-              core_concepts:
-              - topic: Tracking & Compliance for Approvals
-                concepts:
-                - Electronic Tracking Tools
-                - Ethics Compliance Reviews
-                - Study Protocol Alignment
-                search_terms:
-                - Research approval tracking SDE
-                - Ethics compliance assessment health data
-                why: Required to manage ongoing research projects and ensure their actions align with the approved ethical
-                  constraints within the SDE.
             senior:
               id: ethics-research-approval-systems-senior
               name: Senior Level
@@ -363,142 +164,7 @@ domain:
               - Develops ethical compliance strategies and frameworks
               - Establishes ethics governance and oversight processes
               - Leads initiatives to enhance ethical compliance
-              qualifications: []
-              core_concepts:
-              - topic: Enterprise Ethical Governance Strategy
-                concepts:
-                - Ethical Governance Process Design
-                - Oversight Frameworks
-                - Enhancement Initiatives
-                search_terms:
-                - Enterprise research ethics governance NHS
-                - Streamlining ethics approvals SDE
-                why: Needed to build robust, scalable systems that balance the speed of research with rigid ethical oversight.
-      items:
-      - name: Caldicott Principles
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NHS England SDE
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 7
-            entry: 0
-            mid: 2
-            senior: 5
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Cyber Essentials Plus
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: ISO/IEC 27001:2022
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - ISO/IEC 27001
-            - SATRE Specification
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: NHS Data Security & Protection Toolkit (DSPT)
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NHS DSPT / DTAC
-            - NHS England SDE
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: NHS Digital Technology Assessment Criteria (DTAC)
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NHS DSPT / DTAC
-            - NHS England SDE
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 35
-            entry: 9
-            mid: 15
-            senior: 11
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: UK GDPR / DPA 2018
-        role: Aligns organizational data processing with UK data protection legislation, NHS health standards, and accredited
-          ISMS frameworks.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
+      items: null
     security-management:
       id: security-management
       name: Security Management
@@ -507,57 +173,31 @@ domain:
         controls, conducting regular assessments and testing to verify effectiveness, and managing incident response processes
         that collectively ensure research data remains protected from unauthorised access or breaches while enabling appropriate
         recovery and improvement from security events.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         security-controls-implementation:
           id: security-controls-implementation
           name: Security Controls Implementation
           description: Deploys technical, administrative, and physical safeguards to protect data and systems. Involves understanding
             control concepts, implementing basic and comprehensive security frameworks, evaluating effectiveness, mapping
-            to compliance requirements, developing enterprise strategies, and leading maturity initiatives across the organisation.
+            to compliance requirements, developing enterprise strategies, and leading maturity initiatives across the organization.
           levels:
             entry:
               id: security-controls-implementation-entry
               name: Entry Level
               skills:
-              - Classifies security control types, categories, and functions
-              - Identifies common security controls and explains their risk reduction purpose
-              - Can implement basic security controls following guidelines (e.g. password policies, firewall rules)
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA Security+ (Exam)
-                career_impact: Implementing basic technical controls.
-              core_concepts:
-              - topic: Security Control Fundamentals
-                concepts:
-                - Password Policies
-                - Firewall Rules
-                - Control Classification
-                search_terms:
-                - Basic security controls health data
-                - Implementing SDE firewall rules
-                why: Understanding basic administrative and technical safeguards is critical for minimizing risks to SDE environments.
+              - Understands security control concepts and categories
+              - Familiar with common security controls and their purpose
+              - Can implement basic security controls following guidelines (e.g., password policies, firewall rules)
             mid:
               id: security-controls-implementation-mid
               name: Mid Level
               skills:
               - Designs and implements comprehensive security control frameworks
               - Evaluates effectiveness and suitability of security controls
-              - Maps controls to specific compliance requirements (e.g. GDPR Article 32, ISO 27001 Annex A)
-              qualifications:
-              - issuer: GIAC
-                description: GIAC Security Essentials (GSEC) (Exam)
-                career_impact: Hands-on implementation of comprehensive defense-in-depth controls.
-              core_concepts:
-              - topic: Comprehensive Control Frameworks
-                concepts:
-                - GDPR Article 32 Mapping
-                - ISO 27001 Annex A
-                - Control Effectiveness Evaluation
-                search_terms:
-                - Mapping controls to GDPR Article 32
-                - ISO 27001 implementation SDE
-                why: Mid-level security engineers must translate regulatory requirements into concrete, comprehensive technical
-                  safeguards.
+              - Maps controls to specific compliance requirements (e.g., GDPR Article 32, ISO 27001 Annex A)
             senior:
               id: security-controls-implementation-senior
               name: Senior Level
@@ -565,76 +205,28 @@ domain:
               - Develops enterprise security control strategies
               - Establishes security control governance and oversight
               - Leads security control maturity initiatives
-              qualifications:
-              - issuer: ISC2
-                description: CISSP (Exam)
-                career_impact: Designing the enterprise-wide security control framework.
-              core_concepts:
-              - topic: Enterprise SDE Security Strategy
-                concepts:
-                - Security Governance
-                - Maturity Initiatives
-                - Enterprise Control Strategies
-                search_terms:
-                - Enterprise security controls SDE
-                - Security governance framework health data
-                why: Essential for directing the overarching security posture, ensuring that implemented controls align with
-                  long-term strategic and compliance goals.
         security-assessment-testing:
           id: security-assessment-testing
           name: Security Assessment & Testing
           description: Evaluates the effectiveness of security controls through testing and analysis. Involves understanding
-            assessment methodologies, conducting vulnerability scanning and penetration testing, analysing results, prioritising
-            remediation, implementing testing programmes, and establishing governance frameworks to mature assessment capabilities.
+            assessment methodologies, conducting vulnerability scanning and penetration testing, analyzing results, prioritizing
+            remediation, implementing testing programs, and establishing governance frameworks to mature assessment capabilities.
           levels:
             entry:
               id: security-assessment-testing-entry
               name: Entry Level
               skills:
-              - Describes security assessment methodologies and testing approaches
-              - Distinguishes between vulnerability scanning, vulnerability assessments, and penetration testing
-              - Can assist with security assessments following established procedures (e.g. running vulnerability scans, documenting
-                findings)
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA PenTest+ (Exam)
-                career_impact: Fundamentals of vulnerability scanning and basic penetration testing.
-              core_concepts:
-              - topic: Basics of Security Assessments
-                concepts:
-                - Vulnerability Scanning
-                - Penetration Testing Differences
-                - Documenting Findings
-                search_terms:
-                - Vulnerability scanning healthcare systems
-                - Difference between vulnerability scan and pentest
-                why: Provides the foundational skills needed to identify and record potential security gaps in health data
-                  systems.
+              - Understands security assessment concepts and methodologies
+              - Familiar with vulnerability scanning and penetration testing
+              - Can assist with security assessments following established procedures (e.g., running vulnerability scans,
+                documenting findings)
             mid:
               id: security-assessment-testing-mid
               name: Mid Level
               skills:
               - Conducts comprehensive security assessments and testing
               - Analyses security assessment results and prioritises remediation
-              - Implements security testing programmes and schedules
-              qualifications:
-              - issuer: OffSec
-                description: OSCP (Offensive Security Certified Professional) (Practical Exam)
-                career_impact: Rigorous, hands-on vulnerability assessment for critical SDE infrastructure.
-              - issuer: CREST
-                description: CREST Practitioner Security Analyst (CPSA) (Exam)
-                career_impact: UK-recognized standard for infrastructure testing.
-              core_concepts:
-              - topic: Active Security Testing in SDEs
-                concepts:
-                - Comprehensive Assessments
-                - Remediation Prioritisation
-                - Testing Programmes
-                search_terms:
-                - Penetration testing secure data environments
-                - Prioritising vulnerabilities health data
-                why: Mid-level testers must execute complex assessments and make informed decisions on which vulnerabilities
-                  present the highest risk to patient data.
+              - Implements security testing programs and schedules
             senior:
               id: security-assessment-testing-senior
               name: Senior Level
@@ -642,50 +234,20 @@ domain:
               - Develops enterprise security assessment strategies
               - Establishes security testing governance and methodologies
               - Leads security assessment maturity initiatives
-              qualifications:
-              - issuer: CREST
-                description: CREST Certified Infrastructure Tester (CCT Inf) (Practical Exam)
-                career_impact: Leading advanced red-team exercises against SDE perimeters.
-              core_concepts:
-              - topic: Strategic Security Testing Methodologies
-                concepts:
-                - Enterprise Testing Strategies
-                - Red Teaming Oversight
-                - Maturity Initiatives
-                search_terms:
-                - Enterprise security testing strategy SDE
-                - Red teaming healthcare infrastructure
-                why: Senior leaders establish the testing governance required to continuously validate SDE resilience against
-                  sophisticated threats.
         incident-response-management:
           id: incident-response-management
           name: Incident Response Management
           description: Prepares for and manages security incidents effectively to minimise impact. Involves understanding
             incident response procedures, classifying and reporting incidents, implementing response plans, leading investigations,
-            analysing for improvement, developing enterprise strategies, and enhancing response capabilities across the organisation.
+            analyzing for improvement, developing enterprise strategies, and enhancing response capabilities across the organization.
           levels:
             entry:
               id: incident-response-management-entry
               name: Entry Level
               skills:
-              - Outlines incident response phases, escalation procedures, and reporting
-              - Classifies security incidents according to severity thresholds and reporting criteria
+              - Understands incident response concepts and procedures
+              - Familiar with incident classification and reporting
               - Can assist with incident response following established protocols
-              qualifications:
-              - issuer: CompTIA
-                description: CompTIA CySA+ (Cybersecurity Analyst) (Exam)
-                career_impact: Triage and basic incident analysis.
-              core_concepts:
-              - topic: Incident Triage and Escalation
-                concepts:
-                - Incident Classification
-                - Severity Thresholds
-                - Reporting Criteria
-                search_terms:
-                - NHS security incident reporting
-                - Cyber incident triage healthcare
-                why: Fast and accurate classification of incidents is vital for protecting sensitive health data during a
-                  breach.
             mid:
               id: incident-response-management-mid
               name: Mid Level
@@ -693,21 +255,6 @@ domain:
               - Implements incident response plans and procedures
               - Leads incident investigations and coordinates response activities
               - Analyses incidents for lessons learned and improvement opportunities
-              qualifications:
-              - issuer: GIAC
-                description: GIAC Certified Incident Handler (GCIH) (Exam)
-                career_impact: Managing the complete incident response lifecycle during a breach attempt.
-              core_concepts:
-              - topic: Leading SDE Investigations
-                concepts:
-                - Incident Response Procedures
-                - Investigation Coordination
-                - Lessons Learned Analysis
-                search_terms:
-                - Health data breach investigation
-                - Incident response plan implementation SDE
-                why: Mid-level responders manage active threats, coordinate containment, and drive post-incident improvements
-                  in the SDE.
             senior:
               id: incident-response-management-senior
               name: Senior Level
@@ -715,143 +262,11 @@ domain:
               - Develops enterprise incident response strategies
               - Establishes incident response governance and oversight
               - Leads incident response capability enhancement initiatives
-              qualifications:
-              - issuer: ISACA
-                description: CISM (Certified Information Security Manager) (Exam)
-                career_impact: Governing the enterprise incident response strategy and external reporting (ICO, NHS England).
-              core_concepts:
-              - topic: Enterprise Incident Strategy
-                concepts:
-                - Capability Enhancement
-                - Enterprise Response Strategies
-                - Executive Oversight
-                search_terms:
-                - Enterprise incident response governance NHS
-                - Strategic cyber resilience health data
-                why: Senior roles must build resilient organizational structures that can survive and recover from major healthcare
-                  cyber events.
       items:
-      - name: Aqua Trivy / Clair
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 2/4
-            status: Adopt (Vulnerability & SBOM Scanner)
-      - name: Falco
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 2
-            entry: 0
-            mid: 0
-            senior: 2
-          radars:
-            score: 2/4
-            status: Graduated / Trial (eBPF Runtime Security)
-      - name: Firewall rules
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - NCSC Cyber Principles
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 3
-            entry: 0
-            mid: 2
-            senior: 1
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Splunk
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: true
-          standards:
-            count: 2
-            mentions:
-            - NHS DSPT / DTAC
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 0
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Tenable Nessus / OpenVAS
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions:
-            - NCSC Cyber Principles
-            - NHS DSPT / DTAC
-            - ISO/IEC 27001
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 2
-            entry: 0
-            mid: 1
-            senior: 1
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Wazuh / OSSEC
-        role: Conducts vulnerability management, runtime container security monitoring, and continuous threat mitigation.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - SATRE Specification
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 1
-            entry: 0
-            mid: 1
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
+      - Firewall rules
+      - Nessus
+      - OpenVAS
+      - Splunk
     ethics-research-governance:
       id: ethics-research-governance
       name: Ethics & Research Governance
@@ -860,6 +275,9 @@ domain:
         subject consent throughout the research lifecycle, and facilitating thorough ethical review processes that collectively
         ensure research is conducted responsibly while respecting patient rights, maintaining public trust, and supporting
         scientific integrity.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         research-ethics-compliance:
           id: research-ethics-compliance
@@ -867,29 +285,15 @@ domain:
           description: Ensures research activities adhere to ethical principles and requirements. Involves understanding ethics
             principles, following approval processes, implementing frameworks, conducting assessments, ensuring compliance,
             developing enterprise strategies, and establishing governance to enhance ethical research practices across the
-            organisation.
+            organization.
           levels:
             entry:
               id: research-ethics-compliance-entry
               name: Entry Level
               skills:
-              - Explains basic research ethics principles and governance expectations
-              - Follows institutional research ethics approval and governance workflows
+              - Understands basic research ethics principles
+              - Familiar with research ethics approval processes
               - Can follow established research ethics procedures
-              qualifications:
-              - issuer: NIHR
-                description: Good Clinical Practice (GCP) Certification (Course)
-                career_impact: Mandatory standard for understanding ethics in clinical research.
-              core_concepts:
-              - topic: Principles of Research Ethics
-                concepts:
-                - Ethics Principles
-                - Governance Expectations
-                - Approval Workflows
-                search_terms:
-                - Health research ethics principles UK
-                - Following NHS ethics workflows
-                why: Entry staff must understand the boundaries of acceptable data use to prevent ethical violations.
             mid:
               id: research-ethics-compliance-mid
               name: Mid Level
@@ -897,18 +301,6 @@ domain:
               - Implements research ethics frameworks and processes
               - Conducts research ethics assessments and reviews
               - Ensures research activities comply with ethical requirements
-              qualifications: []
-              core_concepts:
-              - topic: Enforcing Ethical Frameworks
-                concepts:
-                - Ethics Assessments
-                - Compliance Verification
-                - Process Implementation
-                search_terms:
-                - Conducting research ethics assessments
-                - Verifying ethics compliance SDE
-                why: Responsible for translating broad ethical principles into concrete checks and balances within the research
-                  pipeline.
             senior:
               id: research-ethics-compliance-senior
               name: Senior Level
@@ -916,21 +308,10 @@ domain:
               - Develops enterprise research ethics strategies
               - Establishes research ethics governance and oversight
               - Leads research ethics enhancement initiatives
-              qualifications: []
-              core_concepts:
-              - topic: Strategic Research Ethics
-                concepts:
-                - Enterprise Ethics Strategies
-                - Oversight Governance
-                - Enhancement Initiatives
-                search_terms:
-                - Enterprise research ethics governance
-                - Health data ethics strategy
-                why: Necessary to ensure the institution maintains public trust while operating massive research databases.
         consent-management:
           id: consent-management
           name: Consent Management
-          description: Manages processes for obtaining, recording, and honouring data subject consent. Involves understanding
+          description: Manages processes for obtaining, recording, and honoring data subject consent. Involves understanding
             consent requirements, verifying documentation, implementing management systems, ensuring research activities align
             with consent parameters, developing enterprise strategies, and establishing governance frameworks to enhance consent
             practices.
@@ -939,20 +320,9 @@ domain:
               id: consent-management-entry
               name: Entry Level
               skills:
-              - Describes participant consent concepts and regulatory requirements
-              - Verifies participant consent forms and documentation against study protocols
-              - Can implement basic consent management procedures (e.g. verifying withdrawal requests)
-              qualifications: []
-              core_concepts:
-              - topic: Consent Verification
-                concepts:
-                - Participant Consent Concepts
-                - Regulatory Requirements
-                - Withdrawal Requests
-                search_terms:
-                - Verifying participant consent health data
-                - Managing consent withdrawal SDE
-                why: Ensures that individual patient rights, including opting out, are respected at the ground level.
+              - Understands consent concepts and requirements
+              - Familiar with consent documentation and verification
+              - Can implement basic consent management procedures (e.g., verifying withdrawal requests)
             mid:
               id: consent-management-mid
               name: Mid Level
@@ -960,20 +330,6 @@ domain:
               - Designs and implements consent management systems
               - Ensures research activities align with consent parameters
               - Conducts consent compliance reviews and assessments
-              qualifications:
-              - issuer: IAPP
-                description: CIPP/E (Exam)
-                career_impact: Navigating complex lawful bases for processing health data under GDPR.
-              core_concepts:
-              - topic: Consent System Implementation
-                concepts:
-                - Consent Management Systems
-                - Compliance Reviews
-                - Parameter Alignment
-                search_terms:
-                - Implementing consent management system healthcare
-                - Consent compliance assessment SDE
-                why: Mid-level engineers build and maintain the technical mechanisms that enforce complex consent rules dynamically.
             senior:
               id: consent-management-senior
               name: Senior Level
@@ -981,18 +337,6 @@ domain:
               - Develops enterprise consent management strategies
               - Establishes consent governance frameworks and processes
               - Leads consent management enhancement initiatives
-              qualifications: []
-              core_concepts:
-              - topic: Enterprise Consent Strategy
-                concepts:
-                - Consent Governance Frameworks
-                - Dynamic Consent Strategies
-                - Enhancement Initiatives
-                search_terms:
-                - Dynamic consent strategy healthcare
-                - Enterprise consent governance SDE
-                why: Essential for guiding the organizational approach to patient permissions across multi-tenant, federated
-                  SDE environments.
         ethical-review-processes:
           id: ethical-review-processes
           name: Ethical Review Processes
@@ -1005,21 +349,9 @@ domain:
               id: ethical-review-processes-entry
               name: Entry Level
               skills:
-              - Outlines ethical review requirements and standard submission processes
-              - Prepares and reviews documentation required for ethical committee submissions
+              - Understands ethical review requirements and processes
+              - Familiar with ethical review documentation
               - Can prepare basic ethical review submissions
-              qualifications: []
-              core_concepts:
-              - topic: Ethical Review Preparation
-                concepts:
-                - Review Requirements
-                - Standard Submission Processes
-                - Committee Documentation
-                search_terms:
-                - Preparing ethics committee submissions NHS
-                - Standard ethical review process healthcare
-                why: Provides the foundational support needed to get research projects through the ethical approval pipeline
-                  efficiently.
             mid:
               id: ethical-review-processes-mid
               name: Mid Level
@@ -1027,18 +359,6 @@ domain:
               - Coordinates complex ethical review submissions
               - Implements systems for tracking ethical approvals
               - Ensures research activities comply with ethical approvals
-              qualifications: []
-              core_concepts:
-              - topic: Coordinating Complex Submissions
-                concepts:
-                - Complex Submissions
-                - Tracking Approvals
-                - Compliance Assurance
-                search_terms:
-                - Coordinating complex ethics submissions
-                - Tracking ethical approvals SDE
-                why: Mid-level staff ensure that overlapping, multi-faceted research requests are properly assessed and tracked
-                  within the SDE.
             senior:
               id: ethical-review-processes-senior
               name: Senior Level
@@ -1046,108 +366,17 @@ domain:
               - Develops streamlined ethical review frameworks
               - Establishes ethical review governance and oversight
               - Leads initiatives to enhance ethical review processes
-              qualifications: []
-              core_concepts:
-              - topic: Optimizing Review Frameworks
-                concepts:
-                - Streamlined Frameworks
-                - Review Governance
-                - Process Enhancement
-                search_terms:
-                - Streamlining ethical review processes
-                - Governance of ethical reviews health data
-                why: Senior leaders optimize the review lifecycle, removing bottlenecks while ensuring uncompromised ethical
-                  standards for data access.
-      items:
-      - name: Data Sharing Agreements (DSA)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Five Safes Framework
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 4
-            mentions:
-            - SATRE Specification
-            - DARE UK FAB
-            - ONS SDC
-            - NHS England SDE
-          projects:
-            count: 3
-            mentions:
-            - SATRE Driver Project
-            - TRE-FX Driver Project
-            - TREvolution
-          jobs:
-            total: 6
-            entry: 0
-            mid: 4
-            senior: 2
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Integrated Research Application System (IRAS)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NHS England SDE
-            - NHS DSPT / DTAC
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Research Ethics Committees (REC)
-        role: Governs project onboarding approvals, research protocol ethical reviews, and data access committee (DAC) oversight.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
     audit-compliance-monitoring:
       id: audit-compliance-monitoring
       name: Audit & Compliance Monitoring
       description: Audit & Compliance Monitoring ensures continuous verification of regulatory adherence through systematic
         tracking and reporting. This subdomain encompasses implementing comprehensive audit trail systems that record system
         and user activities, conducting regular compliance monitoring with structured reporting processes, and managing certification
-        and accreditation programmes that collectively provide assurance that secure data environments maintain required standards
+        and accreditation programs that collectively provide assurance that secure data environments maintain required standards
         while enabling effective oversight and continuous improvement.
+      tools: []
+      technologies: []
+      standards: []
       competencies:
         audit-trail-implementation:
           id: audit-trail-implementation
@@ -1161,21 +390,9 @@ domain:
               id: audit-trail-implementation-entry
               name: Entry Level
               skills:
-              - Explains audit logging concepts, security requirements, and retention needs
-              - Inspects audit log records and identifies standard event fields and formats
+              - Understands audit logging concepts and requirements
+              - Familiar with audit log contents and formats
               - Can implement basic audit logging following guidelines
-              qualifications: []
-              core_concepts:
-              - topic: Audit Logging Basics
-                concepts:
-                - Security Requirements
-                - Retention Needs
-                - Event Fields
-                search_terms:
-                - Audit logging basics healthcare
-                - Standard event fields SDE logs
-                why: Fundamental for ensuring that all data access and system events are recorded in a standardized, compliant
-                  manner.
             mid:
               id: audit-trail-implementation-mid
               name: Mid Level
@@ -1183,21 +400,6 @@ domain:
               - Designs comprehensive audit logging strategies
               - Implements secure audit trail collection and storage
               - Ensures audit coverage across systems and processes
-              qualifications:
-              - issuer: Splunk
-                description: Splunk Core Certified Power User (Exam)
-                career_impact: Building robust audit logging and monitoring dashboards.
-              core_concepts:
-              - topic: Secure Audit Infrastructure
-                concepts:
-                - Comprehensive Logging Strategies
-                - Secure Collection/Storage
-                - System Coverage
-                search_terms:
-                - Secure audit trail storage health data
-                - Implementing SDE logging strategies
-                why: Required to design tamper-proof logging systems that can be relied upon during a security investigation
-                  or compliance audit.
             senior:
               id: audit-trail-implementation-senior
               name: Senior Level
@@ -1205,64 +407,27 @@ domain:
               - Develops enterprise audit strategy and architecture
               - Establishes audit governance frameworks and policies
               - Leads audit capability enhancement initiatives
-              qualifications: []
-              core_concepts:
-              - topic: Enterprise Audit Architecture
-                concepts:
-                - Audit Strategy
-                - Governance Policies
-                - Capability Enhancement
-                search_terms:
-                - Enterprise audit architecture SDE
-                - Audit governance framework NHS
-                why: Senior architects define the long-term vision for immutable, enterprise-wide observability across federated
-                  SDE networks.
         compliance-monitoring-reporting:
           id: compliance-monitoring-reporting
           name: Compliance Monitoring & Reporting
           description: Continuously assesses and documents adherence to regulatory requirements and standards. Involves producing
-            compliance reports, implementing monitoring programmes, analysing trends and issues, developing enterprise strategies,
-            establishing reporting frameworks, and leading initiatives to enhance monitoring capabilities across the organisation.
+            compliance reports, implementing monitoring programs, analyzing trends and issues, developing enterprise strategies,
+            establishing reporting frameworks, and leading initiatives to enhance monitoring capabilities across the organization.
           levels:
             entry:
               id: compliance-monitoring-reporting-entry
               name: Entry Level
               skills:
-              - Describes compliance monitoring concepts and reporting workflows
-              - Compiles routine compliance evidence and generates standard audit reports
+              - Understands compliance monitoring concepts
+              - Familiar with compliance reporting requirements
               - Can produce basic compliance reports using established templates
-              qualifications: []
-              core_concepts:
-              - topic: Routine Compliance Reporting
-                concepts:
-                - Monitoring Workflows
-                - Evidence Compilation
-                - Standard Audit Reports
-                search_terms:
-                - Routine compliance reporting healthcare
-                - Compiling audit evidence NHS
-                why: Ensures that daily or weekly compliance checks are executed and evidence is preserved accurately.
             mid:
               id: compliance-monitoring-reporting-mid
               name: Mid Level
               skills:
-              - Implements compliance monitoring programmes and tools
+              - Implements compliance monitoring programs and tools
               - Produces comprehensive compliance reporting and dashboards
               - Analyses compliance data to identify trends and issues
-              qualifications:
-              - issuer: ISACA
-                description: CISA (Certified Information Systems Auditor) (Exam)
-                career_impact: Standard for assessing and reporting on IT compliance.
-              core_concepts:
-              - topic: Advanced Monitoring & Analysis
-                concepts:
-                - Monitoring Programmes
-                - Dashboards
-                - Trend Analysis
-                search_terms:
-                - Compliance dashboards SDE
-                - Analysing compliance trends health data
-                why: Mid-level analysts detect anomalies or drifting compliance states before they become critical breaches.
             senior:
               id: compliance-monitoring-reporting-senior
               name: Senior Level
@@ -1270,48 +435,21 @@ domain:
               - Develops enterprise compliance monitoring strategies
               - Establishes compliance reporting frameworks and governance
               - Leads compliance monitoring enhancement initiatives
-              qualifications:
-              - issuer: ISACA
-                description: CRISC (Certified in Risk and Information Systems Control) (Exam)
-                career_impact: Enterprise risk monitoring and IT control framework reporting.
-              core_concepts:
-              - topic: Strategic Compliance Oversight
-                concepts:
-                - Enterprise Monitoring Strategies
-                - Reporting Frameworks
-                - Governance
-                search_terms:
-                - Enterprise compliance monitoring strategy
-                - Compliance governance NHS SDE
-                why: Crucial for providing executive assurance that the SDE continuously operates within the bounds of law
-                  and regulation.
         certification-accreditation:
           id: certification-accreditation
           name: Certification & Accreditation
           description: Guides systems through formal security validation by external authorities. Involves understanding certification
             requirements, collecting evidence, managing certification processes, preparing documentation, addressing findings,
             developing enterprise strategies, and establishing governance to maintain certifications such as ISO27001 across
-            the organisation.
+            the organization.
           levels:
             entry:
               id: certification-accreditation-entry
               name: Entry Level
               skills:
-              - Describes certification and accreditation frameworks (e.g. ISO 27001)
-              - Identifies key industry security certifications and standards (e.g. ISO 27001, Cyber Essentials)
+              - Understands certification and accreditation concepts
+              - Familiar with common certifications (ISO27001, etc.)
               - Can assist with certification evidence collection
-              qualifications: []
-              core_concepts:
-              - topic: Certification Fundamentals
-                concepts:
-                - ISO 27001
-                - Cyber Essentials
-                - Evidence Collection
-                search_terms:
-                - ISO 27001 basics health data
-                - Cyber Essentials evidence gathering
-                why: Entry staff support the massive evidence-gathering processes required for formal healthcare and security
-                  accreditations.
             mid:
               id: certification-accreditation-mid
               name: Mid Level
@@ -1319,156 +457,10 @@ domain:
               - Manages certification and accreditation processes
               - Prepares systems and documentation for certification
               - Addresses certification findings and remediation
-              qualifications:
-              - issuer: Various
-                description: ISO 27001 Internal Auditor (Exam)
-                career_impact: Maintaining internal readiness for formal accreditations (DSPT, ISO27001).
-              core_concepts:
-              - topic: Managing the Certification Process
-                concepts:
-                - Accreditation Processes
-                - Documentation Preparation
-                - Finding Remediation
-                search_terms:
-                - Managing ISO 27001 certification SDE
-                - Remediating certification findings health data
-                why: Mid-level managers coordinate internal teams and external auditors to successfully achieve and maintain
-                  certifications.
             senior:
               id: certification-accreditation-senior
               name: Senior Level
               skills:
               - Develops enterprise certification strategies
               - Establishes certification governance and oversight
-              - Leads certification readiness and maintenance programmes
-              qualifications:
-              - issuer: Various
-                description: ISO 27001 Lead Auditor (Exam)
-                career_impact: Leading the formal accreditation process with external bodies.
-              core_concepts:
-              - topic: Enterprise Certification Strategy
-                concepts:
-                - Certification Strategies
-                - Oversight Governance
-                - Readiness Programmes
-                search_terms:
-                - Enterprise certification strategy SDE
-                - Maintaining healthcare accreditations long-term
-                why: Senior leaders dictate which certifications provide strategic value to the SDE and establish the permanent
-                  programs to support them.
-      items:
-      - name: Access Control Audits
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Elastic Stack (ELK)
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: false
-          standards:
-            count: 1
-            mentions:
-            - SATRE Specification
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: IT Health Check (ITHC)
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: false
-          standards:
-            count: 0
-            mentions: []
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 0
-            entry: 0
-            mid: 0
-            senior: 0
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Splunk Enterprise Security
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: false
-          standards:
-            count: 2
-            mentions:
-            - NHS DSPT / DTAC
-            - NCSC Cyber Principles
-          projects:
-            count: 0
-            mentions: []
-          jobs:
-            total: 12
-            entry: 1
-            mid: 8
-            senior: 3
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
-      - name: Syslog
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: true
-          standards:
-            count: 3
-            mentions: &id001
-            - SATRE Specification
-            - NCSC Cyber Principles
-            - ISO/IEC 27001
-          projects:
-            count: 1
-            mentions: &id002
-            - SATRE Driver Project
-          jobs:
-            total: 15
-            entry: 3
-            mid: 8
-            senior: 4
-          radars:
-            score: 0/4
-            status: Not in target radars
-      - name: Syslog (RFC 5424)
-        role: Collects, aggregates, and protects immutable audit trails, access records, and event logs for compliance reporting.
-        sources:
-          community: false
-          standards:
-            count: 3
-            mentions: *id001
-          projects:
-            count: 1
-            mentions: *id002
-          jobs:
-            total: 15
-            entry: 3
-            mid: 8
-            senior: 4
-          radars:
-            score: 1/4
-            status: Core Statistical Computing Language
+              - Leads certification readiness and maintenance programs
