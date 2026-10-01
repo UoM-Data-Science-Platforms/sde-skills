@@ -45,7 +45,7 @@ body {
 
   width: 100%;
   min-height: 100vh;
-  background-image: var(--bg-image);
+  background-color: var(--color-bg);
 
   /* Set exact matching sizes for the repeating patterns */
   background-size: var(--bg-size);

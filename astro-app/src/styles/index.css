@@ -81,7 +81,7 @@
 }
 
 .section {
-  margin: var(--space-3xl) var(--space-xl);
+  margin: var(--space-xl) var(--space-xl);
   scroll-margin-top: 20px;
 }
 
