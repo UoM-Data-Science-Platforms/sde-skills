@@ -8,31 +8,31 @@
 /* --- Design tokens --- */
 
 :root {
-  --color-bg:         #F7F9FB;
-  --color-text:       #444;
+  --color-bg: #F7F9FB;
+  --color-text: #444;
   --color-text-muted: #333;
-  --color-heading:    #222B56;
-  --color-surface:    #E8EDEE;
-  --color-border:     #00000026;
-  --color-purple:     #660099;
-  --color-deep-blue:  #222B56;
-  --color-nhs-blue:   #005EB8;
-  --color-white:      #ffffff;
+  --color-heading: #222B56;
+  --color-surface: #E8EDEE;
+  --color-border: #00000026;
+  --color-purple: #660099;
+  --color-deep-blue: #222B56;
+  --color-nhs-blue: #005EB8;
+  --color-white: #ffffff;
   --color-accent-cyan-soft: rgba(0, 169, 206, 0.25);
   --color-glass-border: rgba(255, 255, 255, 0.19);
   --color-deep-blue-light: #3a4a78;
   --color-glass-bg: rgba(52, 56, 65, 0.12);
-  --color-mix-base:   white;
-  --color-bg-sticky-header:  #ffffff3b;
+  --color-mix-base: white;
+  --color-bg-sticky-header: #ffffff3b;
   --color-bg-sidebar: var(--color-bg-sticky-header);
   --color-competency-card-bg: #ffffff3b;
   --color-domain: var(--color-domain-base);
   --color-accent: var(--color-domain);
   --color-accent-hover: var(--color-domain);
 
-  --color-purple-pastel:    #e9bcff;
+  --color-purple-pastel: #e9bcff;
   --color-deep-blue-pastel: #a0bcff;
-  --color-nhs-blue-pastel:  #afeaff;
+  --color-nhs-blue-pastel: #afeaff;
 
   --bg-gradient:
     radial-gradient(ellipse 57% 100% at 1% 50%, var(--color-deep-blue-pastel), transparent 50%),
@@ -45,25 +45,38 @@
 
   /* Typography */
   --font-heading: 'Poppins', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 
   /* Type scale — fluid, clamp-based */
-  --text-domain:      clamp(2.5rem,  5vw, 4rem);       /* 40–64px */
-  --text-subdomain:   clamp(1.75rem, 3vw, 2rem);       /* 28–32px */
-  --text-competency:  clamp(1.375rem, 2vw, 1.5rem);    /* 22–24px */
-  --text-proficiency: clamp(1.125rem, 1.5vw, 1.25rem); /* 18–20px */
-  --text-body:        clamp(1.05rem, 1.25vw, 1.1875rem);   /* Enhanced readability */
-  --text-small:       0.9rem;
+  --text-domain: clamp(2.5rem, 5vw, 4rem);
+  /* 40–64px */
+  --text-subdomain: clamp(1.75rem, 3vw, 2rem);
+  /* 28–32px */
+  --text-competency: clamp(1.375rem, 2vw, 1.5rem);
+  /* 22–24px */
+  --text-proficiency: clamp(1.125rem, 1.5vw, 1.25rem);
+  /* 18–20px */
+  --text-body: clamp(1.05rem, 1.25vw, 1.1875rem);
+  /* Enhanced readability */
+  --text-small: 0.9rem;
 
   /* Spacing scale */
-  --space-2xs: 0.25rem;  /*  4px */
-  --space-xs:  0.5rem;   /*  8px */
-  --space-sm:  0.75rem;  /* 12px */
-  --space-md:  1rem;     /* 16px */
-  --space-lg:  1.5rem;   /* 24px */
-  --space-xl:  2rem;     /* 32px */
-  --space-2xl: 3rem;     /* 48px */
-  --space-3xl: 5rem;     /* 80px */
+  --space-2xs: 0.25rem;
+  /*  4px */
+  --space-xs: 0.5rem;
+  /*  8px */
+  --space-sm: 0.75rem;
+  /* 12px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 3rem;
+  /* 48px */
+  --space-3xl: 5rem;
+  /* 80px */
 
   /* Radius */
   --radius-sm: 6px;
@@ -73,10 +86,10 @@
 
   /* Shadows */
   --shadow-sm:
-    0 1px 3px  rgba(66, 85, 99, 0.06),
+    0 1px 3px rgba(66, 85, 99, 0.06),
     0 4px 12px rgba(66, 85, 99, 0.08);
   --shadow-md:
-    0 2px 6px  rgba(66, 85, 99, 0.08),
+    0 2px 6px rgba(66, 85, 99, 0.08),
     0 8px 24px rgba(66, 85, 99, 0.12);
 
   /* Transitions */
@@ -87,47 +100,37 @@
   /* Layout */
   --sidebar-width: clamp(200px, 20vw, 260px);
 
---bg-image: 
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23F7F9FB"/></svg>'),
-     linear-gradient(
-      #e9bcff,
-      #a0bcff,
-      #afeaff
-    );
-
-  
   /* Set exact matching sizes for the repeating patterns */
   --bg-size: 60px 104px, 60px 104px, auto;
   --bg-repeat: repeat, repeat, no-repeat;
-  
+
   /* THE PERFECT HONEYCOMB LOCK: Layer B is shifted by exactly half-width and half-height */
   --bg-position: 0 0, 30px 52px, 0 0;
-  }
+}
 
 /* =============================================
    DARK MODE
    ============================================= */
 
 html[data-theme="dark"] {
-  --color-bg:         #0D1117;
-  --color-white:      #161B22;
-  --color-surface:    #21262D;
-  --color-border:     #ffffff;
-  --color-text:       #C9D1D9;
+  --color-bg: #0D1117;
+  --color-white: #161B22;
+  --color-surface: #21262D;
+  --color-border: #ffffff;
+  --color-text: #C9D1D9;
   --color-text-muted: #d6dee7;
-  --color-heading:    #F0F6FC;
-  --color-mix-base:   #161b22a3;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
+  --color-heading: #F0F6FC;
+  --color-mix-base: #161b22a3;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
 
-  --color-purple-original:     #410062;
-  --color-deep-blue-original:  #222B56;
-  --color-nhs-blue-original:   #004789;
+  --color-purple-original: #410062;
+  --color-deep-blue-original: #222B56;
+  --color-nhs-blue-original: #004789;
 
-  --color-purple:    #e9bcff;
+  --color-purple: #e9bcff;
   --color-deep-blue: #a0bcff;
-  --color-nhs-blue:  #afeaff;
+  --color-nhs-blue: #afeaff;
 
   --color-domain: var(--color-domain-base);
   --bg-gradient:
@@ -137,25 +140,13 @@ html[data-theme="dark"] {
     radial-gradient(ellipse 80% 61% at 51% 70%, var(--color-domain), #333 99%),
     linear-gradient(90deg, #222, #444 99%);
 
-  --bg-image: 
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23060b1e"/></svg>'),
-    
-    /* 3. MIDDLE LAYER: Hexagon Layer B (Identical dimensions for the row stagger) */
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="104" viewBox="0 0 60 104"><polygon points="30,0.25 59.75,17.41 59.75,52.25 30,69.41 0.25,52.25 0.25,17.41" fill="%23060b1e"/></svg>'),
-     conic-gradient(
-      #222b56,
-      #004789,
-      #410062,
-      #222b56,
-      #004789,
-      #410062
-    );
 
-  
+
+
   /* Set exact matching sizes for the repeating patterns */
   --bg-size: 60px 104px, 60px 104px, auto;
   --bg-repeat: repeat, repeat, no-repeat;
-  
+
   /* THE PERFECT HONEYCOMB LOCK: Layer B is shifted by exactly half-width and half-height */
   --bg-position: 0 0, 30px 52px, 0 0;
 }
@@ -167,36 +158,36 @@ html[data-theme="dark"] {
    ============================================= */
 
 :root {
-  --bs-primary:             #222B56;
-  --bs-primary-rgb:         34, 43, 86;
-  --bs-link-color:          #005EB8;
-  --bs-link-hover-color:    #222B56;
-  --bs-border-radius:       6px;
-  --bs-border-radius-lg:    12px;
-  --bs-font-sans-serif:     'Inter', system-ui, sans-serif;
-  --bs-body-font-family:    var(--bs-font-sans-serif);
+  --bs-primary: #222B56;
+  --bs-primary-rgb: 34, 43, 86;
+  --bs-link-color: #005EB8;
+  --bs-link-hover-color: #222B56;
+  --bs-border-radius: 6px;
+  --bs-border-radius-lg: 12px;
+  --bs-font-sans-serif: 'Inter', system-ui, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
 }
 
 [data-bs-theme="dark"] {
-  --bs-primary:       #a0bcff;
-  --bs-primary-rgb:   160, 188, 255;
-  --bs-link-color:    #afeaff;
+  --bs-primary: #a0bcff;
+  --bs-primary-rgb: 160, 188, 255;
+  --bs-link-color: #afeaff;
 }
 
 .btn-primary {
-  --bs-btn-bg:                #222B56;
-  --bs-btn-border-color:      #222B56;
-  --bs-btn-hover-bg:          #005EB8;
-  --bs-btn-hover-border-color:#005EB8;
-  --bs-btn-active-bg:         #005EB8;
-  --bs-btn-active-border-color:#005EB8;
+  --bs-btn-bg: #222B56;
+  --bs-btn-border-color: #222B56;
+  --bs-btn-hover-bg: #005EB8;
+  --bs-btn-hover-border-color: #005EB8;
+  --bs-btn-active-bg: #005EB8;
+  --bs-btn-active-border-color: #005EB8;
 }
 
 .btn-secondary {
-  --bs-btn-bg:                #660099;
-  --bs-btn-border-color:      #660099;
-  --bs-btn-hover-bg:          #4a006e;
-  --bs-btn-hover-border-color:#4a006e;
-  --bs-btn-active-bg:         #4a006e;
-  --bs-btn-active-border-color:#4a006e;
+  --bs-btn-bg: #660099;
+  --bs-btn-border-color: #660099;
+  --bs-btn-hover-bg: #4a006e;
+  --bs-btn-hover-border-color: #4a006e;
+  --bs-btn-active-bg: #4a006e;
+  --bs-btn-active-border-color: #4a006e;
 }
