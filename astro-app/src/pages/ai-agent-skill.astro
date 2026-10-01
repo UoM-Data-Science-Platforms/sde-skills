@@ -1,0 +1,473 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Layout from '../layouts/Layout.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
+import '../styles/hero.css';
+import '../styles/carousel.css';
+import '../styles/horizontal-scroller.css';
+import '../styles/section.css';
+import '../styles/index.css';
+
+const skillFilePath = path.resolve(process.cwd(), 'public/data/sde-skill/SKILL.md');
+let systemPrompt = '';
+try {
+  systemPrompt = fs.readFileSync(skillFilePath, 'utf-8');
+} catch (e) {
+  systemPrompt = 'Error loading prompt template.';
+}
+
+const sections = [
+  {
+    id: 'how-to-use',
+    label: 'How To Use',
+    subsections: [
+      { id: 'use-cases', label: 'Use Cases' },
+      { id: 'privacy', label: 'Privacy Notice' }
+    ],
+  },
+  {
+    id: 'getting-started',
+    label: 'Getting Started',
+    subsections: [
+      { id: 'prerequisites', label: 'Prerequisites' },
+      { id: 'method-prompt', label: 'Method 1: Prompt' },
+      { id: 'method-agent', label: 'Method 2: Custom A.I. Agent Skill' }
+    ]
+  }
+];
+---
+
+<Layout title="AI Agent Skill — SDE Team Development Hub" currentDomain="ai-agent-skill">
+  <div class="index-page wide-layout">
+    <div class="scroll-area">
+      
+      <!-- Hero -->
+      <div class="wide-hero row g-4 align-items-center" id="home-hero">
+        <div class="hero-content col-12 col-lg-6">
+          <h1 class="hero-title">SDE Team Development Hub A.I. Agent Skill</h1>
+          <p class="hero-subtitle">One of the most effective ways to apply our Competency Framework is through our interactive LLM prompts and custom A.I. Agent Skill.</p>
+          <div class="d-flex flex-wrap gap-3 mb-3">
+            <a href="#method-agent" class="btn btn-primary">Download the A.I. agent skill</a>
+            <a href="#method-prompt" class="btn btn-primary">Copy starter prompt</a>
+          </div>
+        </div>
+        <div class="hero-visual col-12 col-lg-6">
+           <div class="chat-mockup glass--soft d-flex flex-column text-start" style="border-radius: var(--radius-lg); height: 350px; overflow: hidden; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);">
+             <div class="chat-header p-3 border-bottom d-flex align-items-center" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.05) !important;">
+               
+               <strong style="font-size: 1rem; color: #fff;">SDE bot</strong>
+             </div>
+             <div class="chat-body p-3 flex-grow-1" id="mockup-chat-body" style="overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; font-family: var(--bs-font-sans-serif, sans-serif);">
+             </div>
+           </div>
+        </div>
+      </div>
+
+      <!-- Nav L1 & L2 via StickyNavigation -->
+      <StickyNavigation sections={sections} id="page-subnav" />
+
+      <section class="mini-hero" id="how-to-use">
+        <div class="mini-hero-content">
+          <h2>How to use this skill</h2>
+          <p class="hero-subtitle">Whether you are looking to begin or transition into a career building secure research environments, have experience as a Research Technical Professional, or are a Team Lead looking to evaluate your team's capability to identify opportunities for growth, our prepared A.I. agent skills and prompts can help. Understand your current strengths, identify areas for growth, and develop a strategy for personal career development and organisational success.</p>
+        </div>
+      </section>
+
+      <section class="section" id="use-cases">
+        <h2>Use Cases</h2>
+        <p class="section-intro">Explore various ways you can apply the A.I. agent skill to your career development.</p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 glass--soft use-case-tab active" data-target="aspiring-builders" style="cursor: pointer; transition: all 0.2s;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3 mx-auto text-primary" style="display: block;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <h4>Aspiring Builders</h4>
+              <p class="mt-2 text-muted" style="font-size: 0.9rem;">Discover the foundational skills required to transition into SDE engineering and identify what to learn next.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 glass--soft use-case-tab opacity-75" data-target="experienced-rtps" style="cursor: pointer; transition: all 0.2s;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3 mx-auto text-primary" style="display: block;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <h4>Experienced RTPs</h4>
+              <p class="mt-2 text-muted" style="font-size: 0.9rem;">Benchmark your existing skills against industry standards and plot a course for senior leadership roles.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 text-center h-100 glass--soft use-case-tab opacity-75" data-target="team-leads" style="cursor: pointer; transition: all 0.2s;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3 mx-auto text-primary" style="display: block;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <h4>Team Leads</h4>
+              <p class="mt-2 text-muted" style="font-size: 0.9rem;">Assess your team's aggregate capabilities, identify critical knowledge silos, and plan targeted upskilling initiatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use Case Content Area -->
+        <div class="use-case-content mt-5" id="content-aspiring-builders">
+          <div class="card glass--soft p-4">
+            <h4>Aspiring Builders</h4>
+            <p class="text-muted"><strong>Recent IT graduates and career changers.</strong> Help you to understand how to begin your career as an RTP in SDE settings. Tell the agent your background (any work experience, personal IT projects including coding projects, education), provide it with a C.V., and your interests and motivations to help the agent guide you through an early career plan to get you established as a professional builder of high-quality secure research systems.</p>
+            <div class="mt-4">
+              <h5>Example Starter Prompts</h5>
+              <div class="row g-3 mt-1">
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Recent Graduate</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I am a recent graduate with a degree in Computer Science. I have a few coding projects on my GitHub. Here is my CV: [paste CV]. I want to become an RTP in a Secure Data Environment. Can you give me a step-by-step career plan focusing on the competencies I need to develop?</code></pre>
+                </div>
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Career Changer</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I am currently an academic researcher with no formal IT background, but I have taught myself Python and data analysis. Here is my CV: [paste CV]. I'd like to transition into an RTP role in an SDE. How can I leverage my current experience, and what technical foundations do I need to prioritise building?</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="use-case-content mt-5 d-none" id="content-experienced-rtps">
+          <div class="card glass--soft p-4">
+            <h4>Experienced RTPs</h4>
+            <p class="text-muted"><strong>Experienced working in IT in an engineering, implementation, testing, or support/operations capacity.</strong> Help you to identify where your experience places you in the competency framework, understand if your seniority level matches your experience, and identify upskilling opportunities to progress to more senior levels of responsibility.</p>
+            <div class="mt-4">
+              <h5>Example Starter Prompts</h5>
+              <div class="row g-3 mt-1">
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Ops to Engineering</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I have 5 years of experience in IT operations and infrastructure support. I've worked heavily with Linux and some basic scripting, but I want to move into a senior SDE engineering role. Can you assess my current level on the SDE Competency Framework and identify the specific skills I need to acquire to reach the next level?</code></pre>
+                </div>
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">QA to Implementation</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I've been working as a QA engineer in an IT environment for 3 years. I want to transition into a core software development/implementation role within an SDE. Can you help me identify where my current testing experience places me on the framework, and what coding or architecture skills I should learn to make the jump?</code></pre>
+                </div>
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Promotion Readiness</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I am an Implementation Engineer in an SDE setting and I believe I'm ready for a senior role. Based on the framework, what does a senior level look like? I will describe my current responsibilities, and you can tell me if there are any gaps I need to close before applying for a promotion.</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="use-case-content mt-5 d-none" id="content-team-leads">
+          <div class="card glass--soft p-4">
+            <h4>Team Leads & Recruitment</h4>
+            <p class="text-muted"><strong>Understand your team's current capabilities</strong>, understand how your team's experience levels map to the framework, identify gaps in skills and experience, and prepare job descriptions and job specifications for recruitment.</p>
+            <div class="mt-4">
+              <h5>Example Starter Prompts</h5>
+              <div class="row g-3 mt-1">
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Recruitment / Job Spec</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I am a Team Lead managing a group of engineers working on our Secure Data Environment. Our current focus is on building out a new cloud platform. Based on the framework, what competencies should I be looking for in a new Senior Cloud Infrastructure Engineer hire, and can you draft a job specification highlighting the necessary skills?</code></pre>
+                </div>
+                <div class="col-12">
+                  <span class="badge bg-primary mb-1">Team Capability Assessment</span>
+                  <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem;"><code>I lead a team of 6 engineers. We are solid on infrastructure but weak on software engineering and automated testing. Can you help me assess our team's aggregate capabilities against the framework, identify where our critical knowledge silos are, and suggest targeted upskilling initiatives for the next quarter?</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section" id="privacy">
+        <h2>Privacy </h2>
+        <p class="section-intro">Important guidelines on protecting your personal information when using the SDE Team Development Hub A.I. agent skill.</p>
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card glass--soft border-opacity-50">
+              <h4 class="mb-3">Important Privacy Notice</h4>
+              
+              <p><strong>Anonymise your data:</strong> Please be sure to carefully anonymise any personal data you upload to the agent. If you choose to provide the skill with a C.V. or resume, ensure that your name, address, telephone number, email address, and other contact details are completely removed. Additionally, ensure that any highly identifiable attributes—like that Nobel Prize you won for solving world hunger—are redacted to prevent you from being identified!</p>
+              
+              <p><strong>Third-Party Data Collection:</strong> The agent service you choose to use may collect, use, and store any information you provide during your chat sessions. We strongly advise checking with their respective privacy policies for details on how your data is handled.</p>
+              
+              <p><strong>Your data:</strong> SDE Team Development Hub, along with its associated personnel, institutions, collaborators, and partners, <strong>do not</strong> receive, monitor, or store any information from your sessions using these prompts or skills. The agreements for data handling and processing are between you and the agent service you use.</p>
+              
+              <p class="mb-0"><strong>A.I. outputs may be inaccurate:</strong> A.I. can make mistakes, and its outputs do not reflect our views. The agent may not always work exactly as we intend it to. If you choose to use any outputs from the skill—such as C.V. refinements, cover letters, or career plans—please ensure they are thoroughly reviewed and checked for accuracy before use.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mini-hero" id="getting-started">
+        <div class="mini-hero-content">
+          <h2>Getting Started</h2>
+          <p>Claude, ChatGPT, Gemini, or even Copilot! There are plenty of options for which LLM service you might use. We've provided details below on two ways to work with our Competency Framework in your chat agent of choice: using a standard System Prompt, or building a Custom A.I. Agent Skill.</p>
+        </div>
+      </section>
+
+      <section class="section" id="prerequisites">
+        <h2>Prerequisites</h2>
+        <p class="section-intro">
+          To use the A.I. agent skill, you will need access to an A.I. agent service. Popular options include:  
+        </p>
+        <ul class="mb-2">
+          <li class="mb-1"><a class="link" href="https://claude.ai" target="_blank" rel="noopener noreferrer" >Claude</a></li>
+          <li class="mb-1"><a class="link" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" >ChatGPT</a></li>
+          <li class="mb-1"><a class="link" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Google Gemini</a></li>
+          <li class="mb-1"><a class="link" href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" >Microsoft Copilot</a></li>
+        </ul>
+        <p class="text-muted small mb-1"><strong>Please note:</strong> You may need to create an account to access these services. Some providers offer free tiers. Using this agent skill may consume your free or paid-for usage limits depending on the provider.</p>
+      </section>
+
+      <section class="section" id="method-prompt">
+        <h2>Method 1: The System Prompt</h2>
+        <p class="section-intro">
+          This is the quickest approach. Copy the starter prompt from below and paste it into your chat agent of choice. The chat agent will then guide you through, prompting you for more information about your experience and career aspirations.
+        </p>
+        <div class="row g-4 mt-3">
+          <div class="col-12 col-lg-8">
+            <div class="card glass--soft p-4 h-100">
+              <h4>System Prompt Template</h4>
+              <pre id="system-prompt-text" class="bg-dark text-light p-3 rounded mt-2" style="white-space: pre-wrap; font-size: 0.85rem; max-height: 400px; overflow-y: auto;"><code>{systemPrompt}</code></pre>
+              <button id="copy-prompt-btn" class="btn btn-primary mt-3">Copy to LLM</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card glass--soft p-4 h-100">
+              <h4>Pro Tips</h4>
+              <ul class="mt-3 ps-3">
+                <li class="mb-2"><strong>Provide context:</strong> Paste sections of your C.V. to help the agent accurately map you to the framework.</li>
+                <li class="mb-2"><strong>Be specific:</strong> Tell the agent what your career aspirations are.</li>
+                <li class="mb-2"><strong>Iterate:</strong> Ask follow-up questions to drill down into specific skill areas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="method-agent">
+        <h2>Method 2: Custom A.I. Agent Skill</h2>
+        <p class="section-intro">
+          For a more powerful and persistent experience, you can create a Custom A.I. Agent Skill. This allows you to upload the entire Competency Framework documentation as a knowledge base, enabling the agent to provide advice targeted to your goals.
+        </p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-6">
+            <div class="card p-4 h-100 glass--soft">
+              <h4>1. Getting Started</h4>
+              <ol class="mt-3 ps-3">
+                <li class="mb-2"><strong>Download</strong> the A.I. agent skill file from our <a class="link" href="https://github.com/UoM-Data-Science-Platforms/sde-skills/releases/tag/latest">GitHub release page</a>.</li>
+                <li class="mb-2">Ask your agent how to add an A.I. agent skill (or use our example prompt to the right).</li>
+                <li class="mb-2">Follow your agent's instructions to add the A.I. agent skill from the file you downloaded in step 1.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 h-100 glass--soft">
+              <h4>2. Setup Prompt</h4>
+              <pre id="agent-setup-text" class="bg-dark text-light p-3 rounded mt-2" style="white-space: pre-wrap; font-size: 0.9rem;"><code>I have an A.I. agent skill and supporting data in a zip file that I want to add to you as an A.I. agent skill. Can you guide me through the steps on how to set that up?</code></pre>
+              <button id="copy-agent-btn" class="btn btn-primary mt-3">Copy Setup Prompt</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Call to Action / Mini Hero -->
+      <section class="cta-section" id="cta">
+        <div class="cta-content">
+          <h2>Ready to Evaluate Your Skills?</h2>
+          <p>
+            Copy the prompt or set up your custom A.I. agent skill today to take the next step in your SDE career journey.
+          </p>
+          <div class="cta-buttons">
+            <a href="#method-prompt" class="btn btn-primary">Get the Prompt</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const nav = document.getElementById('page-subnav');
+  const hero = document.getElementById('home-hero');
+  const scroller = document.querySelector('.wide-layout .scroll-area');
+
+  if (nav && hero && scroller) {
+    scroller.addEventListener('scroll', () => {
+      nav.classList.toggle('sticky-nav--stuck', scroller.scrollTop > 0);
+    }, { passive: true });
+  }
+
+  const copyBtn = document.getElementById('copy-prompt-btn');
+  const promptText = document.getElementById('system-prompt-text');
+
+  if (copyBtn && promptText) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(promptText.textContent).then(() => {
+        const originalText = copyBtn.innerText;
+        copyBtn.innerText = 'Copied!';
+        setTimeout(() => {
+          copyBtn.innerText = originalText;
+        }, 2000);
+      });
+    });
+  }
+
+  const copyAgentBtn = document.getElementById('copy-agent-btn');
+  const agentPromptText = document.getElementById('agent-setup-text');
+
+  if (copyAgentBtn && agentPromptText) {
+    copyAgentBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(agentPromptText.textContent).then(() => {
+        const originalText = copyAgentBtn.innerText;
+        copyAgentBtn.innerText = 'Copied!';
+        setTimeout(() => {
+          copyAgentBtn.innerText = originalText;
+        }, 2000);
+      });
+    });
+  }
+
+  async function runMockupChat() {
+    const chatBody = document.getElementById('mockup-chat-body');
+    if (!chatBody) return;
+
+    const conversation = [
+      { sender: 'user', text: "Hey! I'm a senior software engineer working in academic research. I want to build the infrastructure that supports our projects." },
+      { sender: 'agent', text: "Okay, sounds like you're on your way there! Tell me about your experience and let's figure out how to transition you to developing SDEs." },
+      { sender: 'user', text: "I have 10 years' experience writing applications for clinical studies. I have experience hosting my applications on Linux and using Docker to automate the deployments." },
+      { sender: 'agent', text: "That's a solid foundation in software engineering and containerization. Why don't you send me over your C.V. so I can take a closer look?" },
+      { sender: 'user', text: "Here is my CV.", attachment: '<div class="p-2 bg-light text-dark rounded d-flex align-items-center mt-2 border" style="font-size: 0.85rem;"><span class="me-2" style="font-size: 1.2rem;">📄</span> <strong>my_cv_2024.pdf</strong></div>' },
+      { sender: 'agent', text: "Thanks! I see you have great cross-over with software and infrastructure—perfect to move over. You do have a few gaps to fill if you want to pitch for senior infrastructure roles, particularly with cloud platforms.\n\nTake a look at these training courses for mid-tier proficiencies in the Safe Technology domain:\n• Microsoft Azure Fundamentals (AZ-900)\n• AWS Cloud Practitioner" },
+      { sender: 'user', text: "Oh cool! Okay, I can begin with brushing up on some Azure. What other technologies might apply?" },
+      { sender: 'agent', text: "Here are some of the key tools, technologies, and standards relevant in the Safe Technology & Engineering domain:\n\n• Infrastructure as Code (Terraform, Pulumi)\n• CI/CD Automation (GitHub Actions, GitLab CI)\n• Container Orchestration (Kubernetes)\n• Zero Trust Architecture" }
+    ];
+
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+    async function typeText(element, msg) {
+      const isAgent = msg.sender === 'agent';
+      const text = msg.text || '';
+      
+      if (text.length > 0) {
+        if (isAgent) {
+          let tokens = text.match(/[\s\S]{1,4}/g) || [];
+          for (let token of tokens) {
+            element.appendChild(document.createTextNode(token));
+            chatBody.scrollTop = chatBody.scrollHeight;
+            await sleep(25 + Math.random() * 25);
+          }
+        } else {
+          for (let i = 0; i < text.length; i++) {
+            element.appendChild(document.createTextNode(text.charAt(i)));
+            chatBody.scrollTop = chatBody.scrollHeight;
+            await sleep(15 + Math.random() * 25);
+          }
+        }
+      }
+      
+      if (msg.attachment) {
+        const attDiv = document.createElement('div');
+        attDiv.innerHTML = msg.attachment;
+        element.appendChild(attDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }
+    }
+
+    while (true) {
+      chatBody.innerHTML = ''; 
+      for (let msg of conversation) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `chat-msg ${msg.sender}`;
+        msgDiv.style.visibility = 'hidden';
+        chatBody.appendChild(msgDiv);
+        
+        const textNode = document.createTextNode(msg.text || '');
+        msgDiv.appendChild(textNode);
+        if (msg.attachment) {
+          const attDiv = document.createElement('div');
+          attDiv.innerHTML = msg.attachment;
+          msgDiv.appendChild(attDiv);
+        }
+        
+        const finalWidth = msgDiv.getBoundingClientRect().width;
+        msgDiv.style.width = Math.ceil(finalWidth + 1) + 'px';
+        
+        msgDiv.innerHTML = '';
+        msgDiv.style.visibility = 'visible';
+        
+        await sleep(300);
+        await typeText(msgDiv, msg);
+        await sleep(1000);
+      }
+      await sleep(5000);
+    }
+  }
+
+  runMockupChat();
+
+  const useCaseTabs = document.querySelectorAll('.use-case-tab');
+  const useCaseContents = document.querySelectorAll('.use-case-content');
+
+  useCaseTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      useCaseTabs.forEach(t => {
+        t.classList.remove('active');
+        t.classList.add('opacity-75');
+      });
+      tab.classList.add('active');
+      tab.classList.remove('opacity-75');
+
+      useCaseContents.forEach(c => c.classList.add('d-none'));
+      const target = tab.getAttribute('data-target');
+      const content = document.getElementById(`content-${target}`);
+      if (content) {
+        content.classList.remove('d-none');
+      }
+    });
+  });
+</script>
+
+<style is:global>
+  .chat-msg {
+    width: fit-content;
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeInMsg 0.2s forwards;
+    word-break: break-word;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    white-space: pre-wrap;
+  }
+  .chat-msg.user {
+    align-self: flex-end;
+    background: var(--bs-primary, #0d6efd);
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+    margin-left: auto;
+  }
+  .chat-msg.agent {
+    align-self: flex-start;
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    border-bottom-left-radius: 4px;
+    margin-right: auto;
+  }
+  @keyframes fadeInMsg {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #mockup-chat-body::-webkit-scrollbar {
+    width: 6px;
+  }
+  #mockup-chat-body::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+  }
+  
+  .use-case-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .use-case-tab.active {
+    border: 1px solid var(--bs-primary, #0d6efd);
+  }
+</style>
+    </div> <!-- .scroll-area -->
+  </div> <!-- .index-page -->
+</Layout>
