@@ -1,0 +1,359 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/index.css';
+import '../styles/section.css';
+
+// 1-5 scale used for quantitative questions
+const scaleOptions = [
+  { val: 1, label: '1 - Strongly Disagree' },
+  { val: 2, label: '2 - Disagree' },
+  { val: 3, label: '3 - Neutral' },
+  { val: 4, label: '4 - Agree' },
+  { val: 5, label: '5 - Strongly Agree' }
+];
+
+---
+
+<Layout title="Research Questionnaire — SDE Team Development Hub" currentDomain="">
+  <div class="index-page wide-layout">
+    <div class="scroll-area p-4">
+      
+      <div class="container" style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
+        <div class="mb-5 text-center">
+          <h1 class="fw-bold mb-3">Research Questionnaire</h1>
+          <p class="text-muted" style="font-size: 1.1rem;">A.I. Agents as Interfaces for Competency Frameworks</p>
+        </div>
+
+        <form>
+          <!-- Part 0 -->
+          <div class="card glass--soft p-4 mb-4">
+            <h3 class="mb-4">Part 0: Baseline & Demographics</h3>
+            
+            <div class="mb-4">
+              <label class="form-label fw-bold">1. Please indicate your current professional role</label>
+              <select class="form-select bg-dark text-light border-secondary">
+                <option selected disabled>Select your role...</option>
+                <option>Early Career RTP</option>
+                <option>Mid/Senior RTP</option>
+                <option>Team Lead</option>
+                <option>HR / Career Professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">2. Please rate your prior experience utilizing Competency Frameworks</label>
+              <p class="small text-muted mb-2">(1 = No prior experience, 5 = Extensive daily usage)</p>
+              <div class="d-flex gap-3 flex-wrap">
+                { [1,2,3,4,5].map(n => (
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exp_cf" id={`exp_cf_${n}`} value={n} />
+                    <label class="form-check-label" for={`exp_cf_${n}`}>{n}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">3. Please rate your prior experience utilizing Generative A.I. tools (e.g., ChatGPT, Claude)</label>
+              <p class="small text-muted mb-2">(1 = No prior experience, 5 = Advanced daily user)</p>
+              <div class="d-flex gap-3 flex-wrap">
+                { [1,2,3,4,5].map(n => (
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exp_ai" id={`exp_ai_${n}`} value={n} />
+                    <label class="form-check-label" for={`exp_ai_${n}`}>{n}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">4. Please specify the A.I. platform utilized during this exercise</label>
+              <select class="form-select bg-dark text-light border-secondary">
+                <option selected disabled>Select a platform...</option>
+                <option>ChatGPT</option>
+                <option>Claude</option>
+                <option>Google Gemini</option>
+                <option>Microsoft Copilot</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Part 1 -->
+          <div class="card glass--soft p-4 mb-4">
+            <h3 class="mb-4 border-bottom border-secondary pb-3">Part 1: General Use of A.I. Agents as a User Interface</h3>
+            
+            <h5 class="text-primary mt-3 mb-3">Theme A: Static Web UI vs. A.I. Interface</h5>
+            
+            <div class="mb-4">
+              <label class="form-label fw-bold">5. Having briefly explored the static web-based version of the Competency Framework, which interface did you find more effective for extracting information relevant to a specific role or C.V.?</label>
+              <div class="d-flex flex-column gap-2 mt-2">
+                {['Strongly prefer Web UI', 'Slightly prefer Web UI', 'Neutral', 'Slightly prefer A.I.', 'Strongly prefer A.I.'].map((opt, i) => (
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pref_ui" id={`pref_ui_${i}`} value={opt} />
+                    <label class="form-check-label" for={`pref_ui_${i}`}>{opt}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">6. Please identify one specific advantage of the static web user interface compared to the A.I. agent, and one specific advantage of the A.I. agent compared to the static web user interface.</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme B: Intent vs. Exploration (The "Blank Canvas")</h5>
+            
+            {[
+              { id: 'q7', num: 7, text: "The absence of traditional navigational menus in the chat interface made it difficult to formulate inquiries without a predefined, real-world objective." },
+              { id: 'q8', num: 8, text: "I found the inability to passively browse or explore the framework—a feature inherent to traditional websites—to be a limitation of the chat interface." },
+              { id: 'q10', num: 10, text: "Once my objective was defined, the conversational interface reduced the cognitive load required to locate specific career information." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">9. Did the prompts and mock curriculum vitae provided during the exercise assist in overcoming the initial ambiguity of the open-ended chat interface?</label>
+              <div class="d-flex gap-4 mt-2">
+                {['Yes', 'No', 'Partially'].map((opt, i) => (
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hints_helped" id={`hints_${i}`} value={opt} />
+                    <label class="form-check-label" for={`hints_${i}`}>{opt}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme C: Accessibility in Chat Interfaces</h5>
+
+            {[
+              { id: 'q11', num: 11, text: "I found it straightforward to articulate my career history and professional objectives into written prompts that the A.I. could accurately interpret." },
+              { id: 'q12', num: 12, text: "The A.I.'s responses were presented in a clear, digestible format without causing information overload." },
+              { id: 'q13', num: 13, text: "The procedure for configuring a custom agent (e.g., uploading instructions and data files) remains accessible to individuals with limited technical proficiency." },
+              { id: 'q14', num: 14, text: "The requirement to maintain a third-party A.I. account (potentially involving usage limits or subscription fees) constitutes a significant barrier to entry for this methodology." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">15. Did the necessity of communicating exclusively via written text impede your ability to extract valuable insights from the framework? Please elaborate.</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme D: Trust & Objectivity</h5>
+
+            {[
+              { id: 'q16', num: 16, text: "I believe an A.I. agent is capable of providing a more objective assessment of my professional skills compared to a human manager." },
+              { id: 'q17', num: 17, text: "I felt comfortable disclosing my anonymised professional background and areas for career development to the A.I." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">18. Did you experience any concerns regarding potential A.I. 'hallucinations' (fabrications or inaccuracies) during the skill mapping process?</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="2" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+          </div>
+
+          <!-- Part 2 -->
+          <div class="card glass--soft p-4 mb-4">
+            <h3 class="mb-4 border-bottom border-secondary pb-3">Part 2: Evaluating the SDE Agent Skill</h3>
+
+            <h5 class="text-primary mt-3 mb-3">Theme E: Execution & Accuracy</h5>
+            
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <label class="form-label fw-bold">19. Please select the persona assumed during the exercise</label>
+                <select class="form-select bg-dark text-light border-secondary">
+                  <option selected disabled>Select...</option>
+                  <option>Aspiring Builder</option>
+                  <option>Experienced RTP</option>
+                  <option>Team Lead</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-bold">20. Please select the primary task attempted during the exercise</label>
+                <select class="form-select bg-dark text-light border-secondary">
+                  <option selected disabled>Select...</option>
+                  <option>Skills Gap Analysis</option>
+                  <option>JD Alignment / Drafting</option>
+                  <option>Career Progression Planning</option>
+                  <option>General Q&A</option>
+                </select>
+              </div>
+            </div>
+
+            {[
+              { id: 'q21', num: 21, text: "The agent accurately mapped the provided professional experience to the appropriate domains within the SDE Competency Framework." },
+              { id: 'q22', num: 22, text: "The agent successfully distinguished between Entry, Mid, and Senior level competencies based on the provided inputs." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme F: Agent Confidence & Tone</h5>
+
+            {[
+              { id: 'q23', num: 23, text: "The agent proactively facilitated the conversation and sought clarification when presented with ambiguous prompts." },
+              { id: 'q24', num: 24, text: "The agent effectively maintained the persona of a constructive career guide, avoiding both excessive criticism and unwarranted agreement." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">25. Throughout the exercise, did the agent demonstrate competence and coherence in its responses, or did it exhibit confusion, struggle, or hallucination?</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme G: Actionability & Utility</h5>
+
+            {[
+              { id: 'q26', num: 26, text: "The actionable recommendations provided by the agent (e.g., skill acquisition targets, job description enhancements) were highly relevant to Secure Data Environments." },
+              { id: 'q27', num: 27, text: "Completing this exercise provided me with a clearer understanding of my potential career trajectory." }
+            ].map(q => (
+              <div class="mb-4">
+                <label class="form-label fw-bold">{q.num}. {q.text}</label>
+                <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name={q.id} id={`${q.id}_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`${q.id}_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">28. Please detail one specific recommendation provided by the agent that you found particularly valuable (or conversely, entirely unhelpful).</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+            <hr class="border-secondary my-5" />
+
+            <h5 class="text-primary mb-3">Theme H: Friction & Troubleshooting</h5>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">29. Did the agent successfully retrieve the required data autonomously, or was manual intervention (copying and pasting) necessary?</label>
+              <div class="d-flex flex-column gap-2 mt-2">
+                {['Data retrieved autonomously', 'Manual intervention required', 'Data retrieval not required for my task'].map((opt, i) => (
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fetch_data" id={`fetch_${i}`} value={opt} />
+                    <label class="form-check-label" for={`fetch_${i}`}>{opt}</label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">30. In instances where the agent misunderstood a prompt or generated an error, it was straightforward to correct the trajectory with a follow-up instruction.</label>
+              <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="q30" id={`q30_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`q30_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">31. Please describe any technical friction or systemic frustrations encountered while attempting to execute your requested tasks with the agent.</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+          </div>
+
+          <!-- Part 3 -->
+          <div class="card glass--soft p-4 mb-5">
+            <h3 class="mb-4 border-bottom border-secondary pb-3">Part 3: Final Synthesis</h3>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">32. Overall, I consider conversational A.I. agents to be a highly effective medium for professionals to engage with competency and career frameworks.</label>
+              <div class="d-flex gap-4 flex-wrap mt-2">
+                  {scaleOptions.map(opt => (
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="q32" id={`q32_${opt.val}`} value={opt.val} />
+                      <label class="form-check-label" style="font-size: 0.9rem;" for={`q32_${opt.val}`}>{opt.label}</label>
+                    </div>
+                  ))}
+                </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label fw-bold">33. If presenting this interface methodology to human resources and career development professionals, how would you articulate its greatest inherent strength and its most significant weakness?</label>
+              <textarea class="form-control bg-dark text-light border-secondary" rows="4" placeholder="Please provide your feedback here..."></textarea>
+            </div>
+
+          </div>
+
+          <div class="text-center mb-5 pb-5">
+            <button type="button" class="btn btn-primary px-5 py-3 fw-bold fs-5" onclick="alert('This is a prototype form. Submissions are disabled.')">Submit Questionnaire</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</Layout>
