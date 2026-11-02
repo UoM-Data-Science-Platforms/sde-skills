@@ -74,7 +74,7 @@ const nameColor = member.institution ? INSTITUTION_COLORS[member.institution] : 
           {member.focus && (
             <p class="team-focus"><strong>Focus:</strong> {member.focus}</p>
           )}
-          {member.notable && (
+          {member.notable && member.notable !== (member.siteLeadBackground || member.background) && (
             <p class="team-notable"><strong>Notable:</strong> {member.notable}</p>
           )}
         </div>

@@ -8,4 +8,7 @@ export default defineConfig({
     remarkPlugins: [remarkMkdocsAttr]
   },
   base: '/sde-skills',
+  redirects: {
+    '/cf': '/sde-skills/cf-overview/',
+  },
 });

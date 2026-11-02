@@ -1,0 +1,92 @@
+domain:
+  name: "Safe Projects & Operations"
+  subdomains:
+    service-management:
+      name: "Service Management"
+      competencies:
+        service-level-management:
+          name: "Service Level Management"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Foundation (Exam)"
+                  career_impact: "Universal standard for IT service management."
+            mid:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Managing Professional (Exam)"
+                  career_impact: "Managing high-availability services for researchers."
+            senior:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Strategic Leader (Exam)"
+                  career_impact: "Aligning SDE IT services with broader healthcare strategies."
+        incident-problem-management:
+          name: "Incident & Problem Management"
+          levels:
+            mid:
+              qualifications:
+                - issuer: "Kepner-Tregoe"
+                  description: "Kepner-Tregoe Foundation (Course)"
+                  career_impact: "Advanced problem-solving methodologies for complex SDE outages."
+        change-release-management:
+          name: "Change & Release Management"
+          levels:
+            mid:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "ITIL 4 Specialist: High-velocity IT (Exam)"
+                  career_impact: "Managing rapid releases in a highly secure, regulated environment."
+    project-management:
+      name: "Project Management"
+      competencies:
+        agile-delivery-methods:
+          name: "Agile Delivery Methods"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Scrum Alliance"
+                  description: "Certified ScrumMaster (CSM) (Exam)"
+                  career_impact: "Standard framework for agile team delivery."
+            mid:
+              qualifications:
+                - issuer: "PMI"
+                  description: "PMI Agile Certified Practitioner (PMI-ACP) (Exam)"
+                  career_impact: "Advanced agile delivery in complex health data environments."
+            senior:
+              qualifications: []
+        sde-project-planning:
+          name: "SDE Project Planning"
+          levels:
+            mid:
+              qualifications:
+                - issuer: "PMI"
+                  description: "PMI Risk Management Professional (PMI-RMP) (Exam)"
+                  career_impact: "Identifying and mitigating project delivery risks in sensitive environments."
+            senior:
+              qualifications:
+                - issuer: "Axelos"
+                  description: "MoR (Management of Risk) Practitioner (Exam)"
+                  career_impact: "UK Government standard for enterprise risk management."
+        research-project-facilitation:
+          name: "Research Project Facilitation"
+          levels:
+            senior:
+              qualifications: []
+        resource-cost-management:
+          name: "Resource & Cost Management"
+          levels:
+            mid:
+              qualifications:
+                - issuer: "FinOps Foundation"
+                  description: "FinOps Certified Practitioner (Exam)"
+                  career_impact: "Industry standard for managing cloud spend in large-scale SDEs."
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing scalable infrastructure to meet researcher compute demands."
+            senior:
+              qualifications:
+                - issuer: "FinOps Foundation"
+                  description: "FinOps Certified Professional (Exam)"
+                  career_impact: "Leading FinOps strategies across multi-cloud national SDE infrastructure."

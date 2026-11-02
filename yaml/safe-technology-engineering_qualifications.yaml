@@ -1,0 +1,178 @@
+domain:
+  name: "Safe Technology & Engineering"
+  subdomains:
+    software-engineering:
+      name: "Software Engineering"
+      competencies:
+        secure-coding-practices:
+          name: "Secure Coding Practices"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "ISC2"
+                  description: "CSSLP (Certified Secure Software Lifecycle Professional) (Exam)"
+                  career_impact: "Understanding secure coding practices from day one."
+            mid:
+              qualifications:
+                - issuer: "GIAC"
+                  description: "GIAC Secure Software Programmer (GSSP) (Exam)"
+                  career_impact: "Writing secure code for SDE portals and APIs."
+            senior:
+              qualifications:
+                - issuer: "EC-Council"
+                  description: "CASE (Certified Application Security Engineer) (Exam)"
+                  career_impact: "Leading secure application architecture and DevSecOps integration."
+        testing-quality-assurance:
+          name: "Testing & Quality Assurance"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "GitLab"
+                  description: "GitLab Certified CI/CD Specialist (Exam)"
+                  career_impact: "Building automated security testing (SAST/DAST) into deployment pipelines."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified DevOps Engineer - Professional (Exam)"
+                  career_impact: "Enterprise CI/CD strategy and automation on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: DevOps Engineer Expert (AZ-400) (Exam)"
+                  career_impact: "Enterprise CI/CD strategy, automated testing, and release management on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud DevOps Engineer (Exam)"
+                  career_impact: "Enterprise CI/CD strategy, continuous delivery, and reliability engineering on GCP."
+        microservices-api-design:
+          name: "Microservices & API Design"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "Postman"
+                  description: "Postman API Professional (Exam)"
+                  career_impact: "Developing and testing secure APIs for interoperability."
+            senior:
+              qualifications: []
+    infrastructure-deployment:
+      name: "Infrastructure & Deployment"
+      competencies:
+        cloud-infrastructure-management:
+          name: "Cloud Infrastructure Management"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Cloud Practitioner (Exam)"
+                  career_impact: "Baseline cloud knowledge on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Fundamentals (AZ-900) (Exam)"
+                  career_impact: "Baseline cloud knowledge on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Digital Leader (Exam)"
+                  career_impact: "Baseline cloud knowledge on Google Cloud."
+            mid:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Associate (Exam)"
+                  career_impact: "Designing robust, secure cloud environments for TREs on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Administrator Associate (AZ-104) (Exam)"
+                  career_impact: "Managing Azure-based SDE infrastructure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Associate Cloud Engineer (Exam)"
+                  career_impact: "Deploying and managing Google Cloud-based SDE infrastructure."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified Solutions Architect - Professional (Exam)"
+                  career_impact: "Architecting complex, multi-account landing zones for sensitive data on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Solutions Architect Expert (Exam)"
+                  career_impact: "Enterprise architecture for national-scale Azure SDEs."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Architect (Exam)"
+                  career_impact: "Enterprise architecture and secure landing zone design on Google Cloud."
+                - issuer: "The Open Group"
+                  description: "TOGAF 9 Certification (Exam)"
+                  career_impact: "Standardizing enterprise architecture across federated platforms."
+        containerisation-orchestration:
+          name: "Containerisation & Orchestration"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "Docker"
+                  description: "Docker Certified Associate (DCA) (Exam)"
+                  career_impact: "Foundational container knowledge for packaging research applications safely."
+            mid:
+              qualifications:
+                - issuer: "CNCF"
+                  description: "Certified Kubernetes Administrator (CKA) (Practical Exam)"
+                  career_impact: "Managing secure K8s clusters for running analytical workloads."
+            senior:
+              qualifications:
+                - issuer: "CNCF"
+                  description: "Certified Kubernetes Security Specialist (CKS) (Practical Exam)"
+                  career_impact: "Securing containerized health workloads against advanced threats."
+        network-architecture:
+          name: "Network Architecture"
+          levels:
+            entry:
+              qualifications:
+                - issuer: "CompTIA"
+                  description: "CompTIA Network+ (Exam)"
+                  career_impact: "Basic networking concepts."
+            mid:
+              qualifications:
+                - issuer: "Cisco"
+                  description: "Cisco Certified Network Associate (CCNA) (Exam)"
+                  career_impact: "Core routing, switching, and VLAN segmentation."
+                - issuer: "AWS"
+                  description: "AWS Certified Advanced Networking - Specialty (Exam)"
+                  career_impact: "Designing complex VPCs, Transit Gateways, and secure hybrid connectivity on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: Azure Network Engineer Associate (AZ-700) (Exam)"
+                  career_impact: "Designing and implementing hybrid networking, ExpressRoute, and virtual WAN on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud Network Engineer (Exam)"
+                  career_impact: "Designing and managing GCP VPC network topologies, Cloud Interconnect, and hybrid connectivity."
+            senior:
+              qualifications:
+                - issuer: "Cisco"
+                  description: "Cisco Certified Network Professional (CCNP) Enterprise (Exam)"
+                  career_impact: "Enterprise network architecture for hospital/SDE connectivity."
+
+    system-architecture:
+      name: "System Architecture"
+      competencies:
+        secure-environment-design:
+          name: "Secure Environment Design"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []  
+            senior:
+              qualifications: []
+        configuration-management:
+          name: "Configuration Management"
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: "HashiCorp"
+                  description: "HashiCorp Certified: Terraform Associate (Exam)"
+                  career_impact: "De facto standard for provisioning secure, repeatable SDE infrastructure."
+            senior:
+              qualifications:
+                - issuer: "AWS"
+                  description: "AWS Certified DevOps Engineer - Professional (Exam)"
+                  career_impact: "Automating governance and compliance through code on AWS."
+                - issuer: "Microsoft"
+                  description: "Microsoft Certified: DevOps Engineer Expert (AZ-400) (Exam)"
+                  career_impact: "Automating infrastructure deployment, compliance, and governance on Azure."
+                - issuer: "Google Cloud"
+                  description: "Google Cloud Professional Cloud DevOps Engineer (Exam)"
+                  career_impact: "Automating infrastructure delivery, monitoring, and compliance on Google Cloud."

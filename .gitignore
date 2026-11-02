@@ -34,3 +34,4 @@ astro-app/public/about/assets/img/**
 .claude/settings.json
 astro-app-refactor-plan.md
 astro-app/public/data/safe_*.yaml
+astro-app/public/data/sde-skill/*.md
