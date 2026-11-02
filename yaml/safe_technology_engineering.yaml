@@ -623,7 +623,8 @@ domain:
                 planning
               - Establishes governance for secure multi-tenant HPC resource usage
               - Leads initiatives to enhance computing capabilities and optimise resource
-                utilisation    ai-infrastructure-engineering:
+                utilisation
+    ai-infrastructure-engineering:
       id: ai-infrastructure-engineering
       name: AI Infrastructure Engineering
       description: >-
