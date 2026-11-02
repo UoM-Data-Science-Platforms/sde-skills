@@ -646,3 +646,20 @@ subdomains:
         radars:
           score: 1/4
           status: Core Statistical Computing Language
+
+  ai-output-release:
+    name: AI Output Review and Release
+    items:
+      - name: SATRE v1.1.1 output management
+        role: >-
+          Illustrative resource for ai output review and release. Select tools and guidance for local
+          requirements; inclusion is not mandatory or evidence of competence. Source:
+          https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management
+          (reviewed 2026-11-02).
+        sources:
+          standards:
+            mentions:
+              - >-
+                SATRE v1.1.1 output management —
+                https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management
+                (reviewed 2026-11-02)

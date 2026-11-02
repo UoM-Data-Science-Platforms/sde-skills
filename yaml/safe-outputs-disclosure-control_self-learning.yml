@@ -28,6 +28,16 @@ domain:
                 - Health data output tracking
                 - SDE audit logging
                 why: Required to maintain defensible audit trails of what data leaves the SDE.
+            senior:
+              core_concepts:
+              - topic: Reviewer workflow assurance
+                concepts:
+                - Separation of duties and escalation
+                - Auditable approval and decision support limitations
+                search_terms:
+                - SATRE output management reviewer responsibility
+                - Disclosure review workflow assurance
+                why: Supports qualified reviewers through reliable review systems; release decisions remain with authorised reviewers. Source https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management (reviewed 2026-11-02).
     tools-and-platforms-to-support-output-checking:
       name: Tools and Platforms to Support Output Checking
       competencies:
@@ -280,3 +290,49 @@ domain:
                 - Data breach response plan design
                 - SDE emergency playbook
                 why: Designing the organizational capability to withstand and respond to severe breaches.
+
+    ai-output-release:
+      name: AI Output Review and Release
+      competencies:
+        ai-artefact-release-controls:
+          name: AI Artefact and Generated-output Release Controls
+          levels:
+            entry:
+              core_concepts:
+                - topic: Model and embedding release requests
+                  concepts:
+                    - Model and embedding release requests
+                    - Documented procedures and role boundaries
+                  search_terms:
+                    - AI Artefact and Generated-output Release Controls
+                    - Model and embedding release requests
+                  why: >-
+                    Supports ai artefact and generated-output release controls through practical exercises using
+                    approved or synthetic data. Reference: SATRE v1.1.1 output management
+                    (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).
+            mid:
+              core_concepts:
+                - topic: Evidence capture and reviewer decisions
+                  concepts:
+                    - Evidence capture and reviewer decisions
+                    - Evidence capture and escalation
+                  search_terms:
+                    - AI Artefact and Generated-output Release Controls
+                    - Evidence capture and reviewer decisions
+                  why: >-
+                    Supports ai artefact and generated-output release controls through practical exercises using
+                    approved or synthetic data. Reference: SATRE v1.1.1 output management
+                    (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).
+            senior:
+              core_concepts:
+                - topic: Disclosure workflow assurance and escalation
+                  concepts:
+                    - Disclosure workflow assurance and escalation
+                    - Assurance, ownership and limitations
+                  search_terms:
+                    - AI Artefact and Generated-output Release Controls
+                    - Disclosure workflow assurance and escalation
+                  why: >-
+                    Supports ai artefact and generated-output release controls through practical exercises using
+                    approved or synthetic data. Reference: SATRE v1.1.1 output management
+                    (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).

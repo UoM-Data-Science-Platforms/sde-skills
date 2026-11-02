@@ -223,3 +223,41 @@ domain:
                 - issuer: "Various"
                   description: "ISO 27001 Lead Auditor (Exam)"
                   career_impact: "Leading the formal accreditation process with external bodies."
+
+    ai-governance:
+      name: AI Governance
+      competencies:
+        ai-accountability-inventory:
+          name: AI Accountability and Inventory
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-risk-impact-oversight:
+          name: AI Risk, Impact and Human Oversight
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: IAPP
+                  description: >-
+                    Artificial Intelligence Governance Professional (AIGP), illustrative optional certification.
+                    Source: https://iapp.org/certify/aigp (reviewed 2026-11-02).
+                  career_impact: >-
+                    May support governance learning; does not confer legal authority or demonstrate all skills at
+                    this level.
+            senior:
+              qualifications: []
+        ai-supplier-audit-assurance:
+          name: AI Supplier Assurance and Audit Evidence
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
