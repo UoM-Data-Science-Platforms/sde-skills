@@ -2,17 +2,17 @@
 
 Issue: https://github.com/UoM-Data-Science-Platforms/sde-skills/issues/100
 
-Status: planned; implementation pending.
+Status: implemented; awaiting content review.
 
 Timing: Current version
 
 ## Scope
 
-- [ ] Add ai-infrastructure-engineering under Safe Technology & Engineering using the existing id, name, description, levels and skills structure.
-- [ ] Cover GPU/accelerator infrastructure; training and fine-tuning platforms; inference deployment and serving; cloud-hosted model integration; local/self-hosted models; model lifecycle, versioning and traceability; evaluation infrastructure, monitoring and reliability; AI security and technical control implementation.
-- [ ] Build on HPC, cloud, containers and artefact management. Include provenance, rollback, resource isolation, cost and capacity where relevant.
-- [ ] Focus training competencies on enabling and operating workloads, without requiring learning-algorithm design or independent judgement of scientific validity.
-- [ ] Use concrete entry/mid/senior skills. Scope advanced techniques to relevant workloads rather than universal expectations.
+- [x] Add ai-infrastructure-engineering under Safe Technology & Engineering using the existing id, name, description, levels and skills structure.
+- [x] Cover GPU/accelerator infrastructure; training and fine-tuning platforms; inference deployment and serving; cloud-hosted model integration; local/self-hosted models; model lifecycle, versioning and traceability; evaluation infrastructure, monitoring and reliability; AI security and technical control implementation.
+- [x] Build on HPC, cloud, containers and artefact management. Include provenance, rollback, resource isolation, cost and capacity where relevant.
+- [x] Focus training competencies on enabling and operating workloads, without requiring learning-algorithm design or independent judgement of scientific validity.
+- [x] Use concrete entry/mid/senior skills. Scope advanced techniques to relevant workloads rather than universal expectations.
 
 ## Acceptance criteria
 
