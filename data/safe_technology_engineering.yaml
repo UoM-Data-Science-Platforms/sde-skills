@@ -2081,3 +2081,217 @@ domain:
           radars:
             score: 0/4
             status: Not in target radars
+    ai-infrastructure-engineering:
+      id: ai-infrastructure-engineering
+      name: AI Infrastructure Engineering
+      description: Enables and operates AI workloads on established HPC, cloud, container and artefact-management foundations.
+        Covers platform controls and reliability; governance authorisation, learning-algorithm design and scientific validity
+        remain with the responsible specialists. Advanced techniques apply only where required by the workload.
+      competencies:
+        ai-accelerator-infrastructure:
+          id: ai-accelerator-infrastructure
+          name: GPU and Accelerator Infrastructure
+          description: Operates accelerators and their scheduling, isolation and capacity controls within approved SDE boundaries.
+          levels:
+            entry:
+              id: ai-accelerator-infrastructure-entry
+              name: Entry Level
+              skills:
+              - Identifies accelerator memory, driver and runtime requirements for an approved workload
+              - Runs a scheduled accelerator job using documented quotas and checks utilisation and failure logs
+            mid:
+              id: ai-accelerator-infrastructure-mid
+              name: Mid Level
+              skills:
+              - Configures compatible drivers, runtimes and scheduler resource requests with reproducible environment records
+              - Tests tenant isolation and monitors accelerator utilisation, memory pressure and cost against agreed capacity
+                limits
+            senior:
+              id: ai-accelerator-infrastructure-senior
+              name: Senior Level
+              skills:
+              - Designs accelerator capacity and resilience plans using measured workload demand and budget constraints
+              - Evaluates shared, dedicated or distributed accelerator configurations for relevant workloads and records isolation
+                and performance trade-offs
+        ai-training-platforms:
+          id: ai-training-platforms
+          name: Training and Fine-tuning Platforms
+          description: Provides reproducible infrastructure for researcher-defined training and fine-tuning without prescribing
+            learning algorithms or judging scientific validity.
+          levels:
+            entry:
+              id: ai-training-platforms-entry
+              name: Entry Level
+              skills:
+              - Launches an approved training or fine-tuning job from a versioned configuration
+              - Records input dataset references, environment versions, checkpoints and job outcomes without copying restricted
+                data into logs
+            mid:
+              id: ai-training-platforms-mid
+              name: Mid Level
+              skills:
+              - Automates training jobs with access-controlled data mounts, resource limits and recoverable checkpoints
+              - Diagnoses scheduling, storage and runtime failures with researchers and verifies recovery from interrupted
+                jobs
+            senior:
+              id: ai-training-platforms-senior
+              name: Senior Level
+              skills:
+              - Designs reproducible training services with provenance, recovery objectives and cost controls
+              - Evaluates distributed training or parameter-efficient fine-tuning infrastructure where workload needs justify
+                it, leaving methodological choices to researchers
+        ai-inference-serving:
+          id: ai-inference-serving
+          name: Inference Deployment and Serving
+          description: Deploys model endpoints with controlled releases, predictable service behaviour and observable resource
+            use.
+          levels:
+            entry:
+              id: ai-inference-serving-entry
+              name: Entry Level
+              skills:
+              - Deploys an approved model version using an existing serving template
+              - Checks endpoint health, authentication and request limits using non-sensitive test inputs
+            mid:
+              id: ai-inference-serving-mid
+              name: Mid Level
+              skills:
+              - Implements staged endpoint rollouts and rollback with pinned model, runtime and configuration versions
+              - Load-tests latency, throughput and failure behaviour and configures batching or scaling where appropriate
+            senior:
+              id: ai-inference-serving-senior
+              name: Senior Level
+              skills:
+              - Designs serving reliability and capacity objectives with service owners and tests failover under realistic
+                load
+              - Evaluates quantisation, caching or model parallelism only where suitable, obtaining specialist approval for
+                changes affecting output quality
+        ai-cloud-model-integration:
+          id: ai-cloud-model-integration
+          name: Cloud-hosted Model Integration
+          description: Integrates approved external model services within agreed data, network, supplier and residency constraints.
+          levels:
+            entry:
+              id: ai-cloud-model-integration-entry
+              name: Entry Level
+              skills:
+              - Identifies approved endpoints and the permitted categories of data for requests
+              - Uses managed credentials and checks that prompts and responses are not exposed in routine logs
+            mid:
+              id: ai-cloud-model-integration-mid
+              name: Mid Level
+              skills:
+              - Implements endpoint allow-lists, secret rotation, timeouts and rate limits for approved cloud model services
+              - Tests configured retention, network routes and failure handling against approved requirements and escalates
+                supplier changes
+            senior:
+              id: ai-cloud-model-integration-senior
+              name: Senior Level
+              skills:
+              - Designs integration and exit plans for service outages, version withdrawal and supplier changes
+              - Produces technical evidence for governance review of residency, retention and access controls without approving
+                supplier or legal suitability
+        ai-self-hosted-models:
+          id: ai-self-hosted-models
+          name: Local and Self-hosted Models
+          description: Operates approved models inside the SDE boundary, including environments without outbound network access.
+          levels:
+            entry:
+              id: ai-self-hosted-models-entry
+              name: Entry Level
+              skills:
+              - Verifies model origin, approved licence record and checksums before using an authorised import process
+              - Runs a local model using documented runtime and memory requirements
+            mid:
+              id: ai-self-hosted-models-mid
+              name: Mid Level
+              skills:
+              - Packages model weights, tokenisers and dependencies for reproducible offline deployment
+              - Tests restricted network access, storage permissions and dependency scanning before promoting a self-hosted
+                model
+            senior:
+              id: ai-self-hosted-models-senior
+              name: Senior Level
+              skills:
+              - Designs maintainable offline model services with patching, resource isolation and controlled updates
+              - Evaluates local hosting costs and operational limits against approved cloud alternatives and documents service
+                continuity plans
+        ai-model-lifecycle:
+          id: ai-model-lifecycle
+          name: Model Lifecycle and Traceability
+          description: Maintains technical traceability and recoverability of model artefacts; data permissions and release
+            authorisation are owned by the relevant domains.
+          levels:
+            entry:
+              id: ai-model-lifecycle-entry
+              name: Entry Level
+              skills:
+              - Records immutable identifiers for model weights, code, dependencies and configuration
+              - Retrieves the approved model version and its deployment history from the artefact registry
+            mid:
+              id: ai-model-lifecycle-mid
+              name: Mid Level
+              skills:
+              - Links model builds to data provenance references, training runs and evaluation records in an access-controlled
+                registry
+              - Implements promotion and rollback workflows that preserve evidence and prevent unapproved artefact substitution
+            senior:
+              id: ai-model-lifecycle-senior
+              name: Senior Level
+              skills:
+              - Designs end-to-end traceability and recovery across model registries, pipelines and deployments
+              - Tests rollback and retirement controls, including dependent endpoints and cached artefacts, against authorised
+                retention decisions
+        ai-evaluation-reliability:
+          id: ai-evaluation-reliability
+          name: Evaluation Infrastructure, Monitoring and Reliability
+          description: Operates repeatable evaluation and monitoring services using criteria agreed with research and service
+            owners.
+          levels:
+            entry:
+              id: ai-evaluation-reliability-entry
+              name: Entry Level
+              skills:
+              - Runs an approved evaluation suite against a pinned model and records configuration and results
+              - Identifies latency, error-rate and resource alerts and follows the escalation runbook
+            mid:
+              id: ai-evaluation-reliability-mid
+              name: Mid Level
+              skills:
+              - Automates repeatable evaluations with versioned test sets and restricted access to potentially sensitive results
+              - Configures monitoring and alerts for operational failures and agreed quality indicators, routing scientific
+                concerns to specialists
+            senior:
+              id: ai-evaluation-reliability-senior
+              name: Senior Level
+              skills:
+              - Designs evaluation infrastructure that supports reproducible comparisons and controlled release gates
+              - Agrees reliability objectives and exercises failure recovery with service owners, distinguishing platform
+                reliability from scientific validity
+        ai-security-controls:
+          id: ai-security-controls
+          name: AI Security and Technical Controls
+          description: Implements approved AI threat mitigations using established security foundations and evidence from
+            testing.
+          levels:
+            entry:
+              id: ai-security-controls-entry
+              name: Entry Level
+              skills:
+              - Recognises prompt injection, unsafe tool access and model supply-chain risks in deployed workflows
+              - Applies documented access, secret-handling and network restrictions and reports suspected control failures
+            mid:
+              id: ai-security-controls-mid
+              name: Mid Level
+              skills:
+              - Implements least-privilege model and tool access, restricted egress and checks on imported artefacts
+              - Tests prompt injection and data-exfiltration scenarios in an authorised test environment and records residual
+                limitations
+            senior:
+              id: ai-security-controls-senior
+              name: Senior Level
+              skills:
+              - Leads technical threat modelling and layered control design for model endpoints, retrieval systems and tool
+                integrations
+              - Evaluates control effectiveness and prepares evidence for accountable risk owners, without treating filters
+                as guarantees of safe outputs

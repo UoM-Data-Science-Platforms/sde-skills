@@ -17,7 +17,7 @@ with its identifier. Use this to decide which domain YAML file to fetch for deta
 
 Each competency defines entry, mid, and senior level skill statements.
 
-6 domains / 21 subdomains / 76 competencies. Levels everywhere: entry, mid, senior.
+6 domains / 22 subdomains / 84 competencies. Levels everywhere: entry, mid, senior.
 
 ## Domain 1: Safe Access & Identity (`safe-access-identity`)
 
@@ -235,3 +235,16 @@ System Architecture establishes the foundational design principles for secure, s
 - **Vulnerability & Patch Management** (`vulnerability-patch-management`): Identifies, assesses, and remediates security vulnerabilities across systems and infrastructure.
 - **Configuration Management** (`configuration-management`): Deploys and maintains infrastructure and applications in consistent, secure, and compliant states.
 - **High Performance Computing** (`high-performance-computing`): Provisions, configures, and securely manages high-performance computing resources and specialised hardware accelerators.
+
+### AI Infrastructure Engineering (`ai-infrastructure-engineering`)
+
+Enables and operates AI workloads on established HPC, cloud, container and artefact-management foundations.
+
+- **GPU and Accelerator Infrastructure** (`ai-accelerator-infrastructure`): Operates accelerators and their scheduling, isolation and capacity controls within approved SDE boundaries.
+- **Training and Fine-tuning Platforms** (`ai-training-platforms`): Provides reproducible infrastructure for researcher-defined training and fine-tuning without prescribing learning algorithms or judging scientific validity.
+- **Inference Deployment and Serving** (`ai-inference-serving`): Deploys model endpoints with controlled releases, predictable service behaviour and observable resource use.
+- **Cloud-hosted Model Integration** (`ai-cloud-model-integration`): Integrates approved external model services within agreed data, network, supplier and residency constraints.
+- **Local and Self-hosted Models** (`ai-self-hosted-models`): Operates approved models inside the SDE boundary, including environments without outbound network access.
+- **Model Lifecycle and Traceability** (`ai-model-lifecycle`): Maintains technical traceability and recoverability of model artefacts; data permissions and release authorisation are owned by the relevant domains.
+- **Evaluation Infrastructure, Monitoring and Reliability** (`ai-evaluation-reliability`): Operates repeatable evaluation and monitoring services using criteria agreed with research and service owners.
+- **AI Security and Technical Controls** (`ai-security-controls`): Implements approved AI threat mitigations using established security foundations and evidence from testing.
