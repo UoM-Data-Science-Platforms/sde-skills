@@ -521,8 +521,7 @@ domain:
         controllers and authorised specialists decide permitted uses; infrastructure services implement the
         approved handling requirements.
       competencies:
-    
-    ai-data-provenance-permissions:
+        ai-data-provenance-permissions:
           id: ai-data-provenance-permissions
           name: AI Data Provenance and Permissions
           description: Maintains provenance, permitted-use records and transformations for AI training and evaluation data.
@@ -557,8 +556,7 @@ domain:
                 - >-
                   Coordinates the response to withdrawn permissions or changed purposes with data owners,
                   documenting affected models and specialist decisions about further use
-    
-    ai-data-retention-lineage:
+        ai-data-retention-lineage:
           id: ai-data-retention-lineage
           name: AI Data Retention and Model Lineage
           description: >-
