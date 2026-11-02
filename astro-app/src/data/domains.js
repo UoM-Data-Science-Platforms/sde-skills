@@ -2,12 +2,12 @@
  * Canonical domain list — single source of truth for all pages and components.
  */
 export const DOMAINS = [
-  { id: 'access-identity',            name: 'Safe Access & Identity'            },
-  { id: 'data-management',            name: 'Safe Data Management'              },
-  { id: 'governance-compliance',      name: 'Safe Governance & Compliance'      },
+  { id: 'access-identity', name: 'Safe Access & Identity' },
+  { id: 'data-management', name: 'Safe Data Management' },
+  { id: 'governance-compliance', name: 'Safe Governance & Compliance' },
   { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control' },
-  { id: 'projects-operations',        name: 'Safe Projects & Operations'        },
-  { id: 'technology-engineering',     name: 'Safe Technology & Engineering'     },
+  { id: 'projects-operations', name: 'Safe Projects & Operations' },
+  { id: 'technology-engineering', name: 'Safe Technology & Engineering' },
 ];
 
 /**
@@ -17,27 +17,27 @@ export const DOMAINS = [
 const ACCENT = 'var(--color-deep-blue)';
 
 export const PAGE_COLORS = {
-  '/':                          ACCENT,
-  'project':                    ACCENT,
-  'contributing':               ACCENT,
-  'cf-overview':                ACCENT,
-  'framework-contents':         ACCENT,
-  'mapping-matrix':             ACCENT,
-  'retreat':                    ACCENT,
-  'access-identity':            ACCENT,
-  'data-management':            ACCENT,
-  'governance-compliance':      ACCENT,
+  '/': ACCENT,
+  'project': ACCENT,
+  'contributing': ACCENT,
+  'cf-overview': ACCENT,
+  'framework-contents': ACCENT,
+  'mapping-matrix': ACCENT,
+  'retreat': ACCENT,
+  'access-identity': ACCENT,
+  'data-management': ACCENT,
+  'governance-compliance': ACCENT,
   'outputs-disclosure-control': ACCENT,
-  'projects-operations':        ACCENT,
-  'technology-engineering':     ACCENT,
-  'cf-framework-mapping':       ACCENT,
-  'ai-agent-skill':             ACCENT,
-  'forge-cf-exercise':          ACCENT,
-  'satre-mapping':              ACCENT,
-  'acknowledgements':           ACCENT,
-  'student-projects':           ACCENT,
-  'meet-the-team':              ACCENT,
-  'rtp-placements':             ACCENT,
+  'projects-operations': ACCENT,
+  'technology-engineering': ACCENT,
+  'cf-framework-mapping': ACCENT,
+  'ai-agent-skill': ACCENT,
+  'forge-cf-exercise': ACCENT,
+  'satre-mapping': ACCENT,
+  'acknowledgements': ACCENT,
+  'student-projects': ACCENT,
+  'meet-the-team': ACCENT,
+  'rtp-placements': ACCENT,
 };
 
 /**

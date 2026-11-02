@@ -29,8 +29,22 @@
    ============================================= */
 
 .sidebar-brand {
+  position: relative;
   padding: var(--space-lg) var(--space-md);
   flex-shrink: 0;
+}
+
+.sidebar-brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--border-gradient-fluorescent);
+  background-attachment: fixed;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .sidebar-brand h2 {
@@ -158,14 +172,32 @@ a.nav-group-title {
    ============================================= */
 
 .sidebar-footer {
+  position: relative;
   flex-shrink: 0;
+}
+
+.sidebar-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--border-gradient-fluorescent);
+  background-attachment: fixed;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .theme-toggle {
   width: 100%;
   padding: var(--space-xs) var(--space-md);
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(var(--color-surface), var(--color-surface)), var(--border-gradient-fluorescent);
+  background-attachment: scroll, fixed;
   border-radius: var(--radius-sm);
   font-size: var(--text-small);
   font-weight: 500;
@@ -177,7 +209,8 @@ a.nav-group-title {
 }
 
 .theme-toggle:hover {
-  background: var(--color-border);
+  background-image: linear-gradient(var(--color-border), var(--color-border)), var(--border-gradient-fluorescent);
+  background-attachment: scroll, fixed;
   color: var(--color-text);
 }
 
@@ -204,6 +237,8 @@ html[data-theme="dark"] .theme-toggle:hover {
     z-index: 200;
   }
 
+
+
   /* Never show a backdrop on desktop */
   .offcanvas-backdrop {
     display: none !important;
@@ -217,7 +252,13 @@ html[data-theme="dark"] .theme-toggle:hover {
    ============================================= */
 
 @media (max-width: 991.98px) {
+  astro-island:has(#sidebar-offcanvas) {
+    display: contents;
+  }
+
   #sidebar-offcanvas.offcanvas {
+    /* Keep the hidden panel out of flex layout despite .glass--soft positioning. */
+    position: fixed;
     background: var(--color-bg);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
