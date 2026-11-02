@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StickyNavigation from '../components/StickyNavigation.astro';
+import '../styles/hero.css';
+import '../styles/carousel.css';
+import '../styles/horizontal-scroller.css';
+import '../styles/section.css';
+import '../styles/index.css';
+
+const sections = [
+  {
+    id: 'overview',
+    label: 'Overview',
+    subsections: []
+  },
+  {
+    id: 'privacy',
+    label: 'Privacy & Safety',
+    subsections: []
+  },
+  {
+    id: 'instructions',
+    label: 'Instructions & Hints',
+    subsections: []
+  },
+  {
+    id: 'troubleshooting',
+    label: 'Troubleshooting',
+    subsections: []
+  },
+  {
+    id: 'mock-cvs',
+    label: 'Mock C.V.s',
+    subsections: []
+  }
+];
+---
+
+<Layout title="Forge CF Exercise — SDE Team Development Hub" currentDomain="forge-cf-exercise">
+  <div class="index-page wide-layout">
+    <div class="scroll-area">
+      
+      <!-- Hero -->
+      <div class="wide-hero row g-4 align-items-center" id="home-hero">
+        <div class="hero-content col-12 col-lg-6">
+          <h1 class="hero-title">SDE Forge Competency Framework Exercise</h1>
+          <p class="hero-subtitle">Test out our A.I. agent skill, explore the Competency Framework, and report back on your experience.</p>
+        </div>
+      </div>
+
+      <!-- Nav L1 & L2 via StickyNavigation -->
+      <StickyNavigation sections={sections} id="page-subnav" />
+
+      <section class="section" id="overview">
+        <h2>Overview</h2>
+        <p class="section-intro">In this exercise, we are asking you to navigate to the <a href="/ai-agent-skill" class="link">A.I. Agent Skill page</a> and put it to the test. Your goal is to interact with the agent, explore its capabilities using the Competency Framework, and then tell us about your experience.</p>
+      </section>
+
+      <section class="section" id="privacy">
+        <h2>Privacy & Safety Guidelines</h2>
+        <p class="section-intro">Before you begin, please ensure that any personal data you upload to the A.I. agent is carefully anonymised.</p>
+        <div class="card glass--soft p-4 mt-3">
+          <ul class="mb-0 ps-3">
+            <li class="mb-2"><strong>Remove Contact Details:</strong> Strip out your name, email address, phone number, and physical address.</li>
+            <li class="mb-2"><strong>Remove Identifying Locations:</strong> Please remove references to your high school or secondary school, as well as any highly specific identifiable locations.</li>
+            <li class="mb-2"><strong>Redact Specific Achievements:</strong> Remove highly unique identifiable attributes (e.g., specific awards or ultra-niche projects that could easily identify you).</li>
+            <li class="mb-0"><strong>Mock C.V. Option:</strong> If you are uncomfortable using your own C.V., you can optionally use the mock C.V. we have provided to test the agent's capabilities.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="instructions">
+        <h2>Instructions & Hints</h2>
+        <p class="section-intro">To get the best out of the A.I. agent, tailor your prompt to your goals based on what the agent is designed to do.</p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-6">
+            <div class="card p-4 h-100 glass--soft">
+              <h4>1. Choose a Persona</h4>
+              <p>Select a persona or use case that applies most to you and your career objectives:</p>
+              <ul class="ps-3 mb-0">
+                <li class="mb-2"><strong>Aspiring Builders:</strong> You are a recent graduate, have some technical skills from personal or work projects, an internship, or an apprenticeship, or you are looking to transition career tracks from an adjacent field such as data analysis or data engineering.</li>
+                <li class="mb-2"><strong>Experienced RTPs:</strong> You already work developing SDEs or have a technical IT role and you want to upskill, understand your current experience level, or plan for a promotion.</li>
+                <li class="mb-0"><strong>Team Leads:</strong> You want to understand your team's capabilities and experience levels to assess the overall health of the team, understand skills gaps, recognise capacity risks, plan for building capacity, generate a job specification, or review C.V.s submitted for a job posting.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 h-100 glass--soft">
+              <h4>2. What to Ask</h4>
+              <p>Try prompting the agent with tasks related to your chosen persona:</p>
+              <ul class="ps-3 mb-0">
+                <li class="mb-2"><strong>Aspiring Builders:</strong> Share your anonymised C.V. or background. Ask the agent to outline the foundational skills you need to transition into an SDE role and what you should focus on learning first.</li>
+                <li class="mb-2"><strong>Experienced RTPs:</strong> Paste your anonymised C.V. and ask the agent to map your current experience against the framework, identify your level, and suggest concrete objectives for a promotion.</li>
+                <li class="mb-0"><strong>Team Leads:</strong> Paste a draft Job Description to see if it aligns with the framework, or describe your team's current projects to have the agent identify potential skills gaps and capacity risks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="troubleshooting">
+        <h2>Troubleshooting</h2>
+        <p class="section-intro">Sometimes A.I. agents can be stubborn or may not follow their system instructions perfectly. Here are some mitigations if you run into issues.</p>
+        <div class="card glass--soft border-opacity-50 p-4 mt-3">
+          <h4 class="mb-3">Agent Won't Fetch Data</h4>
+          <p>The agent's system instructions tell it to fetch the framework data from our website using YAML files. However, some LLM providers might refuse to access external URLs or tell you they cannot read live websites.</p>
+          <p class="mb-0"><strong>Solution:</strong> If the agent fails to fetch the framework data automatically, you can manually provide the data. Navigate to the <a href="https://github.com/UoM-Data-Science-Platforms/sde-skills/tree/main/docs/data" target="_blank" rel="noopener noreferrer" class="link">SDE Skills GitHub repository</a>, find the relevant YAML files for the framework domains, and simply copy and paste the text content directly into the chat.</p>
+        </div>
+      </section>
+
+      <section class="section" id="mock-cvs">
+        <h2>Mock C.V.s</h2>
+        <p class="section-intro">If you prefer not to use your own C.V. for this exercise, you can use one of the mock profiles below. Copy and paste the text directly into the chat prompt.</p>
+        
+        <div class="row g-4 mt-3">
+          <div class="col-12">
+            <div class="card glass--soft p-4">
+              <h4>Option 1: Recent Graduate</h4>
+              <p class="text-muted small mb-2">A recent computer science graduate with an internship and some personal projects.</p>
+              <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem; max-height: 300px; overflow-y: auto;"><code>Education:
+BSc Computer Science (2020 - 2023)
+- First Class Honours
+- Relevant Modules: Data Structures &amp; Algorithms, Software Engineering, Database Systems, Cloud Computing
+- Final Year Project: Developed a full-stack web application using React, Node.js, and PostgreSQL for tracking student attendance. Deployed on AWS using EC2 and RDS.
+
+Technical Skills:
+- Languages: Python, JavaScript, Java, SQL
+- Frameworks: React, Express.js
+- Tools/Platforms: Git, Docker (basic), AWS (EC2, S3), Linux (Ubuntu)
+
+Experience:
+Software Engineering Intern (Summer 2022)
+- Assisted in developing RESTful APIs for a customer portal.
+- Wrote unit tests using Jest, increasing test coverage by 15%.
+- Participated in daily stand-ups and agile sprint planning.
+
+Projects:
+- Personal Portfolio Website: Built and hosted a static website on GitHub Pages using HTML/CSS and vanilla JS.
+- Automated Data Scraper: Python script to scrape weather data and store it in a local SQLite database, orchestrated with a cron job.</code></pre>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card glass--soft p-4">
+              <h4>Option 2: Mid-Tier Infrastructure Engineer</h4>
+              <p class="text-muted small mb-2">An infrastructure engineer with experience in cloud platforms (AWS), IaC (Terraform), and Linux administration.</p>
+              <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem; max-height: 300px; overflow-y: auto;"><code>Experience:
+Infrastructure Engineer (2019 - Present)
+- Designed and maintained scalable infrastructure on AWS (VPC, EC2, RDS, Route53) for web applications serving 10,000+ daily users.
+- Implemented Infrastructure as Code (IaC) using Terraform to automate environment provisioning, reducing setup time by 40%.
+- Managed CI/CD pipelines using GitLab CI, ensuring reliable automated testing and deployment.
+- Administered Linux servers (CentOS/Ubuntu), handling patching, security hardening, and performance monitoring with Prometheus and Grafana.
+- Managed containerised workloads using Docker and Docker Compose.
+
+Junior Systems Administrator (2017 - 2019)
+- Provided 2nd-line support for internal IT infrastructure and employee hardware.
+- Managed Active Directory, DNS, and DHCP for a 200+ employee office.
+- Automated repetitive system maintenance tasks using Bash scripting.
+
+Technical Skills:
+- Cloud/Infrastructure: AWS, Terraform, Docker
+- OS: Linux (Ubuntu/RHEL), Windows Server
+- CI/CD &amp; Monitoring: GitLab CI, Prometheus, Grafana
+- Scripting: Bash, Python</code></pre>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card glass--soft p-4">
+              <h4>Option 3: Data Engineer (with Home Lab experience)</h4>
+              <p class="text-muted small mb-2">A data engineer focused on cloud pipelines (GCP, Airflow) with strong hobbyist experience building infrastructure (NAS, Raspberry Pi, Docker).</p>
+              <pre class="bg-dark text-light p-3 rounded mb-0" style="white-space: pre-wrap; font-size: 0.85rem; max-height: 300px; overflow-y: auto;"><code>Experience:
+Data Engineer (2021 - Present)
+- Developed and maintained automated cloud data processing pipelines using Python and Apache Airflow on Google Cloud Platform (GCP).
+- Ingested and transformed large datasets (JSON, CSV) from external APIs into BigQuery for analytics reporting.
+- Optimised SQL queries and data models, reducing average report generation time by 25%.
+- Collaborated with data scientists to deploy machine learning models using Vertex AI.
+- Implemented data quality checks and monitoring alerts using Python scripts.
+
+IT Support Analyst (2019 - 2021)
+- Provided technical support for database access issues and basic data reporting queries.
+- Assisted with database migrations and backups.
+
+Home Lab &amp; Personal Projects:
+- Home NAS Server: Built a custom Network Attached Storage (NAS) solution using TrueNAS to safely store and backup 10TB of personal data. Configured RAID, automated backups, and secure remote access.
+- Raspberry Pi Media Server: Set up a Raspberry Pi running Docker to host a local media server (Jellyfin) and network-wide ad blocker (Pi-hole). Managed container deployments using Docker Compose.
+
+Technical Skills:
+- Languages: Python, SQL
+- Data Tools: Airflow, dbt, Pandas
+- Cloud: GCP (BigQuery, Cloud Storage, Compute Engine)
+- Infrastructure/Home Lab: Linux, Docker, Docker Compose, TrueNAS, Raspberry Pi</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const nav = document.getElementById('page-subnav');
+  const hero = document.getElementById('home-hero');
+  const scroller = document.querySelector('.wide-layout .scroll-area');
+
+  if (nav && hero && scroller) {
+    scroller.addEventListener('scroll', () => {
+      nav.classList.toggle('sticky-nav--stuck', scroller.scrollTop > 0);
+    }, { passive: true });
+  }
+</script>

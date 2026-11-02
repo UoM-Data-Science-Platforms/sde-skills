@@ -52,7 +52,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
         style={{ width: 'var(--sidebar-width)' }}
       >
         {/* Offcanvas header / brand */}
-        <div className="offcanvas-header border-bottom sidebar-brand">
+        <div className="offcanvas-header sidebar-brand">
           <div className="sidebar-brand-inner w-100">
             <div id="sidebar-label">
               <h2>SDE</h2>
@@ -194,7 +194,7 @@ export default function Sidebar({ domains, currentDomain, children }) {
           </nav>
         </div>
 
-        <div className="sidebar-footer border-top p-3">
+        <div className="sidebar-footer p-3">
           {children}
           <ThemeToggle />
         </div>

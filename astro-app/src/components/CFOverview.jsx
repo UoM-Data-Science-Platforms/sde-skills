@@ -9,12 +9,12 @@ const DOMAIN_SUB_IDS = Object.fromEntries(
 
 // Map CFOverview domain IDs -> SATRE domain IDs
 const DOMAIN_SATRE_ID = {
-  'technology-engineering': 'ste',
-  'data-management': 'sdm',
-  'access-identity': 'sai',
-  'outputs-disclosure-control': 'sod',
-  'projects-operations': 'spo',
-  'governance-compliance': 'sgc',
+  'technology-engineering': 'safe-technology-engineering',
+  'data-management': 'safe-data-management',
+  'access-identity': 'safe-access-identity',
+  'outputs-disclosure-control': 'safe-outputs-disclosure-control',
+  'projects-operations': 'safe-projects-operations',
+  'governance-compliance': 'safe-governance-compliance',
 };
 
 const TOTAL_SATRE_COMPONENTS = SATRE_PILLARS.reduce((n, p) => n + p.components.length, 0);
@@ -29,21 +29,21 @@ const FIVE_SAFES_LOOKUP = {
 };
 
 const DOMAINS = [
-  { id: 'technology-engineering', name: 'Safe Technology & Engineering', desc: 'Technical implementation of secure systems' },
-  { id: 'data-management', name: 'Safe Data Management', desc: 'Handling, processing, and governing data' },
   { id: 'access-identity', name: 'Safe Access & Identity', desc: 'User authentication, authorisation, and access control' },
+  { id: 'data-management', name: 'Safe Data Management', desc: 'Handling, processing, and governing data' },
+  { id: 'governance-compliance', name: 'Safe Governance & Compliance', desc: 'Meeting regulatory and ethical requirements' },
   { id: 'outputs-disclosure-control', name: 'Safe Outputs & Disclosure Control', desc: 'Ensuring non-disclosive research outputs' },
   { id: 'projects-operations', name: 'Safe Projects & Operations', desc: 'Project management and operational excellence' },
-  { id: 'governance-compliance', name: 'Safe Governance & Compliance', desc: 'Meeting regulatory and ethical requirements' },
+  { id: 'technology-engineering', name: 'Safe Technology & Engineering', desc: 'Technical implementation of secure systems' },
 ];
 
 const FIVE_SAFES = [
-  { domain: 'Safe Technology & Engineering', principle: 'Safe Settings' },
-  { domain: 'Safe Data Management', principle: 'Safe Data' },
   { domain: 'Safe Access & Identity', principle: 'Safe People' },
+  { domain: 'Safe Data Management', principle: 'Safe Data' },
+  { domain: 'Safe Governance & Compliance', principle: 'Spans all five' },
   { domain: 'Safe Outputs & Disclosure Control', principle: 'Safe Outputs' },
   { domain: 'Safe Projects & Operations', principle: 'Safe Projects' },
-  { domain: 'Safe Governance & Compliance', principle: 'Spans all five' },
+  { domain: 'Safe Technology & Engineering', principle: 'Safe Settings' },
 ];
 
 
@@ -300,7 +300,7 @@ export default function CFOverview() {
             {comp.name}
           </td>
           {SATRE_DOMAINS.map(d => {
-            const count = DOMAIN_SUB_IDS[d.id].filter(sid => comp.mappings[sid]).length;
+            const count = comp.mappings && comp.mappings[d.id] ? Object.keys(comp.mappings[d.id]).length : 0;
             const level = count === 0 ? 'none' : count === 1 ? 'low' : count >= 3 ? 'high' : 'medium';
             return (
               <td key={d.id} style={{ padding: 4, textAlign: 'center', borderLeft: '1px solid var(--color-border)', verticalAlign: 'middle' }}>
@@ -374,7 +374,7 @@ export default function CFOverview() {
         <div ref={secRef('framework-structure')} className="subdomain-section" style={{ paddingBottom: 'var(--space-xl)' }}>
           <h2 className="subdomain-title is-visible" style={{ marginTop: 'var(--space-sm)' }} id="framework-structure">Framework Structure</h2>
           <p className="subdomain-description">
-            A three-tier hierarchy with three defined proficiency levels at each competency item.
+            A three-tier hierarchy with three defined proficiency levels for each competency item.
           </p>
 
           <div className="competency-card is-visible" style={{ display: 'flex', gap: 'var(--space-2xl)', flexWrap: 'wrap', alignItems: 'flex-start' }}>
@@ -474,13 +474,12 @@ export default function CFOverview() {
               const c = DOMAIN_COLORS[d.id];
               const satreId = DOMAIN_SATRE_ID[d.id];
               const subdomains = SUBDOMAINS.filter(s => s.domainId === satreId);
-              const subIds = new Set(subdomains.map(s => s.id));
               const fiveSafe = FIVE_SAFES_LOOKUP[d.name];
 
               // Per-pillar: how many components does this domain address
               const pillarHits = SATRE_PILLARS.map(p => ({
                 name: p.name,
-                addressed: p.components.filter(comp => Object.keys(comp.mappings).some(k => subIds.has(k))).length,
+                addressed: p.components.filter(comp => comp.mappings && comp.mappings[satreId] && Object.keys(comp.mappings[satreId]).length > 0).length,
                 total: p.components.length,
               }));
               const satreCount = pillarHits.reduce((n, p) => n + p.addressed, 0);

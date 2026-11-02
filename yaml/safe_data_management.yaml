@@ -3,41 +3,42 @@ domain:
   main-color: color-deep-blue
   id: safe-data-management
   name: Safe Data Management
-  description: This domain covers all aspects of data handling, processing, governance, and engineering
-    within Secure Data Environments, focusing on ensuring data is managed securely and effectively throughout
-    its lifecycle.
+  description: This domain covers all aspects of data handling, processing, governance,
+    and engineering within Secure Data Environments, focusing on ensuring data is
+    managed securely and effectively throughout its lifecycle.
   source_file: safe_data_management.md
   subdomains:
     data-governance:
       id: data-governance
       name: Data Governance
-      description: 'Data Governance establishes frameworks and processes for ensuring data quality, security,
-        and proper management throughout its lifecycle.
+      description: 'Data Governance establishes frameworks and processes for ensuring
+        data quality, security, and proper management throughout its lifecycle.
 
-        This subdomain encompasses classification of sensitive data, tracking data lineage and provenance,
-        and implementing quality management practices that maintain data integrity, accuracy, and compliance
-        with organisational policies while providing visibility into data origins and transformations.'
-      tools: []
-      technologies: []
-      standards: []
+        This subdomain encompasses classification of sensitive data, tracking data
+        lineage and provenance, and implementing quality management practices that
+        maintain data integrity, accuracy, and compliance with organisational policies
+        while providing visibility into data origins and transformations.'
       competencies:
         data-integrity:
           id: data-integrity
           name: Data Integrity
-          description: 'Ensures that data remains accurate, consistent, and unaltered throughout its lifecycle.
+          description: 'Ensures that data remains accurate, consistent, and unaltered
+            throughout its lifecycle.
 
-            Involves implementing mechanisms such as checksums, hash validation, and digital signatures
-            to detect and prevent unauthorised modification or corruption.
+            Involves implementing mechanisms such as checksums, hash validation, and
+            digital signatures to detect and prevent unauthorised modification or
+            corruption.
 
-            Requires regular integrity checks, monitoring, and alerting, as well as procedures for remediation
-            in the event of integrity violations.'
+            Requires regular integrity checks, monitoring, and alerting, as well as
+            procedures for remediation in the event of integrity violations.'
           levels:
             entry:
               id: data-integrity-entry
               name: Entry Level
               skills:
-              - Understands the importance of data integrity in secure environments
-              - Familiar with basic integrity verification methods (e.g., checksums)
+              - Explains the importance of data integrity in secure environments
+              - Calculates and verifies data integrity using standard hashing tools
+                (e.g. checksums)
               - Can perform manual integrity checks under supervision
             mid:
               id: data-integrity-mid
@@ -56,12 +57,13 @@ domain:
         data-cataloguing-discovery:
           id: data-cataloguing-discovery
           name: Data Cataloguing & Discovery
-          description: 'Creates and maintains systems that enable researchers to find and understand available
-            datasets in line with FAIR (Findable, Accessible, Interoperable, and Reusable) principles.
+          description: 'Creates and maintains systems that enable researchers to find
+            and understand available datasets in line with FAIR (Findable, Accessible,
+            Interoperable, and Reusable) principles.
 
-            Involves documenting datasets with appropriate metadata, implementing catalogue systems, developing
-            metadata standards, ensuring catalogue accuracy and usability, and architecting enterprise
-            discovery solutions.
+            Involves documenting datasets with appropriate metadata, implementing
+            catalogue systems, developing metadata standards, ensuring catalogue accuracy
+            and usability, and architecting enterprise discovery solutions.
 
             Requires establishing governance frameworks and enhancing data reusability.'
           levels:
@@ -69,9 +71,9 @@ domain:
               id: data-cataloguing-discovery-entry
               name: Entry Level
               skills:
-              - Understands the purpose and structure of data catalogues
-              - Familiar with metadata standards and practices
-              - Familiar with common data cataloguing tools
+              - Describes the purpose and structure of data catalogues
+              - Applies metadata standards and documentation schemas to datasets
+              - Identifies and navigates common data cataloguing and discovery platforms
             mid:
               id: data-cataloguing-discovery-mid
               name: Mid Level
@@ -88,21 +90,24 @@ domain:
         data-classification-sensitivity:
           id: data-classification-sensitivity
           name: Data Classification & Sensitivity
-          description: 'Implements frameworks for categorising data based on sensitivity and security
-            requirements.
+          description: 'Implements frameworks for categorising data based on sensitivity
+            and security requirements.
 
-            Involves understanding different data types, applying appropriate classification labels, designing
-            handling procedures, conducting reviews, and developing organisational policies.
+            Involves understanding different data types, applying appropriate classification
+            labels, designing handling procedures, conducting reviews, and developing
+            organisational policies.
 
-            Requires implementing classification systems and leading risk assessment initiatives across
-            the organisation.'
+            Requires implementing classification systems and leading risk assessment
+            initiatives across the organisation.'
           levels:
             entry:
               id: data-classification-sensitivity-entry
               name: Entry Level
               skills:
-              - Understands basic data classification principles and sensitivity levels
-              - Familiar with common data types (PII, PHI, etc.) and their handling requirements
+              - Classifies data according to sensitivity levels and institutional
+                classification schemes
+              - Identifies sensitive data categories (e.g. PII, PHI) and their handling
+                constraints
               - Can apply classification labels following established guidelines
             mid:
               id: data-classification-sensitivity-mid
@@ -121,21 +126,22 @@ domain:
         data-lineage-provenance:
           id: data-lineage-provenance
           name: Data Lineage & Provenance
-          description: 'Tracks and documents the origins, movements, and transformations of data throughout
-            systems.
+          description: 'Tracks and documents the origins, movements, and transformations
+            of data throughout systems.
 
-            Involves maintaining metadata documentation, implementing lineage tools, verifying data provenance,
-            analysing quality issues, and architecting enterprise-wide systems.
+            Involves maintaining metadata documentation, implementing lineage tools,
+            verifying data provenance, analysing quality issues, and architecting
+            enterprise-wide systems.
 
-            Requires developing governance frameworks that maintain visibility of sensitive data across
-            multiple systems.'
+            Requires developing governance frameworks that maintain visibility of
+            sensitive data across multiple systems.'
           levels:
             entry:
               id: data-lineage-provenance-entry
               name: Entry Level
               skills:
-              - Understands basic concepts of data tracking through systems
-              - Familiar with metadata documentation for data lineage
+              - Describes data lineage and tracking concepts across processing pipelines
+              - Documents dataset lineage and transformations using metadata schemas
               - Can document data sources and transformations
             mid:
               id: data-lineage-provenance-mid
@@ -149,25 +155,29 @@ domain:
               name: Senior Level
               skills:
               - Architects enterprise-wide data lineage and provenance systems
-              - Develops governance frameworks that maintain provenance of sensitive data
+              - Develops governance frameworks that maintain provenance of sensitive
+                data
               - Leads initiatives to improve cross-system data lineage visibility
         data-quality-management:
           id: data-quality-management
           name: Data Quality Management
-          description: 'Ensures the accuracy, completeness, and reliability of data within secure environments.
+          description: 'Ensures the accuracy, completeness, and reliability of data
+            within secure environments.
 
-            Involves understanding quality dimensions, performing validation, designing quality frameworks,
-            developing metrics, implementing automated validation, and establishing enterprise-wide strategies.
+            Involves understanding quality dimensions, performing validation, designing
+            quality frameworks, developing metrics, implementing automated validation,
+            and establishing enterprise-wide strategies.
 
-            Requires leading quality improvement initiatives and developing advanced measurement and remediation
-            approaches.'
+            Requires leading quality improvement initiatives and developing advanced
+            measurement and remediation approaches.'
           levels:
             entry:
               id: data-quality-management-entry
               name: Entry Level
               skills:
-              - Understands data quality dimensions (accuracy, completeness, etc.)
-              - Familiar with basic data validation techniques
+              - Identifies standard data quality dimensions (e.g. accuracy, completeness,
+                consistency)
+              - Applies basic data validation checks and formatting rules
               - Can execute data quality checks following established procedures
             mid:
               id: data-quality-management-mid
@@ -186,36 +196,36 @@ domain:
     data-engineering-processing:
       id: data-engineering-processing
       name: Data Engineering & Processing
-      description: 'Data Engineering & Processing focuses on building and maintaining secure systems that
-        extract, transform, store, and process sensitive data.
+      description: 'Data Engineering & Processing focuses on building and maintaining
+        secure systems that extract, transform, store, and process sensitive data.
 
-        This subdomain covers the development of secure data pipelines, management of database systems,
-        implementation of structured data models and healthcare standards, and processing methodologies
-        that ensure data is securely handled throughout workflows while maintaining appropriate levels
-        of performance and reliability.'
-      tools: []
-      technologies: []
-      standards: []
+        This subdomain covers the development of secure data pipelines, management
+        of database systems, implementation of structured data models and healthcare
+        standards, and processing methodologies that ensure data is securely handled
+        throughout workflows while maintaining appropriate levels of performance and
+        reliability.'
       competencies:
         data-pipeline-development:
           id: data-pipeline-development
           name: Data Pipeline Development
-          description: 'Builds and maintains processes that extract, transform, and load data securely
-            between systems.
+          description: 'Builds and maintains processes that extract, transform, and
+            load data securely between systems.
 
-            Involves developing ETL processes, designing secure pipelines for various data types, implementing
-            error handling, monitoring data flows, and optimising performance.
+            Involves developing ETL processes, designing secure pipelines for various
+            data types, implementing error handling, monitoring data flows, and optimising
+            performance.
 
-            Requires architecting complex systems at enterprise scale and establishing best practices
-            for secure data processing.'
+            Requires architecting complex systems at enterprise scale and establishing
+            best practices for secure data processing.'
           levels:
             entry:
               id: data-pipeline-development-entry
               name: Entry Level
               skills:
-              - Familiar with data pipeline concepts and components
+              - Identifies core data pipeline components (e.g. ETL/ELT, ingestion,
+                staging)
               - Can develop simple ETL processes under supervision
-              - Understands data transformation and loading techniques
+              - Describes data transformation and loading techniques
             mid:
               id: data-pipeline-development-mid
               name: Mid Level
@@ -233,21 +243,23 @@ domain:
         data-storage-database-management:
           id: data-storage-database-management
           name: Data Storage & Database Management
-          description: 'Designs and maintains secure database systems for storing and retrieving sensitive
-            data.
+          description: 'Designs and maintains secure database systems for storing
+            and retrieving sensitive data.
 
-            Involves understanding database types, performing SQL operations, designing secure schemas,
-            implementing access policies, optimising performance, and architecting enterprise storage
-            solutions.
+            Involves understanding database types, performing SQL operations, designing
+            secure schemas, implementing access policies, optimising performance,
+            and architecting enterprise storage solutions.
 
-            Requires developing governance frameworks and leading database modernisation initiatives.'
+            Requires developing governance frameworks and leading database modernisation
+            initiatives.'
           levels:
             entry:
               id: data-storage-database-management-entry
               name: Entry Level
               skills:
-              - Understands various database types (relational, NoSQL, etc.)
-              - Familiar with basic SQL and database operations
+              - Distinguishes between various database paradigms (e.g. relational,
+                document, graph)
+              - Executes basic SQL queries and data manipulation operations
               - Can perform database administration tasks under supervision
             mid:
               id: data-storage-database-management-mid
@@ -266,31 +278,35 @@ domain:
         data-models-standardisation:
           id: data-models-standardisation
           name: Data Models & Standardisation
-          description: 'Enables the secure and effective use of standardised data models such as FHIR
-            and OMOP within secure data environments.
+          description: 'Enables the secure and effective use of standardised data
+            models such as FHIR and OMOP within secure data environments.
 
-            Involves understanding platform and integration requirements, assessing platform capabilities,
-            supporting configuration and adaptation for model adoption, and ensuring compliance with relevant
-            standards.
+            Involves understanding platform and integration requirements, assessing
+            platform capabilities, supporting configuration and adaptation for model
+            adoption, and ensuring compliance with relevant standards.
 
-            Requires developing approaches to enhance interoperability, security, and governance for standardised
-            data models across platforms.'
+            Requires developing approaches to enhance interoperability, security,
+            and governance for standardised data models across platforms.'
           levels:
             entry:
               id: data-models-standardisation-entry
               name: Entry Level
               skills:
-              - Understands the purpose and basic structure of standardised data models (e.g., FHIR, OMOP)
-              - Aware of the need for platform support to enable use of these models
-              - Can identify when a platform supports or does not support a given data model
+              - Describes the purpose and basic structure of standardised data models
+                (e.g. FHIR, OMOP)
+              - Recognises platform and infrastructure dependencies required for standardised
+                models
+              - Can identify when a platform supports or does not support a given
+                data model
             mid:
               id: data-models-standardisation-mid
               name: Mid Level
               skills:
               - Assesses platform capabilities for supporting standardised data models
-              - Identifies integration requirements and dependencies for enabling models like FHIR and
-                OMOP
-              - Supports configuration or adaptation of platforms to facilitate use of these models
+              - Identifies integration requirements and dependencies for enabling
+                models like FHIR and OMOP
+              - Supports configuration or adaptation of platforms to facilitate use
+                of these models
             senior:
               id: data-models-standardisation-senior
               name: Senior Level
@@ -301,21 +317,23 @@ domain:
         event-driven-data-processing:
           id: event-driven-data-processing
           name: Event-Driven Data Processing
-          description: 'Implements systems that process data in real-time based on events and triggers.
+          description: 'Implements systems that process data in real-time based on
+            events and triggers.
 
-            Involves understanding event-driven architecture, working with streaming platforms like Kafka,
-            implementing event producers and consumers, designing specialised pipelines, and ensuring
-            data quality.
+            Involves understanding event-driven architecture, working with streaming
+            platforms like Kafka, implementing event producers and consumers, designing
+            specialised pipelines, and ensuring data quality.
 
-            Requires architecting enterprise-scale, high-throughput, reliable event-driven processing
-            systems.'
+            Requires architecting enterprise-scale, high-throughput, reliable event-driven
+            processing systems.'
           levels:
             entry:
               id: event-driven-data-processing-entry
               name: Entry Level
               skills:
-              - Understands event-driven architecture concepts for data processing
-              - Familiar with event streaming platforms (Kafka, etc.)
+              - Explains event-driven architecture concepts for data processing
+              - Identifies event streaming platforms (e.g. Apache Kafka) and their
+                use cases
               - Can implement simple event producers and consumers
             mid:
               id: event-driven-data-processing-mid
@@ -334,130 +352,147 @@ domain:
         encryption-standards-implementation:
           id: encryption-standards-implementation
           name: Encryption Standards & Implementation
-          description: 'Implements cryptographic solutions to protect sensitive data throughout its lifecycle
-            in secure environments.
+          description: 'Implements cryptographic solutions to protect sensitive data
+            throughout its lifecycle in secure environments.
 
-            Involves understanding encryption methods, configuring cryptographic systems, managing encryption
-            keys, and ensuring compliance with security standards.
+            Involves understanding encryption methods, configuring cryptographic systems,
+            managing encryption keys, and ensuring compliance with security standards.
 
-            Requires designing enterprise encryption frameworks, implementing advanced cryptographic techniques,
-            and establishing organisational policies that maintain data confidentiality and integrity.'
+            Requires designing enterprise encryption frameworks, implementing advanced
+            cryptographic techniques, and establishing organisational policies that
+            maintain data confidentiality and integrity.'
           levels:
             entry:
               id: encryption-standards-implementation-entry
               name: Entry Level
               skills:
-              - Familiar with symmetric and asymmetric encryption methods (AES, RSA, etc.)
+              - Differentiates between symmetric and asymmetric encryption algorithms
+                (e.g. AES, RSA)
               - Can follow predefined encryption standards and best practices
-              - Understands how encryption protects data at rest and in transit
+              - Explains how cryptographic controls protect data at rest and in transit
             mid:
               id: encryption-standards-implementation-mid
               name: Mid Level
               skills:
-              - Configures and deploys encryption technologies in storage and communication systems
+              - Configures and deploys encryption technologies in storage and communication
+                systems
               - Implements secure key generation, storage, and rotation practices
-              - Ensures encryption implementations align with regulatory standards (GDPR, HIPAA, FIPS)
+              - Ensures encryption implementations align with regulatory standards
+                (GDPR, HIPAA, FIPS)
             senior:
               id: encryption-standards-implementation-senior
               name: Senior Level
               skills:
               - Designs enterprise encryption frameworks and security architectures
-              - Implements advanced cryptographic techniques (post-quantum cryptography, zero-knowledge
-                proofs, homomorphic encryption)
-              - Establishes encryption policies and oversees compliance across the organisation
+              - Implements advanced cryptographic techniques (post-quantum cryptography,
+                zero-knowledge proofs, homomorphic encryption)
+              - Establishes encryption policies and oversees compliance across the
+                organisation
         data-backups:
           id: data-backups
           name: Data Backups
-          description: 'Ensures data availability and recoverability through systematic backup and restoration
-            processes.
+          description: 'Ensures data availability and recoverability through systematic
+            backup and restoration processes.
 
-            Involves understanding backup plans, implementing automated backup systems, managing retention
-            policies, and designing recovery procedures.
+            Involves understanding backup plans, implementing automated backup systems,
+            managing retention policies, and designing recovery procedures.
 
-            Requires architecting resilient backup infrastructures, establishing security protocols, and
-            developing enterprise-wide policies that minimise data loss and downtime while maintaining
-            compliance with regulatory requirements.'
+            Requires architecting resilient backup infrastructures, establishing security
+            protocols, and developing enterprise-wide policies that minimise data
+            loss and downtime while maintaining compliance with regulatory requirements.'
           levels:
             entry:
               id: data-backups-entry
               name: Entry Level
               skills:
-              - Familiar with different backup types (full, incremental, differential) and their use cases
+              - Differentiates between backup strategies (full, incremental, differential)
+                and use cases
               - Can adhere to predefined backup schedules and retention policies
-              - Understands how to restore data from backups in case of accidental deletion or corruption
+              - Executes standard data restoration procedures from backups during
+                recovery scenarios
             mid:
               id: data-backups-mid
               name: Mid Level
               skills:
-              - Configures and optimises backup plans for different environments (on-premises, cloud,
-                hybrid)
-              - Implements scripts and tools to streamline backup operations and reduce manual intervention
-              - Ensures backups meet regulatory requirements and conducts regular integrity checks
+              - Configures and optimises backup plans for different environments (on-premises,
+                cloud, hybrid)
+              - Implements scripts and tools to streamline backup operations and reduce
+                manual intervention
+              - Ensures backups meet regulatory requirements and conducts regular
+                integrity checks
             senior:
               id: data-backups-senior
               name: Senior Level
               skills:
               - Designs scalable, resilient backup architectures for large-scale systems
-              - Leads the development of recovery plans to minimise downtime and data loss
-              - Establishes policies for backup security, encryption, and compliance with industry standards
+              - Leads the development of recovery plans to minimise downtime and data
+                loss
+              - Establishes policies for backup security, encryption, and compliance
+                with industry standards
         data-retention-disposal:
           id: data-retention-disposal
           name: Data Retention & Disposal
-          description: 'Manages the secure lifecycle of data from creation to disposal, ensuring compliance
-            with regulatory requirements and organisational policies.
+          description: 'Manages the secure lifecycle of data from creation to disposal,
+            ensuring compliance with regulatory requirements and organisational policies.
 
-            Involves understanding storage types and data lifecycles, implementing retention strategies,
-            designing secure disposal processes, and establishing governance frameworks.
+            Involves understanding storage types and data lifecycles, implementing
+            retention strategies, designing secure disposal processes, and establishing
+            governance frameworks.
 
-            Requires developing enterprise-wide policies that balance performance, cost, and compliance
-            while maintaining data accessibility and security throughout the retention period.'
+            Requires developing enterprise-wide policies that balance performance,
+            cost, and compliance while maintaining data accessibility and security
+            throughout the retention period.'
           levels:
             entry:
               id: data-retention-disposal-entry
               name: Entry Level
               skills:
-              - Familiar with different storage types (databases, cloud storage, file systems) and data
-                retention concepts
-              - Can follow predefined data lifecycle rules and retention guidelines
-              - Assists in tracking data usage and retention timelines for audit and compliance checks
+              - Differentiates between storage tiers (databases, cloud storage, file
+                systems) and explains data retention concepts
+              - Can perform basic data archiving tasks
+              - Assists in tracking data usage and retention timelines for audit and
+                compliance checks
             mid:
               id: data-retention-disposal-mid
               name: Mid Level
               skills:
-              - Implements data lifecycle approaches that balance retention requirements with storage
-                efficiency
-              - Applies data access policies, encryption, and secure storage practices to protect retained
-                data from unauthorised access
-              - Conducts data usage audits and ensures adherence to regulatory standards (GDPR, HIPAA)
+              - Implements data lifecycle approaches that balance retention requirements
+                with storage efficiency
+              - Applies data access policies, encryption, and secure storage practices
+                to protect retained data from unauthorised access
+              - Conducts data usage audits and ensures adherence to regulatory standards
+                (GDPR, HIPAA)
             senior:
               id: data-retention-disposal-senior
               name: Senior Level
               skills:
-              - Defines and implements enterprise data retention policies including archival and secure
-                disposal strategies to comply with regulatory requirements
-              - Architects scalable storage solutions balancing performance, cost, and compliance requirements
-                ensuring long-term data accessibility without unnecessary overhead
-              - Has deep understanding of legal and regulatory frameworks (such as GDPR, HIPAA, or industry-specific
-                standards) to ensure data retention practices align with security, privacy, and governance
-                requirements.
+              - Defines and implements enterprise data retention policies including
+                archival and secure disposal strategies to comply with regulatory
+                requirements
+              - Architects scalable storage solutions balancing performance, cost,
+                and compliance requirements ensuring long-term data accessibility
+                without unnecessary overhead
+              - Has deep understanding of legal and regulatory frameworks (such as
+                GDPR, HIPAA, or industry-specific standards) to ensure data retention
+                practices align with security, privacy, and governance requirements
         data-migration:
           id: data-migration
           name: Data Migration
-          description: 'Ensures the secure, reliable, and efficient transfer of data between systems,
-            storage solutions, or environments.
+          description: 'Ensures the secure, reliable, and efficient transfer of data
+            between systems, storage solutions, or environments.
 
-            Involves planning and executing migrations to minimise downtime and data loss, validating
-            data integrity before and after migration, and ensuring compliance with security and regulatory
-            requirements.
+            Involves planning and executing migrations to minimise downtime and data
+            loss, validating data integrity before and after migration, and ensuring
+            compliance with security and regulatory requirements.
 
-            Requires implementing automated migration workflows, monitoring migration processes, and remediating
-            issues as they arise.'
+            Requires implementing automated migration workflows, monitoring migration
+            processes, and remediating issues as they arise.'
           levels:
             entry:
               id: data-migration-entry
               name: Entry Level
               skills:
-              - Understands the basic concepts and risks associated with data migration
+              - Identifies fundamental concepts and risks associated with data migration
               - Can assist with manual data migration tasks under supervision
               - Follows established procedures for data validation post-migration
             mid:
@@ -474,5 +509,7 @@ domain:
               skills:
               - Designs enterprise-wide data migration approaches and policies
               - Leads complex or large-scale migration projects with minimal downtime
-              - Ensures compliance with security and regulatory requirements during migration
-              - Develops and oversees remediation plans for migration failures or data discrepancies
+              - Ensures compliance with security and regulatory requirements during
+                migration
+              - Develops and oversees remediation plans for migration failures or
+                data discrepancies

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Build script that merges tools/technologies/standards into main domain YAML files
+Build script that merges supplemental yamls (tools, qualifications, etc.) into main domain YAML files
 and dynamically compiles skills_index.yaml.
 
-Takes the separate tools-tech-standards YAML files and inlines them into the
-appropriate subdomain objects in the main domain YAML files, then outputs to
+Takes the separate supplemental YAML files and inlines them into the
+appropriate objects in the main domain YAML files, then outputs to
 astro-app/public/data/. It also compiles all skills into a unified skills_index.yaml
 serving the index page.
 
@@ -14,6 +14,7 @@ Usage:
 
 import os
 import yaml
+import copy
 from pathlib import Path
 
 
@@ -37,141 +38,150 @@ def save_yaml(filepath, data):
         )
 
 
-def merge_yaml_data(domain_yaml, merge_yaml):
-    """Merge tools/technologies/standards items into domain_yaml at subdomain level."""
-    merged = domain_yaml.copy()
-
-    # Access the domain object
-    if 'domain' in merged and 'subdomains' in merged['domain']:
-        domain_subdomains = merged['domain']['subdomains']
-
-        # Access merge_yaml structure
-        if 'subdomains' in merge_yaml:
-            merge_subdomains = merge_yaml['subdomains']
-
-            # For each subdomain in the main domain YAML
-            for subdomain_id, subdomain_data in domain_subdomains.items():
-                # Find matching subdomain in merge_yaml
-                if subdomain_id in merge_subdomains:
-                    merge_sub = merge_subdomains[subdomain_id]
-                    if 'items' in merge_sub:
-                        subdomain_data['items'] = merge_sub['items']
-
+def deep_merge(dict1, dict2):
+    """Recursively deep merge dict2 into dict1."""
+    if not isinstance(dict1, dict) or not isinstance(dict2, dict):
+        return dict2
+    
+    merged = copy.deepcopy(dict1)
+    for k, v in dict2.items():
+        if k in merged and isinstance(merged[k], dict) and isinstance(v, dict):
+            merged[k] = deep_merge(merged[k], v)
+        else:
+            merged[k] = copy.deepcopy(v)
     return merged
 
-
-def generate_skills_index(domain_data_list):
-    """Compile a unified skills_index.yaml containing all skills across all domains."""
-    skills_map = {}
-    total_subdomains = 0
-    total_competencies = 0
-    total_skills = 0
-
-    # Sort domain files to have a deterministic order of generation (e.g. by index or filename)
-    sorted_domains = sorted(
-        domain_data_list,
-        key=lambda d: d.get('domain', {}).get('index', 0)
-    )
-
-    for domain_data in sorted_domains:
-        domain = domain_data.get('domain', {})
-        domain_id = domain.get('id', '')
-        subdomains = domain.get('subdomains', {})
-        total_subdomains += len(subdomains)
-
-        for subdomain_id, subdomain_data in subdomains.items():
-            competencies = subdomain_data.get('competencies', {})
-            total_competencies += len(competencies)
-
-            for competency_id, competency_data in competencies.items():
-                levels = competency_data.get('levels', {})
-                for level_id, level_data in levels.items():
-                    level_name = level_data.get('name', '')
-                    skills = level_data.get('skills', [])
-                    for idx, skill_text in enumerate(skills):
-                        skill_id = f"{competency_id}-{level_id}-{idx+1:03d}"
-                        skills_map[skill_id] = {
-                            'id': skill_id,
-                            'text': skill_text,
-                            'competency_id': competency_id,
-                            'level': level_id,
-                            'level_name': level_name,
-                            'domain_id': domain_id,
-                            'subdomain_id': subdomain_id
-                        }
-                        total_skills += 1
-
-    return {
-        'metadata': {
-            'version': '1.0',
-            'generated_from': 'domain yaml files',
-            'total_domains': len(domain_data_list),
-            'total_subdomains': total_subdomains,
-            'total_competencies': total_competencies,
-            'total_skills': total_skills
-        },
-        'skills': skills_map
-    }
 
 
 def main():
     """Main build process."""
     local_yaml_dir = Path('yaml')
     output_dir = Path('astro-app/public/data')
+    src_data_dir = Path('astro-app/src/data')
 
-    # Domain mappings: main YAML filename -> tools-tech-standards YAML filename
-    domain_files = [
-        ('safe_access_identity.yaml', 'safe-access-identity_tools-tech-standards.yaml'),
-        ('safe_data_management.yaml', 'safe-data-management_tools-tech-standards.yaml'),
-        ('safe_governance_compliance.yaml', 'safe-governance-compliance_tools-tech-standards.yaml'),
-        ('safe_outputs_disclosure_control.yaml', 'safe-outputs-disclosure-control_tools-tech-standards.yaml'),
-        ('safe_projects_operations.yaml', 'safe-projects-operations_tools-tech-standards.yaml'),
-        ('safe_technology_engineering.yaml', 'safe-technology-engineering_tools-tech-standards.yaml'),
+    main_domain_files = [
+        'safe_access_identity.yaml',
+        'safe_data_management.yaml',
+        'safe_governance_compliance.yaml',
+        'safe_outputs_disclosure_control.yaml',
+        'safe_projects_operations.yaml',
+        'safe_technology_engineering.yaml',
     ]
 
     print(f"Loading YAML files from {local_yaml_dir}...")
-    compiled_domains = []
+    
+    all_domains = {}
 
-    for domain_file, tech_file in domain_files:
+    for domain_file in main_domain_files:
         domain_path = local_yaml_dir / domain_file
-        tech_path = local_yaml_dir / tech_file
 
         if not domain_path.exists():
             print(f"[SKIP] {domain_file}: file not found")
             continue
 
         print(f"\nProcessing {domain_file}...")
-        domain_data = load_yaml(domain_path)
-        merged_data = domain_data
+        merged_data = load_yaml(domain_path)
 
-        # Merge tools/tech/standards if available
-        if tech_path.exists():
-            tech_data = load_yaml(tech_path)
-            merged_data = merge_yaml_data(merged_data, tech_data)
-            print(f"  [OK] Merged tools/technologies/standards")
-        else:
-            print(f"  [SKIP] {tech_file} not found")
+        # Merge all supplemental files matching this domain (.yaml and .yml)
+        prefix = domain_file.replace('.yaml', '').replace('_', '-') + '_'
+        supp_files = list(local_yaml_dir.glob(f"{prefix}*.yaml")) + list(local_yaml_dir.glob(f"{prefix}*.yml"))
+        
+        for supp_path in supp_files:
+            print(f"  [MERGE] Found supplemental file: {supp_path.name}")
+            tech_data = load_yaml(supp_path)
+            
+            if 'subdomains' in tech_data and 'domain' in merged_data and 'subdomains' in merged_data['domain']:
+                if 'domain' not in tech_data or 'subdomains' not in tech_data.get('domain', {}):
+                    tech_data.setdefault('domain', {})
+                    tech_data['domain']['subdomains'] = tech_data.pop('subdomains')
+                    
+            merged_data = deep_merge(merged_data, tech_data)
 
-        # Add to collection for skills_index.yaml compiling
-        compiled_domains.append(merged_data)
+
 
         # Save domain to output directory
         output_path = output_dir / domain_file
         save_yaml(output_path, merged_data)
-        print(f"  [OK] Saved domain to {output_path}")
+        print(f"  [OK] Saved merged domain to {output_path}")
+        
+        if 'domain' in merged_data:
+            all_domains[merged_data['domain']['id']] = merged_data['domain']
 
-    # Compile and save skills_index.yaml
-    if compiled_domains:
-        print("\nCompiling skills_index.yaml...")
-        skills_index_data = generate_skills_index(compiled_domains)
-        skills_index_path = output_dir / 'skills_index.yaml'
-        save_yaml(skills_index_path, skills_index_data)
-        print(f"  [OK] Saved skills index to {skills_index_path}")
-        print(f"  [INFO] Compiled {skills_index_data['metadata']['total_skills']} skills across "
-              f"{skills_index_data['metadata']['total_domains']} domains.")
 
+    print("\nProcessing SATRE Mappings...")
+    satre_path = local_yaml_dir / 'satre_mapping.yaml'
+    if satre_path.exists():
+        satre_data = load_yaml(satre_path)
+        warnings_count = 0
+        
+        for pillar in satre_data.get('pillars', []):
+            for comp in pillar.get('components', []):
+                if 'mappings' not in comp or not comp['mappings']:
+                    continue
+                # mappings is {domain_id: {subdomain_id: [competency_ids]}}
+                for d_id, s_map in list(comp['mappings'].items()):
+                    if d_id not in all_domains:
+                        print(f"  [WARNING] SATRE {comp['id']}: Domain '{d_id}' not found in framework.")
+                        warnings_count += 1
+                        continue
+                    
+                    for s_id, competencies in list(s_map.items()):
+                        if s_id not in all_domains[d_id].get('subdomains', {}):
+                            print(f"  [WARNING] SATRE {comp['id']}: Subdomain '{s_id}' not found in domain '{d_id}'.")
+                            warnings_count += 1
+                            continue
+                        
+                        valid_comps = all_domains[d_id]['subdomains'][s_id].get('competencies', {})
+                        for c_id in competencies:
+                            if c_id not in valid_comps:
+                                print(f"  [WARNING] SATRE {comp['id']}: Competency '{c_id}' not found in subdomain '{s_id}'.")
+                                warnings_count += 1
+        
+        import json
+        
+        # Hardcode domain metadata for frontend since it's UI specific
+        domain_metadata = {
+            'ste': {'color': 'var(--color-nhs-blue)', 'span': 4},
+            'sdm': {'color': 'var(--color-purple)', 'span': 4},
+            'sai': {'color': 'var(--color-deep-blue)', 'span': 3},
+            'sod': {'color': 'var(--color-deep-blue)', 'span': 3},
+            'spo': {'color': 'var(--color-purple)', 'span': 3},
+            'sgc': {'color': 'var(--color-nhs-blue)', 'span': 4},
+        }
+        
+        out_domains = []
+        out_subdomains = []
+        
+        for d_id, d_data in all_domains.items():
+            meta = domain_metadata.get(d_id, {'color': 'var(--color-text)', 'span': 3})
+            out_domains.append({
+                'id': d_id,
+                'name': d_data.get('name', d_id),
+                'color': meta['color'],
+                'span': meta['span']
+            })
+            
+            for s_id, s_data in d_data.get('subdomains', {}).items():
+                out_subdomains.append({
+                    'id': s_id,
+                    'domain': d_data.get('name', d_id),
+                    'domainId': d_id,
+                    'name': s_data.get('name', s_id),
+                    'color': meta['color']
+                })
+        
+        satre_data['domains'] = out_domains
+        satre_data['subdomains'] = out_subdomains
+
+        src_data_dir.mkdir(parents=True, exist_ok=True)
+        json_path = src_data_dir / 'satre_mapping.json'
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(satre_data, f, indent=2)
+        print(f"  [OK] Saved SATRE mapping to {json_path}")
+        if warnings_count > 0:
+            print(f"  [WARN] Found {warnings_count} broken/missing mappings in satre_mapping.yaml")
+    
     print("\n[OK] Build complete! Data files ready in astro-app/public/data/")
-
 
 if __name__ == '__main__':
     main()
