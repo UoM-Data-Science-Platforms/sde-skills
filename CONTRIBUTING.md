@@ -43,6 +43,24 @@ The site will be available at `http://localhost:4321/sde-skills`.
 
 Ensure the documentation builds locally before submitting a pull request.
 
+Before previewing competency data changes, validate and regenerate the data from
+the repository root:
+
+```bash
+python -m pip install -r scripts/requirements-validation.txt
+python scripts/validate_yml.py
+python -m unittest discover -s scripts -p 'test_validate_yml.py'
+python scripts/build_data.py
+python scripts/build_skill_references.py
+```
+
+The validator checks YAML syntax (including duplicate keys), the current schema,
+unique IDs, complete competency levels, supporting references and SATRE reference
+integrity. It does not validate SATRE alignment or organisational compliance.
+Qualification lists may be empty: no particular certificate is required as a proxy
+for competence. New AI entries have all three supporting levels; products and
+qualifications are illustrative, with source URLs and review dates in their text.
+
 ## Submitting a Pull Request
 
 1. Fork the repository and create a new branch for your changes.

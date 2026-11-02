@@ -11,7 +11,7 @@ domain:
               qualifications:
                 - issuer: "ONS / UKSA"
                   description: "Safe Researcher Training (SRT) (Course)"
-                  career_impact: "Fundamental requirement for understanding statistical disclosure control principles."
+                  career_impact: "Illustrative learning opportunity for output governance; course attendance does not establish reviewer competence."
             mid:
               qualifications:
                 - issuer: "ONS"
@@ -57,6 +57,19 @@ domain:
                 - issuer: "GitLab"
                   description: "GitLab Certified Associate (Exam)"
                   career_impact: "Managing researcher code exports and version control safely."
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+
+    ai-output-release:
+      name: AI Output Review and Release
+      competencies:
+        ai-artefact-release-controls:
+          name: AI Artefact and Generated-output Release Controls
+          levels:
+            entry:
+              qualifications: []
             mid:
               qualifications: []
             senior:
