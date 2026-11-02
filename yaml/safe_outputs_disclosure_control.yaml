@@ -35,6 +35,13 @@ domain:
               name: Mid Level
               skills:
               - Implements output tracking and audit logs to support governance processes
+            senior:
+              id: output-review-processes-senior
+              name: Senior Level
+              skills:
+              - Designs review workflow systems that preserve separation of duties, escalation routes and auditable approval by qualified disclosure reviewers
+              - Evaluates review tooling against agreed requirements for traceability, reliability and consistent application of authorised disclosure policies
+              - Leads improvements to reviewer decision support using incident findings and reviewer feedback, leaving release decisions with authorised reviewers
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
       name: Tools and Platforms to Support Output Checking
