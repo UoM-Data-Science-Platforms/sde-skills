@@ -2099,6 +2099,17 @@ domain:
               skills:
               - Identifies accelerator memory, driver and runtime requirements for an approved workload
               - Runs a scheduled accelerator job using documented quotas and checks utilisation and failure logs
+              qualifications: []
+              core_concepts:
+              - topic: GPU memory and runtime compatibility
+                concepts:
+                - GPU memory and runtime compatibility
+                - Documented procedures and role boundaries
+                search_terms:
+                - GPU and Accelerator Infrastructure
+                - GPU memory and runtime compatibility
+                why: 'Supports gpu and accelerator infrastructure through practical exercises using approved or synthetic
+                  data. Reference: Kubernetes GPU scheduling (https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/).'
             mid:
               id: ai-accelerator-infrastructure-mid
               name: Mid Level
@@ -2106,6 +2117,22 @@ domain:
               - Configures compatible drivers, runtimes and scheduler resource requests with reproducible environment records
               - Tests tenant isolation and monitors accelerator utilisation, memory pressure and cost against agreed capacity
                 limits
+              qualifications:
+              - issuer: Linux Foundation / CNCF
+                description: 'Certified Kubernetes Administrator (CKA), optional foundation where Kubernetes is used. Source:
+                  https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/ (reviewed 2026-11-02).'
+                career_impact: May support cluster administration learning; does not establish AI workload competence or replace
+                  practical evidence.
+              core_concepts:
+              - topic: Scheduler quotas and tenant isolation
+                concepts:
+                - Scheduler quotas and tenant isolation
+                - Evidence capture and escalation
+                search_terms:
+                - GPU and Accelerator Infrastructure
+                - Scheduler quotas and tenant isolation
+                why: 'Supports gpu and accelerator infrastructure through practical exercises using approved or synthetic
+                  data. Reference: Kubernetes GPU scheduling (https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/).'
             senior:
               id: ai-accelerator-infrastructure-senior
               name: Senior Level
@@ -2113,6 +2140,17 @@ domain:
               - Designs accelerator capacity and resilience plans using measured workload demand and budget constraints
               - Evaluates shared, dedicated or distributed accelerator configurations for relevant workloads and records isolation
                 and performance trade-offs
+              qualifications: []
+              core_concepts:
+              - topic: Capacity planning and resilience
+                concepts:
+                - Capacity planning and resilience
+                - Assurance, ownership and limitations
+                search_terms:
+                - GPU and Accelerator Infrastructure
+                - Capacity planning and resilience
+                why: 'Supports gpu and accelerator infrastructure through practical exercises using approved or synthetic
+                  data. Reference: Kubernetes GPU scheduling (https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/).'
         ai-training-platforms:
           id: ai-training-platforms
           name: Training and Fine-tuning Platforms
@@ -2126,6 +2164,17 @@ domain:
               - Launches an approved training or fine-tuning job from a versioned configuration
               - Records input dataset references, environment versions, checkpoints and job outcomes without copying restricted
                 data into logs
+              qualifications: []
+              core_concepts:
+              - topic: Training run configuration and checkpoints
+                concepts:
+                - Training run configuration and checkpoints
+                - Documented procedures and role boundaries
+                search_terms:
+                - Training and Fine-tuning Platforms
+                - Training run configuration and checkpoints
+                why: 'Supports training and fine-tuning platforms through practical exercises using approved or synthetic
+                  data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             mid:
               id: ai-training-platforms-mid
               name: Mid Level
@@ -2133,6 +2182,17 @@ domain:
               - Automates training jobs with access-controlled data mounts, resource limits and recoverable checkpoints
               - Diagnoses scheduling, storage and runtime failures with researchers and verifies recovery from interrupted
                 jobs
+              qualifications: []
+              core_concepts:
+              - topic: Reproducible jobs and recovery
+                concepts:
+                - Reproducible jobs and recovery
+                - Evidence capture and escalation
+                search_terms:
+                - Training and Fine-tuning Platforms
+                - Reproducible jobs and recovery
+                why: 'Supports training and fine-tuning platforms through practical exercises using approved or synthetic
+                  data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             senior:
               id: ai-training-platforms-senior
               name: Senior Level
@@ -2140,6 +2200,17 @@ domain:
               - Designs reproducible training services with provenance, recovery objectives and cost controls
               - Evaluates distributed training or parameter-efficient fine-tuning infrastructure where workload needs justify
                 it, leaving methodological choices to researchers
+              qualifications: []
+              core_concepts:
+              - topic: Distributed workload platform trade-offs
+                concepts:
+                - Distributed workload platform trade-offs
+                - Assurance, ownership and limitations
+                search_terms:
+                - Training and Fine-tuning Platforms
+                - Distributed workload platform trade-offs
+                why: 'Supports training and fine-tuning platforms through practical exercises using approved or synthetic
+                  data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
         ai-inference-serving:
           id: ai-inference-serving
           name: Inference Deployment and Serving
@@ -2152,12 +2223,34 @@ domain:
               skills:
               - Deploys an approved model version using an existing serving template
               - Checks endpoint health, authentication and request limits using non-sensitive test inputs
+              qualifications: []
+              core_concepts:
+              - topic: Endpoint health and authentication
+                concepts:
+                - Endpoint health and authentication
+                - Documented procedures and role boundaries
+                search_terms:
+                - Inference Deployment and Serving
+                - Endpoint health and authentication
+                why: 'Supports inference deployment and serving through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
             mid:
               id: ai-inference-serving-mid
               name: Mid Level
               skills:
               - Implements staged endpoint rollouts and rollback with pinned model, runtime and configuration versions
               - Load-tests latency, throughput and failure behaviour and configures batching or scaling where appropriate
+              qualifications: []
+              core_concepts:
+              - topic: Load testing and staged rollout
+                concepts:
+                - Load testing and staged rollout
+                - Evidence capture and escalation
+                search_terms:
+                - Inference Deployment and Serving
+                - Load testing and staged rollout
+                why: 'Supports inference deployment and serving through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
             senior:
               id: ai-inference-serving-senior
               name: Senior Level
@@ -2166,6 +2259,17 @@ domain:
                 load
               - Evaluates quantisation, caching or model parallelism only where suitable, obtaining specialist approval for
                 changes affecting output quality
+              qualifications: []
+              core_concepts:
+              - topic: Serving capacity and failover
+                concepts:
+                - Serving capacity and failover
+                - Assurance, ownership and limitations
+                search_terms:
+                - Inference Deployment and Serving
+                - Serving capacity and failover
+                why: 'Supports inference deployment and serving through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
         ai-cloud-model-integration:
           id: ai-cloud-model-integration
           name: Cloud-hosted Model Integration
@@ -2177,6 +2281,17 @@ domain:
               skills:
               - Identifies approved endpoints and the permitted categories of data for requests
               - Uses managed credentials and checks that prompts and responses are not exposed in routine logs
+              qualifications: []
+              core_concepts:
+              - topic: Approved endpoints and secret handling
+                concepts:
+                - Approved endpoints and secret handling
+                - Documented procedures and role boundaries
+                search_terms:
+                - Cloud-hosted Model Integration
+                - Approved endpoints and secret handling
+                why: 'Supports cloud-hosted model integration through practical exercises using approved or synthetic data.
+                  Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
             mid:
               id: ai-cloud-model-integration-mid
               name: Mid Level
@@ -2184,6 +2299,17 @@ domain:
               - Implements endpoint allow-lists, secret rotation, timeouts and rate limits for approved cloud model services
               - Tests configured retention, network routes and failure handling against approved requirements and escalates
                 supplier changes
+              qualifications: []
+              core_concepts:
+              - topic: Request restrictions and supplier change
+                concepts:
+                - Request restrictions and supplier change
+                - Evidence capture and escalation
+                search_terms:
+                - Cloud-hosted Model Integration
+                - Request restrictions and supplier change
+                why: 'Supports cloud-hosted model integration through practical exercises using approved or synthetic data.
+                  Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
             senior:
               id: ai-cloud-model-integration-senior
               name: Senior Level
@@ -2191,6 +2317,17 @@ domain:
               - Designs integration and exit plans for service outages, version withdrawal and supplier changes
               - Produces technical evidence for governance review of residency, retention and access controls without approving
                 supplier or legal suitability
+              qualifications: []
+              core_concepts:
+              - topic: Service exit plans and technical assurance
+                concepts:
+                - Service exit plans and technical assurance
+                - Assurance, ownership and limitations
+                search_terms:
+                - Cloud-hosted Model Integration
+                - Service exit plans and technical assurance
+                why: 'Supports cloud-hosted model integration through practical exercises using approved or synthetic data.
+                  Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
         ai-self-hosted-models:
           id: ai-self-hosted-models
           name: Local and Self-hosted Models
@@ -2202,6 +2339,17 @@ domain:
               skills:
               - Verifies model origin, approved licence record and checksums before using an authorised import process
               - Runs a local model using documented runtime and memory requirements
+              qualifications: []
+              core_concepts:
+              - topic: Model provenance and runtime requirements
+                concepts:
+                - Model provenance and runtime requirements
+                - Documented procedures and role boundaries
+                search_terms:
+                - Local and Self-hosted Models
+                - Model provenance and runtime requirements
+                why: 'Supports local and self-hosted models through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
             mid:
               id: ai-self-hosted-models-mid
               name: Mid Level
@@ -2209,6 +2357,17 @@ domain:
               - Packages model weights, tokenisers and dependencies for reproducible offline deployment
               - Tests restricted network access, storage permissions and dependency scanning before promoting a self-hosted
                 model
+              qualifications: []
+              core_concepts:
+              - topic: Offline packaging and access controls
+                concepts:
+                - Offline packaging and access controls
+                - Evidence capture and escalation
+                search_terms:
+                - Local and Self-hosted Models
+                - Offline packaging and access controls
+                why: 'Supports local and self-hosted models through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
             senior:
               id: ai-self-hosted-models-senior
               name: Senior Level
@@ -2216,6 +2375,17 @@ domain:
               - Designs maintainable offline model services with patching, resource isolation and controlled updates
               - Evaluates local hosting costs and operational limits against approved cloud alternatives and documents service
                 continuity plans
+              qualifications: []
+              core_concepts:
+              - topic: Patching and sustainable local operation
+                concepts:
+                - Patching and sustainable local operation
+                - Assurance, ownership and limitations
+                search_terms:
+                - Local and Self-hosted Models
+                - Patching and sustainable local operation
+                why: 'Supports local and self-hosted models through practical exercises using approved or synthetic data.
+                  Reference: vLLM documentation (https://docs.vllm.ai/en/latest/).'
         ai-model-lifecycle:
           id: ai-model-lifecycle
           name: Model Lifecycle and Traceability
@@ -2228,6 +2398,17 @@ domain:
               skills:
               - Records immutable identifiers for model weights, code, dependencies and configuration
               - Retrieves the approved model version and its deployment history from the artefact registry
+              qualifications: []
+              core_concepts:
+              - topic: Model versions and artefact records
+                concepts:
+                - Model versions and artefact records
+                - Documented procedures and role boundaries
+                search_terms:
+                - Model Lifecycle and Traceability
+                - Model versions and artefact records
+                why: 'Supports model lifecycle and traceability through practical exercises using approved or synthetic data.
+                  Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             mid:
               id: ai-model-lifecycle-mid
               name: Mid Level
@@ -2235,6 +2416,17 @@ domain:
               - Links model builds to data provenance references, training runs and evaluation records in an access-controlled
                 registry
               - Implements promotion and rollback workflows that preserve evidence and prevent unapproved artefact substitution
+              qualifications: []
+              core_concepts:
+              - topic: Promotion evidence and rollback
+                concepts:
+                - Promotion evidence and rollback
+                - Evidence capture and escalation
+                search_terms:
+                - Model Lifecycle and Traceability
+                - Promotion evidence and rollback
+                why: 'Supports model lifecycle and traceability through practical exercises using approved or synthetic data.
+                  Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             senior:
               id: ai-model-lifecycle-senior
               name: Senior Level
@@ -2242,6 +2434,17 @@ domain:
               - Designs end-to-end traceability and recovery across model registries, pipelines and deployments
               - Tests rollback and retirement controls, including dependent endpoints and cached artefacts, against authorised
                 retention decisions
+              qualifications: []
+              core_concepts:
+              - topic: Cross-service lineage and retirement
+                concepts:
+                - Cross-service lineage and retirement
+                - Assurance, ownership and limitations
+                search_terms:
+                - Model Lifecycle and Traceability
+                - Cross-service lineage and retirement
+                why: 'Supports model lifecycle and traceability through practical exercises using approved or synthetic data.
+                  Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
         ai-evaluation-reliability:
           id: ai-evaluation-reliability
           name: Evaluation Infrastructure, Monitoring and Reliability
@@ -2254,6 +2457,17 @@ domain:
               skills:
               - Runs an approved evaluation suite against a pinned model and records configuration and results
               - Identifies latency, error-rate and resource alerts and follows the escalation runbook
+              qualifications: []
+              core_concepts:
+              - topic: Repeatable evaluation configuration
+                concepts:
+                - Repeatable evaluation configuration
+                - Documented procedures and role boundaries
+                search_terms:
+                - Evaluation Infrastructure, Monitoring and Reliability
+                - Repeatable evaluation configuration
+                why: 'Supports evaluation infrastructure, monitoring and reliability through practical exercises using approved
+                  or synthetic data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             mid:
               id: ai-evaluation-reliability-mid
               name: Mid Level
@@ -2261,6 +2475,17 @@ domain:
               - Automates repeatable evaluations with versioned test sets and restricted access to potentially sensitive results
               - Configures monitoring and alerts for operational failures and agreed quality indicators, routing scientific
                 concerns to specialists
+              qualifications: []
+              core_concepts:
+              - topic: Operational monitoring and release gates
+                concepts:
+                - Operational monitoring and release gates
+                - Evidence capture and escalation
+                search_terms:
+                - Evaluation Infrastructure, Monitoring and Reliability
+                - Operational monitoring and release gates
+                why: 'Supports evaluation infrastructure, monitoring and reliability through practical exercises using approved
+                  or synthetic data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
             senior:
               id: ai-evaluation-reliability-senior
               name: Senior Level
@@ -2268,6 +2493,17 @@ domain:
               - Designs evaluation infrastructure that supports reproducible comparisons and controlled release gates
               - Agrees reliability objectives and exercises failure recovery with service owners, distinguishing platform
                 reliability from scientific validity
+              qualifications: []
+              core_concepts:
+              - topic: Reliability objectives and specialist escalation
+                concepts:
+                - Reliability objectives and specialist escalation
+                - Assurance, ownership and limitations
+                search_terms:
+                - Evaluation Infrastructure, Monitoring and Reliability
+                - Reliability objectives and specialist escalation
+                why: 'Supports evaluation infrastructure, monitoring and reliability through practical exercises using approved
+                  or synthetic data. Reference: MLflow documentation (https://mlflow.org/docs/latest/ml/).'
         ai-security-controls:
           id: ai-security-controls
           name: AI Security and Technical Controls
@@ -2280,6 +2516,17 @@ domain:
               skills:
               - Recognises prompt injection, unsafe tool access and model supply-chain risks in deployed workflows
               - Applies documented access, secret-handling and network restrictions and reports suspected control failures
+              qualifications: []
+              core_concepts:
+              - topic: Prompt injection and supply-chain threats
+                concepts:
+                - Prompt injection and supply-chain threats
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Security and Technical Controls
+                - Prompt injection and supply-chain threats
+                why: 'Supports ai security and technical controls through practical exercises using approved or synthetic
+                  data. Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
             mid:
               id: ai-security-controls-mid
               name: Mid Level
@@ -2287,6 +2534,17 @@ domain:
               - Implements least-privilege model and tool access, restricted egress and checks on imported artefacts
               - Tests prompt injection and data-exfiltration scenarios in an authorised test environment and records residual
                 limitations
+              qualifications: []
+              core_concepts:
+              - topic: Authorised threat testing and restricted tools
+                concepts:
+                - Authorised threat testing and restricted tools
+                - Evidence capture and escalation
+                search_terms:
+                - AI Security and Technical Controls
+                - Authorised threat testing and restricted tools
+                why: 'Supports ai security and technical controls through practical exercises using approved or synthetic
+                  data. Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
             senior:
               id: ai-security-controls-senior
               name: Senior Level
@@ -2295,3 +2553,46 @@ domain:
                 integrations
               - Evaluates control effectiveness and prepares evidence for accountable risk owners, without treating filters
                 as guarantees of safe outputs
+              qualifications: []
+              core_concepts:
+              - topic: Layered controls and residual risk evidence
+                concepts:
+                - Layered controls and residual risk evidence
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Security and Technical Controls
+                - Layered controls and residual risk evidence
+                why: 'Supports ai security and technical controls through practical exercises using approved or synthetic
+                  data. Reference: NCSC secure AI system development (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).'
+      items:
+      - name: Kubernetes GPU scheduling
+        role: 'Illustrative resource for ai infrastructure engineering. Select tools and guidance for local requirements;
+          inclusion is not mandatory or evidence of competence. Source: https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/
+          (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - Kubernetes GPU scheduling — https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/ (reviewed 2026-11-02)
+      - name: MLflow documentation
+        role: 'Illustrative resource for ai infrastructure engineering. Select tools and guidance for local requirements;
+          inclusion is not mandatory or evidence of competence. Source: https://mlflow.org/docs/latest/ml/ (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - MLflow documentation — https://mlflow.org/docs/latest/ml/ (reviewed 2026-11-02)
+      - name: vLLM documentation
+        role: 'Illustrative resource for ai infrastructure engineering. Select tools and guidance for local requirements;
+          inclusion is not mandatory or evidence of competence. Source: https://docs.vllm.ai/en/latest/ (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - vLLM documentation — https://docs.vllm.ai/en/latest/ (reviewed 2026-11-02)
+      - name: NCSC secure AI system development
+        role: 'Illustrative resource for ai infrastructure engineering. Select tools and guidance for local requirements;
+          inclusion is not mandatory or evidence of competence. Source: https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development
+          (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - NCSC secure AI system development — https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development
+              (reviewed 2026-11-02)

@@ -1491,6 +1491,17 @@ domain:
               skills:
               - Records AI system purpose, owner, supplier, model version and deployment context in the approved inventory
               - Identifies who can authorise use, accept risk and approve changes, and escalates gaps in ownership
+              qualifications: []
+              core_concepts:
+              - topic: System inventory and ownership
+                concepts:
+                - System inventory and ownership
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Accountability and Inventory
+                - System inventory and ownership
+                why: 'Supports ai accountability and inventory through practical exercises using approved or synthetic data.
+                  Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
             mid:
               id: ai-accountability-inventory-mid
               name: Mid Level
@@ -1499,6 +1510,17 @@ domain:
                 lifecycle
               - Coordinates responsibility assignments for locally hosted and externally supplied AI systems, recording unresolved
                 ownership questions
+              qualifications: []
+              core_concepts:
+              - topic: Approval records and responsibility assignment
+                concepts:
+                - Approval records and responsibility assignment
+                - Evidence capture and escalation
+                search_terms:
+                - AI Accountability and Inventory
+                - Approval records and responsibility assignment
+                why: 'Supports ai accountability and inventory through practical exercises using approved or synthetic data.
+                  Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
             senior:
               id: ai-accountability-inventory-senior
               name: Senior Level
@@ -1507,6 +1529,17 @@ domain:
                 review
               - Defines governance decision routes with accountable leaders and specialist advisers, ensuring delegation and
                 escalation are recorded
+              qualifications: []
+              core_concepts:
+              - topic: Accountability review and escalation
+                concepts:
+                - Accountability review and escalation
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Accountability and Inventory
+                - Accountability review and escalation
+                why: 'Supports ai accountability and inventory through practical exercises using approved or synthetic data.
+                  Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
         ai-risk-impact-oversight:
           id: ai-risk-impact-oversight
           name: AI Risk, Impact and Human Oversight
@@ -1520,6 +1553,17 @@ domain:
               - Identifies potential privacy, fairness, safety and misuse impacts and records affected groups for specialist
                 review
               - Explains approved use limitations and the route for human intervention or challenge
+              qualifications: []
+              core_concepts:
+              - topic: Intended use and human intervention
+                concepts:
+                - Intended use and human intervention
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Risk, Impact and Human Oversight
+                - Intended use and human intervention
+                why: 'Supports ai risk, impact and human oversight through practical exercises using approved or synthetic
+                  data. Reference: European Commission AI Act overview (https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).'
             mid:
               id: ai-risk-impact-oversight-mid
               name: Mid Level
@@ -1528,6 +1572,22 @@ domain:
                 owners and review triggers
               - Documents transparency information and tests oversight procedures with users, including escalation, override
                 and suspension
+              qualifications:
+              - issuer: IAPP
+                description: 'Artificial Intelligence Governance Professional (AIGP), illustrative optional certification.
+                  Source: https://iapp.org/certify/aigp (reviewed 2026-11-02).'
+                career_impact: May support governance learning; does not confer legal authority or demonstrate all skills
+                  at this level.
+              core_concepts:
+              - topic: Impact assessment and transparency
+                concepts:
+                - Impact assessment and transparency
+                - Evidence capture and escalation
+                search_terms:
+                - AI Risk, Impact and Human Oversight
+                - Impact assessment and transparency
+                why: 'Supports ai risk, impact and human oversight through practical exercises using approved or synthetic
+                  data. Reference: European Commission AI Act overview (https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).'
             senior:
               id: ai-risk-impact-oversight-senior
               name: Senior Level
@@ -1536,6 +1596,17 @@ domain:
                 treating certification as proof of safe use
               - Coordinates assessment of applicable EU AI Act roles, risk categories and obligations with legal specialists
                 and maintains dated decisions as rules or uses change
+              qualifications: []
+              core_concepts:
+              - topic: Context-specific legal review and oversight assurance
+                concepts:
+                - Context-specific legal review and oversight assurance
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Risk, Impact and Human Oversight
+                - Context-specific legal review and oversight assurance
+                why: 'Supports ai risk, impact and human oversight through practical exercises using approved or synthetic
+                  data. Reference: European Commission AI Act overview (https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).'
         ai-supplier-audit-assurance:
           id: ai-supplier-audit-assurance
           name: AI Supplier Assurance and Audit Evidence
@@ -1548,6 +1619,17 @@ domain:
               skills:
               - Collects supplier documentation on intended use, limitations, model changes and data handling
               - Maintains records of approvals, exceptions and review dates in the agreed evidence repository
+              qualifications: []
+              core_concepts:
+              - topic: Supplier documentation and evidence
+                concepts:
+                - Supplier documentation and evidence
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Supplier Assurance and Audit Evidence
+                - Supplier documentation and evidence
+                why: 'Supports ai supplier assurance and audit evidence through practical exercises using approved or synthetic
+                  data. Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
             mid:
               id: ai-supplier-audit-assurance-mid
               name: Mid Level
@@ -1556,6 +1638,17 @@ domain:
                 authorised reviewers
               - Maintains an audit trail connecting risks, controls, evidence and decisions, including human oversight and
                 supplier change notices
+              qualifications: []
+              core_concepts:
+              - topic: Assurance gaps and corrective actions
+                concepts:
+                - Assurance gaps and corrective actions
+                - Evidence capture and escalation
+                search_terms:
+                - AI Supplier Assurance and Audit Evidence
+                - Assurance gaps and corrective actions
+                why: 'Supports ai supplier assurance and audit evidence through practical exercises using approved or synthetic
+                  data. Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
             senior:
               id: ai-supplier-audit-assurance-senior
               name: Senior Level
@@ -1563,3 +1656,31 @@ domain:
               - Defines proportionate supplier review and assurance processes with procurement, legal and security specialists
               - Leads governance evidence reviews and tracks corrective actions while reserving certification and regulatory
                 determinations for authorised bodies
+              qualifications: []
+              core_concepts:
+              - topic: Proportionate audit and procurement governance
+                concepts:
+                - Proportionate audit and procurement governance
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Supplier Assurance and Audit Evidence
+                - Proportionate audit and procurement governance
+                why: 'Supports ai supplier assurance and audit evidence through practical exercises using approved or synthetic
+                  data. Reference: ISO/IEC 42001:2023 (https://www.iso.org/standard/42001).'
+      items:
+      - name: ISO/IEC 42001:2023
+        role: 'Illustrative resource for ai governance. Select tools and guidance for local requirements; inclusion is not
+          mandatory or evidence of competence. Source: https://www.iso.org/standard/42001 (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - ISO/IEC 42001:2023 — https://www.iso.org/standard/42001 (reviewed 2026-11-02)
+      - name: European Commission AI Act overview
+        role: 'Illustrative resource for ai governance. Select tools and guidance for local requirements; inclusion is not
+          mandatory or evidence of competence. Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+          (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - European Commission AI Act overview — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+              (reviewed 2026-11-02)

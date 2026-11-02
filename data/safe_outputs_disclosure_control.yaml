@@ -30,7 +30,8 @@ domain:
               qualifications:
               - issuer: ONS / UKSA
                 description: Safe Researcher Training (SRT) (Course)
-                career_impact: Fundamental requirement for understanding statistical disclosure control principles.
+                career_impact: Illustrative learning opportunity for output governance; course attendance does not establish
+                  reviewer competence.
               core_concepts:
               - topic: SDE Output Governance
                 concepts:
@@ -70,6 +71,17 @@ domain:
               - Leads improvements to reviewer decision support using incident findings and reviewer feedback, leaving release
                 decisions with authorised reviewers
               qualifications: []
+              core_concepts:
+              - topic: Reviewer workflow assurance
+                concepts:
+                - Separation of duties and escalation
+                - Auditable approval and decision support limitations
+                search_terms:
+                - SATRE output management reviewer responsibility
+                - Disclosure review workflow assurance
+                why: Supports qualified reviewers through reliable review systems; release decisions remain with authorised
+                  reviewers. Source https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management
+                  (reviewed 2026-11-02).
       items:
       - name: Cell Suppression
         role: Inspects research outputs, tables, and graphs against non-disclosure rules before release from the secure environment.
@@ -1122,6 +1134,17 @@ domain:
               skills:
               - Identifies model weights, embeddings and generated outputs as artefacts requiring the applicable release review
               - Records artefact versions, originating data references and intended recipients in a release request
+              qualifications: []
+              core_concepts:
+              - topic: Model and embedding release requests
+                concepts:
+                - Model and embedding release requests
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Artefact and Generated-output Release Controls
+                - Model and embedding release requests
+                why: 'Supports ai artefact and generated-output release controls through practical exercises using approved
+                  or synthetic data. Reference: SATRE v1.1.1 output management (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).'
             mid:
               id: ai-artefact-release-controls-mid
               name: Mid Level
@@ -1130,6 +1153,17 @@ domain:
                 decisions for AI artefacts
               - Integrates authorised disclosure tests and quarantines unapproved artefacts, making test limitations visible
                 to qualified reviewers
+              qualifications: []
+              core_concepts:
+              - topic: Evidence capture and reviewer decisions
+                concepts:
+                - Evidence capture and reviewer decisions
+                - Evidence capture and escalation
+                search_terms:
+                - AI Artefact and Generated-output Release Controls
+                - Evidence capture and reviewer decisions
+                why: 'Supports ai artefact and generated-output release controls through practical exercises using approved
+                  or synthetic data. Reference: SATRE v1.1.1 output management (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).'
             senior:
               id: ai-artefact-release-controls-senior
               name: Senior Level
@@ -1138,3 +1172,24 @@ domain:
                 outputs
               - Evaluates auditability and effectiveness of review tooling, including leakage evidence and post-release escalation,
                 without independently approving disclosure risk
+              qualifications: []
+              core_concepts:
+              - topic: Disclosure workflow assurance and escalation
+                concepts:
+                - Disclosure workflow assurance and escalation
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Artefact and Generated-output Release Controls
+                - Disclosure workflow assurance and escalation
+                why: 'Supports ai artefact and generated-output release controls through practical exercises using approved
+                  or synthetic data. Reference: SATRE v1.1.1 output management (https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management).'
+      items:
+      - name: SATRE v1.1.1 output management
+        role: 'Illustrative resource for ai output review and release. Select tools and guidance for local requirements; inclusion
+          is not mandatory or evidence of competence. Source: https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management
+          (reviewed 2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - SATRE v1.1.1 output management — https://satre-specification.readthedocs.io/en/v1.1.1/pillars/data_management.html#output-management
+              (reviewed 2026-11-02)

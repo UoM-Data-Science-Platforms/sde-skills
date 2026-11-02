@@ -1508,6 +1508,17 @@ domain:
               skills:
               - Records dataset origin, version, permitted purpose and access approval before an AI workload uses it
               - Identifies training and evaluation partitions and documents transformations using approved metadata conventions
+              qualifications: []
+              core_concepts:
+              - topic: Dataset origin and permitted use
+                concepts:
+                - Dataset origin and permitted use
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Data Provenance and Permissions
+                - Dataset origin and permitted use
+                why: 'Supports ai data provenance and permissions through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
             mid:
               id: ai-data-provenance-permissions-mid
               name: Mid Level
@@ -1516,6 +1527,17 @@ domain:
                 and evaluation runs
               - Checks proposed reuse against recorded permissions and licence conditions, escalating ambiguity to data owners
                 and preventing unapproved use
+              qualifications: []
+              core_concepts:
+              - topic: Transformations and versioned lineage
+                concepts:
+                - Transformations and versioned lineage
+                - Evidence capture and escalation
+                search_terms:
+                - AI Data Provenance and Permissions
+                - Transformations and versioned lineage
+                why: 'Supports ai data provenance and permissions through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
             senior:
               id: ai-data-provenance-permissions-senior
               name: Senior Level
@@ -1523,6 +1545,17 @@ domain:
               - Designs traceability and permission-review processes spanning source datasets, derived data and model lineage
               - Coordinates the response to withdrawn permissions or changed purposes with data owners, documenting affected
                 models and specialist decisions about further use
+              qualifications: []
+              core_concepts:
+              - topic: Permission withdrawal and model dependencies
+                concepts:
+                - Permission withdrawal and model dependencies
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Data Provenance and Permissions
+                - Permission withdrawal and model dependencies
+                why: 'Supports ai data provenance and permissions through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
         ai-data-retention-lineage:
           id: ai-data-retention-lineage
           name: AI Data Retention and Model Lineage
@@ -1536,6 +1569,17 @@ domain:
               - Locates retention schedules for datasets, annotations and evaluation records
               - Records links between dataset versions, model artefacts and storage locations without exposing restricted
                 data
+              qualifications: []
+              core_concepts:
+              - topic: Retention schedules and artefact locations
+                concepts:
+                - Retention schedules and artefact locations
+                - Documented procedures and role boundaries
+                search_terms:
+                - AI Data Retention and Model Lineage
+                - Retention schedules and artefact locations
+                why: 'Supports ai data retention and model lineage through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
             mid:
               id: ai-data-retention-lineage-mid
               name: Mid Level
@@ -1544,6 +1588,17 @@ domain:
                 exceptions
               - Traces affected training and evaluation artefacts when data must be corrected or withdrawn and escalates model
                 implications
+              qualifications: []
+              core_concepts:
+              - topic: Deletion evidence and dependent copies
+                concepts:
+                - Deletion evidence and dependent copies
+                - Evidence capture and escalation
+                search_terms:
+                - AI Data Retention and Model Lineage
+                - Deletion evidence and dependent copies
+                why: 'Supports ai data retention and model lineage through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
             senior:
               id: ai-data-retention-lineage-senior
               name: Senior Level
@@ -1551,3 +1606,23 @@ domain:
               - Establishes lifecycle controls with data owners that account for derived datasets, embeddings and model dependencies
               - Reviews evidence of disposition and unresolved dependencies with authorised specialists rather than assuming
                 deletion removes learned information
+              qualifications: []
+              core_concepts:
+              - topic: Derived artefact disposition and residual uncertainty
+                concepts:
+                - Derived artefact disposition and residual uncertainty
+                - Assurance, ownership and limitations
+                search_terms:
+                - AI Data Retention and Model Lineage
+                - Derived artefact disposition and residual uncertainty
+                why: 'Supports ai data retention and model lineage through practical exercises using approved or synthetic
+                  data. Reference: NIST AI Risk Management Framework (https://www.nist.gov/itl/ai-risk-management-framework).'
+      items:
+      - name: NIST AI Risk Management Framework
+        role: 'Illustrative resource for ai data lifecycle. Select tools and guidance for local requirements; inclusion is
+          not mandatory or evidence of competence. Source: https://www.nist.gov/itl/ai-risk-management-framework (reviewed
+          2026-11-02).'
+        sources:
+          standards:
+            mentions:
+            - NIST AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework (reviewed 2026-11-02)
