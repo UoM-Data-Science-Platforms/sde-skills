@@ -7,8 +7,10 @@
   overflow-x: hidden;
 }
 
-:global(.main-content):has(.wide-layout) {
-  overflow-y: hidden;
+@media (min-width: 992px) {
+  :global(.main-content):has(.wide-layout) {
+    overflow-y: hidden;
+  }
 }
 
 

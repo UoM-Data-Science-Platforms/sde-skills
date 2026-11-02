@@ -39,6 +39,8 @@
     radial-gradient(ellipse 60% 84% at 85% 10%, var(--color-purple-pastel), transparent 75%),
     radial-gradient(ellipse 61% 78% at 70% 75%, var(--color-nhs-blue-pastel), transparent 100%),
     linear-gradient(45deg, white 99%);
+  
+  --border-gradient-fluorescent: linear-gradient(135deg, #ff00ff, #0044ff, #00ffff);
 
   /* Content container max-width on 4K/ultra-wide displays */
   --content-max-width: 1440px;
@@ -190,4 +192,21 @@ html[data-theme="dark"] {
   --bs-btn-hover-border-color: #4a006e;
   --bs-btn-active-bg: #4a006e;
   --bs-btn-active-border-color: #4a006e;
+}
+
+.btn-primary, .btn-secondary {
+  border: 1px solid transparent !important;
+  background-clip: padding-box, border-box !important;
+  background-origin: padding-box, border-box !important;
+  background-image: linear-gradient(var(--bs-btn-bg), var(--bs-btn-bg)), var(--border-gradient-fluorescent) !important;
+  background-attachment: scroll, fixed !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-image: linear-gradient(var(--bs-btn-hover-bg), var(--bs-btn-hover-bg)), var(--border-gradient-fluorescent) !important;
+}
+
+.btn-primary:active, .btn-secondary:active,
+.btn-primary.active, .btn-secondary.active {
+  background-image: linear-gradient(var(--bs-btn-active-bg), var(--bs-btn-active-bg)), var(--border-gradient-fluorescent) !important;
 }
