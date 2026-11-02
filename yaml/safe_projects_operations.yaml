@@ -516,3 +516,81 @@ domain:
               - Leads community engagement strategies and initiatives
               - Organises community events and knowledge sharing forums
               - Develops strategic partnerships across the SDE community
+    ai-service-operations:
+      id: ai-service-operations
+      name: AI Service Operations
+      description: >-
+        Coordinates service ownership, monitoring, changes, incidents and retirement for AI-enabled services. Owns
+        operational processes while infrastructure engineers implement platform controls and governance owners
+        authorise intended use.
+      competencies:
+        ai-operational-ownership-change:
+          id: ai-operational-ownership-change
+          name: AI Operational Ownership and Change
+          description: >-
+            Maintains service accountability, monitoring responsibilities and controlled change across the AI
+            service lifecycle.
+          levels:
+            entry:
+              id: ai-operational-ownership-change-entry
+              name: Entry Level
+              skills:
+                - >-
+                  Identifies service owners, support contacts, approved uses and escalation routes for an AI
+                  service
+                - Records model, supplier and configuration changes using the agreed change process
+            mid:
+              id: ai-operational-ownership-change-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Maintains runbooks with monitoring owners, agreed alert thresholds and escalation to research or
+                  governance specialists
+                - >-
+                  Coordinates model and supplier changes with impact review, evaluation evidence, approval and
+                  rollback readiness
+            senior:
+              id: ai-operational-ownership-change-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Establishes operational acceptance and change-review processes with accountable service and
+                  governance owners
+                - >-
+                  Reviews service performance, cost and control evidence and commissions improvements without
+                  treating operational metrics as scientific validation
+        ai-incident-retirement:
+          id: ai-incident-retirement
+          name: AI Incident Response and Retirement
+          description: >-
+            Coordinates AI service incident handling and planned retirement with security, governance and data
+            owners.
+          levels:
+            entry:
+              id: ai-incident-retirement-entry
+              name: Entry Level
+              skills:
+                - >-
+                  Recognises suspected leakage, unsafe behaviour and service degradation and follows escalation
+                  and evidence-preservation procedures
+                - Identifies deployed endpoints, dependencies and owners from the service register
+            mid:
+              id: ai-incident-retirement-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Coordinates incident triage, containment and recovery with authorised responders and records
+                  decisions and affected model versions
+                - >-
+                  Executes approved retirement plans covering endpoint withdrawal, access revocation, dependent
+                  users and retention of required evidence
+            senior:
+              id: ai-incident-retirement-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Leads exercises and reviews for AI incidents and retirement, assigning corrective actions and
+                  confirming service continuity
+                - >-
+                  Agrees retirement and notification decisions with accountable owners and legal specialists,
+                  verifying disposal evidence and unresolved model or data dependencies

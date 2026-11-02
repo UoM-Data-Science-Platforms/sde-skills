@@ -553,3 +553,91 @@ domain:
                 - National health data policy
                 - SDE strategic alliances
                 why: Shaping the future of the entire SDE ecosystem at a national/international level.
+
+    ai-service-operations:
+      name: AI Service Operations
+      competencies:
+        ai-operational-ownership-change:
+          name: AI Operational Ownership and Change
+          levels:
+            entry:
+              core_concepts:
+                - topic: Service owners and change records
+                  concepts:
+                    - Service owners and change records
+                    - Documented procedures and role boundaries
+                  search_terms:
+                    - AI Operational Ownership and Change
+                    - Service owners and change records
+                  why: >-
+                    Supports ai operational ownership and change through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).
+            mid:
+              core_concepts:
+                - topic: Runbooks and monitoring responsibilities
+                  concepts:
+                    - Runbooks and monitoring responsibilities
+                    - Evidence capture and escalation
+                  search_terms:
+                    - AI Operational Ownership and Change
+                    - Runbooks and monitoring responsibilities
+                  why: >-
+                    Supports ai operational ownership and change through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).
+            senior:
+              core_concepts:
+                - topic: Operational acceptance and service review
+                  concepts:
+                    - Operational acceptance and service review
+                    - Assurance, ownership and limitations
+                  search_terms:
+                    - AI Operational Ownership and Change
+                    - Operational acceptance and service review
+                  why: >-
+                    Supports ai operational ownership and change through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).
+        ai-incident-retirement:
+          name: AI Incident Response and Retirement
+          levels:
+            entry:
+              core_concepts:
+                - topic: Incident recognition and evidence preservation
+                  concepts:
+                    - Incident recognition and evidence preservation
+                    - Documented procedures and role boundaries
+                  search_terms:
+                    - AI Incident Response and Retirement
+                    - Incident recognition and evidence preservation
+                  why: >-
+                    Supports ai incident response and retirement through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).
+            mid:
+              core_concepts:
+                - topic: Containment coordination and endpoint withdrawal
+                  concepts:
+                    - Containment coordination and endpoint withdrawal
+                    - Evidence capture and escalation
+                  search_terms:
+                    - AI Incident Response and Retirement
+                    - Containment coordination and endpoint withdrawal
+                  why: >-
+                    Supports ai incident response and retirement through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).
+            senior:
+              core_concepts:
+                - topic: Incident exercises and retirement assurance
+                  concepts:
+                    - Incident exercises and retirement assurance
+                    - Assurance, ownership and limitations
+                  search_terms:
+                    - AI Incident Response and Retirement
+                    - Incident exercises and retirement assurance
+                  why: >-
+                    Supports ai incident response and retirement through practical exercises using approved or
+                    synthetic data. Reference: NCSC secure AI system development
+                    (https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development).

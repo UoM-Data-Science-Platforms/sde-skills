@@ -35,6 +35,13 @@ domain:
               name: Mid Level
               skills:
               - Implements output tracking and audit logs to support governance processes
+            senior:
+              id: output-review-processes-senior
+              name: Senior Level
+              skills:
+              - Designs review workflow systems that preserve separation of duties, escalation routes and auditable approval by qualified disclosure reviewers
+              - Evaluates review tooling against agreed requirements for traceability, reliability and consistent application of authorised disclosure policies
+              - Leads improvements to reviewer decision support using incident findings and reviewer feedback, leaving release decisions with authorised reviewers
     tools-and-platforms-to-support-output-checking:
       id: tools-and-platforms-to-support-output-checking
       name: Tools and Platforms to Support Output Checking
@@ -288,3 +295,48 @@ domain:
                 relating to a data breach
               - Designs short-term mitigations to prevent further disclosure
               - Designs long-term mitigations against confirmed data leaks
+    ai-output-release:
+      id: ai-output-release
+      name: AI Output Review and Release
+      description: >-
+        Provides systems that support qualified reviewers in assessing and authorising controlled release of AI
+        artefacts and generated outputs. Automated checks provide evidence; authorised reviewers retain release
+        decisions.
+      competencies:
+        ai-artefact-release-controls:
+          id: ai-artefact-release-controls
+          name: AI Artefact and Generated-output Release Controls
+          description: >-
+            Supports review and controlled release of model weights, embeddings and generated outputs, including
+            provenance and residual disclosure risks.
+          levels:
+            entry:
+              id: ai-artefact-release-controls-entry
+              name: Entry Level
+              skills:
+                - >-
+                  Identifies model weights, embeddings and generated outputs as artefacts requiring the applicable
+                  release review
+                - >-
+                  Records artefact versions, originating data references and intended recipients in a release
+                  request
+            mid:
+              id: ai-artefact-release-controls-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Implements review workflows that capture provenance, access restrictions, test evidence and
+                  explicit reviewer decisions for AI artefacts
+                - >-
+                  Integrates authorised disclosure tests and quarantines unapproved artefacts, making test
+                  limitations visible to qualified reviewers
+            senior:
+              id: ai-artefact-release-controls-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Designs release-control systems with qualified disclosure specialists for models, embeddings and
+                  generated outputs
+                - >-
+                  Evaluates auditability and effectiveness of review tooling, including leakage evidence and
+                  post-release escalation, without independently approving disclosure risk
