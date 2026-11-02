@@ -510,8 +510,7 @@ domain:
         ethics, clinical and research specialists determine matters within their remit; infrastructure teams
         implement approved controls.
       competencies:
-    
-    ai-accountability-inventory:
+        ai-accountability-inventory:
           id: ai-accountability-inventory
           name: AI Accountability and Inventory
           description: Maintains an accountable inventory of AI systems, intended uses, suppliers and decision owners.
@@ -546,8 +545,7 @@ domain:
                 - >-
                   Defines governance decision routes with accountable leaders and specialist advisers, ensuring
                   delegation and escalation are recorded
-    
-    ai-risk-impact-oversight:
+        ai-risk-impact-oversight:
           id: ai-risk-impact-oversight
           name: AI Risk, Impact and Human Oversight
           description: >-
@@ -582,8 +580,7 @@ domain:
                 - >-
                   Coordinates assessment of applicable EU AI Act roles, risk categories and obligations with legal
                   specialists and maintains dated decisions as rules or uses change
-    
-    ai-supplier-audit-assurance:
+        ai-supplier-audit-assurance:
           id: ai-supplier-audit-assurance
           name: AI Supplier Assurance and Audit Evidence
           description: >-

@@ -524,8 +524,7 @@ domain:
         operational processes while infrastructure engineers implement platform controls and governance owners
         authorise intended use.
       competencies:
-    
-    ai-operational-ownership-change:
+        ai-operational-ownership-change:
           id: ai-operational-ownership-change
           name: AI Operational Ownership and Change
           description: >-
@@ -560,8 +559,7 @@ domain:
                 - >-
                   Reviews service performance, cost and control evidence and commissions improvements without
                   treating operational metrics as scientific validation
-    
-    ai-incident-retirement:
+        ai-incident-retirement:
           id: ai-incident-retirement
           name: AI Incident Response and Retirement
           description: >-

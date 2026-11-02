@@ -296,8 +296,7 @@ domain:
         artefacts and generated outputs. Automated checks provide evidence; authorised reviewers retain release
         decisions.
       competencies:
-    
-    ai-artefact-release-controls:
+        ai-artefact-release-controls:
           id: ai-artefact-release-controls
           name: AI Artefact and Generated-output Release Controls
           description: >-
