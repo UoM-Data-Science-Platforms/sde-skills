@@ -500,3 +500,119 @@ domain:
               - Develops enterprise certification strategies
               - Establishes certification governance and oversight
               - Leads certification readiness and maintenance programmes
+    ai-governance:
+      id: ai-governance
+      name: AI Governance
+      description: >-
+        Governs AI use through accountable ownership, risk assessment, oversight and assurance. Uses ISO/IEC
+        42001:2023 as an organisational management-system reference and considers EU AI Act responsibilities only
+        where applicable to the organisation, intended use and provider or deployer role. Authorised legal,
+        ethics, clinical and research specialists determine matters within their remit; infrastructure teams
+        implement approved controls.
+      competencies:
+    
+    ai-accountability-inventory:
+          id: ai-accountability-inventory
+          name: AI Accountability and Inventory
+          description: Maintains an accountable inventory of AI systems, intended uses, suppliers and decision owners.
+          levels:
+            entry:
+              id: ai-accountability-inventory-entry
+              name: Entry Level
+              skills:
+                - >-
+                  Records AI system purpose, owner, supplier, model version and deployment context in the approved
+                  inventory
+                - >-
+                  Identifies who can authorise use, accept risk and approve changes, and escalates gaps in
+                  ownership
+            mid:
+              id: ai-accountability-inventory-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Maintains inventory links to data sources, risk assessments, approvals and operational owners
+                  throughout the lifecycle
+                - >-
+                  Coordinates responsibility assignments for locally hosted and externally supplied AI systems,
+                  recording unresolved ownership questions
+            senior:
+              id: ai-accountability-inventory-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Establishes inventory and accountability processes that include shadow AI discovery and periodic
+                  ownership review
+                - >-
+                  Defines governance decision routes with accountable leaders and specialist advisers, ensuring
+                  delegation and escalation are recorded
+    
+    ai-risk-impact-oversight:
+          id: ai-risk-impact-oversight
+          name: AI Risk, Impact and Human Oversight
+          description: >-
+            Coordinates documented risk and impact assessment, transparency and effective human oversight for
+            intended AI uses.
+          levels:
+            entry:
+              id: ai-risk-impact-oversight-entry
+              name: Entry Level
+              skills:
+                - >-
+                  Identifies potential privacy, fairness, safety and misuse impacts and records affected groups
+                  for specialist review
+                - Explains approved use limitations and the route for human intervention or challenge
+            mid:
+              id: ai-risk-impact-oversight-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Coordinates risk and impact assessments with affected stakeholders and authorised specialists,
+                  recording mitigation owners and review triggers
+                - >-
+                  Documents transparency information and tests oversight procedures with users, including
+                  escalation, override and suspension
+            senior:
+              id: ai-risk-impact-oversight-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Leads proportionate AI governance reviews using ISO/IEC 42001:2023 as a management-system
+                  reference without treating certification as proof of safe use
+                - >-
+                  Coordinates assessment of applicable EU AI Act roles, risk categories and obligations with legal
+                  specialists and maintains dated decisions as rules or uses change
+    
+    ai-supplier-audit-assurance:
+          id: ai-supplier-audit-assurance
+          name: AI Supplier Assurance and Audit Evidence
+          description: >-
+            Assesses supplier evidence and maintains reviewable governance records without substituting technical
+            tests for organisational assurance.
+          levels:
+            entry:
+              id: ai-supplier-audit-assurance-entry
+              name: Entry Level
+              skills:
+                - Collects supplier documentation on intended use, limitations, model changes and data handling
+                - Maintains records of approvals, exceptions and review dates in the agreed evidence repository
+            mid:
+              id: ai-supplier-audit-assurance-mid
+              name: Mid Level
+              skills:
+                - >-
+                  Assesses supplier evidence against approved governance requirements and routes contractual or
+                  legal gaps to authorised reviewers
+                - >-
+                  Maintains an audit trail connecting risks, controls, evidence and decisions, including human
+                  oversight and supplier change notices
+            senior:
+              id: ai-supplier-audit-assurance-senior
+              name: Senior Level
+              skills:
+                - >-
+                  Defines proportionate supplier review and assurance processes with procurement, legal and
+                  security specialists
+                - >-
+                  Leads governance evidence reviews and tracks corrective actions while reserving certification
+                  and regulatory determinations for authorised bodies
