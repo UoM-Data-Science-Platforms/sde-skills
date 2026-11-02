@@ -1490,3 +1490,64 @@ domain:
           radars:
             score: 0/4
             status: Not in target radars
+    ai-data-lifecycle:
+      id: ai-data-lifecycle
+      name: AI Data Lifecycle
+      description: Manages training and evaluation data rights, transformations and traceability into model artefacts. Data
+        controllers and authorised specialists decide permitted uses; infrastructure services implement the approved handling
+        requirements.
+      competencies:
+        ai-data-provenance-permissions:
+          id: ai-data-provenance-permissions
+          name: AI Data Provenance and Permissions
+          description: Maintains provenance, permitted-use records and transformations for AI training and evaluation data.
+          levels:
+            entry:
+              id: ai-data-provenance-permissions-entry
+              name: Entry Level
+              skills:
+              - Records dataset origin, version, permitted purpose and access approval before an AI workload uses it
+              - Identifies training and evaluation partitions and documents transformations using approved metadata conventions
+            mid:
+              id: ai-data-provenance-permissions-mid
+              name: Mid Level
+              skills:
+              - Maintains versioned lineage from source data through filtering, annotation and transformations to training
+                and evaluation runs
+              - Checks proposed reuse against recorded permissions and licence conditions, escalating ambiguity to data owners
+                and preventing unapproved use
+            senior:
+              id: ai-data-provenance-permissions-senior
+              name: Senior Level
+              skills:
+              - Designs traceability and permission-review processes spanning source datasets, derived data and model lineage
+              - Coordinates the response to withdrawn permissions or changed purposes with data owners, documenting affected
+                models and specialist decisions about further use
+        ai-data-retention-lineage:
+          id: ai-data-retention-lineage
+          name: AI Data Retention and Model Lineage
+          description: Coordinates retention and disposition of AI datasets and derived artefacts using approved schedules
+            and traceable dependencies.
+          levels:
+            entry:
+              id: ai-data-retention-lineage-entry
+              name: Entry Level
+              skills:
+              - Locates retention schedules for datasets, annotations and evaluation records
+              - Records links between dataset versions, model artefacts and storage locations without exposing restricted
+                data
+            mid:
+              id: ai-data-retention-lineage-mid
+              name: Mid Level
+              skills:
+              - Implements approved retention and deletion schedules across working copies, caches and backups with auditable
+                exceptions
+              - Traces affected training and evaluation artefacts when data must be corrected or withdrawn and escalates model
+                implications
+            senior:
+              id: ai-data-retention-lineage-senior
+              name: Senior Level
+              skills:
+              - Establishes lifecycle controls with data owners that account for derived datasets, embeddings and model dependencies
+              - Reviews evidence of disposition and unresolved dependencies with authorised specialists rather than assuming
+                deletion removes learned information

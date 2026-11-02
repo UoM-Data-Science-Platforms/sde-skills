@@ -17,7 +17,7 @@ with its identifier. Use this to decide which domain YAML file to fetch for deta
 
 Each competency defines entry, mid, and senior level skill statements.
 
-6 domains / 22 subdomains / 84 competencies. Levels everywhere: entry, mid, senior.
+6 domains / 26 subdomains / 92 competencies. Levels everywhere: entry, mid, senior.
 
 ## Domain 1: Safe Access & Identity (`safe-access-identity`)
 
@@ -78,6 +78,13 @@ Data Engineering & Processing focuses on building and maintaining secure systems
 - **Data Retention & Disposal** (`data-retention-disposal`): Manages the secure lifecycle of data from creation to disposal, ensuring compliance with regulatory requirements and organisational policies.
 - **Data Migration** (`data-migration`): Ensures the secure, reliable, and efficient transfer of data between systems, storage solutions, or environments.
 
+### AI Data Lifecycle (`ai-data-lifecycle`)
+
+Manages training and evaluation data rights, transformations and traceability into model artefacts.
+
+- **AI Data Provenance and Permissions** (`ai-data-provenance-permissions`): Maintains provenance, permitted-use records and transformations for AI training and evaluation data.
+- **AI Data Retention and Model Lineage** (`ai-data-retention-lineage`): Coordinates retention and disposition of AI datasets and derived artefacts using approved schedules and traceable dependencies.
+
 ## Domain 3: Safe Governance & Compliance (`safe-governance-compliance`)
 
 This domain covers the regulatory, ethical, and compliance aspects of operating Secure Data Environments, ensuring systems meet legal requirements and maintain appropriate controls.
@@ -118,6 +125,14 @@ Audit & Compliance Monitoring ensures continuous verification of regulatory adhe
 - **Compliance Monitoring & Reporting** (`compliance-monitoring-reporting`): Continuously assesses and documents adherence to regulatory requirements and standards.
 - **Certification & Accreditation** (`certification-accreditation`): Guides systems through formal security validation by external authorities.
 
+### AI Governance (`ai-governance`)
+
+Governs AI use through accountable ownership, risk assessment, oversight and assurance.
+
+- **AI Accountability and Inventory** (`ai-accountability-inventory`): Maintains an accountable inventory of AI systems, intended uses, suppliers and decision owners.
+- **AI Risk, Impact and Human Oversight** (`ai-risk-impact-oversight`): Coordinates documented risk and impact assessment, transparency and effective human oversight for intended AI uses.
+- **AI Supplier Assurance and Audit Evidence** (`ai-supplier-audit-assurance`): Assesses supplier evidence and maintains reviewable governance records without substituting technical tests for organisational assurance.
+
 ## Domain 4: Safe Outputs & Disclosure Control (`safe-outputs-disclosure-control`)
 
 This domain covers the technical controls that help to protect projects from accidental or intentional disclosure, as well as providing tooling to support disclosure review operations of project teams to ensure that research outputs from Secure Data Environments do not inadvertently disclose sensitive information.
@@ -156,6 +171,12 @@ Establishes protocols, investigation procedures, and immediate containment measu
 Prepares and executes rapid response procedures for suspected data breaches, data leaks, and critical security incidents in research environments.
 
 - **Emergency Response Protocols** (`emergency-response-protocols`): Coordinates emergency response actions, forensics acquisition, and cross-team containment during confirmed or suspected data breaches.
+
+### AI Output Review and Release (`ai-output-release`)
+
+Provides systems that support qualified reviewers in assessing and authorising controlled release of AI artefacts and generated outputs.
+
+- **AI Artefact and Generated-output Release Controls** (`ai-artefact-release-controls`): Supports review and controlled release of model weights, embeddings and generated outputs, including provenance and residual disclosure risks.
 
 ## Domain 5: Safe Projects & Operations (`safe-projects-operations`)
 
@@ -197,6 +218,13 @@ Research Support & Innovation enhances researcher effectiveness within secure da
 - **TRE Tools & Capabilities** (`tre-tools-capabilities`): Provides and manages tools for research in secure environments.
 - **Future TRE Innovation** (`future-tre-innovation`): Explores and implements new technologies and approaches for secure research.
 - **Community Engagement & Networking** (`community-engagement-networking`): Participates in and contributes to the wider secure data environment community.
+
+### AI Service Operations (`ai-service-operations`)
+
+Coordinates service ownership, monitoring, changes, incidents and retirement for AI-enabled services.
+
+- **AI Operational Ownership and Change** (`ai-operational-ownership-change`): Maintains service accountability, monitoring responsibilities and controlled change across the AI service lifecycle.
+- **AI Incident Response and Retirement** (`ai-incident-retirement`): Coordinates AI service incident handling and planned retirement with security, governance and data owners.
 
 ## Domain 6: Safe Technology & Engineering (`safe-technology-engineering`)
 
