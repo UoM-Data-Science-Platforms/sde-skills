@@ -25,6 +25,10 @@ domain:
         incident-problem-management:
           name: "Incident & Problem Management"
           levels:
+            entry:
+              qualifications: []
+            senior:
+              qualifications: []
             mid:
               qualifications:
                 - issuer: "Kepner-Tregoe"
@@ -33,6 +37,10 @@ domain:
         change-release-management:
           name: "Change & Release Management"
           levels:
+            entry:
+              qualifications: []
+            senior:
+              qualifications: []
             mid:
               qualifications:
                 - issuer: "Axelos"
@@ -59,6 +67,8 @@ domain:
         sde-project-planning:
           name: "SDE Project Planning"
           levels:
+            entry:
+              qualifications: []
             mid:
               qualifications:
                 - issuer: "PMI"
@@ -72,11 +82,17 @@ domain:
         research-project-facilitation:
           name: "Research Project Facilitation"
           levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
             senior:
               qualifications: []
         resource-cost-management:
           name: "Resource & Cost Management"
           levels:
+            entry:
+              qualifications: []
             mid:
               qualifications:
                 - issuer: "FinOps Foundation"
@@ -90,3 +106,25 @@ domain:
                 - issuer: "FinOps Foundation"
                   description: "FinOps Certified Professional (Exam)"
                   career_impact: "Leading FinOps strategies across multi-cloud national SDE infrastructure."
+
+    ai-service-operations:
+      name: AI Service Operations
+      competencies:
+        ai-operational-ownership-change:
+          name: AI Operational Ownership and Change
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-incident-retirement:
+          name: AI Incident Response and Retirement
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []

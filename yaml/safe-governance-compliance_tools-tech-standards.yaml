@@ -468,3 +468,27 @@ subdomains:
         radars:
           score: 1/4
           status: Core Statistical Computing Language
+
+  ai-governance:
+    name: AI Governance
+    items:
+      - name: ISO/IEC 42001:2023
+        role: >-
+          Illustrative resource for ai governance. Select tools and guidance for local requirements; inclusion
+          is not mandatory or evidence of competence. Source: https://www.iso.org/standard/42001 (reviewed
+          2026-11-02).
+        sources:
+          standards:
+            mentions:
+              - ISO/IEC 42001:2023 — https://www.iso.org/standard/42001 (reviewed 2026-11-02)
+      - name: European Commission AI Act overview
+        role: >-
+          Illustrative resource for ai governance. Select tools and guidance for local requirements; inclusion
+          is not mandatory or evidence of competence. Source:
+          https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai (reviewed 2026-11-02).
+        sources:
+          standards:
+            mentions:
+              - >-
+                European Commission AI Act overview —
+                https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai (reviewed 2026-11-02)

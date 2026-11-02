@@ -985,6 +985,13 @@
       "color": "var(--color-text)"
     },
     {
+      "id": "ai-data-lifecycle",
+      "domain": "Safe Data Management",
+      "domainId": "safe-data-management",
+      "name": "AI Data Lifecycle",
+      "color": "var(--color-text)"
+    },
+    {
       "id": "regulatory-compliance",
       "domain": "Safe Governance & Compliance",
       "domainId": "safe-governance-compliance",
@@ -1010,6 +1017,13 @@
       "domain": "Safe Governance & Compliance",
       "domainId": "safe-governance-compliance",
       "name": "Audit & Compliance Monitoring",
+      "color": "var(--color-text)"
+    },
+    {
+      "id": "ai-governance",
+      "domain": "Safe Governance & Compliance",
+      "domainId": "safe-governance-compliance",
+      "name": "AI Governance",
       "color": "var(--color-text)"
     },
     {
@@ -1048,6 +1062,13 @@
       "color": "var(--color-text)"
     },
     {
+      "id": "ai-output-release",
+      "domain": "Safe Outputs & Disclosure Control",
+      "domainId": "safe-outputs-disclosure-control",
+      "name": "AI Output Review and Release",
+      "color": "var(--color-text)"
+    },
+    {
       "id": "project-management",
       "domain": "Safe Projects & Operations",
       "domainId": "safe-projects-operations",
@@ -1076,6 +1097,13 @@
       "color": "var(--color-text)"
     },
     {
+      "id": "ai-service-operations",
+      "domain": "Safe Projects & Operations",
+      "domainId": "safe-projects-operations",
+      "name": "AI Service Operations",
+      "color": "var(--color-text)"
+    },
+    {
       "id": "software-engineering",
       "domain": "Safe Technology & Engineering",
       "domainId": "safe-technology-engineering",
@@ -1094,6 +1122,13 @@
       "domain": "Safe Technology & Engineering",
       "domainId": "safe-technology-engineering",
       "name": "System Architecture",
+      "color": "var(--color-text)"
+    },
+    {
+      "id": "ai-infrastructure-engineering",
+      "domain": "Safe Technology & Engineering",
+      "domainId": "safe-technology-engineering",
+      "name": "AI Infrastructure Engineering",
       "color": "var(--color-text)"
     }
   ]

@@ -176,3 +176,88 @@ domain:
                 - issuer: "Google Cloud"
                   description: "Google Cloud Professional Cloud DevOps Engineer (Exam)"
                   career_impact: "Automating infrastructure delivery, monitoring, and compliance on Google Cloud."
+
+    ai-infrastructure-engineering:
+      name: AI Infrastructure Engineering
+      competencies:
+        ai-accelerator-infrastructure:
+          name: GPU and Accelerator Infrastructure
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications:
+                - issuer: Linux Foundation / CNCF
+                  description: >-
+                    Certified Kubernetes Administrator (CKA), optional foundation where Kubernetes is used.
+                    Source:
+                    https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
+                    (reviewed 2026-11-02).
+                  career_impact: >-
+                    May support cluster administration learning; does not establish AI workload competence or
+                    replace practical evidence.
+            senior:
+              qualifications: []
+        ai-training-platforms:
+          name: Training and Fine-tuning Platforms
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-inference-serving:
+          name: Inference Deployment and Serving
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-cloud-model-integration:
+          name: Cloud-hosted Model Integration
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-self-hosted-models:
+          name: Local and Self-hosted Models
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-model-lifecycle:
+          name: Model Lifecycle and Traceability
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-evaluation-reliability:
+          name: Evaluation Infrastructure, Monitoring and Reliability
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-security-controls:
+          name: AI Security and Technical Controls
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []

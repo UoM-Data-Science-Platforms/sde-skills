@@ -582,3 +582,18 @@ subdomains:
         radars:
           score: 1/4
           status: Core Statistical Computing Language
+
+  ai-service-operations:
+    name: AI Service Operations
+    items:
+      - name: NCSC secure AI system development
+        role: >-
+          Illustrative resource for ai service operations. Select tools and guidance for local requirements;
+          inclusion is not mandatory or evidence of competence. Source:
+          https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development (reviewed 2026-11-02).
+        sources:
+          standards:
+            mentions:
+              - >-
+                NCSC secure AI system development —
+                https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development (reviewed 2026-11-02)

@@ -238,3 +238,25 @@ domain:
                   career_impact: "Designing and managing secure data migration strategies using Transfer Appliance and Storage Transfer Service."
             senior:
               qualifications: []
+
+    ai-data-lifecycle:
+      name: AI Data Lifecycle
+      competencies:
+        ai-data-provenance-permissions:
+          name: AI Data Provenance and Permissions
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
+        ai-data-retention-lineage:
+          name: AI Data Retention and Model Lineage
+          levels:
+            entry:
+              qualifications: []
+            mid:
+              qualifications: []
+            senior:
+              qualifications: []
