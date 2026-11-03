@@ -42,14 +42,34 @@ def compile_satre(mapping, domains):
                     "domainId": did,
                     "subdomainId": sid,
                 }
+    project_relationships(result)
+    return result
+
+
+def project_relationships(result):
+    """Project requirement links and unique capability-level competency labels."""
     capabilities = {c["id"]: c for p in result["pillars"] for c in p["components"]}
     for capability in capabilities.values():
         capability["mappings"] = {}
+        for requirement in capability["requirements"]:
+            requirement["mapped_competency_ids"] = []
+    requirements = {
+        r["id"]: r for c in capabilities.values() for r in c["requirements"]
+    }
     # IDs and full evidence remain in top-level relationships. This label projection
     # is generated, never edited or used as evidence of substantive alignment.
+    projected = set()
     for r in result["relationships"]:
         if r["review"]["status"] == "rejected":
             continue
+        for ref in r["requirement_ids"]:
+            ids = requirements[ref]["mapped_competency_ids"]
+            if r["competency_id"] not in ids:
+                ids.append(r["competency_id"])
+        key = (r["capability_id"], r["competency_id"])
+        if key in projected:
+            continue
+        projected.add(key)
         competency = result["competencies"][r["competency_id"]]
         if (competency["domainId"], competency["subdomainId"]) != (
             r["domain_id"],
@@ -62,4 +82,3 @@ def compile_satre(mapping, domains):
             .setdefault(r["subdomain_id"], [])
         )
         labels.append(competency["name"])
-    return result

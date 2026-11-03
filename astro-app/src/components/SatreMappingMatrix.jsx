@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { SATRE_PILLARS, SUBDOMAINS, SUBDOMAIN_INDEX, DOMAINS } from '../data/satreMapping.js';
+import { COMPETENCIES } from '../data/satreMapping.js';
 
 const TOTAL_COLS = 1 + SUBDOMAINS.length; // component name col + 21 subdomain cols
 
@@ -120,6 +121,10 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
           {component.requirements.map(requirement => (
             <li key={requirement.id} style={{ marginBottom: 'var(--space-sm)' }}>
               <strong>{requirement.id} — {requirement.importance}</strong>: {requirement.statement}
+              <p style={{ margin: '4px 0', fontSize: 'var(--text-small)' }}>
+                <strong>Mapped competencies:</strong>{' '}
+                {requirement.mapped_competency_ids.map(id => COMPETENCIES[id].name).join(' · ') || 'None'}
+              </p>
               <details><summary>Official guidance and applicability</summary>
                 <p style={{ whiteSpace: 'pre-line' }}>{requirement.guidance}</p>
               </details>

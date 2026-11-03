@@ -106,7 +106,7 @@ def validate_relationships(mapping, domains, root):
         return [
             f"SATRE/{'/'.join(map(str, e.path))}: {e.message}" for e in schema_errors
         ]
-    errors, seen, seen_ids = [], set(), set()
+    errors, seen, seen_ids, seen_references = [], set(), set(), set()
     capabilities = {c["id"]: c for p in mapping["pillars"] for c in p["components"]}
     legacy = {c["id"]: c for c in mapping["legacy_components"]}
     migrated = set()
@@ -117,13 +117,18 @@ def validate_relationships(mapping, domains, root):
 
     for r in mapping["relationships"]:
         where = r["id"]
-        key = (r["capability_id"], r["competency_id"])
+        key = (
+            r["capability_id"],
+            r["competency_id"],
+            tuple(sorted(r["requirement_ids"])),
+            r["review"]["status"] == "rejected",
+        )
         check(where not in seen_ids, where, "duplicate relationship ID")
         seen_ids.add(where)
         check(
             key not in seen,
             where,
-            "duplicate relationship for capability and competency",
+            "duplicate relationship for competency and requirement scope",
         )
         seen.add(key)
         did, sid, cid = r["domain_id"], r["subdomain_id"], r["competency_id"]
@@ -135,15 +140,7 @@ def validate_relationships(mapping, domains, root):
             where,
             f"unknown or wrongly parented competency {cid}",
         )
-        capability = capabilities.get(r["capability_id"])
-        check(capability is not None, where, "unknown SATRE capability")
-        requirements = {req["id"] for req in (capability or {}).get("requirements", [])}
-        for ref in r["requirement_ids"]:
-            check(
-                ref in requirements,
-                where,
-                f"unknown or wrongly parented SATRE requirement {ref}",
-            )
+        validate_requirement_references(r, capabilities, seen_references, check)
         if r["review"]["status"] in {"reviewed", "rejected"}:
             for name, value in [
                 ("rationale", r["rationale"]),
@@ -172,7 +169,99 @@ def validate_relationships(mapping, domains, root):
             )
             migrated.add((old_id, r["capability_id"], did, sid, cid))
     validate_migration(legacy, capabilities, migrated, check)
+    if not errors:
+        validate_assessments(mapping, check)
     return errors
+
+
+def validate_assessments(mapping, check):
+    """A completed inventory review must account for each requirement honestly."""
+    report = mapping.get("source", {}).get("relationship_review", {})
+    if report.get("status") != "reviewed":
+        return
+    contributions = {}
+    for relationship in mapping["relationships"]:
+        status = relationship["review"]["status"]
+        check(
+            status != "pending",
+            relationship["id"],
+            "completed inventory review contains a pending relationship",
+        )
+        if status == "reviewed":
+            for ref in relationship["requirement_ids"]:
+                contributions.setdefault(ref, set()).add(relationship["contribution"])
+    requirements = [
+        r
+        for p in mapping["pillars"]
+        for c in p["components"]
+        for r in c["requirements"]
+    ]
+    check(
+        report.get("requirement_count") == len(requirements),
+        "review",
+        "completed review requirement count does not match inventory",
+    )
+    for requirement in requirements:
+        validate_assessment(requirement, contributions, report, check)
+
+
+def validate_assessment(requirement, contributions, report, check):
+    ref = requirement["id"]
+    assessment = requirement.get("mapping_assessment")
+    if not isinstance(assessment, dict):
+        check(False, ref, "completed review requires a mapping assessment")
+        return
+    kinds = contributions.get(ref, set())
+    expected = (
+        "direct" if "direct" in kinds else "supporting_only" if kinds else "unmapped"
+    )
+    expected_status = "reviewed" if kinds else "gap"
+    if requirement.get("mapping_review_status") == "excluded":
+        expected, expected_status = "excluded", "excluded"
+        applicability = requirement.get("applicability", {})
+        check(not kinds, ref, "excluded requirement has retained contributions")
+        check(
+            applicability.get("assessment") == "excluded",
+            ref,
+            "excluded mapping requires an applicability exclusion",
+        )
+        for field in ("exclusion_rationale", "profile_reference"):
+            value = applicability.get(field)
+            check(
+                isinstance(value, str) and bool(value.strip()),
+                ref,
+                f"applicability exclusion requires {field}",
+            )
+    check(
+        assessment.get("result") == expected,
+        ref,
+        "mapping assessment contradicts reviewed contributions",
+    )
+    check(
+        requirement.get("mapping_review_status") == expected_status,
+        ref,
+        "mapping review status contradicts reviewed contributions",
+    )
+    for field in ("rationale", "reviewer", "reviewed_on"):
+        value = assessment.get(field)
+        check(
+            isinstance(value, str) and bool(value.strip()),
+            ref,
+            f"mapping assessment requires {field}",
+        )
+    check(
+        assessment.get("reviewer") == report.get("reviewer")
+        and assessment.get("reviewed_on") == report.get("reviewed_on"),
+        ref,
+        "mapping assessment reviewer/date differs from completed review",
+    )
+    if expected in ("supporting_only", "unmapped"):
+        gap = assessment.get("framework_gap")
+        check(
+            isinstance(gap, str) and bool(gap.strip()),
+            ref,
+            "unmapped or supporting-only requirement needs a framework-gap observation",
+        )
 
 
 def validate_requirements(ec, ac, check):
@@ -281,3 +370,24 @@ def validate_components(ep, ap, check):
             "incorrect official capability name",
         )
         validate_requirements(ec, ac, check)
+
+
+def validate_requirement_references(r, capabilities, seen_references, check):
+    where, cid = r["id"], r["competency_id"]
+    capability = capabilities.get(r["capability_id"])
+    check(capability is not None, where, "unknown SATRE capability")
+    requirements = {req["id"] for req in (capability or {}).get("requirements", [])}
+    for ref in r["requirement_ids"]:
+        check(
+            ref in requirements,
+            where,
+            f"unknown or wrongly parented SATRE requirement {ref}",
+        )
+        if r["review"]["status"] != "rejected":
+            pair = (ref, cid)
+            check(
+                pair not in seen_references,
+                where,
+                f"duplicate competency contribution to requirement {ref}",
+            )
+            seen_references.add(pair)

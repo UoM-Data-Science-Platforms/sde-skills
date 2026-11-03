@@ -88,10 +88,11 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(
             sum(len(c["requirements"]) for c in federation["components"]), 21
         )
-        self.assertEqual(
-            data["source"]["relationship_review"],
-            {"status": "pending", "reviewed_on": None, "reviewer": None},
-        )
+        review = data["source"]["relationship_review"]
+        self.assertEqual(review["status"], "reviewed")
+        self.assertEqual(review["requirement_count"], 185)
+        self.assertEqual(review["reviewer_type"], "ai_assisted")
+        self.assertIsNone(review["human_signoff"])
 
     def test_missing_official_requirement(self):
         self.change(
@@ -167,10 +168,13 @@ class ValidationTests(unittest.TestCase):
         self.assertIn("SATRE/relationships/", self.errors())
 
     def test_pending_cannot_claim_direct_contribution(self):
-        self.change(
-            "satre_mapping.yaml",
-            lambda d: d["relationships"][0].update(contribution="direct"),
-        )
+        def mutate(data):
+            data["relationships"][0].update(
+                contribution="direct",
+                review={"status": "pending", "reviewer": None, "reviewed_on": None},
+            )
+
+        self.change("satre_mapping.yaml", mutate)
         self.assertIn("contribution", self.errors())
 
     def test_reviewed_relationship_requires_evidence(self):
@@ -218,7 +222,16 @@ class ValidationTests(unittest.TestCase):
         self.assertIn("contribution", self.errors())
 
     def test_legacy_relationship_cannot_disappear(self):
-        self.change("satre_mapping.yaml", lambda d: d["relationships"].pop(0))
+        def mutate(data):
+            old = data["relationships"][0]
+            data["relationships"] = [
+                r
+                for r in data["relationships"]
+                if (r["capability_id"], r["competency_id"])
+                != (old["capability_id"], old["competency_id"])
+            ]
+
+        self.change("satre_mapping.yaml", mutate)
         self.assertIn("legacy relationship lost", self.errors())
 
     def domains(self):
@@ -230,7 +243,9 @@ class ValidationTests(unittest.TestCase):
     def test_generation_preserves_evidence_and_derives_labels(self):
         mapping = load_yaml(self.root / "satre_mapping.yaml")
         domains = self.domains()
-        r = mapping["relationships"][0]
+        r = next(
+            r for r in mapping["relationships"] if r["review"]["status"] == "reviewed"
+        )
         domains[r["domain_id"]]["name"] = "Renamed domain"
         domains[r["domain_id"]]["subdomains"][r["subdomain_id"]]["name"] = (
             "Renamed subdomain"
@@ -250,7 +265,11 @@ class ValidationTests(unittest.TestCase):
             for source_c, output_c in zip(
                 source_p["components"], output_p["components"]
             ):
-                self.assertEqual(source_c["requirements"], output_c["requirements"])
+                preserved = [
+                    {k: v for k, v in r.items() if k != "mapped_competency_ids"}
+                    for r in output_c["requirements"]
+                ]
+                self.assertEqual(source_c["requirements"], preserved)
         competency = generated["competencies"][r["competency_id"]]
         self.assertEqual(competency["name"], "Renamed competency")
         self.assertEqual(
@@ -307,6 +326,127 @@ class ValidationTests(unittest.TestCase):
             "federation_caveat",
         ):
             self.assertEqual(result[key], mapping[key])
+
+    def requirement(self, mapping, ref):
+        return next(
+            r
+            for p in mapping["pillars"]
+            for c in p["components"]
+            for r in c["requirements"]
+            if r["id"] == ref
+        )
+
+    def test_supporting_only_cannot_be_reported_as_direct(self):
+        def mutate(data):
+            self.requirement(data, "1.6.01")["mapping_assessment"]["result"] = "direct"
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("assessment contradicts reviewed contributions", self.errors())
+
+    def test_completed_review_cannot_omit_requirement_assessment(self):
+        def mutate(data):
+            self.requirement(data, "3.2.04").pop("mapping_assessment")
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("completed review requires a mapping assessment", self.errors())
+
+    def test_gap_requires_specific_observation(self):
+        def mutate(data):
+            self.requirement(data, "1.6.07")["mapping_assessment"]["framework_gap"] = (
+                None
+            )
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("framework-gap observation", self.errors())
+
+    def test_removing_retained_link_invalidates_requirement_assessment(self):
+        def mutate(data):
+            data["relationships"] = [
+                r for r in data["relationships"] if "3.2.04" not in r["requirement_ids"]
+            ]
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("assessment contradicts reviewed contributions", self.errors())
+
+    def test_overlapping_scoped_relationships_cannot_double_count(self):
+        def mutate(data):
+            original = next(
+                r
+                for r in data["relationships"]
+                if r["id"] == "1.1.01:information-governance"
+            )
+            duplicate = deepcopy(original)
+            duplicate["id"] = "overlapping-scope"
+            duplicate["requirement_ids"].append("1.1.02")
+            data["relationships"].append(duplicate)
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("duplicate competency contribution to requirement", self.errors())
+
+    def test_capability_projection_deduplicates_requirement_links(self):
+        mapping = load_yaml(self.root / "satre_mapping.yaml")
+        generated = compile_satre(mapping, self.domains())
+        capability = next(
+            c for p in generated["pillars"] for c in p["components"] if c["id"] == "1.2"
+        )
+        names = [
+            name
+            for subs in capability["mappings"].values()
+            for values in subs.values()
+            for name in values
+        ]
+        label = generated["competencies"]["certification-accreditation"]["name"]
+        self.assertEqual(names.count(label), 1)
+        self.assertGreater(
+            sum(
+                r["competency_id"] == "certification-accreditation"
+                and r["capability_id"] == "1.2"
+                and r["review"]["status"] == "reviewed"
+                for r in generated["relationships"]
+            ),
+            1,
+        )
+
+    def test_requirement_projection_preserves_specificity_and_empty_gaps(self):
+        mapping = load_yaml(self.root / "satre_mapping.yaml")
+        generated = compile_satre(mapping, self.domains())
+        self.assertEqual(
+            self.requirement(generated, "3.2.04")["mapped_competency_ids"],
+            ["authentication-systems"],
+        )
+        self.assertEqual(
+            self.requirement(generated, "1.6.07")["mapped_competency_ids"], []
+        )
+        self.assertEqual(
+            self.requirement(generated, "1.7.01")["mapped_competency_ids"], []
+        )
+        self.assertEqual(
+            generated["mapping_methodology"], mapping["mapping_methodology"]
+        )
+
+    def exclusion_fixture(self, data):
+        r = self.requirement(data, "1.2.08")
+        r["mapping_review_status"] = "excluded"
+        r["mapping_assessment"].update(result="excluded", framework_gap=None)
+        r["applicability"].update(
+            assessment="excluded",
+            exclusion_rationale="Synthetic fixture: no physical assets in scope.",
+            profile_reference="Synthetic fixture deployment profile",
+        )
+
+    def test_evidenced_applicability_exclusion_is_distinct_from_gap(self):
+        self.change("satre_mapping.yaml", self.exclusion_fixture)
+        self.assertEqual(self.errors(), "")
+
+    def test_exclusion_cannot_be_inferred_without_deployment_scope(self):
+        def mutate(data):
+            self.exclusion_fixture(data)
+            self.requirement(data, "1.2.08")["applicability"].pop("profile_reference")
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn(
+            "applicability exclusion requires profile_reference", self.errors()
+        )
 
 
 if __name__ == "__main__":

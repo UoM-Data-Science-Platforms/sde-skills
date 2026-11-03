@@ -97,6 +97,24 @@ Do not delete links silently. Requirements distinguish `pending`, `reviewed`,
 gap or applicability exclusion. Full gap/exclusion evidence, count reconciliation
 and the two review responsibilities remain part of #124 after #118/#120/#122.
 
+Relationships are reviewed against individual official requirement IDs. A
+competency may contribute to several requirements in one capability, with a
+different direct/supporting contribution where justified; each competency and
+requirement pair must be unique. The capability matrix projects each competency
+once, while each requirement lists its own mapped competencies.
+
+Completed mapping reviews carry a per-requirement `mapping_assessment` with the
+result (`direct`, `supporting_only`, `unmapped` or `excluded`), rationale,
+reviewer/date and gap observations for supporting-only or unmapped requirements. An AI-assisted
+editorial review records that identity explicitly and leaves human sign-off unset.
+Deployment-specific applicability remains separate: without a TRE profile, do not
+infer exclusions from a missing competency. Source statements and conditional
+importance stay unchanged. Superseded broad migration candidates remain rejected
+audit records; retained links use scoped requirement references.
+An actual exclusion needs an applicability assessment, an `exclusion_rationale`
+and a `profile_reference` identifying the deployment scope; it cannot retain
+contributing links. The generic framework review asserts no such exclusions.
+
 Keep review metadata in the source data and maintenance discussions in GitHub
 issues. The public mapping displays requirements, guidance and competencies
 without disclaimer banners or pending/unverified notices. Keep implementation
