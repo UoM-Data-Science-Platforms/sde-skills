@@ -51,4 +51,3 @@ Planning only at creation. The owner will inspect this issue before a separate s
 Pinned commit 133b4af7f3c69586a8fe3da7d5d06685158fe473; attributed source snapshot with LF-normalized SHA-256. Inventory: 35 capabilities / 185 requirements, including 7 federation capabilities / 21 requirements. All 17 legacy component records and their mappings are preserved separately with unverified topic candidates. No framework competencies changed.
 
 Validation: YAML validator (25 files, 92 competencies, zero errors); 12 regression tests passed; data generation and Astro production build (23 pages) passed. New checks cover source pinning, completeness, official wording, applicability and snapshot tampering. Relationship-schema migration follows in #116; wider count and review-lifecycle validation remains in #124.
-
