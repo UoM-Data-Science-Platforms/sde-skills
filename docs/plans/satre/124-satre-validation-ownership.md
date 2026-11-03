@@ -4,13 +4,13 @@ Issue: https://github.com/UoM-Data-Science-Platforms/sde-skills/issues/124
 Branch: codex/124-satre-validation-ownership
 Base: main at abf6fe40bf4f62257487d53b2d9f66ee16e7b98d
 
-This draft contains the agreed plan. Implementation is pending owner review and a separate implementation session.
+Updated 3 November 2026. This branch includes the #115/#117 implementations. This package remains a planning draft for the remaining scope in the delivery update below.
 
 ## Outcome
 
 Work package 6 of 6: Validate SATRE mapping integrity and document its review lifecycle.
 
-## Scope
+## Original scope (see delivery update below)
 
 - [ ] Extend the existing scripts/validate_yml.py and scripts/test_validate_yml.py and current CI checks. First inspect what remote main already validates; avoid duplicating working checks.
 - [ ] Validate canonical reference existence and parentage, SATRE version/requirement references, duplicate relationships, contribution enums, rationale/review-state rules and explicit unmapped/gap representation.
@@ -43,4 +43,26 @@ Federation is a recent addition to the SATRE standard. We have included a mappin
 
 ## Handoff
 
-Planning only at creation. The owner will inspect this issue before a separate session implements it. A dedicated codex/ branch and draft PR hold the implementation brief. Refresh that branch from current main after dependencies land. Update this checklist and the PR description during implementation. Keep the PR draft until implementation and validation are complete. The planning commit does not complete this issue. Record any framework extensions as a separate proposal.
+PR #125 is stacked on #117 to expose this brief without duplicating source/schema changes in review. Dependencies #118/#120/#122 remain pending. Refresh from main and retarget after dependencies merge. Keep this PR draft until the remaining implementation and validation are complete. Preserve existing tests and extend them with meaningful behavioral failures. Framework expansion requires a separate proposal.
+
+## Delivery update — 3 November 2026
+
+## Validation delivered by dependency PRs
+
+Implemented in #115 and #117; pending their review and merge:
+
+- Pinned SATRE source metadata, complete official inventory, importance/applicability preservation and snapshot integrity checks.
+- Canonical domain/subdomain/competency parentage, SATRE requirement references, duplicate relationship and contribution-enum checks.
+- Pending/reviewed/rejected relationship structure, completed-review rationale/identity/date rules, and lossless legacy migration provenance.
+- Generation fails before output writes; generated JSON preserves metadata, official requirements and relationships. Canonical labels and spans derive from YAML.
+- 26 regression tests, with CI generation and committed-JSON drift checking. Deployment installs validation dependencies.
+
+Do not recreate these checks. Inspect them on the refreshed branch and extend them for the remaining packages.
+
+## Remaining scope for this package
+
+- [ ] Validate reviewed requirement/capability status against retained reviewed relationships; require evidence for actual gaps and applicability exclusions.
+- [ ] Test shared metric numerators/denominators against #120 definitions, including duplicate requirement references, supporting-only links, pending review, confirmed gaps and applicability exclusions.
+- [ ] Verify displayed counts and source provenance reconcile across the views delivered by #122.
+- [ ] Document the complete release-update and relationship-review lifecycle, with real source version, date and reviewer identity. Coordinate SATRE-accuracy and competency-framework-accuracy review responsibilities without inventing named owners.
+- [ ] Preserve the initial framework and federation caveat; record proposed extensions separately.
