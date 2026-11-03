@@ -97,8 +97,10 @@ Do not delete links silently. Requirements distinguish `pending`, `reviewed`,
 gap or applicability exclusion. Full gap/exclusion evidence, count reconciliation
 and the two review responsibilities remain part of #124 after #118/#120/#122.
 
-The initial competency framework and agreed federation caveat must be preserved.
-Record potential gaps for review; propose framework expansion separately.
+Keep review metadata in the source data and maintenance discussions in GitHub
+issues. The public mapping displays requirements, guidance and competencies
+without disclaimer banners or pending/unverified notices. Keep implementation
+plans and handoffs in issues rather than committing plan documents.
 
 ## Submitting a Pull Request
 

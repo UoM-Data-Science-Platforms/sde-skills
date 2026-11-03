@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { SATRE_PILLARS, SUBDOMAINS, DOMAINS as SATRE_DOMAINS } from '../data/satreMapping.js';
 import { DOMAIN_COLORS } from '../data/domains.js';
-import SatreSourceNotice from './SatreSourceNotice.jsx';
 
 // domainId -> array of its subdomain IDs
 const DOMAIN_SUB_IDS = Object.fromEntries(
@@ -615,7 +614,7 @@ export default function CFOverview() {
           )}
 
           {/* SATRE summary matrix */}
-          {alignTab === 'satre' && (<><SatreSourceNotice />
+          {alignTab === 'satre' && (
             <div className="competency-card is-visible" style={{ padding: 0, overflow: 'hidden' }}>
               <div className="pill-scroll">
                 <table className="table table-sm mb-0" style={{ fontSize: 'var(--text-small)' }}>
@@ -658,7 +657,7 @@ export default function CFOverview() {
                 ))}
                 <a href={`${base}satre-mapping/`} style={{ marginLeft: 'auto', fontSize: '0.8rem', color }}>Full competency detail →</a>
               </div>
-            </div></>
+            </div>
           )}
         </div>
 
