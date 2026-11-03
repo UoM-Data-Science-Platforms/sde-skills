@@ -4,8 +4,13 @@ on:
   pull_request:
     paths:
       - 'yaml/**'
+      - 'astro-app/src/data/satre_mapping.json'
       - 'scripts/validate_yml.py'
       - 'scripts/test_validate_yml.py'
+      - 'scripts/validate_satre.py'
+      - 'scripts/satre_source.py'
+      - 'scripts/satre_data.py'
+      - 'scripts/build_data.py'
       - 'scripts/requirements-validation.txt'
       - '.github/workflows/validate-yaml.yml'
   workflow_dispatch:
@@ -24,3 +29,5 @@ jobs:
       - run: python -m pip install -r scripts/requirements-validation.txt
       - run: python scripts/validate_yml.py
       - run: python -m unittest discover -s scripts -p 'test_validate_yml.py'
+      - run: python scripts/build_data.py
+      - run: git diff --exit-code -- astro-app/src/data/satre_mapping.json

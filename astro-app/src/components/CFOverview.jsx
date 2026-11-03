@@ -526,21 +526,21 @@ export default function CFOverview() {
                     <hr style={{ border: 'none', borderTop: '1px solid var(--color-border)', margin: 0 }} />
 
                     {/* SATRE pillar table */}
-                    <p style={{ margin: '0 0 4px', fontSize: '0.58rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>SATRE Coverage</p>
+                    <p style={{ margin: '0 0 4px', fontSize: '0.58rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>SATRE mapping candidates</p>
                     <div style={{ borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: `1px solid color-mix(in srgb, ${c} 15%, transparent)` }}>
                       <table className="table table-sm mb-0" style={{ fontSize: '0.68rem' }}>
                         <tbody>
                           {pillarHits.map((p, pi) => (
                             <tr key={pi} style={{ borderTop: pi > 0 ? `1px solid color-mix(in srgb, ${c} 10%, transparent)` : undefined }}>
                               <td style={{ padding: '3px 7px', color: 'var(--color-text-muted)', lineHeight: 1.4 }}>{p.name}</td>
-                              <td title={`${p.addressed} of ${p.total} SATRE components in this pillar are addressed by at least one subdomain in this domain`} style={{ padding: '3px 7px', textAlign: 'right', fontWeight: 700, color: p.addressed > 0 ? c : 'var(--color-text-muted)', whiteSpace: 'nowrap', cursor: 'help' }}>
+                              <td title={`${p.addressed} of ${p.total} SATRE components in this pillar have unreviewed competency candidates in this domain`} style={{ padding: '3px 7px', textAlign: 'right', fontWeight: 700, color: p.addressed > 0 ? c : 'var(--color-text-muted)', whiteSpace: 'nowrap', cursor: 'help' }}>
                                 {p.addressed} / {p.total}
                               </td>
                             </tr>
                           ))}
                           <tr style={{ borderTop: `1px solid color-mix(in srgb, ${c} 25%, transparent)`, background: `color-mix(in srgb, ${c} 6%, transparent)` }}>
                             <td style={{ padding: '3px 7px', fontWeight: 700, fontSize: '0.65rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-muted)' }}>Total</td>
-                            <td title={`${satreCount} of ${TOTAL_SATRE_COMPONENTS} SATRE components in total are addressed by at least one subdomain in this domain`} style={{ padding: '3px 7px', textAlign: 'right', fontWeight: 800, color: c, cursor: 'help' }}>{satreCount} / {TOTAL_SATRE_COMPONENTS}</td>
+                            <td title={`${satreCount} of ${TOTAL_SATRE_COMPONENTS} SATRE components in total have unreviewed competency candidates in this domain`} style={{ padding: '3px 7px', textAlign: 'right', fontWeight: 800, color: c, cursor: 'help' }}>{satreCount} / {TOTAL_SATRE_COMPONENTS}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -642,7 +642,7 @@ export default function CFOverview() {
               </div>
               {/* Legend */}
               <div style={{ padding: 'var(--space-sm) var(--space-lg)', borderTop: '1px solid var(--color-border)', display: 'flex', gap: 'var(--space-lg)', alignItems: 'center', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>Subdomains addressing component:</span>
+                <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>Subdomains with mapping candidates:</span>
                 {[['1', 'low'], ['2', 'medium'], ['3+', 'high']].map(([label, level]) => (
                   <span key={level} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                     <span style={{

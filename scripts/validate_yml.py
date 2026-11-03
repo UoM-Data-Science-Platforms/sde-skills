@@ -4,12 +4,14 @@
 Install scripts/requirements-validation.txt and run from the repository root.
 Reference integrity does not establish semantic SATRE alignment or compliance.
 """
+
 import re
 import sys
 from pathlib import Path
 
 import jsonschema
 import yaml
+from validate_satre import validate_source, validate_relationships
 
 LEVELS = {"entry", "mid", "senior"}
 
@@ -23,12 +25,16 @@ def unique_mapping(loader, node, deep=False):
     for key_node, _ in node.value:
         key = loader.construct_object(key_node, deep=deep)
         if key in keys:
-            raise ValueError(f"Duplicate key {key!r} at line {key_node.start_mark.line + 1}")
+            raise ValueError(
+                f"Duplicate key {key!r} at line {key_node.start_mark.line + 1}"
+            )
         keys.add(key)
     return yaml.SafeLoader.construct_mapping(loader, node, deep=deep)
 
 
-UniqueKeyLoader.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping)
+UniqueKeyLoader.add_constructor(
+    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping
+)
 
 
 def load_yaml(path):
@@ -43,8 +49,10 @@ def validate(root=Path("yaml")):
             errors.append(f"{where}: {message}")
 
     def text(value):
-        return isinstance(value, str) and bool(value.strip()) and not re.search(
-            r"\b(TODO|TBD|FIXME|placeholder)\b", value, re.I
+        return (
+            isinstance(value, str)
+            and bool(value.strip())
+            and not re.search(r"\b(TODO|TBD|FIXME|placeholder)\b", value, re.I)
         )
 
     def strings(value):
@@ -56,7 +64,9 @@ def validate(root=Path("yaml")):
             return False
         check(text(obj.get("name")), where, "missing or unfinished name")
         if description:
-            check(text(obj.get("description")), where, "missing or unfinished description")
+            check(
+                text(obj.get("description")), where, "missing or unfinished description"
+            )
         identifier = obj.get("id")
         check(text(identifier), where, "missing ID")
         check(identifier not in ids, where, f"duplicate ID {identifier}")
@@ -109,10 +119,18 @@ def validate(root=Path("yaml")):
                 if not isinstance(levels, dict):
                     check(False, where, "levels must be an object")
                     continue
-                check(set(levels) == LEVELS, where, "requires exactly entry, mid and senior")
+                check(
+                    set(levels) == LEVELS,
+                    where,
+                    "requires exactly entry, mid and senior",
+                )
                 for level, value in levels.items():
                     if named(value, f"{where}/{level}", f"{cid}-{level}"):
-                        check(strings(value.get("skills")), f"{where}/{level}", "skills must be non-empty strings")
+                        check(
+                            strings(value.get("skills")),
+                            f"{where}/{level}",
+                            "skills must be non-empty strings",
+                        )
     check(len(domains) == 6, "domains", "expected all six domain files")
 
     for filename, data in documents.items():
@@ -126,53 +144,118 @@ def validate(root=Path("yaml")):
             where = f"{filename}/{sid}"
             check(sid in main, where, "unknown subdomain reference")
             for item in sub.get("items", []):
-                check(text(item.get("name")) and text(item.get("role")), where, "tool requires name and role")
+                check(
+                    text(item.get("name")) and text(item.get("role")),
+                    where,
+                    "tool requires name and role",
+                )
             for cid, comp in sub.get("competencies", {}).items():
                 where = f"{filename}/{sid}/{cid}"
-                check(cid in (main.get(sid, {}).get("competencies") or {}), where, "unknown competency reference")
+                check(
+                    cid in (main.get(sid, {}).get("competencies") or {}),
+                    where,
+                    "unknown competency reference",
+                )
                 levels = comp.get("levels", {})
-                check(set(levels) == LEVELS, where, "supporting entries require all three levels")
+                check(
+                    set(levels) == LEVELS,
+                    where,
+                    "supporting entries require all three levels",
+                )
                 for level, value in levels.items():
                     if "self-learning" in filename:
                         concepts = value.get("core_concepts")
-                        check(isinstance(concepts, list) and bool(concepts), where, "missing core concepts")
+                        check(
+                            isinstance(concepts, list) and bool(concepts),
+                            where,
+                            "missing core concepts",
+                        )
                         for concept in concepts or []:
-                            check(all(text(concept.get(k)) for k in ("topic", "why")), where, "missing learning topic or rationale")
-                            check(all(strings(concept.get(k)) for k in ("concepts", "search_terms")), where, "invalid learning lists")
+                            check(
+                                all(text(concept.get(k)) for k in ("topic", "why")),
+                                where,
+                                "missing learning topic or rationale",
+                            )
+                            check(
+                                all(
+                                    strings(concept.get(k))
+                                    for k in ("concepts", "search_terms")
+                                ),
+                                where,
+                                "invalid learning lists",
+                            )
                     if "qualifications" in filename:
                         qualifications = value.get("qualifications")
-                        check(isinstance(qualifications, list), where, "qualifications must be a list (empty is allowed)")
+                        check(
+                            isinstance(qualifications, list),
+                            where,
+                            "qualifications must be a list (empty is allowed)",
+                        )
                         for qual in qualifications or []:
-                            check(all(text(qual.get(k)) for k in ("issuer", "description", "career_impact")), where, "incomplete qualification")
+                            check(
+                                all(
+                                    text(qual.get(k))
+                                    for k in ("issuer", "description", "career_impact")
+                                ),
+                                where,
+                                "incomplete qualification",
+                            )
 
     for did, domain in domains.items():
         for sid, sub in domain.get("subdomains", {}).items():
             if not sid.startswith("ai-"):
                 continue
-            for suffix in ("self-learning.yml", "qualifications.yaml", "tools-tech-standards.yaml"):
+            for suffix in (
+                "self-learning.yml",
+                "qualifications.yaml",
+                "tools-tech-standards.yaml",
+            ):
                 doc = documents.get(f"{did}_{suffix}", {})
-                support = doc.get("subdomains", doc.get("domain", {}).get("subdomains", {})).get(sid, {})
+                support = doc.get(
+                    "subdomains", doc.get("domain", {}).get("subdomains", {})
+                ).get(sid, {})
                 if suffix.startswith("tools"):
-                    check(bool(support.get("items")), sid, "missing supporting tools/standards")
+                    check(
+                        bool(support.get("items")),
+                        sid,
+                        "missing supporting tools/standards",
+                    )
                 else:
                     for cid in sub.get("competencies") or {}:
-                        check(cid in support.get("competencies", {}), cid, f"missing {suffix} entry")
+                        check(
+                            cid in support.get("competencies", {}),
+                            cid,
+                            f"missing {suffix} entry",
+                        )
 
     mapping = documents.get("satre_mapping.yaml", {})
+    errors.extend(validate_source(mapping, root, load_yaml))
+    if not errors:
+        errors.extend(validate_relationships(mapping, domains, root))
+    if errors:
+        return errors, len(documents), count
     component_ids = set()
     check(bool(mapping.get("pillars")), "SATRE", "missing pillars")
-    for pillar in mapping.get("pillars", []):
+    mapping_pillars = list(mapping.get("pillars", [])) + [
+        {"components": mapping.get("legacy_components", [])}
+    ]
+    for pillar in mapping_pillars:
         for component in pillar.get("components", []):
             ref = component.get("id")
-            check(ref not in component_ids, "SATRE", f"duplicate component ID {ref}")
-            component_ids.add(ref)
+            key = (pillar.get("id", "legacy"), ref)
+            check(key not in component_ids, "SATRE", f"duplicate component ID {ref}")
+            component_ids.add(key)
             for did, subs in component.get("mappings", {}).items():
                 check(did in domains, ref, f"unknown domain {did}")
                 for sid, comps in subs.items():
                     main = domains.get(did, {}).get("subdomains", {})
                     check(sid in main, ref, f"unknown subdomain {sid}")
                     for cid in comps:
-                        check(cid in (main.get(sid, {}).get("competencies") or {}), ref, f"unknown competency {cid}")
+                        check(
+                            cid in (main.get(sid, {}).get("competencies") or {}),
+                            ref,
+                            f"unknown competency {cid}",
+                        )
     return errors, len(documents), count
 
 
@@ -180,7 +263,9 @@ def main():
     errors, files, count = validate()
     for error in errors:
         print(f"[FAIL] {error}")
-    print(f"Validated {files} YAML files and {count} competencies; {len(errors)} errors.")
+    print(
+        f"Validated {files} YAML files and {count} competencies; {len(errors)} errors."
+    )
     return bool(errors)
 
 

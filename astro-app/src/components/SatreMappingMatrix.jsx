@@ -115,18 +115,23 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
     }}>
       {/* Requirement text */}
       <div>
-        <p style={{ margin: '0 0 6px', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>
-          SATRE Requirement
-        </p>
-        <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text)', lineHeight: 1.75, fontStyle: 'italic' }}>
-          {component.requirement}
-        </p>
+        <h4>SATRE requirements</h4>
+        <ul>
+          {component.requirements.map(requirement => (
+            <li key={requirement.id} style={{ marginBottom: 'var(--space-sm)' }}>
+              <strong>{requirement.id} — {requirement.importance}</strong>: {requirement.statement}
+              <details><summary>Official guidance and applicability</summary>
+                <p style={{ whiteSpace: 'pre-line' }}>{requirement.guidance}</p>
+              </details>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Subdomain cards */}
       <div>
         <p style={{ margin: '0 0 var(--space-xs)', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>
-          Addressed by — expand a subdomain to see contributing competencies
+          Mapped competencies
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-xs)', alignItems: 'flex-start' }}>
           {entries.map(([subId, comps]) => (
@@ -138,6 +143,7 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
               onToggle={() => onToggleSub(`${component.id}:${subId}`)}
             />
           ))}
+          {entries.length === 0 && <p>No mapped competencies.</p>}
         </div>
       </div>
     </div>
@@ -294,7 +300,7 @@ export default function SatreMappingMatrix() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
       <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
-        Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read the SATRE requirement and see which subdomains address it, then expand a <strong>subdomain</strong> to see the contributing competencies.
+        Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read its requirements and explore mapped competencies, then expand a <strong>subdomain</strong> to see the contributing competencies.
       </p>
 
       <div className="table-responsive pill-scroll">
