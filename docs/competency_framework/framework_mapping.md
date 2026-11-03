@@ -2,6 +2,13 @@
 
 This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) model and [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specification.
 
+## SATRE source
+
+The mapping uses [SATRE 2.0.1](https://github.com/sa-tre/satre-specification/blob/133b4af7f3c69586a8fe3da7d5d06685158fe473/docs/source/spec/specification.yaml),
+released 23 July 2026, with 185 requirements across 35 capabilities and five pillars.
+Official statements and guidance are reproduced from the SATRE contributors under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 ## Mapping to Five Safes
 
 The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles:

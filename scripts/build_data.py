@@ -16,6 +16,7 @@ import os
 import yaml
 import copy
 from pathlib import Path
+from validate_satre import validate_source
 
 
 def load_yaml(filepath):
@@ -58,6 +59,9 @@ def main():
     local_yaml_dir = Path('yaml')
     output_dir = Path('astro-app/public/data')
     src_data_dir = Path('astro-app/src/data')
+    source_errors = validate_source(load_yaml(local_yaml_dir / 'satre_mapping.yaml'), local_yaml_dir, load_yaml)
+    if source_errors:
+        raise ValueError('\n'.join(source_errors))
 
     main_domain_files = [
         'safe_access_identity.yaml',
