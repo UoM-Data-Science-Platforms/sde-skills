@@ -144,7 +144,6 @@ def validate_relationships(mapping, domains, root):
         if r["review"]["status"] in {"reviewed", "rejected"}:
             for name, value in [
                 ("rationale", r["rationale"]),
-                ("reviewer", r["review"]["reviewer"]),
             ]:
                 check(
                     isinstance(value, str)
@@ -153,6 +152,19 @@ def validate_relationships(mapping, domains, root):
                     where,
                     f"{name} required for completed review",
                 )
+            reviewer = r["review"]["reviewer"]
+            check(
+                reviewer is None
+                or (
+                    isinstance(reviewer, str)
+                    and bool(reviewer.strip())
+                    and not re.search(
+                        r"\b(TODO|TBD|FIXME|placeholder)\b", reviewer, re.I
+                    )
+                ),
+                where,
+                "reviewer must be a non-empty name when supplied",
+            )
             try:
                 reviewed = date.fromisoformat(r["review"]["reviewed_on"] or "")
                 check(reviewed <= date.today(), where, "review date is in the future")
@@ -242,7 +254,7 @@ def validate_assessment(requirement, contributions, report, check):
         ref,
         "mapping review status contradicts reviewed contributions",
     )
-    for field in ("rationale", "reviewer", "reviewed_on"):
+    for field in ("rationale", "reviewed_on"):
         value = assessment.get(field)
         check(
             isinstance(value, str) and bool(value.strip()),

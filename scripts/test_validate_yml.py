@@ -91,8 +91,7 @@ class ValidationTests(unittest.TestCase):
         review = data["source"]["relationship_review"]
         self.assertEqual(review["status"], "reviewed")
         self.assertEqual(review["requirement_count"], 185)
-        self.assertEqual(review["reviewer_type"], "ai_assisted")
-        self.assertIsNone(review["human_signoff"])
+        self.assertIsNone(review["reviewer"])
 
     def test_missing_official_requirement(self):
         self.change(
@@ -211,7 +210,7 @@ class ValidationTests(unittest.TestCase):
         self.change("satre_mapping.yaml", mutate)
         errors = self.errors()
         self.assertIn("rationale required", errors)
-        self.assertIn("reviewer required", errors)
+        self.assertIn("reviewer must be a non-empty name when supplied", errors)
         self.assertIn("valid review date", errors)
 
     def test_unknown_contribution_rejected(self):
@@ -447,6 +446,21 @@ class ValidationTests(unittest.TestCase):
         self.assertIn(
             "applicability exclusion requires profile_reference", self.errors()
         )
+
+    def test_completed_review_can_leave_reviewer_unset(self):
+        def mutate(data):
+            self.reviewed_fixture(data)
+            data["relationships"][0]["review"]["reviewer"] = None
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertEqual(self.errors(), "")
+
+    def test_optional_reviewer_cannot_be_placeholder(self):
+        def mutate(data):
+            data["relationships"][0]["review"]["reviewer"] = "TBD"
+
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("reviewer must be a non-empty name when supplied", self.errors())
 
 
 if __name__ == "__main__":

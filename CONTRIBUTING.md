@@ -83,14 +83,14 @@ Canonical relationships carry `capability_id`, `domain_id`, `subdomain_id`,
 `competency_id`, `requirement_ids`, `contribution`, `rationale` and `review`.
 Migrated candidates remain `pending`, with unknown contribution, no reviewer and
 no review date. A retained, reviewed link needs requirement IDs under its
-capability, `direct` or `supporting` contribution, a rationale and the actual
-reviewer's identity and date. Direct means the competency directly contributes
-to the requirement; supporting means it enables that work. Neither proves
+capability, `direct` or `supporting` contribution, a rationale and review date.
+A reviewer name may be recorded when supplied. Direct means the competency
+directly contributes to the requirement; supporting means it enables that work. Neither proves
 requirement satisfaction. These judgments belong to work package #118.
 
 The `legacy_components` section is migration evidence. Its old IDs are editorial
 groupings, not official SATRE IDs. Preserve provenance when rejecting a candidate
-by setting review status to `rejected` with rationale and reviewer details;
+by setting review status to `rejected` with rationale and a review date;
 rejected records stay in the evidence and are excluded from matrix projections.
 Do not delete links silently. Requirements distinguish `pending`, `reviewed`,
 `gap` and `excluded` mapping status; an empty candidate list is not a confirmed
@@ -105,8 +105,7 @@ once, while each requirement lists its own mapped competencies.
 
 Completed mapping reviews carry a per-requirement `mapping_assessment` with the
 result (`direct`, `supporting_only`, `unmapped` or `excluded`), rationale,
-reviewer/date and gap observations for supporting-only or unmapped requirements. An AI-assisted
-editorial review records that identity explicitly and leaves human sign-off unset.
+review date and gap observations for supporting-only or unmapped requirements.
 Deployment-specific applicability remains separate: without a TRE profile, do not
 infer exclusions from a missing competency. Source statements and conditional
 importance stay unchanged. Superseded broad migration candidates remain rejected
