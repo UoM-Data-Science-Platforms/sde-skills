@@ -2,6 +2,36 @@
 
 This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) model and [Standard Architecture for Trusted Research Environments (SATRE)](https://satre-specification.readthedocs.io/) specification.
 
+## SATRE source baseline and mapping status
+
+The requirement inventory is pinned to **SATRE 2.0.1**, released 23 July 2026,
+at [source commit 133b4af](https://github.com/sa-tre/satre-specification/blob/133b4af7f3c69586a8fe3da7d5d06685158fe473/docs/source/spec/specification.yaml).
+The inventory was checked on 3 November 2026. It includes all 185 requirements
+in 35 capabilities across four core pillars and the federation extension.
+Official statements, guidance and importance are reproduced from SATRE contributors
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), with the source
+snapshot and license in `yaml/satre/`. The SHA-256 is calculated over LF-normalized
+UTF-8 source text so that Windows and Linux checkouts agree.
+
+Official statements are separate from editorial summaries. The previous mapping
+used editorial groupings with identifiers that do not consistently match SATRE.
+Those records are preserved separately, including topic-based migration candidates.
+They are **unverified**; source pinning and canonical reference checks do not
+establish substantive alignment. Empty mappings are awaiting review, rather than
+confirmed gaps. Applicability assessments are pending; original conditional
+wording and guidance are retained. Reviewer identity and review date remain unset
+until an actual relationship review is performed in work package #118.
+
+Federation is a recent addition to the SATRE standard. We have included a mapping
+from the initial version of the SDE RTP framework, but have not added to the
+framework in response to the additions to SATRE.
+
+The initial framework is preserved. Newly inventoried capabilities without reviewed
+relationships are potential gap observations for review, not reasons to add competencies.
+The topic summaries later in this document are editorial context, not official
+SATRE capability names or requirement statements. Consult the SATRE mapping page
+for the complete official hierarchy and review status.
+
 ## Mapping to Five Safes
 
 The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles:

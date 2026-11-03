@@ -1,7 +1,9 @@
 import { useState, useCallback } from 'react';
 import { SATRE_PILLARS, SUBDOMAINS, SUBDOMAIN_INDEX, DOMAINS } from '../data/satreMapping.js';
+import { LEGACY_COMPONENTS, COMPETENCIES, SATRE_RELATIONSHIPS } from '../data/satreMapping.js';
+import SatreSourceNotice from './SatreSourceNotice.jsx';
 
-const TOTAL_COLS = 1 + SUBDOMAINS.length; // component name col + 21 subdomain cols
+const TOTAL_COLS = 1 + SUBDOMAINS.length;
 
 function setToggle(prev, key) {
   const next = new Set(prev);
@@ -93,6 +95,7 @@ function SubdomainCard({ subdomainId, competencies, expanded, onToggle }) {
 // ── Component detail panel (level 3) ────────────────────────────────────────
 
 function ComponentDetail({ component, openSubs, onToggleSub }) {
+  const relationships = SATRE_RELATIONSHIPS.filter(r => r.capability_id === component.id && r.review.status !== 'rejected');
   const flatMappings = {};
   if (component.mappings) {
     Object.values(component.mappings).forEach(domainMap => {
@@ -116,17 +119,31 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
       {/* Requirement text */}
       <div>
         <p style={{ margin: '0 0 6px', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>
-          SATRE Requirement
+          Editorial summary
         </p>
         <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text)', lineHeight: 1.75, fontStyle: 'italic' }}>
-          {component.requirement}
+          {component.editorial_summary || 'No editorial summary has been added.'}
         </p>
+        <h4>Official SATRE requirements — mapping review pending</h4>
+        <p>Conditional applicability is retained in the original statement and guidance.</p>
+        <ul>
+          {component.requirements.map(requirement => (
+            <li key={requirement.id} style={{ marginBottom: 'var(--space-sm)' }}>
+              <strong>{requirement.id} — {requirement.importance}</strong>: {requirement.statement}
+              <details><summary>Official guidance and applicability</summary>
+                <p style={{ whiteSpace: 'pre-line' }}>{requirement.guidance}</p>
+                <p>Scope: {requirement.applicability.scope}. Applicability assessment: {requirement.applicability.assessment}.
+                  {' '}Mapping review: {requirement.mapping_review_status}.</p>
+              </details>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Subdomain cards */}
       <div>
         <p style={{ margin: '0 0 var(--space-xs)', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>
-          Addressed by — expand a subdomain to see contributing competencies
+          Candidate competencies — pending relationship review
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-xs)', alignItems: 'flex-start' }}>
           {entries.map(([subId, comps]) => (
@@ -138,7 +155,19 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
               onToggle={() => onToggleSub(`${component.id}:${subId}`)}
             />
           ))}
+          {entries.length === 0 && <p>Awaiting relationship review; no confirmed framework-gap assessment.</p>}
         </div>
+        {relationships.length > 0 && <details>
+          <summary>Canonical relationship records and review state</summary>
+          <ul>{relationships.map(r => <li key={r.id}>
+            <strong>{COMPETENCIES[r.competency_id].name}</strong> ({r.competency_id})
+            {' '}— {SUBDOMAINS.find(s => s.id === r.subdomain_id).name}; review: {r.review.status}.
+            {' '}Requirements: {r.requirement_ids.length ? r.requirement_ids.join(', ') : 'awaiting review'}.
+            {' '}Contribution: {r.contribution || 'not assessed'}.
+            {' '}Rationale: {r.rationale || 'not yet reviewed'}.
+            {r.review.reviewer && <> Reviewer: {r.review.reviewer}, {r.review.reviewed_on}.</>}
+          </li>)}</ul>
+        </details>}
       </div>
     </div>
   );
@@ -194,6 +223,7 @@ export default function SatreMappingMatrix() {
               {pillar.components.length} components
             </span>
           </div>
+          {pillar.caveat && <p style={{ whiteSpace: 'normal', margin: '8px 0 0' }}>{pillar.caveat}</p>}
         </td>
       </tr>
     );
@@ -293,8 +323,20 @@ export default function SatreMappingMatrix() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+      <SatreSourceNotice />
+      <details>
+        <summary>Previous mapping records and migration candidates (unverified)</summary>
+        <p>These old identifiers were editorial groupings, not reliable official requirement identifiers. Topic candidates preserve migration history; they do not validate alignment.</p>
+        {LEGACY_COMPONENTS.map(component => <section key={component.id}>
+          <h3>Previous {component.id}: {component.name}</h3>
+          <p>Editorial summary: {component.editorial_summary}</p>
+          <p>Candidate official capabilities: {component.candidate_capability_ids.join(', ')}. {component.migration_note}</p>
+          <ul>{Object.entries(component.mappings).flatMap(([domain, subs]) => Object.entries(subs).map(([sub, competencies]) =>
+            <li key={`${domain}/${sub}`}>{DOMAINS.find(d => d.id === domain).name} / {SUBDOMAINS.find(s => s.id === sub).name}: {competencies.map(id => COMPETENCIES[id].name).join(', ')}</li>))}</ul>
+        </section>)}
+      </details>
       <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
-        Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read the SATRE requirement and see which subdomains address it, then expand a <strong>subdomain</strong> to see the contributing competencies.
+        Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read the official SATRE requirements and inspect unreviewed competency candidates, then expand a <strong>subdomain</strong> to see the contributing competencies.
       </p>
 
       <div className="table-responsive pill-scroll">

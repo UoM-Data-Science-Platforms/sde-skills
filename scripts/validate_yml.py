@@ -10,6 +10,7 @@ from pathlib import Path
 
 import jsonschema
 import yaml
+from validate_satre import validate_source, validate_relationships
 
 LEVELS = {"entry", "mid", "senior"}
 
@@ -159,13 +160,20 @@ def validate(root=Path("yaml")):
                         check(cid in support.get("competencies", {}), cid, f"missing {suffix} entry")
 
     mapping = documents.get("satre_mapping.yaml", {})
+    errors.extend(validate_source(mapping, root, load_yaml))
+    if not errors:
+        errors.extend(validate_relationships(mapping, domains, root))
+    if errors:
+        return errors, len(documents), count
     component_ids = set()
     check(bool(mapping.get("pillars")), "SATRE", "missing pillars")
-    for pillar in mapping.get("pillars", []):
+    mapping_pillars = list(mapping.get("pillars", [])) + [{"components": mapping.get("legacy_components", [])}]
+    for pillar in mapping_pillars:
         for component in pillar.get("components", []):
             ref = component.get("id")
-            check(ref not in component_ids, "SATRE", f"duplicate component ID {ref}")
-            component_ids.add(ref)
+            key = (pillar.get("id", "legacy"), ref)
+            check(key not in component_ids, "SATRE", f"duplicate component ID {ref}")
+            component_ids.add(key)
             for did, subs in component.get("mappings", {}).items():
                 check(did in domains, ref, f"unknown domain {did}")
                 for sid, comps in subs.items():
