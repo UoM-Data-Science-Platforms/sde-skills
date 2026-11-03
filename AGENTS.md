@@ -3,6 +3,9 @@
 ## Product changes
 
 - Keep the working site and its existing navigation usable throughout a change.
+- Do not add assistant/model branding, generated-by statements or authorship
+  declarations to project content, comments, review metadata, issues or PR text.
+  Leave a reviewer name unset when none is supplied; do not invent a person.
 - Do not add disclaimers, warning banners, unverified notices, review-status labels,
   migration histories or implementation notes to the public interface unless the
   user explicitly requests them. Keep maintenance and review metadata in source
