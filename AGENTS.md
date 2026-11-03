@@ -3,6 +3,9 @@
 ## Product changes
 
 - Keep the working site and its existing navigation usable throughout a change.
+- Do not add assistant/model branding, generated-by statements or authorship
+  declarations to project content, comments, review metadata, issues or PR text.
+  Leave a reviewer name unset when none is supplied; do not invent a person.
 - Reconcile issue requirements with the latest user direction before changing the
   interface. Record superseded requirements in the issue so they do not return in
   another work package. Distinguish required data changes from optional UI changes.
