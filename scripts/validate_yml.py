@@ -10,7 +10,7 @@ from pathlib import Path
 
 import jsonschema
 import yaml
-from validate_satre import validate_source
+from validate_satre import validate_source, validate_relationships
 
 LEVELS = {"entry", "mid", "senior"}
 
@@ -161,6 +161,10 @@ def validate(root=Path("yaml")):
 
     mapping = documents.get("satre_mapping.yaml", {})
     errors.extend(validate_source(mapping, root, load_yaml))
+    if not errors:
+        errors.extend(validate_relationships(mapping, domains, root))
+    if errors:
+        return errors, len(documents), count
     component_ids = set()
     check(bool(mapping.get("pillars")), "SATRE", "missing pillars")
     mapping_pillars = list(mapping.get("pillars", [])) + [{"components": mapping.get("legacy_components", [])}]

@@ -5,6 +5,8 @@ import satreData from './satre_mapping.json';
 export const SATRE_SOURCE = satreData.source;
 export const FEDERATION_CAVEAT = satreData.federation_caveat;
 export const LEGACY_COMPONENTS = satreData.legacy_components;
+export const COMPETENCIES = satreData.competencies;
+export const SATRE_RELATIONSHIPS = satreData.relationships;
 
 export const SATRE_PILLARS = satreData.pillars;
 export const DOMAINS = satreData.domains;

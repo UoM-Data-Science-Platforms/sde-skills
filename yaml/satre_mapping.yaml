@@ -1,4 +1,4 @@
-schema_version: 2
+schema_version: 3
 source:
   name: Standard Architecture for Trusted Research Environments
   version: 2.0.1
@@ -67,7 +67,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.2'
     name: Quality Management
     requirements:
@@ -227,7 +226,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.3'
     name: Risk Management
     requirements:
@@ -294,7 +292,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.4'
     name: Study Management
     requirements:
@@ -390,7 +387,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.5'
     name: Researcher Accreditation
     requirements:
@@ -466,7 +462,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.6'
     name: Training Management and Delivery
     requirements:
@@ -597,7 +592,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '1.7'
     name: Public Involvement and Engagement
     requirements:
@@ -667,7 +661,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
 - id: '2'
   name: 2. Computing Technology and Information Security
   scope: core
@@ -934,7 +927,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.2'
     name: Infrastructure Management
     requirements:
@@ -1110,7 +1102,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.3'
     name: Capacity Management
     requirements:
@@ -1176,7 +1167,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.4'
     name: Configuration Management
     requirements:
@@ -1236,7 +1226,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.5'
     name: Information Security
     requirements:
@@ -1289,7 +1278,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.6'
     name: Cyber Resilience
     requirements:
@@ -1359,7 +1347,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.7'
     name: Vulnerability Management
     requirements:
@@ -1453,7 +1440,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.8'
     name: Encryption
     requirements:
@@ -1525,7 +1511,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '2.9'
     name: Physical Security
     requirements:
@@ -1547,7 +1532,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
 - id: '3'
   name: 3. Data Management
   scope: core
@@ -1843,7 +1827,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '3.2'
     name: Identity and Access Management
     requirements:
@@ -1931,7 +1914,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '3.3'
     name: Output Management
     requirements:
@@ -2070,7 +2052,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '3.4'
     name: Information Search and Discovery
     requirements:
@@ -2133,7 +2114,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
 - id: '4'
   name: 4. Supporting Capabilities
   scope: core
@@ -2168,7 +2148,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.2'
     name: Project and Programme Management
     requirements:
@@ -2198,7 +2177,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.3'
     name: Knowledge Management
     requirements:
@@ -2239,7 +2217,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.4'
     name: Financial Management
     requirements:
@@ -2294,7 +2271,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.5'
     name: Procurement
     requirements:
@@ -2312,7 +2288,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.6'
     name: IT Service Management
     requirements:
@@ -2331,7 +2306,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.7'
     name: Relationship Management
     requirements:
@@ -2348,7 +2322,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '4.8'
     name: Legal Services
     requirements:
@@ -2392,7 +2365,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
 - id: '5'
   name: 5. Federation
   scope: federation
@@ -2556,7 +2528,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.2'
     name: Federation Researcher Accreditation
     requirements:
@@ -2577,7 +2548,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.3'
     name: Federation Study Management
     requirements:
@@ -2608,7 +2578,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.4'
     name: Federation Information Security
     requirements:
@@ -2666,7 +2635,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.5'
     name: Federation Infrastructure Management
     requirements:
@@ -2684,7 +2652,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.6'
     name: Federation Data Management
     requirements:
@@ -2717,7 +2684,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   - id: '5.7'
     name: Federation Financial Management
     requirements:
@@ -2734,7 +2700,6 @@ pillars:
       mapping_review_status: pending
     editorial_summary: null
     mapping_review_status: pending
-    mappings: {}
   caveat: Federation is a recent addition to the SATRE standard. We have included a mapping from the initial
     version of the SDE RTP framework, but have not added to the framework in response to the additions
     to SATRE.
@@ -3436,3 +3401,3862 @@ legacy_components:
   candidate_capability_ids:
   - '4.1'
   migration_note: Topic-based migration candidate only; official requirement alignment has not been reviewed.
+relationships:
+- id: 1.1:secure-environment-design
+  capability_id: '1.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: secure-environment-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:component-based-architecture
+  capability_id: '1.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:encryption-key-management
+  capability_id: '1.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: encryption-key-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:network-architecture
+  capability_id: '1.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:secure-coding-practices
+  capability_id: '1.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: secure-coding-practices
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:data-quality-management
+  capability_id: '1.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:federated-identity-management
+  capability_id: '1.1'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:role-based-access-control
+  capability_id: '1.1'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:least-privilege-implementation
+  capability_id: '1.1'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: least-privilege-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:documentation-knowledge-management
+  capability_id: '1.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:continuous-improvement
+  capability_id: '1.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:consent-management
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:information-governance
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:healthcare-data-security-frameworks
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-data-security-frameworks
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:healthcare-standards-compliance
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:security-assessment-testing
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:security-controls-implementation
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-controls-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.1:incident-response-management
+  capability_id: '1.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:secure-environment-design
+  capability_id: '1.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: secure-environment-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:component-based-architecture
+  capability_id: '1.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:encryption-key-management
+  capability_id: '1.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: encryption-key-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:network-architecture
+  capability_id: '1.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:secure-coding-practices
+  capability_id: '1.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: secure-coding-practices
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:data-quality-management
+  capability_id: '1.2'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:federated-identity-management
+  capability_id: '1.2'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:role-based-access-control
+  capability_id: '1.2'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:least-privilege-implementation
+  capability_id: '1.2'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: least-privilege-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:documentation-knowledge-management
+  capability_id: '1.2'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:continuous-improvement
+  capability_id: '1.2'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:consent-management
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:information-governance
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:healthcare-data-security-frameworks
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-data-security-frameworks
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:healthcare-standards-compliance
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:security-assessment-testing
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:security-controls-implementation
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-controls-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:incident-response-management
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.1'
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:output-review-processes
+  capability_id: '1.2'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:agile-delivery-methods
+  capability_id: '1.2'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: agile-delivery-methods
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:procurement-vendor-management
+  capability_id: '1.2'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: procurement-vendor-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.2:ethics-research-approval-systems
+  capability_id: '1.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: ethics-research-approval-systems
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:secure-environment-design
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: secure-environment-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:component-based-architecture
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:configuration-management
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: configuration-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:network-architecture
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:secure-coding-practices
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: secure-coding-practices
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:microservices-api-design
+  capability_id: '1.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: microservices-api-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:data-classification-sensitivity
+  capability_id: '1.3'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-classification-sensitivity
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:data-quality-management
+  capability_id: '1.3'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:federated-identity-management
+  capability_id: '1.3'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:role-based-access-control
+  capability_id: '1.3'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:automated-disclosure-control
+  capability_id: '1.3'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:output-review-processes
+  capability_id: '1.3'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:research-project-facilitation
+  capability_id: '1.3'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: research-project-facilitation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:procurement-vendor-management
+  capability_id: '1.3'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: procurement-vendor-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:documentation-knowledge-management
+  capability_id: '1.3'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:consent-management
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:information-governance
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:healthcare-standards-compliance
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:security-assessment-testing
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:security-controls-implementation
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-controls-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.3:incident-response-management
+  capability_id: '1.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:data-classification-sensitivity
+  capability_id: '1.4'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-classification-sensitivity
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:data-quality-management
+  capability_id: '1.4'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:data-storage-database-management
+  capability_id: '1.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-storage-database-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:event-driven-data-processing
+  capability_id: '1.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: event-driven-data-processing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:data-migration
+  capability_id: '1.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-migration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:federated-identity-management
+  capability_id: '1.4'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:role-based-access-control
+  capability_id: '1.4'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:automated-disclosure-control
+  capability_id: '1.4'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:output-review-processes
+  capability_id: '1.4'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:accidental-disclosure-management
+  capability_id: '1.4'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: accidental-disclosure
+  competency_id: accidental-disclosure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:resource-cost-management
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: resource-cost-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:research-project-facilitation
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: research-project-facilitation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:sde-project-planning
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: sde-project-planning
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:tre-tools-capabilities
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: tre-tools-capabilities
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:researcher-training-support
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:community-engagement-networking
+  capability_id: '1.4'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:consent-management
+  capability_id: '1.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:ethics-research-approval-systems
+  capability_id: '1.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: ethics-research-approval-systems
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:healthcare-standards-compliance
+  capability_id: '1.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.4:incident-response-management
+  capability_id: '1.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:role-based-access-control
+  capability_id: '1.6'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:automated-disclosure-control
+  capability_id: '1.6'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:documentation-knowledge-management
+  capability_id: '1.6'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:tre-tools-capabilities
+  capability_id: '1.6'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: tre-tools-capabilities
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:community-engagement-networking
+  capability_id: '1.6'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:consent-management
+  capability_id: '1.6'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:ethics-research-approval-systems
+  capability_id: '1.6'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: ethics-research-approval-systems
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.6:healthcare-standards-compliance
+  capability_id: '1.6'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:federated-identity-management
+  capability_id: '1.5'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:role-based-access-control
+  capability_id: '1.5'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:continuous-improvement
+  capability_id: '1.5'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:tre-tools-capabilities
+  capability_id: '1.5'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: tre-tools-capabilities
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:community-engagement-networking
+  capability_id: '1.5'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:consent-management
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:ethics-research-approval-systems
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: ethics-research-approval-systems
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:healthcare-data-security-frameworks
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-data-security-frameworks
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:healthcare-standards-compliance
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:security-controls-implementation
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-controls-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 1.5:incident-response-management
+  capability_id: '1.5'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '1.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:code-documentation-reusability
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:software-development-lifecycle
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: software-development-lifecycle
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:microservices-api-design
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: microservices-api-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:testing-quality-assurance
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: testing-quality-assurance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:vulnerability-patch-management
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: vulnerability-patch-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:component-based-architecture
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:containerisation-orchestration
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: containerisation-orchestration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:network-architecture
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:federated-identity-management
+  capability_id: '2.1'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:role-based-access-control
+  capability_id: '2.1'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:continuous-improvement
+  capability_id: '2.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:tre-tools-capabilities
+  capability_id: '2.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: tre-tools-capabilities
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:researcher-training-support
+  capability_id: '2.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:security-assessment-testing
+  capability_id: '2.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:incident-response-management
+  capability_id: '2.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:artefact-management
+  capability_id: '2.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: artefact-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:event-driven-data-processing
+  capability_id: '2.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: event-driven-data-processing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:data-retention-disposal
+  capability_id: '2.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-retention-disposal
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:automated-disclosure-control
+  capability_id: '2.1'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.1:output-review-processes
+  capability_id: '2.1'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:component-based-architecture
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:cloud-infrastructure-management
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: cloud-infrastructure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:encryption-key-management
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: encryption-key-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:containerisation-orchestration
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: containerisation-orchestration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:network-architecture
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:code-documentation-reusability
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:microservices-api-design
+  capability_id: '2.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: microservices-api-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:federated-identity-management
+  capability_id: '2.2'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:documentation-knowledge-management
+  capability_id: '2.2'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:continuous-improvement
+  capability_id: '2.2'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:researcher-training-support
+  capability_id: '2.2'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:community-engagement-networking
+  capability_id: '2.2'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:healthcare-data-security-frameworks
+  capability_id: '2.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-data-security-frameworks
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:healthcare-standards-compliance
+  capability_id: '2.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:security-assessment-testing
+  capability_id: '2.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 2.2:incident-response-management
+  capability_id: '2.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:vulnerability-patch-management
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: vulnerability-patch-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:cloud-infrastructure-management
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: cloud-infrastructure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:network-architecture
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:code-documentation-reusability
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:artefact-management
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: artefact-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-storage-database-management
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-storage-database-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-pipeline-development
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-pipeline-development
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:event-driven-data-processing
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: event-driven-data-processing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-retention-disposal
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-retention-disposal
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-classification-sensitivity
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-classification-sensitivity
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-quality-management
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:federated-identity-management
+  capability_id: '3.1'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:role-based-access-control
+  capability_id: '3.1'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:automated-disclosure-control
+  capability_id: '3.1'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:output-review-processes
+  capability_id: '3.1'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:continuous-improvement
+  capability_id: '3.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:consent-management
+  capability_id: '3.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:healthcare-standards-compliance
+  capability_id: '3.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:incident-response-management
+  capability_id: '3.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.4'
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:secure-environment-design
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: secure-environment-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:component-based-architecture
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:configuration-management
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: configuration-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:encryption-key-management
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: encryption-key-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:network-architecture
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:secure-coding-practices
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: secure-coding-practices
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:testing-quality-assurance
+  capability_id: '3.2'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: testing-quality-assurance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:data-quality-management
+  capability_id: '3.2'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:federated-identity-management
+  capability_id: '3.2'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:role-based-access-control
+  capability_id: '3.2'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:continuous-improvement
+  capability_id: '3.2'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:consent-management
+  capability_id: '3.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:healthcare-standards-compliance
+  capability_id: '3.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:security-controls-implementation
+  capability_id: '3.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-controls-implementation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.2:incident-response-management
+  capability_id: '3.2'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.5'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:code-documentation-reusability
+  capability_id: '3.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:software-development-lifecycle
+  capability_id: '3.3'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: software-development-lifecycle
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:data-classification-sensitivity
+  capability_id: '3.3'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-classification-sensitivity
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:data-quality-management
+  capability_id: '3.3'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:data-storage-database-management
+  capability_id: '3.3'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-storage-database-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:event-driven-data-processing
+  capability_id: '3.3'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: event-driven-data-processing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:federated-identity-management
+  capability_id: '3.3'
+  domain_id: safe-access-identity
+  subdomain_id: identity-management
+  competency_id: federated-identity-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:role-based-access-control
+  capability_id: '3.3'
+  domain_id: safe-access-identity
+  subdomain_id: access-control
+  competency_id: role-based-access-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:automated-disclosure-control
+  capability_id: '3.3'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: statistical-disclosure-control
+  competency_id: automated-disclosure-control
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:output-review-processes
+  capability_id: '3.3'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:accidental-disclosure-management
+  capability_id: '3.3'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: accidental-disclosure
+  competency_id: accidental-disclosure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:resource-cost-management
+  capability_id: '3.3'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: resource-cost-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:documentation-knowledge-management
+  capability_id: '3.3'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:continuous-improvement
+  capability_id: '3.3'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:community-engagement-networking
+  capability_id: '3.3'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:consent-management
+  capability_id: '3.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:ethics-research-approval-systems
+  capability_id: '3.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: ethics-research-approval-systems
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:healthcare-standards-compliance
+  capability_id: '3.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.3:incident-response-management
+  capability_id: '3.3'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '2.6'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:secure-environment-design
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: secure-environment-design
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:component-based-architecture
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.1'
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:configuration-management
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: configuration-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:encryption-key-management
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: encryption-key-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:security-assessment-testing
+  capability_id: '3.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: security-assessment-testing
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:containerisation-orchestration
+  capability_id: '3.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: containerisation-orchestration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-models-standardisation
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-models-standardisation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:data-cataloguing-discovery
+  capability_id: '3.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-cataloguing-discovery
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:documentation-knowledge-management
+  capability_id: '3.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:researcher-training-support
+  capability_id: '3.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:community-engagement-networking
+  capability_id: '3.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.1:information-governance
+  capability_id: '3.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:vulnerability-patch-management
+  capability_id: '3.4'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: vulnerability-patch-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:component-based-architecture
+  capability_id: '3.4'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:data-migration
+  capability_id: '3.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-migration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:data-retention-disposal
+  capability_id: '3.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-retention-disposal
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:data-models-standardisation
+  capability_id: '3.4'
+  domain_id: safe-data-management
+  subdomain_id: data-engineering-processing
+  competency_id: data-models-standardisation
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:data-quality-management
+  capability_id: '3.4'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:data-cataloguing-discovery
+  capability_id: '3.4'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-cataloguing-discovery
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:output-review-processes
+  capability_id: '3.4'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: output-checking
+  competency_id: output-review-processes
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:accidental-disclosure-management
+  capability_id: '3.4'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: accidental-disclosure
+  competency_id: accidental-disclosure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:documentation-knowledge-management
+  capability_id: '3.4'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:tre-tools-capabilities
+  capability_id: '3.4'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: tre-tools-capabilities
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:consent-management
+  capability_id: '3.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:information-governance
+  capability_id: '3.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 3.4:healthcare-standards-compliance
+  capability_id: '3.4'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '3.3'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.7:code-documentation-reusability
+  capability_id: '4.7'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.7:accidental-disclosure-management
+  capability_id: '4.7'
+  domain_id: safe-outputs-disclosure-control
+  subdomain_id: accidental-disclosure
+  competency_id: accidental-disclosure-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.7:documentation-knowledge-management
+  capability_id: '4.7'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.7:researcher-training-support
+  capability_id: '4.7'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.7:community-engagement-networking
+  capability_id: '4.7'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.1'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:code-documentation-reusability
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: code-documentation-reusability
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:testing-quality-assurance
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: software-engineering
+  competency_id: testing-quality-assurance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:component-based-architecture
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: component-based-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:enterprise-solution-development
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: enterprise-solution-development
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:configuration-management
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: system-architecture
+  competency_id: configuration-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:containerisation-orchestration
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: containerisation-orchestration
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:network-architecture
+  capability_id: '4.1'
+  domain_id: safe-technology-engineering
+  subdomain_id: infrastructure-deployment
+  competency_id: network-architecture
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:data-classification-sensitivity
+  capability_id: '4.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-classification-sensitivity
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:data-quality-management
+  capability_id: '4.1'
+  domain_id: safe-data-management
+  subdomain_id: data-governance
+  competency_id: data-quality-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:resource-cost-management
+  capability_id: '4.1'
+  domain_id: safe-projects-operations
+  subdomain_id: project-management
+  competency_id: resource-cost-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:documentation-knowledge-management
+  capability_id: '4.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: documentation-knowledge-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:continuous-improvement
+  capability_id: '4.1'
+  domain_id: safe-projects-operations
+  subdomain_id: operational-excellence
+  competency_id: continuous-improvement
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:researcher-training-support
+  capability_id: '4.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: researcher-training-support
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:community-engagement-networking
+  capability_id: '4.1'
+  domain_id: safe-projects-operations
+  subdomain_id: research-support-innovation
+  competency_id: community-engagement-networking
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:consent-management
+  capability_id: '4.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: ethics-research-governance
+  competency_id: consent-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:information-governance
+  capability_id: '4.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: information-governance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:healthcare-standards-compliance
+  capability_id: '4.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: regulatory-compliance
+  competency_id: healthcare-standards-compliance
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
+- id: 4.1:incident-response-management
+  capability_id: '4.1'
+  domain_id: safe-governance-compliance
+  subdomain_id: security-management
+  competency_id: incident-response-management
+  requirement_ids: []
+  contribution: null
+  rationale: null
+  review:
+    status: pending
+    reviewer: null
+    reviewed_on: null
+  legacy_component_ids:
+  - '4.2'
+  migration_note: Topic-based candidate inherited from the initial mapping. Requirement references and
+    contribution await substantive review.
