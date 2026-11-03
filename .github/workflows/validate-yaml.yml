@@ -6,6 +6,9 @@ on:
       - 'yaml/**'
       - 'scripts/validate_yml.py'
       - 'scripts/test_validate_yml.py'
+      - 'scripts/validate_satre.py'
+      - 'scripts/satre_source.py'
+      - 'scripts/build_data.py'
       - 'scripts/requirements-validation.txt'
       - '.github/workflows/validate-yaml.yml'
   workflow_dispatch:
