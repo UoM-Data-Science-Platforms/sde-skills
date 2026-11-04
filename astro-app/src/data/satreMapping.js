@@ -3,7 +3,9 @@
 
 import satreData from './satre_mapping.json';
 
+export const SATRE_SOURCE = satreData.source;
 export const SATRE_PILLARS = satreData.pillars;
 export const DOMAINS = satreData.domains;
 export const SUBDOMAINS = satreData.subdomains;
+export const COMPETENCIES = satreData.competencies ?? {};
 export const SUBDOMAIN_INDEX = Object.fromEntries(SUBDOMAINS.map((s, i) => [s.id, i]));
