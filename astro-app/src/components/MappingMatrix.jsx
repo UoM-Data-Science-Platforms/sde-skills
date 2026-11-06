@@ -2,42 +2,42 @@ import { useState } from 'react';
 import SatreMappingMatrix from './SatreMappingMatrix.jsx';
 
 const DOMAINS = [
-  { id: 'access-identity',            short: 'Access & Identity',  color: 'var(--color-deep-blue)' },
-  { id: 'data-management',            short: 'Data Management',    color: 'var(--color-purple)'    },
-  { id: 'governance-compliance',      short: 'Governance',         color: 'var(--color-nhs-blue)'  },
-  { id: 'outputs-disclosure-control', short: 'Outputs',            color: 'var(--color-deep-blue)' },
-  { id: 'projects-operations',        short: 'Projects & Ops',     color: 'var(--color-purple)'    },
-  { id: 'technology-engineering',     short: 'Technology',         color: 'var(--color-nhs-blue)'  },
+  { id: 'access-identity', short: 'Access & Identity', color: 'var(--color-deep-blue)' },
+  { id: 'data-management', short: 'Data Management', color: 'var(--color-purple)' },
+  { id: 'governance-compliance', short: 'Governance', color: 'var(--color-nhs-blue)' },
+  { id: 'outputs-disclosure-control', short: 'Outputs', color: 'var(--color-deep-blue)' },
+  { id: 'projects-operations', short: 'Projects & Ops', color: 'var(--color-purple)' },
+  { id: 'technology-engineering', short: 'Technology', color: 'var(--color-nhs-blue)' },
 ];
 
 const FRAMEWORK_COLORS = {
-  'Five Safes':    'var(--color-purple)',
-  'SATRE':         'var(--color-nhs-blue)',
+  'Five Safes': 'var(--color-purple)',
+  'SATRE': 'var(--color-nhs-blue)',
   'Cross-Cutting': 'var(--color-deep-blue)',
 };
 
 const ALL_DOMAINS = DOMAINS.map(d => d.id);
 
 const STANDARDS = [
-  { id: 'safe-data',      framework: 'Five Safes',    short: 'Safe Data',           name: 'Safe Data',                      tagline: 'Data is treated to protect any confidentiality concerns.',                    domains: ['data-management'],             competencies: ['Data Classification & Sensitivity','Data Lineage & Provenance','Data Integrity','Data Quality Management','Data Storage & Database Management','Encryption Standards & Implementation'] },
-  { id: 'safe-projects',  framework: 'Five Safes',    short: 'Safe Projects',       name: 'Safe Projects',                  tagline: 'Research projects are approved by data owners for the public good.',         domains: ['projects-operations', 'governance-compliance'], competencies: ['SDE Project Planning','Research Project Facilitation','Research Ethics Compliance','Ethics & Research Approval Systems','Service Level Management','Researcher Training & Support'] },
-  { id: 'safe-people',    framework: 'Five Safes',    short: 'Safe People',         name: 'Safe People',                    tagline: 'Researchers are trained and authorised to use data safely.',                  domains: ['access-identity', 'projects-operations'], competencies: ['Authentication Systems','User Provisioning & Lifecycle','Federated Identity Management','Role-Based Access Control','Researcher Onboarding','Researcher Training & Support'] },
-  { id: 'safe-settings',  framework: 'Five Safes',    short: 'Safe Settings',       name: 'Safe Settings',                  tagline: 'A SecureLab environment prevents unauthorised use.',                          domains: ['technology-engineering', 'access-identity'], competencies: ['Secure Environment Design','Network Architecture','Cloud Infrastructure Management','Containerisation & Orchestration','Configuration Management','Secure Research Workspaces'] },
-  { id: 'safe-outputs',   framework: 'Five Safes',    short: 'Safe Outputs',        name: 'Safe Outputs',                   tagline: 'Screened and approved outputs that are non-disclosive.',                     domains: ['outputs-disclosure-control'],  competencies: ['Output Review Processes','Disclosure Risk Assessment','Automated Disclosure Control','Data Airlocks','Accidental Disclosure Management','AI Artefact and Generated-output Release Controls'] },
-  { id: 'satre-ig',       framework: 'SATRE',         short: '1. Info Governance',  name: '1. Information Governance',      tagline: null,                                                                          domains: ['governance-compliance', 'projects-operations', 'access-identity'], competencies: ['Information Governance','Data Protection Compliance','Compliance Monitoring & Reporting','Certification & Accreditation','Research Ethics Compliance','Researcher Onboarding','Researcher Training & Support'] },
-  { id: 'satre-tech',     framework: 'SATRE',         short: '2. Computing & IS',   name: '2. Computing Technology and Information Security', tagline: null,                                                        domains: ['technology-engineering', 'access-identity', 'governance-compliance', 'projects-operations'], competencies: ['Secure Environment Design','Cloud Infrastructure Management','Network Architecture','Configuration Management','Vulnerability & Patch Management','Encryption & Key Management','Secure Research Workspaces'] },
-  { id: 'satre-data',     framework: 'SATRE',         short: '3. Data Mgmt',        name: '3. Data Management',             tagline: null,                                                                          domains: ['data-management', 'access-identity', 'outputs-disclosure-control'], competencies: ['Data Classification & Sensitivity','Data Cataloguing & Discovery','Data Lineage & Provenance','Data Retention & Disposal','Authentication Systems','Role-Based Access Control','Output Review Processes','Disclosure Risk Assessment'] },
-  { id: 'satre-support',  framework: 'SATRE',         short: '4. Supporting',       name: '4. Supporting Capabilities',     tagline: null,                                                                          domains: ['projects-operations', 'governance-compliance', 'technology-engineering'], competencies: ['SDE Project Planning','Resource & Cost Management','Procurement & Vendor Management','Service Level Management','Incident & Problem Management','Documentation & Knowledge Management'] },
-  { id: 'satre-fed',      framework: 'SATRE',         short: '5. Federation',       name: '5. Federation',                  tagline: null,                                                                          domains: ALL_DOMAINS,                     competencies: ['Federated Identity Management','Attribute-Based Access Control','Encryption & Key Management','Data Cataloguing & Discovery','Data Models & Standardisation','Output Review Processes','Compliance Monitoring & Reporting'] },
-  { id: 'gov-comp',       framework: 'Cross-Cutting', short: 'Governance',          name: 'Governance & Compliance',        tagline: 'Spans across all Five Safes principles and SATRE pillars.',                  domains: ALL_DOMAINS,                     competencies: ['Information Governance','Data Protection Compliance','Healthcare Standards Compliance','Healthcare Data Security Frameworks','Research Ethics Compliance','Security Controls Implementation','Audit Trail Implementation','Compliance Monitoring & Reporting'] },
-  { id: 'collab-comm',    framework: 'Cross-Cutting', short: 'Collaboration',       name: 'Collaboration & Communication',  tagline: 'Key to effective implementation of all domains.',                             domains: ALL_DOMAINS,                     competencies: ['Documentation & Knowledge Management','Researcher Training & Support','Continuous Improvement','Research Project Facilitation','Community Engagement & Networking','Code Documentation & Reusability'] },
+  { id: 'safe-data', framework: 'Five Safes', short: 'Safe Data', name: 'Safe Data', tagline: 'Data is treated to protect any confidentiality concerns.', domains: ['data-management'], competencies: ['Data Classification & Sensitivity', 'Data Lineage & Provenance', 'Data Integrity', 'Data Quality Management', 'Data Storage & Database Management', 'Encryption Standards & Implementation'] },
+  { id: 'safe-projects', framework: 'Five Safes', short: 'Safe Projects', name: 'Safe Projects', tagline: 'Research projects are approved by data owners for the public good.', domains: ['projects-operations', 'governance-compliance'], competencies: ['SDE Project Planning', 'Research Project Facilitation', 'Research Ethics Compliance', 'Ethics & Research Approval Systems', 'Service Level Management', 'Researcher Training & Support'] },
+  { id: 'safe-people', framework: 'Five Safes', short: 'Safe People', name: 'Safe People', tagline: 'Researchers are trained and authorised to use data safely.', domains: ['access-identity', 'projects-operations'], competencies: ['Authentication Systems', 'User Provisioning & Lifecycle', 'Federated Identity Management', 'Role-Based Access Control', 'Researcher Onboarding', 'Researcher Training & Support'] },
+  { id: 'safe-settings', framework: 'Five Safes', short: 'Safe Settings', name: 'Safe Settings', tagline: 'A SecureLab environment prevents unauthorised use.', domains: ['technology-engineering', 'access-identity'], competencies: ['Secure Environment Design', 'Network Architecture', 'Cloud Infrastructure Management', 'Containerisation & Orchestration', 'Configuration Management', 'Secure Research Workspaces'] },
+  { id: 'safe-outputs', framework: 'Five Safes', short: 'Safe Outputs', name: 'Safe Outputs', tagline: 'Screened and approved outputs that are non-disclosive.', domains: ['outputs-disclosure-control'], competencies: ['Output Review Processes', 'Disclosure Risk Assessment', 'Automated Disclosure Control', 'Data Airlocks', 'Accidental Disclosure Management', 'AI Artefact and Generated-output Release Controls'] },
+  { id: 'satre-ig', framework: 'SATRE', short: '1. Info Governance', name: '1. Information Governance', tagline: null, domains: ['governance-compliance', 'projects-operations', 'access-identity'], competencies: ['Information Governance', 'Data Protection Compliance', 'Compliance Monitoring & Reporting', 'Certification & Accreditation', 'Research Ethics Compliance', 'Researcher Onboarding', 'Researcher Training & Support'] },
+  { id: 'satre-tech', framework: 'SATRE', short: '2. Computing & IS', name: '2. Computing Technology and Information Security', tagline: null, domains: ['technology-engineering', 'access-identity', 'governance-compliance', 'projects-operations'], competencies: ['Secure Environment Design', 'Cloud Infrastructure Management', 'Network Architecture', 'Configuration Management', 'Vulnerability & Patch Management', 'Encryption & Key Management', 'Secure Research Workspaces'] },
+  { id: 'satre-data', framework: 'SATRE', short: '3. Data Mgmt', name: '3. Data Management', tagline: null, domains: ['data-management', 'access-identity', 'outputs-disclosure-control'], competencies: ['Data Classification & Sensitivity', 'Data Cataloguing & Discovery', 'Data Lineage & Provenance', 'Data Retention & Disposal', 'Authentication Systems', 'Role-Based Access Control', 'Output Review Processes', 'Disclosure Risk Assessment'] },
+  { id: 'satre-support', framework: 'SATRE', short: '4. Supporting', name: '4. Supporting Capabilities', tagline: null, domains: ['projects-operations', 'governance-compliance', 'technology-engineering'], competencies: ['SDE Project Planning', 'Resource & Cost Management', 'Procurement & Vendor Management', 'Service Level Management', 'Incident & Problem Management', 'Documentation & Knowledge Management'] },
+  { id: 'satre-fed', framework: 'SATRE', short: '5. Federation', name: '5. Federation', tagline: null, domains: ALL_DOMAINS, competencies: ['Federated Identity Management', 'Attribute-Based Access Control', 'Encryption & Key Management', 'Data Cataloguing & Discovery', 'Data Models & Standardisation', 'Output Review Processes', 'Compliance Monitoring & Reporting'] },
+  { id: 'gov-comp', framework: 'Cross-Cutting', short: 'Governance', name: 'Governance & Compliance', tagline: 'Spans across all Five Safes principles and SATRE pillars.', domains: ALL_DOMAINS, competencies: ['Information Governance', 'Data Protection Compliance', 'Healthcare Standards Compliance', 'Healthcare Data Security Frameworks', 'Research Ethics Compliance', 'Security Controls Implementation', 'Audit Trail Implementation', 'Compliance Monitoring & Reporting'] },
+  { id: 'collab-comm', framework: 'Cross-Cutting', short: 'Collaboration', name: 'Collaboration & Communication', tagline: 'Key to effective implementation of all domains.', domains: ALL_DOMAINS, competencies: ['Documentation & Knowledge Management', 'Researcher Training & Support', 'Continuous Improvement', 'Research Project Facilitation', 'Community Engagement & Networking', 'Code Documentation & Reusability'] },
 ];
 
 const FRAMEWORKS = ['Five Safes', 'SATRE', 'Cross-Cutting'];
 
 const FRAMEWORK_DESCRIPTIONS = {
-  'Five Safes':    'The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles.',
-  'SATRE':         'The Standard Architecture for Trusted Research Environments (SATRE) specification provides a comprehensive high-level architecture for research organisations handling sensitive data safely. Our framework aligns with these components.',
+  'Five Safes': 'The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles.',
+  'SATRE': 'The Standard Architecture for Trusted Research Environments (SATRE) specification provides a comprehensive high-level architecture for research organisations handling sensitive data safely. Our framework aligns with these components.',
   'Cross-Cutting': 'Some competencies span multiple Five Safes principles or SATRE components.',
 };
 
@@ -268,8 +268,8 @@ function ByDomainView({ standards, domains, selected, onCellClick }) {
 
 export default function MappingMatrix() {
   const [perspective, setPerspective] = useState('by-standard');
-  const [filter, setFilter]           = useState('Five Safes');
-  const [selected, setSelected]       = useState(null);
+  const [filter, setFilter] = useState('Five Safes');
+  const [selected, setSelected] = useState(null);
 
   const filteredStandards = STANDARDS.filter(s => s.framework === filter);
 
@@ -338,7 +338,7 @@ export default function MappingMatrix() {
           <div className="table-responsive">
             {perspective === 'by-standard'
               ? <ByStandardView standards={filteredStandards} domains={DOMAINS} selected={selected} onCellClick={handleCellClick} />
-              : <ByDomainView   standards={filteredStandards} domains={DOMAINS} selected={selected} onCellClick={handleCellClick} />
+              : <ByDomainView standards={filteredStandards} domains={DOMAINS} selected={selected} onCellClick={handleCellClick} />
             }
           </div>
           {selected && (

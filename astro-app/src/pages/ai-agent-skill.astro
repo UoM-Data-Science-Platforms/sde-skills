@@ -48,8 +48,16 @@ const sections = [
           <h1 class="hero-title">SDE Team Development Hub A.I. Agent Skill</h1>
           <p class="hero-subtitle">One of the most effective ways to apply our Competency Framework is through our interactive LLM prompts and custom A.I. Agent Skill.</p>
           <div class="d-flex flex-wrap gap-3 mb-3">
-            <a href="#method-agent" class="btn btn-primary">Download the A.I. agent skill</a>
-            <a href="#method-prompt" class="btn btn-primary">Copy starter prompt</a>
+            <button type="button" class="btn btn-primary">Download the A.I. agent skill [demo]</button>
+            <button type="button" class="btn btn-primary">Copy starter prompt [demo]</button>
+          </div>
+          <div class="alert alert-warning d-flex align-items-center gap-2 mb-0" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+            <div>
+              <strong>Notice:</strong> This is a demo. Delegates should not follow these instructions.
+            </div>
           </div>
         </div>
         <div class="hero-visual col-12 col-lg-6">
@@ -81,14 +89,14 @@ const sections = [
           <div class="col-md-4">
             <div class="card p-4 text-center h-100 glass--soft use-case-tab active" data-target="aspiring-builders" style="cursor: pointer; transition: all 0.2s;">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3 mx-auto text-primary" style="display: block;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              <h4>Aspiring Builders</h4>
+              <h4>Aspiring SDE RTPs</h4>
               <p class="mt-2 text-muted" style="font-size: 0.9rem;">Discover the foundational skills required to transition into SDE engineering and identify what to learn next.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card p-4 text-center h-100 glass--soft use-case-tab opacity-75" data-target="experienced-rtps" style="cursor: pointer; transition: all 0.2s;">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3 mx-auto text-primary" style="display: block;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              <h4>Experienced RTPs</h4>
+              <h4>Experienced SDE RTPs</h4>
               <p class="mt-2 text-muted" style="font-size: 0.9rem;">Benchmark your existing skills against industry standards and plot a course for senior leadership roles.</p>
             </div>
           </div>
@@ -104,7 +112,7 @@ const sections = [
         <!-- Use Case Content Area -->
         <div class="use-case-content mt-5" id="content-aspiring-builders">
           <div class="card glass--soft p-4">
-            <h4>Aspiring Builders</h4>
+            <h4>Aspiring SDE RTPs</h4>
             <p class="text-muted"><strong>Recent IT graduates and career changers.</strong> Help you to understand how to begin your career as an RTP in SDE settings. Tell the agent your background (any work experience, personal IT projects including coding projects, education), provide it with a C.V., and your interests and motivations to help the agent guide you through an early career plan to get you established as a professional builder of high-quality secure research systems.</p>
             <div class="mt-4">
               <h5>Example Starter Prompts</h5>
@@ -124,7 +132,7 @@ const sections = [
 
         <div class="use-case-content mt-5 d-none" id="content-experienced-rtps">
           <div class="card glass--soft p-4">
-            <h4>Experienced RTPs</h4>
+            <h4>Experienced SDE RTPs</h4>
             <p class="text-muted"><strong>Experienced working in IT in an engineering, implementation, testing, or support/operations capacity.</strong> Help you to identify where your experience places you in the competency framework, understand if your seniority level matches your experience, and identify upskilling opportunities to progress to more senior levels of responsibility.</p>
             <div class="mt-4">
               <h5>Example Starter Prompts</h5>
@@ -212,6 +220,14 @@ const sections = [
         <p class="section-intro">
           This is the quickest approach. Copy the starter prompt from below and paste it into your chat agent of choice. The chat agent will then guide you through, prompting you for more information about your experience and career aspirations.
         </p>
+        <div class="alert alert-warning d-flex align-items-center gap-2 mt-3" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+          <div>
+            <strong>Notice:</strong> This is a demo. Delegates should not follow these instructions.
+          </div>
+        </div>
         <div class="row g-4 mt-3">
           <div class="col-12 col-lg-8">
             <div class="card glass--soft p-4 h-100">
@@ -238,6 +254,14 @@ const sections = [
         <p class="section-intro">
           For a more powerful and persistent experience, you can create a Custom A.I. Agent Skill. This allows you to upload the entire Competency Framework documentation as a knowledge base, enabling the agent to provide advice targeted to your goals.
         </p>
+        <div class="alert alert-warning d-flex align-items-center gap-2 mt-3" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+          <div>
+            <strong>Notice:</strong> This is a demo. Delegates should not follow these instructions.
+          </div>
+        </div>
         <div class="row g-4 mt-3">
           <div class="col-md-6">
             <div class="card p-4 h-100 glass--soft">

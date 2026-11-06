@@ -42,7 +42,6 @@ def deep_merge(dict1, dict2):
     """Recursively deep merge dict2 into dict1."""
     if not isinstance(dict1, dict) or not isinstance(dict2, dict):
         return dict2
-
     merged = copy.deepcopy(dict1)
     for k, v in dict2.items():
         if k in merged and isinstance(merged[k], dict) and isinstance(v, dict):
@@ -68,7 +67,6 @@ def main():
     ]
 
     print(f"Loading YAML files from {local_yaml_dir}...")
-
     all_domains = {}
 
     for domain_file in main_domain_files:
@@ -109,7 +107,6 @@ def main():
     if satre_path.exists():
         satre_data = load_yaml(satre_path)
         warnings_count = 0
-
         for pillar in satre_data.get('pillars', []):
             for comp in pillar.get('components', []):
                 if 'mappings' not in comp or not comp['mappings']:
@@ -120,13 +117,11 @@ def main():
                         print(f"  [WARNING] SATRE {comp['id']}: Domain '{d_id}' not found in framework.")
                         warnings_count += 1
                         continue
-
                     for s_id, competencies in list(s_map.items()):
                         if s_id not in all_domains[d_id].get('subdomains', {}):
                             print(f"  [WARNING] SATRE {comp['id']}: Subdomain '{s_id}' not found in domain '{d_id}'.")
                             warnings_count += 1
                             continue
-
                         valid_comps = all_domains[d_id]['subdomains'][s_id].get('competencies', {})
                         for c_id in competencies:
                             if c_id not in valid_comps:

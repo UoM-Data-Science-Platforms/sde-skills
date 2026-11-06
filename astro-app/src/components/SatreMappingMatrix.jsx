@@ -237,14 +237,14 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function SatreMappingMatrix() {
-  const [openPillars,    setOpenPillars]    = useState(new Set());
+  const [openPillars, setOpenPillars] = useState(new Set());
   const [openComponents, setOpenComponents] = useState(new Set());
-  const [openSubs,       setOpenSubs]       = useState(new Set());
-  const [hovered,        setHovered]        = useState(null);
+  const [openSubs, setOpenSubs] = useState(new Set());
+  const [hovered, setHovered] = useState(null);
 
-  const togglePillar    = useCallback(id  => setOpenPillars(p    => setToggle(p, id)),  []);
-  const toggleComponent = useCallback(id  => setOpenComponents(p => setToggle(p, id)),  []);
-  const toggleSub       = useCallback(key => setOpenSubs(p       => setToggle(p, key)), []);
+  const togglePillar = useCallback(id => setOpenPillars(p => setToggle(p, id)), []);
+  const toggleComponent = useCallback(id => setOpenComponents(p => setToggle(p, id)), []);
+  const toggleSub = useCallback(key => setOpenSubs(p => setToggle(p, key)), []);
 
   const thBase = {
     padding: '4px 6px',
