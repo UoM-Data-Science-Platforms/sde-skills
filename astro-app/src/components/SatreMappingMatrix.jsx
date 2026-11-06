@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { SATRE_SOURCE, SATRE_PILLARS, SUBDOMAINS, SUBDOMAIN_INDEX, DOMAINS, COMPETENCIES } from '../data/satreMapping.js';
 
 const TOTAL_COLS = 1 + SUBDOMAINS.length; // component name col + 26 subdomain cols
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 function setToggle(prev, key) {
   const next = new Set(prev);
@@ -11,6 +12,18 @@ function setToggle(prev, key) {
 
 function compName(id) {
   return COMPETENCIES[id]?.name ?? id;
+}
+
+function competencyUrl(compId, subdomainId) {
+  const comp = COMPETENCIES[compId];
+  const domId = comp?.domainId;
+  const subId = comp?.subdomainId ?? subdomainId;
+  if (!domId) return null;
+  const slug = domId.replace(/^safe-/, '');
+  const params = new URLSearchParams();
+  if (subId) params.set('sub', subId);
+  params.set('comp', compId);
+  return `${base}${slug}/?${params.toString()}`;
 }
 
 const IMPORTANCE_COLORS = {
@@ -92,9 +105,28 @@ function SubdomainCard({ subdomainId, competencies, expanded, onToggle }) {
       </button>
       {expanded && (
         <ul style={{ margin: '0 0 4px 10px', paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 3 }}>
-          {competencies.map((c, i) => (
-            <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text)', lineHeight: 1.55 }}>{compName(c)}</li>
-          ))}
+          {competencies.map((c, i) => {
+            const url = competencyUrl(c, subdomainId);
+            return (
+              <li key={i} style={{ fontSize: '0.8rem', lineHeight: 1.55 }}>
+                {url ? (
+                  <a
+                    href={url}
+                    style={{
+                      color: 'var(--color-heading)',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.textDecoration = 'underline'; e.currentTarget.style.color = sub.color; }}
+                    onMouseLeave={e => { e.currentTarget.style.textDecoration = 'none'; e.currentTarget.style.color = 'var(--color-heading)'; }}
+                  >
+                    {compName(c)}
+                  </a>
+                ) : (
+                  <span style={{ color: 'var(--color-text)' }}>{compName(c)}</span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
