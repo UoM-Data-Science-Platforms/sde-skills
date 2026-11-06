@@ -42,7 +42,7 @@ def deep_merge(dict1, dict2):
     """Recursively deep merge dict2 into dict1."""
     if not isinstance(dict1, dict) or not isinstance(dict2, dict):
         return dict2
-    
+
     merged = copy.deepcopy(dict1)
     for k, v in dict2.items():
         if k in merged and isinstance(merged[k], dict) and isinstance(v, dict):
@@ -50,7 +50,6 @@ def deep_merge(dict1, dict2):
         else:
             merged[k] = copy.deepcopy(v)
     return merged
-
 
 
 def main():
@@ -69,7 +68,7 @@ def main():
     ]
 
     print(f"Loading YAML files from {local_yaml_dir}...")
-    
+
     all_domains = {}
 
     for domain_file in main_domain_files:
@@ -85,35 +84,32 @@ def main():
         # Merge all supplemental files matching this domain (.yaml and .yml)
         prefix = domain_file.replace('.yaml', '').replace('_', '-') + '_'
         supp_files = list(local_yaml_dir.glob(f"{prefix}*.yaml")) + list(local_yaml_dir.glob(f"{prefix}*.yml"))
-        
+
         for supp_path in supp_files:
             print(f"  [MERGE] Found supplemental file: {supp_path.name}")
             tech_data = load_yaml(supp_path)
-            
+
             if 'subdomains' in tech_data and 'domain' in merged_data and 'subdomains' in merged_data['domain']:
                 if 'domain' not in tech_data or 'subdomains' not in tech_data.get('domain', {}):
                     tech_data.setdefault('domain', {})
                     tech_data['domain']['subdomains'] = tech_data.pop('subdomains')
-                    
+
             merged_data = deep_merge(merged_data, tech_data)
-
-
 
         # Save domain to output directory
         output_path = output_dir / domain_file
         save_yaml(output_path, merged_data)
         print(f"  [OK] Saved merged domain to {output_path}")
-        
+
         if 'domain' in merged_data:
             all_domains[merged_data['domain']['id']] = merged_data['domain']
-
 
     print("\nProcessing SATRE Mappings...")
     satre_path = local_yaml_dir / 'satre_mapping.yaml'
     if satre_path.exists():
         satre_data = load_yaml(satre_path)
         warnings_count = 0
-        
+
         for pillar in satre_data.get('pillars', []):
             for comp in pillar.get('components', []):
                 if 'mappings' not in comp or not comp['mappings']:
@@ -124,44 +120,47 @@ def main():
                         print(f"  [WARNING] SATRE {comp['id']}: Domain '{d_id}' not found in framework.")
                         warnings_count += 1
                         continue
-                    
+
                     for s_id, competencies in list(s_map.items()):
                         if s_id not in all_domains[d_id].get('subdomains', {}):
                             print(f"  [WARNING] SATRE {comp['id']}: Subdomain '{s_id}' not found in domain '{d_id}'.")
                             warnings_count += 1
                             continue
-                        
+
                         valid_comps = all_domains[d_id]['subdomains'][s_id].get('competencies', {})
                         for c_id in competencies:
                             if c_id not in valid_comps:
                                 print(f"  [WARNING] SATRE {comp['id']}: Competency '{c_id}' not found in subdomain '{s_id}'.")
                                 warnings_count += 1
-        
+
         import json
-        
-        # Hardcode domain metadata for frontend since it's UI specific
+
+        # Domain metadata for frontend UI
         domain_metadata = {
-            'ste': {'color': 'var(--color-nhs-blue)', 'span': 4},
-            'sdm': {'color': 'var(--color-purple)', 'span': 4},
-            'sai': {'color': 'var(--color-deep-blue)', 'span': 3},
-            'sod': {'color': 'var(--color-deep-blue)', 'span': 3},
-            'spo': {'color': 'var(--color-purple)', 'span': 3},
-            'sgc': {'color': 'var(--color-nhs-blue)', 'span': 4},
+            'safe-access-identity': {'color': 'var(--color-deep-blue)', 'short': 'Access & Identity'},
+            'safe-data-management': {'color': 'var(--color-purple)', 'short': 'Data Management'},
+            'safe-governance-compliance': {'color': 'var(--color-nhs-blue)', 'short': 'Governance'},
+            'safe-outputs-disclosure-control': {'color': 'var(--color-deep-blue)', 'short': 'Outputs'},
+            'safe-projects-operations': {'color': 'var(--color-purple)', 'short': 'Projects & Ops'},
+            'safe-technology-engineering': {'color': 'var(--color-nhs-blue)', 'short': 'Technology'},
         }
-        
+
         out_domains = []
         out_subdomains = []
-        
+        out_competencies = {}
+
         for d_id, d_data in all_domains.items():
-            meta = domain_metadata.get(d_id, {'color': 'var(--color-text)', 'span': 3})
+            subdomains = d_data.get('subdomains', {})
+            meta = domain_metadata.get(d_id, {'color': 'var(--color-text)', 'short': d_data.get('name', d_id)})
             out_domains.append({
                 'id': d_id,
                 'name': d_data.get('name', d_id),
+                'short': meta['short'],
                 'color': meta['color'],
-                'span': meta['span']
+                'span': len(subdomains)
             })
-            
-            for s_id, s_data in d_data.get('subdomains', {}).items():
+
+            for s_id, s_data in subdomains.items():
                 out_subdomains.append({
                     'id': s_id,
                     'domain': d_data.get('name', d_id),
@@ -169,9 +168,17 @@ def main():
                     'name': s_data.get('name', s_id),
                     'color': meta['color']
                 })
-        
+                for c_id, c_data in s_data.get('competencies', {}).items():
+                    out_competencies[c_id] = {
+                        'id': c_id,
+                        'name': c_data.get('name', c_id),
+                        'domainId': d_id,
+                        'subdomainId': s_id,
+                    }
+
         satre_data['domains'] = out_domains
         satre_data['subdomains'] = out_subdomains
+        satre_data['competencies'] = out_competencies
 
         src_data_dir.mkdir(parents=True, exist_ok=True)
         json_path = src_data_dir / 'satre_mapping.json'
@@ -180,8 +187,9 @@ def main():
         print(f"  [OK] Saved SATRE mapping to {json_path}")
         if warnings_count > 0:
             print(f"  [WARN] Found {warnings_count} broken/missing mappings in satre_mapping.yaml")
-    
+
     print("\n[OK] Build complete! Data files ready in astro-app/public/data/")
+
 
 if __name__ == '__main__':
     main()

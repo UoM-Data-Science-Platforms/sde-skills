@@ -365,7 +365,7 @@ export default function CFOverview() {
             models — the{' '}
             <a href="https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/" target="_blank" rel="noreferrer">Five Safes</a>
             {' '}and{' '}
-            <a href="https://satre-specification.readthedocs.io/" target="_blank" rel="noreferrer">SATRE</a>
+            <a href="https://satre-specification.readthedocs.io/en/v2.0.1/" target="_blank" rel="noreferrer">SATRE v2.0.1</a>
             {' '}— while maintaining its unique focus on the technical skills required in secure research environments.
           </p>
         </div>
@@ -632,7 +632,7 @@ export default function CFOverview() {
                           lineHeight: 1.3,
                           cursor: 'help',
                         }}>
-                          {d.id.toUpperCase()}
+                          {d.short || d.name}
                         </th>
                       ))}
                     </tr>
