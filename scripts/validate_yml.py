@@ -159,18 +159,36 @@ def validate(root=Path("yaml")):
                         check(cid in support.get("competencies", {}), cid, f"missing {suffix} entry")
 
     mapping = documents.get("satre_mapping.yaml", {})
+    source = mapping.get("source", {})
+    check(isinstance(source, dict) and str(source.get("version")) == "2.0.1", "SATRE", "expected pinned SATRE version 2.0.1")
+    check(all(text(source.get(k)) for k in ("name", "release_url", "specification_url", "docs_url")), "SATRE", "missing SATRE source metadata")
     component_ids = set()
+    requirement_ids = set()
     check(bool(mapping.get("pillars")), "SATRE", "missing pillars")
     for pillar in mapping.get("pillars", []):
+        check(text(pillar.get("id")) and text(pillar.get("name")), "SATRE", "pillar requires id and name")
+        check(bool(pillar.get("components")), f"SATRE/{pillar.get('id')}", "pillar requires components")
         for component in pillar.get("components", []):
             ref = component.get("id")
+            check(text(ref) and text(component.get("name")) and text(component.get("requirement")), f"SATRE/{ref}", "component requires id, name and requirement summary")
             check(ref not in component_ids, "SATRE", f"duplicate component ID {ref}")
             component_ids.add(ref)
-            for did, subs in component.get("mappings", {}).items():
+            reqs = component.get("requirements")
+            check(isinstance(reqs, list) and bool(reqs), ref, "component requires official SATRE requirements list")
+            for req in reqs or []:
+                rid = req.get("id")
+                check(text(rid) and rid.startswith(f"{ref}."), ref, f"invalid requirement ID {rid}")
+                check(rid not in requirement_ids, ref, f"duplicate requirement ID {rid}")
+                requirement_ids.add(rid)
+                check(text(req.get("importance")) and text(req.get("statement")), f"{ref}/{rid}", "requirement requires importance and statement")
+            comp_mappings = component.get("mappings", {})
+            check(isinstance(comp_mappings, dict) and bool(comp_mappings), ref, "component requires competency mappings")
+            for did, subs in comp_mappings.items():
                 check(did in domains, ref, f"unknown domain {did}")
                 for sid, comps in subs.items():
                     main = domains.get(did, {}).get("subdomains", {})
                     check(sid in main, ref, f"unknown subdomain {sid}")
+                    check(isinstance(comps, list) and bool(comps) and len(comps) == len(set(comps)), f"{ref}/{did}/{sid}", "competencies must be a non-empty unique list")
                     for cid in comps:
                         check(cid in (main.get(sid, {}).get("competencies") or {}), ref, f"unknown competency {cid}")
     return errors, len(documents), count
