@@ -1,13 +1,37 @@
 import { useState, useCallback } from 'react';
-import { SATRE_PILLARS, SUBDOMAINS, SUBDOMAIN_INDEX, DOMAINS } from '../data/satreMapping.js';
+import { SATRE_SOURCE, SATRE_PILLARS, SUBDOMAINS, SUBDOMAIN_INDEX, DOMAINS, COMPETENCIES } from '../data/satreMapping.js';
 
-const TOTAL_COLS = 1 + SUBDOMAINS.length; // component name col + 21 subdomain cols
+const TOTAL_COLS = 1 + SUBDOMAINS.length; // component name col + 26 subdomain cols
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 function setToggle(prev, key) {
   const next = new Set(prev);
   next.has(key) ? next.delete(key) : next.add(key);
   return next;
 }
+
+function compName(id) {
+  return COMPETENCIES[id]?.name ?? id;
+}
+
+function competencyUrl(compId, subdomainId) {
+  const comp = COMPETENCIES[compId];
+  const domId = comp?.domainId;
+  const subId = comp?.subdomainId ?? subdomainId;
+  if (!domId) return null;
+  const slug = domId.replace(/^safe-/, '');
+  const params = new URLSearchParams();
+  if (subId) params.set('sub', subId);
+  params.set('comp', compId);
+  return `${base}${slug}/?${params.toString()}`;
+}
+
+const IMPORTANCE_COLORS = {
+  'Mandatory': 'var(--color-nhs-blue)',
+  'Mandatory*': 'var(--color-nhs-blue)',
+  'Recommended': 'var(--color-purple)',
+  'Optional': 'var(--color-text-muted)',
+};
 
 // ── Tooltip (hover on X cells) ───────────────────────────────────────────────
 
@@ -21,7 +45,7 @@ function Tooltip({ cell }) {
       top: cell.y - 8,
       zIndex: 1000,
       pointerEvents: 'none',
-      maxWidth: 280,
+      maxWidth: 300,
       background: 'var(--color-surface)',
       border: `1px solid color-mix(in srgb, ${sub?.color ?? 'var(--color-border)'} 40%, transparent)`,
       borderRadius: 'var(--radius-md)',
@@ -33,7 +57,7 @@ function Tooltip({ cell }) {
       </p>
       <ul style={{ margin: 0, paddingLeft: 16, display: 'flex', flexDirection: 'column', gap: 2 }}>
         {cell.competencies.map((c, i) => (
-          <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text)', lineHeight: 1.5 }}>{c}</li>
+          <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text)', lineHeight: 1.5 }}>{compName(c)}</li>
         ))}
       </ul>
     </div>
@@ -81,9 +105,28 @@ function SubdomainCard({ subdomainId, competencies, expanded, onToggle }) {
       </button>
       {expanded && (
         <ul style={{ margin: '0 0 4px 10px', paddingLeft: 14, display: 'flex', flexDirection: 'column', gap: 3 }}>
-          {competencies.map((c, i) => (
-            <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text)', lineHeight: 1.55 }}>{c}</li>
-          ))}
+          {competencies.map((c, i) => {
+            const url = competencyUrl(c, subdomainId);
+            return (
+              <li key={i} style={{ fontSize: '0.8rem', lineHeight: 1.55 }}>
+                {url ? (
+                  <a
+                    href={url}
+                    style={{
+                      color: 'var(--color-heading)',
+                      textDecoration: 'none',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.textDecoration = 'underline'; e.currentTarget.style.color = sub.color; }}
+                    onMouseLeave={e => { e.currentTarget.style.textDecoration = 'none'; e.currentTarget.style.color = 'var(--color-heading)'; }}
+                  >
+                    {compName(c)}
+                  </a>
+                ) : (
+                  <span style={{ color: 'var(--color-text)' }}>{compName(c)}</span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
@@ -103,6 +146,8 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
   const entries = Object.entries(flatMappings)
     .sort(([a], [b]) => (SUBDOMAIN_INDEX[a] ?? 99) - (SUBDOMAIN_INDEX[b] ?? 99));
 
+  const requirements = component.requirements ?? [];
+
   return (
     <div style={{
       background: `color-mix(in srgb, var(--color-text) 3%, var(--color-surface))`,
@@ -113,14 +158,59 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
       flexDirection: 'column',
       gap: 'var(--space-md)',
     }}>
-      {/* Requirement text */}
+      {/* Requirement summary + official SATRE v2.0.1 statements */}
       <div>
         <p style={{ margin: '0 0 6px', fontSize: '0.62rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--color-text-muted)' }}>
-          SATRE Requirement
+          SATRE v{SATRE_SOURCE?.version ?? '2.0.1'} Capability Summary
         </p>
         <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text)', lineHeight: 1.75, fontStyle: 'italic' }}>
           {component.requirement}
         </p>
+
+        {requirements.length > 0 && (
+          <details style={{ marginTop: 'var(--space-xs)' }}>
+            <summary style={{
+              cursor: 'pointer',
+              fontSize: '0.72rem',
+              fontWeight: 600,
+              color: 'var(--color-nhs-blue)',
+              userSelect: 'none',
+            }}>
+              Official SATRE v{SATRE_SOURCE?.version ?? '2.0.1'} statements ({requirements.length})
+            </summary>
+            <ul style={{
+              margin: 'var(--space-xs) 0 0',
+              paddingLeft: 18,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 6,
+            }}>
+              {requirements.map(req => {
+                const badgeColor = IMPORTANCE_COLORS[req.importance] ?? 'var(--color-text-muted)';
+                return (
+                  <li key={req.id} style={{ fontSize: '0.78rem', color: 'var(--color-text)', lineHeight: 1.55 }}>
+                    <span style={{ fontWeight: 700, color: 'var(--color-text-muted)', marginRight: 6 }}>{req.id}</span>
+                    <span style={{
+                      fontSize: '0.6rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      color: badgeColor,
+                      background: `color-mix(in srgb, ${badgeColor} 12%, transparent)`,
+                      border: `1px solid color-mix(in srgb, ${badgeColor} 28%, transparent)`,
+                      borderRadius: 'var(--radius-pill)',
+                      padding: '1px 6px',
+                      marginRight: 6,
+                    }}>
+                      {req.importance}
+                    </span>
+                    <span>{req.statement}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </details>
+        )}
       </div>
 
       {/* Subdomain cards */}
@@ -147,14 +237,14 @@ function ComponentDetail({ component, openSubs, onToggleSub }) {
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function SatreMappingMatrix() {
-  const [openPillars,    setOpenPillars]    = useState(new Set());
+  const [openPillars, setOpenPillars] = useState(new Set());
   const [openComponents, setOpenComponents] = useState(new Set());
-  const [openSubs,       setOpenSubs]       = useState(new Set());
-  const [hovered,        setHovered]        = useState(null);
+  const [openSubs, setOpenSubs] = useState(new Set());
+  const [hovered, setHovered] = useState(null);
 
-  const togglePillar    = useCallback(id  => setOpenPillars(p    => setToggle(p, id)),  []);
-  const toggleComponent = useCallback(id  => setOpenComponents(p => setToggle(p, id)),  []);
-  const toggleSub       = useCallback(key => setOpenSubs(p       => setToggle(p, key)), []);
+  const togglePillar = useCallback(id => setOpenPillars(p => setToggle(p, id)), []);
+  const toggleComponent = useCallback(id => setOpenComponents(p => setToggle(p, id)), []);
+  const toggleSub = useCallback(key => setOpenSubs(p => setToggle(p, key)), []);
 
   const thBase = {
     padding: '4px 6px',
@@ -191,7 +281,7 @@ export default function SatreMappingMatrix() {
               {pillar.name}
             </span>
             <span style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 400 }}>
-              {pillar.components.length} components
+              {pillar.components.length} capabilities
             </span>
           </div>
         </td>
@@ -294,7 +384,11 @@ export default function SatreMappingMatrix() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
       <p style={{ margin: 0, fontSize: 'var(--text-small)', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
-        Expand a <strong>pillar</strong> to see its components, expand a <strong>component</strong> to read the SATRE requirement and see which subdomains address it, then expand a <strong>subdomain</strong> to see the contributing competencies.
+        Mapped to{' '}
+        <a href={SATRE_SOURCE?.docs_url ?? 'https://satre-specification.readthedocs.io/en/v2.0.1/'} target="_blank" rel="noopener noreferrer">
+          SATRE v{SATRE_SOURCE?.version ?? '2.0.1'}
+        </a>
+        . Expand a <strong>pillar</strong> to see its capabilities, expand a <strong>capability</strong> to read its summary and official SATRE statements and see which subdomains address it, then expand a <strong>subdomain</strong> to see the contributing competencies.
       </p>
 
       <div className="table-responsive pill-scroll">
@@ -327,7 +421,7 @@ export default function SatreMappingMatrix() {
             {/* Row 2 — subdomain column headers */}
             <tr>
               <th style={{ ...thBase, textAlign: 'left', color: 'var(--color-text-muted)', borderBottom: '1px solid var(--color-border)', paddingBottom: 8 }}>
-                SATRE Component
+                SATRE Capability
               </th>
               {SUBDOMAINS.map((s, i) => {
                 const prevDomain = i > 0 ? SUBDOMAINS[i - 1].domainId : null;

@@ -59,6 +59,12 @@ class ValidationTests(unittest.TestCase):
         self.change("satre_mapping.yaml", mutate)
         self.assertIn("unknown domain", self.errors())
 
+    def test_missing_satre_version(self):
+        def mutate(data):
+            data["source"]["version"] = "unpinned"
+        self.change("satre_mapping.yaml", mutate)
+        self.assertIn("expected pinned SATRE version 2.0.1", self.errors())
+
 
 if __name__ == "__main__":
     unittest.main()
