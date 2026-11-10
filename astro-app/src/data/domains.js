@@ -34,6 +34,7 @@ export const PAGE_COLORS = {
   'ai-agent-skill': ACCENT,
   'forge-cf-exercise': ACCENT,
   'forge-26-outcomes': ACCENT,
+  'forge-privacy': ACCENT,
   'satre-mapping': ACCENT,
   'acknowledgements': ACCENT,
   'student-projects': ACCENT,

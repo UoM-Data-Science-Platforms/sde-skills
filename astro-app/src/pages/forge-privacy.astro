@@ -1,0 +1,533 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
+const pdfUrl = `${base}assets/images/ForgePrivacy.pdf`;
+---
+
+<Layout title="Forge Privacy Notice — SDE Team Development Hub" currentDomain="forge-privacy">
+  <div class="skills-framework forge-privacy-page">
+    <PageHeader title="Forge Privacy" />
+
+    <div class="scroll-area">
+      <div class="container-fluid px-4 py-4" style="max-width: 1050px; margin: 0 auto; width: 100%;">
+
+        <div class="mb-4">
+          <nav aria-label="breadcrumb">
+            <a href={`${base}retreat/`} class="back-link d-inline-flex align-items-center gap-1 text-decoration-none">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg>
+              <span>Back to SDE Forge</span>
+            </a>
+          </nav>
+
+          <h1 class="document-title mt-3 mb-2">SDE Forge Residential 2026 Applicant and Participant Privacy Notice</h1>
+          <p class="document-subtitle text-muted mb-0">
+            SDE Forge Technical Skills Residential | 11&ndash;13 November 2026, Rookery Hall Hotel &amp; Spa, Cheshire
+          </p>
+        </div>
+
+        {/* Scrollbox with full copy of the privacy notice */}
+        <div
+          class="privacy-scrollbox"
+          tabindex="0"
+          role="region"
+          aria-label="SDE Forge Privacy Notice document text"
+        >
+          <article class="privacy-content">
+            <section class="privacy-section">
+              <div class="notice-meta mb-3 pb-2">
+                <span class="badge bg-secondary-subtle text-secondary-emphasis me-2">SDE FORGE</span>
+                <span class="text-muted small">Applicant and Participant Privacy Notice</span>
+              </div>
+            </section>
+
+            <section class="privacy-section">
+              <h2>1. Introduction</h2>
+              <p>
+                The University of Manchester is the controller of the applicant and participant information described in this notice. Staff at the University of Liverpool and Lancashire Teaching Hospitals NHS Foundation Trust help deliver SDE Forge. Section 4 explains which information they receive and why.
+              </p>
+              <p>
+                The SDE Forge event is run by the SDE Team Development Hub, an EPSRC-funded project led by The University of Manchester. Section 4 explains who receives your information.
+              </p>
+              <p>
+                This notice covers applications, registration, attendance, event activities, pre- and post-event questionnaires, optional photography and filming, and optional future emails. The optional, anonymous SDE Skills Competency Framework survey is a separate research study with its own information sheet and is not covered here.
+              </p>
+              <p>
+                <strong>Event enquiries:</strong> <a href="mailto:sdertp@manchester.ac.uk" class="link-primary">sdertp@manchester.ac.uk</a>
+              </p>
+            </section>
+
+            <section class="privacy-section">
+              <h2>2. What information do we use?</h2>
+              <p>
+                For the purposes of SDE Forge, the University of Manchester needs to collect, maintain and use personal information relating to you, in the categories below. Required fields are identified on each form; without the details needed to assess an application or arrange attendance, we may be unable to offer or administer your place. We also hold selection decisions, waiting list status and an attendance register.
+              </p>
+              <ul class="privacy-list">
+                <li>
+                  <strong>Applicant management:</strong> name, email address, organisation, job title, role and responsibilities, software development/Git experience, reasons for attending, intended use of the learning and availability for the full event.
+                </li>
+                <li>
+                  <strong>Participant management:</strong> name, email address, mobile telephone number, acceptance of your place, confirmation of availability, GitHub username, and your Azure training login and activity.
+                </li>
+                <li>
+                  <strong>Accommodation and booking details:</strong> number of occupants in your room and number of accompanying guests not attending the event, where you email us to request an additional occupant, and room requirements, taken from the accessibility needs you tell us about.
+                </li>
+                <li>
+                  <strong>Catering and participation:</strong> dietary requirements or allergies, and accessibility requirements or other needs.
+                </li>
+                <li>
+                  <strong>Other information:</strong> identifiable photographs, video and voice recordings where you consent; and records of your consent choices, changes and withdrawals.
+                </li>
+                <li>
+                  <strong>Pre- and post-event questionnaires:</strong> understanding of SDEs and TREs, career development, professional connections, expectations, goals and benefits gained; feedback on sessions, the venue and organisation; and optional comments, questions and suggestions.
+                </li>
+              </ul>
+            </section>
+
+            <section class="privacy-section">
+              <h2>3. Why we use your information and our legal basis</h2>
+
+              <div class="subsection">
+                <h3>Applications, registration and attendance</h3>
+                <p>
+                  We use Eventbrite to manage applications. We assess them against published criteria. Successful applicants provide registration details, including dietary, allergy and accessibility requirements, through Microsoft Forms in the University's Microsoft 365 account. We use application and registration information to select participants, manage a waiting list, confirm places, communicate essential event information and arrange accommodation, catering and accessibility support. We record attendance to issue certificates.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Public Task (Article 6(1)(e) UK GDPR).
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Dietary and accessibility information</h3>
+                <p>
+                  We use this information only to arrange meals and participation support, sharing the relevant requirements with authorised venue staff and event organisers who need them. Please provide only the dietary requirements, allergies or accessibility requirements needed to arrange support. We collected dietary, allergy and accessibility details through our registration form before this notice was available and relevant requirements have been shared with the venue. We are now asking for your explicit consent to keep using them, which applies from the date you give it.
+                </p>
+                <p>
+                  If you do not consent or do not respond, we will delete those details and ask the hotel to delete information provided solely for these arrangements, except for information it needs to retain for its own separate lawful purposes. This may affect the meals or support that can be arranged. The same applies if you withdraw consent, which you can do at any time by emailing <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Public Task (Article 6(1)(e) UK GDPR). Where the requirements you provide reveal special category information (such as health or religious beliefs), our additional condition is Explicit Consent (Article 9(2)(a) UK GDPR).
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Why Public Task applies</h3>
+                <p>
+                  SDE Forge is the SDE Team Development Hub's residential training pilot for Research Technical Professionals working on Secure Data Environments. Through teaching, technical workshops and collaborative learning, it supports the University's higher-education function in staff and workforce development, training and engagement.
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Teaching through GitHub and Azure</h3>
+                <p>
+                  Teaching uses GitHub Codespaces. You need a GitHub account, either personal or provided by your organisation. We use your GitHub username to confirm that you have the GitHub account required to participate in the event. You will create a private fork of the teaching repository in your own GitHub account for use with Codespaces. Your private fork, work and commit history remain under your control through your GitHub account and are not visible to other participants or the teaching team unless you choose to grant access. Do not add unnecessary personal information to your repository or code. For hands-on sessions, we provide a temporary login through the University of Liverpool's Azure account. Until the event ends, we record who has each login. Activity is recorded against the login and is visible to the teaching team.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Public Task (Article 6(1)(e) UK GDPR).
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Photography and filming</h3>
+                <p>
+                  Photography and filming are planned, with signs showing filming areas. You can choose separately whether identifiable photographs and recordings may be used for internal reporting and communications and whether they may be used for public sharing and promotion. If you do not consent to either purpose, you should not be intentionally photographed or filmed. If you consent to only one purpose, identifiable material containing you will be used only for that purpose. With your consent, identifiable photographs and video, including recorded voice, may be used for internal SDE Forge/SDE Team Development Hub reporting, communications and presentations, or for public sharing and promotion through University and programme websites, social media, presentations, printed materials and reports. Online material can be viewed worldwide, copied and independently shared. Distributed print copies and reposts held by others may not be recoverable.
+                </p>
+                <p>
+                  For general event photographs and recordings, we will not identify participants in captions by name, employer or job role, or tag their social-media accounts. People may still be recognisable from their image or voice. Interviews are separate: interviewees will be asked to consent separately at the event, with the intended uses and any identification explained before they agree.
+                </p>
+                <p>
+                  Photography and filming are optional, and your choices will not affect attendance. We will use your recorded preferences to prevent identifiable photography or filming without the relevant consent. Before any photograph or recording is used, a member of the University of Manchester team checks it against the choices of everyone identifiable in it. You can also speak to the event team on arrival to discuss arrangements; this is not necessary for a refusal to be respected. You can withdraw consent at any time by emailing <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>. We will stop future consent-based use and remove material under the University's control where required.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Consent (Article 6(1)(a) UK GDPR).
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Future communications about SDE Forge and related activities</h3>
+                <p>
+                  Where you consent, the University SDE Forge/SDE Team Development Hub team will use your contact details to send emails about future SDE training, events, community activities and related development opportunities.
+                </p>
+                <p>
+                  Providing consent is optional and will not affect your participation in SDE Forge. You may withdraw your consent or unsubscribe from future communications at any time by emailing <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Consent (Article 6(1)(a) UK GDPR).
+                </p>
+              </div>
+
+              <div class="subsection">
+                <h3>Pre- and post-event questionnaires</h3>
+                <p>
+                  Optional pre- and post-event questionnaires help us evaluate SDE Forge, report outcomes and improve future events. Responses are collected in Microsoft Forms through the University's Microsoft 365 account and are accessible only to the University of Manchester SDE Forge team. Partners may receive group-level, aggregated or summary results for possible use in reports. Before any results or quotations are shared with partners, EPSRC or public audiences, the University of Manchester SDE Forge team will check them for possible direct or indirect identification. Distinctive comments and results relating to small groups will be omitted, combined or generalised where necessary.
+                </p>
+                <p>
+                  All questions are optional. The questionnaires are configured not to record respondents' names or email addresses, and we do not use participant identifiers or matching codes. Pre- and post-event responses are not matched to individual participants. Apart from quotations considered suitable for use following this disclosure-risk check, analysis and reporting are at group level. Because the participant group is small, free-text responses could still identify you indirectly. Please therefore avoid including information that could identify you or another person.
+                </p>
+                <p class="legal-basis">
+                  <strong>Legal basis:</strong> Public Task (Article 6(1)(e) UK GDPR), where responses could identify you.
+                </p>
+              </div>
+            </section>
+
+            <section class="privacy-section">
+              <h2>4. Who receives your information?</h2>
+              <ul class="privacy-list">
+                <li>
+                  Authorised SDE Forge project team members at The University of Manchester, the University of Liverpool and Lancashire Teaching Hospitals NHS Foundation Trust have access to the application and registration information held in the shared project environment where needed to support delivery of SDE Forge. A limited subset of registration information was separately shared with the venue, consisting only of the information requested directly by the venue for participant registration and support arrangements.
+                </li>
+                <li>
+                  Rookery Hall Hotel (Hand Picked Hotels) receives the booking and support information needed to arrange your stay, meals and participation: first name, surname, phone number, email address, number of occupants in the room, number of guests not attending the event, relevant dietary requirements or allergies and room requirements based on accessibility needs. Hand Picked Hotels separately controls information it processes as a hotel operator, including information you provide directly. Its arrangements are explained in the <a href="https://www.handpickedhotels.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Hand Picked Hotels privacy policy</a>.
+                </li>
+                <li>
+                  The University of Manchester Media Services team and Chris Foster Photography handle the photographs and recordings they create or process on behalf of The University of Manchester. They receive a mechanism for checking participants' relevant consent choices. They do not use the material for their own purposes and delete their working copies within three months.
+                </li>
+                <li>
+                  Reporting material is shared with the SDE Team Development Hub team for the internal purposes described in section 3, where you consent; public media may be viewed by anyone through the channels described in section 3 according to your consent.
+                </li>
+                <li>
+                  Eventbrite holds the information you enter in the application form. Microsoft holds registration details, consent choices, questionnaire responses, emails and files stored in Teams, as the University's Microsoft 365 provider. They process this information to provide these services. Eventbrite also uses some information for its own purposes, as explained in its <a href="https://www.eventbrite.co.uk/help/en-gb/articles/429030/" target="_blank" rel="noopener noreferrer">privacy policy</a>.
+                </li>
+                <li>
+                  The University of Liverpool provides the Azure training logins through its Microsoft Azure account, with the training environment hosted in the UK.
+                </li>
+                <li>
+                  GitHub provides the teaching materials, exercises and Codespaces. You use these through your own GitHub account. Your GitHub account, private repository, Codespace, work and commit history are controlled through your account and are subject to GitHub's own privacy arrangements. The University does not add information to, collect information from or access your private repository or Codespace.
+                </li>
+                <li>
+                  EPSRC, which funds the project, may ask for a report. If it does, the report may include group-level results, quoted comments and, where you have chosen public use, photographs or recordings. Before sharing, the University will check group-level results and quotations for possible direct or indirect identification. Distinctive quotations and small-group results will be omitted, combined or generalised where necessary.
+                </li>
+              </ul>
+            </section>
+
+            <section class="privacy-section">
+              <h2>5. Storage, retention and overseas transfers</h2>
+              <p>
+                University records are stored securely on University-managed systems, including The University of Manchester's Microsoft Teams, with access restricted to those who need them.
+              </p>
+              <p>
+                Application data is also held by Eventbrite, which is not a university-managed system. Eventbrite may process application information outside the UK. For transfers from the UK, Eventbrite's Data Processing Addendum incorporates the UK International Data Transfer Addendum to the EU Standard Contractual Clauses. Further information is available in <a href="https://www.eventbrite.co.uk/help/en-gb/articles/429030/" target="_blank" rel="noopener noreferrer">Eventbrite's Data Processing Addendum for Organizers</a>.
+              </p>
+              <p>
+                Your use of your own GitHub account and GitHub Codespaces is subject to GitHub's privacy statement, including its information about international data transfers. The University does not transfer your GitHub account or repository information to GitHub.
+              </p>
+              <p>
+                The table below shows how long we keep each type of record. Hotel-held records are covered by the hotel's own notice. Further information: <a href="https://www.manchester.ac.uk/about/privacy-information/data-protection/" target="_blank" rel="noopener noreferrer">University records retention arrangements</a>.
+              </p>
+
+              <div class="table-responsive my-3">
+                <table class="table table-bordered table-hover align-top privacy-table mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col" style="width: 38%;">Record</th>
+                      <th scope="col" style="width: 62%;">Retention period or specific deletion criterion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Applications, selection decisions and waiting lists (where held)</th>
+                      <td>Deleted by 31 December 2026.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Registration and attendance records</th>
+                      <td>Deleted by 31 December 2026.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Dietary and accessibility information</th>
+                      <td>Deleted immediately after the event.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Photographs and recordings</th>
+                      <td>
+                        Identifiable photographs and recordings held by The University of Manchester will be deleted by 27 November 2027. Media suppliers delete their working copies within three months. Published copies may remain in circulation as a result of reports and social media posts. Withdrawal is handled as described in section 3.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Event Questionnaire</th>
+                      <td>
+                        Individual responses will be deleted by 31 December 2026. Effectively anonymised results and quotations may be kept for 5 years after completion of the questionnaires.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">GitHub usernames</th>
+                      <td>
+                        The GitHub username record used to confirm that you met the participation requirement will be deleted by 31 December 2026. Your private fork, Codespace, work and commit history remain under your control through your own GitHub account and may be retained or deleted by you.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Azure logins and activity records</th>
+                      <td>
+                        Logins will be closed after the event. The list of who had which login will be deleted at the end of the event. Azure Activity Log records are retained by Azure for 90 days and then automatically deleted.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Consent and withdrawal records</th>
+                      <td>
+                        Retained while the associated photographs and recordings are held and for one year afterwards, to demonstrate and respect your choices. These records will be deleted by 27 November 2027. After the project ends, the Principal Investigator will remain responsible within The University of Manchester for these records and any subsequent withdrawal requests. Requests can continue to be made to <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Future email subscriptions</th>
+                      <td>
+                        Kept until you unsubscribe or the mailing list closes. A minimal unsubscribe record may be retained where necessary to ensure that you are not contacted again.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="privacy-section">
+              <h2>6. Your rights and who to contact</h2>
+              <ul class="privacy-list">
+                <li>You can ask to see your personal information or have it corrected.</li>
+                <li>In some circumstances, you can also ask us to delete it, limit its use or provide an electronic copy for reuse.</li>
+                <li>You can object to our use of your information for public task purposes, giving reasons related to your situation.</li>
+              </ul>
+              <p>
+                Further information about your data-protection rights and how to exercise them is available on the University's Data Protection pages: <a href="https://www.manchester.ac.uk/about/privacy-information/data-protection/" target="_blank" rel="noopener noreferrer">https://www.manchester.ac.uk/about/privacy-information/data-protection/</a>. If you have a question or concern about how SDE Forge uses your information, please contact the SDE Forge team at <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>. To contact the University's Data Protection Officer, email <a href="mailto:dataprotection@manchester.ac.uk">dataprotection@manchester.ac.uk</a> or write to: The Data Protection Officer, Information Governance Office, Christie Building, University of Manchester, Oxford Road, Manchester M13 9PL. You also have the right to complain to the Information Commissioner's Office. Information about making a complaint is available at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">https://ico.org.uk/make-a-complaint/</a> or by calling 0303 123 1113.
+              </p>
+              <p>
+                To withdraw consent for dietary, allergy or accessibility information, photographs, filming or future emails, contact <a href="mailto:sdertp@manchester.ac.uk">sdertp@manchester.ac.uk</a>. The University of Manchester team will tell the relevant organisers and suppliers. Withdrawal does not affect the lawfulness of processing carried out on the basis of valid consent before it was withdrawn. The practical implications for support arrangements and removal of media are explained in section 3.
+              </p>
+              <p>
+                Further information about data protection, your rights and University contacts is available at: <a href="https://www.manchester.ac.uk/about/privacy-information/data-protection/" target="_blank" rel="noopener noreferrer">University data protection information</a>.
+              </p>
+              <p class="text-muted small mt-4 pt-2">
+                <strong>Last updated:</strong> 10/Nov/2026
+              </p>
+            </section>
+          </article>
+        </div>
+
+        {/* Download Action Section below the scrollbox */}
+        <div class="download-action-bar mt-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+          <a
+            href={pdfUrl}
+            download="ForgePrivacy.pdf"
+            class="btn btn-primary d-inline-flex align-items-center gap-2 px-4 py-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="fw-semibold">Download PDF</span>
+          </a>
+
+          <div class="text-muted small d-flex align-items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>ForgePrivacy.pdf (Official Document)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .back-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-heading);
+    opacity: 0.75;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .back-link:hover {
+    opacity: 1;
+    color: var(--color-nhs-blue);
+    transform: translateX(-2px);
+  }
+
+  .document-title {
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  .document-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* --- Scrollbox container --- */
+  .privacy-scrollbox {
+    height: 580px;
+    max-height: 65vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2.25rem;
+    background: var(--color-competency-card-bg, rgba(255, 255, 255, 0.45));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: none !important;
+    outline: none !important;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    scroll-behavior: smooth;
+    position: relative;
+  }
+
+  .privacy-scrollbox::before,
+  .privacy-scrollbox::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .privacy-scrollbox:hover,
+  .privacy-scrollbox:focus {
+    border: none !important;
+    outline: none !important;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  .privacy-scrollbox::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .privacy-scrollbox::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+
+  [data-bs-theme="dark"] .privacy-scrollbox::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .privacy-scrollbox::-webkit-scrollbar-thumb {
+    background: var(--color-deep-blue, #222B56);
+    opacity: 0.6;
+    border-radius: 4px;
+  }
+
+  [data-bs-theme="dark"] .privacy-scrollbox::-webkit-scrollbar-thumb {
+    background: #5b74b8;
+  }
+
+  /* --- Document Typography Inside Scrollbox --- */
+  .privacy-content {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .privacy-section {
+    margin-bottom: 2rem;
+  }
+
+  .privacy-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .privacy-section h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-top: 0;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .subsection {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .subsection h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-section p {
+    margin-bottom: 0.85rem;
+  }
+
+  .privacy-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .privacy-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .legal-basis {
+    background: color-mix(in srgb, var(--color-heading) 5%, transparent);
+    border-left: 3px solid var(--color-deep-blue);
+    padding: 0.5rem 0.85rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .privacy-content a {
+    color: var(--color-nhs-blue, #005EB8);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  [data-bs-theme="dark"] .privacy-content a {
+    color: var(--bs-link-color, #afeaff);
+  }
+
+  .privacy-content a:hover {
+    opacity: 0.85;
+  }
+
+  /* --- Table Styling --- */
+  .privacy-table {
+    font-size: 0.88rem;
+    border-color: var(--color-border);
+  }
+
+  .privacy-table th,
+  .privacy-table td {
+    padding: 0.65rem 0.85rem;
+    line-height: 1.5;
+  }
+
+  .privacy-table th {
+    font-weight: 600;
+  }
+
+  [data-bs-theme="dark"] .privacy-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--color-text);
+    --bs-table-border-color: var(--color-border);
+  }
+
+  /* --- Download Action Bar --- */
+  .download-action-bar {
+    padding: 0.5rem 0;
+  }
+
+  .download-action-bar .btn-primary {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .privacy-scrollbox {
+      padding: 1.25rem;
+      height: 480px;
+    }
+  }
+</style>
