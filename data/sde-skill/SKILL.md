@@ -1,7 +1,7 @@
 ---
 name: sde-skill
 description: >-
-  Interact with the SDE Skills Competency Framework for research technical
+  Interact with the SDE RTP Competency Framework for research technical
   professionals working with Secure Data Environments (SDEs) and Trusted
   Research Environments (TREs). Use this whenever a user uploads or mentions a
   CV or résumé to assess against the framework, shares a job description (JD)
@@ -14,10 +14,10 @@ description: >-
   explicitly.
 ---
 
-# SDE Skills Competency Framework
+# The SDE RTP Competency Framework
 
-This skill lets you act as a knowledgeable guide to the **SDE Skills
-Competency Framework** — a competency framework for research technical
+This skill lets you act as a knowledgeable guide to the **SDE RTP
+Competency Framework** (the framework) — a competency framework for research technical
 professionals (RTPs) who build and operate Secure Data Environments (SDEs),
 also known as Trusted Research Environments (TREs). It supports two audiences:
 
@@ -45,22 +45,22 @@ model, with a sixth cross-cutting governance domain:
 
 ## Data Sources — Fetching Framework Data
 
-All framework data is loaded directly from the website endpoint `https://data/<filename>.yaml`.
+All framework data is loaded directly from the website endpoint `https://sdertp.org/data/<filename>.yaml`.
 
-- **Master Skills Index**: `https://data/sde-skill/framework_index.md` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
-- **Assessment Playbooks**: `https://data/sde-skill/assessment_playbooks.md` — guidance on how to assess roles against the framework.
-- **Framework mapping**: `https://data/sde-skill/framework_mapping.md` — guidance on how the framework maps to Five Safes and SATRE.
+- **Master Skills Index**: `https://sdertp.org/data/sde-skill/framework_index.md` — compiled list of all skills, metadata, and competency mappings. Start here to triage or look up specific skill IDs.
+- **Assessment Playbooks**: `https://sdertp.org/data/sde-skill/assessment_playbooks.md` — guidance on how to assess roles against the framework.
+- **Framework mapping**: `https://sdertp.org/data/sde-skill/framework_mapping.md` — guidance on how the framework maps to Five Safes and SATRE.
 - **Domain YAML Files**: Fetch individual domain files for complete descriptions, competencies, levels, qualifications, and core concepts:
-  - `https://data/safe_access_identity.yaml`
-  - `https://data/safe_data_management.yaml`
-  - `https://data/safe_governance_compliance.yaml`
-  - `https://data/safe_outputs_disclosure_control.yaml`
-  - `https://data/safe_projects_operations.yaml`
-  - `https://data/safe_technology_engineering.yaml`
+  - `https://sdertp.org/data/safe_access_identity.yaml`
+  - `https://sdertp.org/data/safe_data_management.yaml`
+  - `https://sdertp.org/data/safe_governance_compliance.yaml`
+  - `https://sdertp.org/data/safe_outputs_disclosure_control.yaml`
+  - `https://sdertp.org/data/safe_projects_operations.yaml`
+  - `https://sdertp.org/data/safe_technology_engineering.yaml`
 
 ### YAML Data Schema
 
-When fetching data from `https://data/`, the files follow two structured formats:
+When fetching data from `https://sdertp.org/data/`, the files follow two structured formats:
 
 1. **Domain Data Files** (`safe_<domain_name>.yaml`):
    - **`domain`**: Header containing `id`, `name`, `index`, `description`, `main-color`.
@@ -115,7 +115,7 @@ In brief:
 - **JD alignment check**: extract the JD's requirements → map to competencies → report coverage per domain, flag unmapped requirements and framework competencies the JD is missing for that kind of role.
 - **JD drafting**: pick role-relevant competencies and levels, turn their skill statements into requirements (essential vs desirable).
 - **Career development**: locate current position per competency, pick the target, and use the next level's skill statements as concrete objectives.
-- **General questions**: answer using data fetched from the website YAML endpoints (`https://data/`).
+- **General questions**: answer using data fetched from the website YAML endpoints (`https://sdertp.org/data/`).
 
 ## Assessment principles
 

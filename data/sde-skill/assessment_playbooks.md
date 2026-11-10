@@ -1,7 +1,7 @@
 # Assessment Playbooks
 
 Step-by-step playbooks and output templates for the main ways people use the
-SDE Skills Competency Framework. Follow the structure but adapt tone and
+SDE RTP Competency Framework (the framework). Follow the structure but adapt tone and
 depth to the user — a quick "how does my CV stack up?" deserves a lighter
 report than a formal team capability review.
 
@@ -21,7 +21,7 @@ target role/level, and what to develop next.
 
 1. Establish target role and level (ask if unclear — see SKILL.md). From
    the role, pick the in-scope domains and, within them, the relevant
-   competencies using `https://data/sde-skill/framework_index.md`. Typical shapes:
+   competencies using `https://sdertp.org/data/sde-skill/framework_index.md`. Typical shapes:
    - *Data wrangler / data engineer*: Safe Data Management deep; Outputs +
      Governance mid; Technology working knowledge.
    - *TRE operator / platform engineer*: Safe Technology & Engineering +
@@ -39,13 +39,13 @@ target role/level, and what to develop next.
    state that choice in the report's assumptions.
 2. Read the CV fully. Extract skills, tools, responsibilities, and
    achievements *with the evidence attached* (which role, what they did).
-3. Fetch the in-scope domain YAML file(s) directly from `https://data/`:
-   - **Safe Access & Identity**: `https://data/safe_access_identity.yaml`
-   - **Safe Data Management**: `https://data/safe_data_management.yaml`
-   - **Safe Governance & Compliance**: `https://data/safe_governance_compliance.yaml`
-   - **Safe Outputs & Disclosure Control**: `https://data/safe_outputs_disclosure_control.yaml`
-   - **Safe Projects & Operations**: `https://data/safe_projects_operations.yaml`
-   - **Safe Technology & Engineering**: `https://data/safe_technology_engineering.yaml`
+3. Fetch the in-scope domain YAML file(s) directly from `https://sdertp.org/data/`:
+   - **Safe Access & Identity**: `https://sdertp.org/data/safe_access_identity.yaml`
+   - **Safe Data Management**: `https://sdertp.org/data/safe_data_management.yaml`
+   - **Safe Governance & Compliance**: `https://sdertp.org/data/safe_governance_compliance.yaml`
+   - **Safe Outputs & Disclosure Control**: `https://sdertp.org/data/safe_outputs_disclosure_control.yaml`
+   - **Safe Projects & Operations**: `https://sdertp.org/data/safe_projects_operations.yaml`
+   - **Safe Technology & Engineering**: `https://sdertp.org/data/safe_technology_engineering.yaml`
    
    For each relevant competency in the fetched domain data, compare the CV evidence against the entry/mid/senior skill statements and assign the highest level with real support, with a D/I rating. Match meaning, not keywords; credit equivalent tools and transferable sector experience. Seniority needs scope evidence (led, designed, owned), not just years.
 4. Compare against the target level per competency to classify: strength
@@ -60,7 +60,7 @@ target role/level, and what to develop next.
 **Template:**
 
 ```markdown
-# CV assessment against the SDE Skills Competency Framework
+# CV assessment against the SDE RTP Competency Framework
 **Target:** <role>, <level> · **Scope:** <domains> · **Assumptions:** <...>
 
 ## Summary
@@ -107,7 +107,7 @@ coverage, over-asks, and blind spots.
 **Template:**
 
 ```markdown
-# JD alignment with the SDE Skills Competency Framework
+# JD alignment with the SDE RTP Competency Framework
 **Role:** <title> · **Implied level:** <entry/mid/senior> · **Best-fit profile:** <role shape>
 
 ## Summary
