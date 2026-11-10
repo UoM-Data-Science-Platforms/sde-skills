@@ -1,0 +1,2928 @@
+[
+  {
+    "id": 1,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Considered the attributes of teamwork and their challenges (word cloud)",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Collaboration, networking and cross-community ways of working support the teamwork focus.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 2,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Considered the attributes of teamwork and their challenges (word cloud)",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Reflecting on and improving team practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 3,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Learnt the basic concept and benefits of how the team research model have can support success in technical research projects (exit poll)",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Collaboration, networking and cross-community ways of working support the teamwork focus.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 4,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Learnt the basic concept and benefits of how the team research model have can support success in technical research projects (exit poll)",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Reflecting on and improving team practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 5,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Identified at least one change they can make in their approach to teamwork from Helm’s ‘nuggets of success’ activity (exit poll)",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Collaboration, networking and cross-community ways of working support the teamwork focus.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 6,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Identified at least one change they can make in their approach to teamwork from Helm’s ‘nuggets of success’ activity (exit poll)",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Reflecting on and improving team practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 7,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Identified one framework domain to develop during the retreat most relevant to their current or intended role (exit poll)",
+    "competencyCode": "5.4.1e",
+    "competencyName": "Researcher Training & Support",
+    "competencyTitle": "5.4.1 Researcher Training & Support (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=researcher-training-support&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Using the framework to identify development needs supports structured training and development.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.1 Researcher Training & Support",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 8,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Identified one framework domain to develop during the retreat most relevant to their current or intended role (exit poll)",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Personal skills-gap identification supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 9,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Been signposted to all follow-up resources (framework site, Team Research toolkit and glossary, SSI/RSE Society)",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Collaboration, networking and cross-community ways of working support the teamwork focus.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 10,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Been signposted to all follow-up resources (framework site, Team Research toolkit and glossary, SSI/RSE Society)",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Reflecting on and improving team practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 11,
+    "session": "Session 1: Introduction to Team Science and the SDE RTP Competency Framework",
+    "objective": "Been signposted to all follow-up resources (framework site, Team Research toolkit and glossary, SSI/RSE Society)",
+    "competencyCode": "5.3.2e",
+    "competencyName": "Documentation & Knowledge Management",
+    "competencyTitle": "5.3.2 Documentation & Knowledge Management (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=documentation-knowledge-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Locating and using shared resources is related to knowledge management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.2 Documentation & Knowledge Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 12,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Described, in their own words, what a TRE/SDE is and how it differs from a general research computing environment.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure TRE/SDE design, controls and Five Safes-informed architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 13,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Described, in their own words, what a TRE/SDE is and how it differs from a general research computing environment.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Reference architecture and production-readiness require consideration of enterprise quality requirements.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 14,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Described, in their own words, what a TRE/SDE is and how it differs from a general research computing environment.",
+    "competencyCode": "5.4.2e",
+    "competencyName": "TRE Tools & Capabilities",
+    "competencyTitle": "5.4.2 TRE Tools & Capabilities (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=tre-tools-capabilities&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Understanding TRE/SDE capabilities and boundaries supports selection and use of research tools and environments.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.2 TRE Tools & Capabilities",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 15,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Walked through a reference TRE architecture and identified the three control points: secure ingress, the analysis environment, and the airlock/output checking on the way out.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure TRE/SDE design, controls and Five Safes-informed architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 16,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Walked through a reference TRE architecture and identified the three control points: secure ingress, the analysis environment, and the airlock/output checking on the way out.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Reference architecture and production-readiness require consideration of enterprise quality requirements.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 17,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Walked through a reference TRE architecture and identified the three control points: secure ingress, the analysis environment, and the airlock/output checking on the way out.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "Ingress, egress and airlock controls are information-governance controls within a secure environment.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 18,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Walked through a reference TRE architecture and identified the three control points: secure ingress, the analysis environment, and the airlock/output checking on the way out.",
+    "competencyCode": "3.4.1e",
+    "competencyName": "Audit Trail Implementation",
+    "competencyTitle": "3.4.1 Audit Trail Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=audit-compliance-monitoring&comp=audit-trail-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Controlled movement should create an audit trail.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.4 Audit & Compliance Monitoring",
+      "competencyItem": "3.4.1 Audit Trail Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 19,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Walked through a reference TRE architecture and identified the three control points: secure ingress, the analysis environment, and the airlock/output checking on the way out.",
+    "competencyCode": "2.2.8e",
+    "competencyName": "Data Migration",
+    "competencyTitle": "2.2.8 Data Migration (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-migration&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Supporting",
+    "rationale": "Secure transfer between environments is data migration.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.8 Data Migration",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 20,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Mapped the Five Safes to at least three concrete features of a TRE.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure TRE/SDE design, controls and Five Safes-informed architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 21,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Mapped the Five Safes to at least three concrete features of a TRE.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Reference architecture and production-readiness require consideration of enterprise quality requirements.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 22,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified, with the presenter, at least one credible threat for each STRIDE category on a reference TRE data flow diagram, and named which of the Five Safes a control for it would strengthen.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure TRE/SDE design, controls and Five Safes-informed architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 23,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified, with the presenter, at least one credible threat for each STRIDE category on a reference TRE data flow diagram, and named which of the Five Safes a control for it would strengthen.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Reference architecture and production-readiness require consideration of enterprise quality requirements.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 24,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified, with the presenter, at least one credible threat for each STRIDE category on a reference TRE data flow diagram, and named which of the Five Safes a control for it would strengthen.",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns selecting or implementing safeguards to address security risks.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 25,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified, with the presenter, at least one credible threat for each STRIDE category on a reference TRE data flow diagram, and named which of the Five Safes a control for it would strengthen.",
+    "competencyCode": "3.2.2e",
+    "competencyName": "Security Assessment & Testing",
+    "competencyTitle": "3.2.2 Security Assessment & Testing (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-assessment-testing&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "STRIDE analysis and control evaluation are security assessment activities.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.2 Security Assessment & Testing",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 26,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Worked in pairs through a guided STRIDE exercise on a simple example TRE, placing each STRIDE category on the TRE and choosing a control and the Safe it strengthens.",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns selecting or implementing safeguards to address security risks.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 27,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Worked in pairs through a guided STRIDE exercise on a simple example TRE, placing each STRIDE category on the TRE and choosing a control and the Safe it strengthens.",
+    "competencyCode": "3.2.2e",
+    "competencyName": "Security Assessment & Testing",
+    "competencyTitle": "3.2.2 Security Assessment & Testing (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-assessment-testing&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "STRIDE analysis and control evaluation are security assessment activities.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.2 Security Assessment & Testing",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 28,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Worked in pairs through a guided STRIDE exercise on a simple example TRE, placing each STRIDE category on the TRE and choosing a control and the Safe it strengthens.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Threat modelling informs secure environment design and defence in depth.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 29,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Named at least two assurance or compliance frameworks that apply to UK TREs (for example the NHS Data Security and Protection Toolkit and ISO 27001).",
+    "competencyCode": "3.4.3e",
+    "competencyName": "Certification & Accreditation",
+    "competencyTitle": "3.4.3 Certification & Accreditation (Entry)",
+    "competencyPath": "governance-compliance/?sub=audit-compliance-monitoring&comp=certification-accreditation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns formal assurance, certification or accreditation frameworks.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.4 Audit & Compliance Monitoring",
+      "competencyItem": "3.4.3 Certification & Accreditation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 30,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Named at least two assurance or compliance frameworks that apply to UK TREs (for example the NHS Data Security and Protection Toolkit and ISO 27001).",
+    "competencyCode": "3.4.2e",
+    "competencyName": "Compliance Monitoring & Reporting",
+    "competencyTitle": "3.4.2 Compliance Monitoring & Reporting (Entry)",
+    "competencyPath": "governance-compliance/?sub=audit-compliance-monitoring&comp=compliance-monitoring-reporting&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Assurance requires monitoring and evidence of compliance.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.4 Audit & Compliance Monitoring",
+      "competencyItem": "3.4.2 Compliance Monitoring & Reporting",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 31,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Named at least two assurance or compliance frameworks that apply to UK TREs (for example the NHS Data Security and Protection Toolkit and ISO 27001).",
+    "competencyCode": "3.1.3e",
+    "competencyName": "Healthcare Standards Compliance",
+    "competencyTitle": "3.1.3 Healthcare Standards Compliance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=healthcare-standards-compliance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "DSPT is a healthcare-specific compliance standard named by the framework.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.3 Healthcare Standards Compliance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 32,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified one issue from the session that applies directly to their own organisation, captured in a short exit check.",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns engagement with wider professional communities and networks.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 33,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified one issue from the session that applies directly to their own organisation, captured in a short exit check.",
+    "competencyCode": "5.3.2e",
+    "competencyName": "Documentation & Knowledge Management",
+    "competencyTitle": "5.3.2 Documentation & Knowledge Management (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=documentation-knowledge-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Locating and using shared resources is related to knowledge management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.2 Documentation & Knowledge Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 34,
+    "session": "Session 2 — Overview of Trusted Research Environments (TREs and SDEs)",
+    "objective": "Identified one issue from the session that applies directly to their own organisation, captured in a short exit check.",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Applying learning to local practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 35,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Logged into the Azure Portal with their own account and located each component of their own deployed mini TRE.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns cloud resources, provisioning or cloud architecture management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 36,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Logged into the Azure Portal with their own account and located each component of their own deployed mini TRE.",
+    "competencyCode": "6.3.4e",
+    "competencyName": "Component-Based Architecture",
+    "competencyTitle": "6.3.4 Component-Based Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=component-based-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Layered reusable platform components align with component-based architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.4 Component-Based Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 37,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Logged into the Azure Portal with their own account and located each component of their own deployed mini TRE.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Relating platform layers to security design concerns secure environment design.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 38,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Connected to their TRE virtual machine through the bastion and confirmed it is working.",
+    "competencyCode": "6.2.3e",
+    "competencyName": "Network Architecture",
+    "competencyTitle": "6.2.3 Network Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=network-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Bastion-mediated access is a secure network architecture pattern.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.3 Network Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 39,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Connected to their TRE virtual machine through the bastion and confirmed it is working.",
+    "competencyCode": "1.2.3e",
+    "competencyName": "Least Privilege Implementation",
+    "competencyTitle": "1.2.3 Least Privilege Implementation (Entry)",
+    "competencyPath": "access-identity/?sub=access-control&comp=least-privilege-implementation&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Supporting",
+    "rationale": "Brokered access supports least-privilege access to protected resources.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.2 Access Control",
+      "competencyItem": "1.2.3 Least Privilege Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 40,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Connected to their TRE virtual machine through the bastion and confirmed it is working.",
+    "competencyCode": "1.3.2e",
+    "competencyName": "Secure Research Workspaces",
+    "competencyTitle": "1.3.2 Secure Research Workspaces (Entry)",
+    "competencyPath": "access-identity/?sub=secure-user-experience&comp=secure-research-workspaces&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Supporting",
+    "rationale": "The activity concerns access to a protected research workspace.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.3 Secure User Experience",
+      "competencyItem": "1.3.2 Secure Research Workspaces",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 41,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Compared the Terraform code in their GitHub repo against what is actually deployed in the Portal, and identified at least one difference (for example keys or generated values).",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The framework explicitly includes infrastructure as code within cloud infrastructure management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 42,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Compared the Terraform code in their GitHub repo against what is actually deployed in the Portal, and identified at least one difference (for example keys or generated values).",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing and safely changing declared configuration concerns configuration management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 43,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Compared the Terraform code in their GitHub repo against what is actually deployed in the Portal, and identified at least one difference (for example keys or generated values).",
+    "competencyCode": "5.2.3e",
+    "competencyName": "Change & Release Management",
+    "competencyTitle": "5.2.3 Change & Release Management (Entry)",
+    "competencyPath": "projects-operations/?sub=service-management&comp=change-release-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Applying infrastructure changes relates to controlled change and release management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.2 Service Management",
+      "competencyItem": "5.2.3 Change & Release Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 44,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Made a change to their Terraform code to deploy the VM image that includes Python and LibreOffice, applied it, and logged back in to confirm the change took effect.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The framework explicitly includes infrastructure as code within cloud infrastructure management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 45,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Made a change to their Terraform code to deploy the VM image that includes Python and LibreOffice, applied it, and logged back in to confirm the change took effect.",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing and safely changing declared configuration concerns configuration management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 46,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Made a change to their Terraform code to deploy the VM image that includes Python and LibreOffice, applied it, and logged back in to confirm the change took effect.",
+    "competencyCode": "5.2.3e",
+    "competencyName": "Change & Release Management",
+    "competencyTitle": "5.2.3 Change & Release Management (Entry)",
+    "competencyPath": "projects-operations/?sub=service-management&comp=change-release-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Applying infrastructure changes relates to controlled change and release management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.2 Service Management",
+      "competencyItem": "5.2.3 Change & Release Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 47,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Made a change to their Terraform code to deploy the VM image that includes Python and LibreOffice, applied it, and logged back in to confirm the change took effect.",
+    "competencyCode": "5.4.2e",
+    "competencyName": "TRE Tools & Capabilities",
+    "competencyTitle": "5.4.2 TRE Tools & Capabilities (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=tre-tools-capabilities&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "Configuring research tools within a TRE concerns TRE tools and capabilities.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.2 TRE Tools & Capabilities",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 48,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Copied a CSV file into their own data store using azcopy and viewed it from inside the VM.",
+    "competencyCode": "2.2.1e",
+    "competencyName": "Data Pipeline Development",
+    "competencyTitle": "2.2.1 Data Pipeline Development (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-pipeline-development&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure ingestion, transformation or movement through a data pipeline.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.1 Data Pipeline Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 49,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Copied a CSV file into their own data store using azcopy and viewed it from inside the VM.",
+    "competencyCode": "2.1.4e",
+    "competencyName": "Data Lineage & Provenance",
+    "competencyTitle": "2.1.4 Data Lineage & Provenance (Entry)",
+    "competencyPath": "data-management/?sub=data-governance&comp=data-lineage-provenance&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Supporting",
+    "rationale": "Tracking stages and transformations supports lineage and provenance.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.1 Data Governance",
+      "competencyItem": "2.1.4 Data Lineage & Provenance",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 50,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Copied a CSV file into their own data store using azcopy and viewed it from inside the VM.",
+    "competencyCode": "2.2.2e",
+    "competencyName": "Data Storage & Database Management",
+    "competencyTitle": "2.2.2 Data Storage & Database Management (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-storage-database-management&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure data storage and database selection or access.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.2 Data Storage & Database Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 51,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Completed a STRIDE analysis in pairs on the data flow they have just built, and proposed at least one control that would address the risks identified.",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns selecting or implementing safeguards to address security risks.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 52,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Completed a STRIDE analysis in pairs on the data flow they have just built, and proposed at least one control that would address the risks identified.",
+    "competencyCode": "3.2.2e",
+    "competencyName": "Security Assessment & Testing",
+    "competencyTitle": "3.2.2 Security Assessment & Testing (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-assessment-testing&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "STRIDE analysis and control evaluation are security assessment activities.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.2 Security Assessment & Testing",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 53,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Completed a STRIDE analysis in pairs on the data flow they have just built, and proposed at least one control that would address the risks identified.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Threat modelling informs secure environment design and defence in depth.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 54,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Related at least three features of the mini TRE back to the Five Safes and to the concepts covered in the morning session.",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns engagement with wider professional communities and networks.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 55,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Related at least three features of the mini TRE back to the Five Safes and to the concepts covered in the morning session.",
+    "competencyCode": "5.3.2e",
+    "competencyName": "Documentation & Knowledge Management",
+    "competencyTitle": "5.3.2 Documentation & Knowledge Management (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=documentation-knowledge-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Locating and using shared resources is related to knowledge management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.2 Documentation & Knowledge Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 56,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Related at least three features of the mini TRE back to the Five Safes and to the concepts covered in the morning session.",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure TRE/SDE design, controls and Five Safes-informed architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 57,
+    "session": "Session 3 — Technical Workshop: Building and Modifying a TRE",
+    "objective": "Related at least three features of the mini TRE back to the Five Safes and to the concepts covered in the morning session.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Reference architecture and production-readiness require consideration of enterprise quality requirements.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 58,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 59,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "1.1.3e",
+    "competencyName": "Federated Identity Management",
+    "competencyTitle": "1.1.3 Federated Identity Management (Entry)",
+    "competencyPath": "access-identity/?sub=identity-management&comp=federated-identity-management&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Direct",
+    "rationale": "Keycloak OIDC and SSO are federated identity-management technologies named by the framework.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.1 Identity Management",
+      "competencyItem": "1.1.3 Federated Identity Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 60,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "1.1.1e",
+    "competencyName": "Authentication Systems",
+    "competencyTitle": "1.1.1 Authentication Systems (Entry)",
+    "competencyPath": "access-identity/?sub=identity-management&comp=authentication-systems&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Supporting",
+    "rationale": "The activity also concerns user authentication mechanisms.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.1 Identity Management",
+      "competencyItem": "1.1.1 Authentication Systems",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 61,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "6.2.3e",
+    "competencyName": "Network Architecture",
+    "competencyTitle": "6.2.3 Network Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=network-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Network-policy enforcement and segmentation are network architecture competencies.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.3 Network Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 62,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Network policy is an implemented technical security control.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 63,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "6.3.4e",
+    "competencyName": "Component-Based Architecture",
+    "competencyTitle": "6.3.4 Component-Based Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=component-based-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Layered reusable platform components align with component-based architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.4 Component-Based Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 64,
+    "session": "4a - Kubernetes",
+    "objective": "Forked or opened the repo in a GitHub Codespace and located each deployed component (k3s, Cilium, ArgoCD, Keycloak, JupyterHub) in the ArgoCD UI. [containerisation-orchestration · entry]",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Relating platform layers to security design concerns secure environment design.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 65,
+    "session": "4a - Kubernetes",
+    "objective": "Logged in to JupyterHub via Keycloak SSO and confirmed a single-user notebook pod is running. [federated-identity-management · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 66,
+    "session": "4a - Kubernetes",
+    "objective": "Logged in to JupyterHub via Keycloak SSO and confirmed a single-user notebook pod is running. [federated-identity-management · entry]",
+    "competencyCode": "1.1.3e",
+    "competencyName": "Federated Identity Management",
+    "competencyTitle": "1.1.3 Federated Identity Management (Entry)",
+    "competencyPath": "access-identity/?sub=identity-management&comp=federated-identity-management&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Direct",
+    "rationale": "Keycloak OIDC and SSO are federated identity-management technologies named by the framework.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.1 Identity Management",
+      "competencyItem": "1.1.3 Federated Identity Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 67,
+    "session": "4a - Kubernetes",
+    "objective": "Logged in to JupyterHub via Keycloak SSO and confirmed a single-user notebook pod is running. [federated-identity-management · entry]",
+    "competencyCode": "1.1.1e",
+    "competencyName": "Authentication Systems",
+    "competencyTitle": "1.1.1 Authentication Systems (Entry)",
+    "competencyPath": "access-identity/?sub=identity-management&comp=authentication-systems&level=entry",
+    "domainSlug": "access-identity",
+    "mappingStrength": "Supporting",
+    "rationale": "The activity also concerns user authentication mechanisms.",
+    "original": {
+      "domain": "1 Safe Access & Identity",
+      "subdomain": "1.1 Identity Management",
+      "competencyItem": "1.1.1 Authentication Systems",
+      "level": "Entry",
+      "source": "https://sdertp.org/access-identity/"
+    }
+  },
+  {
+    "id": 68,
+    "session": "4a - Kubernetes",
+    "objective": "Compared the GitOps manifests in gitops/ against what is running in the cluster and correctly identified, for at least one resource, how ArgoCD keeps them in sync. [configuration-management · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 69,
+    "session": "4a - Kubernetes",
+    "objective": "Compared the GitOps manifests in gitops/ against what is running in the cluster and correctly identified, for at least one resource, how ArgoCD keeps them in sync. [configuration-management · entry]",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "GitOps manifests and reconciliation maintain systems in consistent declared states.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 70,
+    "session": "4a - Kubernetes",
+    "objective": "Compared the GitOps manifests in gitops/ against what is running in the cluster and correctly identified, for at least one resource, how ArgoCD keeps them in sync. [configuration-management · entry]",
+    "competencyCode": "5.2.3e",
+    "competencyName": "Change & Release Management",
+    "competencyTitle": "5.2.3 Change & Release Management (Entry)",
+    "competencyPath": "projects-operations/?sub=service-management&comp=change-release-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Git-mediated deployment and reconciliation support controlled change and release.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.2 Service Management",
+      "competencyItem": "5.2.3 Change & Release Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 71,
+    "session": "4a - Kubernetes",
+    "objective": "Compared the GitOps manifests in gitops/ against what is running in the cluster and correctly identified, for at least one resource, how ArgoCD keeps them in sync. [configuration-management · entry]",
+    "competencyCode": "6.1.1e",
+    "competencyName": "Software Development Lifecycle",
+    "competencyTitle": "6.1.1 Software Development Lifecycle (Entry)",
+    "competencyPath": "technology-engineering/?sub=software-engineering&comp=software-development-lifecycle&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Using Git repositories is part of the software development lifecycle.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.1 Software Engineering",
+      "competencyItem": "6.1.1 Software Development Lifecycle",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 72,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 73,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "GitOps manifests and reconciliation maintain systems in consistent declared states.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 74,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "5.2.3e",
+    "competencyName": "Change & Release Management",
+    "competencyTitle": "5.2.3 Change & Release Management (Entry)",
+    "competencyPath": "projects-operations/?sub=service-management&comp=change-release-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Git-mediated deployment and reconciliation support controlled change and release.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.2 Service Management",
+      "competencyItem": "5.2.3 Change & Release Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 75,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "6.1.1e",
+    "competencyName": "Software Development Lifecycle",
+    "competencyTitle": "6.1.1 Software Development Lifecycle (Entry)",
+    "competencyPath": "technology-engineering/?sub=software-engineering&comp=software-development-lifecycle&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Using Git repositories is part of the software development lifecycle.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.1 Software Engineering",
+      "competencyItem": "6.1.1 Software Development Lifecycle",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 76,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "6.2.3e",
+    "competencyName": "Network Architecture",
+    "competencyTitle": "6.2.3 Network Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=network-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Network-policy enforcement and segmentation are network architecture competencies.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.3 Network Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 77,
+    "session": "4a - Kubernetes",
+    "objective": "Made a change to a GitOps manifest (a Kyverno or Cilium policy), pushed it, and watched ArgoCD reconcile the change automatically. [configuration-management · entry-mid] [security-controls-implementation · entry]",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Network policy is an implemented technical security control.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 78,
+    "session": "4a - Kubernetes",
+    "objective": "Demonstrated Cilium network policy enforcement between namespaces and observed the enforcement at the packet level. [network-architecture · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 79,
+    "session": "4a - Kubernetes",
+    "objective": "Demonstrated Cilium network policy enforcement between namespaces and observed the enforcement at the packet level. [network-architecture · entry]",
+    "competencyCode": "6.2.3e",
+    "competencyName": "Network Architecture",
+    "competencyTitle": "6.2.3 Network Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=network-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Network-policy enforcement and segmentation are network architecture competencies.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.3 Network Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 80,
+    "session": "4a - Kubernetes",
+    "objective": "Demonstrated Cilium network policy enforcement between namespaces and observed the enforcement at the packet level. [network-architecture · entry]",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Network policy is an implemented technical security control.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 81,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 82,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "GitOps manifests and reconciliation maintain systems in consistent declared states.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 83,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "5.2.3e",
+    "competencyName": "Change & Release Management",
+    "competencyTitle": "5.2.3 Change & Release Management (Entry)",
+    "competencyPath": "projects-operations/?sub=service-management&comp=change-release-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Git-mediated deployment and reconciliation support controlled change and release.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.2 Service Management",
+      "competencyItem": "5.2.3 Change & Release Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 84,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "6.1.1e",
+    "competencyName": "Software Development Lifecycle",
+    "competencyTitle": "6.1.1 Software Development Lifecycle (Entry)",
+    "competencyPath": "technology-engineering/?sub=software-engineering&comp=software-development-lifecycle&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Using Git repositories is part of the software development lifecycle.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.1 Software Engineering",
+      "competencyItem": "6.1.1 Software Development Lifecycle",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 85,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "6.3.4e",
+    "competencyName": "Component-Based Architecture",
+    "competencyTitle": "6.3.4 Component-Based Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=component-based-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Layered reusable platform components align with component-based architecture.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.4 Component-Based Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 86,
+    "session": "4a - Kubernetes",
+    "objective": "Related the KARECTL architecture (agnostics/apps/appsets) to the platform's GitOps and security design principles, and could state in one sentence why each layer exists. [secure-environment-design · entry]",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Relating platform layers to security design concerns secure environment design.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 87,
+    "session": "4a - Kubernetes",
+    "objective": "Described what CR8TOR provisions and governs on top of a KARECTL TRE, and where CR8TOR-metamodel fits — pitched as an overview, not a working competency, since this section is presenter-led. [information-governance · entry (discussed only)]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 88,
+    "session": "4a - Kubernetes",
+    "objective": "Described what CR8TOR provisions and governs on top of a KARECTL TRE, and where CR8TOR-metamodel fits — pitched as an overview, not a working competency, since this section is presenter-led. [information-governance · entry (discussed only)]",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns information or project governance within a TRE.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 89,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "5.4.4e",
+    "competencyName": "Community Engagement & Networking",
+    "competencyTitle": "5.4.4 Community Engagement & Networking (Entry)",
+    "competencyPath": "projects-operations/?sub=research-support-innovation&comp=community-engagement-networking&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns engagement with wider professional communities and networks.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.4 Research Support & Innovation",
+      "competencyItem": "5.4.4 Community Engagement & Networking",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 90,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "5.3.2e",
+    "competencyName": "Documentation & Knowledge Management",
+    "competencyTitle": "5.3.2 Documentation & Knowledge Management (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=documentation-knowledge-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Locating and using shared resources is related to knowledge management.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.2 Documentation & Knowledge Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 91,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "3.2.1e",
+    "competencyName": "Security Controls Implementation",
+    "competencyTitle": "3.2.1 Security Controls Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-controls-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns selecting or implementing safeguards to address security risks.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.1 Security Controls Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 92,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "3.2.2e",
+    "competencyName": "Security Assessment & Testing",
+    "competencyTitle": "3.2.2 Security Assessment & Testing (Entry)",
+    "competencyPath": "governance-compliance/?sub=security-management&comp=security-assessment-testing&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "STRIDE analysis and control evaluation are security assessment activities.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.2 Security Management",
+      "competencyItem": "3.2.2 Security Assessment & Testing",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 93,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "6.3.1e",
+    "competencyName": "Secure Environment Design",
+    "competencyTitle": "6.3.1 Secure Environment Design (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=secure-environment-design&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Threat modelling informs secure environment design and defence in depth.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.1 Secure Environment Design",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 94,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 95,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "6.2.3e",
+    "competencyName": "Network Architecture",
+    "competencyTitle": "6.2.3 Network Architecture (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=network-architecture&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Network-policy enforcement and segmentation are network architecture competencies.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.3 Network Architecture",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 96,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "6.3.6e",
+    "competencyName": "Configuration Management",
+    "competencyTitle": "6.3.6 Configuration Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=configuration-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Supporting",
+    "rationale": "Policy-as-code contributes to configuration management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.6 Configuration Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 97,
+    "session": "4a - Kubernetes",
+    "objective": "Named the four security-enforcement layers in KARECTL — Kyverno (admission), Cilium (network), Tetragon (eBPF runtime), Trivy (image/IaC scanning in CI) — and stated which pipeline stage each sits in. [security-assessment-testing · entry (observed only)] [vulnerability-patch-management · entry (observed only)]",
+    "competencyCode": "6.3.5e",
+    "competencyName": "Vulnerability & Patch Management",
+    "competencyTitle": "6.3.5 Vulnerability & Patch Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=vulnerability-patch-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Scanning and remediation concern vulnerability and patch management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.5 Vulnerability & Patch Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 98,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified at least three stages a dataset passes through between source and analysis in a secure setting.",
+    "competencyCode": "—",
+    "competencyName": "No single competency item",
+    "competencyTitle": "No single competency item",
+    "competencyPath": "cf-overview/",
+    "domainSlug": "cf-overview",
+    "mappingStrength": "No forced mapping",
+    "rationale": "The statement is not specific enough to map confidently to a technical competency item.",
+    "original": {
+      "domain": "No direct mapping identified",
+      "subdomain": "Outside / cross-cutting",
+      "competencyItem": "No single competency item",
+      "level": "Not assigned",
+      "source": "https://sdertp.org/cf-overview/"
+    }
+  },
+  {
+    "id": 99,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Named at least two clinical coding systems (for example SNOMED CT, ICD-10, dm+d or LOINC) and explained what a common data model such as OMOP CDM adds beyond a coding system.",
+    "competencyCode": "2.2.3e",
+    "competencyName": "Data Models & Standardisation",
+    "competencyTitle": "2.2.3 Data Models & Standardisation (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-models-standardisation&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns healthcare data models, terminology and standardisation.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.3 Data Models & Standardisation",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 100,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Named at least two clinical coding systems (for example SNOMED CT, ICD-10, dm+d or LOINC) and explained what a common data model such as OMOP CDM adds beyond a coding system.",
+    "competencyCode": "3.1.3e",
+    "competencyName": "Healthcare Standards Compliance",
+    "competencyTitle": "3.1.3 Healthcare Standards Compliance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=healthcare-standards-compliance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Healthcare coding and data standards support healthcare standards compliance.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.3 Healthcare Standards Compliance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 101,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified, in a supplied data extract, at least two fields that would need mapping to a standard before the data could be analysed or combined with another dataset (exercise Part A).",
+    "competencyCode": "2.2.3e",
+    "competencyName": "Data Models & Standardisation",
+    "competencyTitle": "2.2.3 Data Models & Standardisation (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-models-standardisation&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns healthcare data models, terminology and standardisation.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.3 Data Models & Standardisation",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 102,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified, in a supplied data extract, at least two fields that would need mapping to a standard before the data could be analysed or combined with another dataset (exercise Part A).",
+    "competencyCode": "3.1.3e",
+    "competencyName": "Healthcare Standards Compliance",
+    "competencyTitle": "3.1.3 Healthcare Standards Compliance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=healthcare-standards-compliance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Healthcare coding and data standards support healthcare standards compliance.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.3 Healthcare Standards Compliance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 103,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Compared deterministic and probabilistic linkage and said which would suit a given pair of datasets, and why (exercise Part B).",
+    "competencyCode": "2.2.1e",
+    "competencyName": "Data Pipeline Development",
+    "competencyTitle": "2.2.1 Data Pipeline Development (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-pipeline-development&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "Data linkage is part of secure data processing and pipeline design.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.1 Data Pipeline Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 104,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Compared deterministic and probabilistic linkage and said which would suit a given pair of datasets, and why (exercise Part B).",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Separating identifiers from clinical data is a governance and sensitivity-handling measure.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 105,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Mapped an ingestion pipeline for the scenario in pairs, marking where standardisation and linkage occur, and compared it against a reference pipeline.",
+    "competencyCode": "2.2.1e",
+    "competencyName": "Data Pipeline Development",
+    "competencyTitle": "2.2.1 Data Pipeline Development (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-pipeline-development&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure ingestion, transformation or movement through a data pipeline.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.1 Data Pipeline Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 106,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Mapped an ingestion pipeline for the scenario in pairs, marking where standardisation and linkage occur, and compared it against a reference pipeline.",
+    "competencyCode": "2.1.4e",
+    "competencyName": "Data Lineage & Provenance",
+    "competencyTitle": "2.1.4 Data Lineage & Provenance (Entry)",
+    "competencyPath": "data-management/?sub=data-governance&comp=data-lineage-provenance&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Supporting",
+    "rationale": "Tracking stages and transformations supports lineage and provenance.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.1 Data Governance",
+      "competencyItem": "2.1.4 Data Lineage & Provenance",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 107,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Mapped an ingestion pipeline for the scenario in pairs, marking where standardisation and linkage occur, and compared it against a reference pipeline.",
+    "competencyCode": "2.2.3e",
+    "competencyName": "Data Models & Standardisation",
+    "competencyTitle": "2.2.3 Data Models & Standardisation (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-models-standardisation&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns healthcare data models, terminology and standardisation.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.3 Data Models & Standardisation",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 108,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Mapped an ingestion pipeline for the scenario in pairs, marking where standardisation and linkage occur, and compared it against a reference pipeline.",
+    "competencyCode": "3.1.3e",
+    "competencyName": "Healthcare Standards Compliance",
+    "competencyTitle": "3.1.3 Healthcare Standards Compliance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=healthcare-standards-compliance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Healthcare coding and data standards support healthcare standards compliance.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.3 Healthcare Standards Compliance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 109,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Mapped an ingestion pipeline for the scenario in pairs, marking where standardisation and linkage occur, and compared it against a reference pipeline.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Separating identifiers from clinical data is a governance and sensitivity-handling measure.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 110,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "2.2.1e",
+    "competencyName": "Data Pipeline Development",
+    "competencyTitle": "2.2.1 Data Pipeline Development (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-pipeline-development&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns secure ingestion, transformation or movement through a data pipeline.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.1 Data Pipeline Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 111,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "2.1.4e",
+    "competencyName": "Data Lineage & Provenance",
+    "competencyTitle": "2.1.4 Data Lineage & Provenance (Entry)",
+    "competencyPath": "data-management/?sub=data-governance&comp=data-lineage-provenance&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Supporting",
+    "rationale": "Tracking stages and transformations supports lineage and provenance.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.1 Data Governance",
+      "competencyItem": "2.1.4 Data Lineage & Provenance",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 112,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "Ingress, egress and airlock controls are information-governance controls within a secure environment.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 113,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "3.4.1e",
+    "competencyName": "Audit Trail Implementation",
+    "competencyTitle": "3.4.1 Audit Trail Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=audit-compliance-monitoring&comp=audit-trail-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Controlled movement should create an audit trail.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.4 Audit & Compliance Monitoring",
+      "competencyItem": "3.4.1 Audit Trail Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 114,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "2.2.8e",
+    "competencyName": "Data Migration",
+    "competencyTitle": "2.2.8 Data Migration (Entry)",
+    "competencyPath": "data-management/?sub=data-engineering-processing&comp=data-migration&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Supporting",
+    "rationale": "Secure transfer between environments is data migration.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.2 Data Engineering & Processing",
+      "competencyItem": "2.2.8 Data Migration",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 115,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Applied ingress, egress and quality controls to a worked data workflow and justified where each control sits.",
+    "competencyCode": "2.1.5e",
+    "competencyName": "Data Quality Management",
+    "competencyTitle": "2.1.5 Data Quality Management (Entry)",
+    "competencyPath": "data-management/?sub=data-governance&comp=data-quality-management&level=entry",
+    "domainSlug": "data-management",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns data quality checks, validation and responsibility.",
+    "original": {
+      "domain": "2 Safe Data Management",
+      "subdomain": "2.1 Data Governance",
+      "competencyItem": "2.1.5 Data Quality Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/data-management/"
+    }
+  },
+  {
+    "id": 116,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified at least two disclosure risks in a set of sample outputs and proposed how each would be handled.",
+    "competencyCode": "4.3e",
+    "competencyName": "Statistical Disclosure Control",
+    "competencyTitle": "4.3 Statistical Disclosure Control (Subdomain, Entry)",
+    "competencyPath": "outputs-disclosure-control/?sub=statistical-disclosure-control",
+    "domainSlug": "outputs-disclosure-control",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns statistical disclosure and re-identification risk in outputs.",
+    "original": {
+      "domain": "4 Safe Outputs & Disclosure Control",
+      "subdomain": "4.3 Statistical Disclosure Control",
+      "competencyItem": "Subdomain-level mapping: Statistical Disclosure Control",
+      "level": "Entry",
+      "source": "https://sdertp.org/outputs-disclosure-control/"
+    }
+  },
+  {
+    "id": 117,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified at least two disclosure risks in a set of sample outputs and proposed how each would be handled.",
+    "competencyCode": "4.1e",
+    "competencyName": "Output Checking",
+    "competencyTitle": "4.1 Output Checking (Subdomain, Entry)",
+    "competencyPath": "outputs-disclosure-control/?sub=output-checking",
+    "domainSlug": "outputs-disclosure-control",
+    "mappingStrength": "Supporting",
+    "rationale": "Output review and checking processes are required to assess disclosure risk.",
+    "original": {
+      "domain": "4 Safe Outputs & Disclosure Control",
+      "subdomain": "4.1 Output Checking",
+      "competencyItem": "Subdomain-level mapping: Output Checking",
+      "level": "Entry",
+      "source": "https://sdertp.org/outputs-disclosure-control/"
+    }
+  },
+  {
+    "id": 118,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified at least two disclosure risks in a set of sample outputs and proposed how each would be handled.",
+    "competencyCode": "4.4e",
+    "competencyName": "Accidental Disclosure",
+    "competencyTitle": "4.4 Accidental Disclosure (Subdomain, Entry)",
+    "competencyPath": "outputs-disclosure-control/?sub=accidental-disclosure",
+    "domainSlug": "outputs-disclosure-control",
+    "mappingStrength": "Supporting",
+    "rationale": "The activity considers risks of unintended disclosure.",
+    "original": {
+      "domain": "4 Safe Outputs & Disclosure Control",
+      "subdomain": "4.4 Accidental Disclosure",
+      "competencyItem": "Subdomain-level mapping: Accidental Disclosure",
+      "level": "Entry",
+      "source": "https://sdertp.org/outputs-disclosure-control/"
+    }
+  },
+  {
+    "id": 119,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Identified, in a TRE audit log, at least one event that a control caught and one that it would have missed.",
+    "competencyCode": "3.4.1e",
+    "competencyName": "Audit Trail Implementation",
+    "competencyTitle": "3.4.1 Audit Trail Implementation (Entry)",
+    "competencyPath": "governance-compliance/?sub=audit-compliance-monitoring&comp=audit-trail-implementation&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly concerns audit records of system or user activity.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.4 Audit & Compliance Monitoring",
+      "competencyItem": "3.4.1 Audit Trail Implementation",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 120,
+    "session": "4b Data Engineering and applyting TREs",
+    "objective": "Recorded one point in a short exit check that they can take back to their own organisation.",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Contextual",
+    "rationale": "Applying learning to local practice supports continuous improvement.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 121,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Completed three comparative CPU/GPU workload demonstrations and recorded which compute option performs best for each workload type.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 122,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Completed three comparative CPU/GPU workload demonstrations and recorded which compute option performs best for each workload type.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 123,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Calculated the cost difference between CPU and GPU execution for a worked example using provided hourly rates and execution times.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 124,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Calculated the cost difference between CPU and GPU execution for a worked example using provided hourly rates and execution times.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 125,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Calculated the cost difference between CPU and GPU execution for a worked example using provided hourly rates and execution times.",
+    "competencyCode": "5.1.5e",
+    "competencyName": "Resource & Cost Management",
+    "competencyTitle": "5.1.5 Resource & Cost Management (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=resource-cost-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "The statement explicitly evaluates compute cost, utilisation and resource efficiency.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.5 Resource & Cost Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 126,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Identified at least two cases where GPU acceleration is technically faster but not operationally or financially justified.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 127,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Identified at least two cases where GPU acceleration is technically faster but not operationally or financially justified.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 128,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns cloud resources, provisioning or cloud architecture management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 129,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 130,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 131,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Selecting an architecture against technical and operational requirements is enterprise solution development.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 132,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Data-governance constraints influence architecture selection.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 133,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Mapped at least three workload patterns to appropriate infrastructure options, such as CPU VMs, GPU VMs, managed GPU compute, or model-as-a-service APIs.",
+    "competencyCode": "5.1.5e",
+    "competencyName": "Resource & Cost Management",
+    "competencyTitle": "5.1.5 Resource & Cost Management (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=resource-cost-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Cost and resource efficiency are explicitly considered.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.5 Resource & Cost Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 134,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Reviewed one example of GPU provisioning failure or constraint, such as quota limits, regional availability, or hardware stock limitations.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns cloud resources, provisioning or cloud architecture management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 135,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Reviewed one example of GPU provisioning failure or constraint, such as quota limits, regional availability, or hardware stock limitations.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 136,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Reviewed one example of GPU provisioning failure or constraint, such as quota limits, regional availability, or hardware stock limitations.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 137,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Compared at least three approaches for improving GPU utilisation, including batch scheduling, spot/low-priority compute, virtualised GPU sharing, or Kubernetes orchestration.",
+    "competencyCode": "6.2.2e",
+    "competencyName": "Containerisation & Orchestration",
+    "competencyTitle": "6.2.2 Containerisation & Orchestration (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=containerisation-orchestration&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns Kubernetes-based containerisation and orchestration.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.2 Containerisation & Orchestration",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 138,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Compared at least three approaches for improving GPU utilisation, including batch scheduling, spot/low-priority compute, virtualised GPU sharing, or Kubernetes orchestration.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 139,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Compared at least three approaches for improving GPU utilisation, including batch scheduling, spot/low-priority compute, virtualised GPU sharing, or Kubernetes orchestration.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 140,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Assessed at least one user-provided hardware requirement and determined whether it represents a genuine GPU need, a library-driven assumption, or a performance-expectation issue.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 141,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Assessed at least one user-provided hardware requirement and determined whether it represents a genuine GPU need, a library-driven assumption, or a performance-expectation issue.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 142,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Assessed at least one user-provided hardware requirement and determined whether it represents a genuine GPU need, a library-driven assumption, or a performance-expectation issue.",
+    "competencyCode": "5.1.2e",
+    "competencyName": "Research Project Facilitation",
+    "competencyTitle": "5.1.2 Research Project Facilitation (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=research-project-facilitation&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Direct",
+    "rationale": "Assessing a research user’s technical requirement is research project facilitation.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.2 Research Project Facilitation",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 143,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Produced a short justification for a chosen infrastructure approach for one health data science use case, referencing cost, performance, governance, and operational complexity.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Selecting an architecture against technical and operational requirements is enterprise solution development.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 144,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Produced a short justification for a chosen infrastructure approach for one health data science use case, referencing cost, performance, governance, and operational complexity.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Cloud, on-premise and hybrid infrastructure choices concern infrastructure management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 145,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Produced a short justification for a chosen infrastructure approach for one health data science use case, referencing cost, performance, governance, and operational complexity.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Data-governance constraints influence architecture selection.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 146,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Produced a short justification for a chosen infrastructure approach for one health data science use case, referencing cost, performance, governance, and operational complexity.",
+    "competencyCode": "5.1.5e",
+    "competencyName": "Resource & Cost Management",
+    "competencyTitle": "5.1.5 Resource & Cost Management (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=resource-cost-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Cost and resource efficiency are explicitly considered.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.5 Resource & Cost Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 147,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Discussed the implications of cloud, on-premise, hybrid, and federated infrastructure models for secure health data environments.",
+    "competencyCode": "6.2.1e",
+    "competencyName": "Cloud Infrastructure Management",
+    "competencyTitle": "6.2.1 Cloud Infrastructure Management (Entry)",
+    "competencyPath": "technology-engineering/?sub=infrastructure-deployment&comp=cloud-infrastructure-management&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns cloud resources, provisioning or cloud architecture management.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.2 Infrastructure & Deployment",
+      "competencyItem": "6.2.1 Cloud Infrastructure Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 148,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Discussed the implications of cloud, on-premise, hybrid, and federated infrastructure models for secure health data environments.",
+    "competencyCode": "6.3.3e",
+    "competencyName": "Enterprise Solution Development",
+    "competencyTitle": "6.3.3 Enterprise Solution Development (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=enterprise-solution-development&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Selecting an architecture against technical and operational requirements is enterprise solution development.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.3 Enterprise Solution Development",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 149,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Discussed the implications of cloud, on-premise, hybrid, and federated infrastructure models for secure health data environments.",
+    "competencyCode": "3.1.1e",
+    "competencyName": "Information Governance",
+    "competencyTitle": "3.1.1 Information Governance (Entry)",
+    "competencyPath": "governance-compliance/?sub=regulatory-compliance&comp=information-governance&level=entry",
+    "domainSlug": "governance-compliance",
+    "mappingStrength": "Supporting",
+    "rationale": "Data-governance constraints influence architecture selection.",
+    "original": {
+      "domain": "3 Safe Governance & Compliance",
+      "subdomain": "3.1 Regulatory Compliance",
+      "competencyItem": "3.1.1 Information Governance",
+      "level": "Entry",
+      "source": "https://sdertp.org/governance-compliance/"
+    }
+  },
+  {
+    "id": 150,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Discussed the implications of cloud, on-premise, hybrid, and federated infrastructure models for secure health data environments.",
+    "competencyCode": "5.1.5e",
+    "competencyName": "Resource & Cost Management",
+    "competencyTitle": "5.1.5 Resource & Cost Management (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=resource-cost-management&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Cost and resource efficiency are explicitly considered.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.5 Resource & Cost Management",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 151,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Defined at least one practical decision rule that can be used by platform teams when evaluating future requests for GPU-backed infrastructure.",
+    "competencyCode": "6.3.7e",
+    "competencyName": "High Performance Computing",
+    "competencyTitle": "6.3.7 High Performance Computing (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=high-performance-computing&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "The statement concerns specialised accelerators and high-performance computing resources.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.7 High Performance Computing",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 152,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Defined at least one practical decision rule that can be used by platform teams when evaluating future requests for GPU-backed infrastructure.",
+    "competencyCode": "6.3.2e",
+    "competencyName": "Scalability & Performance",
+    "competencyTitle": "6.3.2 Scalability & Performance (Entry)",
+    "competencyPath": "technology-engineering/?sub=system-architecture&comp=scalability-performance&level=entry",
+    "domainSlug": "technology-engineering",
+    "mappingStrength": "Direct",
+    "rationale": "Comparing workload performance and utilisation concerns scalability and performance.",
+    "original": {
+      "domain": "6 Safe Technology & Engineering",
+      "subdomain": "6.3 System Architecture",
+      "competencyItem": "6.3.2 Scalability & Performance",
+      "level": "Entry",
+      "source": "https://sdertp.org/technology-engineering/"
+    }
+  },
+  {
+    "id": 153,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Defined at least one practical decision rule that can be used by platform teams when evaluating future requests for GPU-backed infrastructure.",
+    "competencyCode": "5.3.1e",
+    "competencyName": "Continuous Improvement",
+    "competencyTitle": "5.3.1 Continuous Improvement (Entry)",
+    "competencyPath": "projects-operations/?sub=operational-excellence&comp=continuous-improvement&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "A reusable decision rule supports continuous improvement and consistent service practice.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.3 Operational Excellence",
+      "competencyItem": "5.3.1 Continuous Improvement",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  },
+  {
+    "id": 154,
+    "session": "The Role of Graphics Processing Units in AI Infrastructure for Health Data Science",
+    "objective": "Defined at least one practical decision rule that can be used by platform teams when evaluating future requests for GPU-backed infrastructure.",
+    "competencyCode": "5.1.2e",
+    "competencyName": "Research Project Facilitation",
+    "competencyTitle": "5.1.2 Research Project Facilitation (Entry)",
+    "competencyPath": "projects-operations/?sub=project-management&comp=research-project-facilitation&level=entry",
+    "domainSlug": "projects-operations",
+    "mappingStrength": "Supporting",
+    "rationale": "Evaluating requests supports research project facilitation.",
+    "original": {
+      "domain": "5 Safe Projects & Operations",
+      "subdomain": "5.1 Project Management",
+      "competencyItem": "5.1.2 Research Project Facilitation",
+      "level": "Entry",
+      "source": "https://sdertp.org/projects-operations/"
+    }
+  }
+]

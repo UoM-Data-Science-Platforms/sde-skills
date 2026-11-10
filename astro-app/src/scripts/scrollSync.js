@@ -15,10 +15,14 @@
  *     // page-specific DOM ops after this line
  *   </script>
  */
+let prevScrollHandler = null;
+
 export function initScrollSync({ sections }) {
-  const sectionTabs   = document.querySelectorAll('#section-tabs .subdomain-tab');
+  if (!sections || !sections.length) return;
+
+  const sectionTabs = document.querySelectorAll('#section-tabs .subdomain-tab');
   const subsectionNav = document.getElementById('subsection-tabs');
-  const scrollToLinks      = document.querySelectorAll('[data-scroll-to]');
+  const scrollToLinks = document.querySelectorAll('[data-scroll-to]');
   console.log('initScrollSync', { sections, sectionTabs, subsectionNav, scrollToLinks });
   const hasSubsections = sections.some(s => s.subsections?.length);
 
@@ -82,11 +86,11 @@ export function initScrollSync({ sections }) {
 
   const onTabClick = (sectionId) => {
     setActiveSection(sectionId, true);
-      if (hasSubsections) {
-        const sec = sections.find(s => s.id === sectionId);
-        if (sec?.subsections?.[0]) setActiveSubsection(sec.subsections[0].id);
-      }
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (hasSubsections) {
+      const sec = sections.find(s => s.id === sectionId);
+      if (sec?.subsections?.[0]) setActiveSubsection(sec.subsections[0].id);
+    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   const allSectionIds = sections.map(s => s.id);
@@ -96,12 +100,16 @@ export function initScrollSync({ sections }) {
     setActiveSection(secId);
 
     if (hasSubsections) {
-      const sec    = sections.find(s => s.id === secId);
+      const sec = sections.find(s => s.id === secId);
       const subIds = (sec?.subsections ?? []).map(s => s.id);
       if (subIds.length) setActiveSubsection(getActive(subIds));
     }
   };
 
+  if (prevScrollHandler) {
+    document.removeEventListener('scroll', prevScrollHandler, { capture: true });
+  }
+  prevScrollHandler = onScroll;
   document.addEventListener('scroll', onScroll, { passive: true, capture: true });
 
   // Initialise active states

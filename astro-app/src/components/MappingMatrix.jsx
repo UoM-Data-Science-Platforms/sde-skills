@@ -37,7 +37,7 @@ const FRAMEWORKS = ['Five Safes', 'SATRE', 'Cross-Cutting'];
 
 const FRAMEWORK_DESCRIPTIONS = {
   'Five Safes': 'The Five Safes framework is a set of principles enabling safe research access to sensitive data. Our competency domains are designed to align with and support these principles.',
-  'SATRE': 'The Standard Architecture for Trusted Research Environments (SATRE) specification provides a comprehensive high-level architecture for research organisations handling sensitive data safely. Our framework aligns with these components.',
+  'SATRE': 'The Standard Architecture for Trusted Research Environments (SATRE) specification provides a comprehensive high-level architecture for research organisations handling sensitive data safely. The SDE RTP Competency Framework aligns with these components.',
   'Cross-Cutting': 'Some competencies span multiple Five Safes principles or SATRE components.',
 };
 

@@ -28,8 +28,7 @@ const { sections, id = 'page-subnav', className = '' } = Astro.props;
 </script>
 <script>
   import { initScrollSync } from '../scripts/scrollSync.js';
-  if (window._pageSections && !window._scrollSyncInit) {
+  if (window._pageSections) {
     initScrollSync({ sections: window._pageSections });
-    window._scrollSyncInit = true;
   }
 </script>

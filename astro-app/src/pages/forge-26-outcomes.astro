@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Forge26Outcomes from '../components/Forge26Outcomes.astro';
+---
+
+<Layout title="Forge 26 Outcomes — SDE Team Development Hub" currentDomain="retreat">
+  <div class="wide-layout forge-outcomes-page">
+    <div class="scroll-area">
+      <div class="container-fluid px-4 py-4" style="max-width: 1440px; margin: 0 auto; width: 100%;">
+        <div style="margin-bottom: 2rem;">
+          <h1 style="font-size: 2.25rem; font-weight: 800; color: var(--color-heading); margin-bottom: 0.5rem; letter-spacing: -0.02em;">
+            Forge 26 Outcomes
+          </h1>
+          <p style="color: var(--color-text-muted); font-size: 1rem; margin: 0; max-width: 850px; line-height: 1.6;">
+            Session objectives and learning outcomes from SDE Forge mapped to the SDE RTP Competency Framework. Click any competency code (e.g. <span style="font-family: monospace; font-weight: 700; color: var(--color-nhs-blue);">1.2.3e</span>) to inspect its full competencies, self-learning resources, and qualifications.
+          </p>
+        </div>
+
+        <Forge26Outcomes />
+      </div>
+    </div>
+  </div>
+</Layout>

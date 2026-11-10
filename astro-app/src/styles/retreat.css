@@ -1,7 +1,11 @@
 .retreat-card {
     margin: var(--space-3xl) var(--space-xl);
-    scroll-margin-top: 80px;
-    /* Replace 80px with the exact height of your sticky element */
+}
+
+.retreat-card,
+.mini-hero,
+.retreat-page [id] {
+    scroll-margin-top: 90px;
 }
 
 #subsection-tabs {
@@ -71,5 +75,15 @@
 
     .retreat-card .list-group {
         padding-left: var(--space-md);
+    }
+}
+
+.retreat-outcomes-section {
+    margin: var(--space-2xl) var(--space-xl);
+}
+
+@media (max-width: 767.98px) {
+    .retreat-outcomes-section {
+        margin: var(--space-xl) var(--space-xs);
     }
 }

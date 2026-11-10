@@ -1,6 +1,6 @@
 # SDE Qualifications & Training Research
 
-This comprehensive mapping aligns industry certifications, training, and qualifications directly to the SDE Skills Framework domains, subdomains, competencies, and career levels. It is designed to provide actionable pathways for RTPs building UK Secure Data Environments.
+This comprehensive mapping aligns industry certifications, training, and qualifications directly to the SDE RTP Competency Framework domains, subdomains, competencies, and career levels. It is designed to provide actionable pathways for RTPs building UK Secure Data Environments.
 
 ## Domain: Safe Access & Identity
 

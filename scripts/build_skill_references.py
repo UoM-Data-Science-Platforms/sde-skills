@@ -40,7 +40,7 @@ BANNER = (
 )
 
 INDEX_INTRO_TEMPLATE = """\
-# SDE Competency Framework - Index
+# The SDE RTP Competency Framework - Index
 
 Compact map of the full framework: every domain, subdomain, and competency
 with its identifier. Use this to decide which domain YAML file to fetch for detail:

@@ -1,7 +1,7 @@
 # TTS Multi-Source Aggregation & Website Hover-Card Register
 
 > [!IMPORTANT]
-> **Interactive UI Hover-Card Integration**: This register aggregates evidence across all **5 sourcing streams** for every Tool, Technology, and Standard in the Competency Framework:
+> **Interactive UI Hover-Card Integration**: This register aggregates evidence across all **5 sourcing streams** for every Tool, Technology, and Standard in the SDE RTP Competency Framework:
 > 1. **⭐ Community Identified**: Identified in baseline community engagement events.
 > 2. **🏛️ National Standards (out of 7)**: Referenced in official standards (`SATRE`, `NHS England SDE`, `DARE UK FAB`, `NCSC`, `ONS SDC`, `NHS DSPT/DTAC`, `ISO 27001`).
 > 3. **🔬 DARE UK Projects (out of 7)**: Utilised / created in DARE UK funded initiatives (`SATRE`, `SACRO`, `GRAIMatter`, `TRE-FX`, `TELEPORT`, `CO-CONNECT`, `Bitfount`).

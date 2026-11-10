@@ -1,7 +1,7 @@
 # Assessment Playbooks
 
 Step-by-step playbooks and output templates for the main ways people use the
-SDE Skills Competency Framework. Follow the structure but adapt tone and
+SDE RTP Competency Framework (the framework). Follow the structure but adapt tone and
 depth to the user — a quick "how does my CV stack up?" deserves a lighter
 report than a formal team capability review.
 
@@ -60,7 +60,7 @@ target role/level, and what to develop next.
 **Template:**
 
 ```markdown
-# CV assessment against the SDE Skills Competency Framework
+# CV assessment against the SDE RTP Competency Framework
 **Target:** <role>, <level> · **Scope:** <domains> · **Assumptions:** <...>
 
 ## Summary
@@ -107,7 +107,7 @@ coverage, over-asks, and blind spots.
 **Template:**
 
 ```markdown
-# JD alignment with the SDE Skills Competency Framework
+# JD alignment with the SDE RTP Competency Framework
 **Role:** <title> · **Implied level:** <entry/mid/senior> · **Best-fit profile:** <role shape>
 
 ## Summary

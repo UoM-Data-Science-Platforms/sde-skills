@@ -8,9 +8,9 @@ interface Props {
 const { title, id, description } = Astro.props;
 ---
 
-<section class="mini-hero">
+<section class="mini-hero" id={id}>
   <div class="mini-hero-content">
-    <h2 id={id}>{title}</h2>
+    <h2>{title}</h2>
     {description && <p>{description}</p>}
     <slot />
   </div>

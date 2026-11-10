@@ -1,7 +1,7 @@
 # Tools, Technologies & Standards (TTS) Sourcing & Traceability Matrix
 
 > [!IMPORTANT]
-> **Purpose**: This matrix provides full provenance, authoritative references, and verifiable web links for all proposed Tools, Technologies, and Standards across the 6 Competency Framework domains. No source files or YAML entries have been modified; this artifact is prepared for team review.
+> **Purpose**: This matrix provides full provenance, authoritative references, and verifiable web links for all proposed Tools, Technologies, and Standards across the 6 SDE RTP Competency Framework domains. No source files or YAML entries have been modified; this artifact is prepared for team review.
 
 ---
 

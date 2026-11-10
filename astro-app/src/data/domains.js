@@ -33,6 +33,7 @@ export const PAGE_COLORS = {
   'cf-framework-mapping': ACCENT,
   'ai-agent-skill': ACCENT,
   'forge-cf-exercise': ACCENT,
+  'forge-26-outcomes': ACCENT,
   'satre-mapping': ACCENT,
   'acknowledgements': ACCENT,
   'student-projects': ACCENT,

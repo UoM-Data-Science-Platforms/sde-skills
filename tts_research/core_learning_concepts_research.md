@@ -1,6 +1,6 @@
 # SDE/TRE Core Concepts & Self-Study Research Matrix
 
-This document maps the conceptual knowledge syllabus across the 6 Competency Framework domains. It is designed to replace traditional "Training Materials" with actionable, vendor-agnostic research topics, core concepts, and targeted search terms that engineers and governance professionals should master on the job.
+This document maps the conceptual knowledge syllabus across the 6 SDE RTP Competency Framework domains. It is designed to replace traditional "Training Materials" with actionable, vendor-agnostic research topics, core concepts, and targeted search terms that engineers and governance professionals should master on the job.
 
 ---
 

@@ -272,28 +272,32 @@ export default function SkillsFramework() {
     const params = new URLSearchParams(window.location.search);
     const targetSub = params.get('sub');
     const targetComp = params.get('comp');
+    const targetLevel = params.get('level');
     if (!targetSub) return;
     const subdomains = Object.entries(data.domain.subdomains ?? {});
     const domainNumber = data.domain.index;
-    const subIdx = subdomains.findIndex(([key]) => key === targetSub);
+    const subIdx = subdomains.findIndex(([key, val], idx) => key === targetSub || val.id === targetSub || `${domainNumber}.${idx + 1}` === targetSub);
     if (subIdx < 0) return;
     const subNumber = `${domainNumber}.${subIdx + 1}`;
     setStickySubdomain(subdomains[subIdx][1]?.name ?? '');
     setStickySubNumber(subNumber);
     if (targetComp) {
       const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
-      const compIdx = comps.findIndex(([key]) => key === targetComp);
+      const compIdx = comps.findIndex(([key, val], idx) => key === targetComp || val.id === targetComp || `${subNumber}.${idx + 1}` === targetComp);
       if (compIdx >= 0) {
         const compNumber = `${subNumber}.${compIdx + 1}`;
         setStickyCompetency(comps[compIdx][1]?.name ?? '');
         setStickyCompNumber(compNumber);
+        if (targetLevel) {
+          setActiveLevel(prev => ({ ...prev, [compNumber]: targetLevel.toLowerCase() }));
+        }
       }
     }
     // Delay scroll until refs are populated after render
     setTimeout(() => {
       if (targetComp) {
         const comps = Object.entries(subdomains[subIdx][1].competencies ?? {});
-        const compIdx = comps.findIndex(([key]) => key === targetComp);
+        const compIdx = comps.findIndex(([key, val], idx) => key === targetComp || val.id === targetComp || `${subNumber}.${idx + 1}` === targetComp);
         if (compIdx >= 0) scrollToElement(compRefs.current[`${subNumber}.${compIdx + 1}`]);
       } else {
         scrollToElement(subdomainRefs.current[subNumber]);

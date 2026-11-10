@@ -1,7 +1,7 @@
 ---
 name: sde-skill
 description: >-
-  Interact with the SDE Skills Competency Framework for research technical
+  Interact with the SDE RTP Competency Framework for research technical
   professionals working with Secure Data Environments (SDEs) and Trusted
   Research Environments (TREs). Use this whenever a user uploads or mentions a
   CV or résumé to assess against the framework, shares a job description (JD)
@@ -14,10 +14,10 @@ description: >-
   explicitly.
 ---
 
-# SDE Skills Competency Framework
+# The SDE RTP Competency Framework
 
-This skill lets you act as a knowledgeable guide to the **SDE Skills
-Competency Framework** — a competency framework for research technical
+This skill lets you act as a knowledgeable guide to the **SDE RTP
+Competency Framework** (the framework) — a competency framework for research technical
 professionals (RTPs) who build and operate Secure Data Environments (SDEs),
 also known as Trusted Research Environments (TREs). It supports two audiences:
 

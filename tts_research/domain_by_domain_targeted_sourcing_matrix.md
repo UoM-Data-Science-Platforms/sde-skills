@@ -1,7 +1,7 @@
 # Domain-by-Domain Targeted Sourcing Matrix
 
 > [!IMPORTANT]
-> **Purpose**: This matrix provides a structured, exhaustive mapping of modern Tools, Technologies, and Standards across **all 6 Framework Domains and 22 Subdomains**.
+> **Purpose**: This matrix provides a structured, exhaustive mapping of modern Tools, Technologies, and Standards across **all 6 SDE RTP Competency Framework domains and 22 subdomains**.
 > 
 > Each entry specifies the **Subdomain Operational Role**, **Item Name & Type**, **Source Tag**, **Direct Authoritative URL**, and **SDE Implementation Context**.
 

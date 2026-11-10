@@ -1,0 +1,915 @@
+---
+import outcomesData from '../data/forge26_outcomes.json';
+
+interface Props {
+  items?: typeof outcomesData;
+  showFilters?: boolean;
+}
+
+const { items = outcomesData, showFilters = true } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+// Curated summaries and titles for each session based on the retreat agenda & learning objectives
+const SESSION_CONFIG: Record<string, { badge?: string; title?: string; summary: string }> = {
+  'Session 1: Introduction to Team Science and the SDE RTP Competency Framework': {
+    badge: 'Session 1',
+    title: 'Session 1: Introduction to Team Science and the SDE RTP Competency Framework',
+    summary: 'Introduction to the team research model, cross-community collaboration, and using the SDE RTP Competency Framework to identify personal development pathways.'
+  },
+  'Session 2 — Overview of Trusted Research Environments (TREs and SDEs)': {
+    badge: 'Session 2',
+    title: 'Session 2: Overview of Trusted Research Environments (TREs and SDEs)',
+    summary: 'Core architectural principles and control points (ingress, analysis, airlock/egress), Five Safes mapping, STRIDE threat modelling, and UK assurance/compliance frameworks.'
+  },
+  'Session 3 — Technical Workshop: Building and Modifying a TRE': {
+    badge: 'Session 3',
+    title: 'Session 3: Technical Workshop — Building and Modifying a TRE',
+    summary: 'Hands-on practical implementation deploying a mini TRE on Azure, bastion-mediated access, infrastructure modification via Terraform, and secure data movement with AzCopy.'
+  },
+  'Kubernetes': {
+    badge: 'Parallel Session A',
+    title: 'Kubernetes',
+    summary: 'Containerised TRE architecture using Kubernetes (k3s), Cilium eBPF network policy enforcement, automated GitOps delivery via ArgoCD, and Keycloak federated SSO.'
+  },
+  '4a - Kubernetes': {
+    badge: 'Parallel Session A',
+    title: 'Kubernetes',
+    summary: 'Containerised TRE architecture using Kubernetes (k3s), Cilium eBPF network policy enforcement, automated GitOps delivery via ArgoCD, and Keycloak federated SSO.'
+  },
+  'Data Engineering and applyting TREs': {
+    badge: 'Parallel Session B',
+    title: 'Data Engineering and Applying TREs',
+    summary: 'End-to-end data pipelines in secure settings, covering common data models (OMOP CDM), clinical coding standardisation, linkage, audit trails, and statistical disclosure control.'
+  },
+  'Data Engineering and Applying TREs': {
+    badge: 'Parallel Session B',
+    title: 'Data Engineering and Applying TREs',
+    summary: 'End-to-end data pipelines in secure settings, covering common data models (OMOP CDM), clinical coding standardisation, linkage, audit trails, and statistical disclosure control.'
+  },
+  '4b Data Engineering and applyting TREs': {
+    badge: 'Parallel Session B',
+    title: 'Data Engineering and Applying TREs',
+    summary: 'End-to-end data pipelines in secure settings, covering common data models (OMOP CDM), clinical coding standardisation, linkage, audit trails, and statistical disclosure control.'
+  },
+  'The Role of Graphics Processing Units in AI Infrastructure for Health Data Science': {
+    badge: 'Parallel Session C',
+    title: 'The Role of Graphics Processing Units in AI Infrastructure for Health Data Science',
+    summary: 'Benchmarking CPU vs GPU workloads, evaluating operational cost-efficiency, managing hardware constraints and utilization, and establishing decision rules for AI platforms.'
+  },
+  '4c Infrastructure Engineering': {
+    badge: 'Parallel Session C',
+    title: 'The Role of Graphics Processing Units in AI Infrastructure for Health Data Science',
+    summary: 'Benchmarking CPU vs GPU workloads, evaluating operational cost-efficiency, managing hardware constraints and utilization, and establishing decision rules for AI platforms.'
+  }
+};
+
+// Preserve session display order
+const SESSION_ORDER = [
+  'Session 1: Introduction to Team Science and the SDE RTP Competency Framework',
+  'Session 2 — Overview of Trusted Research Environments (TREs and SDEs)',
+  'Session 3 — Technical Workshop: Building and Modifying a TRE',
+  'Kubernetes',
+  '4a - Kubernetes',
+  'Data Engineering and applyting TREs',
+  'Data Engineering and Applying TREs',
+  '4b Data Engineering and applyting TREs',
+  'The Role of Graphics Processing Units in AI Infrastructure for Health Data Science',
+  '4c Infrastructure Engineering'
+];
+
+// Extract distinct sessions in ordered fashion
+const allSessionsInItems = Array.from(new Set(items.map(i => i.session))).filter(Boolean);
+const sortedSessions = [
+  ...SESSION_ORDER.filter(s => allSessionsInItems.includes(s)),
+  ...allSessionsInItems.filter(s => !SESSION_ORDER.includes(s))
+];
+
+// Group items by session and compute unique proficiencies & objectives
+const sessionGroups = sortedSessions.map(sessionName => {
+  const sessionItems = items.filter(i => i.session === sessionName);
+  const uniqueProficiencies = Array.from(new Set(
+    sessionItems
+      .filter(i => i.competencyCode && i.competencyCode !== '—')
+      .map(i => i.competencyCode)
+  ));
+  const uniqueObjectives = Array.from(new Set(sessionItems.map(i => i.objective)));
+  const meta = SESSION_CONFIG[sessionName] || {
+    badge: undefined,
+    title: sessionName,
+    summary: `Mapped objectives and competencies for ${sessionName}.`
+  };
+
+  // Group items by unique objective for compressed display
+  const objectiveGroups: { objective: string; items: typeof sessionItems }[] = [];
+  sessionItems.forEach(item => {
+    let grp = objectiveGroups.find(g => g.objective === item.objective);
+    if (!grp) {
+      grp = { objective: item.objective, items: [] };
+      objectiveGroups.push(grp);
+    }
+    grp.items.push(item);
+  });
+
+  return {
+    name: sessionName,
+    title: meta.title || sessionName,
+    badge: meta.badge,
+    summary: meta.summary,
+    items: sessionItems,
+    objectiveGroups,
+    proficienciesCount: uniqueProficiencies.length,
+    objectivesCount: uniqueObjectives.length,
+    uniqueProficiencies
+  };
+});
+
+// Extract unique strengths for filtering
+const strengths = Array.from(new Set(items.map(i => i.mappingStrength))).filter(Boolean);
+
+const getStrengthClass = (strength: string) => {
+  const s = (strength || '').toLowerCase();
+  if (s.includes('direct')) return 'badge-strength-direct';
+  if (s.includes('supporting')) return 'badge-strength-supporting';
+  if (s.includes('contextual')) return 'badge-strength-contextual';
+  return 'badge-strength-neutral';
+};
+---
+
+<div class="forge-outcomes-container">
+  {showFilters && (
+    <div class="outcomes-filter-bar glass--soft">
+      <div class="filter-row">
+        <label for="filter-strength" class="filter-label">Strength:</label>
+        <select id="filter-strength" class="filter-select" style="min-width: 150px;">
+          <option value="ALL">All Strengths ({items.length} mappings)</option>
+          {strengths.map(str => {
+            const count = items.filter(i => i.mappingStrength === str).length;
+            return <option value={str}>{str} ({count})</option>;
+          })}
+        </select>
+
+        <input
+          type="text"
+          id="filter-search"
+          class="filter-search"
+          placeholder="Search objectives, competency name, code, rationale, or session..."
+        />
+
+        <div class="filter-actions">
+          <button id="expand-all-btn" class="filter-action-btn" type="button">
+            Expand All
+          </button>
+          <button id="collapse-all-btn" class="filter-action-btn" type="button">
+            Collapse All
+          </button>
+          <button id="filter-reset-btn" class="filter-reset-btn" type="button" style="display: none;">
+            Reset
+          </button>
+        </div>
+
+        <div class="outcomes-stats">
+          Showing <strong id="visible-count">{items.length}</strong> of {items.length} mapped outcomes
+        </div>
+      </div>
+    </div>
+  )}
+
+  <div class="sessions-collapsible-list">
+    {sessionGroups.map((group, groupIdx) => (
+      <details
+        class="session-collapsible glass--soft"
+        id={`session-card-${groupIdx}`}
+        data-session-name={group.name}
+        open={groupIdx === 0}
+      >
+        <summary class="session-summary-row">
+          <div class="session-summary-main">
+            <span class="session-chevron" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </span>
+            <div class="session-title-block">
+              <div class="session-heading-line">
+                {group.badge && (
+                  <span class={`session-badge-tag ${group.badge.startsWith('Parallel') ? 'session-badge-parallel' : ''}`}>
+                    {group.badge}
+                  </span>
+                )}
+                <h2 class="session-heading-text">{group.title}</h2>
+              </div>
+              <p class="session-summary-text">{group.summary}</p>
+            </div>
+          </div>
+
+          <div class="session-metrics-group">
+            <span class="metric-pill metric-proficiencies" title={`Addresses ${group.proficienciesCount} unique competency items in the framework`}>
+              <strong class="metric-number">{group.proficienciesCount}</strong> unique proficiencies
+            </span>
+            <span class="metric-pill metric-objectives" title={`${group.objectivesCount} learning objectives mapped across ${group.items.length} framework entries`}>
+              <strong class="metric-number">{group.objectivesCount}</strong> objectives
+            </span>
+          </div>
+        </summary>
+
+        <div class="session-content-body">
+          <div class="outcomes-table-wrapper">
+            <table class="outcomes-table">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 32%;">Learning Objective</th>
+                  <th scope="col" style="width: 28%;">Competency Item</th>
+                  <th scope="col" style="width: 14%;">Mapping Strength</th>
+                  <th scope="col" style="width: 26%;">Rationale</th>
+                </tr>
+              </thead>
+              {group.objectiveGroups.map((objGroup, objIdx) => (
+                <tbody class="objective-group-tbody" data-objective-idx={objIdx}>
+                  {objGroup.items.map((item, itemIdx) => (
+                    <tr
+                      class="outcome-row outcome-row-grouped"
+                      data-session={item.session}
+                      data-strength={item.mappingStrength}
+                      data-search={`${item.session} ${item.objective} ${item.competencyCode} ${item.competencyName} ${item.competencyTitle} ${item.rationale}`.toLowerCase()}
+                    >
+                      {itemIdx === 0 && (
+                        <td
+                          class="objective-cell objective-cell-spanned"
+                          rowspan={objGroup.items.length}
+                        >
+                          <div class="objective-content">
+                            <span class="objective-text">{item.objective}</span>
+                            <span class="objective-count-tag">
+                              {objGroup.items.length} {objGroup.items.length === 1 ? 'proficiency' : 'proficiencies'}
+                            </span>
+                          </div>
+                        </td>
+                      )}
+                      <td class="competency-cell">
+                        {item.competencyCode && item.competencyCode !== '—' ? (
+                          <a
+                            href={`${base}${item.competencyPath}`}
+                            class="comp-item-link"
+                            title={item.competencyTitle}
+                          >
+                            <span class="comp-link-pill">{item.competencyCode}</span>
+                            <span class="comp-item-name">{item.competencyName}</span>
+                          </a>
+                        ) : (
+                          <a
+                            href={`${base}${item.competencyPath}`}
+                            class="comp-item-link comp-link-none"
+                            title={item.competencyTitle}
+                          >
+                            <span class="comp-item-name">{item.competencyName || '—'}</span>
+                          </a>
+                        )}
+                      </td>
+                      <td class="strength-cell">
+                        <span class={`badge-strength ${getStrengthClass(item.mappingStrength)}`}>
+                          {item.mappingStrength}
+                        </span>
+                      </td>
+                      <td class="rationale-cell">{item.rationale}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              ))}
+            </table>
+          </div>
+        </div>
+      </details>
+    ))}
+
+    <div id="no-results-banner" class="no-results-box glass--soft" style="display: none;">
+      <p style="margin: 0 0 0.5rem 0; font-weight: 600; font-size: 1rem;">No outcomes match your search or filter.</p>
+      <button class="filter-reset-btn" id="inline-reset-btn" type="button">Clear filters</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupSessionCollapsibles() {
+    const strengthSelect = document.getElementById('filter-strength') as HTMLSelectElement | null;
+    const searchInput = document.getElementById('filter-search') as HTMLInputElement | null;
+    const resetBtn = document.getElementById('filter-reset-btn');
+    const inlineResetBtn = document.getElementById('inline-reset-btn');
+    const expandAllBtn = document.getElementById('expand-all-btn');
+    const collapseAllBtn = document.getElementById('collapse-all-btn');
+    const visibleCountEl = document.getElementById('visible-count');
+    const noResultsBanner = document.getElementById('no-results-banner');
+    const collapsibles = document.querySelectorAll('.session-collapsible') as NodeListOf<HTMLDetailsElement>;
+    const rows = document.querySelectorAll('.outcome-row') as NodeListOf<HTMLTableRowElement>;
+
+    if (!strengthSelect || !searchInput || !collapsibles.length) return;
+
+    function applyFilter() {
+      const selectedStrength = strengthSelect?.value || 'ALL';
+      const query = (searchInput?.value || '').trim().toLowerCase();
+
+      let totalVisibleCount = 0;
+      const isFiltered = selectedStrength !== 'ALL' || query !== '';
+
+      if (resetBtn) {
+        resetBtn.style.display = isFiltered ? 'inline-block' : 'none';
+      }
+
+      collapsibles.forEach(col => {
+        const sessionRows = col.querySelectorAll('.outcome-row') as NodeListOf<HTMLTableRowElement>;
+        let sessionVisibleCount = 0;
+
+        sessionRows.forEach(row => {
+          const rowStrength = row.dataset.strength || '';
+          const rowSearch = row.dataset.search || '';
+
+          const matchStrength = selectedStrength === 'ALL' || rowStrength === selectedStrength;
+          const matchQuery = !query || rowSearch.includes(query);
+
+          if (matchStrength && matchQuery) {
+            row.style.display = '';
+            sessionVisibleCount++;
+            totalVisibleCount++;
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        // Also adjust any grouped tbodies (for sessions with compressed outcomes)
+        const groupedTbodies = col.querySelectorAll('.objective-group-tbody') as NodeListOf<HTMLTableSectionElement>;
+        groupedTbodies.forEach(tb => {
+          const tbRows = tb.querySelectorAll('.outcome-row') as NodeListOf<HTMLTableRowElement>;
+          const visibleTbRows: HTMLTableRowElement[] = [];
+          tbRows.forEach(r => {
+            if (r.style.display !== 'none') {
+              visibleTbRows.push(r);
+            }
+          });
+
+          const objCell = tb.querySelector('.objective-cell-spanned') as HTMLTableCellElement | null;
+          if (objCell) {
+            if (visibleTbRows.length === 0) {
+              tb.style.display = 'none';
+            } else {
+              tb.style.display = '';
+              objCell.rowSpan = visibleTbRows.length;
+              if (visibleTbRows[0] && !visibleTbRows[0].contains(objCell)) {
+                visibleTbRows[0].prepend(objCell);
+              }
+            }
+          }
+        });
+
+        // Hide or show the entire collapsible card based on whether it has matching rows
+        if (sessionVisibleCount > 0) {
+          col.style.display = '';
+          if (isFiltered) {
+            // Auto-open collapsibles that have matching results during filter/search
+            col.open = true;
+          }
+        } else {
+          col.style.display = 'none';
+        }
+      });
+
+      if (visibleCountEl) {
+        visibleCountEl.textContent = String(totalVisibleCount);
+      }
+
+      if (noResultsBanner) {
+        noResultsBanner.style.display = totalVisibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    function reset() {
+      if (strengthSelect) strengthSelect.value = 'ALL';
+      if (searchInput) searchInput.value = '';
+      applyFilter();
+    }
+
+    function expandAll() {
+      collapsibles.forEach(c => { c.open = true; });
+    }
+
+    function collapseAll() {
+      collapsibles.forEach(c => { c.open = false; });
+    }
+
+    strengthSelect.addEventListener('change', applyFilter);
+    searchInput.addEventListener('input', applyFilter);
+    resetBtn?.addEventListener('click', reset);
+    inlineResetBtn?.addEventListener('click', reset);
+    expandAllBtn?.addEventListener('click', expandAll);
+    collapseAllBtn?.addEventListener('click', collapseAll);
+  }
+
+  setupSessionCollapsibles();
+  document.addEventListener('astro:page-load', setupSessionCollapsibles);
+</script>
+
+<style>
+  .forge-outcomes-container {
+    width: 100%;
+    color: var(--color-text);
+  }
+
+  /* --- Top Filter Bar --- */
+  .outcomes-filter-bar {
+    background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 8px);
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .filter-label {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 0;
+  }
+
+  .filter-select {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white, #fff);
+    color: var(--color-text);
+    min-width: 170px;
+  }
+
+  .filter-search {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white, #fff);
+    color: var(--color-text);
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .filter-search:focus, .filter-select:focus {
+    outline: none;
+    border-color: var(--color-nhs-blue, #005eb8);
+    box-shadow: 0 0 0 2px rgba(0, 94, 184, 0.2);
+  }
+
+  .filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .filter-action-btn, .filter-reset-btn {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .filter-action-btn:hover, .filter-reset-btn:hover {
+    background: var(--color-surface);
+    color: var(--color-heading);
+    border-color: var(--color-text-muted);
+  }
+
+  .filter-reset-btn {
+    color: #dc3545;
+    border-color: rgba(220, 53, 69, 0.3);
+  }
+
+  .filter-reset-btn:hover {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+  }
+
+  .outcomes-stats {
+    font-size: 0.825rem;
+    color: var(--color-text-muted);
+    margin-left: auto;
+  }
+
+  /* --- Collapsible Session Cards --- */
+  .sessions-collapsible-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .session-collapsible {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 10px);
+    background: color-mix(in srgb, var(--color-surface) 40%, transparent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .session-collapsible:hover {
+    border-color: color-mix(in srgb, var(--color-nhs-blue) 40%, var(--color-border));
+  }
+
+  .session-collapsible[open] {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    border-color: color-mix(in srgb, var(--color-nhs-blue) 50%, var(--color-border));
+  }
+
+  /* Summary / Header Row */
+  .session-summary-row {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    list-style: none; /* removes default browser arrow */
+    background: color-mix(in srgb, var(--color-surface) 75%, transparent);
+    transition: background 0.15s ease;
+  }
+
+  .session-summary-row::-webkit-details-marker {
+    display: none;
+  }
+
+  .session-summary-row:hover {
+    background: color-mix(in srgb, var(--color-surface) 95%, transparent);
+  }
+
+  .session-summary-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Rotating Chevron */
+  .session-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .session-collapsible[open] .session-chevron {
+    transform: rotate(90deg);
+    color: var(--color-nhs-blue);
+  }
+
+  .session-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .session-heading-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .session-badge-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.22rem 0.6rem;
+    border-radius: var(--radius-sm, 4px);
+    background-color: var(--color-deep-blue);
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .session-badge-parallel {
+    background-color: var(--color-purple, #660099);
+  }
+
+  .session-heading-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin: 0;
+    line-height: 1.35;
+  }
+
+  .session-summary-text {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Metric Badges on the right of headline */
+  .session-metrics-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .metric-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    border: 1px solid var(--color-border);
+    transition: transform 0.15s ease;
+  }
+
+  .metric-proficiencies {
+    background-color: color-mix(in srgb, var(--color-nhs-blue, #005eb8) 10%, var(--color-surface));
+    border-color: color-mix(in srgb, var(--color-nhs-blue, #005eb8) 35%, transparent);
+    color: var(--color-nhs-blue, #005eb8);
+  }
+
+  .metric-proficiencies .metric-number {
+    font-size: 0.92rem;
+    font-weight: 800;
+  }
+
+  .metric-objectives {
+    background-color: color-mix(in srgb, var(--color-deep-blue, #222b56) 8%, var(--color-surface));
+    border-color: var(--color-border);
+    color: var(--color-heading);
+  }
+
+  .metric-objectives .metric-number {
+    font-weight: 700;
+  }
+
+  /* Content Body */
+  .session-content-body {
+    border-top: 1px solid var(--color-border);
+    padding: 0;
+  }
+
+  /* Table styles inside collapsible */
+  .outcomes-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .outcomes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .outcomes-table th {
+    background-color: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    color: var(--color-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.8rem 1.1rem;
+    border-bottom: 2px solid var(--color-border);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .outcomes-table td {
+    padding: 0.85rem 1.1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .outcomes-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .outcomes-table tbody tr:hover td {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+  }
+
+  .objective-cell {
+    color: var(--color-text);
+    min-width: 250px;
+  }
+
+  /* Compressed Objective Group Styles */
+  .objective-group-tbody {
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .objective-group-tbody:last-child {
+    border-bottom: none;
+  }
+
+  .objective-cell-spanned {
+    vertical-align: top;
+    background-color: color-mix(in srgb, var(--color-surface) 60%, transparent);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border) !important;
+  }
+
+  .objective-group-tbody:last-child .objective-cell-spanned {
+    border-bottom: none !important;
+  }
+
+  .objective-group-tbody tr:last-child td {
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .objective-group-tbody:last-child tr:last-child td {
+    border-bottom: none;
+  }
+
+  .objective-group-tbody:hover .objective-cell-spanned {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  }
+
+  .objective-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+
+  .objective-text {
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--color-heading);
+  }
+
+  .objective-count-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    background: color-mix(in srgb, var(--color-nhs-blue, #005eb8) 12%, var(--color-surface));
+    color: var(--color-nhs-blue, #005eb8);
+    border: 1px solid color-mix(in srgb, var(--color-nhs-blue, #005eb8) 25%, transparent);
+    white-space: nowrap;
+  }
+
+  .competency-cell {
+    min-width: 230px;
+  }
+
+  .comp-item-link {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .comp-link-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace, var(--bs-font-monospace);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background-color: color-mix(in srgb, var(--color-nhs-blue, #005eb8) 12%, var(--color-white, #fff));
+    border: 1px solid color-mix(in srgb, var(--color-nhs-blue, #005eb8) 35%, transparent);
+    color: var(--color-nhs-blue, #005eb8);
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    flex-shrink: 0;
+  }
+
+  .comp-item-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-heading);
+    transition: color 0.15s ease-in-out;
+  }
+
+  .comp-item-link:hover .comp-link-pill {
+    background-color: var(--color-nhs-blue, #005eb8);
+    color: #ffffff;
+    border-color: var(--color-nhs-blue, #005eb8);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 94, 184, 0.25);
+  }
+
+  .comp-item-link:hover .comp-item-name {
+    color: var(--color-nhs-blue, #005eb8);
+    text-decoration: underline;
+  }
+
+  .comp-link-none .comp-item-name {
+    color: var(--color-text-muted);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .strength-cell {
+    white-space: nowrap;
+    min-width: 100px;
+  }
+
+  .badge-strength {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+  }
+
+  .badge-strength-direct {
+    background-color: rgba(40, 167, 69, 0.12);
+    color: #1e7e34;
+    border: 1px solid rgba(40, 167, 69, 0.3);
+  }
+
+  .badge-strength-supporting {
+    background-color: rgba(0, 94, 184, 0.12);
+    color: #005eb8;
+    border: 1px solid rgba(0, 94, 184, 0.25);
+  }
+
+  .badge-strength-contextual {
+    background-color: rgba(108, 117, 125, 0.12);
+    color: #5a6268;
+    border: 1px solid rgba(108, 117, 125, 0.25);
+  }
+
+  .badge-strength-neutral {
+    background-color: rgba(108, 117, 125, 0.08);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+  }
+
+  .rationale-cell {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    min-width: 220px;
+  }
+
+  .no-results-box {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md, 8px);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 991.98px) {
+    .session-summary-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+    .session-metrics-group {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filter-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .filter-select, .filter-search {
+      min-width: 100%;
+    }
+    .filter-actions {
+      justify-content: flex-start;
+    }
+    .outcomes-stats {
+      margin-left: 0;
+      margin-top: 0.25rem;
+    }
+  }
+</style>

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import StickyNavigation from '../components/StickyNavigation.astro';
 import '../styles/retreat.css';
 import MiniHero from '../components/MiniHero.astro';
+import Forge26Outcomes from '../components/Forge26Outcomes.astro';
 
 
 const sections = [
@@ -29,6 +30,10 @@ label: 'Learning outcomes & agenda',
 {
 id: 'organisers',
 label: 'About the Organisers',
+},
+{
+id: 'learning-objectives-outcomes',
+label: 'Learning Objectives',
 },
 ];
 
@@ -178,7 +183,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 
             <section class="card retreat-card glass--soft mb-4" id="venue">
                 <h2 class="card-title">Venue</h2>
-                <div id="venue" class="card-body">
+                <div class="card-body">
                     <div class="row align-items-start">
                         <div class="col-12 col-lg-6">
                             <div class="venue-grid">
@@ -250,8 +255,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
                         </p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Adapt and modify the core codebase to meet specific requirements</li>
-                            <li class="list-group-item">Explain and justify your design choices, linking them directly to the SDE RTP skills
-                                framework</li>
+                            <li class="list-group-item">Explain and justify your design choices, linking them directly to the SDE RTP Competency Framework</li>
                             <li class="list-group-item">Learn how to translate Azure implementations into equivalent architectures for AWS, GCP,
                                 or on-premises environments</li>
                         </ul>
@@ -287,8 +291,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
                                 engineers and architects specialising in the UK's secure research infrastructure.</li>
                         </ul>
                         <p class="card-text">
-                            Learning objectives are mapped to the <a class="link"  href={`${base}cf-overview/`}> SDE Team Development Hub
-                                RTP competency framework.</a></p>
+                            Learning objectives are mapped to the <a class="link" href={`${base}cf-overview/`}>SDE RTP Competency Framework.</a></p>
                 </div>
             </section>
 
@@ -333,7 +336,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
                             <tbody>
                                 <tr>
                                     <td>Morning</td>
-                                    <td><strong>Session 1:</strong> Icebreaker, introduction to Team Science and the RTP
+                                    <td><strong>Session 1:</strong> Icebreaker, introduction to Team Science and the SDE RTP
                                         Competency Framework<br /><br /><strong>Session 2:</strong> Overview of Secure
                                         Data Environments (SDEs)</td>
                                 </tr>
@@ -386,6 +389,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
                 </div>
             </section>
 
+            <!-- SDE Forge 2026 Learning Objectives and Outcomes -->
+            <MiniHero title="SDE Forge 2026 learning objectives and outcomes" id="learning-objectives-outcomes">
+                <p>
+                    All 46 learning outcomes across the residential retreat sessions are mapped to the SDE RTP Competency Framework. Each learning objective is presented with all of its mapped proficiencies, mapping strength (Direct, Supporting, or Contextual), and architectural rationale across both plenary and parallel sessions.
+                </p>
+                <p>
+                    Use the search bar and strength filter below to explore specific skills, or select any competency badge to view its full definition and level expectations in the framework.
+                </p>
+            </MiniHero>
+
+            <section class="retreat-outcomes-section">
+                <Forge26Outcomes />
+            </section>
+
             <!-- Call to Action Section -->
             <section class="cta-section">
                 <div class="cta-content">
@@ -405,13 +422,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '') + '/';
 
 <script>
     const nav = document.getElementById('page-subnav');    
-    const hero = document.getElementById('retreat-hero');
     const scroller = document.querySelector('.retreat-page .scroll-area');
 
-    if (nav && scroller) {
-        scroller.addEventListener('scroll', () => {
-            nav.classList.toggle('sticky-nav--stuck', scroller.scrollTop > 0);
-        }, { passive: true });
+    if (nav) {
+        const updateStuck = () => {
+            const top = (scroller && scroller.scrollTop) || window.scrollY || document.documentElement.scrollTop || 0;
+            nav.classList.toggle('sticky-nav--stuck', top > 0);
+        };
+        if (scroller) {
+            scroller.addEventListener('scroll', updateStuck, { passive: true });
+        }
+        window.addEventListener('scroll', updateStuck, { passive: true });
     }
 </script>
 

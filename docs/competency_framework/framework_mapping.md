@@ -1,6 +1,6 @@
-# Competency Framework Mapping
+# The SDE RTP Competency Framework Mapping
 
-This document provides a detailed mapping of the SDE Skills Competency Framework to established standards, specifically the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) model and the [Standard Architecture for Trusted Research Environments (SATRE v2.0.1)](https://satre-specification.readthedocs.io/en/v2.0.1/) specification.
+This document provides a detailed mapping of the SDE RTP Competency Framework to established standards, specifically the [Five Safes](https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/) model and the [Standard Architecture for Trusted Research Environments (SATRE v2.0.1)](https://satre-specification.readthedocs.io/en/v2.0.1/) specification.
 
 ## Mapping to Five Safes
 
@@ -96,7 +96,7 @@ The Five Safes framework is a set of principles enabling safe research access to
 
 ## Mapping to SATRE
 
-The [Standard Architecture for Trusted Research Environments (SATRE v2.0.1)](https://satre-specification.readthedocs.io/en/v2.0.1/) specification ([GitHub release v2.0.1](https://github.com/sa-tre/satre-specification/releases/tag/v2.0.1), 35 capabilities and 185 requirement statements across five pillars) provides a comprehensive reference architecture for organisations handling sensitive research data safely. Our competency framework maps to all five SATRE v2.0.1 pillars and their capabilities (see [`yaml/satre_mapping.yaml`](https://github.com/UoM-Data-Science-Platforms/sde-skills/blob/main/yaml/satre_mapping.yaml) and the interactive SATRE Mapping Matrix for the full capability-to-competency breakdown):
+The [Standard Architecture for Trusted Research Environments (SATRE v2.0.1)](https://satre-specification.readthedocs.io/en/v2.0.1/) specification ([GitHub release v2.0.1](https://github.com/sa-tre/satre-specification/releases/tag/v2.0.1), 35 capabilities and 185 requirement statements across five pillars) provides a comprehensive reference architecture for organisations handling sensitive research data safely. The SDE RTP Competency Framework maps to all five SATRE v2.0.1 pillars and their capabilities (see [`yaml/satre_mapping.yaml`](https://github.com/UoM-Data-Science-Platforms/sde-skills/blob/main/yaml/satre_mapping.yaml) and the interactive SATRE Mapping Matrix for the full capability-to-competency breakdown):
 
 ### 1. Information Governance
 

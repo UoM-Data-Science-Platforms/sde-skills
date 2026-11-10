@@ -333,7 +333,7 @@ export default function CFOverview() {
     <div className="skills-framework">
       {/* Sticky header */}
       <div className="sticky-header">
-        <h1>Competency Framework Overview</h1>
+        <h1>The SDE RTP Competency Framework Overview</h1>
       </div>
 
       {/* Sticky subnav */}
@@ -360,7 +360,7 @@ export default function CFOverview() {
         <div ref={secRef('introduction')} className="subdomain-section" style={{ paddingBottom: 'var(--space-xl)' }}>
           <h2 className="subdomain-title is-visible" style={{ marginTop: 'var(--space-sm)' }} id="introduction">Introduction</h2>
           <p className="domain-description">
-            The SDE Skills Competency Framework maps the skills and knowledge needed by Research Technical
+            The SDE RTP Competency Framework (the framework) maps the skills and knowledge needed by Research Technical
             Professionals (RTPs) working with Secure Data Environments. It aligns with established industry
             models — the{' '}
             <a href="https://ukdataservice.ac.uk/help/secure-lab/what-is-the-five-safes-framework/" target="_blank" rel="noreferrer">Five Safes</a>

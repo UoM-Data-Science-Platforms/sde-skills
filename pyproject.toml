@@ -1,7 +1,7 @@
 [project]
 name = "sde-skills"
 version = "0.1.0"
-description = "Competency Framework for Research Technical Professionals working with Secure Data Environments"
+description = "The SDE RTP Competency Framework for Research Technical Professionals working with Secure Data Environments"
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"

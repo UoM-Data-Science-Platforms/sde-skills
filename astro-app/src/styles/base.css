@@ -151,6 +151,10 @@ h4 {
     height: 100vh;
     overflow-y: auto;
   }
+
+  .main-content:has(.wide-layout) {
+    overflow-y: hidden;
+  }
 }
 
 /* Explicit mobile safeguard to prevent any margin inheritance */
